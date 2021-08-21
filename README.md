@@ -5,8 +5,8 @@ The quilvyn-phb5E package bundles modules that apply additional rules from the
 
 ### Requirements
 
-quilvyn-phb5e relies on the 5th Edition SRD module and the core modules
-installed by the quilvyn-core package.
+quilvyn-phb5e relies on the 5th Edition SRD modules installed by the quilvyn-5E
+package and the core modules installed by the quilvyn-core package.
 
 ### Installation
 
@@ -22,5 +22,5 @@ following lines to the file plugins/plugins.js:
 
 ### Usage
 
-Once the PHB5E plugin is installed as described above, start Quilvyn and choose
-5E from the Rules menu in the editor window.
+Once the PHB5E plugin is installed as described above, start Quilvyn and check
+the box next to "D&D 5E" from the rule sets menu in the initial window.
