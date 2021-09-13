@@ -15,7 +15,7 @@ subdirectory within the Quilvyn installation directory, then append the
 following lines to the file plugins/plugins.js:
 
     RULESETS['D&D 5E'] = {
-      url:'PHB5E.js',
+      url:'plugins/PHB5E.js',
       group:'5E',
       require:'5E (SRD only)'
     };
