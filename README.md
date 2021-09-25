@@ -17,7 +17,7 @@ following lines to the file plugins/plugins.js:
     RULESETS['D&D 5E'] = {
       url:'plugins/PHB5E.js',
       group:'5E',
-      require:'5E (SRD only)'
+      require:'SRD5E.js'
     };
 
 ### Usage
