@@ -999,6 +999,7 @@ PHB5E.FEATURES_ADDED = {
   'Drow Weapon Training':
     'Section=combat ' +
     'Note="Weapon Proficiency (Hand Crossbow/Rapier/Shortsword)"',
+  'Dwarven Armor Training':'Section=combat Note="Armor Proficiency (Medium)"',
   'Fleet Of Foot':
     'Section=ability Note="+5 Speed"',
   'Forest Gnome Ability Adjustment':
@@ -1276,7 +1277,7 @@ PHB5E.RACES_ADDED = {
       '"1:Dark Elf Ability Adjustment","1:Drow Magic",' +
       '"1:Drow Weapon Training","1:Fey Ancestry","1:Keen Senses",' +
       '"1:Sunlight Sensitivity","1:Superior Darkvision",1:Trance ' +
-    'Languages=Common,Elvish,Undercommon ' +
+    'Languages=Common,Elvish ' +
     'SpellAbility=charisma ' +
     'SpellSlots=' +
       'Drow0:1=1,' +
@@ -1293,10 +1294,10 @@ PHB5E.RACES_ADDED = {
       'Gnome0:1=1',
   'Mountain Dwarf':
     'Features=' +
-      '"1:Armor Proficiency (Medium)",' +
       '"1:Tool Proficiency (Choose 1 from Brewer\'s Tools, Mason\'s Tools, Smith\'s Tools)",' +
-      '1:Darkvision,"1:Dwarven Combat Training","1:Dwarven Resilience",' +
-      '"1:Mountain Dwarf Ability Adjustment",1:Slow,1:Steady,1:Stonecunning ' +
+      '1:Darkvision,"1:Dwarven Armor Training","1:Dwarven Combat Training",' +
+      '"1:Dwarven Resilience","1:Mountain Dwarf Ability Adjustment",1:Slow,' +
+      '1:Steady,1:Stonecunning ' +
     'Languages=Common,Dwarvish',
   'Stout Halfling':
     'Features=' +
