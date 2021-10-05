@@ -473,7 +473,8 @@ PHB5E.FEATURES_ADDED = {
     'Section=magic ' +
     'Note="Stone gives 60\' darkvision, +10 speed, proficiency in constitution, or resistance to chosen energy damage"',
   "War God's Blessing":
-    'Section=magic Note="R30\' Channel Divinity reaction for ally +10 attack"',
+    'Section=magic ' +
+    'Note="R30\' Channel Divinity reaction gives ally +10 attack"',
   'Abjuration Savant':
     'Section=magic Note="Write abjuration spells for half cost"',
   'Abjure Enemy':
@@ -501,9 +502,9 @@ PHB5E.FEATURES_ADDED = {
   'Assassinate':
     'Section=combat Note="Adv when foe has not acted, crit on surprise hit"',
   'Aura Of Warding':
-    'Section=save Note="R%V\' Self and allies resistance to spell damage"',
+    'Section=save Note="R%V\' Self and allies gain resistance to spell damage"',
   'Avatar Of Battle':
-    'Section=combat ' +
+    'Section=save ' +
     'Note="Resistance to nonmagical bludgeoning, piercing and slashing damage"',
   'Avenging Angel':
     'Section=magic ' +
@@ -513,7 +514,7 @@ PHB5E.FEATURES_ADDED = {
   'Battle Magic':
     'Section=combat Note="Bonus attack after casting spell"',
   'Bear Totem Spirit':
-    'Section=combat Note="Resistance to non-psychic damage during rage"',
+    'Section=save Note="Resistance to non-psychic damage during rage"',
   'Bear Totemic Attunement':
     'Section=combat ' +
     'Note="Adjacent foes Disadv on attacks on others during self rage"',
@@ -531,7 +532,7 @@ PHB5E.FEATURES_ADDED = {
     'Section=magic Note="Touched Adv Stealth for 1 hr"',
   'Blessings Of Knowledge':
     'Section=skill ' +
-    'Note="+2 Language Count/Skill Proficiency (Choose 2 from Arcana, History, Nature, Religion)"',
+    'Note="+2 Language Count/Skill Proficiency (Choose 2 from Arcana, History, Nature, Religion)/Dbl Proficiency Bonus for chosen skills"',
   'Breath Of Winter':
     'Section=magic Note="Spend 6 Ki to cast <i>Cone Of Cold</i>"',
   'Charm Animals And Plants':
@@ -545,7 +546,7 @@ PHB5E.FEATURES_ADDED = {
     'Note="Invisible in dim and unlit areas until attack or cast"',
   'Combat Inspiration':
     'Section=combat ' +
-    'Note="Ally use Bardic Inspiration die to boost damage or AC"',
+    'Note="Ally can use Bardic Inspiration die to boost weapon damage or AC"',
   'Combat Wild Shape':
     'Section=combat ' +
     'Note="Wild Shape as bonus action, use spell slot to regain (slot level)d8 HP"',
@@ -558,7 +559,7 @@ PHB5E.FEATURES_ADDED = {
     'Section=magic Note="Re-roll wild magic surge effect"',
   'Corona Of Light':
     'Section=magic ' +
-    'Note="60\' light, foe Disadv on fire, radiant spells for 1 min"',
+    'Note="60\' light inflicts foe Disadv on fire and radiant spells for 1 min"',
   'Create Thrall':
     'Section=magic Note="Touch charms incapacitated humanoid"',
   'Dampen Elements':
@@ -571,7 +572,7 @@ PHB5E.FEATURES_ADDED = {
     'Section=combat Note="Dbl damage on surprise hit (DC %V Con neg)"',
   'Destructive Wrath':
     'Section=magic ' +
-    'Note="Channel Divinity gives max lightning or thunder damage"',
+    'Note="Channel Divinity maximizes lightning or thunder damage"',
   'Disarming Attack':
     'Section=combat ' +
     'Note="Add Superiority die to damage, foe drops item (Str neg)"',
@@ -588,7 +589,7 @@ PHB5E.FEATURES_ADDED = {
     'Section=combat ' +
     'Note="Foes Disadv on OA; bonus Dash during rage (heavy armor neg)"',
   'Eagle Totemic Attunement':
-    'Section=ability Note="Fly for short bursts during rage"',
+    'Section=ability Note="Fly %{speed}\' 1/tn during rage"',
   'Elder Champion':
     'Section=magic ' +
     'Note="Transform, regain 10 HP/tn, cast as bonus action, and foes w/in 10\' Disadv vs. your spells for 1 min 1/long rest"',
@@ -639,7 +640,7 @@ PHB5E.FEATURES_ADDED = {
     'Section=magic ' +
     'Note="Regain 2x spell level (3x necromantic) when spell kills"',
   'Guided Strike':
-    'Section=combat Note="Channel Divinity gives +10 attack"',
+    'Section=combat Note="Channel Divinity gives self +10 attack"',
   'Hypnotic Gaze':
     'Section=magic Note="Daze adjacent creature 1/long rest (Wis neg)"',
   'Illusion Savant':
@@ -653,7 +654,7 @@ PHB5E.FEATURES_ADDED = {
   'Improved Abjuration':
     'Section=magic Note="Add Proficiency Bonus to abjuration ability checks"',
   'Improved Duplicity':
-    'Section=magic Note="Four duplicates"',
+    'Section=magic Note="Invoke Duplicity creates 4 duplicates"',
   'Improved Flare':
     'Section=magic Note="Warding Flare protects allies"',
   'Improved Minor Illusion':
@@ -667,13 +668,14 @@ PHB5E.FEATURES_ADDED = {
     'Section=save ' +
     'Note="Resistance to necrotic damage, immunity to max HP reduction"',
   'Invoke Duplicity':
-    'Section=magic Note="R30\' Illusionary duplicate for conc or 1 min"',
+    'Section=magic ' +
+    'Note="R30\' Channel Divinity creates %V, giving Adv on attacks when w/in 5\' and allowing remote spellcasting for conc or 1 min"',
   'Know Your Enemy':
     'Section=combat Note="Know how foe compares to you after 1 min study"',
   'Knowledge Of The Ages':
     'Section=skill ' +
     'Note="Channel Divinity gives proficiency in chosen skill or tool for 10 min"',
-  'Light Cantrip':
+  'Light Bonus Cantrip':
     'Section=magic Note="Know <i>Light</i> cantrip"',
   'Lunging Attack':
     'Section=combat Note="+5\' melee range, add Superiority die to damage"',
@@ -706,6 +708,7 @@ PHB5E.FEATURES_ADDED = {
   'Misty Escape':
     'Section=magic ' +
     'Note="After damage, teleport 60\' and become invisible 1 tn 1/short rest"',
+  'Nature Bonus Proficiency':'Section=combat Note="Armor Proficiency (Heavy)"',
   'Necromancy Savant':
     'Section=magic Note="Write necromancy spells for half cost"',
   'Opportunist':'Section=combat Note="Attack adjacent foe after ally hit"',
@@ -726,16 +729,16 @@ PHB5E.FEATURES_ADDED = {
     'Note="Add Superiority die to damage, foe pushed 15\' (Str neg)"',
   'Radiance Of The Dawn':
     'Section=magic ' +
-    'Note="R30\' Channel Divinity to dispel magic darkness, 2d10+%V HP to foes (Con half)"',
+    'Note="R30\' Channel Divinity dispels magic darkness, foes suffer 2d10+%V HP radiant (Con half)"',
   'Rally':
     'Section=combat Note="Chosen ally gains Superiority die + %V temp HP"',
   'Read Thoughts':
     'Section=magic ' +
-    'Note="R60\' Channel Divinity to read thoughts, <i>Suggestion</i> for 1 min (Wis neg)"',
+    'Note="R60\' Use Channel Divinity to read thoughts and cast <i>Suggestion</i> for 1 min (Wis neg)"',
   'Relentless Avenger':
     'Section=combat Note="Move half speed after OA hit"',
   'Relentless':
-    'Section=combat Note="Min 1 superiority die after initiative"',
+    'Section=combat Note="Minimum 1 superiority die after initiative"',
   'Ride The Wind':
     'Section=magic Note="Spend 4 Ki to cast self <i>Fly</i>"',
   'Riposte':
@@ -763,7 +766,7 @@ PHB5E.FEATURES_ADDED = {
   'Spell Bombardment':
     'Section=magic Note="Add another die when max rolled 1/tn"',
   'Spell Resistance':
-    'Section=save Note="Adv and resistance to spell damage"',
+    'Section=save Note="Adv vs. spells and resistance to spell damage"',
   'Spell Thief':
     'Section=magic ' +
     'Note="Foe spell negated, self cast w/in 8 hours (DC %V neg) 1/long rest"',
@@ -774,7 +777,7 @@ PHB5E.FEATURES_ADDED = {
   'Split Enchantment':
     'Section=magic Note="Add second target to charm spell"',
   'Stormborn':
-    'Section=ability Note="Fly at full speed outdoors"',
+    'Section=ability Note="%{speed}\' fly speed outdoors"',
   'Superiority Dice':
     'Section=combat Note="%Vd%1/short rest"',
   'Sweeping Attack':
@@ -782,6 +785,9 @@ PHB5E.FEATURES_ADDED = {
     'Note="After hit, Superiority die damage to second adjacent foe"',
   'Sweeping Cinder Strike':
     'Section=magic Note="Spend 2 Ki to cast <i>Burning Hands</i>"',
+  'Tempest Bonus Proficiencies':
+    'Section=combat ' +
+    'Note="Armor Proficiency (Heavy) and Weapon Proficiency (Martial)"',
   'The Third Eye':
     'Section=magic ' +
     'Note="60\' Darkvision, 60\' Ethereal Sight, read any language, or 10\' see invisibility"',
@@ -791,7 +797,8 @@ PHB5E.FEATURES_ADDED = {
   'Thousand Forms':
     'Section=magic Note="<i>Alter Self</i> at will"',
   'Thunderbolt Strike':
-    'Section=magic Note="Lightning damage pushes lg 10\'"',
+    'Section=magic ' +
+    'Note="Lightning damage pushes away Large and smaller creatures 10\'"',
   'Tides Of Chaos':
     'Section=feature ' +
     'Note="Adv on attack, ability, or save 1/long rest (may cause surge)"',
@@ -809,21 +816,27 @@ PHB5E.FEATURES_ADDED = {
     'Section=magic Note="<i>Animate Dead</i> +1 corpse, +%V HP, +%1 damage"',
   'Undying Sentinel':
     'Section=combat Note="Keep 1 HP when brought to 0 1/long rest"',
+  'Valor Bonus Proficiencies':
+    'Section=combat ' +
+    'Note="Armor Proficiency (Medium/Shield) and Weapon Proficiency (Martial)"',
   'Versatile Trickster':
     'Section=magic Note="Distract foe (self Adv attacks) via <i>Mage Hand</i>"',
   'Visions Of The Past':
     'Section=magic ' +
-    'Note="Meditate for visions about surroundings or held object"',
+    'Note="1 min meditation gives visions about surroundings or held object"',
   'Vow Of Enmity':
     'Section=combat ' +
     'Note="R10\' Channel Divinity gives self Adv attacks against target for 1 min"',
+  'War Bonus Proficiencies':
+    'Section=combat ' +
+    'Note="Armor Proficiency (Heavy) and Weapon Proficiency (Martial)"',
   'War Magic':
     'Section=combat Note="Bonus attack after %V"',
   'War Priest':
     'Section=combat Note="Bonus attack %V/long rest"',
   'Warding Flare':
     'Section=magic ' +
-    'Note="R30\' Reaction flare foe Disadv on current attack %V/long rest"',
+    'Note="R30\' Reaction inflicts foe Disadv on current attack %V/long rest"',
   'Water Whip':
     'Section=magic ' +
     'Note="R30\' Spend 2+ Ki for water whip 3d10+ HP, pull 25\' or knock prone (Str half)"',
@@ -841,7 +854,7 @@ PHB5E.FEATURES_ADDED = {
     'Note="Melee hit during rage knocks prone Large or smaller foe"',
   'Wrath Of The Storm':
     'Section=combat ' +
-    'Note="Reaction 2d8 HP lightning or thunder (Dex half) %V/long rest"',
+    'Note="Reaction inflicts 2d8 HP lightning or thunder (Dex half) on successful attacker %V/long rest"',
   // Feats
   'Actor':
     'Section=ability,skill ' +
@@ -1075,10 +1088,8 @@ PHB5E.PATHS_ADDED = {
   'College Of Valor':
     'Group=Bard Level=levels.Bard ' +
     'Features=' +
-      '"3:Armor Proficiency (Medium/Shield)",' +
-      '"3:Weapon Proficiency (Martial)",' +
-      '"3:Bonus Skills","3:Combat Inspiration","6:Extra Attack",' +
-      '"14:Battle Magic"',
+      '"3:Bonus Skills","3:Combat Inspiration","3:Valor Bonus Proficiencies",' +
+      '"6:Extra Attack","14:Battle Magic"',
   'Eldritch Knight':
     'Group=Fighter Level=levels.Fighter ' +
     'Features=' +
@@ -1106,7 +1117,7 @@ PHB5E.PATHS_ADDED = {
   'Light Domain':
     'Group=Cleric Level=levels.Cleric ' +
     'Features=' +
-      '"1:Light Cantrip","1:Warding Flare","2:Radiance Of The Dawn",' +
+      '"1:Light Bonus Cantrip","1:Warding Flare","2:Radiance Of The Dawn",' +
       '"6:Improved Flare","8:Potent Spellcasting","17:Corona Of Light" ' +
     'SpellAbility=wisdom ' +
     'SpellSlots=' +
@@ -1118,9 +1129,9 @@ PHB5E.PATHS_ADDED = {
   'Nature Domain':
     'Group=Cleric Level=levels.Cleric ' +
     'Features=' +
-      '"1:Armor Proficiency (Heavy)",' +
-      '"1:Acolyte Of Nature","2:Charm Animals And Plants","6:Dampen Elements",'+
-      '"8:Divine Strike","17:Master Of Nature" ' +
+      '"1:Acolyte Of Nature","1:Nature Bonus Proficiency",' +
+      '"2:Charm Animals And Plants","6:Dampen Elements","8:Divine Strike",' +
+      '"17:Master Of Nature" ' +
     'SpellAbility=wisdom ' +
     'SpellSlots=' +
       'Nature0:1=1,' +
@@ -1206,10 +1217,9 @@ PHB5E.PATHS_ADDED = {
   'Tempest Domain':
     'Group=Cleric Level=levels.Cleric ' +
     'Features=' +
-      '"1:Armor Proficiency (Heavy)",' +
-      '"1:Weapon Proficiency (Martial)",' +
-      '"1:Wrath Of The Storm","2:Destructive Wrath","6:Thunderbolt Strike",' +
-      '"8:Divine Strike",17:Stormborn ' +
+      '"1:Tempest Bonus Proficiencies","1:Wrath Of The Storm",' +
+      '"2:Destructive Wrath","6:Thunderbolt Strike","8:Divine Strike",' +
+      '17:Stormborn ' +
     'SpellAbility=wisdom ' +
     'SpellSlots=' +
       'Tempest1:1=2,' +
@@ -1243,10 +1253,8 @@ PHB5E.PATHS_ADDED = {
   'War Domain':
     'Group=Cleric Level=levels.Cleric ' +
     'Features=' +
-      '"1:Armor Proficiency (Heavy)",' +
-      '"1:Weapon Proficiency (Martial)",' +
-      '"1:War Priest","2:Guided Strike","6:War God\'s Blessing",' +
-      '"8:Divine Strike","17:Avatar Of Battle" ' +
+      '"1:War Bonus Proficiencies","1:War Priest","2:Guided Strike",' +
+      '"6:War God\'s Blessing","8:Divine Strike","17:Avatar Of Battle" ' +
     'SpellAbility=wisdom ' +
     'SpellSlots=' +
       'War1:1=2,' +
@@ -1780,6 +1788,17 @@ PHB5E.pathRulesExtra = function(rules, name) {
       pathLevel, '=', 'source<6 ? null : 1'
     );
     rules.defineRule('combatNotes.extraAttack', 'bardExtraAttacks', '+=', null);
+    // Have to hard-code these proficiencies, since featureRules only handles
+    // notes w/a single type of granted proficiency
+    rules.defineRule('armorProficiency.Medium',
+      'combatNotes.valorBonusProficiencies', '=', '1'
+    );
+    rules.defineRule('armorProficiency.Shield',
+      'combatNotes.valorBonusProficiencies', '=', '1'
+    );
+    rules.defineRule('weaponProficiency.Martial',
+      'combatNotes.valorBonusProficiencies', '=', '1'
+    );
 
   } else if(name == 'Eldritch Knight') {
 
@@ -1810,6 +1829,11 @@ PHB5E.pathRulesExtra = function(rules, name) {
 
   } else if(name == 'Nature Domain') {
 
+    rules.defineRule
+      ('combatNotes.divineStrike', pathLevel, '=', 'source<14 ? 1 : 2');
+    rules.defineRule('combatNotes.divineStrike.1',
+      pathLevel, '=', '"cold, fire, or lightning"'
+    );
     rules.defineRule
       ('skillChoices.Animal Handling', 'skillNotes.acolyteOfNature', '=', '1');
     rules.defineRule
@@ -1852,14 +1876,46 @@ PHB5E.pathRulesExtra = function(rules, name) {
 
   } else if(name == 'Tempest Domain') {
 
+    rules.defineRule
+      ('combatNotes.divineStrike', pathLevel, '=', 'source<14 ? 1 : 2');
+    rules.defineRule('combatNotes.divineStrike.1', pathLevel, '=', '"thunder"');
     rules.defineRule('combatNotes.wrathOfTheStorm',
       'wisdomModifier', '=', 'Math.max(source, 1)'
+    );
+    // Have to hard-code these proficiencies, since featureRules only handles
+    // notes w/a single type of granted proficiency
+    rules.defineRule('armorProficiency.Heavy',
+      'combatNotes.tempestBonusProficiencies', '=', '1'
+    );
+    rules.defineRule('weaponProficiency.Martial',
+      'combatNotes.tempestBonusProficiencies', '=', '1'
+    );
+
+  } else if(name == 'Trickery Domain') {
+
+    rules.defineRule
+      ('combatNotes.divineStrike', pathLevel, '=', 'source<14 ? 1 : 2');
+    rules.defineRule('combatNotes.divineStrike.1', pathLevel, '=', '"poison"');
+    rules.defineRule('magicNotes.invokeDuplicity',
+      pathLevel, '=', '"1 illusionary duplicate"',
+      'magicNotes.improvedDuplicity', '=', '"4 illusionary duplicates"'
     );
 
   } else if(name == 'War Domain') {
 
     rules.defineRule
+      ('combatNotes.divineStrike', pathLevel, '=', 'source<14 ? 1 : 2');
+    rules.defineRule
+      ('combatNotes.divineStrike.1', pathLevel, '=', '"weapon damage type"');
+    rules.defineRule
       ('combatNotes.warPriest', 'wisdomModifier', '=', 'Math.max(source, 1)');
+    // Have to hard-code these proficiencies, since featureRules only handles
+    // notes w/a single type of granted proficiency
+    rules.defineRule
+      ('armorProficiency.Heavy', 'combatNotes.warBonusProficiencies', '=', '1');
+    rules.defineRule('weaponProficiency.Martial',
+      'combatNotes.warBonusProficiencies', '=', '1'
+    );
 
   } else if(name == 'Way Of The Four Elements') {
 
