@@ -996,6 +996,9 @@ PHB5E.FEATURES_ADDED = {
   'Dark Elf Ability Adjustment':
     'Section=ability Note="+2 Dexterity/+1 Charisma"',
   'Drow Magic':'Section=magic Note="Cast %V"',
+  'Drow Weapon Training':
+    'Section=combat ' +
+    'Note="Weapon Proficiency (Hand Crossbow/Rapier/Shortsword)"',
   'Fleet Of Foot':
     'Section=ability Note="+5 Speed"',
   'Forest Gnome Ability Adjustment':
@@ -1010,8 +1013,8 @@ PHB5E.FEATURES_ADDED = {
     'Section=feature Note="Simple communication with small animals"',
   'Stout Halfling Ability Adjustment':
     'Section=ability Note="+2 Dexterity/+1 Constitution"',
-  'Stout Halfling Resilience':
-    'Section=save Note="Adv and resistance to poison damage"',
+  'Stout Resilience':
+    'Section=save Note="Adv vs. poison, resistance to poison damage"',
   'Sunlight Sensitivity':
     'Section=combat,skill ' +
     'Note="Disadv attack in direct sunlight",' +
@@ -1270,10 +1273,9 @@ PHB5E.PATHS = Object.assign({}, SRD5E.PATHS, PHB5E.PATHS_ADDED);
 PHB5E.RACES_ADDED = {
   'Dark Elf':
     'Features=' +
-      '"1:Weapon Proficiency (Hand Crossbow/Rapier/Shortsword)",' +
-      '"1:Dark Elf Ability Adjustment","1:Drow Magic","1:Fey Ancestry",' +
-      '"1:Keen Senses","1:Sunlight Sensitivity","1:Superior Darkvision",' +
-      '1:Trance ' +
+      '"1:Dark Elf Ability Adjustment","1:Drow Magic",' +
+      '"1:Drow Weapon Training","1:Fey Ancestry","1:Keen Senses",' +
+      '"1:Sunlight Sensitivity","1:Superior Darkvision",1:Trance ' +
     'Languages=Common,Elvish,Undercommon ' +
     'SpellAbility=charisma ' +
     'SpellSlots=' +
@@ -1292,21 +1294,19 @@ PHB5E.RACES_ADDED = {
   'Mountain Dwarf':
     'Features=' +
       '"1:Armor Proficiency (Medium)",' +
-      '"1:Weapon Proficiency (Battleaxe/Handaxe/Light Hammer/Warhammer)",' +
       '"1:Tool Proficiency (Choose 1 from Brewer\'s Tools, Mason\'s Tools, Smith\'s Tools)",' +
-      '1:Darkvision,"1:Mountain Dwarf Ability Adjustment",' +
-      '"1:Dwarven Resilience",1:Slow,1:Steady,1:Stonecunning ' +
+      '1:Darkvision,"1:Dwarven Combat Training","1:Dwarven Resilience",' +
+      '"1:Mountain Dwarf Ability Adjustment",1:Slow,1:Steady,1:Stonecunning ' +
     'Languages=Common,Dwarvish',
   'Stout Halfling':
     'Features=' +
-      '1:Brave,"1:Halfling Luck","1:Halfling Nimbleness",1:Slow,1:Small,' +
-      '"1:Stout Halfling Ability Adjustment","1:Stout Halfling Resilience" ' +
+      '1:Brave,"1:Halfling Nimbleness","1:Lucky Halfling",1:Slow,1:Small,' +
+      '"1:Stout Halfling Ability Adjustment","1:Stout Resilience" ' +
     'Languages=Common,Halfling',
   'Wood Elf':
     'Features=' +
-      '"1:Weapon Proficiency (Longbow/Longsword/Shortbow/Shortsword)",' +
-      '1:Darkvision,"1:Fey Ancestry","1:Fleet Of Foot",' +
-      '"1:Keen Senses","1:Mask Of The Wild",1:Trance,' +
+      '1:Darkvision,"1:Elf Weapon Training","1:Fey Ancestry",' +
+      '"1:Fleet Of Foot","1:Keen Senses","1:Mask Of The Wild",1:Trance,' +
       '"1:Wood Elf Ability Adjustment" ' +
     'Languages=Common,Elvish'
 };
