@@ -492,11 +492,12 @@ PHB5E.FEATURES_ADDED = {
     'Note="Abjuration casting creates %V HP shield until long rest"',
   'Aspect Of The Bear':
     'Section=ability ' +
-    'Note="Dbl load and lift, Adv push, pull, lift, break Str checks"',
+    'Note="Dbl load and lift, Adv on Str checks to push, pull, lift, or break"',
   'Aspect Of The Eagle':
-    'Section=skill Note="See clearly 1 mi, no dim light Perception Disadv"',
+    'Section=skill ' +
+    'Note="See 1 mile clearly, no Disadv on Perception in dim light"',
   'Aspect Of The Wolf':
-    'Section=ability Note="Track at fast pace, stealth at normal pace"',
+    'Section=skill Note="Track at fast pace and Stealth at normal pace"',
   'Assassinate':
     'Section=combat Note="Adv when foe has not acted, crit on surprise hit"',
   'Aura Of Warding':
@@ -514,7 +515,8 @@ PHB5E.FEATURES_ADDED = {
   'Bear Totem Spirit':
     'Section=combat Note="Resistance to non-psychic damage during rage"',
   'Bear Totemic Attunement':
-    'Section=combat Note="Adjacent foes Disadv attack others during rage"',
+    'Section=combat ' +
+    'Note="Adjacent foes Disadv on attacks on others during self rage"',
   'Beguiling Defenses':
     'Section=save Note="Immunity to charm, reflect 1 min (Wis neg)"',
   'Bend Luck':
@@ -584,9 +586,9 @@ PHB5E.FEATURES_ADDED = {
     'Section=magic Note="Summoned creatures +30 HP"',
   'Eagle Totem Spirit':
     'Section=combat ' +
-    'Note="Foes Disadv OA, Dash as bonus action when raging (heavy armor neg)"',
+    'Note="Foes Disadv on OA; bonus Dash during rage (heavy armor neg)"',
   'Eagle Totemic Attunement':
-    'Section=ability Note="Fly for short bursts when raging"',
+    'Section=ability Note="Fly for short bursts during rage"',
   'Elder Champion':
     'Section=magic ' +
     'Note="Transform, regain 10 HP/tn, cast as bonus action, and foes w/in 10\' Disadv vs. your spells for 1 min 1/long rest"',
@@ -833,9 +835,10 @@ PHB5E.FEATURES_ADDED = {
     'Section=magic Note="5% chance of random magic effect"',
   'Wolf Totem Spirit':
     'Section=combat ' +
-    'Note="Allies Adv attack vs. self adjacent foes when raging"',
+    'Note="Allies Adv on attacks vs. foes adjacent to self during rage"',
   'Wolf Totemic Attunement':
-    'Section=combat Note="Knock prone lg foe after melee hit when raging"',
+    'Section=combat ' +
+    'Note="Melee hit during rage knocks prone Large or smaller foe"',
   'Wrath Of The Storm':
     'Section=combat ' +
     'Note="Reaction 2d8 HP lightning or thunder (Dex half) %V/long rest"',
