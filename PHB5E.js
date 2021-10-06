@@ -237,98 +237,6 @@ for(var c in PHB5E.CLASSES_SELECTABLES_ADDED) {
   PHB5E.CLASSES[c] =
     PHB5E.CLASSES[c].replace('Selectables=', 'Selectables=' + PHB5E.CLASSES_SELECTABLES_ADDED[c] + ',');
 }
-PHB5E.DEITIES_ADDED = {
-  // Forgotten Realms
-  'FR-Auril':'Alignment=NE Domain=Nature,Tempest',
-  'FR-Azuth':'Alignment=LN Domain=Knowledge',
-  'FR-Bane':'Alignment=LE Domain=War',
-  'FR-Beshaba':'Alignment=CE Domain=Trickery',
-  'FR-Bhaal':'Alignment=NE Domain=Death',
-  'FR-Chauntea':'Alignment=NG Domain=Life',
-  'FR-Cyric':'Alignment=CE Domain=Trickery',
-  'FR-Deneir':'Alignment=NG Domain=Knowledge',
-  'FR-Eldath':'Alignment=NG Domain=Life,Nature',
-  'FR-Gond':'Alignment=N Domain=Knowledge',
-  'FR-Helm':'Alignment=LN Domain=Life,Light',
-  'FR-Ilmater':'Alignment=LG Domain=Life',
-  'FR-Kelemvor':'Alignment=LN Domain=Death',
-  'FR-Lathander':'Alignment=NG Domain=Life,Light',
-  'FR-Leira':'Alignment=CN Domain=Trickery',
-  'FR-Lliira':'Alignment=CG Domain=Life',
-  'FR-Loviatar':'Alignment=LE Domain=Death',
-  'FR-Malar':'Alignment=CE Domain=Nature',
-  'FR-Mask':'Alignment=CN Domain=Trickery',
-  'FR-Mielikki':'Alignment=NG Domain=Nature',
-  'FR-Milil':'Alignment=NG Domain=Light',
-  'FR-Myrkul':'Alignment=NE Domain=Death',
-  'FR-Mystra':'Alignment=NG Domain=Knowledge',
-  'FR-Oghma':'Alignment=N Domain=Knowledge',
-  'FR-Savras':'Alignment=LN Domain=Knowledge',
-  'FR-Selune':'Alignment=CG Domain=Knowledge,Life',
-  'FR-Shar':'Alignment=NE Domain=Death,Trickery',
-  'FR-Silvanus':'Alignment=N Domain=Nature',
-  'FR-Sune':'Alignment=CG Domain=Life,Light',
-  'FR-Talona':'Alignment=CE Domain=Death',
-  'FR-Talos':'Alignment=CE Domain=Tempest',
-  'FR-Tempus':'Alignment=N Domain=War',
-  'FR-Torm':'Alignment=LG Domain=War',
-  'FR-Tymora':'Alignment=CG Domain=Trickery',
-  'FR-Tyr':'Alignment=LG Domain=War',
-  'FR-Umberlee':'Alignment=CE Domain=Tempest',
-  'FR-Waukeen':'Alignment=N Domain=Knowledge,Trickery',
-  // Greyhawk
-  'Greyhawk-Beory':'Alignment=N Domain=Nature',
-  'Greyhawk-Boccob':'Alignment=N Domain=Knowledge',
-  'Greyhawk-Celestian':'Alignment=N Domain=Knowledge',
-  'Greyhawk-Ehlonna':'Alignment=NG Domain=Life,Nature',
-  'Greyhawk-Erythnul':'Alignment=CE Domain=War',
-  'Greyhawk-Fharlanghn':'Alignment=NG Domain=Knowledge,Trickery',
-  'Greyhawk-Heironeous':'Alignment=LG Domain=War',
-  'Greyhawk-Hextor':'Alignment=LE Domain=War',
-  'Greyhawk-Kord':'Alignment=CG Domain=Tempest,War',
-  'Greyhawk-Incabulous':'Alignment=NE Domain=Death',
-  'Greyhawk-Istus':'Alignment=N Domain=Knowledge',
-  'Greyhawk-Iuz':'Alignment=CE Domain=Death',
-  'Greyhawk-Nerull':'Alignment=NE Domain=Death',
-  'Greyhawk-Obad-Hai':'Alignment=N Domain=Nature',
-  'Greyhawk-Olidammara':'Alignment=CN Domain=Trickery',
-  'Greyhawk-Pelor':'Alignment=NG Domain=Life,Light',
-  'Greyhawk-Pholtus':'Alignment=LG Domain=Light',
-  'Greyhawk-Ralishaz':'Alignment=CN Domain=Trickery',
-  'Greyhawk-Rao':'Alignment=LG Domain=Knowledge',
-  'Greyhawk-St. Cuthbert':'Alignment=LN Domain=Knowledge',
-  'Greyhawk-Tharizdun':'Alignment=CE Domain=Trickery',
-  'Greyhawk-Trithereon':'Alignment=CG Domain=War',
-  'Greyhawk-Ulaa':'Alignment=LG Domain=Life,War',
-  'Greyhawk-Vecna':'Alignment=NE Domain=Knowledge',
-  'Greyhawk-Wee Jas':'Alignment=LN Domain=Death,Knowledge',
-  // Nonhuman
-  'NH-Bahamut':'Alignment=LG Domain=Life,War Sphere=Dragon',
-  'NH-Blibdoolpoolp':'Alignment=NE Domain=Death Sphere=Kuo-Toa',
-  'NH-Corellon Larethian':'Alignment=CG Domain=Light Sphere=Elf',
-  'NH-Deep Sashelas':'Alignment=CG Domain=Nature,Tempest Sphere=Elf',
-  'NH-Eadro':'Alignment=N Domain=Nature,Tempest Sphere=Merfolk',
-  'NH-Garl Glittergold':'Alignment=LG Domain=Trickery Sphere=Gnome',
-  'NH-Grolantor':'Alignment=CE Domain=War Sphere="Hill Giant"',
-  'NH-Gruumsh':'Alignment=CE Domain=Tempest,War Sphere=Orc',
-  'NH-Hruggek':'Alignment=CE Domain=War Sphere=Bugbear',
-  'NH-Kurtulmak':'Alignment=LE Domain=War Sphere=Kobold',
-  'NH-Laogzed':'Alignment=CE Domain=Death Sphere=Troglodyte',
-  'NH-Lolth':'Alignment=CE Domain=Trickery Sphere=Drow',
-  'NH-Maglubiyet':'Alignment=LE Domain=War Sphere=Goblinoid',
-  'NH-Moradin':'Alignment=LG Domain=Knowledge Sphere=Dwarf',
-  'NH-Rillifane Rallathil':'Alignment=CG Domain=Nature Sphere=Elf',
-  'NH-Sehanine Moonbow':'Alignment=CG Domain=Knowledge Sphere=Elf',
-  'NH-Sekolah':'Alignment=LE Domain=Nature,Tempest Sphere=Sahuagin',
-  'NH-Semuanya':'Alignment=N Domain=Life Sphere=Lizardfolk',
-  'NH-Skerrit':'Alignment=N Domain=Knowledge Sphere=Centaur',
-  'NH-Skoraeus Stonebones':'Alignment=N Domain=Knowledge Sphere="Stone Giant"',
-  'NH-Surtur':'Alignment=LE Domain=Knowledge,War Sphere="Fire Giant"',
-  'NH-Thryn':'Alignment=CE Domain=War Sphere="Frost Giant"',
-  'NH-Tiamat':'Alignment=LE Domain=Trickery Sphere=Dragon',
-  'NH-Yondalla':'Alignment=LG Domain=Life Sphere=Halfling'
-};
-PHB5E.DEITIES = Object.assign({}, SRD5E.DEITIES, PHB5E.DEITIES_ADDED);
 PHB5E.FEATS_ADDED = {
   'Alert':
     '',
@@ -548,8 +456,9 @@ PHB5E.FEATURES_ADDED = {
     'Section=combat ' +
     'Note="Ally can use Bardic Inspiration die to boost weapon damage or AC"',
   'Combat Wild Shape':
-    'Section=combat ' +
-    'Note="Wild Shape as bonus action, use spell slot to regain (slot level)d8 HP"',
+    'Section=combat,magic ' +
+    'Note="Use Wild Shape as bonus action",' +
+         '"Use spell slot to regain (slot level)d8 HP during Wild Shape"',
   'Command Undead':
     'Section=magic ' +
     'Note="R60\' Take control of undead target (Cha neg (Adv intelligent undead))"',
@@ -598,7 +507,7 @@ PHB5E.FEATURES_ADDED = {
   'Elemental Attunement':
     'Section=magic Note="Minor elemental manipulation"',
   'Elemental Wild Shape':
-    'Section=magic Note="Use 2 Wild Shape uses to become elemental"',
+    'Section=magic Note="Use 2 Wild Shape uses to become an elemental"',
   'Enchantment Savant':
     'Section=magic Note="Write enchantment spells for half cost"',
   'Entropic Ward':
@@ -1072,7 +981,7 @@ PHB5E.PATHS_ADDED = {
   'Circle Of The Land (Underdark)':
     'Group=Druid Level=levels.Druid ' +
     'Features=' +
-      '"2:Bonus Cantrip","2:Natural Recovery","6:Land\'s Stride",' +
+      '"2:Druid Bonus Cantrip","2:Natural Recovery","6:Land\'s Stride",' +
       '"10:Nature\'s Ward","14:Nature\'s Sanctuary" ' +
     'SpellAbility=wisdom ' +
     'SpellSlots=' +
@@ -1619,6 +1528,100 @@ for(var s in PHB5E.SPELLS_RENAMED) {
   PHB5E.SPELLS[PHB5E.SPELLS_RENAMED[s]] = PHB5E.SPELLS[s];
   delete PHB5E.SPELLS[s];
 }
+PHB5E.DEITIES_ADDED = {
+  // Allow clerics w/no deity to have a domain
+  'None':'Domain=' + QuilvynUtils.getKeys(PHB5E.PATHS).filter(x => x.match(/Domain$/)).map(x => x.replace(' Domain', '')).join(','),
+  // Forgotten Realms
+  'FR-Auril':'Alignment=NE Domain=Nature,Tempest',
+  'FR-Azuth':'Alignment=LN Domain=Knowledge',
+  'FR-Bane':'Alignment=LE Domain=War',
+  'FR-Beshaba':'Alignment=CE Domain=Trickery',
+  'FR-Bhaal':'Alignment=NE Domain=Death',
+  'FR-Chauntea':'Alignment=NG Domain=Life',
+  'FR-Cyric':'Alignment=CE Domain=Trickery',
+  'FR-Deneir':'Alignment=NG Domain=Knowledge',
+  'FR-Eldath':'Alignment=NG Domain=Life,Nature',
+  'FR-Gond':'Alignment=N Domain=Knowledge',
+  'FR-Helm':'Alignment=LN Domain=Life,Light',
+  'FR-Ilmater':'Alignment=LG Domain=Life',
+  'FR-Kelemvor':'Alignment=LN Domain=Death',
+  'FR-Lathander':'Alignment=NG Domain=Life,Light',
+  'FR-Leira':'Alignment=CN Domain=Trickery',
+  'FR-Lliira':'Alignment=CG Domain=Life',
+  'FR-Loviatar':'Alignment=LE Domain=Death',
+  'FR-Malar':'Alignment=CE Domain=Nature',
+  'FR-Mask':'Alignment=CN Domain=Trickery',
+  'FR-Mielikki':'Alignment=NG Domain=Nature',
+  'FR-Milil':'Alignment=NG Domain=Light',
+  'FR-Myrkul':'Alignment=NE Domain=Death',
+  'FR-Mystra':'Alignment=NG Domain=Knowledge',
+  'FR-Oghma':'Alignment=N Domain=Knowledge',
+  'FR-Savras':'Alignment=LN Domain=Knowledge',
+  'FR-Selune':'Alignment=CG Domain=Knowledge,Life',
+  'FR-Shar':'Alignment=NE Domain=Death,Trickery',
+  'FR-Silvanus':'Alignment=N Domain=Nature',
+  'FR-Sune':'Alignment=CG Domain=Life,Light',
+  'FR-Talona':'Alignment=CE Domain=Death',
+  'FR-Talos':'Alignment=CE Domain=Tempest',
+  'FR-Tempus':'Alignment=N Domain=War',
+  'FR-Torm':'Alignment=LG Domain=War',
+  'FR-Tymora':'Alignment=CG Domain=Trickery',
+  'FR-Tyr':'Alignment=LG Domain=War',
+  'FR-Umberlee':'Alignment=CE Domain=Tempest',
+  'FR-Waukeen':'Alignment=N Domain=Knowledge,Trickery',
+  // Greyhawk
+  'Greyhawk-Beory':'Alignment=N Domain=Nature',
+  'Greyhawk-Boccob':'Alignment=N Domain=Knowledge',
+  'Greyhawk-Celestian':'Alignment=N Domain=Knowledge',
+  'Greyhawk-Ehlonna':'Alignment=NG Domain=Life,Nature',
+  'Greyhawk-Erythnul':'Alignment=CE Domain=War',
+  'Greyhawk-Fharlanghn':'Alignment=NG Domain=Knowledge,Trickery',
+  'Greyhawk-Heironeous':'Alignment=LG Domain=War',
+  'Greyhawk-Hextor':'Alignment=LE Domain=War',
+  'Greyhawk-Kord':'Alignment=CG Domain=Tempest,War',
+  'Greyhawk-Incabulous':'Alignment=NE Domain=Death',
+  'Greyhawk-Istus':'Alignment=N Domain=Knowledge',
+  'Greyhawk-Iuz':'Alignment=CE Domain=Death',
+  'Greyhawk-Nerull':'Alignment=NE Domain=Death',
+  'Greyhawk-Obad-Hai':'Alignment=N Domain=Nature',
+  'Greyhawk-Olidammara':'Alignment=CN Domain=Trickery',
+  'Greyhawk-Pelor':'Alignment=NG Domain=Life,Light',
+  'Greyhawk-Pholtus':'Alignment=LG Domain=Light',
+  'Greyhawk-Ralishaz':'Alignment=CN Domain=Trickery',
+  'Greyhawk-Rao':'Alignment=LG Domain=Knowledge',
+  'Greyhawk-St. Cuthbert':'Alignment=LN Domain=Knowledge',
+  'Greyhawk-Tharizdun':'Alignment=CE Domain=Trickery',
+  'Greyhawk-Trithereon':'Alignment=CG Domain=War',
+  'Greyhawk-Ulaa':'Alignment=LG Domain=Life,War',
+  'Greyhawk-Vecna':'Alignment=NE Domain=Knowledge',
+  'Greyhawk-Wee Jas':'Alignment=LN Domain=Death,Knowledge',
+  // Nonhuman
+  'NH-Bahamut':'Alignment=LG Domain=Life,War Sphere=Dragon',
+  'NH-Blibdoolpoolp':'Alignment=NE Domain=Death Sphere=Kuo-Toa',
+  'NH-Corellon Larethian':'Alignment=CG Domain=Light Sphere=Elf',
+  'NH-Deep Sashelas':'Alignment=CG Domain=Nature,Tempest Sphere=Elf',
+  'NH-Eadro':'Alignment=N Domain=Nature,Tempest Sphere=Merfolk',
+  'NH-Garl Glittergold':'Alignment=LG Domain=Trickery Sphere=Gnome',
+  'NH-Grolantor':'Alignment=CE Domain=War Sphere="Hill Giant"',
+  'NH-Gruumsh':'Alignment=CE Domain=Tempest,War Sphere=Orc',
+  'NH-Hruggek':'Alignment=CE Domain=War Sphere=Bugbear',
+  'NH-Kurtulmak':'Alignment=LE Domain=War Sphere=Kobold',
+  'NH-Laogzed':'Alignment=CE Domain=Death Sphere=Troglodyte',
+  'NH-Lolth':'Alignment=CE Domain=Trickery Sphere=Drow',
+  'NH-Maglubiyet':'Alignment=LE Domain=War Sphere=Goblinoid',
+  'NH-Moradin':'Alignment=LG Domain=Knowledge Sphere=Dwarf',
+  'NH-Rillifane Rallathil':'Alignment=CG Domain=Nature Sphere=Elf',
+  'NH-Sehanine Moonbow':'Alignment=CG Domain=Knowledge Sphere=Elf',
+  'NH-Sekolah':'Alignment=LE Domain=Nature,Tempest Sphere=Sahuagin',
+  'NH-Semuanya':'Alignment=N Domain=Life Sphere=Lizardfolk',
+  'NH-Skerrit':'Alignment=N Domain=Knowledge Sphere=Centaur',
+  'NH-Skoraeus Stonebones':'Alignment=N Domain=Knowledge Sphere="Stone Giant"',
+  'NH-Surtur':'Alignment=LE Domain=Knowledge,War Sphere="Fire Giant"',
+  'NH-Thryn':'Alignment=CE Domain=War Sphere="Frost Giant"',
+  'NH-Tiamat':'Alignment=LE Domain=Trickery Sphere=Dragon',
+  'NH-Yondalla':'Alignment=LG Domain=Life Sphere=Halfling'
+};
+PHB5E.DEITIES = Object.assign({}, SRD5E.DEITIES, PHB5E.DEITIES_ADDED);
 
 /*
  * Adds #name# as a possible user #type# choice and parses #attrs# to add rules
