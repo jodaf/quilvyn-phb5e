@@ -197,7 +197,7 @@ PHB5E.CLASSES_SELECTABLES_ADDED = {
     '"3:Sweeping Attack:Maneuver","3:Trip Attack:Maneuver"',
   'Monk':
     '"3:Way Of The Four Elements:Monastic Tradition",' +
-    '"3:Way Of The Shadow:Monastic Tradition",' +
+    '"3:Way Of Shadow:Monastic Tradition",' +
     '"17:Breath Of Winter:Elemental Discipline",' +
     '"6:Clench Of The North Wind:Elemental Discipline",' +
     '"17:Eternal Mountain Defense:Elemental Discipline",' +
@@ -369,7 +369,8 @@ PHB5E.FEATURES_ADDED = {
     'Note="Have excellent geography memory and can forage for 6 people"',
   // Paths
   "Commander's Strike":
-    'Section=combat Note="Add Superiority die to ally attack"',
+    'Section=combat ' +
+    'Note="Forego 1 attack to add Superiority Die to ally attack"',
   "Nature's Wrath":
     'Section=magic ' +
     'Note="R10\' Channel Divinity makes vines ensnare foe (Dex or Str neg)"',
@@ -394,8 +395,7 @@ PHB5E.FEATURES_ADDED = {
          '"Skill Proficiency (Choose 1 from Animal Handling, Nature, Survival)"',
   'Alter Memories':
     'Section=magic Note="Target unaware charmed, forgets %V hrs (Int neg)"',
-  'Arcane Charge':
-    'Section=magic Note="Action Surge to teleport 30\'"',
+  'Arcane Charge':'Section=magic Note="Teleport 30\' during Action Surge"',
   'Arcane Ward':
     'Section=magic ' +
     'Note="Abjuration casting creates %V HP shield until long rest"',
@@ -442,19 +442,22 @@ PHB5E.FEATURES_ADDED = {
     'Section=skill ' +
     'Note="+2 Language Count/Skill Proficiency (Choose 2 from Arcana, History, Nature, Religion)/Dbl Proficiency Bonus for chosen skills"',
   'Breath Of Winter':
-    'Section=magic Note="Spend 6 Ki to cast <i>Cone Of Cold</i>"',
+    'Section=magic Note="Spend 6 Ki Points to cast <i>Cone Of Cold</i>"',
   'Charm Animals And Plants':
     'Section=magic Note="R30\' Channel Divinity charms for 1 min (Wis neg)"',
   'Circle Forms':
     'Section=magic Note="Increase Wild Shape CR to %V"',
   'Clench Of The North Wind':
-    'Section=magic Note="Spend 3 Ki to cast <i>Hold Person</i>"',
+    'Section=magic Note="Spend 3 Ki Points to cast <i>Hold Person</i>"',
   'Cloak Of Shadows':
     'Section=magic ' +
-    'Note="Invisible in dim and unlit areas until attack or cast"',
+    'Note="Self invisible in dim and unlit areas until attacks or casts"',
   'Combat Inspiration':
     'Section=combat ' +
     'Note="Ally can use Bardic Inspiration die to boost weapon damage or AC"',
+  'Combat Superiority':
+    'Section=combat ' +
+    'Note="Use %Vd%1 Superiority Dice to perform %2 chosen Maneuvers/short rest"',
   'Combat Wild Shape':
     'Section=combat,magic ' +
     'Note="Use Wild Shape as bonus action",' +
@@ -473,7 +476,7 @@ PHB5E.FEATURES_ADDED = {
     'Section=magic Note="Touch charms incapacitated humanoid"',
   'Dampen Elements':
     'Section=magic ' +
-    'Note="R30\' Reaction to grant resistance to acid, cold, fire, lightning, or thunder damage"',
+    'Note="R30\' Use reaction to grant resistance to acid, cold, fire, lightning, or thunder damage"',
   'Dark Delirium':
     'Section=magic ' +
     'Note="R60\' Target charmed or frightened 1 min, then unaware surroundings (Wis neg) 1/long rest"',
@@ -484,12 +487,12 @@ PHB5E.FEATURES_ADDED = {
     'Note="Channel Divinity maximizes lightning or thunder damage"',
   'Disarming Attack':
     'Section=combat ' +
-    'Note="Add Superiority die to damage, foe drops item (Str neg)"',
+    'Note="Add Superiority Die to damage, foe drops item (DC %V Str neg)"',
   'Disciple Of The Elements':
-    'Section=magic Note="%V elemental disciplines"',
+    'Section=magic Note="Select %V elemental disciplines"',
   'Distracting Strike':
     'Section=combat ' +
-    'Note="Add Superiority die to damage, Adv next ally attack same foe in same tn"',
+    'Note="Add Superiority Die to damage, next ally attack against same foe in same rd gains Adv"',
   'Divination Savant':
     'Section=magic Note="Write divination spells for half cost"',
   'Durable Summons':
@@ -503,9 +506,11 @@ PHB5E.FEATURES_ADDED = {
     'Section=magic ' +
     'Note="Transform, regain 10 HP/tn, cast as bonus action, and foes w/in 10\' Disadv vs. your spells for 1 min 1/long rest"',
   'Eldritch Strike':
-    'Section=combat Note="Foe Disadv vs. your spells for 1 tn after you hit"',
+    'Section=combat ' +
+    'Note="Inflicts Disadv on saves vs. self spells for 1 rd after hit"',
   'Elemental Attunement':
-    'Section=magic Note="Minor elemental manipulation"',
+    'Section=magic ' +
+    'Note="Create harmless instantaneous elemental effect, light or snuff small flame, chill or warm 1 lb object for 1 hr, or shape 1\' cu earth, fire, water, or mist for 1 min"',
   'Elemental Wild Shape':
     'Section=magic Note="Use 2 Wild Shape uses to become an elemental"',
   'Enchantment Savant':
@@ -514,9 +519,9 @@ PHB5E.FEATURES_ADDED = {
     'Section=combat ' +
     'Note="Foe Disadv attack, miss gives you Adv next attack 1/short rest"',
   'Eternal Mountain Defense':
-    'Section=magic Note="Spend 5 Ki to cast self <i>Stoneskin</i>"',
+    'Section=magic Note="Spend 5 Ki Points to cast <i>Stoneskin</i> on self"',
   'Evasive Footwork':
-    'Section=combat Note="Add Superiority die to AC during move"',
+    'Section=combat Note="Add Superiority Die to AC during move"',
   'Exceptional Training':
     'Section=feature ' +
     'Note="Companion can Dash, Disengage, Help instead of attack"',
@@ -524,27 +529,27 @@ PHB5E.FEATURES_ADDED = {
     'Section=magic Note="Regain lower spell slot when cast divination spell"',
   'Fangs Of The Fire Snake':
     'Section=magic ' +
-    'Note="Spend 1 Ki for +10\' unarmed reach, 2nd Ki for +1d10 HP fire"',
+    'Note="Spend 1 Ki Point for +10\' unarmed reach, 2nd Ki Point to inflict +1d10 HP fire"',
   'Feinting Attack':
     'Section=combat ' +
-    'Note="Adv next attack adjacent foe, add Superiority die to damage"',
+    'Note="Use bonus action to gain Adv on next attack and add Superiority Die to damage"',
   'Fey Presence':
     'Section=magic ' +
     'Note="R10\' All creatures charmed or frightened 1 tn (Wis neg) 1/short rest"',
   'Fist Of Four Thunders':
-    'Section=magic Note="Spend 2 Ki to cast <i>Thunderwave</i>"',
+    'Section=magic Note="Spend 2 Ki Points to cast <i>Thunderwave</i>"',
   'Fist Of Unbroken Air':
     'Section=magic ' +
-    'Note="R30\' Spend 2+ Ki for air blast 3d10+ HP, push 20\' and knock prone (Str half)"',
+    'Note="R30\' Spend 2+ Ki Points to inflict 3d10+ HP, push 20\', and knock prone (DC %V Str half HP only)"',
   'Flames Of The Phoenix':
-    'Section=magic Note="Spend 4 Ki to cast <i>Fireball</i>"',
+    'Section=magic Note="Spend 4 Ki Points to cast <i>Fireball</i>"',
   'Focused Conjuration':
     'Section=magic Note="Damage cannot break conjuration concentration"',
   'Goading Attack':
     'Section=combat ' +
-    'Note="Add Superiority die to damage, foe Disadv attack others for 1 tn (Wis neg)"',
+    'Note="Add Superiority Die to damage, foe attacks on others suffer Disadv for 1 rd (DC %V Wis neg)"',
   'Gong Of The Summit':
-    'Section=magic Note="Spend 3 Ki to cast <i>Shatter</i>"',
+    'Section=magic Note="Spend 3 Ki Points to cast <i>Shatter</i>"',
   'Grim Harvest':
     'Section=magic ' +
     'Note="Regain 2x spell level (3x necromantic) when spell kills"',
@@ -562,12 +567,15 @@ PHB5E.FEATURES_ADDED = {
     'Section=feature Note="Unerring mimicry"',
   'Improved Abjuration':
     'Section=magic Note="Add Proficiency Bonus to abjuration ability checks"',
+  'Improved Combat Superiority':
+    'Section=combat Note="Use d%V Superiority Dice"',
   'Improved Duplicity':
     'Section=magic Note="Invoke Duplicity creates 4 duplicates"',
   'Improved Flare':
     'Section=magic Note="Warding Flare protects allies"',
   'Improved Minor Illusion':
     'Section=magic Note="<i>Minor Illusion</i> with sound, image"',
+  'Improved War Magic':'Section=combat Note="Bonus attack after any spell"',
   'Infiltration Expertise':
     'Section=feature Note="Forge and adopt different identity"',
   'Instinctive Charm':
@@ -580,14 +588,15 @@ PHB5E.FEATURES_ADDED = {
     'Section=magic ' +
     'Note="R30\' Channel Divinity creates %V, giving Adv on attacks when w/in 5\' and allowing remote spellcasting for conc or 1 min"',
   'Know Your Enemy':
-    'Section=combat Note="Know how foe compares to you after 1 min study"',
+    'Section=combat Note="Know how foe compares to self after 1 min study"',
   'Knowledge Of The Ages':
     'Section=skill ' +
     'Note="Channel Divinity gives proficiency in chosen skill or tool for 10 min"',
   'Light Bonus Cantrip':
     'Section=magic Note="Know <i>Light</i> cantrip"',
   'Lunging Attack':
-    'Section=combat Note="+5\' melee range, add Superiority die to damage"',
+    'Section=combat ' +
+    'Note="Gain +5\' melee range, add Superiority Die to damage"',
   'Mage Hand Legerdemain':
     'Section=magic ' +
     'Note="Plant, retrieve, pick, disarm via invisible <i>Mage Hand</i>"',
@@ -597,9 +606,7 @@ PHB5E.FEATURES_ADDED = {
     'Section=magic Note="Transform existing illusions"',
   'Maneuvering Attack':
     'Section=combat ' +
-    'Note="Add Superiority die to damage, ally move half speed w/no OA from target"',
-  'Maneuvers':
-    'Section=combat Note="Select %V Fighter maneuvers (DC %1)"',
+    'Note="Add Superiority Die to damage, ally can react to move half speed w/no OA from target"',
   'Master Of Nature':
     'Section=magic Note="Command charmed animals, plants"',
   'Master Transmuter':
@@ -607,65 +614,66 @@ PHB5E.FEATURES_ADDED = {
     'Note="Destroy stone to transmute 5\' cu, remove curse, disease, and poison, <i>Raise Dead</i>, or restore youth"',
   'Menacing Attack':
     'Section=combat ' +
-    'Note="Add Superiority die to damage, foe frightened for 1 tn (Wis neg)"',
+    'Note="Add Superiority Die to damage, foe frightened for 1 rd (DC %V Wis neg)"',
   'Minor Alchemy':
     'Section=magic Note="Transform 1 cu\'/10 min for 1 hr"',
   'Minor Conjuration':
     'Section=magic Note="R10\' Create 3\' cu 10 lb object for 1 hr"',
   'Mist Stance':
-    'Section=magic Note="Spend 4 Ki to cast self <i>Gaseous Form</i>"',
+    'Section=magic ' +
+    'Note="Spend 4 Ki Points to cast <i>Gaseous Form</i> on self"',
   'Misty Escape':
     'Section=magic ' +
     'Note="After damage, teleport 60\' and become invisible 1 tn 1/short rest"',
   'Nature Bonus Proficiency':'Section=combat Note="Armor Proficiency (Heavy)"',
   'Necromancy Savant':
     'Section=magic Note="Write necromancy spells for half cost"',
-  'Opportunist':'Section=combat Note="Attack adjacent foe after ally hit"',
+  'Opportunist':
+    'Section=combat Note="Use reaction to attack adjacent foe after ally hit"',
   'Parry':
-    'Section=combat Note="Reduce damage from foe hit by Superiority die + %V"',
+    'Section=combat Note="Reduce damage from foe by Superiority Die + %V"',
   'Portent':
     'Section=magic Note="Replace self or other roll %V/long rest"',
   'Potent Spellcasting':
     'Section=magic Note="+%1 Cleric cantrip damage"',
   'Precision Attack':
-    'Section=combat Note="Add Superiority die to attack"',
+    'Section=combat Note="Add Superiority Die to attack"',
   'Primal Strike':
     'Section=combat Note="Wild Shape attacks count as magical"',
   'Projected Ward':
     'Section=magic Note="R30\' Use Arcane Ward to protect others"',
   'Pushing Attack':
     'Section=combat ' +
-    'Note="Add Superiority die to damage, foe pushed 15\' (Str neg)"',
+    'Note="Add Superiority Die to damage, push foe 15\' (DC %V Str neg)"',
   'Radiance Of The Dawn':
     'Section=magic ' +
     'Note="R30\' Channel Divinity dispels magic darkness, foes suffer 2d10+%V HP radiant (Con half)"',
   'Rally':
-    'Section=combat Note="Chosen ally gains Superiority die + %V temp HP"',
+    'Section=combat Note="Chosen ally gains Superiority Die + %V temporary HP"',
   'Read Thoughts':
     'Section=magic ' +
     'Note="R60\' Use Channel Divinity to read thoughts and cast <i>Suggestion</i> for 1 min (Wis neg)"',
-  'Relentless Avenger':
-    'Section=combat Note="Move half speed after OA hit"',
+  'Relentless Avenger':'Section=combat Note="Move half speed after OA hit"',
   'Relentless':
-    'Section=combat Note="Minimum 1 superiority die after initiative"',
+    'Section=combat Note="Minimum 1 Superiority Die after initiative"',
   'Ride The Wind':
-    'Section=magic Note="Spend 4 Ki to cast self <i>Fly</i>"',
+    'Section=magic Note="Spend 4 Ki Points to cast <i>Fly</i> on self"',
   'Riposte':
     'Section=combat ' +
-    'Note="Bonus attack after foe miss, add Superiority die to damage"',
+    'Note="Use bonus to attack after foe miss, add Superiority Die to damage"',
   'River Of Hungry Flame':
-    'Section=magic Note="Spend 5 Ki to cast <i>Wall Of Fire</i>"',
+    'Section=magic Note="Spend 5 Ki Points to cast <i>Wall Of Fire</i>"',
   'Rush Of The Gale Spirits':
-    'Section=magic Note="Spend 2 Ki to cast <i>Gust Of Wind</i>"',
+    'Section=magic Note="Spend 2 Ki Points to cast <i>Gust Of Wind</i>"',
   'Shadow Arts':
     'Section=magic ' +
-    'Note="<i>Minor Illusion</i> cantrip, spend 2 Ki to cast <i>Darkness</i>, <i>Darkvision</i>, <i>Pass Without Trace</i>, or <i>Silence</i>"',
+    'Note="Know <i>Minor Illusion</i> cantrip, spend 2 Ki Points to cast <i>Darkness</i>, <i>Darkvision</i>, <i>Pass Without Trace</i>, or <i>Silence</i>"',
   'Shadow Step':
     'Section=magic ' +
-    'Note="Teleport 60\' between dim or unlit areas, then Adv first melee attack"',
+    'Note="Teleport 60\' between dim or unlit areas, then gain Adv on first melee attack"',
   'Shape The Flowing River':
     'Section=magic ' +
-    'Note="R120\' Spend 1 Ki to freeze, thaw, and shape 30\'x30\' water"',
+    'Note="R120\' Spend 1 Ki Point to freeze, thaw, and shape 30\' cu water"',
   'Shapechanger':
     'Section=magic Note="Self <i>Polymorph</i> to CR 1 creature 1/short rest"',
   'Share Spells':
@@ -687,13 +695,11 @@ PHB5E.FEATURES_ADDED = {
     'Section=magic Note="Add second target to charm spell"',
   'Stormborn':
     'Section=ability Note="%{speed}\' fly speed outdoors"',
-  'Superiority Dice':
-    'Section=combat Note="%Vd%1/short rest"',
   'Sweeping Attack':
     'Section=combat ' +
-    'Note="After hit, Superiority die damage to second adjacent foe"',
+    'Note="After hit, inflict Superiority Die HP on adjacent foe"',
   'Sweeping Cinder Strike':
-    'Section=magic Note="Spend 2 Ki to cast <i>Burning Hands</i>"',
+    'Section=magic Note="Spend 2 Ki Points to cast <i>Burning Hands</i>"',
   'Tempest Bonus Proficiencies':
     'Section=combat ' +
     'Note="Armor Proficiency (Heavy) and Weapon Proficiency (Martial)"',
@@ -717,7 +723,7 @@ PHB5E.FEATURES_ADDED = {
     'Section=magic Note="Channel Divinity makes self invisible 1 tn"',
   'Trip Attack':
     'Section=combat ' +
-    'Note="Add Superiority die to damage, foe knocked prone (Str neg)"',
+    'Note="Add Superiority Die to damage, knock foe prone (DC %V Str neg)"',
   'Turn The Faithless':
     'Section=magic ' +
     'Note="R30\' Channel Divinity makes fiends and fey flee for 1 min (Wis neg)"',
@@ -739,20 +745,18 @@ PHB5E.FEATURES_ADDED = {
   'War Bonus Proficiencies':
     'Section=combat ' +
     'Note="Armor Proficiency (Heavy) and Weapon Proficiency (Martial)"',
-  'War Magic':
-    'Section=combat Note="Bonus attack after %V"',
-  'War Priest':
-    'Section=combat Note="Bonus attack %V/long rest"',
+  'War Magic':'Section=combat Note="Bonus attack after %V"',
+  'War Priest':'Section=combat Note="Bonus attack %V/long rest"',
   'Warding Flare':
     'Section=magic ' +
     'Note="R30\' Reaction inflicts foe Disadv on current attack %V/long rest"',
   'Water Whip':
     'Section=magic ' +
-    'Note="R30\' Spend 2+ Ki for water whip 3d10+ HP, pull 25\' or knock prone (Str half)"',
+    'Note="R30\' Spend 2+ Ki Points to inflict 3d10+ HP bludgeoning and pull 25\' or knock prone (DC %V Str half HP only)"',
   'Wave Of Rolling Earth':
-    'Section=magic Note="Spend 6 Ki to cast <i>Wall Of Stone</i>"',
+    'Section=magic Note="Spend 6 Ki Points to cast <i>Wall Of Stone</i>"',
   'Weapon Bond':
-    'Section=combat Note="Cannot be disarmed, summon weapon"',
+    'Section=combat Note="Cannot be disarmed, can summon weapon"',
   'Wild Magic Surge':
     'Section=magic Note="5% chance of random magic effect"',
   'Wolf Totem Spirit':
@@ -854,7 +858,7 @@ PHB5E.FEATURES_ADDED = {
     'Section=magic Note="2 cantrips, 1 1st-level/long rest"',
   'Martial Adept':
     'Section=combat ' +
-    'Note="Two maneuvers (DC %V), 1 d6 superiority die/long rest"',
+    'Note="Two maneuvers (DC %V), 1 d6 Superiority Die/long rest"',
   'Medium Armor Master':
     'Section=combat,skill ' +
     'Note="+1 AC",' +
@@ -971,8 +975,8 @@ PHB5E.PATHS_ADDED = {
   'Battle Master':
     'Group=Fighter Level=levels.Fighter ' +
     'Features=' +
-      '"3:Student Of War",3:Maneuvers,"3:Superiority Dice",' +
-      '"7:Know Your Enemy",15:Relentless',
+      '"3:Student Of War","3:Combat Superiority","7:Know Your Enemy",' +
+      '"10:Improved Combat Superiority",15:Relentless',
   'Beast Master':
     'Group=Ranger Level=levels.Ranger ' +
     'Features=' +
@@ -1003,7 +1007,7 @@ PHB5E.PATHS_ADDED = {
     'Group=Fighter Level=levels.Fighter ' +
     'Features=' +
       '3:Spellcasting,"3:Weapon Bond","7:War Magic","10:Eldritch Strike",' +
-      '"15:Arcane Charge" ' +
+      '"15:Arcane Charge","18:Improved War Magic" ' +
     'SpellAbility=intelligence ' +
     'SpellSlots=' +
       'W0:3=2;10=3,' +
@@ -1171,11 +1175,7 @@ PHB5E.PATHS_ADDED = {
       'War3:5=2,' +
       'War4:7=2,' +
       'War5:9=2',
-  'Way Of The Four Elements':
-    'Group=Monk Level=levels.Monk ' +
-    'Features=' +
-      '"3:Disciple Of The Elements","3:Elemental Attunement"',
-  'Way Of The Shadow':
+  'Way Of Shadow':
     'Group=Monk Level=levels.Monk ' +
     'Features=' +
       '"3:Shadow Arts","6:Shadow Step","11:Cloak Of Shadows",' +
@@ -1184,6 +1184,10 @@ PHB5E.PATHS_ADDED = {
     'SpellSlots=' +
       'Shadow0:3=1,' +
       'Shadow2:3=4',
+  'Way Of The Four Elements':
+    'Group=Monk Level=levels.Monk ' +
+    'Features=' +
+      '"3:Disciple Of The Elements","3:Elemental Attunement"',
   'Wild Magic':
     'Group=Sorcerer Level=levels.Sorcerer ' +
     'Features=' +
@@ -1629,12 +1633,25 @@ PHB5E.DEITIES = Object.assign({}, SRD5E.DEITIES, PHB5E.DEITIES_ADDED);
  */
 PHB5E.choiceRules = function(rules, type, name, attrs) {
   SRD5E.choiceRules(rules, type, name, attrs);
-  if(type == 'Feat')
+  if(type == 'Class')
+    PHB5E.classRulesExtra(rules, name);
+  else if(type == 'Feat')
     PHB5E.featRulesExtra(rules, name);
   else if(type == 'Path')
     PHB5E.pathRulesExtra(rules, name);
   else if(type == 'Race')
     PHB5E.raceRulesExtra(rules, name);
+};
+
+/*
+ * Defines in #rules# the rules associated with class #name# that cannot be
+ * derived directly from the attributes passed to classRules.
+ */
+PHB5E.classRulesExtra = function(rules, name) {
+  if(name == 'Monk') {
+    rules.defineRule('magicNotes.fistOfUnbrokenAir', 'kiSaveDC', '=', null);
+    rules.defineRule('magicNotes.waterWhip', 'kiSaveDC', '=', null);
+  }
 };
 
 /*
@@ -1751,29 +1768,37 @@ PHB5E.pathRulesExtra = function(rules, name) {
 
   } else if(name == 'Battle Master') {
 
-    rules.defineRule('combatNotes.superiorityDice',
-      pathLevel, '=', 'source<7 ? 4 : source<15 ? 5 : 6'
-    );
-    rules.defineRule('combatNotes.superiorityDice.1',
-      'fighterFeatures.Superiority Dice', '?', null,
-      pathLevel, '=', 'source<10 ? 8 : source<18 ? 10 : 12'
-    );
     rules.defineRule('maxDexOrStrMod',
       'dexterityModifier', '=', null,
       'strengthModifier', '^', null
     );
-    rules.defineRule('combatNotes.maneuvers',
-      pathLevel, '=', 'source<7 ? 3 : source<10 ? 5 : source<15 ? 7 : 9'
-    );
-    rules.defineRule('combatNotes.maneuvers.1',
-      'fighterFeatures.Battle Master', '?', null,
+    rules.defineRule('maneuverSaveDC',
+      'features.Combat Superiority', '?', null,
       'proficiencyBonus', '=', '8 + source',
       'maxDexOrStrMod', '+', null
     );
+    rules.defineRule('combatNotes.combatSuperiority',
+      pathLevel, '=', 'source<7 ? 4 : source<15 ? 5 : 6'
+    );
+    rules.defineRule('combatNotes.combatSuperiority.1',
+      'combatNotes.improvedCombatSuperiority', '=', null
+    );
+    rules.defineRule('combatNotes.combatSuperiority.2',
+      pathLevel, '=', 'source<7 ? 3 : source<10 ? 5 : source<15 ? 7 : 9'
+    );
+    rules.defineRule
+      ('combatNotes.disarmingAttack', 'maneuverSaveDC', '=', null);
+    rules.defineRule('combatNotes.goadingAttack', 'maneuverSaveDC', '=', null);
+    rules.defineRule('combatNotes.improvedCombatSuperiority',
+      pathLevel, '=', 'source<18 ? 10 : 12'
+    );
+    rules.defineRule('combatNotes.menacingAttack', 'maneuverSaveDC', '=', null);
     rules.defineRule('combatNotes.parry', 'dexterityModifier', '=', null);
+    rules.defineRule('combatNotes.pushingAttack', 'maneuverSaveDC', '=', null);
     rules.defineRule('combatNotes.rally', 'charismaModifier', '=', null);
+    rules.defineRule('combatNotes.tripAttack', 'maneuverSaveDC', '=', null);
     rules.defineRule('selectableFeatureCount.Fighter (Maneuver)',
-      'combatNotes.maneuvers', '=', null
+      'combatNotes.combatSuperiority.2', '=', null
     );
 
   } else if(name == 'Circle Of The Moon') {
@@ -1806,7 +1831,8 @@ PHB5E.pathRulesExtra = function(rules, name) {
   } else if(name == 'Eldritch Knight') {
 
     rules.defineRule('combatNotes.warMagic',
-      pathLevel, '=', 'source<18 ? "cantrip" : "any spell"'
+      pathLevel, '=', '"cantrip"',
+      'combatNotes.improvedWarMagic', '=', '"any spell"'
     );
 
   } else if(name == 'Knowledge Domain') {
