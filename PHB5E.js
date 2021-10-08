@@ -432,7 +432,8 @@ PHB5E.FEATURES_ADDED = {
     'Section=combat ' +
     'Note="Adjacent foes Disadv on attacks on others during self rage"',
   'Beguiling Defenses':
-    'Section=save Note="Immunity to charm, reflect 1 min (Wis neg)"',
+    'Section=save ' +
+    'Note="Immune to charm, reflect on caster for conc or 1 min (DC %V Wis neg)"',
   'Bend Luck':
     'Section=magic ' +
     'Note="Spend 2 Sorcery Points to add or subtract 1d4 from target roll"',
@@ -473,7 +474,7 @@ PHB5E.FEATURES_ADDED = {
   'Conjuration Savant':
     'Section=magic Note="Write conjuration spells for half cost"',
   'Controlled Chaos':
-    'Section=magic Note="Re-roll wild magic surge effect"',
+    'Section=magic Note="Choose from 2 Wild Magic Surge effects"',
   'Corona Of Light':
     'Section=magic ' +
     'Note="60\' light inflicts foe Disadv on fire and radiant spells for 1 min"',
@@ -484,7 +485,7 @@ PHB5E.FEATURES_ADDED = {
     'Note="R30\' Use Reaction to grant resistance to acid, cold, fire, lightning, or thunder damage"',
   'Dark Delirium':
     'Section=magic ' +
-    'Note="R60\' Target charmed or frightened 1 min, then unaware surroundings (Wis neg) 1/long rest"',
+    'Note="R60\' Target charmed or frightened and unaware of surroundings for conc or 1 min (DC %V Wis neg) 1/long rest"',
   'Death Strike':
     'Section=combat Note="Dbl damage on surprise hit (DC %V Con neg)"',
   'Destructive Wrath':
@@ -522,7 +523,7 @@ PHB5E.FEATURES_ADDED = {
     'Section=magic Note="Write enchantment spells for half cost"',
   'Entropic Ward':
     'Section=combat ' +
-    'Note="Foe Disadv attack, miss gives you Adv next attack 1/short rest"',
+    'Note="Use Reaction to inflict Disadv on attack by foe, miss gives you Adv on next attack 1/short rest"',
   'Eternal Mountain Defense':
     'Section=magic Note="Spend 5 Ki Points to cast <i>Stoneskin</i> on self"',
   'Evasive Footwork':
@@ -540,7 +541,7 @@ PHB5E.FEATURES_ADDED = {
     'Note="Use bonus action to gain Adv on next attack and add Superiority Die to damage"',
   'Fey Presence':
     'Section=magic ' +
-    'Note="R10\' All creatures charmed or frightened 1 tn (Wis neg) 1/short rest"',
+    'Note="R10\' All creatures charmed or frightened for 1 tn (DC %V Wis neg) 1/short rest"',
   'Fist Of Four Thunders':
     'Section=magic Note="Spend 2 Ki Points to cast <i>Thunderwave</i>"',
   'Fist Of Unbroken Air':
@@ -629,7 +630,7 @@ PHB5E.FEATURES_ADDED = {
     'Note="Spend 4 Ki Points to cast <i>Gaseous Form</i> on self"',
   'Misty Escape':
     'Section=magic ' +
-    'Note="After damage, teleport 60\' and become invisible 1 tn 1/short rest"',
+    'Note="After damage, teleport 60\' and become invisible for 1 tn 1/short rest"',
   'Nature Bonus Proficiency':'Section=combat Note="Armor Proficiency (Heavy)"',
   'Necromancy Savant':
     'Section=magic Note="Write necromancy spells for half cost"',
@@ -687,7 +688,8 @@ PHB5E.FEATURES_ADDED = {
     'Section=combat ' +
     'Note="Use Reaction for melee attack on Vow Of Enmity target "',
   'Spell Bombardment':
-    'Section=magic Note="Add another die when max rolled 1/tn"',
+    'Section=magic ' +
+    'Note="Add another die when maximum rolled on spell damage die 1/tn"',
   'Spell Resistance':
     'Section=save Note="Adv vs. spells and resistance to spell damage"',
   'Spell Thief':
@@ -714,7 +716,7 @@ PHB5E.FEATURES_ADDED = {
     'Note="60\' Darkvision, 60\' Ethereal Sight, read any language, or 10\' see invisibility"',
   'Thought Shield':
     'Section=save ' +
-    'Note="Immunity to telepathy, resistance to and reflect psychic damage"',
+    'Note="Immune to telepathy, resistance to and reflect psychic damage"',
   'Thousand Forms':
     'Section=magic Note="<i>Alter Self</i> at will"',
   'Thunderbolt Strike':
@@ -722,7 +724,7 @@ PHB5E.FEATURES_ADDED = {
     'Note="Lightning damage pushes away Large and smaller creatures 10\'"',
   'Tides Of Chaos':
     'Section=feature ' +
-    'Note="Adv on attack, ability, or save 1/long rest (may cause surge)"',
+    'Note="Adv on attack, ability, or saving throw 1/long rest (subsequent spell use may cause Wild Magic Surge)"',
   'Transmutation Savant':
     'Section=magic Note="Write transmutation spells for half cost"',
   'Trickster Cloak Of Shadows':
@@ -1671,6 +1673,13 @@ PHB5E.classRulesExtra = function(rules, name) {
   } else if(name == 'Ranger') {
     rules.defineRule
       ("featureNotes.ranger'sCompanion", 'levels.Ranger', '=', '"1/4"');
+  } else if(name == 'Warlock') {
+    rules.defineRule
+      ('magicNotes.darkDelirium', 'spellDifficultyClass.K', '=', null);
+    rules.defineRule
+      ('magicNotes.feyPresence', 'spellDifficultyClass.K', '=', null);
+    rules.defineRule
+      ('saveNotes.beguilingDefenses', 'spellDifficultyClass.K', '=', null);
   }
 };
 
