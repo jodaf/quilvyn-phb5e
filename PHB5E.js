@@ -380,12 +380,12 @@ PHB5E.FEATURES_ADDED = {
     'Section=feature Note="Tool Proficiency (Choose 1 from any Artisan)"',
   "Transmuter's Stone":
     'Section=magic ' +
-    'Note="Stone gives 60\' darkvision, +10 speed, proficiency in constitution, or resistance to chosen energy damage"',
+    'Note="Stone gives 60\' darkvision, +10\' speed, proficiency in constitution, or resistance to chosen energy damage; change effect when casting transmutation spell"',
   "War God's Blessing":
     'Section=magic ' +
     'Note="R30\' Channel Divinity Reaction gives ally +10 attack"',
   'Abjuration Savant':
-    'Section=magic Note="Write abjuration spells for half cost"',
+    'Section=magic Note="Copy abjuration spells into spellbook for half cost"',
   'Abjure Enemy':
     'Section=magic ' +
     'Note="R60\' Channel Divinity halts target for 1 min (DC %V Wis half speed)"',
@@ -394,11 +394,12 @@ PHB5E.FEATURES_ADDED = {
     'Note="Additional Druid cantrip",' +
          '"Skill Proficiency (Choose 1 from Animal Handling, Nature, Survival)"',
   'Alter Memories':
-    'Section=magic Note="Target unaware charmed, forgets %V hrs (Int neg)"',
+    'Section=magic ' +
+    'Note="Target unaware of enchantment, forgets %V hrs (DC %1 Int neg)"',
   'Arcane Charge':'Section=magic Note="Teleport 30\' during Action Surge"',
   'Arcane Ward':
     'Section=magic ' +
-    'Note="Abjuration casting creates %V HP shield until long rest"',
+    'Note="Abjuration casting creates %V HP shield around self until long rest"',
   'Aspect Of The Bear':
     'Section=ability ' +
     'Note="Dbl load and lift, Adv on Str checks to push, pull, lift, or break"',
@@ -439,7 +440,7 @@ PHB5E.FEATURES_ADDED = {
     'Note="Spend 2 Sorcery Points to add or subtract 1d4 from target roll"',
   'Benign Transposition':
     'Section=magic ' +
-    'Note="R30\' Teleport or swap willing creature 1/long rest or cast"',
+    'Note="R30\' Teleport self or swap w/willing creature 1/long rest or conjuration spell casting"',
   'Bestial Fury':
     'Section=feature Note="Companion makes 2 attacks/rd"',
   'Blessing Of The Trickster':
@@ -470,9 +471,9 @@ PHB5E.FEATURES_ADDED = {
          '"Use spell slot to regain (slot level)d8 HP during Wild Shape"',
   'Command Undead':
     'Section=magic ' +
-    'Note="R60\' Take control of undead target (Cha neg (Adv intelligent undead))"',
+    'Note="R60\' Take control of undead target (DC %V Cha neg (Adv intelligence 8 or higher))"',
   'Conjuration Savant':
-    'Section=magic Note="Write conjuration spells for half cost"',
+    'Section=magic Note="Copy conjuration spells into spellbook for half cost"',
   'Controlled Chaos':
     'Section=magic Note="Choose from 2 Wild Magic Surge effects"',
   'Corona Of Light':
@@ -500,9 +501,9 @@ PHB5E.FEATURES_ADDED = {
     'Section=combat ' +
     'Note="Add Superiority Die to damage, next ally attack against same foe in same rd gains Adv"',
   'Divination Savant':
-    'Section=magic Note="Write divination spells for half cost"',
+    'Section=magic Note="Copy divination spells into spellbook for half cost"',
   'Durable Summons':
-    'Section=magic Note="Summoned creatures +30 HP"',
+    'Section=magic Note="Summoned creatures gain +30 temporary HP"',
   'Eagle Totem Spirit':
     'Section=combat ' +
     'Note="Foes Disadv on OA; bonus Dash during rage (heavy armor neg)"',
@@ -520,7 +521,7 @@ PHB5E.FEATURES_ADDED = {
   'Elemental Wild Shape':
     'Section=magic Note="Use 2 Wild Shape uses to become an elemental"',
   'Enchantment Savant':
-    'Section=magic Note="Write enchantment spells for half cost"',
+    'Section=magic Note="Copy enchantment spells into spellbook for half cost"',
   'Entropic Ward':
     'Section=combat ' +
     'Note="Use Reaction to inflict Disadv on attack by foe, miss gives you Adv on next attack 1/short rest"',
@@ -532,7 +533,7 @@ PHB5E.FEATURES_ADDED = {
     'Section=feature ' +
     'Note="Companion can Dash, Disengage, Dodge, or Help instead of Attack"',
   'Expert Divination':
-    'Section=magic Note="Regain lower spell slot when cast divination spell"',
+    'Section=magic Note="Casting divination spell restores lower spell slot"',
   'Fangs Of The Fire Snake':
     'Section=magic ' +
     'Note="Spend 1 Ki Point for +10\' unarmed reach, 2nd Ki Point to inflict +1d10 HP fire"',
@@ -556,23 +557,25 @@ PHB5E.FEATURES_ADDED = {
     'Note="Add Superiority Die to damage, foe attacks on others suffer Disadv for 1 rd (DC %V Wis neg)"',
   'Gong Of The Summit':
     'Section=magic Note="Spend 3 Ki Points to cast <i>Shatter</i>"',
+  'Greater Portent':'Section=magic Note="Replace roll 3/long rest"',
   'Grim Harvest':
     'Section=magic ' +
-    'Note="Regain 2x spell level (3x necromantic) when spell kills"',
+    'Note="Regain 2x spell level HP (3x for necromantic spells) when self spell kills"',
   'Guided Strike':
     'Section=combat Note="Channel Divinity gives self +10 attack"',
   'Hypnotic Gaze':
-    'Section=magic Note="Daze adjacent creature 1/long rest (Wis neg)"',
+    'Section=magic Note="R5\' Daze target 1/long rest (DC %V Wis neg)"',
   'Illusion Savant':
-    'Section=magic Note="Write illusion spells for half cost"',
+    'Section=magic Note="Copy illusion spells into spellbook for half cost"',
   'Illusory Reality':
-    'Section=magic Note="Object in illusion real for 1 min"',
+    'Section=magic Note="Make object in self illusion real for 1 min"',
   'Illusory Self':
-    'Section=magic Note="React causes foe miss 1/short rest"',
+    'Section=magic Note="Use Reaction to cause foe miss 1/short rest"',
   'Impostor':
     'Section=feature Note="Unerring mimicry"',
   'Improved Abjuration':
-    'Section=magic Note="Add Proficiency Bonus to abjuration ability checks"',
+    'Section=magic ' +
+    'Note="Add Proficiency Bonus to abjuration spell ability checks"',
   'Improved Combat Superiority':
     'Section=combat Note="Use d%V Superiority Dice"',
   'Improved Duplicity':
@@ -580,16 +583,17 @@ PHB5E.FEATURES_ADDED = {
   'Improved Flare':
     'Section=magic Note="Warding Flare protects allies"',
   'Improved Minor Illusion':
-    'Section=magic Note="<i>Minor Illusion</i> with sound, image"',
+    'Section=magic ' +
+    'Note="Know <i>Minor Illusion</i>, effect includes both sound and image"',
   'Improved War Magic':'Section=combat Note="Bonus attack after any spell"',
   'Infiltration Expertise':
     'Section=feature Note="Forge and adopt different identities"',
   'Instinctive Charm':
     'Section=magic ' +
-    'Note="Redirect self foe attack to closest creature 1/long rest (Wis neg)"',
+    'Note="Redirect self foe attack to closest creature (DC %V Wis neg until long rest)"',
   'Inured To Undeath':
     'Section=save ' +
-    'Note="Resistance to necrotic damage, immunity to max HP reduction"',
+    'Note="Resistance to necrotic damage, immunity to maximum HP reduction"',
   'Invoke Duplicity':
     'Section=magic ' +
     'Note="R30\' Channel Divinity creates %V, giving Adv on attacks when w/in 5\' and allowing remote spellcasting for conc or 1 min"',
@@ -609,7 +613,7 @@ PHB5E.FEATURES_ADDED = {
   'Magical Ambush':
     'Section=magic Note="Foe Disadv on self spell save when self hidden"',
   'Malleable Illusions':
-    'Section=magic Note="Transform existing illusions"',
+    'Section=magic Note="Modify cast illusions throughout duration"',
   'Maneuvering Attack':
     'Section=combat ' +
     'Note="Add Superiority Die to damage, ally can react to move half speed w/no OA from target"',
@@ -617,14 +621,14 @@ PHB5E.FEATURES_ADDED = {
     'Section=magic Note="Command charmed animals, plants"',
   'Master Transmuter':
     'Section=magic ' +
-    'Note="Destroy stone to transmute 5\' cu, remove curse, disease, and poison, <i>Raise Dead</i>, or restore youth"',
+    'Note="Destroy transmuter\'s stone to transmute 5\' cu, remove curses, diseases, and poisons, cast <i>Raise Dead</i>, or restore youth"',
   'Menacing Attack':
     'Section=combat ' +
     'Note="Add Superiority Die to damage, foe frightened for 1 rd (DC %V Wis neg)"',
   'Minor Alchemy':
-    'Section=magic Note="Transform 1 cu\'/10 min for 1 hr"',
+    'Section=magic Note="Transform 1\' cu/10 min effort for 1 hr"',
   'Minor Conjuration':
-    'Section=magic Note="R10\' Create 3\' cu 10 lb object for 1 hr"',
+    'Section=magic Note="R10\' Create 3\' cu, 10 lb object for 1 hr"',
   'Mist Stance':
     'Section=magic ' +
     'Note="Spend 4 Ki Points to cast <i>Gaseous Form</i> on self"',
@@ -633,13 +637,14 @@ PHB5E.FEATURES_ADDED = {
     'Note="After damage, teleport 60\' and become invisible for 1 tn 1/short rest"',
   'Nature Bonus Proficiency':'Section=combat Note="Armor Proficiency (Heavy)"',
   'Necromancy Savant':
-    'Section=magic Note="Write necromancy spells for half cost"',
+    'Section=magic Note="Copy necromancy spells into spellbook for half cost"',
   'Opportunist':
     'Section=combat Note="Use Reaction to attack adjacent foe after ally hit"',
   'Parry':
     'Section=combat Note="Reduce damage from foe by Superiority Die + %V"',
   'Portent':
-    'Section=magic Note="Replace self or other roll %V/long rest"',
+    'Section=magic ' +
+    'Note="Replace visible creature\'s attack, ability, or saving throw %V/long rest"',
   'Potent Spellcasting':
     'Section=magic Note="+%1 Cleric cantrip damage"',
   'Precision Attack':
@@ -647,7 +652,7 @@ PHB5E.FEATURES_ADDED = {
   'Primal Strike':
     'Section=combat Note="Wild Shape attacks count as magical"',
   'Projected Ward':
-    'Section=magic Note="R30\' Use Arcane Ward to protect others"',
+    'Section=magic Note="R30\' Use Arcane Ward to absorb damage to others"',
   'Pushing Attack':
     'Section=combat ' +
     'Note="Add Superiority Die to damage, push foe 15\' (DC %V Str neg)"',
@@ -681,7 +686,8 @@ PHB5E.FEATURES_ADDED = {
     'Section=magic ' +
     'Note="R120\' Spend 1 Ki Point to freeze, thaw, and shape 30\' cu water"',
   'Shapechanger':
-    'Section=magic Note="Self <i>Polymorph</i> to CR 1 creature 1/short rest"',
+    'Section=magic ' +
+    'Note="Know <i>Polymorph</i>, transform self into CR 1 creature 1/short rest"',
   'Share Spells':
     'Section=feature Note="R30\' Self spell also affects companion"',
   'Soul Of Vengeance':
@@ -700,7 +706,7 @@ PHB5E.FEATURES_ADDED = {
   'Spirit Walker':
     'Section=magic Note="Ritual <i>Commune With Nature</i>"',
   'Split Enchantment':
-    'Section=magic Note="Add second target to charm spell"',
+    'Section=magic Note="Add second target to enchantment spell"',
   'Stormborn':
     'Section=ability Note="%{speed}\' fly speed outdoors"',
   'Sweeping Attack':
@@ -713,7 +719,7 @@ PHB5E.FEATURES_ADDED = {
     'Note="Armor Proficiency (Heavy) and Weapon Proficiency (Martial)"',
   'The Third Eye':
     'Section=magic ' +
-    'Note="60\' Darkvision, 60\' Ethereal Sight, read any language, or 10\' see invisibility"',
+    'Note="Use action to gain 60\' darkvision, 60\' ethereal sight, universal language comprehension, or 10\' invisibility sight"',
   'Thought Shield':
     'Section=save ' +
     'Note="Immune to telepathy, resistance to and reflect psychic damage"',
@@ -726,7 +732,8 @@ PHB5E.FEATURES_ADDED = {
     'Section=feature ' +
     'Note="Adv on attack, ability, or saving throw 1/long rest (subsequent spell use may cause Wild Magic Surge)"',
   'Transmutation Savant':
-    'Section=magic Note="Write transmutation spells for half cost"',
+    'Section=magic ' +
+    'Note="Copy transmutation spells into spellbook for half cost"',
   'Trickster Cloak Of Shadows':
     'Section=magic Note="Channel Divinity makes self invisible 1 tn"',
   'Trip Attack':
@@ -736,7 +743,7 @@ PHB5E.FEATURES_ADDED = {
     'Section=magic ' +
     'Note="R30\' Channel Divinity makes fiends and fey flee for 1 min (DC %V Wis neg)"',
   'Undead Thralls':
-    'Section=magic Note="<i>Animate Dead</i> +1 corpse, +%V HP, +%1 damage"',
+    'Section=magic Note="Know <i>Animate Dead</i>, casting animates additional corpse and gives +%V HP and +%1 damage"',
   'Undying Sentinel':
     'Section=combat,feature ' +
     'Note="Keep 1 HP when brought to 0 HP 1/long rest",' +
@@ -1116,7 +1123,7 @@ PHB5E.PATHS_ADDED = {
     'Group=Wizard Level=levels.Wizard ' +
     'Features=' +
       '"2:Divination Savant",2:Portent,"6:Expert Divination",' +
-      '"10:The Third Eye"',
+      '"10:The Third Eye","14:Greater Portent"',
   'School Of Enchantment':
     'Group=Wizard Level=levels.Wizard ' +
     'Features=' +
@@ -1680,6 +1687,15 @@ PHB5E.classRulesExtra = function(rules, name) {
       ('magicNotes.feyPresence', 'spellDifficultyClass.K', '=', null);
     rules.defineRule
       ('saveNotes.beguilingDefenses', 'spellDifficultyClass.K', '=', null);
+  } else if(name == 'Wizard') {
+    rules.defineRule
+      ('magicNotes.alterMemories.1', 'spellDifficultyClass.W', '=', null);
+    rules.defineRule
+      ('magicNotes.commandUndead', 'spellDifficultyClass.W', '=', null);
+    rules.defineRule
+      ('magicNotes.hypnoticGaze', 'spellDifficultyClass.W', '=', null);
+    rules.defineRule
+      ('magicNotes.instinctiveCharm', 'spellDifficultyClass.W', '=', null);
   }
 };
 
@@ -1918,7 +1934,10 @@ PHB5E.pathRulesExtra = function(rules, name) {
 
   } else if(name == 'School Of Divination') {
 
-    rules.defineRule('magicNotes.portent', pathLevel, '=', 'source<14 ? 2 : 3');
+    rules.defineRule('magicNotes.portent',
+      pathLevel, '=', '2',
+      'magicNotes.greaterPortent', '^', '3'
+    );
 
   } else if(name == 'School Of Enchantment') {
 
