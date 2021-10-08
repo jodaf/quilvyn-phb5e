@@ -100,7 +100,7 @@ PHB5E.BACKGROUNDS_ADDED = {
       '"Artisan\'s Tools",Clothes,"Iron Pot",Shovel,"10 GP" ' +
     'Features=' +
       '"1:Skill Proficiency (Animal Handling/Survival)",' +
-      '"1:Tool Proficiency (Land Vehicles/Choose 1 from any Artisan)",' +
+      '"1:Tool Proficiency (Vehicles (Land)/Choose 1 from any Artisan)",' +
       '"1:Rustic Hospitality"',
   'Guild Artisan':
     'Equipment=' +
@@ -153,14 +153,14 @@ PHB5E.BACKGROUNDS_ADDED = {
       '"Belaying Pin",Clothes,"Lucky Charm","50\' Silk Rope","10 GP" ' +
     'Features=' +
       '"1:Skill Proficiency (Athletics/Perception)",' +
-      '"1:Tool Proficiency (Navigator\'s Tools/Water Vehicles)",' +
+      '"1:Tool Proficiency (Navigator\'s Tools/Vehicles (Water))",' +
       '"1:Ship\'s Passage"',
   'Soldier':
     'Equipment=' +
       '"Battle Trophy","Clothes","Gambling Objects","Rank Insignia","10 GP" ' +
     'Features=' +
       '"1:Skill Proficiency (Athletics/Intimidation)",' +
-      '"1:Tool Proficiency (Land Vehicles/Choose 1 from any Game)",' +
+      '"1:Tool Proficiency (Vehicles (Land)/Choose 1 from any Game)",' +
       '"1:Military Rank"',
   'Urchin':
     'Equipment=' +
@@ -343,30 +343,28 @@ PHB5E.FEATS = Object.assign({}, SRD5E.FEATS, PHB5E.FEATS_ADDED);
 PHB5E.FEATURES_ADDED = {
   // Backgrounds
   'By Popular Demand':
-    'Section=feature Note="Welcome, lodging in exchange for performing"',
-  'City Secrets':
-    'Section=feature Note="Dbl speed through hidden urban ways"',
-  'Criminal Contact':
-    'Section=feature Note="Know liaison to criminal network"',
-  'Discovery':
-    'Section=feature Note="Know unique truth"',
+    'Section=feature ' +
+    'Note="Receive welcome and lodging in exchange for performing"',
+  'City Secrets':'Section=feature Note="Travel through city at dbl speed"',
+  'Criminal Contact':'Section=feature Note="Know liaison to criminal network"',
+  'Discovery':'Section=feature Note="Know unique and powerful truth"',
   'False Identity':
-    'Section=feature Note="Documented 2nd ID, forgery skills"',
+    'Section=feature Note="Have documented 2nd ID and forgery skills"',
   'Guild Membership':
     'Section=feature Note="Receive assistance from fellow guild members"',
   'Military Rank':
-    'Section=feature Note="Receive respect, deference from soldiers"',
+    'Section=feature Note="Receive respect and deference from soldiers"',
   'Position Of Privilege':
-    'Section=feature Note="Treated with respect, deference"',
-  'Researcher':
-    'Section=feature Note="Know who to ask about lore"',
+    'Section=feature Note="Receive respect and deference"',
+  'Researcher':'Section=feature Note="Know where and whom to ask about lore"',
   'Rustic Hospitality':
     'Section=feature Note="Receive shelter from common folk"',
   "Ship's Passage":
-    'Section=feature Note="Receive free water passage for self, companions"',
+    'Section=feature ' +
+    'Note="Receive water passage for self and companions in exchange for labor"',
   'Wanderer':
     'Section=feature ' +
-    'Note="Have excellent geography memory and can forage for 6 people"',
+    'Note="Have excellent geographic memory, can forage for 6 people"',
   // Paths
   "Commander's Strike":
     'Section=combat ' +
