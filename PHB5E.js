@@ -504,7 +504,7 @@ PHB5E.FEATURES_ADDED = {
     'Section=magic Note="Summoned creatures gain +30 temporary HP"',
   'Eagle Totem Spirit':
     'Section=combat ' +
-    'Note="Foes Disadv on OA; bonus Dash during rage (heavy armor neg)"',
+    'Note="Foes Disadv on OA, bonus Dash during rage (heavy armor neg)"',
   'Eagle Totemic Attunement':
     'Section=ability Note="Fly %{speed}\' 1/tn during rage"',
   'Elder Champion':
@@ -787,62 +787,64 @@ PHB5E.FEATURES_ADDED = {
   'Actor':
     'Section=ability,skill ' +
     'Note="+1 Charisma",' +
-         '"Mimic others\' speech or sounds, Adv Deception (Cha) and Performance (Cha) when impersonating"',
+         '"Adv Deception (Cha) and Performance (Cha) (impersonating), mimic others\' speech or sounds"',
   'Alert':
-    'Section=combat Note="+5 Initiative/foes no surprise or unseen Adv"',
+    'Section=combat ' +
+    'Note="+5 Initiative; cannot be surprised; no Adv to unseen foes"',
   'Athlete':
-    'Section=ability,skill ' +
-    'Note="+1 Dexterity or Strength, climb as normal move, stand uses 5\' move",' +
-         '"Long jump, running high jump uses 5\' move"',
+    'Section=ability ' +
+    'Note="+1 Dexterity or Strength; standing, long jump, and running high jump each use only 5\' move; climb at full speed"',
   'Charger':
-    'Section=combat Note="Bonus attack +5 damage or 10\' push after Dash"',
+    'Section=combat ' +
+    'Note="After dash, bonus attack inflicts +5 HP damage or bonus 10\' push"',
   'Crossbow Expert':
     'Section=combat ' +
-    'Note="Quick load, no Disadv on close shot, bonus hand crossbow shot after one-handed attack"',
+    'Note="Quick load; no Disadv on close shot; bonus hand crossbow shot after one-handed attack"',
   'Defensive Duelist':
-    'Section=combat Note="React +%V AC when holding finesse weapon"',
+    'Section=combat Note="Use Reaction for +%V AC when holding finesse weapon"',
   'Dual Wielder':
     'Section=combat ' +
-    'Note="+1 AC w/two weapons, two-weapon fighting w/non-light weapons, draw two weapons at once"',
+    'Note="+1 AC w/two weapons; use two-weapon fighting w/any one-handed weapons; draw or stow two weapons at once"',
   'Dungeon Delver':
     'Section=save,skill ' +
-    'Note="Adv vs. traps, resistance to trap damage",' +
-         '"Adv detect secret doors, normal passive Perception at full speed"',
+    'Note="Adv on trap detection and avoidance and resistance to trap damage",' +
+         '"Adv on secret door detection and search for traps at full speed"',
   'Durable':
-    'Section=ability,combat Note="+1 Constitution","Min %V when regaining HP"',
+    'Section=ability,combat ' +
+    'Note="+1 Constitution","Minimum %V when regaining HP"',
   'Elemental Adept (Acid)':
     'Section=magic ' +
-    'Note="Spells ignore acid resistance, treat 1s as 2s on damage die"',
+    'Note="Acid spells ignore resistance; treat 1s as 2s on damage die"',
   'Elemental Adept (Cold)':
     'Section=magic ' +
-    'Note="Spells ignore cold resistance, treat 1s as 2s on damage die"',
+    'Note="Cold spells ignore resistance; treat 1s as 2s on damage die"',
   'Elemental Adept (Fire)':
     'Section=magic ' +
-    'Note="Spells ignore fire resistance, treat 1s as 2s on damage die"',
+    'Note="Fire spells ignore resistance; treat 1s as 2s on damage die"',
   'Elemental Adept (Lightning)':
     'Section=magic ' +
-    'Note="Spells ignore lightning resistance, treat 1s as 2s on damage die"',
+    'Note="Lightning spells ignore resistance; treat 1s as 2s on damage die"',
   'Elemental Adept (Thunder)':
     'Section=magic ' +
-    'Note="Spells ignore thunder resistance, treat 1s as 2s on damage die"',
+    'Note="Thunder spells ignore resistance; treat 1s as 2s on damage die"',
   'Great Weapon Master':
     'Section=combat ' +
-    'Note="Bonus attack after crit or foe to 0 HP, trade -5 attack for +10 damage"',
+    'Note="Bonus attack after crit or reducing foe to 0 HP; trade -5 attack w/heavy weapon for +10 damage"',
   'Healer':
     'Section=feature ' +
-    'Note="Stabilize via healer\'s kit restores 1 HP, healer\'s kit heals 1d6+4+target HD HP 1/short rest"',
+    'Note="Using healer\'s kit to stabilize also restores 1 HP; healer\'s kit heals 1d6 + 4 + target HD HP 1/short rest"',
   'Heavily Armored':
     'Section=ability,combat Note="+1 Strength","Armor Proficiency (Heavy)"',
   'Heavy Armor Master':
     'Section=ability,combat ' +
     'Note="+1 Strength",' +
-         '"Nonmagical bludgeon, pierce, slash DR 3"',
+         '"DR 3/magic to bludgeoning, piercing, and slashing damage"',
   'Inspiring Leader':
-    'Section=feature Note="R30\' 10-min speech give 6 allies %V HP"',
+    'Section=feature Note="R30\' 10-min speech gives 6 allies %V temporary HP"',
   'Keen Mind':
     'Section=ability,feature ' +
     'Note="+1 Intelligence",' +
-         '"Know N, hours until sunrise and sunset, things seen or heard prior month"',
+         '"Always know direction of north and hours until sunrise or sunset; recall anything seen or heard during the past month"',
   'Lightly Armored':
     'Section=ability,combat ' +
     'Note="+1 Dexterity or Strength",' +
@@ -850,33 +852,32 @@ PHB5E.FEATURES_ADDED = {
   'Linguist':
     'Section=ability,feature,skill ' +
     'Note="+1 Intelligence",' +
-         '"Create ciphers, DC %V Int to decode",' +
+         '"Create ciphers that require a DC %V Int check to decode",' +
          '"+3 Language Count"',
   'Lucky':
     'Section=feature ' +
-    'Note="Adv attack, ability, and save or foe Disadv attack 3/long rest"',
+    'Note="Adv on attack, ability, or saving throw or foe Disadv on self attack 3/long rest"',
   'Mage Slayer':
     'Section=combat,save ' +
-    'Note="React to attack adjacent caster, foe Disadv concentration",' +
-         '"Adv vs. spells by adjacent foes"',
+    'Note="Use Reaction to attack adjacent caster; foe Disadv on concentration to maintain spell",' +
+         '"Adv on spells by adjacent foes"',
   'Magic Initiate (Bard)':
-    'Section=magic Note="2 cantrips, 1 1st-level/long rest"',
+    'Section=magic Note="Know 2 B0 spells, cast 1 B1 spell/long rest"',
   'Magic Initiate (Cleric)':
-    'Section=magic Note="2 cantrips, 1 1st-level/long rest"',
+    'Section=magic Note="Know 2 C0 spells, cast 1 C1/long rest"',
   'Magic Initiate (Druid)':
-    'Section=magic Note="2 cantrips, 1 1st-level/long rest"',
+    'Section=magic Note="Know 2 D0 spells, cast 1 D1/long rest"',
   'Magic Initiate (Sorcerer)':
-    'Section=magic Note="2 cantrips, 1 1st-level/long rest"',
+    'Section=magic Note="Know 2 S0 spells, cast 1 S1 spell/long rest"',
   'Magic Initiate (Warlock)':
-    'Section=magic Note="2 cantrips, 1 1st-level/long rest"',
+    'Section=magic Note="Know 2 K0 spells, cast 1 K1 spell/long rest"',
   'Magic Initiate (Wizard)':
-    'Section=magic Note="2 cantrips, 1 1st-level/long rest"',
+    'Section=magic Note="Know 2 W0 spells, cast 1 W1 spell/long rest"',
   'Martial Adept':
-    'Section=combat ' +
-    'Note="Two maneuvers (DC %V), 1 d6 Superiority Die/long rest"',
+    'Section=combat Note="Combat Superiority (2 maneuvers, 1 die)"',
   'Medium Armor Master':
     'Section=combat,skill ' +
-    'Note="+1 AC",' +
+    'Note="+1 AC in medium armor if Dexterity at least 16",' +
          '"No Stealth check penalty in medium armor"',
   'Mobile':
     'Section=ability,combat ' +
@@ -888,7 +889,7 @@ PHB5E.FEATURES_ADDED = {
          '"Armor Proficiency (Medium/Shield)"',
   'Mounted Combatant':
     'Section=combat ' +
-    'Note="Adv unmounted foe smaller than mount, redirect attack on mount to self, mount takes no damage on Dex save, half on fail"',
+    'Note="Adv on melee attacks on unmounted foe smaller than mount, redirect attack on mount to self, mount takes no damage on Dex save, half on fail"',
   'Observant':
     'Section=ability,feature,skill ' +
     'Note="+1 Intelligence or Wisdom",' +
@@ -896,7 +897,7 @@ PHB5E.FEATURES_ADDED = {
          '"+5 passive Investigation and Perception"',
   'Polearm Master':
     'Section=combat ' +
-    'Note="Bonus attack polearm butt (1d4 HP), OA when foe enters reach"',
+    'Note="Bonus attack w/polearm butt inflicts 1d4 HP bludgeoning, OA when foe enters reach"',
   'Resilient':
     'Section=ability,save ' +
     'Note="+1 Ability Boosts",' +
@@ -904,17 +905,17 @@ PHB5E.FEATURES_ADDED = {
   'Ritual Caster':
     'Section=magic Note="Cast spells from ritual book"',
   'Savage Attacker':
-    'Section=combat Note="Re-roll damage 1/tn"',
+    'Section=combat Note="Take best of two melee damage rolls 1/tn"',
   'Sentinel':
     'Section=combat ' +
-    'Note="Foe stuck by OA speed 0, OA on foe Disengage, react attack when adjacent foe targets other"',
+    'Note="OA strike halts foe; OA on adjacent foe Disengage; use Reaction to attack when adjacent foe targets other"',
   'Sharpshooter':
     'Section=combat ' +
-    'Note="No Disadv long range, ignore 3/4 cover, trade -5 attack for +10 damage"',
+    'Note="No Disadv at long range, ignore 3/4 cover, trade -5 attack w/ranged weapon for +10 damage"',
   'Shield Master':
     'Section=combat,save ' +
-    'Note="Bonus 5\' Push",' +
-         '"+2 Dex vs. targeted spell, save for no damage instead of half"',
+    'Note="Bonus Push during Attack",' +
+         '"+2 Dex vs. targeted spell, Dex save yields no damage instead of half"',
   'Skilled':
     'Section=skill Note="Skill Proficiency (Choose 3 from any)"',
   'Skulker':
@@ -922,16 +923,15 @@ PHB5E.FEATURES_ADDED = {
     'Note="Hide when lightly obscured, ranged miss does not reveal position, no Disadv on Perception in dim light"',
   'Spell Sniper':
     'Section=magic ' +
-    'Note="Dbl attack spell range, ignore 3/4 cover, additional attack cantrip"',
+    'Note="Dbl attack spell range, ignore 3/4 cover, know additional attack cantrip"',
   'Tavern Brawler':
     'Section=ability,combat ' +
     'Note="+1 Constitution or Strength",' +
-         '"Weapon Proficiency (Improvised)/Unarmed d4 damage/Bonus to grapple"',
-  'Tough':
-    'Section=combat Note="+%V HP"',
+         '"Weapon Proficiency (Improvised)/Unarmed d4 damage/Bonus grapple after Unarmed or Improvised strike"',
+  'Tough':'Section=combat Note="+%V HP"',
   'War Caster':
     'Section=magic ' +
-    'Note="Adv concentration, cast when holding shield or weapon, cast as OA"',
+    'Note="Adv on concentration to maintain spell, cast when holding shield and/or weapon, use Reaction to cast as OA"',
   'Weapon Master':
     'Section=ability,combat ' +
     'Note="+1 Dexterity or Strength",' +
@@ -1705,7 +1705,9 @@ PHB5E.featRulesExtra = function(rules, name) {
 
   var matchInfo;
 
-  if(name == 'Athlete') {
+  if(name == 'Alert') {
+    rules.defineRule('initiative', 'combatNotes.alert', '+', '5');
+  } else if(name == 'Athlete') {
     rules.defineRule('abilityBoosts', 'abilityNotes.athlete', '+=', '1');
   } else if(name == 'Defensive Duelist') {
     rules.defineRule
@@ -1739,32 +1741,34 @@ PHB5E.featRulesExtra = function(rules, name) {
       'magicNotes.magicInitiate(' + clas + ')', '+=', '1'
     );
   } else if(name == 'Martial Adept') {
-    rules.defineRule('maxDexOrStrMod',
-      'dexterityModifier', '=', null,
-      'strengthModifier', '^', null
+    'Note="Use %Vd%1 Superiority Dice to perform %2 chosen Maneuvers/short rest"',
+    rules.defineRule
+      ('combatNotes.combatSuperiority', 'combatNotes.martialAdept', '+=', '1');
+    rules.defineRule('combatNotes.combatSuperiority.1',
+      'combatNotes.martialAdept', '^=', '6'
     );
-    rules.defineRule('combatNotes.martialAdept',
-      'maxDexOrStrMod', '=', '8 + source',
-      'proficiencyBonus', '+', null
+    rules.defineRule('combatNotes.combatSuperiority.2',
+      'combatNotes.martialAdept', '+=', '2'
     );
     rules.defineRule
-      ('selectableFeatureCount.Fighter (Maneuver)', 'combatNotes.martialAdept', '+=', '2');
-    for(var feature in {
-      "Commander's Strike":'', 'Disarming Attack':'', 'Distracting Strike':'',
-      'Evasive Footwork':'', 'Feinting Attack':'', 'Goading Attack':'',
-      'Lunging Attack':'', 'Maneuvering Attack':'', 'Menacing Attack':'',
-      'Parry':'', 'Precision Attack':'', 'Pushing Attack':'', 'Rally':'',
-      'Riposte':'', 'Sweeping Attack':'', 'Trip Attack':''
-    }) {
-      rules.defineRule(
-        'validationNotes.fighter-' + feature.replaceAll(' ', '') + 'SelectableFeature',
-        'features.Martial Adept', '^', '0'
-      );
+      ('features.Combat Superiority', 'combatNotes.martialAdept', '=', '1');
+    var selectables = rules.getChoices('selectableFeatures');
+    for(var s in selectables) {
+      if(selectables[s].includes('Maneuver'))
+        rules.defineRule(
+          'validationNotes.fighter-' + s.replaceAll(' ', '') + 'SelectableFeature',
+          'combatNotes.martialAdept', '^', '0'
+        );
     }
   } else if(name == 'Medium Armor Master') {
-    rules.defineRule('combatNotes.mediumArmorMaster',
+    rules.defineRule('armorClass',
+      'combatNotes.mediumArmorMaster', '+', '0',
+      'combatNotes.mediumArmorMaster.1', '+', null
+    );
+    rules.defineRule('combatNotes.mediumArmorMaster.1',
+      'features.Medium Armor Master', '?', null,
       'dexterity', '?', 'source >= 16',
-      'armorWeight', '?', 'source == 2'
+      'armorWeight', '=', 'source == 2 ? 1 : null'
     );
   } else if(name == 'Moderately Armored') {
     rules.defineRule
@@ -1774,7 +1778,7 @@ PHB5E.featRulesExtra = function(rules, name) {
   } else if(name == 'Tavern Brawler') {
     rules.defineRule('abilityBoosts', 'abilityNotes.tavernBrawler', '+=', '1');
     rules.defineRule
-      ('weapons.Unarmed.2', 'combatNotes.tavernBrawler', '=', '"1d4"');
+      ('weapons.Unarmed.2', 'combatNotes.tavernBrawler', '^=', '"1d4"');
   } else if(name == 'Tough') {
     rules.defineRule('combatNotes.tough', 'level', '=', '2 * source');
   } else if(name == 'Weapon Master') {
@@ -2039,6 +2043,14 @@ PHB5E.ruleNotes = function() {
   return '' +
     '<h2>D&D 5E Quilvyn Plugin Notes</h2>\n' +
     'D&D 5E Quilvyn Plugin Version ' + PHB5E.VERSION + '\n' +
+    '<h3>Limitations</h3>\n' +
+    '<ul>\n' +
+    '  <li>\n' +
+    '    Quilvyn allows proficiencies from the PHB Skilled feat to be\n' +
+    '    applied only to skills, rather than skills or tools.\n' +
+    '  </li>\n' +
+    '</ul>\n' +
+    '<h3>Copyrights and Licensing</h3>\n' +
     '<p>\n' +
     'Quilvyn\'s D&D 5E rule set is unofficial Fan Content permitted under ' +
     'Wizards of the Coast\'s ' +
@@ -2049,12 +2061,5 @@ PHB5E.ruleNotes = function() {
     'the Coast LLC.\n' +
     '</p><p>\n' +
     'Dungeons & Dragons Player\'s Handbook © 2014 Wizards of the Coast LLC.\n' +
-    '</p>\n' +
-    '<h3>Limitations</h3>\n' +
-    '<ul>\n' +
-    '  <li>\n' +
-    '    Quilvyn allows proficiencies from the PHB Skilled feat to be\n' +
-    '    applied only to skills, rather than skills or tools.\n' +
-    '  </li>\n' +
-    '</ul>\n';
+    '</p>\n';
 };
