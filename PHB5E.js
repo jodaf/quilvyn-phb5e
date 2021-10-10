@@ -1256,35 +1256,35 @@ PHB5E.SPELLS_ADDED = {
   'Arcane Gate':
     'School=Conjuration ' +
     'Level=K6,S6,W6 ' +
-    'Description="R10\'/500\' Connect portal pair for conc/10 min"',
+    'Description="R10\'/500\' Creates teleporation portal pair for conc or 10 min"',
   'Armor Of Agathys':
     'School=Abjuration ' +
     'Level=K1 ' +
-    'Description="Self frosted, +5 HP, 5 HP cold to successful attacker"',
+    'Description="Self gains +5 temporary HP, successful attacker suffers 5 HP cold for 1 hr"',
   'Arms Of Hadar':
     'School=Conjuration ' +
     'Level=K1 ' +
-    'Description="All in 10\' radius take 2d6 HP necrotic (Str half), no Reaction until next tn"',
+    'Description="10\' radius inficts 2d6 HP necrotic (Str half) and no Reaction for 1 rd"',
   'Aura Of Life':
     'School=Abjuration ' +
     'Level=P4 ' +
-    'Description="Self 30\' radius gives resistance to necrotic damage, raise nonhostile 0 HP to 1 HP for conc/10 min"',
+    'Description="30\' radius gives resistance to necrotic damage, raises nonhostile creatures w/0 HP to 1 HP for conc or 10 min"',
   'Aura Of Purity':
     'School=Abjuration ' +
     'Level=P4 ' +
-    'Description="Self 30\' radius gives resistance to poison damage, no disease, Adv conditions for conc/10 min"',
+    'Description="30\' radius gives resistance to poison damage, immunity to disease, and Adv on conditions for conc or 10 min"',
   'Aura Of Vitality':
     'School=Evocation ' +
     'Level=P3 ' +
-    'Description="Self 30\' radius heals 2d6 HP designated target 1/rd for conc/1 min"',
+    'Description="Target in 30\' radius heals 2d6 HP 1/rd for conc or 1 min"',
   'Banishing Smite':
     'School=Abjuration ' +
     'Level=P5 ' +
-    'Description="Self attacks +5d10 HP force and banish to home/demiplane if target has less than 50 HP for conc/1 min"',
+    'Description="Self attacks inflict +5d10 HP force, banish to home or demiplane when target reduced to 50 HP for conc or 1 min"',
   'Beast Sense':
     'School=Divination ' +
     'Level=D2,R2 ' +
-    'Description="Self use touched beast\'s senses for conc/1 hr"',
+    'Description="Self perceives through touched beast\'s senses for conc or 1 hr"',
   'Blade Ward':
     'School=Abjuration ' +
     'Level=B0,K0,S0,W0 ' +
@@ -1292,59 +1292,59 @@ PHB5E.SPELLS_ADDED = {
   'Blinding Smite':
     'School=Evocation ' +
     'Level=P3 ' +
-    'Description="Self next attack +3d8 HP radiant and blind (Con neg) for conc/1 min"',
+    'Description="Self attack inflicts +3d8 HP radiant and blinds (Con neg) for conc or 1 min"',
   'Chromatic Orb':
     'School=Evocation ' +
     'Level=S1,W1 ' +
-    'Description="R90\' 4 in hurled sphere 3d8 HP acid/poison/energy"',
+    'Description="R90\' Ranged spell inflicts 3d8 HP acid, cold, fire, lightning, poison, or energy"',
   'Circle Of Power':
     'School=Abjuration ' +
     'Level=P5 ' +
-    'Description="Allies in 30\' radius from self Adv save vs. magic, neg instead of half for conc/10 min"',
+    'Description="Allies in 30\' radius gain Adv on save vs. magic, save yields no damage instead of half for conc or 10 min"',
   'Cloud Of Daggers':
     'School=Conjuration ' +
     'Level=B2,K2,S2,W2 ' +
-    'Description="R60\' Spinning daggers in 5\' cu 4d4 HP slashing for conc/1 min"',
+    'Description="R60\' 5\' cu inflicts 4d4 HP slashing for conc or 1 min"',
   'Compelled Duel':
     'School=Enchantment ' +
     'Level=P1 ' +
-    'Description="R30\' Target attack only self w/Disadv for conc/1 min (Wis neg)"',
+    'Description="R30\' Target stays w/in 30\' of self, suffers Disadv on attacks on others for conc or 1 min (Wis neg)"',
   'Conjure Barrage':
     'School=Conjuration ' +
     'Level=R3 ' +
-    'Description="60\' weapon cone 3d8 HP (Dex half)"',
+    'Description="60\' cone inflicts 3d8 HP weapon type (Dex half)"',
   'Conjure Volley':
     'School=Conjuration ' +
     'Level=R5 ' +
-    'Description="R150\' 40\' radius weapon hail 8d8 HP (Dex half)"',
+    'Description="R150\' 40\' radius inflicts 8d8 HP weapon type (Dex half)"',
   'Cordon Of Arrows':
     'School=Transmutation ' +
     'Level=R2 ' +
-    'Description="Four pieces of ammo attack 30\' 1d6 HP (Dex neg) for 8 hr"',
+    'Description="R5\' Four pieces of ammo attack w/in 30\', inflict 1d6 HP piercing (Dex neg) for 8 hr"',
   'Crown Of Madness':
     'School=Enchantment ' +
     'Level=B2,K2,S2,W2 ' +
-    'Description="R120\' Direct charmed creature\'s attacks for conc/1 min (Wis neg)"',
+    'Description="R120\' Self directs target\'s attacks for conc or 1 min (Wis neg)"',
   "Crusader's Mantle":
     'School=Evocation ' +
     'Level=P3,War3 ' +
-    'Description="30\' radius allies +1d4 damage for conc/1 min"',
+    'Description="Allies in 30\' radius inflict +1d4 HP radiant for conc or 1 min"',
   'Destructive Wave':
     'School=Evocation ' +
     'Level=P5,Tempest5 ' +
-    'Description="Targets in 30\' radius 5d6 HP (Con half), prone (Con neg)"',
+    'Description="30\' radius inflicts 5d6 HP thunder and knocks prone (Con half HP, not prone)"',
   'Dissonant Whispers':
     'School=Enchantment ' +
     'Level=B1,K1 ' +
-    'Description="R60\' Target 3d6 HP (Wis half), flee (Wis neg)"',
+    'Description="R60\' Target suffers 3d6 HP psychic and flees (Wis half, need not flee)"',
   'Elemental Weapon':
     'School=Transmutation ' +
     'Level=P3 ' +
-    'Description="Touched weapon +1 attack, +1d4 damage for conc/1 hr"',
+    'Description="Touched weapon +1 attack, +1d4 damage for conc or 1 hr"',
   'Ensnaring Strike':
     'School=Conjuration ' +
     'Level=Ancients1,R1 ' +
-    'Description="Successful attack restrains foe, 1d6 HP/tn for conc/1 min (Str neg)"',
+    'Description="Successful attack restrains foe, 1d6 HP/tn for conc or 1 min (Str neg)"',
   'Feign Death':
     'School=Necromancy ' +
     'Level=B3,C3,D3,W3 ' +
@@ -1352,11 +1352,11 @@ PHB5E.SPELLS_ADDED = {
   'Friends':
     'School=Enchantment ' +
     'Level=B0,K0,S0,W0 ' +
-    'Description="Self Adv Cha w/target for conc/1 min"',
+    'Description="Self Adv Cha w/target for conc or 1 min"',
   'Grasping Vine':
     'School=Conjuration ' +
     'Level=D4,Nature4,R4 ' +
-    'Description="R30\' Vine pulls target 20\' for conc/1 min (Dex neg)"',
+    'Description="R30\' Vine pulls target 20\' for conc or 1 min (Dex neg)"',
   'Hail Of Thorns':
     'School=Conjuration ' +
     'Level=R1 ' +
@@ -1364,11 +1364,11 @@ PHB5E.SPELLS_ADDED = {
   'Hex':
     'School=Enchantment ' +
     'Level=K1 ' +
-    'Description="R90\' Self hits on target +1d6 HP, Disadv chosen ability for conc/1 hr"',
+    'Description="R90\' Self hits on target +1d6 HP, Disadv chosen ability for conc or 1 hr"',
   'Hunger Of Hadar':
     'School=Conjuration ' +
     'Level=K3 ' +
-    'Description="R150\' 20\' void 2d6 HP for conc/1 min"',
+    'Description="R150\' 20\' void 2d6 HP for conc or 1 min"',
   'Lightning Arrow':
     'School=Transmutation ' +
     'Level=R3 ' +
@@ -1376,7 +1376,7 @@ PHB5E.SPELLS_ADDED = {
   "Mordenkainen's Sword":
     'School=Evocation ' +
     'Level=B7,W7 ' +
-    'Description="Force weapon 3d10, move 20\' for conc/1 min"',
+    'Description="Force weapon 3d10, move 20\' for conc or 1 min"',
   'Phantasmal Force':
     'School=Illusion ' +
     'Level=B2,K2,S2,W2 ' +
@@ -1392,15 +1392,15 @@ PHB5E.SPELLS_ADDED = {
   'Searing Smite':
     'School=Evocation ' +
     'Level=P1 ' +
-    'Description="Hit +1d6 HP, 1d6 HP/tn for conc/1 min (Con no per-tn damage)"',
+    'Description="Hit +1d6 HP, 1d6 HP/tn for conc or 1 min (Con no per-tn damage)"',
   'Staggering Smite':
     'School=Evocation ' +
     'Level=P4 ' +
-    'Description="Next hit +4d6 HP w/in conc/1 min"',
+    'Description="Next hit +4d6 HP w/in conc or 1 min"',
   'Swift Quiver':
     'School=Transmutation ' +
     'Level=R5 ' +
-    'Description="Touched quiver endless ammo, dbl attack for conc/1 min"',
+    'Description="Touched quiver endless ammo, dbl attack for conc or 1 min"',
   'Telepathy':
     'School=Evocation ' +
     'Level=W8 ' +
@@ -1416,15 +1416,15 @@ PHB5E.SPELLS_ADDED = {
   'Tsunami':
     'School=Conjuration ' +
     'Level=D8 ' +
-    'Description="RSight 300\'x300\' wall of water 6d10 HP (Str half), moves away 50\'/tn for conc/6 rd"',
+    'Description="RSight 300\'x300\' wall of water 6d10 HP (Str half), moves away 50\'/tn for conc or 6 rd"',
   'Witch Bolt':
     'School=Evocation ' +
     'Level=K1,S1,W1 ' +
-    'Description="R30\' Target 1d12/tn for conc/1 min"',
+    'Description="R30\' Target 1d12/tn for conc or 1 min"',
   'Wrathful Smite':
     'School=Evocation ' +
     'Level=P1 ' +
-    'Description="Next hit +1d6 HP and frightens (Wis neg) for conc/1 min"'
+    'Description="Next hit +1d6 HP and frightens (Wis neg) for conc or 1 min"'
 
 };
 PHB5E.SPELLS_LEVELS_ADDED = {
