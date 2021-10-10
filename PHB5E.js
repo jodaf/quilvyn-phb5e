@@ -1344,7 +1344,7 @@ PHB5E.SPELLS_ADDED = {
   'Ensnaring Strike':
     'School=Conjuration ' +
     'Level=Ancients1,R1 ' +
-    'Description="Successful attack restrains foe, 1d6 HP/tn for conc or 1 min (Str neg)"',
+    'Description="Successful attack restrains foe and inflicts 1d6 HP/tn piercing for conc or 1 min (Str neg)"',
   'Feign Death':
     'School=Necromancy ' +
     'Level=B3,C3,D3,W3 ' +
@@ -1352,7 +1352,7 @@ PHB5E.SPELLS_ADDED = {
   'Friends':
     'School=Enchantment ' +
     'Level=B0,K0,S0,W0 ' +
-    'Description="Self Adv Cha w/target for conc or 1 min"',
+    'Description="Self gains on Adv on Cha checks w/target for conc or 1 min"',
   'Grasping Vine':
     'School=Conjuration ' +
     'Level=D4,Nature4,R4 ' +
