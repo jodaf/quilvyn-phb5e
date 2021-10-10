@@ -1360,19 +1360,19 @@ PHB5E.SPELLS_ADDED = {
   'Hail Of Thorns':
     'School=Conjuration ' +
     'Level=R1 ' +
-    'Description="Ranged hit followed by 5\' thorn rain 1d10 HP (Dex half)"',
+    'Description="5\' radius inflicts 1d10 HP piercing (Dex half) following ranged hit"',
   'Hex':
     'School=Enchantment ' +
     'Level=K1 ' +
-    'Description="R90\' Self hits on target +1d6 HP, Disadv chosen ability for conc or 1 hr"',
+    'Description="R90\' Self hits on target inflict +1d6 HP necrotic, target has Disadv on chosen ability checks for conc or 1 hr"',
   'Hunger Of Hadar':
     'School=Conjuration ' +
     'Level=K3 ' +
-    'Description="R150\' 20\' void 2d6 HP for conc or 1 min"',
+    'Description="R150\' 20\' void inflicts 2d6 HP cold (start of turn) and 2d6 HP acid (end of turn) for conc or 1 min"',
   'Lightning Arrow':
     'School=Transmutation ' +
     'Level=R3 ' +
-    'Description="100\' bolt 8d6 HP (Dex half)"',
+    'Description="Ranged weapon transforms into bolt that inflicts 8d6 HP lightning on target and 2d8 HP lighning in 10\' radius (Dex half)"',
   "Mordenkainen's Sword":
     'School=Evocation ' +
     'Level=B7,W7 ' +
