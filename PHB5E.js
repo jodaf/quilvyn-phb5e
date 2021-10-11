@@ -529,7 +529,7 @@ PHB5E.FEATURES_ADDED = {
     'Section=combat Note="Add Superiority Die to AC during move"',
   'Exceptional Training':
     'Section=feature ' +
-    'Note="Companion can Dash, Disengage, Dodge, or Help instead of Attack"',
+    'Note="Companion can Dash, Disengage, or Help instead of Attack; attacks count as magical"',
   'Expert Divination':
     'Section=magic Note="Casting divination spell restores lower spell slot"',
   'Fangs Of The Fire Snake':
