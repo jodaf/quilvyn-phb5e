@@ -1264,7 +1264,7 @@ PHB5E.SPELLS_ADDED = {
   'Arms Of Hadar':
     'School=Conjuration ' +
     'Level=K1 ' +
-    'Description="10\' radius inficts 2d6 HP necrotic (Str half) and no Reaction for 1 rd"',
+    'Description="10\' radius inflicts 2d6 HP necrotic (Str half) and no Reaction for 1 rd"',
   'Aura Of Life':
     'School=Abjuration ' +
     'Level=P4 ' +
@@ -1380,7 +1380,7 @@ PHB5E.SPELLS_ADDED = {
   'Lightning Arrow':
     'School=Transmutation ' +
     'Level=R3 ' +
-    'Description="Ranged weapon inflicts 8d6 HP lightning on target and 2d8 HP lighning in 10\' radius (Dex half)"',
+    'Description="Ranged weapon inflicts 8d6 HP lightning on target and 2d8 HP lightning in 10\' radius (Dex half)"',
 
   "Mordenkainen's Sword":
     'School=Evocation ' +
