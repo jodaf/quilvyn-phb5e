@@ -150,7 +150,7 @@ var attributes = {
       <tr style="text-align:center">
         <td><b>Armor</b>: None</td>
         <td><b>Shield</b>: None</td>
-        <td><b>Weapons</b>: Dagger: 1 (+6 1d4+2 R20'); Sling: 1 (+6 1d4+2 R30'); Unarmed: 1 (+4 1d1)</td>
+        <td><b>Weapons</b>: Dagger: 1 (+6 1d4+2 R20/60); Sling: 1 (+6 1d4+2 R30/120); Unarmed: 1 (+4 1d1)</td>
       </tr></table>
 </td>
     </tr><tr style="text-align:center">
@@ -164,7 +164,7 @@ var attributes = {
       </tr><tr style="text-align:center">
         <td><i>Dexterity Damage Adjustment: +2</i></td>
       </tr><tr style="text-align:center">
-        <td>Defensive Duelist: React +4 AC when holding finesse weapon</td>
+        <td>Defensive Duelist: Use Reaction for +4 AC when holding finesse weapon</td>
       </tr></table>
 </td>
     </tr></table>
@@ -196,57 +196,57 @@ var attributes = {
   </tr><tr style="text-align:center">
     <td><b>Spells</b>:     <table id="Spells" style="width:100%">
     <tr style="text-align:left">
-      <td>Blink (W3 Tran): Self 50% chance of ethereal for 1 min</td>
+      <td>Blink (W3 Tran): Self becomes ethereal 50% of time for 1 min</td>
     </tr><tr style="text-align:left">
-      <td>Charm Person (K1 Ench): R30' Target regards you as a friend (Wis neg) for 1 hr/until harmed</td>
+      <td>Charm Person (K1 Ench): R30' Target regards you as a friend (Wis neg) for 1 hr or until harmed</td>
     </tr><tr style="text-align:left">
-      <td>Chill Touch (K0 Necr): R120' Ghost hand 1 HP necrotic, undead also Disadv self attack for 1 rd</td>
+      <td>Chill Touch (K0 Necr): R120' Ranged spell inflicts 1d8 HP necrotic, undead also suffer Disadv on self attack for 1 rd</td>
     </tr><tr style="text-align:left">
-      <td>Chill Touch (W0 Necr): R120' Ghost hand 2 HP necrotic, undead also Disadv self attack for 1 rd</td>
+      <td>Chill Touch (W0 Necr): R120' Ranged spell inflicts 2d8 HP necrotic, undead also suffer Disadv on self attack for 1 rd</td>
     </tr><tr style="text-align:left">
-      <td>Chromatic Orb (W1 Evoc): R90' 4 in hurled sphere 3d8 HP acid/poison/energy</td>
+      <td>Chromatic Orb (W1 Evoc): R90' Ranged spell inflicts 3d8 HP acid, cold, fire, lightning, poison, or energy</td>
     </tr><tr style="text-align:left">
-      <td>Cloudkill (W5 Conj): R120' 20' radius 5d8 HP poison (Con half), moves 10'/rd for conc/10 min</td>
+      <td>Cloudkill (W5 Conj): R120' 20' radius inflicts 5d8 HP poison (Con half), moves away 10'/rd for conc or 10 min</td>
     </tr><tr style="text-align:left">
-      <td>Dancing Lights (W0 Evoc): R120' 4 torch lights in 20' radius move 60' for conc/1 min</td>
+      <td>Dancing Lights (W0 Evoc): R120' 4 torch lights move 60' for conc or 1 min</td>
     </tr><tr style="text-align:left">
-      <td>Eldritch Blast (K0 Evoc): R120' Ranged touch 1 rays do 1d10 HP ea</td>
+      <td>Eldritch Blast (K0 Evoc): R120' Ranged spell creates 1 rays that inflict 1d10 HP force each</td>
     </tr><tr style="text-align:left">
-      <td>Enlarge/Reduce (W2 Tran): R30' Target dbl/half size for conc/1 min</td>
+      <td>Enlarge/Reduce (W2 Tran): R30' Target becomes dbl (Adv on Str, +1d4 weapon damage) or half (Disadv on Str, -1d4 weapon damage) size for conc or 1 min</td>
     </tr><tr style="text-align:left">
-      <td>Feather Fall (W1 Tran): R60' Five falling targets slow to 60'/rd for 1 min</td>
+      <td>Feather Fall (W1 Tran): R60' 5 falling targets slow to 60'/rd for 1 min</td>
     </tr><tr style="text-align:left">
-      <td>Find Familiar (W1 Conj): R10' Telepathic communication w/summoned animal</td>
+      <td>Find Familiar (W1 Conj): R10' Self gains service from summoned spirit in animal form</td>
     </tr><tr style="text-align:left">
-      <td>Fire Bolt (W0 Evoc): R120' Ranged spell 1d10 HP</td>
+      <td>Fire Bolt (W0 Evoc): R120' Ranged spell inflicts 1d10 HP fire</td>
     </tr><tr style="text-align:left">
-      <td>Fire Shield (W4 Evoc): Self resistance to heat or cold damage, foe hit takes 2d8 HP for 10 min</td>
+      <td>Fire Shield (W4 Evoc): Self gains resistance to heat or cold damage, successful melee attacker suffers 2d8 HP fire or cold for 10 min</td>
     </tr><tr style="text-align:left">
-      <td>Leomund's Secret Chest (W4 Conj): Touched chest moves to Ethereal Plane</td>
+      <td>Leomund's Secret Chest (W4 Conj): Touched chest moves to and from Ethereal Plane for 60+ days</td>
     </tr><tr style="text-align:left">
-      <td>Light (W0 Evoc): Touched object lights 20' radius for 1 hr (Dex neg)</td>
+      <td>Light (W0 Evoc): Touched object lights 20' radius (Dex neg) for 1 hr</td>
     </tr><tr style="text-align:left">
       <td>Mage Hand (W0 Conj): R30' Spectral hand performs minor tasks moving up to 10 lb for 1 min</td>
     </tr><tr style="text-align:left">
-      <td>Magic Circle (W3 Abju): R10' 10' circle impassable by specified creature type, Disadv attacks for 1 hr</td>
+      <td>Magic Circle (W3 Abju): R10' 10' circle prevents passage and inflicts DisAdv on attacks by specified creature type for 1 hr</td>
     </tr><tr style="text-align:left">
-      <td>Ray Of Sickness (W1 Necr): R60' Target 2d8 HP, poisoned 1 tn (Con not poisoned)</td>
+      <td>Ray Of Sickness (W1 Necr): R60' Target suffers 2d8 HP poison and poisoned 1 rd (Con not poisoned)</td>
     </tr><tr style="text-align:left">
-      <td>Scorching Ray (W2 Evoc): R120' 3 ranged attacks do 2d6 HP ea</td>
+      <td>Scorching Ray (W2 Evoc): R120' 3 ranged attacks inflict 2d6 HP fire each</td>
     </tr><tr style="text-align:left">
-      <td>Spider Climb (W2 Tran): Touched travel walls and ceilings for conc/1 hr</td>
+      <td>Spider Climb (W2 Tran): Touched crawls on walls and ceilings for conc or 1 hr</td>
     </tr><tr style="text-align:left">
-      <td>Stinking Cloud (W3 Conj): R90' 20' radius causes retching for conc/1 min</td>
+      <td>Stinking Cloud (W3 Conj): R90' 20' radius causes retching for conc or 1 min</td>
     </tr><tr style="text-align:left">
-      <td>Stoneskin (W4 Abju): Touched resistance to bludgeoning, piercing, and slashing damage for conc/1 hr</td>
+      <td>Stoneskin (W4 Abju): Touched gains resistance to bludgeoning, piercing, and slashing damage for conc or 1 hr</td>
     </tr><tr style="text-align:left">
-      <td>Telekinesis (W5 Tran): R60' Move 1000 lb 30'/rd for conc/10 min (Str neg)</td>
+      <td>Telekinesis (W5 Tran): R60' Moves 1000 lb 30'/rd (Str neg) for conc or 10 min</td>
     </tr></table>
 </td>
   </tr><tr style="text-align:center">
     <td><b>Magic Notes</b>:     <table id="MagicNotes" style="width:100%">
     <tr style="text-align:center">
-      <td><i>Magic Initiate (Warlock): 2 cantrips, 1 1st-level/long rest</i></td>
+      <td><i>Magic Initiate (Warlock): Know 2 K0 spells, cast 1 K1 spell/long rest</i></td>
     </tr><tr style="text-align:center">
       <td>Arcane Recovery: Short rest recovers 5 spell slots 1/dy</td>
     </tr><tr style="text-align:center">

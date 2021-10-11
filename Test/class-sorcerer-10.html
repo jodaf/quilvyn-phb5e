@@ -156,7 +156,7 @@ var attributes = {
       <tr style="text-align:center">
         <td><b>Armor</b>: None</td>
         <td><b>Shield</b>: None</td>
-        <td><b>Weapons</b>: Dagger: 1 (+5 1d4+1 R20'); Sling: 1 (+5 1d4+1 R30'); Unarmed: 1 (+5 1d1+1)</td>
+        <td><b>Weapons</b>: Dagger: 1 (+5 1d4+1 R20/60); Sling: 1 (+5 1d4+1 R30/120); Unarmed: 1 (+5 1d1+1)</td>
       </tr></table>
 </td>
     </tr><tr style="text-align:center">
@@ -174,7 +174,7 @@ var attributes = {
       </tr><tr style="text-align:center">
         <td><i>Strength Damage Adjustment: +1</i></td>
       </tr><tr style="text-align:center">
-        <td>Defensive Duelist: React +4 AC when holding finesse weapon</td>
+        <td>Defensive Duelist: Use Reaction for +4 AC when holding finesse weapon</td>
       </tr></table>
 </td>
     </tr></table>
@@ -206,47 +206,47 @@ var attributes = {
   </tr><tr style="text-align:center">
     <td><b>Spells</b>:     <table id="Spells" style="width:100%">
     <tr style="text-align:left">
-      <td>Acid Splash (S0 Conj): R60' Ranged touch 2d6 HP acid (Dex neg)</td>
+      <td>Acid Splash (S0 Conj): R60' Ranged touch inflicts 2d6 HP acid (Dex neg)</td>
     </tr><tr style="text-align:left">
-      <td>Clairvoyance (S3 Divi): R1 mile Invisible sensor allows sight or hearing for conc/10 min</td>
+      <td>Clairvoyance (S3 Divi): R1 mile Self sees or hears remotely through invisible sensor for conc or 10 min</td>
     </tr><tr style="text-align:left">
-      <td>Crown Of Madness (S2 Ench): R120' Direct charmed creature's attacks for conc/1 min (Wis neg)</td>
+      <td>Crown Of Madness (S2 Ench): R120' Self directs target's attacks (Wis neg) for conc or 1 min</td>
     </tr><tr style="text-align:left">
-      <td>Dancing Lights (S0 Evoc): R120' 4 torch lights in 20' radius move 60' for conc/1 min</td>
+      <td>Dancing Lights (S0 Evoc): R120' 4 torch lights move 60' for conc or 1 min</td>
     </tr><tr style="text-align:left">
-      <td>Dimension Door (S4 Conj): R500' Self + 1 other teleport</td>
+      <td>Dimension Door (S4 Conj): Self and 1 other willing creature teleport up to 500'</td>
     </tr><tr style="text-align:left">
-      <td>Enlarge/Reduce (S2 Tran): R30' Target dbl/half size for conc/1 min</td>
+      <td>Enlarge/Reduce (S2 Tran): R30' Target becomes dbl (Adv on Str, +1d4 weapon damage) or half (Disadv on Str, -1d4 weapon damage) size for conc or 1 min</td>
     </tr><tr style="text-align:left">
-      <td>Expeditious Retreat (S1 Tran): Self Dash as bonus action for conc/10 min</td>
+      <td>Expeditious Retreat (S1 Tran): Self gains bonus Dash for conc or 10 min</td>
     </tr><tr style="text-align:left">
-      <td>Feather Fall (S1 Tran): R60' Five falling targets slow to 60'/rd for 1 min</td>
+      <td>Feather Fall (S1 Tran): R60' 5 falling targets slow to 60'/rd for 1 min</td>
     </tr><tr style="text-align:left">
-      <td>Fog Cloud (S1 Conj): R120' 20' radius fog obscures vision for conc/1 hr</td>
+      <td>Fog Cloud (S1 Conj): R120' 20' radius obscures vision for conc or 1 hr</td>
     </tr><tr style="text-align:left">
-      <td>Friends (S0 Ench): Self Adv Cha w/target for conc/1 min</td>
+      <td>Friends (S0 Ench): Self gains on Adv on Cha checks w/target for conc or 1 min</td>
     </tr><tr style="text-align:left">
-      <td>Ice Storm (S4 Evoc): R300' 20' radius 4d6 HP (Dex half)</td>
+      <td>Ice Storm (S4 Evoc): R300' 20' radius inflicts 2d8 bludgeoning and 4d6 HP cold (Dex half)</td>
     </tr><tr style="text-align:left">
-      <td>Light (S0 Evoc): Touched object lights 20' radius for 1 hr (Dex neg)</td>
+      <td>Light (S0 Evoc): Touched object lights 20' radius (Dex neg) for 1 hr</td>
     </tr><tr style="text-align:left">
-      <td>Lightning Bolt (S3 Evoc): 100'x5' 8d6 HP (Dex half)</td>
+      <td>Lightning Bolt (S3 Evoc): 100'x5' line inflicts 8d6 HP lightning (Dex half)</td>
     </tr><tr style="text-align:left">
       <td>Mage Hand (S0 Conj): R30' Spectral hand performs minor tasks moving up to 10 lb for 1 min</td>
     </tr><tr style="text-align:left">
-      <td>Ray Of Frost (S0 Evoc): R60' Target 2d8 HP, -10 speed for 1 tn</td>
+      <td>Ray Of Frost (S0 Evoc): R60' Ranged spell inflicts 2d8 HP cold and -10' Speed for 1 rd</td>
     </tr><tr style="text-align:left">
-      <td>Ray Of Sickness (S1 Necr): R60' Target 2d8 HP, poisoned 1 tn (Con not poisoned)</td>
+      <td>Ray Of Sickness (S1 Necr): R60' Target suffers 2d8 HP poison and poisoned 1 rd (Con not poisoned)</td>
     </tr><tr style="text-align:left">
-      <td>Seeming (S5 Illu): R30' Targets appearance change for 8 hr (Cha neg)</td>
+      <td>Seeming (S5 Illu): R30' Changes appearance of targets (Cha neg) for 8 hr</td>
     </tr><tr style="text-align:left">
-      <td>Shatter (S2 Evoc): R60' 10' radius 3d8 HP (Con half)</td>
+      <td>Shatter (S2 Evoc): R60' 10' radius inflicts 3d8 HP thunder (Con half)</td>
     </tr><tr style="text-align:left">
-      <td>Stoneskin (S4 Abju): Touched resistance to bludgeoning, piercing, and slashing damage for conc/1 hr</td>
+      <td>Stoneskin (S4 Abju): Touched gains resistance to bludgeoning, piercing, and slashing damage for conc or 1 hr</td>
     </tr><tr style="text-align:left">
-      <td>Telekinesis (S5 Tran): R60' Move 1000 lb 30'/rd for conc/10 min (Str neg)</td>
+      <td>Telekinesis (S5 Tran): R60' Moves 1000 lb 30'/rd (Str neg) for conc or 10 min</td>
     </tr><tr style="text-align:left">
-      <td>Tongues (S3 Divi): Touched understand and speak any language for 1 hr</td>
+      <td>Tongues (S3 Divi): Touched understands and speaks any language for 1 hr</td>
     </tr></table>
 </td>
   </tr><tr style="text-align:center">
@@ -264,7 +264,7 @@ var attributes = {
     </tr><tr style="text-align:center">
       <td>Twinned Spell: Spend spell level Sorcery Points to add second target</td>
     </tr><tr style="text-align:center">
-      <td>War Caster: Adv concentration, cast when holding shield or weapon, cast as OA</td>
+      <td>War Caster: Adv on concentration to maintain spell, cast when holding shield and/or weapon, use Reaction to cast as OA</td>
     </tr><tr style="text-align:center">
       <td>Wild Magic Surge: 5% chance of random magic effect</td>
     </tr></table>

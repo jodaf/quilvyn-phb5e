@@ -106,7 +106,7 @@ var attributes = {
       </tr><tr style="text-align:center">
         <td>Exceptional Training: Companion can Dash, Disengage, Dodge, or Help instead of Attack</td>
       </tr><tr style="text-align:center">
-        <td>Healer: Stabilize via healer's kit restores 1 HP, healer's kit heals 1d6+4+target HD HP 1/short rest</td>
+        <td>Healer: Using healer's kit to stabilize also restores 1 HP; healer's kit heals 1d6 + 4 + target HD HP 1/short rest</td>
       </tr><tr style="text-align:center">
         <td>Ranger's Companion: Companion beast up to CR 1/4 gains +6 AC, attack, damage, skills, and saving throws and obeys self commands</td>
       </tr><tr style="text-align:center">
@@ -155,7 +155,7 @@ var attributes = {
   </tr><tr style="text-align:center">
     <td><b>Skill Notes</b>:     <table id="SkillNotes" style="width:100%">
     <tr style="text-align:center">
-      <td>Dungeon Delver: Adv detect secret doors, normal passive Perception at full speed</td>
+      <td>Dungeon Delver: Adv on secret door detection and search for traps at full speed</td>
     </tr><tr style="text-align:center">
       <td>Favored Enemy: Adv on Survival to track, Adv on Intelligence to recall info about, and learn the language of 3 chosen creature types</td>
     </tr><tr style="text-align:center">
@@ -201,7 +201,7 @@ var attributes = {
     </tr><tr style="text-align:center">
       <td><b>Combat Notes</b>:       <table id="CombatNotes" style="width:100%">
       <tr style="text-align:center">
-        <td><i>Alert: +5 Initiative/foes no surprise or unseen Adv</i></td>
+        <td><i>Alert: +5 Initiative; cannot be surprised; no Adv to unseen foes</i></td>
       </tr><tr style="text-align:center">
         <td><i>Constitution Hit Points Adjustment: +80</i></td>
       </tr><tr style="text-align:center">
@@ -239,7 +239,7 @@ var attributes = {
       </tr><tr style="text-align:center">
         <td>Multiattack Defense: +4 AC on additional foe attacks after hit</td>
       </tr><tr style="text-align:center">
-        <td>Savage Attacker: Re-roll damage 1/tn</td>
+        <td>Savage Attacker: Take best of two melee damage rolls 1/tn</td>
       </tr><tr style="text-align:center">
         <td>Stand Against The Tide: Use Reaction to redirect foe melee miss to another creature</td>
       </tr><tr style="text-align:center">
@@ -261,13 +261,13 @@ var attributes = {
     </tr><tr style="text-align:center">
       <td><b>Save Notes</b>:       <table id="SaveNotes" style="width:100%">
       <tr style="text-align:center">
-        <td>Dungeon Delver: Adv vs. traps, resistance to trap damage</td>
+        <td>Dungeon Delver: Adv on trap detection and avoidance and resistance to trap damage</td>
       </tr><tr style="text-align:center">
         <td>Evasion: Dex save yields no damage instead of half</td>
       </tr><tr style="text-align:center">
-        <td>Land's Stride: Adv vs. impeding plants</td>
+        <td>Land's Stride: Adv on saves vs. impeding plants</td>
       </tr><tr style="text-align:center">
-        <td>Steel Will: Adv vs. fright</td>
+        <td>Steel Will: Adv on saves vs. fright</td>
       </tr></table>
 </td>
     </tr></table>
@@ -291,47 +291,47 @@ var attributes = {
   </tr><tr style="text-align:center">
     <td><b>Spells</b>:     <table id="Spells" style="width:100%">
     <tr style="text-align:left">
-      <td>Animal Friendship (R1 Ench): R30' Target beast(s) convinced of good intent for 1 dy (Wis neg)</td>
+      <td>Animal Friendship (R1 Ench): R30' Target beast convinced of good intent (Wis neg) for 1 dy</td>
     </tr><tr style="text-align:left">
-      <td>Beast Sense (R2 Divi): Self use touched beast's senses for conc/1 hr</td>
+      <td>Beast Sense (R2 Divi): Self perceives through touched beast's senses for conc or 1 hr</td>
     </tr><tr style="text-align:left">
-      <td>Color Spray (W1 Illu): Self 15' cone 6d10 HP targets blinded for 1 rd</td>
+      <td>Color Spray (W1 Illu): 15' cone blinds 6d10 HP of targets for 1 rd</td>
     </tr><tr style="text-align:left">
-      <td>Commune With Nature (R5 Divi): Self gain 3 facts about territory w/in 3 miles</td>
+      <td>Commune With Nature (R5 Divi): Self gains 3 facts about nature w/in 3 miles (300' underground)</td>
     </tr><tr style="text-align:left">
-      <td>Conjure Barrage (R3 Conj): 60' weapon cone 3d8 HP (Dex half)</td>
+      <td>Conjure Barrage (R3 Conj): 60' cone inflicts 3d8 HP weapon type (Dex half)</td>
     </tr><tr style="text-align:left">
-      <td>Conjure Woodland Beings (R4 Conj): R60' Summon obedient fey for conc/1 hr</td>
+      <td>Conjure Woodland Beings (R4 Conj): R60' Summons obedient fey creatures for conc or 1 hr</td>
     </tr><tr style="text-align:left">
-      <td>Cordon Of Arrows (R2 Tran): Four pieces of ammo attack 30' 1d6 HP (Dex neg) for 8 hr</td>
+      <td>Cordon Of Arrows (R2 Tran): R5' Four pieces of ammo attack w/in 30', inflict 1d6 HP piercing (Dex neg) for 8 hr</td>
     </tr><tr style="text-align:left">
-      <td>Cure Wounds (R1 Evoc): Touched heals 1d8+spell mod HP</td>
+      <td>Cure Wounds (R1 Evoc): Touched regains 1d8+3 HP</td>
     </tr><tr style="text-align:left">
-      <td>Ensnaring Strike (R1 Conj): Successful attack restrains foe, 1d6 HP/tn for conc/1 min (Str neg)</td>
+      <td>Ensnaring Strike (R1 Conj): Successful attack restrains foe and inflicts 1d6 HP/tn piercing (Str neg) for conc or 1 min</td>
     </tr><tr style="text-align:left">
-      <td>Friends (W0 Ench): Self Adv Cha w/target for conc/1 min</td>
+      <td>Friends (W0 Ench): Self gains on Adv on Cha checks w/target for conc or 1 min</td>
     </tr><tr style="text-align:left">
-      <td>Grasping Vine (R4 Conj): R30' Vine pulls target 20' for conc/1 min (Dex neg)</td>
+      <td>Grasping Vine (R4 Conj): R30' Vine pulls target 20' (Dex neg) for conc or 1 min</td>
     </tr><tr style="text-align:left">
-      <td>Jump (R1 Tran): Touched jump x3 for 1 min</td>
+      <td>Jump (R1 Tran): Touched gains triple jump distance for 1 min</td>
     </tr><tr style="text-align:left">
-      <td>Minor Illusion (W0 Illu): R30' Sound of 1 creature or 5' cu image (Investigation disbelieve) for 1 min</td>
+      <td>Minor Illusion (W0 Illu): R30' Creates sound of 1 creature or 5' cu image (Investigation disbelieve) for 1 min</td>
     </tr><tr style="text-align:left">
-      <td>Pass Without Trace (R2 Abju): Allies within 30' self +10 Dexterity (Stealth), untrackable for conc/1 hr</td>
+      <td>Pass Without Trace (R2 Abju): Targets in 30' radius gain +10 Stealth and become untrackable for conc or 1 hr</td>
     </tr><tr style="text-align:left">
-      <td>Plant Growth (R3 Tran): R150' Enrich half mile radius for 1 yr or overgrow 100' radius</td>
+      <td>Plant Growth (R3 Tran): R150' Overgrows 100' radius or enriches 1/2 mile radius for 1 yr</td>
     </tr><tr style="text-align:left">
-      <td>Stoneskin (R4 Abju): Touched resistance to bludgeoning, piercing, and slashing damage for conc/1 hr</td>
+      <td>Stoneskin (R4 Abju): Touched gains resistance to bludgeoning, piercing, and slashing damage for conc or 1 hr</td>
     </tr><tr style="text-align:left">
-      <td>Swift Quiver (R5 Tran): Touched quiver endless ammo, dbl attack for conc/1 min</td>
+      <td>Swift Quiver (R5 Tran): Touched quiver contains endless ammo, gives extra attack for conc or 1 min</td>
     </tr><tr style="text-align:left">
-      <td>Water Breathing (R3 Tran): R30' 10 targets breathe underwater for 1 dy</td>
+      <td>Water Breathing (R3 Tran): R30' 10 targets can breathe underwater for 1 dy</td>
     </tr></table>
 </td>
   </tr><tr style="text-align:center">
     <td><b>Magic Notes</b>:     <table id="MagicNotes" style="width:100%">
     <tr style="text-align:center">
-      <td><i>Magic Initiate (Wizard): 2 cantrips, 1 1st-level/long rest</i></td>
+      <td><i>Magic Initiate (Wizard): Know 2 W0 spells, cast 1 W1 spell/long rest</i></td>
     </tr><tr style="text-align:center">
       <td>Primeval Awareness: Use spell slot to sense creatures in 1 mile (favored terrain 6 miles) for 1 min/spell level</td>
     </tr></table>

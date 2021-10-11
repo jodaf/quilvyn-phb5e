@@ -108,7 +108,7 @@ var attributes = {
     </tr><tr style="text-align:center">
       <td><b>Feature Notes</b>:       <table id="FeatureNotes" style="width:100%">
       <tr style="text-align:center">
-        <td>Healer: Stabilize via healer's kit restores 1 HP, healer's kit heals 1d6+4+target HD HP 1/short rest</td>
+        <td>Healer: Using healer's kit to stabilize also restores 1 HP; healer's kit heals 1d6 + 4 + target HD HP 1/short rest</td>
       </tr><tr style="text-align:center">
         <td>Observant: Read lips</td>
       </tr><tr style="text-align:center">
@@ -191,7 +191,7 @@ var attributes = {
       <tr style="text-align:center">
         <td><b>Armor</b>: Studded Leather</td>
         <td><b>Shield</b>: None</td>
-        <td><b>Weapons</b>: Mace: 1 (+8 1d6+2); Quarterstaff: 1 (+8 1d8+2); Sling: 1 (+8 1d4+2 R30'); Unarmed: 1 (+8 1d1+2)</td>
+        <td><b>Weapons</b>: Mace: 1 (+8 1d6+2); Quarterstaff: 1 (+8 1d8+2); Sling: 1 (+8 1d4+2 R30/120); Unarmed: 1 (+8 1d1+2)</td>
       </tr></table>
 </td>
     </tr><tr style="text-align:center">
@@ -215,13 +215,13 @@ var attributes = {
       </tr><tr style="text-align:center">
         <td>Battle Magic: Bonus attack after casting spell</td>
       </tr><tr style="text-align:center">
-        <td>Charger: Bonus attack +5 damage or 10' push after Dash</td>
+        <td>Charger: After dash, bonus attack inflicts +5 HP damage or bonus 10' push</td>
       </tr><tr style="text-align:center">
         <td>Combat Inspiration: Ally can use Bardic Inspiration die to boost weapon damage or AC</td>
       </tr><tr style="text-align:center">
         <td>Cutting Words: R60' Reaction to subtract Bardic Inspiration die from foe roll</td>
       </tr><tr style="text-align:center">
-        <td>Savage Attacker: Re-roll damage 1/tn</td>
+        <td>Savage Attacker: Take best of two melee damage rolls 1/tn</td>
       </tr><tr style="text-align:center">
         <td>Superior Inspiration: Minimum 1 Bardic Inspiration after initiative</td>
       </tr></table>
@@ -255,63 +255,63 @@ var attributes = {
   </tr><tr style="text-align:center">
     <td><b>Spells</b>:     <table id="Spells" style="width:100%">
     <tr style="text-align:left">
-      <td>Acid Splash (S0 Conj): R60' Ranged touch 1d6 HP acid (Dex neg)</td>
+      <td>Acid Splash (S0 Conj): R60' Ranged touch inflicts 1d6 HP acid (Dex neg)</td>
     </tr><tr style="text-align:left">
-      <td>Cloud Of Daggers (B2 Conj): R60' Spinning daggers in 5' cu 4d4 HP slashing for conc/1 min</td>
+      <td>Cloud Of Daggers (B2 Conj): R60' 5' cu inflicts 4d4 HP slashing for conc or 1 min</td>
     </tr><tr style="text-align:left">
-      <td>Dancing Lights (B0 Evoc): R120' 4 torch lights in 20' radius move 60' for conc/1 min</td>
+      <td>Dancing Lights (B0 Evoc): R120' 4 torch lights move 60' for conc or 1 min</td>
     </tr><tr style="text-align:left">
-      <td>Detect Magic (B1 Divi): R30' Self sense magic aura for conc/10 min</td>
+      <td>Detect Magic (B1 Divi): R30' Self senses magic auras for conc or 10 min</td>
     </tr><tr style="text-align:left">
-      <td>Detect Thoughts (B2 Divi): R30' Self sense target thoughts for conc/1 min</td>
+      <td>Detect Thoughts (B2 Divi): R30' Self senses target thoughts for conc or 1 min</td>
     </tr><tr style="text-align:left">
-      <td>Dominate Monster (B8 Ench): R60' Command target telepathically for conc/1 hr (Wis neg)</td>
+      <td>Dominate Monster (B8 Ench): R60' Target obeys self telepathic commands (Wis neg) for conc or 1 hr</td>
     </tr><tr style="text-align:left">
-      <td>Foresight (B9 Divi): Touched immunity to surprise, Adv attack, ability, save, foes Disadv attack for 8 hr</td>
+      <td>Foresight (B9 Divi): Touched gains immunity to surprise and Adv on attack, ability, and saving throws, foes suffer Disadv on attacks for 8 hr</td>
     </tr><tr style="text-align:left">
-      <td>Freedom Of Movement (B4 Abju): Touched immunity to impediments for 1 hr</td>
+      <td>Freedom Of Movement (B4 Abju): Touched gains immunity to impediments for 1 hr</td>
     </tr><tr style="text-align:left">
-      <td>Friends (B0 Ench): Self Adv Cha w/target for conc/1 min</td>
+      <td>Friends (B0 Ench): Self gains on Adv on Cha checks w/target for conc or 1 min</td>
     </tr><tr style="text-align:left">
-      <td>Friends (S0 Ench): Self Adv Cha w/target for conc/1 min</td>
+      <td>Friends (S0 Ench): Self gains on Adv on Cha checks w/target for conc or 1 min</td>
     </tr><tr style="text-align:left">
-      <td>Geas (B5 Ench): R60' Target charmed into obeying command for 30 dy (Wis neg)</td>
+      <td>Geas (B5 Ench): R60' Target obeys command (Wis neg) for 30 dy</td>
     </tr><tr style="text-align:left">
-      <td>Glyph Of Warding (B3 Abju): Glyph 20' radius 5d8 HP (Dex half) or spell up to level 3 on named trigger</td>
+      <td>Glyph Of Warding (B3 Abju): 20' radius inflicts 5d8 HP acid, cold, fire, lightning, or thunder (Dex half) or spell up to level 3 when triggered</td>
     </tr><tr style="text-align:left">
-      <td>Hallucinatory Terrain (B4 Illu): R300' 150' cube terrain illusion (Int(Investigation) disbelieve) for 1 dy</td>
+      <td>Hallucinatory Terrain (B4 Illu): R300' Creates 150' cu terrain illusion (Investigation disbelieve) for 1 dy</td>
     </tr><tr style="text-align:left">
-      <td>Light (B0 Evoc): Touched object lights 20' radius for 1 hr (Dex neg)</td>
+      <td>Light (B0 Evoc): Touched object lights 20' radius (Dex neg) for 1 hr</td>
     </tr><tr style="text-align:left">
-      <td>Locate Creature (B4 Divi): Know location of named creature or species w/in 1000' for conc/1 hr</td>
+      <td>Locate Creature (B4 Divi): Self learns location of named creature or species w/in 1000' for conc or 1 hr</td>
     </tr><tr style="text-align:left">
-      <td>Mass Cure Wounds (B5 Evoc): R60' 6 targets in 30' radius regain 3d8+spell mod HP</td>
+      <td>Mass Cure Wounds (B5 Evoc): R60' 6 targets in 30' radius regain 3d8 + 2 HP</td>
     </tr><tr style="text-align:left">
-      <td>Mass Suggestion (B6 Ench): R60' 12 targets follow suggestion (Wis neg)</td>
+      <td>Mass Suggestion (B6 Ench): R60' 12 targets follow self suggestion (Wis neg)</td>
     </tr><tr style="text-align:left">
-      <td>Otto's Irresistible Dance (B6 Ench): R30' Target dance (Disadv Dex, attack, foes Adv attack) for conc/1 min (Wis neg)</td>
+      <td>Otto's Irresistible Dance (B6 Ench): R30' Target dances (Disadv on Dex and attack, foes Adv on attacks) (Wis neg) for conc or 1 min</td>
     </tr><tr style="text-align:left">
-      <td>Regenerate (B7 Tran): Touched regain 4d8+15 HP, 1 HP/min for 1 hr, restore severed members</td>
+      <td>Regenerate (B7 Tran): Touched regains 4d8+15 HP and 1 HP/min for 1 hr, reattaches or regrows severed parts</td>
     </tr><tr style="text-align:left">
-      <td>Silent Image (B1 Illu): R60' 15' cu illusion for conc/10 min (Investigation neg)</td>
+      <td>Silent Image (B1 Illu): R60' Creates 15' cu illusion (Investigation neg) for conc or 10 min</td>
     </tr><tr style="text-align:left">
-      <td>Silent Image (S1 Illu): R60' 15' cu illusion for conc/10 min (Investigation neg)</td>
+      <td>Silent Image (S1 Illu): R60' Creates 15' cu illusion (Investigation neg) for conc or 10 min</td>
     </tr><tr style="text-align:left">
-      <td>Speak With Animals (B1 Divi): Self talk to animals for 10 min</td>
+      <td>Speak With Animals (B1 Divi): Self talks to animals for 10 min</td>
     </tr><tr style="text-align:left">
-      <td>Speak With Dead (B3 Necr): Self ask corpse 5 questions in 10 min</td>
+      <td>Speak With Dead (B3 Necr): Self asks corpse 5 questions</td>
     </tr><tr style="text-align:left">
-      <td>Speak With Plants (B3 Tran): Self talk to plans in 30' for 10 min</td>
+      <td>Speak With Plants (B3 Tran): Self talks to plans for 10 min</td>
     </tr><tr style="text-align:left">
-      <td>Tasha's Hideous Laughter (B1 Ench): R30' Target ROFL for conc/1 min (Wis neg)</td>
+      <td>Tasha's Hideous Laughter (B1 Ench): R30' Target ROFL (Wis neg) for conc or 1 min</td>
     </tr><tr style="text-align:left">
-      <td>Teleport (B7 Conj): R10' One object or self + 8 allies teleport any distance</td>
+      <td>Teleport (B7 Conj): R10' Object or self and 8 allies teleport any distance</td>
     </tr><tr style="text-align:left">
-      <td>Teleportation Circle (B5 Conj): R10' Permanent portal to similar circle</td>
+      <td>Teleportation Circle (B5 Conj): R10' Creates permanent portal to similar circle</td>
     </tr><tr style="text-align:left">
-      <td>Vicious Mockery (B0 Ench): R60' Target insults 4 HP, Disadv attack (Wis neg)</td>
+      <td>Vicious Mockery (B0 Ench): R60' Target suffers 4d4 HP psychic and Disadv on attack (Wis neg) for 1 rd</td>
     </tr><tr style="text-align:left">
-      <td>Zone Of Truth (B2 Ench): R60' Creatures inside 15' radius cannot lie for 10 min (Cha neg)</td>
+      <td>Zone Of Truth (B2 Ench): R60' Creatures in 15' radius cannot lie (Cha neg) for 10 min</td>
     </tr></table>
 </td>
   </tr><tr style="text-align:center">
@@ -319,13 +319,13 @@ var attributes = {
     <tr style="text-align:center">
       <td><i>Font Of Inspiration: Refresh Bardic Inspiration after short rest</i></td>
     </tr><tr style="text-align:center">
-      <td><i>Magic Initiate (Sorcerer): 2 cantrips, 1 1st-level/long rest</i></td>
+      <td><i>Magic Initiate (Sorcerer): Know 2 S0 spells, cast 1 S1 spell/long rest</i></td>
     </tr><tr style="text-align:center">
       <td>Additional Magical Secrets: Learn 2 additional spells from any class</td>
     </tr><tr style="text-align:center">
       <td>Bardic Inspiration: R60' Give +1d12 bonus to ability, attack, or saving throw w/in 10 min 2/short rest</td>
     </tr><tr style="text-align:center">
-      <td>Countercharm: R30' Performance gives friendly listeners Adv vs. charm and fright for 1 tn</td>
+      <td>Countercharm: R30' Performance gives friendly listeners Adv on saves vs. charm and fright for 1 tn</td>
     </tr><tr style="text-align:center">
       <td>Magical Secrets: Learn 6 additional spells from any class</td>
     </tr><tr style="text-align:center">

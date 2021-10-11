@@ -156,13 +156,13 @@ var attributes = {
       <tr style="text-align:center">
         <td><b>Armor</b>: None</td>
         <td><b>Shield</b>: None</td>
-        <td><b>Weapons</b>: Dagger: 1 (+8 1d4+2 R20'); Dart: 1 (+8 1d4+2 R20'); Quarterstaff: 1 (+8 1d8+2); Unarmed: 1 (+8 1d1+2)</td>
+        <td><b>Weapons</b>: Dagger: 1 (+8 1d4+2 R20/60); Dart: 1 (+8 1d4+2 R20/60); Quarterstaff: 1 (+8 1d8+2); Unarmed: 1 (+8 1d1+2)</td>
       </tr></table>
 </td>
     </tr><tr style="text-align:center">
       <td><b>Combat Notes</b>:       <table id="CombatNotes" style="width:100%">
       <tr style="text-align:center">
-        <td><i>Alert: +5 Initiative/foes no surprise or unseen Adv</i></td>
+        <td><i>Alert: +5 Initiative; cannot be surprised; no Adv to unseen foes</i></td>
       </tr><tr style="text-align:center">
         <td><i>Constitution Hit Points Adjustment: +40</i></td>
       </tr><tr style="text-align:center">
@@ -170,11 +170,11 @@ var attributes = {
       </tr><tr style="text-align:center">
         <td><i>Strength Damage Adjustment: +2</i></td>
       </tr><tr style="text-align:center">
-        <td>Great Weapon Master: Bonus attack after crit or foe to 0 HP, trade -5 attack for +10 damage</td>
+        <td>Great Weapon Master: Bonus attack after crit or reducing foe to 0 HP; trade -5 attack w/heavy weapon for +10 damage</td>
       </tr><tr style="text-align:center">
-        <td>Polearm Master: Bonus attack polearm butt (1d4 HP), OA when foe enters reach</td>
+        <td>Polearm Master: Bonus attack w/polearm butt inflicts 1d4 HP bludgeoning, OA when foe enters reach</td>
       </tr><tr style="text-align:center">
-        <td>Savage Attacker: Re-roll damage 1/tn</td>
+        <td>Savage Attacker: Take best of two melee damage rolls 1/tn</td>
       </tr></table>
 </td>
     </tr></table>
@@ -190,7 +190,7 @@ var attributes = {
       <tr style="text-align:center">
         <td>Inured To Undeath: Resistance to necrotic damage, immunity to maximum HP reduction</td>
       </tr><tr style="text-align:center">
-        <td>Spell Resistance: Adv vs. spells and resistance to spell damage</td>
+        <td>Spell Resistance: Adv on saves vs. spells and resistance to spell damage</td>
       </tr></table>
 </td>
     </tr></table>
@@ -214,59 +214,59 @@ var attributes = {
   </tr><tr style="text-align:center">
     <td><b>Spells</b>:     <table id="Spells" style="width:100%">
     <tr style="text-align:left">
-      <td>Arcane Eye (W4 Divi): R30' See through invisible eye for conc/1 hr</td>
+      <td>Arcane Eye (W4 Divi): R30' Self sees through remote invisible eye w/darkvision that moves 30'/rd for conc or 1 hr</td>
     </tr><tr style="text-align:left">
-      <td>Banishment (W4 Abju): R60' target banish to home/demiplane (Cha neg) for conc/1 min</td>
+      <td>Banishment (W4 Abju): R60' Banishes target to home or demiplane (Cha neg) for conc or 1 min</td>
     </tr><tr style="text-align:left">
-      <td>Charm Person (W1 Ench): R30' Target regards you as a friend (Wis neg) for 1 hr/until harmed</td>
+      <td>Charm Person (W1 Ench): R30' Target regards you as a friend (Wis neg) for 1 hr or until harmed</td>
     </tr><tr style="text-align:left">
-      <td>Chill Touch (W0 Necr): R120' Ghost hand 4 HP necrotic, undead also Disadv self attack for 1 rd</td>
+      <td>Chill Touch (W0 Necr): R120' Ranged spell inflicts 4d8 HP necrotic, undead also suffer Disadv on self attack for 1 rd</td>
     </tr><tr style="text-align:left">
-      <td>Chromatic Orb (W1 Evoc): R90' 4 in hurled sphere 3d8 HP acid/poison/energy</td>
+      <td>Chromatic Orb (W1 Evoc): R90' Ranged spell inflicts 3d8 HP acid, cold, fire, lightning, poison, or energy</td>
     </tr><tr style="text-align:left">
-      <td>Cone Of Cold (W5 Evoc): Self 60' cone 8d8 HP cold (Con half)</td>
+      <td>Cone Of Cold (W5 Evoc): 60' cone inflicts 8d8 HP cold (Con half)</td>
     </tr><tr style="text-align:left">
-      <td>Dimension Door (W4 Conj): R500' Self + 1 other teleport</td>
+      <td>Dimension Door (W4 Conj): Self and 1 other willing creature teleport up to 500'</td>
     </tr><tr style="text-align:left">
-      <td>Disintegrate (W6 Tran): R60' Target 10d6+40 HP force (Dex neg)</td>
+      <td>Disintegrate (W6 Tran): R60' Target suffers 10d6+40 HP force, dusts if reduced to 0 HP (Dex neg)</td>
     </tr><tr style="text-align:left">
-      <td>Enlarge/Reduce (W2 Tran): R30' Target dbl/half size for conc/1 min</td>
+      <td>Enlarge/Reduce (W2 Tran): R30' Target becomes dbl (Adv on Str, +1d4 weapon damage) or half (Disadv on Str, -1d4 weapon damage) size for conc or 1 min</td>
     </tr><tr style="text-align:left">
-      <td>Friends (W0 Ench): Self Adv Cha w/target for conc/1 min</td>
+      <td>Friends (W0 Ench): Self gains on Adv on Cha checks w/target for conc or 1 min</td>
     </tr><tr style="text-align:left">
-      <td>Gaseous Form (W3 Tran): Touched creature gaseous for conc/1 hr</td>
+      <td>Gaseous Form (W3 Tran): Touched creature becomes gaseous for conc or 1 hr</td>
     </tr><tr style="text-align:left">
-      <td>Geas (W5 Ench): R60' Target charmed into obeying command for 30 dy (Wis neg)</td>
+      <td>Geas (W5 Ench): R60' Target obeys command (Wis neg) for 30 dy</td>
     </tr><tr style="text-align:left">
-      <td>Grease (W1 Conj): R60' creatures in 10' sq fall (Dex neg) for 1 min</td>
+      <td>Grease (W1 Conj): R60' Creatures in 10' sq fall (Dex neg) for 1 min</td>
     </tr><tr style="text-align:left">
-      <td>Invisibility (W2 Illu): Touched creature invisible for conc/1 hr or until attacks/casts</td>
+      <td>Invisibility (W2 Illu): Touched becomes invisible for conc or 1 hr or until attacks or casts</td>
     </tr><tr style="text-align:left">
-      <td>Major Image (W3 Illu): R120' 20' cu sight, sound, touch illusion for conc/10 min</td>
+      <td>Major Image (W3 Illu): R120' Creates 20' cu sight, sound, and touch illusion for conc or 10 min</td>
     </tr><tr style="text-align:left">
-      <td>Maze (W8 Conj): R60' Target sent to labyrinth (DC 20 Int escapes)</td>
+      <td>Maze (W8 Conj): R60' Target sent to labyrinthine demiplane (DC 20 Int escapes) for conc or 10 min</td>
     </tr><tr style="text-align:left">
-      <td>Mending (W0 Tran): Repair small tears</td>
+      <td>Mending (W0 Tran): Touch repairs small tear</td>
     </tr><tr style="text-align:left">
-      <td>Mirror Image (W2 Illu): 3 duplicates draw attacks (AC 10+DexMod)</td>
+      <td>Mirror Image (W2 Illu): 3 self duplicates draw attacks (AC 10) for 1 min</td>
     </tr><tr style="text-align:left">
-      <td>Mordenkainen's Magnificent Mansion (W7 Conj): R300' Comfortable extradimensional dwelling for 1 dy</td>
+      <td>Mordenkainen's Magnificent Mansion (W7 Conj): R300' Creates extradimensional dwelling for 1 dy</td>
     </tr><tr style="text-align:left">
-      <td>Otiluke's Freezing Sphere (W6 Evoc): R300' Objects in 60' radius 10d6 HP (Con half)</td>
+      <td>Otiluke's Freezing Sphere (W6 Evoc): R300' 60' radius inflicts 10d6 HP cold (Con half), freezes water for 1 min</td>
     </tr><tr style="text-align:left">
-      <td>Phantom Steed (W3 Illu): R30' Self ride 100'/rd for 1 hr</td>
+      <td>Phantom Steed (W3 Illu): R30' Self or target rides 100'/rd (13 MPH) for 1 hr</td>
     </tr><tr style="text-align:left">
-      <td>Poison Spray (W0 Conj): R10' Target 4d12 HP (Con neg)</td>
+      <td>Poison Spray (W0 Conj): R10' Target suffers 4d12 HP poison (Con neg)</td>
     </tr><tr style="text-align:left">
-      <td>Prismatic Wall (W9 Abju): R60' Transit causes 10d6 HP (Dex half), held then stone (Dex neg), or blinded then plane shifted (Dex neg) for 10 min</td>
+      <td>Prismatic Wall (W9 Abju): R60' 90'x30' area blinds w/in 20' for 1 min (Con neg); passers suffer 10d6 HP each fire, acid, lightning, poison, and cold (Dex half), restraint (Dex neg) and then turning to stone (3 Con before 3 fails neg), and blindness (Dex neg) followed by banishment to another plane (Wis neg)</td>
     </tr><tr style="text-align:left">
-      <td>Ray Of Sickness (W1 Necr): R60' Target 2d8 HP, poisoned 1 tn (Con not poisoned)</td>
+      <td>Ray Of Sickness (W1 Necr): R60' Target suffers 2d8 HP poison and poisoned 1 rd (Con not poisoned)</td>
     </tr><tr style="text-align:left">
-      <td>Seeming (W5 Illu): R30' Targets appearance change for 8 hr (Cha neg)</td>
+      <td>Seeming (W5 Illu): R30' Changes appearance of targets (Cha neg) for 8 hr</td>
     </tr><tr style="text-align:left">
-      <td>Shocking Grasp (W0 Evoc): Touched 4d8 HP</td>
+      <td>Shocking Grasp (W0 Evoc): Touched suffers 4d8 HP lightning</td>
     </tr><tr style="text-align:left">
-      <td>Simulacrum (W7 Illu): Friendly duplicate creature from snow, half HP of original</td>
+      <td>Simulacrum (W7 Illu): Creates from snow a friendly duplicate creature w/half the HP of original</td>
     </tr></table>
 </td>
   </tr><tr style="text-align:center">
@@ -356,7 +356,7 @@ var attributes = {
     </tr><tr style="text-align:center">
       <td>Undead Thralls: Know <i>Animate Dead</i>, casting animates additional corpse and gives +20 HP and +6 damage</td>
     </tr><tr style="text-align:center">
-      <td>War Caster: Adv concentration, cast when holding shield or weapon, cast as OA</td>
+      <td>War Caster: Adv on concentration to maintain spell, cast when holding shield and/or weapon, use Reaction to cast as OA</td>
     </tr></table>
 </td>
   </tr></table>

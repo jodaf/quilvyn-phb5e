@@ -120,7 +120,7 @@ var attributes = {
       </tr><tr style="text-align:center">
         <td>Infiltration Expertise: Forge and adopt different identities</td>
       </tr><tr style="text-align:center">
-        <td>Linguist: Create ciphers, DC 24 Int to decode</td>
+        <td>Linguist: Create ciphers that require a DC 24 Int check to decode</td>
       </tr><tr style="text-align:center">
         <td>Shelter Of The Faithful: Receive aid from associated temple</td>
       </tr></table>
@@ -171,7 +171,7 @@ var attributes = {
     </tr><tr style="text-align:center">
       <td>Blindsense: R10' Know location of hidden and invisible creatures</td>
     </tr><tr style="text-align:center">
-      <td>Bulky Armor: Disadv Stealth</td>
+      <td>Bulky Armor: Disadv on Stealth</td>
     </tr><tr style="text-align:center">
       <td>Rogue Expertise: Dbl proficiency on 4 skills or Thieves' Tools</td>
     </tr><tr style="text-align:center">
@@ -211,7 +211,7 @@ var attributes = {
       <tr style="text-align:center">
         <td><b>Armor</b>: Padded</td>
         <td><b>Shield</b>: None</td>
-        <td><b>Weapons</b>: Greatclub: 1 (+9 1d8+3); Mace: 1 (+9 1d6+3); Shortbow: 1 (+7 1d6+1 R80'); Unarmed: 1 (+9 1d1+3)</td>
+        <td><b>Weapons</b>: Greatclub: 1 (+9 1d8+3); Mace: 1 (+9 1d6+3); Shortbow: 1 (+7 1d6+1 R80/320); Unarmed: 1 (+9 1d1+3)</td>
       </tr></table>
 </td>
     </tr><tr style="text-align:center">
@@ -237,15 +237,15 @@ var attributes = {
       </tr><tr style="text-align:center">
         <td>Death Strike: Dbl damage on surprise hit (DC 15 Con neg)</td>
       </tr><tr style="text-align:center">
-        <td>Durable: Min 4 when regaining HP</td>
+        <td>Durable: Minimum 4 when regaining HP</td>
       </tr><tr style="text-align:center">
         <td>Elusive: Foe attacks never have Adv</td>
       </tr><tr style="text-align:center">
         <td>Fast Hands: Use Cunning Action for Sleight Of Hand check, to disarm a trap, open a lock, or Use An Object</td>
       </tr><tr style="text-align:center">
-        <td>Sharpshooter: No Disadv long range, ignore 3/4 cover, trade -5 attack for +10 damage</td>
+        <td>Sharpshooter: No Disadv on attacks at long range, ignore 3/4 cover, trade -5 attack w/ranged weapon for +10 damage</td>
       </tr><tr style="text-align:center">
-        <td>Sneak Attack: +10d6 damage on Adv and shared threat attacks</td>
+        <td>Sneak Attack: +10d6 damage on attacks w/Adv or shared threat</td>
       </tr><tr style="text-align:center">
         <td>Stroke Of Luck: Change miss into hit 1/short rest</td>
       </tr><tr style="text-align:center">
@@ -291,39 +291,39 @@ var attributes = {
   </tr><tr style="text-align:center">
     <td><b>Spells</b>:     <table id="Spells" style="width:100%">
     <tr style="text-align:left">
-      <td>Cure Wounds (C1 Evoc): Touched heals 1d8+spell mod HP</td>
+      <td>Cure Wounds (C1 Evoc): Touched regains 1d8+0 HP</td>
     </tr><tr style="text-align:left">
-      <td>Find Familiar (W1 Conj): R10' Telepathic communication w/summoned animal</td>
+      <td>Find Familiar (W1 Conj): R10' Self gains service from summoned spirit in animal form</td>
     </tr><tr style="text-align:left">
-      <td>Fire Shield (W4 Evoc): Self resistance to heat or cold damage, foe hit takes 2d8 HP for 10 min</td>
+      <td>Fire Shield (W4 Evoc): Self gains resistance to heat or cold damage, successful melee attacker suffers 2d8 HP fire or cold for 10 min</td>
     </tr><tr style="text-align:left">
-      <td>Fireball (W3 Evoc): R150' Creatures in 20' radius 8d6 HP (Dex half)</td>
+      <td>Fireball (W3 Evoc): R150' 20' radius inflicts 8d6 HP fire (Dex half)</td>
     </tr><tr style="text-align:left">
-      <td>Fly (W3 Tran): Touched fly 60'/rd for conc/10 min</td>
+      <td>Fly (W3 Tran): Touched gains 60' fly speed for conc or 10 min</td>
     </tr><tr style="text-align:left">
-      <td>Gentle Repose (W2 Necr): Touched corpse no decay or animation for 10 dy</td>
+      <td>Gentle Repose (W2 Necr): Touched corpse becomes immune to decay and animation for 10 dy</td>
     </tr><tr style="text-align:left">
-      <td>Guidance (C0 Divi): Touched +1d4 ability check w/in conc/1 min</td>
+      <td>Guidance (C0 Divi): Touched gains +1d4 on 1 ability check w/in conc or 1 min</td>
     </tr><tr style="text-align:left">
-      <td>Invisibility (W2 Illu): Touched creature invisible for conc/1 hr or until attacks/casts</td>
+      <td>Invisibility (W2 Illu): Touched becomes invisible for conc or 1 hr or until attacks or casts</td>
     </tr><tr style="text-align:left">
-      <td>Magic Circle (W3 Abju): R10' 10' circle impassable by specified creature type, Disadv attacks for 1 hr</td>
+      <td>Magic Circle (W3 Abju): R10' 10' circle prevents passage and inflicts DisAdv on attacks by specified creature type for 1 hr</td>
     </tr><tr style="text-align:left">
-      <td>Protection From Evil And Good (W1 Abju): Touched specified foe type Disadv attack, immunity to charm, fright, and possession</td>
+      <td>Protection From Evil And Good (W1 Abju): Willing touched gains immunity to charm, fright, and possession from aberrations, celestials, elementals, fey, fiends, and undead, and those creatures suffer Disadv on attack on touched</td>
     </tr><tr style="text-align:left">
-      <td>Ray Of Enfeeblement (W2 Necr): R60' Target does half Str damage until Con save</td>
+      <td>Ray Of Enfeeblement (W2 Necr): R60' Ranged spell inflicts half damage on Str weapons (Con neg) for conc or 1 min</td>
     </tr><tr style="text-align:left">
-      <td>Resistance (C0 Abju): Touched +1d4 on save w/in conc/1 min</td>
+      <td>Resistance (C0 Abju): Touched gains +1d4 on 1 save w/in conc or 1 min</td>
     </tr><tr style="text-align:left">
-      <td>Sleep (W1 Ench): R90' 20' radius sleeps up to 5d8 HP creatures, weakest first</td>
+      <td>Sleep (W1 Ench): R90' 20' radius sleeps up to 5d8 HP of creatures, weakest first</td>
     </tr><tr style="text-align:left">
-      <td>Tenser's Floating Disk (W1 Conj): R30' 3'-diameter x 1 in force disk follows, holds 500 lbs at 3' for 1 hr</td>
+      <td>Tenser's Floating Disk (W1 Conj): R30' 3'-diameter x 1 inch thick force disk follows, holds 500 lbs at 3' for 1 hr</td>
     </tr></table>
 </td>
   </tr><tr style="text-align:center">
     <td><b>Magic Notes</b>:     <table id="MagicNotes" style="width:100%">
     <tr style="text-align:center">
-      <td><i>Magic Initiate (Cleric): 2 cantrips, 1 1st-level/long rest</i></td>
+      <td><i>Magic Initiate (Cleric): Know 2 C0 spells, cast 1 C1/long rest</i></td>
     </tr><tr style="text-align:center">
       <td>Mage Hand Legerdemain: Stow and retrieve objects, pick locks, and disarm traps via invisible <i>Mage Hand</i></td>
     </tr><tr style="text-align:center">
@@ -331,7 +331,7 @@ var attributes = {
     </tr><tr style="text-align:center">
       <td>Spell Thief: Foe spell negated, self cast same w/in 8 hours (DC 18 neg) 1/long rest</td>
     </tr><tr style="text-align:center">
-      <td>Versatile Trickster: Distract foe (self Adv attacks) via <i>Mage Hand</i></td>
+      <td>Versatile Trickster: Distract foe (self Adv on attacks) via <i>Mage Hand</i></td>
     </tr></table>
 </td>
   </tr></table>

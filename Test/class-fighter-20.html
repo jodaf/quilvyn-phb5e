@@ -118,9 +118,9 @@ var attributes = {
       <tr style="text-align:center">
         <td><i>Student Of War: Tool Proficiency (Choose 1 from any Artisan)</i></td>
       </tr><tr style="text-align:center">
-        <td>Linguist: Create ciphers, DC 25 Int to decode</td>
+        <td>Linguist: Create ciphers that require a DC 25 Int check to decode</td>
       </tr><tr style="text-align:center">
-        <td>Lucky: Adv attack, ability, and save or foe Disadv attack 3/long rest</td>
+        <td>Lucky: Adv on attack, ability, or saving throw or foe Disadv on self attack 3/long rest</td>
       </tr><tr style="text-align:center">
         <td>Shelter Of The Faithful: Receive aid from associated temple</td>
       </tr></table>
@@ -169,9 +169,9 @@ var attributes = {
     <tr style="text-align:center">
       <td><i>Linguist: +3 Language Count</i></td>
     </tr><tr style="text-align:center">
-      <td>Actor: Mimic others' speech or sounds, Adv Deception (Cha) and Performance (Cha) when impersonating</td>
+      <td>Actor: Adv on Deception (Cha) and Performance (Cha) (impersonating), mimic others' speech or sounds</td>
     </tr><tr style="text-align:center">
-      <td>Bulky Armor: Disadv Stealth</td>
+      <td>Bulky Armor: Disadv on Stealth</td>
     </tr><tr style="text-align:center">
       <td>Remarkable Athlete: +2' running jump</td>
     </tr></table>
@@ -203,7 +203,7 @@ var attributes = {
       <tr style="text-align:center">
         <td><b>Armor</b>: Half Plate</td>
         <td><b>Shield</b>: None</td>
-        <td><b>Weapons</b>: Greataxe: 1 (+8 1d12+2); Light Hammer: 1 (+8 1d4+2 R20'); Rapier: 1 (+8 1d8+2); Shortbow: 1 (+9 1d6+1 R80'); Unarmed: 1 (+8 1d1+2)</td>
+        <td><b>Weapons</b>: Greataxe: 1 (+8 1d12+2); Light Hammer: 1 (+8 1d4+2 R20/60); Rapier: 1 (+8 1d8+2); Shortbow: 1 (+9 1d6+1 R80/320); Unarmed: 1 (+8 1d1+2)</td>
       </tr></table>
 </td>
     </tr><tr style="text-align:center">
@@ -257,9 +257,9 @@ var attributes = {
       </tr><tr style="text-align:center">
         <td>Fighting Style (Two-Weapon Fighting): Add ability modifier to second attack damage</td>
       </tr><tr style="text-align:center">
-        <td>Goading Attack: Add Superiority Die to damage, foe attacks on others suffer Disadv for 1 rd (DC 16 Wis neg)</td>
+        <td>Goading Attack: Add Superiority Die to damage, foe attacks on others suffer Disadv (DC 16 Wis neg) for 1 rd</td>
       </tr><tr style="text-align:center">
-        <td>Great Weapon Master: Bonus attack after crit or foe to 0 HP, trade -5 attack for +10 damage</td>
+        <td>Great Weapon Master: Bonus attack after crit or reducing foe to 0 HP; trade -5 attack w/heavy weapon for +10 damage</td>
       </tr><tr style="text-align:center">
         <td>Improved Critical: Crit on natural 19</td>
       </tr><tr style="text-align:center">
@@ -269,11 +269,11 @@ var attributes = {
       </tr><tr style="text-align:center">
         <td>Maneuvering Attack: Add Superiority Die to damage, ally can react to move half speed w/no OA from target</td>
       </tr><tr style="text-align:center">
-        <td>Menacing Attack: Add Superiority Die to damage, foe frightened for 1 rd (DC 16 Wis neg)</td>
+        <td>Menacing Attack: Add Superiority Die to damage, foe frightened (DC 16 Wis neg) for 1 rd</td>
       </tr><tr style="text-align:center">
         <td>Parry: Reduce damage from foe by Superiority Die + 1</td>
       </tr><tr style="text-align:center">
-        <td>Polearm Master: Bonus attack polearm butt (1d4 HP), OA when foe enters reach</td>
+        <td>Polearm Master: Bonus attack w/polearm butt inflicts 1d4 HP bludgeoning, OA when foe enters reach</td>
       </tr><tr style="text-align:center">
         <td>Precision Attack: Add Superiority Die to attack</td>
       </tr><tr style="text-align:center">
@@ -285,7 +285,7 @@ var attributes = {
       </tr><tr style="text-align:center">
         <td>Riposte: Use bonus to attack after foe miss, add Superiority Die to damage</td>
       </tr><tr style="text-align:center">
-        <td>Savage Attacker: Re-roll damage 1/tn</td>
+        <td>Savage Attacker: Take best of two melee damage rolls 1/tn</td>
       </tr><tr style="text-align:center">
         <td>Second Wind: Regain 1d10+20 HP 1/short rest</td>
       </tr><tr style="text-align:center">
@@ -333,31 +333,31 @@ var attributes = {
   </tr><tr style="text-align:center">
     <td><b>Spells</b>:     <table id="Spells" style="width:100%">
     <tr style="text-align:left">
-      <td>Blur (W2 Illu): Self foes Disadv attack for conc/1 min</td>
+      <td>Blur (W2 Illu): Foes suffer Disadv on self attacks for conc or 1 min</td>
     </tr><tr style="text-align:left">
-      <td>Chill Touch (W0 Necr): R120' Ghost hand 4 HP necrotic, undead also Disadv self attack for 1 rd</td>
+      <td>Chill Touch (W0 Necr): R120' Ranged spell inflicts 4d8 HP necrotic, undead also suffer Disadv on self attack for 1 rd</td>
     </tr><tr style="text-align:left">
-      <td>Disguise Self (W1 Illu): Self appear different body size for 1 hr</td>
+      <td>Disguise Self (W1 Illu): Self clothing and body appear different for 1 hr</td>
     </tr><tr style="text-align:left">
-      <td>Expeditious Retreat (W1 Tran): Self Dash as bonus action for conc/10 min</td>
+      <td>Expeditious Retreat (W1 Tran): Self gains bonus Dash for conc or 10 min</td>
     </tr><tr style="text-align:left">
-      <td>Leomund's Tiny Hut (W3 Evoc): 10' radius dome impassable by objects and spells for 8 hr</td>
+      <td>Leomund's Tiny Hut (W3 Evoc): Creates 10' radius dome impassable by objects and spells for 8 hr</td>
     </tr><tr style="text-align:left">
-      <td>Levitate (W2 Tran): R60' Target floats 20' for conc/10 min (Con neg)</td>
+      <td>Levitate (W2 Tran): R60' Target floats (Con neg) for conc or 10 min</td>
     </tr><tr style="text-align:left">
-      <td>Magic Circle (W3 Abju): R10' 10' circle impassable by specified creature type, Disadv attacks for 1 hr</td>
+      <td>Magic Circle (W3 Abju): R10' 10' circle prevents passage and inflicts DisAdv on attacks by specified creature type for 1 hr</td>
     </tr><tr style="text-align:left">
-      <td>Message (W0 Tran): R120 Whispered conversation w/target for 1 rd</td>
+      <td>Message (W0 Tran): R120' Self and target have whispered conversation for 1 rd</td>
     </tr><tr style="text-align:left">
-      <td>Polymorph (W4 Tran): R60' Target creature transformed for conc/1 hr/0 HP (Wis neg)</td>
+      <td>Polymorph (W4 Tran): R60' Transforms target creature (Wis neg) for conc or 1 hr or until reduced to 0 HP</td>
     </tr><tr style="text-align:left">
-      <td>See Invisibility (W2 Divi): Self see invisible and ethereal items for 1 hr</td>
+      <td>See Invisibility (W2 Divi): Self sees invisible and ethereal items for 1 hr</td>
     </tr><tr style="text-align:left">
-      <td>Shocking Grasp (W0 Evoc): Touched 4d8 HP</td>
+      <td>Shocking Grasp (W0 Evoc): Touched suffers 4d8 HP lightning</td>
     </tr><tr style="text-align:left">
-      <td>Tasha's Hideous Laughter (W1 Ench): R30' Target ROFL for conc/1 min (Wis neg)</td>
+      <td>Tasha's Hideous Laughter (W1 Ench): R30' Target ROFL (Wis neg) for conc or 1 min</td>
     </tr><tr style="text-align:left">
-      <td>Tongues (W3 Divi): Touched understand and speak any language for 1 hr</td>
+      <td>Tongues (W3 Divi): Touched understands and speaks any language for 1 hr</td>
     </tr><tr style="text-align:left">
       <td>Unseen Servant (W1 Conj): R60' Invisible force performs simple tasks for 1 hr</td>
     </tr></table>

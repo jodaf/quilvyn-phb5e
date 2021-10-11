@@ -164,7 +164,7 @@ var attributes = {
     </tr><tr style="text-align:center">
       <td><i>Skilled: Skill Proficiency (Choose 3 from any)</i></td>
     </tr><tr style="text-align:center">
-      <td>Bulky Armor: Disadv Stealth</td>
+      <td>Bulky Armor: Disadv on Stealth</td>
     </tr></table>
 </td>
   </tr></table>
@@ -194,7 +194,7 @@ var attributes = {
       <tr style="text-align:center">
         <td><b>Armor</b>: Padded</td>
         <td><b>Shield</b>: None</td>
-        <td><b>Weapons</b>: Javelin: 1 (+7 1d6+1 R30'); Quarterstaff: 1 (+7 1d8+1); Unarmed: 1 (+7 1d1+1)</td>
+        <td><b>Weapons</b>: Javelin: 1 (+7 1d6+1 R30/120); Quarterstaff: 1 (+7 1d8+1); Unarmed: 1 (+7 1d1+1)</td>
       </tr></table>
 </td>
     </tr><tr style="text-align:center">
@@ -218,13 +218,13 @@ var attributes = {
       </tr><tr style="text-align:center">
         <td>Entropic Ward: Use Reaction to inflict Disadv on attack by foe, miss gives you Adv on next attack 1/short rest</td>
       </tr><tr style="text-align:center">
-        <td>Great Weapon Master: Bonus attack after crit or foe to 0 HP, trade -5 attack for +10 damage</td>
+        <td>Great Weapon Master: Bonus attack after crit or reducing foe to 0 HP; trade -5 attack w/heavy weapon for +10 damage</td>
       </tr><tr style="text-align:center">
         <td>Hurl Through Hell: Inflict 10d10 HP psychic on struck foe 1/long rest</td>
       </tr><tr style="text-align:center">
         <td>Lifedrinker: Pact weapon inflicts +1 HP necrotic</td>
       </tr><tr style="text-align:center">
-        <td>Polearm Master: Bonus attack polearm butt (1d4 HP), OA when foe enters reach</td>
+        <td>Polearm Master: Bonus attack w/polearm butt inflicts 1d4 HP bludgeoning, OA when foe enters reach</td>
       </tr><tr style="text-align:center">
         <td>Thirsting Blade: 2 attacks/tn w/pact blade</td>
       </tr></table>
@@ -240,7 +240,7 @@ var attributes = {
     </tr><tr style="text-align:center">
       <td><b>Save Notes</b>:       <table id="SaveNotes" style="width:100%">
       <tr style="text-align:center">
-        <td>Beguiling Defenses: Immune to charm, reflect on caster for conc or 1 min (DC 15 Wis neg)</td>
+        <td>Beguiling Defenses: Immune to charm, reflect on caster (DC 15 Wis neg) for conc or 1 min</td>
       </tr><tr style="text-align:center">
         <td>Fiendish Resilience: Gain resistance to chosen damage type until next short rest</td>
       </tr><tr style="text-align:center">
@@ -268,27 +268,27 @@ var attributes = {
   </tr><tr style="text-align:center">
     <td><b>Spells</b>:     <table id="Spells" style="width:100%">
     <tr style="text-align:left">
-      <td>Chill Touch (K0 Necr): R120' Ghost hand 4 HP necrotic, undead also Disadv self attack for 1 rd</td>
+      <td>Chill Touch (K0 Necr): R120' Ranged spell inflicts 4d8 HP necrotic, undead also suffer Disadv on self attack for 1 rd</td>
     </tr><tr style="text-align:left">
-      <td>Detect Poison And Disease (C1 Divi): R30' Self sense poison for conc/10 min</td>
+      <td>Detect Poison And Disease (C1 Divi): R30' Self senses poison for conc or 10 min</td>
     </tr><tr style="text-align:left">
-      <td>Dominate Person (K5 Ench): R60' Command target telepathically for conc/1 hr (Wis neg)</td>
+      <td>Dominate Person (K5 Ench): R60' Target obeys self telepathic commands (Wis neg) for conc or 1 min</td>
     </tr><tr style="text-align:left">
-      <td>Friends (K0 Ench): Self Adv Cha w/target for conc/1 min</td>
+      <td>Friends (K0 Ench): Self gains on Adv on Cha checks w/target for conc or 1 min</td>
     </tr><tr style="text-align:left">
-      <td>Hallow (K5 Evoc): 60' radius warded against outsiders, evokes boon spell</td>
+      <td>Hallow (K5 Evoc): 60' radius becomes warded against outsiders and evokes boon effect</td>
     </tr><tr style="text-align:left">
-      <td>Hold Monster (K5 Ench): R90' target frozen for conc/1 min (Wis neg)</td>
+      <td>Hold Monster (K5 Ench): R90' Immobilizes target (Wis neg) for conc or 1 min</td>
     </tr><tr style="text-align:left">
-      <td>Minor Illusion (K0 Illu): R30' Sound of 1 creature or 5' cu image (Investigation disbelieve) for 1 min</td>
+      <td>Minor Illusion (K0 Illu): R30' Creates sound of 1 creature or 5' cu image (Investigation disbelieve) for 1 min</td>
     </tr><tr style="text-align:left">
-      <td>Poison Spray (K0 Conj): R10' Target 4d12 HP (Con neg)</td>
+      <td>Poison Spray (K0 Conj): R10' Target suffers 4d12 HP poison (Con neg)</td>
     </tr><tr style="text-align:left">
-      <td>Sacred Flame (C0 Evoc): R60' Target 1d8 (Dex neg)</td>
+      <td>Sacred Flame (C0 Evoc): R60' Target suffers 1d8 HP radiant (Dex neg)</td>
     </tr><tr style="text-align:left">
-      <td>Seeming (K5 Illu): R30' Targets appearance change for 8 hr (Cha neg)</td>
+      <td>Seeming (K5 Illu): R30' Changes appearance of targets (Cha neg) for 8 hr</td>
     </tr><tr style="text-align:left">
-      <td>Thaumaturgy (C0 Tran): R30' Minor magic effects for 1 min</td>
+      <td>Thaumaturgy (C0 Tran): R30' Creates minor magic effects for 1 min</td>
     </tr></table>
 </td>
   </tr><tr style="text-align:center">
@@ -296,7 +296,7 @@ var attributes = {
     <tr style="text-align:center">
       <td><i>Eldritch Invocations: Select 8</i></td>
     </tr><tr style="text-align:center">
-      <td><i>Magic Initiate (Cleric): 2 cantrips, 1 1st-level/long rest</i></td>
+      <td><i>Magic Initiate (Cleric): Know 2 C0 spells, cast 1 C1/long rest</i></td>
     </tr><tr style="text-align:center">
       <td>Agonizing Blast: <i>Eldritch Blast</i> inflicts +1 HP</td>
     </tr><tr style="text-align:center">
@@ -314,7 +314,7 @@ var attributes = {
     </tr><tr style="text-align:center">
       <td>Create Thrall: Touch charms incapacitated humanoid</td>
     </tr><tr style="text-align:center">
-      <td>Dark Delirium: R60' Target charmed or frightened and unaware of surroundings for conc or 1 min (DC 15 Wis neg) 1/long rest</td>
+      <td>Dark Delirium: R60' Target charmed or frightened and unaware of surroundings (DC 15 Wis neg) for conc or 1 min 1/long rest</td>
     </tr><tr style="text-align:center">
       <td>Dreadful Word: Use Warlock spell slot to cast <i>Confusion</i> 1/long rest</td>
     </tr><tr style="text-align:center">
@@ -324,7 +324,7 @@ var attributes = {
     </tr><tr style="text-align:center">
       <td>Eldritch Spear: R300' <i>Eldritch Blast</i></td>
     </tr><tr style="text-align:center">
-      <td>Fey Presence: R10' All creatures charmed or frightened for 1 tn (DC 15 Wis neg) 1/short rest</td>
+      <td>Fey Presence: R10' All creatures charmed or frightened (DC 15 Wis neg) for 1 tn 1/short rest</td>
     </tr><tr style="text-align:center">
       <td>Fiendish Vigor: Cast <i>False Life</i> on self at will</td>
     </tr><tr style="text-align:center">

@@ -154,7 +154,7 @@ var attributes = {
   </tr><tr style="text-align:center">
     <td><b>Languages</b>: Common; Giant; Halfling; Undercommon</td>
   </tr><tr style="text-align:center">
-    <td><b>Skill Notes</b>: Bulky Armor: Disadv Stealth</td>
+    <td><b>Skill Notes</b>: Bulky Armor: Disadv on Stealth</td>
   </tr></table>
 </td>
 </tr><tr style="text-align:center">
@@ -182,7 +182,7 @@ var attributes = {
       <tr style="text-align:center">
         <td><b>Armor</b>: Plate</td>
         <td><b>Shield</b>: None</td>
-        <td><b>Weapons</b>: Glaive: 1 (+6 1d10); Longbow: 1 (+8 1d8+2 R150'); Morningstar: 1 (+6 1d8); Unarmed: 1 (+6 1d1)</td>
+        <td><b>Weapons</b>: Glaive: 1 (+6 1d10); Longbow: 1 (+8 1d8+2 R150/600); Morningstar: 1 (+6 1d8); Unarmed: 1 (+6 1d1)</td>
       </tr></table>
 </td>
     </tr><tr style="text-align:center">
@@ -204,7 +204,7 @@ var attributes = {
       </tr><tr style="text-align:center">
         <td>Divine Smite: Spend spell slot for +(spell level + 1)d8 HP radiant melee weapon damage</td>
       </tr><tr style="text-align:center">
-        <td>Dual Wielder: +1 AC w/two weapons, two-weapon fighting w/non-light weapons, draw two weapons at once</td>
+        <td>Dual Wielder: +1 AC w/two weapons; use two-weapon fighting w/any one-handed weapons; draw or stow two weapons at once</td>
       </tr><tr style="text-align:center">
         <td>Fighting Style (Dueling): +2 damage with single, one-handed weapon</td>
       </tr><tr style="text-align:center">
@@ -246,7 +246,7 @@ var attributes = {
       </tr><tr style="text-align:center">
         <td>Divine Health: Immune to disease</td>
       </tr><tr style="text-align:center">
-        <td>Holy Nimbus: Adv vs. spells by fiends and undead for 1 min 1/long rest</td>
+        <td>Holy Nimbus: Adv on saves vs. spells by fiends and undead for 1 min 1/long rest</td>
       </tr></table>
 </td>
     </tr></table>
@@ -270,117 +270,117 @@ var attributes = {
   </tr><tr style="text-align:center">
     <td><b>Spells</b>:     <table id="Spells" style="width:100%">
     <tr style="text-align:left">
-      <td>Aid (P2 Abju): R30' Three targets +5 or more HP for 8 hr</td>
+      <td>Aid (P2 Abju): R30' 3 targets gain +5 temporary HP for 8 hr</td>
     </tr><tr style="text-align:left">
-      <td>Aura Of Vitality (P3 Evoc): Self 30' radius heals 2d6 HP designated target 1/rd for conc/1 min</td>
+      <td>Aura Of Vitality (P3 Evoc): R30' Target heals 2d6 HP 1/rd for conc or 1 min</td>
     </tr><tr style="text-align:left">
-      <td>Bane (Vengeance1 Ench): R30' 3 targets -1d4 from attack/save (Cha neg) for conc/1 min</td>
+      <td>Bane (Vengeance1 Ench): R30' 3 targets suffer -1d4 on attacks and saving throws (Cha neg) for conc or 1 min</td>
     </tr><tr style="text-align:left">
-      <td>Banishment (Vengeance4 Abju): R60' target banish to home/demiplane (Cha neg) for conc/1 min</td>
+      <td>Banishment (Vengeance4 Abju): R60' Banishes target to home or demiplane (Cha neg) for conc or 1 min</td>
     </tr><tr style="text-align:left">
-      <td>Beacon Of Hope (Devotion3 Abju): R30' Targets Adv Wis/death saves, max heal for conc/1 min</td>
+      <td>Beacon Of Hope (Devotion3 Abju): R30' Targets gain Adv on Wis and death saves and maximum HP from healing for conc or 1 min</td>
     </tr><tr style="text-align:left">
-      <td>Blinding Smite (P3 Evoc): Self next attack +3d8 HP radiant and blind (Con neg) for conc/1 min</td>
+      <td>Blinding Smite (P3 Evoc): Self attack inflicts +3d8 HP radiant and blinds (Con neg) for conc or 1 min</td>
     </tr><tr style="text-align:left">
-      <td>Branding Smite (P2 Evoc): Self next attack +2d6 HP radiant and visible for conc/1 min</td>
+      <td>Branding Smite (P2 Evoc): Self attack inflicts +2d6 HP radiant and lights target for conc or 1 min</td>
     </tr><tr style="text-align:left">
-      <td>Circle Of Power (P5 Abju): Allies in 30' radius from self Adv save vs. magic, neg instead of half for conc/10 min</td>
+      <td>Circle Of Power (P5 Abju): Allies in 30' radius gain Adv on save vs. magic and saves yields no damage instead of half for conc or 10 min</td>
     </tr><tr style="text-align:left">
-      <td>Commune (Devotion5 Divi): Self receive 3 yes/no answers w/in 1 min</td>
+      <td>Commune (Devotion5 Divi): Deity answers 3 yes/no questions</td>
     </tr><tr style="text-align:left">
-      <td>Commune With Nature (Ancients5 Divi): Self gain 3 facts about territory w/in 3 miles</td>
+      <td>Commune With Nature (Ancients5 Divi): Self gains 3 facts about nature w/in 3 miles (300' underground)</td>
     </tr><tr style="text-align:left">
-      <td>Comprehend Languages (S1 Divi): Self understand all language for 1 hr</td>
+      <td>Comprehend Languages (S1 Divi): Self understands all languages for 1 hr</td>
     </tr><tr style="text-align:left">
-      <td>Death Ward (P4 Abju): Touched keep 1 HP when next brought to 0</td>
+      <td>Death Ward (P4 Abju): Touched keeps 1 HP when next reduced to 0 HP for 8 hrs</td>
     </tr><tr style="text-align:left">
-      <td>Destructive Wave (P5 Evoc): Targets in 30' radius 5d6 HP (Con half), prone (Con neg)</td>
+      <td>Destructive Wave (P5 Evoc): 30' radius inflicts 5d6 HP thunder and knocks prone (Con half HP, not prone)</td>
     </tr><tr style="text-align:left">
-      <td>Detect Evil And Good (P1 Divi): R30' Self sense aligned outsider, consecration/desecration for conc/10 min</td>
+      <td>Detect Evil And Good (P1 Divi): R30' Self senses aligned outsider, consecration, and desecration for conc or 10 min</td>
     </tr><tr style="text-align:left">
-      <td>Detect Poison And Disease (P1 Divi): R30' Self sense poison for conc/10 min</td>
+      <td>Detect Poison And Disease (P1 Divi): R30' Self senses poison for conc or 10 min</td>
     </tr><tr style="text-align:left">
-      <td>Dimension Door (Vengeance4 Conj): R500' Self + 1 other teleport</td>
+      <td>Dimension Door (Vengeance4 Conj): Self and 1 other willing creature teleport up to 500'</td>
     </tr><tr style="text-align:left">
-      <td>Dispel Magic (Devotion3 Abju): R120' End target spell effects up to 3 level, higher DC 10+spell level</td>
+      <td>Dispel Magic (Devotion3 Abju): R120' Ends spell effects up to spell level 3 on target, higher levels require DC 10 + spell level check</td>
     </tr><tr style="text-align:left">
-      <td>Ensnaring Strike (Ancients1 Conj): Successful attack restrains foe, 1d6 HP/tn for conc/1 min (Str neg)</td>
+      <td>Ensnaring Strike (Ancients1 Conj): Successful attack restrains foe and inflicts 1d6 HP/tn piercing (Str neg) for conc or 1 min</td>
     </tr><tr style="text-align:left">
-      <td>Flame Strike (Devotion5 Evoc): R60' Objects in 10' radius 2x4d6 HP (Dex half)</td>
+      <td>Flame Strike (Devotion5 Evoc): R60' 10' radius inflicts 4d6 HP fire and 4d6 HP radiant (Dex half)</td>
     </tr><tr style="text-align:left">
-      <td>Freedom Of Movement (Devotion4 Abju): Touched immunity to impediments for 1 hr</td>
+      <td>Freedom Of Movement (Devotion4 Abju): Touched gains immunity to impediments for 1 hr</td>
     </tr><tr style="text-align:left">
-      <td>Guardian Of Faith (Devotion4 Conj): R30' Lg spectral guardian 20 HP to hostile creatures (Dex half) for 8 hr/60 HP</td>
+      <td>Guardian Of Faith (Devotion4 Conj): R30' 10' radius inflicts 20 HP radiant to hostile creatures (Dex half) for 8 hr or 60 HP</td>
     </tr><tr style="text-align:left">
-      <td>Haste (Vengeance3 Tran): R30' Target dbl speed, +1 AC, bonus action for conc/1 min</td>
+      <td>Haste (Vengeance3 Tran): R30' Willing target gains dbl Speed, +2 AC, Adv on Dex, and bonus action for conc or 1 min</td>
     </tr><tr style="text-align:left">
-      <td>Hold Monster (Vengeance5 Ench): R90' target frozen for conc/1 min (Wis neg)</td>
+      <td>Hold Monster (Vengeance5 Ench): R90' Immobilizes target (Wis neg) for conc or 1 min</td>
     </tr><tr style="text-align:left">
-      <td>Hold Person (Vengeance2 Ench): R60' target frozen for conc/1 min (Wis neg)</td>
+      <td>Hold Person (Vengeance2 Ench): R60' Immobilizes target (Wis neg) for conc or 1 min</td>
     </tr><tr style="text-align:left">
-      <td>Hunter's Mark (Vengeance1 Divi): R90' Self attacks on target +1d6 HP, Adv Wis (Perception/Survival) to locate for conc/1 hr</td>
+      <td>Hunter's Mark (Vengeance1 Divi): R90' Self gains Adv on Perception and Wisdom to locate target and +1d6 HP damage on weapon attacks for conc or 1 hr</td>
     </tr><tr style="text-align:left">
-      <td>Ice Storm (Ancients4 Evoc): R300' 20' radius 4d6 HP (Dex half)</td>
+      <td>Ice Storm (Ancients4 Evoc): R300' 20' radius inflicts 2d8 bludgeoning and 4d6 HP cold (Dex half)</td>
     </tr><tr style="text-align:left">
-      <td>Lesser Restoration (Devotion2 Abju): Touched creature unblind, unparalyze, or unpoison</td>
+      <td>Lesser Restoration (Devotion2 Abju): Touched becomes unblinded, undeafened, undiseased, unparalyzed, or unpoisoned</td>
     </tr><tr style="text-align:left">
-      <td>Lesser Restoration (P2 Abju): Touched creature unblind, unparalyze, or unpoison</td>
+      <td>Lesser Restoration (P2 Abju): Touched becomes unblinded, undeafened, undiseased, unparalyzed, or unpoisoned</td>
     </tr><tr style="text-align:left">
-      <td>Locate Creature (P4 Divi): Know location of named creature or species w/in 1000' for conc/1 hr</td>
+      <td>Locate Creature (P4 Divi): Self learns location of named creature or species w/in 1000' for conc or 1 hr</td>
     </tr><tr style="text-align:left">
-      <td>Magic Circle (P3 Abju): R10' 10' circle impassable by specified creature type, Disadv attacks for 1 hr</td>
+      <td>Magic Circle (P3 Abju): R10' 10' circle prevents passage and inflicts DisAdv on attacks by specified creature type for 1 hr</td>
     </tr><tr style="text-align:left">
-      <td>Misty Step (Ancients2 Conj): Self teleport 30'</td>
+      <td>Misty Step (Ancients2 Conj): Self teleports 30'</td>
     </tr><tr style="text-align:left">
-      <td>Misty Step (Vengeance2 Conj): Self teleport 30'</td>
+      <td>Misty Step (Vengeance2 Conj): Self teleports 30'</td>
     </tr><tr style="text-align:left">
-      <td>Moonbeam (Ancients2 Evoc): 5' radius 2d10 HP (Con half) for conc/1 min</td>
+      <td>Moonbeam (Ancients2 Evoc): R120' 5' radius inflicts 2d10 HP radiant (Con half) for conc or 1 min</td>
     </tr><tr style="text-align:left">
-      <td>Plant Growth (Ancients3 Tran): R150' Enrich half mile radius for 1 yr or overgrow 100' radius</td>
+      <td>Plant Growth (Ancients3 Tran): R150' Overgrows 100' radius or enriches 1/2 mile radius for 1 yr</td>
     </tr><tr style="text-align:left">
-      <td>Protection From Energy (Ancients3 Abju): Resistance to acid, cold, fire, lightning, or thunder damage for conc/1 hr</td>
+      <td>Protection From Energy (Ancients3 Abju): Touched gains resistance to acid, cold, fire, lightning, or thunder damage for conc or 1 hr</td>
     </tr><tr style="text-align:left">
-      <td>Protection From Energy (Vengeance3 Abju): Resistance to acid, cold, fire, lightning, or thunder damage for conc/1 hr</td>
+      <td>Protection From Energy (Vengeance3 Abju): Touched gains resistance to acid, cold, fire, lightning, or thunder damage for conc or 1 hr</td>
     </tr><tr style="text-align:left">
-      <td>Protection From Evil And Good (Devotion1 Abju): Touched specified foe type Disadv attack, immunity to charm, fright, and possession</td>
+      <td>Protection From Evil And Good (Devotion1 Abju): Willing touched gains immunity to charm, fright, and possession from aberrations, celestials, elementals, fey, fiends, and undead, and those creatures suffer Disadv on attack on touched</td>
     </tr><tr style="text-align:left">
-      <td>Ray Of Frost (S0 Evoc): R60' Target 1d8 HP, -10 speed for 1 tn</td>
+      <td>Ray Of Frost (S0 Evoc): R60' Ranged spell inflicts 1d8 HP cold and -10' Speed for 1 rd</td>
     </tr><tr style="text-align:left">
-      <td>Sanctuary (Devotion1 Abju): R30' Target foes attack another for 1 min (Wis neg)</td>
+      <td>Sanctuary (Devotion1 Abju): R30' Foes of target attack another (Wis neg) for 1 min</td>
     </tr><tr style="text-align:left">
-      <td>Scrying (Vengeance5 Divi): See, hear chosen target (Wis neg) for conc/10 min</td>
+      <td>Scrying (Vengeance5 Divi): Self sees and hears chosen target (Wis neg) for conc or 10 min</td>
     </tr><tr style="text-align:left">
-      <td>Shield Of Faith (P1 Abju): R60' Target +2 AC for conc/10 min</td>
+      <td>Shield Of Faith (P1 Abju): R60' Target gains +2 AC for conc or 10 min</td>
     </tr><tr style="text-align:left">
-      <td>Speak With Animals (Ancients1 Divi): Self talk to animals for 10 min</td>
+      <td>Speak With Animals (Ancients1 Divi): Self talks to animals for 10 min</td>
     </tr><tr style="text-align:left">
-      <td>Staggering Smite (P4 Evoc): Next hit +4d6 HP w/in conc/1 min</td>
+      <td>Staggering Smite (P4 Evoc): Next hit w/in conc or 1 min inflicts +4d6 HP psychic, Disadv on attacks and ability checks, and no Reaction for 1 rd</td>
     </tr><tr style="text-align:left">
-      <td>Stoneskin (Ancients4 Abju): Touched resistance to bludgeoning, piercing, and slashing damage for conc/1 hr</td>
+      <td>Stoneskin (Ancients4 Abju): Touched gains resistance to bludgeoning, piercing, and slashing damage for conc or 1 hr</td>
     </tr><tr style="text-align:left">
-      <td>Thunderous Smite (P1 Evoc): Next hit 2d6 HP, push 10' (Str no push)</td>
+      <td>Thunderous Smite (P1 Evoc): Next hit w/in conc or 1 min inflicts +2d6 HP thunder and pushes 10' (Str no push)</td>
     </tr><tr style="text-align:left">
-      <td>Tree Stride (Ancients5 Conj): Teleport between like trees 1/rd for conc/1 min</td>
+      <td>Tree Stride (Ancients5 Conj): Self teleports between like trees 1/rd for conc or 1 min</td>
     </tr><tr style="text-align:left">
-      <td>True Strike (S0 Divi): R30' Adv next attack on target w/in 1 rd</td>
+      <td>True Strike (S0 Divi): R30' Self gains Adv on next attack on target w/in 1 rd</td>
     </tr><tr style="text-align:left">
-      <td>Zone Of Truth (Devotion2 Ench): R60' Creatures inside 15' radius cannot lie for 10 min (Cha neg)</td>
+      <td>Zone Of Truth (Devotion2 Ench): R60' Creatures in 15' radius cannot lie (Cha neg) for 10 min</td>
     </tr></table>
 </td>
   </tr><tr style="text-align:center">
     <td><b>Magic Notes</b>:     <table id="MagicNotes" style="width:100%">
     <tr style="text-align:center">
-      <td><i>Magic Initiate (Sorcerer): 2 cantrips, 1 1st-level/long rest</i></td>
+      <td><i>Magic Initiate (Sorcerer): Know 2 S0 spells, cast 1 S1 spell/long rest</i></td>
     </tr><tr style="text-align:center">
-      <td>Abjure Enemy: R60' Channel Divinity halts target for 1 min (DC 16 Wis half speed)</td>
+      <td>Abjure Enemy: R60' Channel Divinity halts target (DC 16 Wis half speed) for 1 min</td>
     </tr><tr style="text-align:center">
       <td>Cleansing Touch: Touch dispels spell effect on willing creature 2/long rest</td>
     </tr><tr style="text-align:center">
       <td>Divine Sense: R60' Know location of celestials, fiends, and undead for 1 rd 3/long rest</td>
     </tr><tr style="text-align:center">
-      <td>Elder Champion: Regain 10 HP/rd, cast spells as a bonus action, and inflict Disadv vs. self spells on foes w/in 10' for 1 min 1/long rest</td>
+      <td>Elder Champion: Regain 10 HP/rd, cast spells as a bonus action, and inflict Disadv on saves vs. self spells on foes w/in 10' for 1 min 1/long rest</td>
     </tr><tr style="text-align:center">
-      <td>Elemental Adept (Acid): Spells ignore acid resistance, treat 1s as 2s on damage die</td>
+      <td>Elemental Adept (Acid): Acid spells ignore resistance; treat 1s as 2s on damage die</td>
     </tr><tr style="text-align:center">
       <td>Holy Nimbus: Emit 30' bright light that inflicts 10 HP radiant to foes for 1 min 1/long rest</td>
     </tr><tr style="text-align:center">
@@ -390,11 +390,11 @@ var attributes = {
     </tr><tr style="text-align:center">
       <td>Purity Of Spirit: Continuous <i>Protection From Evil And Good</i> on self</td>
     </tr><tr style="text-align:center">
-      <td>Spell Sniper: Dbl attack spell range, ignore 3/4 cover, additional attack cantrip</td>
+      <td>Spell Sniper: Dbl attack spell range, ignore 3/4 cover, know additional attack cantrip</td>
     </tr><tr style="text-align:center">
-      <td>Turn The Faithless: R30' Channel Divinity makes fiends and fey flee for 1 min (DC 16 Wis neg)</td>
+      <td>Turn The Faithless: R30' Channel Divinity makes fiends and fey flee (DC 16 Wis neg) for 1 min</td>
     </tr><tr style="text-align:center">
-      <td>Turn The Unholy: R30' Channel Divinity makes fiends and undead flee for 1 min (DC 16 Wis neg)</td>
+      <td>Turn The Unholy: R30' Channel Divinity makes fiends and undead flee (DC 16 Wis neg) for 1 min</td>
     </tr></table>
 </td>
   </tr></table>

@@ -207,7 +207,7 @@ var attributes = {
       <tr style="text-align:center">
         <td><b>Armor</b>: Breastplate</td>
         <td><b>Shield</b>: None</td>
-        <td><b>Weapons</b>: Scimitar: 1 (+7 1d6+1); Sling: 1 (+7 1d4+1 R30'); Unarmed: 1 (+6 1d4)</td>
+        <td><b>Weapons</b>: Scimitar: 1 (+7 1d6+1); Sling: 1 (+7 1d4+1 R30/120); Unarmed: 1 (+6 1d4)</td>
       </tr></table>
 </td>
     </tr><tr style="text-align:center">
@@ -221,11 +221,11 @@ var attributes = {
       </tr><tr style="text-align:center">
         <td><i>Dexterity Damage Adjustment: +1</i></td>
       </tr><tr style="text-align:center">
-        <td><i>Tavern Brawler: Weapon Proficiency (Improvised)/Unarmed d4 damage/Bonus to grapple</i></td>
+        <td><i>Tavern Brawler: Weapon Proficiency (Improvised)/Unarmed d4 damage/Bonus grapple after Unarmed or Improvised strike</i></td>
       </tr><tr style="text-align:center">
         <td>Combat Wild Shape: Use Wild Shape as bonus action</td>
       </tr><tr style="text-align:center">
-        <td>Mounted Combatant: Adv unmounted foe smaller than mount, redirect attack on mount to self, mount takes no damage on Dex save, half on fail</td>
+        <td>Mounted Combatant: Adv on melee attacks on unmounted foe smaller than mount, redirect attack on mount to self, mount takes no damage on Dex save, half on fail</td>
       </tr><tr style="text-align:center">
         <td>Nature's Sanctuary: Beasts and plants cannot attack self (DC 16 Will neg)</td>
       </tr><tr style="text-align:center">
@@ -243,7 +243,7 @@ var attributes = {
     </tr><tr style="text-align:center">
       <td><b>Save Notes</b>:       <table id="SaveNotes" style="width:100%">
       <tr style="text-align:center">
-        <td>Land's Stride: Adv vs. impeding plants</td>
+        <td>Land's Stride: Adv on saves vs. impeding plants</td>
       </tr><tr style="text-align:center">
         <td>Nature's Ward: Immunity to disease, poison, and elemental and fey charm and fright</td>
       </tr></table>
@@ -269,193 +269,193 @@ var attributes = {
   </tr><tr style="text-align:center">
     <td><b>Spells</b>:     <table id="Spells" style="width:100%">
     <tr style="text-align:left">
-      <td>Animal Messenger (D2 Ench): R30' Tiny beast target move 24+ hr to deliver 25-word message to person described</td>
+      <td>Animal Messenger (D2 Ench): R30' Tiny beast target moves to deliver 25-word message to person described for 1 dy</td>
     </tr><tr style="text-align:left">
-      <td>Barkskin (Forest1 Tran): Touched AC 16 for conc/1 hr</td>
+      <td>Barkskin (Forest1 Tran): Touched gains AC 16 for conc or 1 hr</td>
     </tr><tr style="text-align:left">
-      <td>Blight (Desert3 Necr): R30' target 8d8 HP necrotic (Con half)</td>
+      <td>Blight (Desert3 Necr): R30' target suffers 8d8 HP necrotic (Con half (plant Disadv, 64 HP on fail))</td>
     </tr><tr style="text-align:left">
-      <td>Blur (Desert1 Illu): Self foes Disadv attack for conc/1 min</td>
+      <td>Blur (Desert1 Illu): Foes suffer Disadv on self attacks for conc or 1 min</td>
     </tr><tr style="text-align:left">
-      <td>Call Lightning (D3 Evoc): R120' Conjured storm cloud generates bolt for 3d10 HP (Dex half) in 5' radius each rd for conc/10 min</td>
+      <td>Call Lightning (D3 Evoc): 1</td>
     </tr><tr style="text-align:left">
-      <td>Call Lightning (Forest2 Evoc): R120' Conjured storm cloud generates bolt for 3d10 HP (Dex half) in 5' radius each rd for conc/10 min</td>
+      <td>Call Lightning (Forest2 Evoc): 1</td>
     </tr><tr style="text-align:left">
-      <td>Cloudkill (Underdark4 Conj): R120' 20' radius 5d8 HP poison (Con half), moves 10'/rd for conc/10 min</td>
+      <td>Cloudkill (Underdark4 Conj): R120' 20' radius inflicts 5d8 HP poison (Con half), moves away 10'/rd for conc or 10 min</td>
     </tr><tr style="text-align:left">
-      <td>Commune With Nature (Arctic4 Divi): Self gain 3 facts about territory w/in 3 miles</td>
+      <td>Commune With Nature (Arctic4 Divi): Self gains 3 facts about nature w/in 3 miles (300' underground)</td>
     </tr><tr style="text-align:left">
-      <td>Commune With Nature (D5 Divi): Self gain 3 facts about territory w/in 3 miles</td>
+      <td>Commune With Nature (D5 Divi): Self gains 3 facts about nature w/in 3 miles (300' underground)</td>
     </tr><tr style="text-align:left">
-      <td>Commune With Nature (Forest4 Divi): Self gain 3 facts about territory w/in 3 miles</td>
+      <td>Commune With Nature (Forest4 Divi): Self gains 3 facts about nature w/in 3 miles (300' underground)</td>
     </tr><tr style="text-align:left">
-      <td>Cone Of Cold (Arctic4 Evoc): Self 60' cone 8d8 HP cold (Con half)</td>
+      <td>Cone Of Cold (Arctic4 Evoc): 60' cone inflicts 8d8 HP cold (Con half)</td>
     </tr><tr style="text-align:left">
-      <td>Conjure Elemental (Coast4 Conj): R90' Summon obedient elemental in appropriate environment for conc/1 hr</td>
+      <td>Conjure Elemental (Coast4 Conj): R90' Summons obedient environment-appropriate elemental for conc or 1 hr</td>
     </tr><tr style="text-align:left">
-      <td>Conjure Minor Elementals (D4 Conj): R90' Summon obedient elements for conc/1 hr</td>
+      <td>Conjure Minor Elementals (D4 Conj): R90' Summons obedient elementals for conc or 1 hr</td>
     </tr><tr style="text-align:left">
-      <td>Control Water (Coast3 Tran): R300' Part, redirect, raise, or whirl 100'x100' water for conc/10 min</td>
+      <td>Control Water (Coast3 Tran): R300' 100' water rises 20', parts, redirects, or whirlpools for conc or 10 min</td>
     </tr><tr style="text-align:left">
-      <td>Control Weather (D8 Tran): Determine weather in 5 mile radius for conc/8 hr</td>
+      <td>Control Weather (D8 Tran): Modifies seasonal weather in 5 mile radius for conc or 8 hr</td>
     </tr><tr style="text-align:left">
-      <td>Create Food And Water (Desert2 Conj): R30' Create 40 lb food and 30 gal water</td>
+      <td>Create Food And Water (Desert2 Conj): R30' Creates 45 lb of food and 30 gallons of water</td>
     </tr><tr style="text-align:left">
-      <td>Dancing Lights (W0 Evoc): R120' 4 torch lights in 20' radius move 60' for conc/1 min</td>
+      <td>Dancing Lights (W0 Evoc): R120' 4 torch lights move 60' for conc or 1 min</td>
     </tr><tr style="text-align:left">
-      <td>Darkness (Swamp1 Evoc): R60' Target centers 15' radius lightless area for conc/10 min</td>
+      <td>Darkness (Swamp1 Evoc): R60' Target centers 15' radius lightless area for conc or 10 min</td>
     </tr><tr style="text-align:left">
       <td>Daylight (Grassland2 Evoc): R60' Target centers 60' radius bright light for 1 hr</td>
     </tr><tr style="text-align:left">
-      <td>Detect Poison And Disease (D1 Divi): R30' Self sense poison for conc/10 min</td>
+      <td>Detect Poison And Disease (D1 Divi): R30' Self senses poison for conc or 10 min</td>
     </tr><tr style="text-align:left">
-      <td>Divination (Forest3 Divi): Receive truthful reply about event w/in 1 wk</td>
+      <td>Divination (Forest3 Divi): Self gains truthful answer about event up to 7 dy in the future</td>
     </tr><tr style="text-align:left">
-      <td>Divination (Grassland3 Divi): Receive truthful reply about event w/in 1 wk</td>
+      <td>Divination (Grassland3 Divi): Self gains truthful answer about event up to 7 dy in the future</td>
     </tr><tr style="text-align:left">
-      <td>Dream (Grassland4 Illu): Touched communicate in dream with known target</td>
+      <td>Dream (Grassland4 Illu): Touched communicates via dreams of known target</td>
     </tr><tr style="text-align:left">
-      <td>Faerie Fire (D1 Evoc): R60' Objects in 20' cu outlined (foe Adv attack) for conc/1 min (Dex neg)</td>
+      <td>Faerie Fire (D1 Evoc): R60' Objects in 20' cu glow (foe Adv on attacks) (Dex neg) for conc or 1 min</td>
     </tr><tr style="text-align:left">
-      <td>Find Traps (D2 Divi): R120' Sense presence of traps</td>
+      <td>Find Traps (D2 Divi): R120' Self senses presence of traps</td>
     </tr><tr style="text-align:left">
-      <td>Fog Cloud (D1 Conj): R120' 20' radius fog obscures vision for conc/1 hr</td>
+      <td>Fog Cloud (D1 Conj): R120' 20' radius obscures vision for conc or 1 hr</td>
     </tr><tr style="text-align:left">
-      <td>Freedom Of Movement (Arctic3 Abju): Touched immunity to impediments for 1 hr</td>
+      <td>Freedom Of Movement (Arctic3 Abju): Touched gains immunity to impediments for 1 hr</td>
     </tr><tr style="text-align:left">
-      <td>Freedom Of Movement (Coast3 Abju): Touched immunity to impediments for 1 hr</td>
+      <td>Freedom Of Movement (Coast3 Abju): Touched gains immunity to impediments for 1 hr</td>
     </tr><tr style="text-align:left">
-      <td>Freedom Of Movement (Forest3 Abju): Touched immunity to impediments for 1 hr</td>
+      <td>Freedom Of Movement (Forest3 Abju): Touched gains immunity to impediments for 1 hr</td>
     </tr><tr style="text-align:left">
-      <td>Freedom Of Movement (Grassland3 Abju): Touched immunity to impediments for 1 hr</td>
+      <td>Freedom Of Movement (Grassland3 Abju): Touched gains immunity to impediments for 1 hr</td>
     </tr><tr style="text-align:left">
-      <td>Freedom Of Movement (Swamp3 Abju): Touched immunity to impediments for 1 hr</td>
+      <td>Freedom Of Movement (Swamp3 Abju): Touched gains immunity to impediments for 1 hr</td>
     </tr><tr style="text-align:left">
-      <td>Gaseous Form (Underdark2 Tran): Touched creature gaseous for conc/1 hr</td>
+      <td>Gaseous Form (Underdark2 Tran): Touched creature becomes gaseous for conc or 1 hr</td>
     </tr><tr style="text-align:left">
-      <td>Giant Insect (D4 Tran): R30' 10 centipedes, five wasps, 3 spiders, or one scorpion giant, obey commands for conc/10 min</td>
+      <td>Giant Insect (D4 Tran): R30' 10 centipedes, 5 wasps, 3 spiders, or 1 scorpion become giant and obeys self commands for conc or 10 min</td>
     </tr><tr style="text-align:left">
-      <td>Greater Invisibility (Underdark3 Illu): Touched creature invisible for conc/1 min</td>
+      <td>Greater Invisibility (Underdark3 Illu): Touched becomes invisible for conc or 1 min</td>
     </tr><tr style="text-align:left">
-      <td>Hallucinatory Terrain (Desert3 Illu): R300' 150' cube terrain illusion (Int(Investigation) disbelieve) for 1 dy</td>
+      <td>Hallucinatory Terrain (Desert3 Illu): R300' Creates 150' cu terrain illusion (Investigation disbelieve) for 1 dy</td>
     </tr><tr style="text-align:left">
-      <td>Haste (Grassland2 Tran): R30' Target dbl speed, +1 AC, bonus action for conc/1 min</td>
+      <td>Haste (Grassland2 Tran): R30' Willing target gains dbl Speed, +2 AC, Adv on Dex, and bonus action for conc or 1 min</td>
     </tr><tr style="text-align:left">
-      <td>Hold Person (Arctic1 Ench): R60' target frozen for conc/1 min (Wis neg)</td>
+      <td>Hold Person (Arctic1 Ench): R60' Immobilizes target (Wis neg) for conc or 1 min</td>
     </tr><tr style="text-align:left">
-      <td>Ice Storm (Arctic3 Evoc): R300' 20' radius 4d6 HP (Dex half)</td>
+      <td>Ice Storm (Arctic3 Evoc): R300' 20' radius inflicts 2d8 bludgeoning and 4d6 HP cold (Dex half)</td>
     </tr><tr style="text-align:left">
-      <td>Insect Plague (D5 Conj): R300' 20' radius 4d10 HP (Con half) for conc/10 min</td>
+      <td>Insect Plague (D5 Conj): R300' 20' radius inflicts 4d10 HP piercing (Con half) for conc or 10 min</td>
     </tr><tr style="text-align:left">
-      <td>Insect Plague (Desert4 Conj): R300' 20' radius 4d10 HP (Con half) for conc/10 min</td>
+      <td>Insect Plague (Desert4 Conj): R300' 20' radius inflicts 4d10 HP piercing (Con half) for conc or 10 min</td>
     </tr><tr style="text-align:left">
-      <td>Insect Plague (Grassland4 Conj): R300' 20' radius 4d10 HP (Con half) for conc/10 min</td>
+      <td>Insect Plague (Grassland4 Conj): R300' 20' radius inflicts 4d10 HP piercing (Con half) for conc or 10 min</td>
     </tr><tr style="text-align:left">
-      <td>Insect Plague (Swamp4 Conj): R300' 20' radius 4d10 HP (Con half) for conc/10 min</td>
+      <td>Insect Plague (Swamp4 Conj): R300' 20' radius inflicts 4d10 HP piercing (Con half) for conc or 10 min</td>
     </tr><tr style="text-align:left">
-      <td>Insect Plague (Underdark4 Conj): R300' 20' radius 4d10 HP (Con half) for conc/10 min</td>
+      <td>Insect Plague (Underdark4 Conj): R300' 20' radius inflicts 4d10 HP piercing (Con half) for conc or 10 min</td>
     </tr><tr style="text-align:left">
-      <td>Invisibility (Grassland1 Illu): Touched creature invisible for conc/1 hr or until attacks/casts</td>
+      <td>Invisibility (Grassland1 Illu): Touched becomes invisible for conc or 1 hr or until attacks or casts</td>
     </tr><tr style="text-align:left">
-      <td>Lightning Bolt (Mountain2 Evoc): 100'x5' 8d6 HP (Dex half)</td>
+      <td>Lightning Bolt (Mountain2 Evoc): 100'x5' line inflicts 8d6 HP lightning (Dex half)</td>
     </tr><tr style="text-align:left">
-      <td>Locate Creature (D4 Divi): Know location of named creature or species w/in 1000' for conc/1 hr</td>
+      <td>Locate Creature (D4 Divi): Self learns location of named creature or species w/in 1000' for conc or 1 hr</td>
     </tr><tr style="text-align:left">
-      <td>Locate Creature (Swamp3 Divi): Know location of named creature or species w/in 1000' for conc/1 hr</td>
+      <td>Locate Creature (Swamp3 Divi): Self learns location of named creature or species w/in 1000' for conc or 1 hr</td>
     </tr><tr style="text-align:left">
       <td>Mage Hand (W0 Conj): R30' Spectral hand performs minor tasks moving up to 10 lb for 1 min</td>
     </tr><tr style="text-align:left">
-      <td>Meld Into Stone (D3 Tran): Step into rock for 8 hr</td>
+      <td>Meld Into Stone (D3 Tran): Self step into rock for 8 hr</td>
     </tr><tr style="text-align:left">
-      <td>Meld Into Stone (Mountain2 Tran): Step into rock for 8 hr</td>
+      <td>Meld Into Stone (Mountain2 Tran): Self step into rock for 8 hr</td>
     </tr><tr style="text-align:left">
-      <td>Melf's Acid Arrow (Swamp1 Evoc): R90' Ranged spell attack 4d4 HP (miss half), 2d4 HP next tn</td>
+      <td>Melf's Acid Arrow (Swamp1 Evoc): R90' Ranged spell inflicts 4d4 HP acid, 2d4 HP next tn (miss half 1st tn, 0 HP 2nd)</td>
     </tr><tr style="text-align:left">
-      <td>Mending (D0 Tran): Repair small tears</td>
+      <td>Mending (D0 Tran): Touch repairs small tear</td>
     </tr><tr style="text-align:left">
-      <td>Mirror Image (Coast1 Illu): 3 duplicates draw attacks (AC 10+DexMod)</td>
+      <td>Mirror Image (Coast1 Illu): 3 self duplicates draw attacks (AC 11) for 1 min</td>
     </tr><tr style="text-align:left">
-      <td>Misty Step (Coast1 Conj): Self teleport 30'</td>
+      <td>Misty Step (Coast1 Conj): Self teleports 30'</td>
     </tr><tr style="text-align:left">
-      <td>Pass Without Trace (Grassland1 Abju): Allies within 30' self +10 Dexterity (Stealth), untrackable for conc/1 hr</td>
+      <td>Pass Without Trace (Grassland1 Abju): Targets in 30' radius gain +10 Stealth and become untrackable for conc or 1 hr</td>
     </tr><tr style="text-align:left">
-      <td>Passwall (Mountain4 Tran): R30' 5'x8'x20' passage through wood, plaster, or stone</td>
+      <td>Passwall (Mountain4 Tran): R30' Creates 5'x8'x20' passage through wood, plaster, or stone for 1 hr</td>
     </tr><tr style="text-align:left">
-      <td>Planar Binding (D5 Abju): R60; Bind celestial, elemental, fey, or fiend to service for 1 dy (Cha neg)</td>
+      <td>Planar Binding (D5 Abju): R60' Binds outsider to service (Cha neg) for 1 dy</td>
     </tr><tr style="text-align:left">
-      <td>Plane Shift (D7 Conj): Target or self + 8 willing move to different plane (Cha neg)</td>
+      <td>Plane Shift (D7 Conj): Target or self and 8 willing others travel to another plane (Cha neg)</td>
     </tr><tr style="text-align:left">
-      <td>Plant Growth (Forest2 Tran): R150' Enrich half mile radius for 1 yr or overgrow 100' radius</td>
+      <td>Plant Growth (Forest2 Tran): R150' Overgrows 100' radius or enriches 1/2 mile radius for 1 yr</td>
     </tr><tr style="text-align:left">
-      <td>Poison Spray (D0 Conj): R10' Target 4d12 HP (Con neg)</td>
+      <td>Poison Spray (D0 Conj): R10' Target suffers 4d12 HP poison (Con neg)</td>
     </tr><tr style="text-align:left">
-      <td>Protection From Energy (Desert2 Abju): Resistance to acid, cold, fire, lightning, or thunder damage for conc/1 hr</td>
+      <td>Protection From Energy (Desert2 Abju): Touched gains resistance to acid, cold, fire, lightning, or thunder damage for conc or 1 hr</td>
     </tr><tr style="text-align:left">
-      <td>Regenerate (D7 Tran): Touched regain 4d8+15 HP, 1 HP/min for 1 hr, restore severed members</td>
+      <td>Regenerate (D7 Tran): Touched regains 4d8+15 HP and 1 HP/min for 1 hr, reattaches or regrows severed parts</td>
     </tr><tr style="text-align:left">
-      <td>Resistance (D0 Abju): Touched +1d4 on save w/in conc/1 min</td>
+      <td>Resistance (D0 Abju): Touched gains +1d4 on 1 save w/in conc or 1 min</td>
     </tr><tr style="text-align:left">
-      <td>Scrying (Coast4 Divi): See, hear chosen target (Wis neg) for conc/10 min</td>
+      <td>Scrying (Coast4 Divi): Self sees and hears chosen target (Wis neg) for conc or 10 min</td>
     </tr><tr style="text-align:left">
-      <td>Scrying (Swamp4 Divi): See, hear chosen target (Wis neg) for conc/10 min</td>
+      <td>Scrying (Swamp4 Divi): Self sees and hears chosen target (Wis neg) for conc or 10 min</td>
     </tr><tr style="text-align:left">
-      <td>Shillelagh (D0 Tran): Touched club attack with spell attack, does 1d8 HP for 1 min</td>
+      <td>Shillelagh (D0 Tran): Touched club gains +8 attacks, inflicts 1d8 HP for 1 min</td>
     </tr><tr style="text-align:left">
-      <td>Silence (Desert1 Illu): R120' 20' radius blocks sound for conc/10 min</td>
+      <td>Silence (Desert1 Illu): R120' 20' radius blocks sound for conc or 10 min</td>
     </tr><tr style="text-align:left">
-      <td>Sleep (W1 Ench): R90' 20' radius sleeps up to 5d8 HP creatures, weakest first</td>
+      <td>Sleep (W1 Ench): R90' 20' radius sleeps up to 5d8 HP of creatures, weakest first</td>
     </tr><tr style="text-align:left">
-      <td>Sleet Storm (Arctic2 Conj): R150' 40' radius slick ice causes falls (Dex neg)</td>
+      <td>Sleet Storm (Arctic2 Conj): R150' 40' radius causes falls (Dex neg)</td>
     </tr><tr style="text-align:left">
-      <td>Slow (Arctic2 Tran): R120' Targets in 40' cu half speed, -2 AC and Dex save (Wis neg)</td>
+      <td>Slow (Arctic2 Tran): R120' 6 targets in 40' cu suffer half Speed, -2 AC and Dex saves, and 1 action/rd (Wis neg) for conc or 1 min</td>
     </tr><tr style="text-align:left">
-      <td>Spider Climb (Forest1 Tran): Touched travel walls and ceilings for conc/1 hr</td>
+      <td>Spider Climb (Forest1 Tran): Touched crawls on walls and ceilings for conc or 1 hr</td>
     </tr><tr style="text-align:left">
-      <td>Spider Climb (Mountain1 Tran): Touched travel walls and ceilings for conc/1 hr</td>
+      <td>Spider Climb (Mountain1 Tran): Touched crawls on walls and ceilings for conc or 1 hr</td>
     </tr><tr style="text-align:left">
-      <td>Spider Climb (Underdark1 Tran): Touched travel walls and ceilings for conc/1 hr</td>
+      <td>Spider Climb (Underdark1 Tran): Touched crawls on walls and ceilings for conc or 1 hr</td>
     </tr><tr style="text-align:left">
-      <td>Spike Growth (Arctic1 Tran): R150' 20' radius 2d4 HP/5' move for conc/10 min</td>
+      <td>Spike Growth (Arctic1 Tran): R150' 20' radius inflicts 2d4 HP piercing and 5' Speed for conc or 10 min</td>
     </tr><tr style="text-align:left">
-      <td>Spike Growth (D2 Tran): R150' 20' radius 2d4 HP/5' move for conc/10 min</td>
+      <td>Spike Growth (D2 Tran): R150' 20' radius inflicts 2d4 HP piercing and 5' Speed for conc or 10 min</td>
     </tr><tr style="text-align:left">
-      <td>Spike Growth (Mountain1 Tran): R150' 20' radius 2d4 HP/5' move for conc/10 min</td>
+      <td>Spike Growth (Mountain1 Tran): R150' 20' radius inflicts 2d4 HP piercing and 5' Speed for conc or 10 min</td>
     </tr><tr style="text-align:left">
-      <td>Stinking Cloud (Swamp2 Conj): R90' 20' radius causes retching for conc/1 min</td>
+      <td>Stinking Cloud (Swamp2 Conj): R90' 20' radius causes retching for conc or 1 min</td>
     </tr><tr style="text-align:left">
-      <td>Stinking Cloud (Underdark2 Conj): R90' 20' radius causes retching for conc/1 min</td>
+      <td>Stinking Cloud (Underdark2 Conj): R90' 20' radius causes retching for conc or 1 min</td>
     </tr><tr style="text-align:left">
-      <td>Stone Shape (Mountain3 Tran): Touched medium-sized stone reforms</td>
+      <td>Stone Shape (Mountain3 Tran): Reshapes touched medium-sized stone</td>
     </tr><tr style="text-align:left">
-      <td>Stone Shape (Underdark3 Tran): Touched medium-sized stone reforms</td>
+      <td>Stone Shape (Underdark3 Tran): Reshapes touched medium-sized stone</td>
     </tr><tr style="text-align:left">
-      <td>Stoneskin (Mountain3 Abju): Touched resistance to bludgeoning, piercing, and slashing damage for conc/1 hr</td>
+      <td>Stoneskin (Mountain3 Abju): Touched gains resistance to bludgeoning, piercing, and slashing damage for conc or 1 hr</td>
     </tr><tr style="text-align:left">
-      <td>Sunbeam (D6 Evoc): 60' light 6d8 HP (Con half), blind 1 tn (Con neg) for conc/1 min</td>
+      <td>Sunbeam (D6 Evoc): 60' line inflicts 6d8 HP radiant and blindness for 1 tn (Con half, no blindness) for conc or 1 min</td>
     </tr><tr style="text-align:left">
-      <td>Thorn Whip (D0 Tran): R30' Vine attacks 4d6 HP, pulls 10'</td>
+      <td>Thorn Whip (D0 Tran): R30' Ranged spell inflicts 4d6 HP and pulls 10'</td>
     </tr><tr style="text-align:left">
-      <td>Thunderwave (D1 Evoc): 15' cu 2d8 HP, pushed 10' (Con half, no push)</td>
+      <td>Thunderwave (D1 Evoc): 15' cu inflicts 2d8 HP thunder and pushes 10' (Con half, no push)</td>
     </tr><tr style="text-align:left">
-      <td>Tree Stride (Forest4 Conj): Teleport between like trees 1/rd for conc/1 min</td>
+      <td>Tree Stride (Forest4 Conj): Self teleports between like trees 1/rd for conc or 1 min</td>
     </tr><tr style="text-align:left">
-      <td>True Resurrection (D9 Necr): Touched or named 200-year-old corpse restored to life</td>
+      <td>True Resurrection (D9 Necr): Restores touched or named 200-year-old corpse to life</td>
     </tr><tr style="text-align:left">
-      <td>Wall Of Stone (Desert4 Evoc): R120' 10 10'x10' panels for conc/10 min</td>
+      <td>Wall Of Stone (Desert4 Evoc): R120' Creates 10 10'x10' panels for conc or 10 min</td>
     </tr><tr style="text-align:left">
-      <td>Wall Of Stone (Mountain4 Evoc): R120' 10 10'x10' panels for conc/10 min</td>
+      <td>Wall Of Stone (Mountain4 Evoc): R120' Creates 10 10'x10' panels for conc or 10 min</td>
     </tr><tr style="text-align:left">
-      <td>Wall Of Thorns (D6 Conj): R120' 60'x10' wall 7d8 HP (Dex half) for conc/10 min</td>
+      <td>Wall Of Thorns (D6 Conj): R120' 60'x10' wall inflicts 7d8 HP piercing (Dex half) for conc or 10 min</td>
     </tr><tr style="text-align:left">
-      <td>Water Breathing (Coast2 Tran): R30' 10 targets breathe underwater for 1 dy</td>
+      <td>Water Breathing (Coast2 Tran): R30' 10 targets can breathe underwater for 1 dy</td>
     </tr><tr style="text-align:left">
-      <td>Water Walk (Coast2 Tran): R30' 10 targets cross liquid for 1 hr</td>
+      <td>Water Walk (Coast2 Tran): R30' 10 targets can traverse liquid for 1 hr</td>
     </tr><tr style="text-align:left">
-      <td>Water Walk (D3 Tran): R30' 10 targets cross liquid for 1 hr</td>
+      <td>Water Walk (D3 Tran): R30' 10 targets can traverse liquid for 1 hr</td>
     </tr><tr style="text-align:left">
-      <td>Water Walk (Swamp2 Tran): R30' 10 targets cross liquid for 1 hr</td>
+      <td>Water Walk (Swamp2 Tran): R30' 10 targets can traverse liquid for 1 hr</td>
     </tr><tr style="text-align:left">
-      <td>Web (Underdark1 Conj): R60' 20' cu restrain creatures for conc/1 hr (Dex neg, Str frees)</td>
+      <td>Web (Underdark1 Conj): R60' 20' cu restrains creatures (Dex neg, Str frees) for conc or 1 hr</td>
     </tr></table>
 </td>
   </tr><tr style="text-align:center">
@@ -467,15 +467,15 @@ var attributes = {
     </tr><tr style="text-align:center">
       <td><i>Druid Bonus Cantrip: Additional Druid cantrip</i></td>
     </tr><tr style="text-align:center">
-      <td><i>Magic Initiate (Wizard): 2 cantrips, 1 1st-level/long rest</i></td>
+      <td><i>Magic Initiate (Wizard): Know 2 W0 spells, cast 1 W1 spell/long rest</i></td>
     </tr><tr style="text-align:center">
       <td>Beast Spells: Cast spells during Wild Shape</td>
     </tr><tr style="text-align:center">
       <td>Combat Wild Shape: Use spell slot to regain (slot level)d8 HP during Wild Shape</td>
     </tr><tr style="text-align:center">
-      <td>Elemental Adept (Cold): Spells ignore cold resistance, treat 1s as 2s on damage die</td>
+      <td>Elemental Adept (Cold): Cold spells ignore resistance; treat 1s as 2s on damage die</td>
     </tr><tr style="text-align:center">
-      <td>Elemental Adept (Thunder): Spells ignore thunder resistance, treat 1s as 2s on damage die</td>
+      <td>Elemental Adept (Thunder): Thunder spells ignore resistance; treat 1s as 2s on damage die</td>
     </tr><tr style="text-align:center">
       <td>Elemental Wild Shape: Use 2 Wild Shape uses to become an elemental</td>
     </tr><tr style="text-align:center">

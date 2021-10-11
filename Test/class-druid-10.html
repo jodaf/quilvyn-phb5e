@@ -139,7 +139,7 @@ var attributes = {
   </tr><tr style="text-align:center">
     <td><b>Skill Notes</b>:     <table id="SkillNotes" style="width:100%">
     <tr style="text-align:center">
-      <td>Bulky Armor: Disadv Stealth</td>
+      <td>Bulky Armor: Disadv on Stealth</td>
     </tr><tr style="text-align:center">
       <td>Druidic: Speak secret language known only by druids</td>
     </tr></table>
@@ -171,7 +171,7 @@ var attributes = {
       <tr style="text-align:center">
         <td><b>Armor</b>: Scale Mail</td>
         <td><b>Shield</b>: None</td>
-        <td><b>Weapons</b>: Club: 1 (+6 1d4+2); Dagger: 1 (+6 1d4+2 R20'); Javelin: 1 (+6 1d6+2 R30'); Unarmed: 1 (+6 1d1+2)</td>
+        <td><b>Weapons</b>: Club: 1 (+6 1d4+2); Dagger: 1 (+6 1d4+2 R20/60); Javelin: 1 (+6 1d6+2 R30/120); Unarmed: 1 (+6 1d1+2)</td>
       </tr></table>
 </td>
     </tr><tr style="text-align:center">
@@ -189,7 +189,7 @@ var attributes = {
       </tr><tr style="text-align:center">
         <td><i>Strength Damage Adjustment: +2</i></td>
       </tr><tr style="text-align:center">
-        <td>Mage Slayer: React to attack adjacent caster, foe Disadv concentration</td>
+        <td>Mage Slayer: Use Reaction to attack adjacent caster; foe Disadv on concentration to maintain spell</td>
       </tr><tr style="text-align:center">
         <td>Mobile: Dash at full speed in difficult terrain, no OA from targeted foe</td>
       </tr></table>
@@ -205,9 +205,9 @@ var attributes = {
     </tr><tr style="text-align:center">
       <td><b>Save Notes</b>:       <table id="SaveNotes" style="width:100%">
       <tr style="text-align:center">
-        <td>Land's Stride: Adv vs. impeding plants</td>
+        <td>Land's Stride: Adv on saves vs. impeding plants</td>
       </tr><tr style="text-align:center">
-        <td>Mage Slayer: Adv vs. spells by adjacent foes</td>
+        <td>Mage Slayer: Adv on spells by adjacent foes</td>
       </tr><tr style="text-align:center">
         <td>Nature's Ward: Immunity to disease, poison, and elemental and fey charm and fright</td>
       </tr></table>
@@ -233,61 +233,61 @@ var attributes = {
   </tr><tr style="text-align:center">
     <td><b>Spells</b>:     <table id="Spells" style="width:100%">
     <tr style="text-align:left">
-      <td>Cloudkill (Underdark4 Conj): R120' 20' radius 5d8 HP poison (Con half), moves 10'/rd for conc/10 min</td>
+      <td>Cloudkill (Underdark4 Conj): R120' 20' radius inflicts 5d8 HP poison (Con half), moves away 10'/rd for conc or 10 min</td>
     </tr><tr style="text-align:left">
-      <td>Confusion (D4 Ench): R90' Targets in 10' radius act randomly (Wis neg) for conc/1 min</td>
+      <td>Confusion (D4 Ench): R90' Creatures in 10' radius randomly 10% wander/50% do nothing/20% attack adjacent/20% act normally (Wis neg) for conc or 1 min</td>
     </tr><tr style="text-align:left">
-      <td>Cure Wounds (D1 Evoc): Touched heals 1d8+spell mod HP</td>
+      <td>Cure Wounds (D1 Evoc): Touched regains 1d8+1 HP</td>
     </tr><tr style="text-align:left">
-      <td>Druidcraft (D0 Tran): R30' Cause minor nature effects</td>
+      <td>Druidcraft (D0 Tran): R30' Self predicts 1 dy weather, blooms plant, creates minor sensory effect, or lights or snuffs small fire</td>
     </tr><tr style="text-align:left">
-      <td>Faerie Fire (D1 Evoc): R60' Objects in 20' cu outlined (foe Adv attack) for conc/1 min (Dex neg)</td>
+      <td>Faerie Fire (D1 Evoc): R60' Objects in 20' cu glow (foe Adv on attacks) (Dex neg) for conc or 1 min</td>
     </tr><tr style="text-align:left">
-      <td>Flaming Sphere (D2 Conj): R60' 5' diameter sphere 2d6 HP (Dex half) move 30' for conc/1 min</td>
+      <td>Flaming Sphere (D2 Conj): R60' 5' diameter sphere inflicts 2d6 HP fire (Dex half), moves 30'/rd for conc or 1 min</td>
     </tr><tr style="text-align:left">
-      <td>Fog Cloud (D1 Conj): R120' 20' radius fog obscures vision for conc/1 hr</td>
+      <td>Fog Cloud (D1 Conj): R120' 20' radius obscures vision for conc or 1 hr</td>
     </tr><tr style="text-align:left">
-      <td>Freedom Of Movement (D4 Abju): Touched immunity to impediments for 1 hr</td>
+      <td>Freedom Of Movement (D4 Abju): Touched gains immunity to impediments for 1 hr</td>
     </tr><tr style="text-align:left">
-      <td>Gaseous Form (Underdark2 Tran): Touched creature gaseous for conc/1 hr</td>
+      <td>Gaseous Form (Underdark2 Tran): Touched creature becomes gaseous for conc or 1 hr</td>
     </tr><tr style="text-align:left">
-      <td>Greater Invisibility (Underdark3 Illu): Touched creature invisible for conc/1 min</td>
+      <td>Greater Invisibility (Underdark3 Illu): Touched becomes invisible for conc or 1 min</td>
     </tr><tr style="text-align:left">
-      <td>Greater Restoration (D5 Abju): Touched creature unexhaust, uncharm, unpetrify, uncurse, or restored ability or HP</td>
+      <td>Greater Restoration (D5 Abju): Touched becomes unexhausted, uncharmed, unpetrified, or uncursed or regains ability or HP</td>
     </tr><tr style="text-align:left">
-      <td>Hold Person (D2 Ench): R60' target frozen for conc/1 min (Wis neg)</td>
+      <td>Hold Person (D2 Ench): R60' Immobilizes target (Wis neg) for conc or 1 min</td>
     </tr><tr style="text-align:left">
-      <td>Insect Plague (Underdark4 Conj): R300' 20' radius 4d10 HP (Con half) for conc/10 min</td>
+      <td>Insect Plague (Underdark4 Conj): R300' 20' radius inflicts 4d10 HP piercing (Con half) for conc or 10 min</td>
     </tr><tr style="text-align:left">
-      <td>Longstrider (D1 Tran): Touched +10' speed for 1 hr</td>
+      <td>Longstrider (D1 Tran): Touched gains +10' Speed for 1 hr</td>
     </tr><tr style="text-align:left">
-      <td>Meld Into Stone (D3 Tran): Step into rock for 8 hr</td>
+      <td>Meld Into Stone (D3 Tran): Self step into rock for 8 hr</td>
     </tr><tr style="text-align:left">
-      <td>Poison Spray (D0 Conj): R10' Target 2d12 HP (Con neg)</td>
+      <td>Poison Spray (D0 Conj): R10' Target suffers 2d12 HP poison (Con neg)</td>
     </tr><tr style="text-align:left">
-      <td>Produce Flame (D0 Conj): Hand flame lights 10' radius for 10 min, throw for 2d8 HP</td>
+      <td>Produce Flame (D0 Conj): Lights 10' radius for 10 min, self can make ranged spell attack inflicting 2d8 HP</td>
     </tr><tr style="text-align:left">
-      <td>Scrying (D5 Divi): See, hear chosen target (Wis neg) for conc/10 min</td>
+      <td>Scrying (D5 Divi): Self sees and hears chosen target (Wis neg) for conc or 10 min</td>
     </tr><tr style="text-align:left">
-      <td>Shillelagh (D0 Tran): Touched club attack with spell attack, does 1d8 HP for 1 min</td>
+      <td>Shillelagh (D0 Tran): Touched club gains +5 attacks, inflicts 1d8 HP for 1 min</td>
     </tr><tr style="text-align:left">
-      <td>Speak With Plants (D3 Tran): Self talk to plans in 30' for 10 min</td>
+      <td>Speak With Plants (D3 Tran): Self talks to plans for 10 min</td>
     </tr><tr style="text-align:left">
-      <td>Spider Climb (Underdark1 Tran): Touched travel walls and ceilings for conc/1 hr</td>
+      <td>Spider Climb (Underdark1 Tran): Touched crawls on walls and ceilings for conc or 1 hr</td>
     </tr><tr style="text-align:left">
-      <td>Spike Growth (D2 Tran): R150' 20' radius 2d4 HP/5' move for conc/10 min</td>
+      <td>Spike Growth (D2 Tran): R150' 20' radius inflicts 2d4 HP piercing and 5' Speed for conc or 10 min</td>
     </tr><tr style="text-align:left">
-      <td>Stinking Cloud (Underdark2 Conj): R90' 20' radius causes retching for conc/1 min</td>
+      <td>Stinking Cloud (Underdark2 Conj): R90' 20' radius causes retching for conc or 1 min</td>
     </tr><tr style="text-align:left">
-      <td>Stone Shape (D4 Tran): Touched medium-sized stone reforms</td>
+      <td>Stone Shape (D4 Tran): Reshapes touched medium-sized stone</td>
     </tr><tr style="text-align:left">
-      <td>Stone Shape (Underdark3 Tran): Touched medium-sized stone reforms</td>
+      <td>Stone Shape (Underdark3 Tran): Reshapes touched medium-sized stone</td>
     </tr><tr style="text-align:left">
-      <td>Thorn Whip (D0 Tran): R30' Vine attacks 2d6 HP, pulls 10'</td>
+      <td>Thorn Whip (D0 Tran): R30' Ranged spell inflicts 2d6 HP and pulls 10'</td>
     </tr><tr style="text-align:left">
-      <td>Water Walk (D3 Tran): R30' 10 targets cross liquid for 1 hr</td>
+      <td>Water Walk (D3 Tran): R30' 10 targets can traverse liquid for 1 hr</td>
     </tr><tr style="text-align:left">
-      <td>Web (Underdark1 Conj): R60' 20' cu restrain creatures for conc/1 hr (Dex neg, Str frees)</td>
+      <td>Web (Underdark1 Conj): R60' 20' cu restrains creatures (Dex neg, Str frees) for conc or 1 hr</td>
     </tr></table>
 </td>
   </tr><tr style="text-align:center">

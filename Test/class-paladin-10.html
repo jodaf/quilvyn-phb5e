@@ -100,7 +100,7 @@ var attributes = {
       <tr style="text-align:center">
         <td>Channel Divinity: Use effect 1/short rest</td>
       </tr><tr style="text-align:center">
-        <td>Healer: Stabilize via healer's kit restores 1 HP, healer's kit heals 1d6+4+target HD HP 1/short rest</td>
+        <td>Healer: Using healer's kit to stabilize also restores 1 HP; healer's kit heals 1d6 + 4 + target HD HP 1/short rest</td>
       </tr><tr style="text-align:center">
         <td>Shelter Of The Faithful: Receive aid from associated temple</td>
       </tr></table>
@@ -143,7 +143,7 @@ var attributes = {
   </tr><tr style="text-align:center">
     <td><b>Languages</b>: Common; Deep Speech; Draconic; Orc</td>
   </tr><tr style="text-align:center">
-    <td><b>Skill Notes</b>: Bulky Armor: Disadv Stealth</td>
+    <td><b>Skill Notes</b>: Bulky Armor: Disadv on Stealth</td>
   </tr></table>
 </td>
 </tr><tr style="text-align:center">
@@ -171,7 +171,7 @@ var attributes = {
       <tr style="text-align:center">
         <td><b>Armor</b>: Half Plate</td>
         <td><b>Shield</b>: None</td>
-        <td><b>Weapons</b>: Dagger: 1 (+7 1d4+3 R20'); Light Hammer: 1 (+4 1d4 R20'); Unarmed: 1 (+4 1d1); War Pick: 1 (+4 1d8)</td>
+        <td><b>Weapons</b>: Dagger: 1 (+7 1d4+3 R20/60); Light Hammer: 1 (+4 1d4 R20/60); Unarmed: 1 (+4 1d1); War Pick: 1 (+4 1d8)</td>
       </tr></table>
 </td>
     </tr><tr style="text-align:center">
@@ -235,35 +235,35 @@ var attributes = {
   </tr><tr style="text-align:center">
     <td><b>Spells</b>:     <table id="Spells" style="width:100%">
     <tr style="text-align:left">
-      <td>Beacon Of Hope (Devotion3 Abju): R30' Targets Adv Wis/death saves, max heal for conc/1 min</td>
+      <td>Beacon Of Hope (Devotion3 Abju): R30' Targets gain Adv on Wis and death saves and maximum HP from healing for conc or 1 min</td>
     </tr><tr style="text-align:left">
-      <td>Branding Smite (P2 Evoc): Self next attack +2d6 HP radiant and visible for conc/1 min</td>
+      <td>Branding Smite (P2 Evoc): Self attack inflicts +2d6 HP radiant and lights target for conc or 1 min</td>
     </tr><tr style="text-align:left">
-      <td>Compelled Duel (P1 Ench): R30' Target attack only self w/Disadv for conc/1 min (Wis neg)</td>
+      <td>Compelled Duel (P1 Ench): R30' Target stays w/in 30' of self, suffers Disadv on attacks on others (Wis neg) for conc or 1 min</td>
     </tr><tr style="text-align:left">
-      <td>Detect Poison And Disease (P1 Divi): R30' Self sense poison for conc/10 min</td>
+      <td>Detect Poison And Disease (P1 Divi): R30' Self senses poison for conc or 10 min</td>
     </tr><tr style="text-align:left">
-      <td>Dispel Magic (Devotion3 Abju): R120' End target spell effects up to 3 level, higher DC 10+spell level</td>
+      <td>Dispel Magic (Devotion3 Abju): R120' Ends spell effects up to spell level 3 on target, higher levels require DC 10 + spell level check</td>
     </tr><tr style="text-align:left">
-      <td>Elemental Weapon (P3 Tran): Touched weapon +1 attack, +1d4 damage for conc/1 hr</td>
+      <td>Elemental Weapon (P3 Tran): Touched weapon gains +1 attack and +1d4 HP acid, cold, fire, lightning, or thunder for conc or 1 hr</td>
     </tr><tr style="text-align:left">
-      <td>Lesser Restoration (Devotion2 Abju): Touched creature unblind, unparalyze, or unpoison</td>
+      <td>Lesser Restoration (Devotion2 Abju): Touched becomes unblinded, undeafened, undiseased, unparalyzed, or unpoisoned</td>
     </tr><tr style="text-align:left">
-      <td>Lesser Restoration (P2 Abju): Touched creature unblind, unparalyze, or unpoison</td>
+      <td>Lesser Restoration (P2 Abju): Touched becomes unblinded, undeafened, undiseased, unparalyzed, or unpoisoned</td>
     </tr><tr style="text-align:left">
-      <td>Magic Weapon (P2 Tran): Touched weapon +1 for conc/1 hr</td>
+      <td>Magic Weapon (P2 Tran): Touched weapon gains +1 magic bonus for conc or 1 hr</td>
     </tr><tr style="text-align:left">
-      <td>Protection From Evil And Good (Devotion1 Abju): Touched specified foe type Disadv attack, immunity to charm, fright, and possession</td>
+      <td>Protection From Evil And Good (Devotion1 Abju): Willing touched gains immunity to charm, fright, and possession from aberrations, celestials, elementals, fey, fiends, and undead, and those creatures suffer Disadv on attack on touched</td>
     </tr><tr style="text-align:left">
-      <td>Protection From Evil And Good (P1 Abju): Touched specified foe type Disadv attack, immunity to charm, fright, and possession</td>
+      <td>Protection From Evil And Good (P1 Abju): Willing touched gains immunity to charm, fright, and possession from aberrations, celestials, elementals, fey, fiends, and undead, and those creatures suffer Disadv on attack on touched</td>
     </tr><tr style="text-align:left">
-      <td>Revivify (P3 Necr): Touched 1-minute-old corpse returned to life w/1 HP</td>
+      <td>Revivify (P3 Necr): Restores touched 1-minute-old corpse to life w/1 HP</td>
     </tr><tr style="text-align:left">
-      <td>Sanctuary (Devotion1 Abju): R30' Target foes attack another for 1 min (Wis neg)</td>
+      <td>Sanctuary (Devotion1 Abju): R30' Foes of target attack another (Wis neg) for 1 min</td>
     </tr><tr style="text-align:left">
-      <td>Searing Smite (P1 Evoc): Hit +1d6 HP, 1d6 HP/tn for conc/1 min (Con no per-tn damage)</td>
+      <td>Searing Smite (P1 Evoc): Self weapon inflicts +1d6 HP fire, target suffers 1d6 HP fire/rd (Con ends per-rd damage) for conc or 1 min</td>
     </tr><tr style="text-align:left">
-      <td>Zone Of Truth (Devotion2 Ench): R60' Creatures inside 15' radius cannot lie for 10 min (Cha neg)</td>
+      <td>Zone Of Truth (Devotion2 Ench): R60' Creatures in 15' radius cannot lie (Cha neg) for 10 min</td>
     </tr></table>
 </td>
   </tr><tr style="text-align:center">
@@ -273,7 +273,7 @@ var attributes = {
     </tr><tr style="text-align:center">
       <td>Lay On Hands: Heal 50 HP/long rest, use 5 HP worth to cure disease or poison</td>
     </tr><tr style="text-align:center">
-      <td>Turn The Unholy: R30' Channel Divinity makes fiends and undead flee for 1 min (DC 15 Wis neg)</td>
+      <td>Turn The Unholy: R30' Channel Divinity makes fiends and undead flee (DC 15 Wis neg) for 1 min</td>
     </tr></table>
 </td>
   </tr></table>

@@ -69,7 +69,7 @@ var attributes = {
     </tr><tr style="text-align:center">
       <td>Indomitable Might: Use Str instead of roll for Str check</td>
     </tr><tr style="text-align:center">
-      <td>Rage: Adv Str checks</td>
+      <td>Rage: Adv on Str checks</td>
     </tr></table>
 </td>
   </tr></table>
@@ -99,9 +99,9 @@ var attributes = {
     </tr><tr style="text-align:center">
       <td><b>Feature Notes</b>:       <table id="FeatureNotes" style="width:100%">
       <tr style="text-align:center">
-        <td>Healer: Stabilize via healer's kit restores 1 HP, healer's kit heals 1d6+4+target HD HP 1/short rest</td>
+        <td>Healer: Using healer's kit to stabilize also restores 1 HP; healer's kit heals 1d6 + 4 + target HD HP 1/short rest</td>
       </tr><tr style="text-align:center">
-        <td>Intimidating Presence: R30' Target creature frightened for 1 tn (DC 14 Will neg)</td>
+        <td>Intimidating Presence: R30' Target creature frightened (DC 14 Will neg) for 1 tn</td>
       </tr><tr style="text-align:center">
         <td>Rage: Rage advantages for 1 min unlimited/long rest (heavy armor neg)</td>
       </tr><tr style="text-align:center">
@@ -180,7 +180,7 @@ var attributes = {
       <tr style="text-align:center">
         <td><b>Armor</b>: None</td>
         <td><b>Shield</b>: None</td>
-        <td><b>Weapons</b>: Club: 1 (+10 1d4+4); Greatsword: 1 (+10 2d6+4); Sling: 1 (+9 1d4+3 R30'); Unarmed: 1 (+10 1d1+4)</td>
+        <td><b>Weapons</b>: Club: 1 (+10 1d4+4); Greatsword: 1 (+10 2d6+4); Sling: 1 (+9 1d4+3 R30/120); Unarmed: 1 (+10 1d1+4)</td>
       </tr></table>
 </td>
     </tr><tr style="text-align:center">
@@ -208,9 +208,9 @@ var attributes = {
       </tr><tr style="text-align:center">
         <td>Brutal Critical: Add 3 dice to crit damage</td>
       </tr><tr style="text-align:center">
-        <td>Dual Wielder: +1 AC w/two weapons, two-weapon fighting w/non-light weapons, draw two weapons at once</td>
+        <td>Dual Wielder: +1 AC w/two weapons; use two-weapon fighting w/any one-handed weapons; draw or stow two weapons at once</td>
       </tr><tr style="text-align:center">
-        <td>Eagle Totem Spirit: Foes Disadv on OA; bonus Dash during rage (heavy armor neg)</td>
+        <td>Eagle Totem Spirit: Foes Disadv on OA, bonus Dash during rage (heavy armor neg)</td>
       </tr><tr style="text-align:center">
         <td>Feral Instinct: Adv on Initiative, rage and then act when surprised</td>
       </tr><tr style="text-align:center">
@@ -220,13 +220,13 @@ var attributes = {
       </tr><tr style="text-align:center">
         <td>Rage: +4 melee damage</td>
       </tr><tr style="text-align:center">
-        <td>Reckless Attack: Gain Adv on melee Str attacks; gives foes Adv on all attacks</td>
+        <td>Reckless Attack: Trade Adv on melee Str attacks for foe Adv on all attacks</td>
       </tr><tr style="text-align:center">
         <td>Relentless Rage: DC 10+ Con to keep 1 HP when brought to 0 HP</td>
       </tr><tr style="text-align:center">
         <td>Retaliation: Melee attack Reaction after taking damage</td>
       </tr><tr style="text-align:center">
-        <td>Sentinel: Foe stuck by OA speed 0, OA on foe Disengage, react attack when adjacent foe targets other</td>
+        <td>Sentinel: OA strike halts foe; OA on adjacent foe Disengage; use Reaction to attack when adjacent foe targets other</td>
       </tr><tr style="text-align:center">
         <td>Wolf Totem Spirit: Allies Adv on attacks vs. foes adjacent to self during rage</td>
       </tr><tr style="text-align:center">
@@ -250,7 +250,7 @@ var attributes = {
       </tr><tr style="text-align:center">
         <td>Mindless Rage: Immunity to charm and fright during rage</td>
       </tr><tr style="text-align:center">
-        <td>Rage: Adv Str, resistance to bludgeoning, piercing, and slashing damage</td>
+        <td>Rage: Adv on Str skills, resistance to bludgeoning, piercing, and slashing damage</td>
       </tr></table>
 </td>
     </tr></table>
@@ -274,17 +274,17 @@ var attributes = {
   </tr><tr style="text-align:center">
     <td><b>Spells</b>:     <table id="Spells" style="width:100%">
     <tr style="text-align:left">
-      <td>Healing Word (D1 Evoc): R60' Target 1d4+modifier HP</td>
+      <td>Healing Word (D1 Evoc): R60' Target regains 1d4+0 HP</td>
     </tr><tr style="text-align:left">
-      <td>Produce Flame (D0 Conj): Hand flame lights 10' radius for 10 min, throw for 1d8 HP</td>
+      <td>Produce Flame (D0 Conj): Lights 10' radius for 10 min, self can make ranged spell attack inflicting 1d8 HP</td>
     </tr><tr style="text-align:left">
-      <td>Thorn Whip (D0 Tran): R30' Vine attacks 1d6 HP, pulls 10'</td>
+      <td>Thorn Whip (D0 Tran): R30' Ranged spell inflicts 1d6 HP and pulls 10'</td>
     </tr></table>
 </td>
   </tr><tr style="text-align:center">
     <td><b>Magic Notes</b>:     <table id="MagicNotes" style="width:100%">
     <tr style="text-align:center">
-      <td><i>Magic Initiate (Druid): 2 cantrips, 1 1st-level/long rest</i></td>
+      <td><i>Magic Initiate (Druid): Know 2 D0 spells, cast 1 D1/long rest</i></td>
     </tr><tr style="text-align:center">
       <td>Rage: Cannot cast or concentrate during rage</td>
     </tr><tr style="text-align:center">

@@ -213,9 +213,9 @@ var attributes = {
     </tr><tr style="text-align:center">
       <td><i>Skilled: Skill Proficiency (Choose 3 from any)</i></td>
     </tr><tr style="text-align:center">
-      <td>Actor: Adv Deception (Cha) and Performance (Cha) (impersonating), mimic others' speech or sounds</td>
+      <td>Actor: Adv on Deception (Cha) and Performance (Cha) (impersonating), mimic others' speech or sounds</td>
     </tr><tr style="text-align:center">
-      <td>Bulky Armor: Disadv Stealth</td>
+      <td>Bulky Armor: Disadv on Stealth</td>
     </tr><tr style="text-align:center">
       <td>Dungeon Delver: Adv on secret door detection and search for traps at full speed</td>
     </tr><tr style="text-align:center">
@@ -315,7 +315,7 @@ var attributes = {
       </tr><tr style="text-align:center">
         <td>Fighting Style (Protection): Use Reaction to impose attack Disadv on adjacent foe attacking ally</td>
       </tr><tr style="text-align:center">
-        <td>Grappler: Adv on attacks on grappled foe; additional grapple to pin; grapple larger foes</td>
+        <td>Grappler: Adv on attacks on grappled foe; additional grapple to pin</td>
       </tr><tr style="text-align:center">
         <td>Great Weapon Master: Bonus attack after crit or reducing foe to 0 HP; trade -5 attack w/heavy weapon for +10 damage</td>
       </tr><tr style="text-align:center">
@@ -339,7 +339,7 @@ var attributes = {
       </tr><tr style="text-align:center">
         <td>Sentinel: OA strike halts foe; OA on adjacent foe Disengage; use Reaction to attack when adjacent foe targets other</td>
       </tr><tr style="text-align:center">
-        <td>Sharpshooter: No Disadv at long range, ignore 3/4 cover, trade -5 attack w/ranged weapon for +10 damage</td>
+        <td>Sharpshooter: No Disadv on attacks at long range, ignore 3/4 cover, trade -5 attack w/ranged weapon for +10 damage</td>
       </tr><tr style="text-align:center">
         <td>Shield Master: Bonus Push during Attack</td>
       </tr></table>
@@ -387,41 +387,41 @@ var attributes = {
   </tr><tr style="text-align:center">
     <td><b>Spells</b>:     <table id="Spells" style="width:100%">
     <tr style="text-align:left">
-      <td>Blade Ward (B0 Abju): Self resistance to bludgeoning, piercing, and slashing damage for 1 rd</td>
+      <td>Blade Ward (B0 Abju): Self gains resistance to bludgeoning, piercing, and slashing damage for 1 rd</td>
     </tr><tr style="text-align:left">
-      <td>Fire Bolt (S0 Evoc): R120' Ranged spell 1d10 HP</td>
+      <td>Fire Bolt (S0 Evoc): R120' Ranged spell inflicts 1d10 HP fire</td>
     </tr><tr style="text-align:left">
-      <td>Guidance (D0 Divi): Touched +1d4 ability check w/in conc/1 min</td>
+      <td>Guidance (D0 Divi): Touched gains +1d4 on 1 ability check w/in conc or 1 min</td>
     </tr><tr style="text-align:left">
-      <td>Hellish Rebuke (K1 Evoc): R60' As a Reaction, attacker 2d10 HP (Dex half)</td>
+      <td>Hellish Rebuke (K1 Evoc): R60' Use Reaction to inflict 2d10 HP fire on successful attacker (Dex half)</td>
     </tr><tr style="text-align:left">
-      <td>Heroism (B1 Ench): Touched immunity to fright, +modifier HP each rd for conc/1 min</td>
+      <td>Heroism (B1 Ench): Touched gains immunity to fright and +5 temporary HP each rd for conc or 1 min</td>
     </tr><tr style="text-align:left">
-      <td>Jump (D1 Tran): Touched jump x3 for 1 min</td>
+      <td>Jump (D1 Tran): Touched gains triple jump distance for 1 min</td>
     </tr><tr style="text-align:left">
-      <td>Jump (S1 Tran): Touched jump x3 for 1 min</td>
+      <td>Jump (S1 Tran): Touched gains triple jump distance for 1 min</td>
     </tr><tr style="text-align:left">
-      <td>Longstrider (W1 Tran): Touched +10' speed for 1 hr</td>
+      <td>Longstrider (W1 Tran): Touched gains +10' Speed for 1 hr</td>
     </tr><tr style="text-align:left">
       <td>Mage Hand (B0 Conj): R30' Spectral hand performs minor tasks moving up to 10 lb for 1 min</td>
     </tr><tr style="text-align:left">
       <td>Mage Hand (K0 Conj): R30' Spectral hand performs minor tasks moving up to 10 lb for 1 min</td>
     </tr><tr style="text-align:left">
-      <td>Message (S0 Tran): R120 Whispered conversation w/target for 1 rd</td>
+      <td>Message (S0 Tran): R120' Self and target have whispered conversation for 1 rd</td>
     </tr><tr style="text-align:left">
-      <td>Minor Illusion (K0 Illu): R30' Sound of 1 creature or 5' cu image (Investigation disbelieve) for 1 min</td>
+      <td>Minor Illusion (K0 Illu): R30' Creates sound of 1 creature or 5' cu image (Investigation disbelieve) for 1 min</td>
     </tr><tr style="text-align:left">
-      <td>Produce Flame (D0 Conj): Hand flame lights 10' radius for 10 min, throw for 1d8 HP</td>
+      <td>Produce Flame (D0 Conj): Lights 10' radius for 10 min, self can make ranged spell attack inflicting 1d8 HP</td>
     </tr><tr style="text-align:left">
-      <td>Purify Food And Drink (C1 Tran): R10' 5' radius food, drink freed of poison, disease</td>
+      <td>Purify Food And Drink (C1 Tran): R10' Food and drink in 5' radius freed of poison and disease</td>
     </tr><tr style="text-align:left">
-      <td>Ray Of Frost (W0 Evoc): R60' Target 1d8 HP, -10 speed for 1 tn</td>
+      <td>Ray Of Frost (W0 Evoc): R60' Ranged spell inflicts 1d8 HP cold and -10' Speed for 1 rd</td>
     </tr><tr style="text-align:left">
-      <td>Resistance (C0 Abju): Touched +1d4 on save w/in conc/1 min</td>
+      <td>Resistance (C0 Abju): Touched gains +1d4 on 1 save w/in conc or 1 min</td>
     </tr><tr style="text-align:left">
-      <td>Shocking Grasp (W0 Evoc): Touched 1d8 HP</td>
+      <td>Shocking Grasp (W0 Evoc): Touched suffers 1d8 HP lightning</td>
     </tr><tr style="text-align:left">
-      <td>Thaumaturgy (C0 Tran): R30' Minor magic effects for 1 min</td>
+      <td>Thaumaturgy (C0 Tran): R30' Creates minor magic effects for 1 min</td>
     </tr></table>
 </td>
   </tr><tr style="text-align:center">
