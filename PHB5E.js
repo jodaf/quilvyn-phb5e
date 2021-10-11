@@ -386,7 +386,7 @@ PHB5E.FEATURES_ADDED = {
     'Section=magic Note="Copy abjuration spells into spellbook for half cost"',
   'Abjure Enemy':
     'Section=magic ' +
-    'Note="R60\' Channel Divinity halts target for 1 min (DC %V Wis half speed)"',
+    'Note="R60\' Channel Divinity halts target (DC %V Wis half speed) for 1 min"',
   'Acolyte Of Nature':
     'Section=magic,skill ' +
     'Note="Additional Druid cantrip",' +
@@ -432,7 +432,7 @@ PHB5E.FEATURES_ADDED = {
     'Note="Adjacent foes Disadv on attacks on others during self rage"',
   'Beguiling Defenses':
     'Section=save ' +
-    'Note="Immune to charm, reflect on caster for conc or 1 min (DC %V Wis neg)"',
+    'Note="Immune to charm, reflect on caster (DC %V Wis neg) for conc or 1 min"',
   'Bend Luck':
     'Section=magic ' +
     'Note="Spend 2 Sorcery Points to add or subtract 1d4 from target roll"',
@@ -442,14 +442,14 @@ PHB5E.FEATURES_ADDED = {
   'Bestial Fury':
     'Section=feature Note="Companion makes 2 attacks/rd"',
   'Blessing Of The Trickster':
-    'Section=magic Note="Touched Adv Stealth for 1 hr"',
+    'Section=magic Note="Touched Adv on Stealth for 1 hr"',
   'Blessings Of Knowledge':
     'Section=skill ' +
     'Note="+2 Language Count/Skill Proficiency (Choose 2 from Arcana, History, Nature, Religion)/Dbl Proficiency Bonus for chosen skills"',
   'Breath Of Winter':
     'Section=magic Note="Spend 6 Ki Points to cast <i>Cone Of Cold</i>"',
   'Charm Animals And Plants':
-    'Section=magic Note="R30\' Channel Divinity charms for 1 min (Wis neg)"',
+    'Section=magic Note="R30\' Channel Divinity charms (Wis neg) for 1 min"',
   'Circle Forms':
     'Section=magic Note="Increase Wild Shape CR to %V"',
   'Clench Of The North Wind':
@@ -484,7 +484,7 @@ PHB5E.FEATURES_ADDED = {
     'Note="R30\' Use Reaction to grant resistance to acid, cold, fire, lightning, or thunder damage"',
   'Dark Delirium':
     'Section=magic ' +
-    'Note="R60\' Target charmed or frightened and unaware of surroundings for conc or 1 min (DC %V Wis neg) 1/long rest"',
+    'Note="R60\' Target charmed or frightened and unaware of surroundings (DC %V Wis neg) for conc or 1 min 1/long rest"',
   'Death Strike':
     'Section=combat Note="Dbl damage on surprise hit (DC %V Con neg)"',
   'Destructive Wrath':
@@ -509,7 +509,7 @@ PHB5E.FEATURES_ADDED = {
     'Section=ability Note="Fly %{speed}\' 1/tn during rage"',
   'Elder Champion':
     'Section=magic ' +
-    'Note="Regain 10 HP/rd, cast spells as a bonus action, and inflict Disadv vs. self spells on foes w/in 10\' for 1 min 1/long rest"',
+    'Note="Regain 10 HP/rd, cast spells as a bonus action, and inflict Disadv on saves vs. self spells on foes w/in 10\' for 1 min 1/long rest"',
   'Eldritch Strike':
     'Section=combat ' +
     'Note="Inflicts Disadv on saves vs. self spells for 1 rd after hit"',
@@ -540,7 +540,7 @@ PHB5E.FEATURES_ADDED = {
     'Note="Use bonus action to gain Adv on next attack and add Superiority Die to damage"',
   'Fey Presence':
     'Section=magic ' +
-    'Note="R10\' All creatures charmed or frightened for 1 tn (DC %V Wis neg) 1/short rest"',
+    'Note="R10\' All creatures charmed or frightened (DC %V Wis neg) for 1 tn 1/short rest"',
   'Fist Of Four Thunders':
     'Section=magic Note="Spend 2 Ki Points to cast <i>Thunderwave</i>"',
   'Fist Of Unbroken Air':
@@ -552,7 +552,7 @@ PHB5E.FEATURES_ADDED = {
     'Section=magic Note="Damage cannot break conjuration concentration"',
   'Goading Attack':
     'Section=combat ' +
-    'Note="Add Superiority Die to damage, foe attacks on others suffer Disadv for 1 rd (DC %V Wis neg)"',
+    'Note="Add Superiority Die to damage, foe attacks on others suffer Disadv (DC %V Wis neg) for 1 rd"',
   'Gong Of The Summit':
     'Section=magic Note="Spend 3 Ki Points to cast <i>Shatter</i>"',
   'Greater Portent':'Section=magic Note="Replace roll 3/long rest"',
@@ -622,7 +622,7 @@ PHB5E.FEATURES_ADDED = {
     'Note="Destroy transmuter\'s stone to transmute 5\' cu, remove curses, diseases, and poisons, cast <i>Raise Dead</i>, or restore youth"',
   'Menacing Attack':
     'Section=combat ' +
-    'Note="Add Superiority Die to damage, foe frightened for 1 rd (DC %V Wis neg)"',
+    'Note="Add Superiority Die to damage, foe frightened (DC %V Wis neg) for 1 rd"',
   'Minor Alchemy':
     'Section=magic Note="Transform 1\' cu/10 min effort for 1 hr"',
   'Minor Conjuration':
@@ -661,7 +661,7 @@ PHB5E.FEATURES_ADDED = {
     'Section=combat Note="Chosen ally gains Superiority Die + %V temporary HP"',
   'Read Thoughts':
     'Section=magic ' +
-    'Note="R60\' Use Channel Divinity to read thoughts and cast <i>Suggestion</i> for 1 min (Wis neg)"',
+    'Note="R60\' Use Channel Divinity to read thoughts and cast <i>Suggestion</i> (Wis neg) for 1 min"',
   'Relentless':
     'Section=combat Note="Minimum 1 Superiority Die after initiative"',
   'Relentless Avenger':'Section=combat Note="Move %{speed//2}\' after OA hit"',
@@ -695,7 +695,7 @@ PHB5E.FEATURES_ADDED = {
     'Section=magic ' +
     'Note="Add another die when maximum rolled on spell damage die 1/tn"',
   'Spell Resistance':
-    'Section=save Note="Adv vs. spells and resistance to spell damage"',
+    'Section=save Note="Adv on saves vs. spells and resistance to spell damage"',
   'Spell Thief':
     'Section=magic ' +
     'Note="Foe spell negated, self cast same w/in 8 hours (DC %V neg) 1/long rest"',
@@ -739,7 +739,7 @@ PHB5E.FEATURES_ADDED = {
     'Note="Add Superiority Die to damage, knock foe prone (DC %V Str neg)"',
   'Turn The Faithless':
     'Section=magic ' +
-    'Note="R30\' Channel Divinity makes fiends and fey flee for 1 min (DC %V Wis neg)"',
+    'Note="R30\' Channel Divinity makes fiends and fey flee (DC %V Wis neg) for 1 min"',
   'Undead Thralls':
     'Section=magic Note="Know <i>Animate Dead</i>, casting animates additional corpse and gives +%V HP and +%1 damage"',
   'Undying Sentinel':
@@ -750,7 +750,7 @@ PHB5E.FEATURES_ADDED = {
     'Section=combat ' +
     'Note="Armor Proficiency (Medium/Shield) and Weapon Proficiency (Martial)"',
   'Versatile Trickster':
-    'Section=magic Note="Distract foe (self Adv attacks) via <i>Mage Hand</i>"',
+    'Section=magic Note="Distract foe (self Adv on attacks) via <i>Mage Hand</i>"',
   'Visions Of The Past':
     'Section=magic ' +
     'Note="1 min meditation gives visions about surroundings or held object"',
@@ -787,7 +787,7 @@ PHB5E.FEATURES_ADDED = {
   'Actor':
     'Section=ability,skill ' +
     'Note="+1 Charisma",' +
-         '"Adv Deception (Cha) and Performance (Cha) (impersonating), mimic others\' speech or sounds"',
+         '"Adv on Deception (Cha) and Performance (Cha) (impersonating), mimic others\' speech or sounds"',
   'Alert':
     'Section=combat ' +
     'Note="+5 Initiative; cannot be surprised; no Adv to unseen foes"',
@@ -911,7 +911,7 @@ PHB5E.FEATURES_ADDED = {
     'Note="OA strike halts foe; OA on adjacent foe Disengage; use Reaction to attack when adjacent foe targets other"',
   'Sharpshooter':
     'Section=combat ' +
-    'Note="No Disadv at long range, ignore 3/4 cover, trade -5 attack w/ranged weapon for +10 damage"',
+    'Note="No Disadv on attacks at long range, ignore 3/4 cover, trade -5 attack w/ranged weapon for +10 damage"',
   'Shield Master':
     'Section=combat,save ' +
     'Note="Bonus Push during Attack",' +
@@ -959,11 +959,11 @@ PHB5E.FEATURES_ADDED = {
   'Stout Halfling Ability Adjustment':
     'Section=ability Note="+2 Dexterity/+1 Constitution"',
   'Stout Resilience':
-    'Section=save Note="Adv vs. poison, resistance to poison damage"',
+    'Section=save Note="Adv on saves vs. poison, resistance to poison damage"',
   'Sunlight Sensitivity':
     'Section=combat,skill ' +
-    'Note="Disadv attack in direct sunlight",' +
-         '"Disadv sight Perception in direct sunlight"',
+    'Note="Disadv on attack in direct sunlight",' +
+         '"Disadv on sight Perception in direct sunlight"',
   'Superior Darkvision':
     'Section=feature Note="R120\' See one light level better"',
   'Wood Elf Ability Adjustment':
@@ -1277,6 +1277,7 @@ PHB5E.SPELLS_ADDED = {
     'School=Evocation ' +
     'Level=P3 ' +
     'Description="Target in 30\' radius heals 2d6 HP 1/rd for conc or 1 min"',
+
   'Banishing Smite':
     'School=Abjuration ' +
     'Level=P5 ' +
@@ -1293,6 +1294,7 @@ PHB5E.SPELLS_ADDED = {
     'School=Evocation ' +
     'Level=P3 ' +
     'Description="Self attack inflicts +3d8 HP radiant and blinds (Con neg) for conc or 1 min"',
+
   'Chromatic Orb':
     'School=Evocation ' +
     'Level=S1,W1 ' +
@@ -1308,7 +1310,7 @@ PHB5E.SPELLS_ADDED = {
   'Compelled Duel':
     'School=Enchantment ' +
     'Level=P1 ' +
-    'Description="R30\' Target stays w/in 30\' of self, suffers Disadv on attacks on others for conc or 1 min (Wis neg)"',
+    'Description="R30\' Target stays w/in 30\' of self, suffers Disadv on attacks on others (Wis neg) for conc or 1 min"',
   'Conjure Barrage':
     'School=Conjuration ' +
     'Level=R3 ' +
@@ -1324,11 +1326,12 @@ PHB5E.SPELLS_ADDED = {
   'Crown Of Madness':
     'School=Enchantment ' +
     'Level=B2,K2,S2,W2 ' +
-    'Description="R120\' Self directs target\'s attacks for conc or 1 min (Wis neg)"',
+    'Description="R120\' Self directs target\'s attacks (Wis neg) for conc or 1 min"',
   "Crusader's Mantle":
     'School=Evocation ' +
     'Level=P3,War3 ' +
     'Description="Allies in 30\' radius inflict +1d4 HP radiant for conc or 1 min"',
+
   'Destructive Wave':
     'School=Evocation ' +
     'Level=P5,Tempest5 ' +
@@ -1337,6 +1340,7 @@ PHB5E.SPELLS_ADDED = {
     'School=Enchantment ' +
     'Level=B1,K1 ' +
     'Description="R60\' Target suffers 3d6 HP psychic and flees (Wis half, need not flee)"',
+
   'Elemental Weapon':
     'School=Transmutation ' +
     'Level=P3 ' +
@@ -1344,7 +1348,8 @@ PHB5E.SPELLS_ADDED = {
   'Ensnaring Strike':
     'School=Conjuration ' +
     'Level=Ancients1,R1 ' +
-    'Description="Successful attack restrains foe and inflicts 1d6 HP/tn piercing for conc or 1 min (Str neg)"',
+    'Description="Successful attack restrains foe and inflicts 1d6 HP/tn piercing (Str neg) for conc or 1 min"',
+
   'Feign Death':
     'School=Necromancy ' +
     'Level=B3,C3,D3,W3 ' +
@@ -1353,10 +1358,12 @@ PHB5E.SPELLS_ADDED = {
     'School=Enchantment ' +
     'Level=B0,K0,S0,W0 ' +
     'Description="Self gains on Adv on Cha checks w/target for conc or 1 min"',
+
   'Grasping Vine':
     'School=Conjuration ' +
     'Level=D4,Nature4,R4 ' +
-    'Description="R30\' Vine pulls target 20\' for conc or 1 min (Dex neg)"',
+    'Description="R30\' Vine pulls target 20\' (Dex neg) for conc or 1 min"',
+
   'Hail Of Thorns':
     'School=Conjuration ' +
     'Level=R1 ' +
@@ -1369,14 +1376,17 @@ PHB5E.SPELLS_ADDED = {
     'School=Conjuration ' +
     'Level=K3 ' +
     'Description="R150\' 20\' void inflicts 2d6 HP cold (start of turn) and 2d6 HP acid (end of turn) for conc or 1 min"',
+
   'Lightning Arrow':
     'School=Transmutation ' +
     'Level=R3 ' +
-    'Description="Ranged weapon transforms into bolt that inflicts 8d6 HP lightning on target and 2d8 HP lighning in 10\' radius (Dex half)"',
+    'Description="Ranged weapon inflicts 8d6 HP lightning on target and 2d8 HP lighning in 10\' radius (Dex half)"',
+
   "Mordenkainen's Sword":
     'School=Evocation ' +
     'Level=B7,W7 ' +
-    'Description="R60\' Self controls force weapon (melee spell attack inflicts 3d10 HP force, move 20\'/rd) for conc or 1 min"',
+    'Description="R60\' Self controls force weapon (melee spell attack inflicts 3d10 HP force, moves 20\'/rd) for conc or 1 min"',
+
   'Phantasmal Force':
     'School=Illusion ' +
     'Level=B2,K2,S2,W2 ' +
@@ -1385,46 +1395,50 @@ PHB5E.SPELLS_ADDED = {
     'School=Evocation ' +
     'Level=B9 ' +
     'Description="Touched regains all HP and becomes uncharmed, unfrightened, unparalyzed, and unstunned"',
+
   'Ray Of Sickness':
     'School=Necromancy ' +
     'Level=S1,W1 ' +
-    'Description="R60\' Target 2d8 HP, poisoned 1 tn (Con not poisoned)",',
+    'Description="R60\' Target suffers 2d8 HP poison and poisoned 1 rd (Con not poisoned)",',
+
   'Searing Smite':
     'School=Evocation ' +
     'Level=P1 ' +
-    'Description="Hit +1d6 HP, 1d6 HP/tn for conc or 1 min (Con no per-tn damage)"',
+    'Description="Self weapon inflicts +1d6 HP fire, target suffers 1d6 HP fire/rd (Con ends per-rd damage) for conc or 1 min"',
   'Staggering Smite':
     'School=Evocation ' +
     'Level=P4 ' +
-    'Description="Next hit +4d6 HP w/in conc or 1 min"',
+    'Description="Next hit w/in conc or 1 min inflicts +4d6 HP psychic, Disadv on attacks and ability checks, and no Reaction for 1 rd"',
   'Swift Quiver':
     'School=Transmutation ' +
     'Level=R5 ' +
-    'Description="Touched quiver endless ammo, dbl attack for conc or 1 min"',
+    'Description="Touched quiver contains endless ammo, gives extra attack for conc or 1 min"',
+
   'Telepathy':
     'School=Evocation ' +
     'Level=W8 ' +
-    'Description="Mental communication with ally for 1 dy"',
+    'Description="Self communicates with ally mentally for 1 dy"',
   'Thorn Whip':
     'School=Transmutation ' +
     'Level=D0 ' +
-    'Description="R30\' Vine attacks ${Math.floor((lvl+7)/6)}d6 HP, pulls 10\'"',
+    'Description="R30\' Ranged spell inflicts ${Math.floor((lvl+7)/6)}d6 HP and pulls 10\'"',
   'Thunderous Smite':
     'School=Evocation ' +
     'Level=P1 ' +
-    'Description="Next hit 2d6 HP, push 10\' (Str no push)"',
+    'Description="Next hit w/in conc or 1 min inflicts +2d6 HP thunder and pushes 10\' (Str no push)"',
   'Tsunami':
     'School=Conjuration ' +
     'Level=D8 ' +
-    'Description="RSight 300\'x300\' wall of water 6d10 HP (Str half), moves away 50\'/tn for conc or 6 rd"',
+    'Description="RSight 300\'x300\' wall of water inflicts 6d10 HP bludgeoning (Str half), moves away 50\'/rd for conc or 6 rd"',
+
   'Witch Bolt':
     'School=Evocation ' +
     'Level=K1,S1,W1 ' +
-    'Description="R30\' Target 1d12/tn for conc or 1 min"',
+    'Description="R30\' Ranged spell inflicts 1d12 HP lightning/rd for conc or 1 min"',
   'Wrathful Smite':
     'School=Evocation ' +
     'Level=P1 ' +
-    'Description="Next hit +1d6 HP and frightens (Wis neg) for conc or 1 min"'
+    'Description="Next hit w/in conc or 1 min inflicts +1d6 HP psychic and frightens (Wis no fright)"'
 
 };
 PHB5E.SPELLS_LEVELS_ADDED = {
