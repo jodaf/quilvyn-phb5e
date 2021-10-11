@@ -1264,7 +1264,7 @@ PHB5E.SPELLS_ADDED = {
   'Arms Of Hadar':
     'School=Conjuration ' +
     'Level=K1 ' +
-    'Description="10\' radius inflicts 2d6 HP necrotic (Str half) and no Reaction for 1 rd"',
+    'Description="10\' radius inflicts 2d6 HP necrotic and no Reaction (Str half, no loss of Reaction) for 1 rd"',
   'Aura Of Life':
     'School=Abjuration ' +
     'Level=P4 ' +
@@ -1276,7 +1276,7 @@ PHB5E.SPELLS_ADDED = {
   'Aura Of Vitality':
     'School=Evocation ' +
     'Level=P3 ' +
-    'Description="Target in 30\' radius heals 2d6 HP 1/rd for conc or 1 min"',
+    'Description="R30\' Target heals 2d6 HP 1/rd for conc or 1 min"',
 
   'Banishing Smite':
     'School=Abjuration ' +
@@ -1289,7 +1289,7 @@ PHB5E.SPELLS_ADDED = {
   'Blade Ward':
     'School=Abjuration ' +
     'Level=B0,K0,S0,W0 ' +
-    'Description="Self resistance to bludgeoning, piercing, and slashing damage for 1 rd"',
+    'Description="Self gains resistance to bludgeoning, piercing, and slashing damage for 1 rd"',
   'Blinding Smite':
     'School=Evocation ' +
     'Level=P3 ' +
@@ -1302,7 +1302,7 @@ PHB5E.SPELLS_ADDED = {
   'Circle Of Power':
     'School=Abjuration ' +
     'Level=P5 ' +
-    'Description="Allies in 30\' radius gain Adv on save vs. magic, save yields no damage instead of half for conc or 10 min"',
+    'Description="Allies in 30\' radius gain Adv on save vs. magic and saves yields no damage instead of half for conc or 10 min"',
   'Cloud Of Daggers':
     'School=Conjuration ' +
     'Level=B2,K2,S2,W2 ' +
@@ -1344,7 +1344,7 @@ PHB5E.SPELLS_ADDED = {
   'Elemental Weapon':
     'School=Transmutation ' +
     'Level=P3 ' +
-    'Description="Touched weapon +1 attack, +1d4 damage for conc or 1 hr"',
+    'Description="Touched weapon gains +1 attack and +1d4 HP acid, cold, fire, lightning, or thunder for conc or 1 hr"',
   'Ensnaring Strike':
     'School=Conjuration ' +
     'Level=Ancients1,R1 ' +
