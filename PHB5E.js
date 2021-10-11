@@ -1376,15 +1376,15 @@ PHB5E.SPELLS_ADDED = {
   "Mordenkainen's Sword":
     'School=Evocation ' +
     'Level=B7,W7 ' +
-    'Description="Force weapon 3d10, move 20\' for conc or 1 min"',
+    'Description="R60\' Self controls force weapon (melee spell attack inflicts 3d10 HP force, move 20\'/rd) for conc or 1 min"',
   'Phantasmal Force':
     'School=Illusion ' +
     'Level=B2,K2,S2,W2 ' +
-    'Description="R60\' target illusion 1d6 HP/rd (Int neg)"',
+    'Description="R60\' Target perceives illusion that can inflict 1d6 HP psychic/rd (Int neg) for conc or 1 min"',
   'Power Word Heal':
     'School=Evocation ' +
     'Level=B9 ' +
-    'Description="Touched regains all HP, uncharmed, unfrightened, unparalyzed, unstunned"',
+    'Description="Touched regains all HP and becomes uncharmed, unfrightened, unparalyzed, and unstunned"',
   'Ray Of Sickness':
     'School=Necromancy ' +
     'Level=S1,W1 ' +
