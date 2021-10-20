@@ -1755,7 +1755,6 @@ PHB5E.featRulesExtra = function(rules, name) {
       'magicNotes.magicInitiate(' + clas + ')', '+=', '1'
     );
   } else if(name == 'Martial Adept') {
-    'Note="Use %Vd%1 Superiority Dice to perform %2 chosen Maneuvers/short rest"',
     rules.defineRule
       ('combatNotes.combatSuperiority', 'combatNotes.martialAdept', '+=', '1');
     rules.defineRule('combatNotes.combatSuperiority.1',
