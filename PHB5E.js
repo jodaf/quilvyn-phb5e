@@ -71,7 +71,7 @@ function PHB5E() {
 
 }
 
-PHB5E.VERSION = '2.3.1.0';
+PHB5E.VERSION = '2.3.1.1';
 
 PHB5E.BACKGROUNDS_ADDED = {
   'Charlatan':
@@ -2042,6 +2042,9 @@ PHB5E.raceRulesExtra = function(rules, name) {
 /* Returns an array of plugins upon which this one depends. */
 PHB5E.getPlugins = function() {
   var result = [SRD5E];
+  if(window.Tasha != null &&
+     QuilvynUtils.getKeys(PHB5E.rules.getChoices('selectableFeatures'), /Peace Domain/).length > 0)
+    result.unshift(Tasha);
   if(window.Volo != null &&
      (Volo.CHARACTER_RACES_IN_PLAY || Volo.MONSTROUS_RACES_IN_PLAY))
     result.unshift(Volo);
