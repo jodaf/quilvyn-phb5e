@@ -71,7 +71,7 @@ function PHB5E() {
 
 }
 
-PHB5E.VERSION = '2.3.1.1';
+PHB5E.VERSION = '2.3.1.2';
 
 PHB5E.BACKGROUNDS_ADDED = {
   'Charlatan':
@@ -714,7 +714,7 @@ PHB5E.FEATURES_ADDED = {
     'Section=magic Note="Spend 2 Ki Points to cast <i>Burning Hands</i>"',
   'Tempest Bonus Proficiencies':
     'Section=combat ' +
-    'Note="Armor Proficiency (Heavy) and Weapon Proficiency (Martial)"',
+    'Note="Armor Proficiency (Heavy)/Weapon Proficiency (Martial)"',
   'The Third Eye':
     'Section=magic ' +
     'Note="Use action to gain 60\' darkvision, 60\' ethereal sight, universal language comprehension, or 10\' invisibility sight"',
@@ -748,7 +748,7 @@ PHB5E.FEATURES_ADDED = {
          '"No debility from aging"',
   'Valor Bonus Proficiencies':
     'Section=combat ' +
-    'Note="Armor Proficiency (Medium/Shield) and Weapon Proficiency (Martial)"',
+    'Note="Armor Proficiency (Medium/Shield)/Weapon Proficiency (Martial)"',
   'Versatile Trickster':
     'Section=magic Note="Distract foe (self Adv on attacks) via <i>Mage Hand</i>"',
   'Visions Of The Past':
@@ -759,7 +759,7 @@ PHB5E.FEATURES_ADDED = {
     'Note="R10\' Channel Divinity gives self Adv on attacks against target for 1 min"',
   'War Bonus Proficiencies':
     'Section=combat ' +
-    'Note="Armor Proficiency (Heavy) and Weapon Proficiency (Martial)"',
+    'Note="Armor Proficiency (Heavy)/Weapon Proficiency (Martial)"',
   'War Magic':'Section=combat Note="Bonus attack after %V"',
   'War Priest':'Section=combat Note="Bonus attack %V/long rest"',
   'Warding Flare':
