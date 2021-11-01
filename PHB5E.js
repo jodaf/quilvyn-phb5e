@@ -71,7 +71,7 @@ function PHB5E() {
 
 }
 
-PHB5E.VERSION = '2.3.1.2';
+PHB5E.VERSION = '2.3.1.3';
 
 PHB5E.BACKGROUNDS_ADDED = {
   'Charlatan':
