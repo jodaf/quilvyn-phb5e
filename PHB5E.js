@@ -71,7 +71,7 @@ function PHB5E() {
 
 }
 
-PHB5E.VERSION = '2.3.1.3';
+PHB5E.VERSION = '2.3.1.4';
 
 PHB5E.BACKGROUNDS_ADDED = {
   'Charlatan':
@@ -389,7 +389,7 @@ PHB5E.FEATURES_ADDED = {
     'Note="R60\' Channel Divinity halts target (DC %V Wis half speed) for 1 min"',
   'Acolyte Of Nature':
     'Section=magic,skill ' +
-    'Note="Additional Druid cantrip",' +
+    'Note="Know D0 cantrip",' +
          '"Skill Proficiency (Choose 1 from Animal Handling, Nature, Survival)"',
   'Alter Memories':
     'Section=magic ' +
@@ -444,8 +444,9 @@ PHB5E.FEATURES_ADDED = {
   'Blessing Of The Trickster':
     'Section=magic Note="Touched Adv on Stealth for 1 hr"',
   'Blessings Of Knowledge':
-    'Section=skill ' +
-    'Note="+2 Language Count/Skill Proficiency (Choose 2 from Arcana, History, Nature, Religion)/Dbl Proficiency Bonus for chosen skills"',
+    'Section=feature,skill ' +
+    'Note="Skill Proficiency (Choose 2 from Arcana, History, Nature, Religion)",' +
+         '"+2 Language Count/Dbl Proficiency Bonus for chosen skills"',
   'Breath Of Winter':
     'Section=magic Note="Spend 6 Ki Points to cast <i>Cone Of Cold</i>"',
   'Charm Animals And Plants':
@@ -1062,7 +1063,6 @@ PHB5E.PATHS_ADDED = {
       '"17:Master Of Nature" ' +
     'SpellAbility=wisdom ' +
     'SpellSlots=' +
-      'Nature0:1=1,' +
       'Nature1:1=2,' +
       'Nature2:3=2,' +
       'Nature3:5=2,' +
@@ -1471,7 +1471,6 @@ PHB5E.SPELLS_LEVELS_ADDED = {
   'Divine Favor':'War1',
   'Dominate Beast':'"K4 [The Archfey]","K4 [The Great Old One]",Nature4',
   'Dominate Person':'"K5 [The Archfey]","K5 [The Great Old One]",Trickery5',
-  'Druidcraft':'Nature0',
   'Faerie Fire':'Drow1,"K1 [The Archfey]",Light1',
   'Fireball':'Light3',
   'Flame Strike':'Light5,War5',
@@ -1481,7 +1480,6 @@ PHB5E.SPELLS_LEVELS_ADDED = {
   'Gaseous Form':'Underdark2',
   'Greater Invisibility':'"K4 [The Archfey]",Underdark3',
   'Guardian Of Faith':'Light4',
-  'Guidance':'Nature0',
   'Gust Of Wind':'Tempest2',
   'Haste':'Vengeance3',
   'Hideous Laughter':'"K1 [The Great Old One]"',
@@ -1493,7 +1491,6 @@ PHB5E.SPELLS_LEVELS_ADDED = {
   'Insect Plague':'Nature5,Tempest5,Underdark4',
   'Legend Lore':'Knowledge5',
   'Magic Weapon':'War2',
-  'Mending':'Nature0',
   'Minor Illusion':'Gnome0,Shadow0',
   'Mirror Image':'Trickery2',
   'Misty Step':'Ancients2,Vengeance2',
@@ -1502,18 +1499,14 @@ PHB5E.SPELLS_LEVELS_ADDED = {
   'Nondetection':'Knowledge3',
   'Pass Without Trace':'Shadow2,Trickery2',
   'Plant Growth':'Ancients3,"K3 [The Archfey]",Nature3',
-  'Poison Spray':'Nature0',
   'Polymorph':'Trickery4',
-  'Produce Flame':'Nature0',
   'Protection From Energy':'Ancients3,Vengeance3',
-  'Resistance':'Nature0',
   'Scorching Ray':'Light2',
   'Scrying':'Knowledge5,Light5,Vengeance5',
   'Seeming':'"K5 [The Archfey]"',
   'Sending':'"K3 [The Great Old One]"',
   'Shatter':'Tempest2',
   'Shield Of Faith':'War1',
-  'Shillelagh':'Nature0',
   'Silence':'Shadow2',
   'Sleep':'"K1 [The Archfey]"',
   'Sleet Storm':'Tempest3',
@@ -1899,14 +1892,6 @@ PHB5E.pathRulesExtra = function(rules, name) {
 
     rules.defineRule
       ('magicNotes.potentSpellcasting.1', 'wisdomModifier', '=', null);
-    rules.defineRule
-      ('skillChoices.Arcana', 'skillNotes.blessingsOfKnowledge', '=', '1');
-    rules.defineRule
-      ('skillChoices.History', 'skillNotes.blessingsOfKnowledge', '=', '1');
-    rules.defineRule
-      ('skillChoices.Nature', 'skillNotes.blessingsOfKnowledge', '=', '1');
-    rules.defineRule
-      ('skillChoices.Religion', 'skillNotes.blessingsOfKnowledge', '=', '1');
 
   } else if(name == 'Light Domain') {
 
@@ -1923,12 +1908,7 @@ PHB5E.pathRulesExtra = function(rules, name) {
     rules.defineRule('combatNotes.divineStrike.1',
       pathLevel, '=', '"cold, fire, or lightning"'
     );
-    rules.defineRule
-      ('skillChoices.Animal Handling', 'skillNotes.acolyteOfNature', '=', '1');
-    rules.defineRule
-      ('skillChoices.Nature', 'skillNotes.acolyteOfNature', '=', '1');
-    rules.defineRule
-      ('skillChoices.Survival', 'skillNotes.acolyteOfNature', '=', '1');
+    rules.defineRule('spellSlots.D0', 'magicNotes.acolyteOfNature', '+=', '1');
 
   } else if(name == 'Oath Of The Ancients') {
 
