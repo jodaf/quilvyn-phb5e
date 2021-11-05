@@ -15,7 +15,9 @@ this program; if not, write to the Free Software Foundation, Inc., 59 Temple
 Place, Suite 330, Boston, MA 02111-1307 USA.
 */
 
-/*jshint esversion: 6 */
+/* jshint esversion: 6 */
+/* jshint forin: false */
+/* globals Quilvyn, QuilvynRules, QuilvynUtils, SRD5E, Tasha, Volo, Xanathar */
 "use strict";
 
 /*
@@ -71,7 +73,7 @@ function PHB5E() {
 
 }
 
-PHB5E.VERSION = '2.3.1.4';
+PHB5E.VERSION = '2.3.1.5';
 
 PHB5E.BACKGROUNDS_ADDED = {
   'Charlatan':
@@ -1421,7 +1423,7 @@ PHB5E.SPELLS_ADDED = {
   'Thorn Whip':
     'School=Transmutation ' +
     'Level=D0 ' +
-    'Description="R30\' Ranged spell inflicts ${Math.floor((lvl+7)/6)}d6 HP and pulls 10\'"',
+    'Description="R30\' Ranged spell inflicts %{(?level?+7)//6}d6 HP and pulls 10\'"',
   'Thunderous Smite':
     'School=Evocation ' +
     'Level=P1 ' +
@@ -1909,6 +1911,7 @@ PHB5E.pathRulesExtra = function(rules, name) {
       pathLevel, '=', '"cold, fire, or lightning"'
     );
     rules.defineRule('spellSlots.D0', 'magicNotes.acolyteOfNature', '+=', '1');
+    rules.defineRule('spellCasterLevel.D', 'casterLevels.Nature', '=', null);
 
   } else if(name == 'Oath Of The Ancients') {
 
