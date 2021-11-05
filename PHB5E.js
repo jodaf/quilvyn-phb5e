@@ -73,7 +73,7 @@ function PHB5E() {
 
 }
 
-PHB5E.VERSION = '2.3.1.5';
+PHB5E.VERSION = '2.3.1.6';
 
 PHB5E.BACKGROUNDS_ADDED = {
   'Charlatan':
@@ -1423,7 +1423,7 @@ PHB5E.SPELLS_ADDED = {
   'Thorn Whip':
     'School=Transmutation ' +
     'Level=D0 ' +
-    'Description="R30\' Ranged spell inflicts %{(?level?+7)//6}d6 HP and pulls 10\'"',
+    'Description="R30\' Ranged spell inflicts %{(level+7)//6}d6 HP and pulls 10\'"',
   'Thunderous Smite':
     'School=Evocation ' +
     'Level=P1 ' +
