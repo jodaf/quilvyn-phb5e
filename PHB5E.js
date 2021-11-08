@@ -73,7 +73,7 @@ function PHB5E() {
 
 }
 
-PHB5E.VERSION = '2.3.1.6';
+PHB5E.VERSION = '2.3.1.7';
 
 PHB5E.BACKGROUNDS_ADDED = {
   'Charlatan':
@@ -1007,10 +1007,10 @@ PHB5E.PATHS_ADDED = {
       '"10:Nature\'s Ward","14:Nature\'s Sanctuary" ' +
     'SpellAbility=wisdom ' +
     'SpellSlots=' +
-      'Underdark1:3=2,' +
-      'Underdark2:5=2,' +
-      'Underdark3:7=2,' +
-      'Underdark4:9=2',
+      'Underdark2:3=2,' +
+      'Underdark3:5=2,' +
+      'Underdark4:7=2,' +
+      'Underdark5:9=2',
   'Circle Of The Moon':
     'Group=Druid Level=levels.Druid ' +
     'Features=' +
@@ -1457,7 +1457,7 @@ PHB5E.SPELLS_LEVELS_ADDED = {
   'Calm Emotions':'"K2 [The Archfey]"',
   'Charm Person':'Trickery1',
   'Clairvoyance':'"K3 [The Great Old One]"',
-  'Cloudkill':'Underdark4',
+  'Cloudkill':'Underdark5',
   'Command':'Knowledge1',
   'Commune With Nature':'Ancients5',
   'Confusion':'Knowledge4',
@@ -1479,8 +1479,8 @@ PHB5E.SPELLS_LEVELS_ADDED = {
   'Flaming Sphere':'Light2',
   'Fog Cloud':'Tempest1',
   'Freedom Of Movement':'War4',
-  'Gaseous Form':'Underdark2',
-  'Greater Invisibility':'"K4 [The Archfey]",Underdark3',
+  'Gaseous Form':'Underdark3',
+  'Greater Invisibility':'"K4 [The Archfey]",Underdark4',
   'Guardian Of Faith':'Light4',
   'Gust Of Wind':'Tempest2',
   'Haste':'Vengeance3',
@@ -1490,7 +1490,7 @@ PHB5E.SPELLS_LEVELS_ADDED = {
   'Hunter\'s Mark':'Vengeance1',
   'Ice Storm':'Ancients4,Tempest4',
   'Identify':'Knowledge1',
-  'Insect Plague':'Nature5,Tempest5,Underdark4',
+  'Insect Plague':'Nature5,Tempest5,Underdark5',
   'Legend Lore':'Knowledge5',
   'Magic Weapon':'War2',
   'Minor Illusion':'Gnome0,Shadow0',
@@ -1514,19 +1514,19 @@ PHB5E.SPELLS_LEVELS_ADDED = {
   'Sleet Storm':'Tempest3',
   'Speak With Animals':'Ancients1,Nature1',
   'Speak With Dead':'Knowledge3',
-  'Spider Climb':'Underdark1',
+  'Spider Climb':'Underdark2',
   'Spike Growth':'Nature2',
   'Spirit Guardians':'War3',
   'Spiritual Weapon':'War2',
-  'Stinking Cloud':'Underdark2',
-  'Stone Shape':'Underdark3',
+  'Stinking Cloud':'Underdark3',
+  'Stone Shape':'Underdark4',
   'Stoneskin':'Ancients4,War4',
   'Suggestion':'Knowledge2',
   'Telekinesis':'"K5 [The Great Old One]"',
   'Thunderwave':'Tempest1',
   'Tree Stride':'Ancients5,Nature5',
   'Wall Of Fire':'Light4',
-  'Web':'Underdark1',
+  'Web':'Underdark2',
   'Wind Wall':'Nature3'
 };
 PHB5E.SPELLS_RENAMED = {
