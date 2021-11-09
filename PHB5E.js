@@ -73,7 +73,7 @@ function PHB5E() {
 
 }
 
-PHB5E.VERSION = '2.3.1.7';
+PHB5E.VERSION = '2.3.1.8';
 
 PHB5E.BACKGROUNDS_ADDED = {
   'Charlatan':
@@ -942,7 +942,7 @@ PHB5E.FEATURES_ADDED = {
   // Races
   'Dark Elf Ability Adjustment':
     'Section=ability Note="+2 Dexterity/+1 Charisma"',
-  'Drow Magic':'Section=magic Note="Cast %V"',
+  'Drow Magic':'Section=magic Note="Know <i>Dancing Lights</i> cantrip%1"',
   'Drow Weapon Training':
     'Section=combat ' +
     'Note="Weapon Proficiency (Hand Crossbow/Rapier/Shortsword)"',
@@ -956,7 +956,7 @@ PHB5E.FEATURES_ADDED = {
   'Mountain Dwarf Ability Adjustment':
     'Section=ability Note="+2 Constitution/+2 Strength"',
   'Natural Illusionist':
-    'Section=magic Note="<i>Minor Illusion</i> cantrip"',
+    'Section=magic Note="Know <i>Minor Illusion</i> cantrip"',
   'Speak With Small Beasts':
     'Section=feature Note="Simple communication with small animals"',
   'Stout Halfling Ability Adjustment':
@@ -1196,11 +1196,7 @@ PHB5E.PATHS_ADDED = {
     'Group=Monk Level=levels.Monk ' +
     'Features=' +
       '"3:Shadow Arts","6:Shadow Step","11:Cloak Of Shadows",' +
-      '17:Opportunist ' +
-    'SpellAbility=intelligence ' +
-    'SpellSlots=' +
-      'Shadow0:3=1,' +
-      'Shadow2:3=4',
+      '17:Opportunist',
   'Way Of The Four Elements':
     'Group=Monk Level=levels.Monk ' +
     'Features=' +
@@ -1218,21 +1214,13 @@ PHB5E.RACES_ADDED = {
       '"1:Dark Elf Ability Adjustment","1:Drow Magic",' +
       '"1:Drow Weapon Training","1:Fey Ancestry","1:Keen Senses",' +
       '"1:Sunlight Sensitivity","1:Superior Darkvision",1:Trance ' +
-    'Languages=Common,Elvish ' +
-    'SpellAbility=charisma ' +
-    'SpellSlots=' +
-      'Drow0:1=1,' +
-      'Drow1:3=1,' +
-      'Drow2:5=1',
+    'Languages=Common,Elvish',
   'Forest Gnome':
     'Features=' +
       '1:Darkvision,"1:Gnome Cunning","1:Natural Illusionist",' +
       '"1:Forest Gnome Ability Adjustment",1:Slow,1:Small,' +
       '"1:Speak With Small Beasts" ' +
-    'Languages=Common,Gnomish ' +
-    'SpellAbility=intelligence ' +
-    'SpellSlots=' +
-      'Gnome0:1=1',
+    'Languages=Common,Gnomish',
   'Mountain Dwarf':
     'Features=' +
       '"1:Tool Proficiency (Choose 1 from Brewer\'s Tools, Mason\'s Tools, Smith\'s Tools)",' +
@@ -1462,8 +1450,7 @@ PHB5E.SPELLS_LEVELS_ADDED = {
   'Commune With Nature':'Ancients5',
   'Confusion':'Knowledge4',
   'Control Water':'Tempest4',
-  'Dancing Lights':'Drow0',
-  'Darkness':'Drow2,Shadow2',
+  'Darkness':'Shadow2',
   'Darkvision':'Shadow2',
   'Daylight':'Light3',
   'Detect Thoughts':'"K2 [The Great Old One]"',
@@ -1473,7 +1460,7 @@ PHB5E.SPELLS_LEVELS_ADDED = {
   'Divine Favor':'War1',
   'Dominate Beast':'"K4 [The Archfey]","K4 [The Great Old One]",Nature4',
   'Dominate Person':'"K5 [The Archfey]","K5 [The Great Old One]",Trickery5',
-  'Faerie Fire':'Drow1,"K1 [The Archfey]",Light1',
+  'Faerie Fire':'"K1 [The Archfey]",Light1',
   'Fireball':'Light3',
   'Flame Strike':'Light5,War5',
   'Flaming Sphere':'Light2',
@@ -1493,7 +1480,7 @@ PHB5E.SPELLS_LEVELS_ADDED = {
   'Insect Plague':'Nature5,Tempest5,Underdark5',
   'Legend Lore':'Knowledge5',
   'Magic Weapon':'War2',
-  'Minor Illusion':'Gnome0,Shadow0',
+  'Minor Illusion':'Shadow0',
   'Mirror Image':'Trickery2',
   'Misty Step':'Ancients2,Vengeance2',
   'Modify Memory':'Trickery5',
@@ -1672,9 +1659,32 @@ PHB5E.choiceRules = function(rules, type, name, attrs) {
  * derived directly from the attributes passed to classRules.
  */
 PHB5E.classRulesExtra = function(rules, name) {
-  if(name == 'Monk') {
+  if(name == 'Barbarian') {
+    SRD5E.featureSpell(rules, 'Beast Sense', 'Spirit Seeker', 'R', 2);
+    SRD5E.featureSpell(rules, 'Speak With Animals', 'Spirit Seeker', 'R', 1);
+    SRD5E.featureSpell(rules, 'Commune With Nature', 'Spirit Walker', 'R', 5);
+  } else if(name == 'Monk') {
     rules.defineRule('magicNotes.fistOfUnbrokenAir', 'kiSaveDC', '=', null);
     rules.defineRule('magicNotes.waterWhip', 'kiSaveDC', '=', null);
+    SRD5E.featureSpell(rules, 'Minor Illusion', 'Way Of Shadow', 'M', 0);
+    SRD5E.featureSpell(rules, 'Thunderwave', 'Fist Of Four Thunders', 'M', 1);
+    SRD5E.featureSpell
+      (rules, 'Burning Hands', 'Sweeping Cinder Strike', 'M', 1);
+    SRD5E.featureSpell
+      (rules, 'Hold Person', 'Clench Of The North Wind', 'M', 2);
+    SRD5E.featureSpell(rules, 'Shatter', 'Gong Of The Summit', 'M', 2);
+    SRD5E.featureSpell
+      (rules, 'Gust Of Wind', 'Rush Of The Gale Spirits', 'M', 2);
+    SRD5E.featureSpell(rules, 'Darkvision', 'Way Of Shadow', 'M', 2);
+    SRD5E.featureSpell(rules, 'Pass Without Trace', 'Way Of Shadow', 'M', 2);
+    SRD5E.featureSpell(rules, 'Silence', 'Way Of Shadow', 'M', 2);
+    SRD5E.featureSpell(rules, 'Fireball', 'Flames Of The Phoenix', 'M', 3);
+    SRD5E.featureSpell(rules, 'Gaseous Form', 'Mist Stance', 'M', 3);
+    SRD5E.featureSpell(rules, 'Fly', 'Ride The Wind', 'M', 3);
+    SRD5E.featureSpell(rules, 'Stoneskin', 'Eternal Mountain Defense', 'M', 4);
+    SRD5E.featureSpell(rules, 'Wall Of Fire', 'River Of Hungry Flame', 'M', 4);
+    SRD5E.featureSpell(rules, 'Cone Of Cold', 'Breath Of Winter', 'M', 5);
+    SRD5E.featureSpell(rules, 'Wall Of Stone', 'Wave Of Rolling Earth', 'M', 5);
   } else if(name == 'Paladin') {
     rules.defineRule
       ('combatNotes.avengingAngel', 'spellDifficultyClass.P', '=', null);
@@ -1703,6 +1713,11 @@ PHB5E.classRulesExtra = function(rules, name) {
       ('magicNotes.hypnoticGaze', 'spellDifficultyClass.W', '=', null);
     rules.defineRule
       ('magicNotes.instinctiveCharm', 'spellDifficultyClass.W', '=', null);
+    SRD5E.featureSpell(rules, 'Minor Illusion', 'School Of Illusion', 'W', 0);
+    SRD5E.featureSpell(rules, 'Mage Hand', 'School Of Transmutation', 'W', 0);
+    SRD5E.featureSpell(rules, 'Animate Dead', 'School Of Necromancy', 'W', 3);
+    SRD5E.featureSpell(rules, 'Polymorph', 'School Of Transmutation', 'W', 4);
+    SRD5E.featureSpell(rules, 'Raise Dead', 'School Of Transmutation', 'W', 5);
   }
 };
 
@@ -1863,6 +1878,7 @@ PHB5E.pathRulesExtra = function(rules, name) {
     rules.defineRule('magicNotes.circleForms',
       pathLevel, '=', 'source < 6 ? 1 : Math.floor(source / 3)'
     );
+    SRD5E.featureSpell(rules, 'Alter Self', 'Circle Of The Moon', 'D', 2);
 
   } else if(name == 'College Of Valor') {
 
@@ -1894,6 +1910,7 @@ PHB5E.pathRulesExtra = function(rules, name) {
 
     rules.defineRule
       ('magicNotes.potentSpellcasting.1', 'wisdomModifier', '=', null);
+    SRD5E.featureSpell(rules, 'Suggestion', 'Knowledge Domain', 'C', 2);
 
   } else if(name == 'Light Domain') {
 
@@ -1902,6 +1919,7 @@ PHB5E.pathRulesExtra = function(rules, name) {
     rules.defineRule('magicNotes.radianceOfTheDawn', pathLevel, '=', null);
     rules.defineRule
       ('magicNotes.wardingFlare', 'wisdomModifier', '=', 'Math.max(source, 1)');
+    SRD5E.featureSpell(rules, 'Light', 'Light Domain', 'C', 0);
 
   } else if(name == 'Nature Domain') {
 
@@ -2012,12 +2030,37 @@ PHB5E.pathRulesExtra = function(rules, name) {
  */
 PHB5E.raceRulesExtra = function(rules, name) {
   if(name == 'Dark Elf') {
-    rules.defineRule('magicNotes.drowMagic',
+    rules.defineRule('magicNotes.drowMagic.1',
       'race', '?', 'source == "Dark Elf"',
       'level', '=',
-        'source<3 ? "<i>Dancing Lights</i> cantrip" : ' +
-        'source<5 ? "<i>Dancing Lights</i> cantrip, <i>Faerie Fire</i> 1/long rest" : ' +
-        '"<i>Dancing Lights</i> cantrip, <i>Faerie Fire</i> 1/long rest, <i>Darkness</i> 1/long rest"'
+        'source<3 ? "" : ' +
+        'source<5 ? ", cast <i>Faerie Fire</i> 1/long rest" : ' +
+        '"cast <i>Faerie Fire</i> and <i>Darkness</i> 1/long rest"'
+    );
+    SRD5E.featureSpell(rules, 'Dancing Lights', 'Drow Magic', 'B', 0);
+    SRD5E.featureSpell(rules, 'Faerie Fire', 'Drow Magic', 'B', 1);
+    SRD5E.featureSpell(rules, 'Darkness', 'Drow Magic', 'B', 2);
+    rules.defineRule('spells.Faerie Fire(B1 [Drow Magic] Evoc)',
+      'spellCasterLevel.Drow Magic', '?', 'source >= 3'
+    );
+    rules.defineRule('spells.Darkness(B2 [Drow Magic] Evoc)',
+      'spellCasterLevel.Drow Magic', '?', 'source >= 5'
+    );
+    rules.defineRule('spellCasterLevel.Drow Magic',
+      'features.Drow Magic', '?', null,
+      'level', '=', null
+    );
+    rules.defineRule('casterLevels.B',
+      'spellCasterLevel.Drow Magic', '^=', null
+    );
+  } else if(name == 'Forest Gnome') {
+    SRD5E.featureSpell(rules, 'Minor Illusion', 'Natural Illusionist', 'W', 0);
+    rules.defineRule('spellCasterLevel.Natural Illusionist',
+      'features.Natural Illusionist', '?', null,
+      'level', '=', null
+    );
+    rules.defineRule('casterLevels.W',
+      'spellCasterLevel.Natural Illusionist', '^=', null
     );
   }
 };
