@@ -73,7 +73,7 @@ function PHB5E() {
 
 }
 
-PHB5E.VERSION = '2.3.1.8';
+PHB5E.VERSION = '2.3.1.9';
 
 PHB5E.BACKGROUNDS_ADDED = {
   'Charlatan':
@@ -981,6 +981,7 @@ PHB5E.PATHS_ADDED = {
       '"13:Versatile Trickster","17:Spell Thief" ' +
     'SpellAbility=intelligence ' +
     'SpellSlots=' +
+      'W0:3=2;10=3,' +
       'W1:3=2;4=3;7=4,' +
       'W2:7=2;10=3,' +
       'W3:13=2;16=3,' +
@@ -1450,8 +1451,6 @@ PHB5E.SPELLS_LEVELS_ADDED = {
   'Commune With Nature':'Ancients5',
   'Confusion':'Knowledge4',
   'Control Water':'Tempest4',
-  'Darkness':'Shadow2',
-  'Darkvision':'Shadow2',
   'Daylight':'Light3',
   'Detect Thoughts':'"K2 [The Great Old One]"',
   'Dimension Door':'Trickery4,Vengeance4',
@@ -1480,13 +1479,12 @@ PHB5E.SPELLS_LEVELS_ADDED = {
   'Insect Plague':'Nature5,Tempest5,Underdark5',
   'Legend Lore':'Knowledge5',
   'Magic Weapon':'War2',
-  'Minor Illusion':'Shadow0',
   'Mirror Image':'Trickery2',
   'Misty Step':'Ancients2,Vengeance2',
   'Modify Memory':'Trickery5',
   'Moonbeam':'Ancients2',
   'Nondetection':'Knowledge3',
-  'Pass Without Trace':'Shadow2,Trickery2',
+  'Pass Without Trace':'Trickery2',
   'Plant Growth':'Ancients3,"K3 [The Archfey]",Nature3',
   'Polymorph':'Trickery4',
   'Protection From Energy':'Ancients3,Vengeance3',
@@ -1496,7 +1494,6 @@ PHB5E.SPELLS_LEVELS_ADDED = {
   'Sending':'"K3 [The Great Old One]"',
   'Shatter':'Tempest2',
   'Shield Of Faith':'War1',
-  'Silence':'Shadow2',
   'Sleep':'"K1 [The Archfey]"',
   'Sleet Storm':'Tempest3',
   'Speak With Animals':'Ancients1,Nature1',
@@ -1666,7 +1663,7 @@ PHB5E.classRulesExtra = function(rules, name) {
   } else if(name == 'Monk') {
     rules.defineRule('magicNotes.fistOfUnbrokenAir', 'kiSaveDC', '=', null);
     rules.defineRule('magicNotes.waterWhip', 'kiSaveDC', '=', null);
-    SRD5E.featureSpell(rules, 'Minor Illusion', 'Way Of Shadow', 'M', 0);
+    SRD5E.featureSpell(rules, 'Minor Illusion', 'Shadow Arts', 'M', 0);
     SRD5E.featureSpell(rules, 'Thunderwave', 'Fist Of Four Thunders', 'M', 1);
     SRD5E.featureSpell
       (rules, 'Burning Hands', 'Sweeping Cinder Strike', 'M', 1);
@@ -1675,9 +1672,9 @@ PHB5E.classRulesExtra = function(rules, name) {
     SRD5E.featureSpell(rules, 'Shatter', 'Gong Of The Summit', 'M', 2);
     SRD5E.featureSpell
       (rules, 'Gust Of Wind', 'Rush Of The Gale Spirits', 'M', 2);
-    SRD5E.featureSpell(rules, 'Darkvision', 'Way Of Shadow', 'M', 2);
-    SRD5E.featureSpell(rules, 'Pass Without Trace', 'Way Of Shadow', 'M', 2);
-    SRD5E.featureSpell(rules, 'Silence', 'Way Of Shadow', 'M', 2);
+    SRD5E.featureSpell(rules, 'Darkvision', 'Shadow Arts', 'M', 2);
+    SRD5E.featureSpell(rules, 'Pass Without Trace', 'Shadow Arts', 'M', 2);
+    SRD5E.featureSpell(rules, 'Silence', 'Shadow Arts', 'M', 2);
     SRD5E.featureSpell(rules, 'Fireball', 'Flames Of The Phoenix', 'M', 3);
     SRD5E.featureSpell(rules, 'Gaseous Form', 'Mist Stance', 'M', 3);
     SRD5E.featureSpell(rules, 'Fly', 'Ride The Wind', 'M', 3);
@@ -1704,6 +1701,8 @@ PHB5E.classRulesExtra = function(rules, name) {
       ('magicNotes.feyPresence', 'spellDifficultyClass.K', '=', null);
     rules.defineRule
       ('saveNotes.beguilingDefenses', 'spellDifficultyClass.K', '=', null);
+  } else if(name == 'Rogue') {
+    SRD5E.featureSpell(rules, 'Mage Hand', 'Mage Hand Legerdemain', 'W', 0);
   } else if(name == 'Wizard') {
     rules.defineRule
       ('magicNotes.alterMemories.1', 'spellDifficultyClass.W', '=', null);
@@ -1713,11 +1712,11 @@ PHB5E.classRulesExtra = function(rules, name) {
       ('magicNotes.hypnoticGaze', 'spellDifficultyClass.W', '=', null);
     rules.defineRule
       ('magicNotes.instinctiveCharm', 'spellDifficultyClass.W', '=', null);
-    SRD5E.featureSpell(rules, 'Minor Illusion', 'School Of Illusion', 'W', 0);
-    SRD5E.featureSpell(rules, 'Mage Hand', 'School Of Transmutation', 'W', 0);
-    SRD5E.featureSpell(rules, 'Animate Dead', 'School Of Necromancy', 'W', 3);
-    SRD5E.featureSpell(rules, 'Polymorph', 'School Of Transmutation', 'W', 4);
-    SRD5E.featureSpell(rules, 'Raise Dead', 'School Of Transmutation', 'W', 5);
+    SRD5E.featureSpell
+      (rules, 'Minor Illusion', 'Improved Minor Illusion', 'W', 0);
+    SRD5E.featureSpell(rules, 'Animate Dead', 'Undead Thralls', 'W', 3);
+    SRD5E.featureSpell(rules, 'Polymorph', 'Shapechanger', 'W', 4);
+    SRD5E.featureSpell(rules, 'Raise Dead', 'Master Transmuter', 'W', 5);
   }
 };
 
@@ -1878,7 +1877,7 @@ PHB5E.pathRulesExtra = function(rules, name) {
     rules.defineRule('magicNotes.circleForms',
       pathLevel, '=', 'source < 6 ? 1 : Math.floor(source / 3)'
     );
-    SRD5E.featureSpell(rules, 'Alter Self', 'Circle Of The Moon', 'D', 2);
+    SRD5E.featureSpell(rules, 'Alter Self', 'Thousand Forms', 'D', 2);
 
   } else if(name == 'College Of Valor') {
 
@@ -1910,7 +1909,7 @@ PHB5E.pathRulesExtra = function(rules, name) {
 
     rules.defineRule
       ('magicNotes.potentSpellcasting.1', 'wisdomModifier', '=', null);
-    SRD5E.featureSpell(rules, 'Suggestion', 'Knowledge Domain', 'C', 2);
+    SRD5E.featureSpell(rules, 'Suggestion', 'Read Thoughts', 'C', 2);
 
   } else if(name == 'Light Domain') {
 
@@ -1919,7 +1918,7 @@ PHB5E.pathRulesExtra = function(rules, name) {
     rules.defineRule('magicNotes.radianceOfTheDawn', pathLevel, '=', null);
     rules.defineRule
       ('magicNotes.wardingFlare', 'wisdomModifier', '=', 'Math.max(source, 1)');
-    SRD5E.featureSpell(rules, 'Light', 'Light Domain', 'C', 0);
+    SRD5E.featureSpell(rules, 'Light', 'Light Bonus Cantrip', 'C', 0);
 
   } else if(name == 'Nature Domain') {
 
