@@ -73,7 +73,7 @@ function PHB5E() {
 
 }
 
-PHB5E.VERSION = '2.3.2.0';
+PHB5E.VERSION = '2.3.2.1';
 
 PHB5E.BACKGROUNDS_ADDED = {
   'Charlatan':
@@ -380,10 +380,10 @@ PHB5E.FEATURES_ADDED = {
     'Section=feature Note="Tool Proficiency (Choose 1 from any Artisan)"',
   "Transmuter's Stone":
     'Section=magic ' +
-    'Note="Stone gives 60\' darkvision, +10\' speed, proficiency in constitution, or resistance to chosen energy damage; change effect when casting transmutation spell"',
+    'Note="Stone gives 60\' darkvision, +10\' speed, proficiency in constitution saves, or resistance to chosen energy damage; change effect when casting transmutation spell"',
   "War God's Blessing":
     'Section=magic ' +
-    'Note="R30\' Channel Divinity Reaction gives ally +10 attack"',
+    'Note="R30\' Use Reaction and Channel Divinity to give ally +10 attack"',
   'Abjuration Savant':
     'Section=magic Note="Copy abjuration spells into spellbook for half cost"',
   'Abjure Enemy':
@@ -504,12 +504,12 @@ PHB5E.FEATURES_ADDED = {
   'Divination Savant':
     'Section=magic Note="Copy divination spells into spellbook for half cost"',
   'Durable Summons':
-    'Section=magic Note="Summoned creatures gain +30 temporary HP"',
+    'Section=magic Note="Summoned creatures gain 30 temporary HP"',
   'Eagle Totem Spirit':
     'Section=combat ' +
     'Note="Foes Disadv on OA, bonus Dash during rage (heavy armor neg)"',
   'Eagle Totemic Attunement':
-    'Section=ability Note="Fly %{speed}\' 1/tn during rage"',
+    'Section=ability Note="Fly %{speed}\' 1/rd during rage"',
   'Elder Champion':
     'Section=magic ' +
     'Note="Regain 10 HP/rd, cast spells as a bonus action, and inflict Disadv on saves vs. self spells on foes w/in 10\' for 1 min 1/long rest"',
@@ -543,7 +543,7 @@ PHB5E.FEATURES_ADDED = {
     'Note="Use bonus action to gain Adv on next attack and add Superiority Die to damage"',
   'Fey Presence':
     'Section=magic ' +
-    'Note="R10\' All creatures charmed or frightened (DC %V Wis neg) for 1 tn 1/short rest"',
+    'Note="R10\' All creatures charmed or frightened (DC %V Wis neg) for 1 rd 1/short rest"',
   'Fist Of Four Thunders':
     'Section=magic Note="Spend 2 Ki Points to cast <i>Thunderwave</i>"',
   'Fist Of Unbroken Air':
@@ -591,7 +591,7 @@ PHB5E.FEATURES_ADDED = {
     'Section=feature Note="Forge and adopt different identities"',
   'Instinctive Charm':
     'Section=magic ' +
-    'Note="Redirect self foe attack to closest creature (DC %V Wis neg until long rest)"',
+    'Note="R30\' Redirect foe attack on self to another (DC %V Wis neg until long rest)"',
   'Inured To Undeath':
     'Section=save ' +
     'Note="Resistance to necrotic damage, immunity to maximum HP reduction"',
@@ -635,7 +635,7 @@ PHB5E.FEATURES_ADDED = {
     'Note="Spend 4 Ki Points to cast <i>Gaseous Form</i> on self"',
   'Misty Escape':
     'Section=magic ' +
-    'Note="After damage, teleport 60\' and become invisible for 1 tn 1/short rest"',
+    'Note="After damage, teleport 60\' and become invisible for 1 rd 1/short rest"',
   'Nature Bonus Proficiency':'Section=combat Note="Armor Proficiency (Heavy)"',
   'Necromancy Savant':
     'Section=magic Note="Copy necromancy spells into spellbook for half cost"',
@@ -672,7 +672,7 @@ PHB5E.FEATURES_ADDED = {
     'Section=magic Note="Spend 4 Ki Points to cast <i>Fly</i> on self"',
   'Riposte':
     'Section=combat ' +
-    'Note="Use bonus to attack after foe miss, add Superiority Die to damage"',
+    'Note="Use Reaction to attack after foe miss, add Superiority Die to damage"',
   'River Of Hungry Flame':
     'Section=magic Note="Spend 5 Ki Points to cast <i>Wall Of Fire</i>"',
   'Rush Of The Gale Spirits':
@@ -690,13 +690,13 @@ PHB5E.FEATURES_ADDED = {
     'Section=magic ' +
     'Note="Know <i>Polymorph</i>, transform self into CR 1 creature 1/short rest"',
   'Share Spells':
-    'Section=feature Note="R30\' Self spell also affects companion"',
+    'Section=magic Note="R30\' Self spell also affects companion"',
   'Soul Of Vengeance':
     'Section=combat ' +
     'Note="Use Reaction for melee attack on Vow Of Enmity target "',
   'Spell Bombardment':
     'Section=magic ' +
-    'Note="Add another die when maximum rolled on spell damage die 1/tn"',
+    'Note="Add another die when maximum rolled on spell damage die 1/rd"',
   'Spell Resistance':
     'Section=save Note="Adv on saves vs. spells and resistance to spell damage"',
   'Spell Thief':
@@ -736,7 +736,7 @@ PHB5E.FEATURES_ADDED = {
     'Section=magic ' +
     'Note="Copy transmutation spells into spellbook for half cost"',
   'Trickster Cloak Of Shadows':
-    'Section=magic Note="Channel Divinity makes self invisible 1 tn"',
+    'Section=magic Note="Channel Divinity makes self invisible for 1 rd"',
   'Trip Attack':
     'Section=combat ' +
     'Note="Add Superiority Die to damage, knock foe prone (DC %V Str neg)"',
@@ -785,7 +785,7 @@ PHB5E.FEATURES_ADDED = {
     'Note="Melee hit during rage knocks prone Large or smaller foe"',
   'Wrath Of The Storm':
     'Section=combat ' +
-    'Note="Reaction inflicts 2d8 HP lightning or thunder (Dex half) on successful attacker %V/long rest"',
+    'Note="Use Reaction to inflict 2d8 HP lightning or thunder (Dex half) on successful attacker %V/long rest"',
   // Feats
   'Actor':
     'Section=ability,skill ' +
@@ -908,7 +908,7 @@ PHB5E.FEATURES_ADDED = {
   'Ritual Caster':
     'Section=magic Note="Cast spells from ritual book"',
   'Savage Attacker':
-    'Section=combat Note="Take best of two melee damage rolls 1/tn"',
+    'Section=combat Note="Take best of two melee damage rolls 1/rd"',
   'Sentinel':
     'Section=combat ' +
     'Note="OA strike halts foe; OA on adjacent foe Disengage; use Reaction to attack when adjacent foe targets other"',
@@ -981,7 +981,7 @@ PHB5E.PATHS_ADDED = {
       '"13:Versatile Trickster","17:Spell Thief" ' +
     'SpellAbility=intelligence ' +
     'SpellSlots=' +
-      'W0:3=2;10=3,' +
+      'W0:3=3;10=4,' +
       'W1:3=2;4=3;7=4,' +
       'W2:7=2;10=3,' +
       'W3:13=2;16=3,' +
@@ -1339,7 +1339,7 @@ PHB5E.SPELLS_ADDED = {
   'Ensnaring Strike':
     'School=Conjuration ' +
     'Level=Ancients1,R1 ' +
-    'Description="Successful attack restrains foe and inflicts 1d6 HP/tn piercing (Str neg) for conc or 1 min"',
+    'Description="Successful attack restrains foe and inflicts 1d6 HP/rd piercing (Str neg) for conc or 1 min"',
 
   'Feign Death':
     'School=Necromancy ' +
@@ -1672,6 +1672,7 @@ PHB5E.classRulesExtra = function(rules, name) {
     SRD5E.featureSpell(rules, 'Shatter', 'Gong Of The Summit', 'M', 2);
     SRD5E.featureSpell
       (rules, 'Gust Of Wind', 'Rush Of The Gale Spirits', 'M', 2);
+    SRD5E.featureSpell(rules, 'Darkness', 'Shadow Arts', 'M', 2);
     SRD5E.featureSpell(rules, 'Darkvision', 'Shadow Arts', 'M', 2);
     SRD5E.featureSpell(rules, 'Pass Without Trace', 'Shadow Arts', 'M', 2);
     SRD5E.featureSpell(rules, 'Silence', 'Shadow Arts', 'M', 2);
