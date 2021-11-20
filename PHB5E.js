@@ -73,7 +73,7 @@ function PHB5E() {
 
 }
 
-PHB5E.VERSION = '2.3.2.1';
+PHB5E.VERSION = '2.3.3.0';
 
 PHB5E.BACKGROUNDS_ADDED = {
   'Charlatan':
@@ -1004,14 +1004,13 @@ PHB5E.PATHS_ADDED = {
   'Circle Of The Land (Underdark)':
     'Group=Druid Level=levels.Druid ' +
     'Features=' +
-      '"2:Druid Bonus Cantrip","2:Natural Recovery","6:Land\'s Stride",' +
-      '"10:Nature\'s Ward","14:Nature\'s Sanctuary" ' +
-    'SpellAbility=wisdom ' +
-    'SpellSlots=' +
-      'Underdark2:3=2,' +
-      'Underdark3:5=2,' +
-      'Underdark4:7=2,' +
-      'Underdark5:9=2',
+      '"2:Druid Bonus Cantrip","2:Natural Recovery",' +
+      '"6:Land\'s Stride","10:Nature\'s Ward","14:Nature\'s Sanctuary" ' +
+    'Spells=' +
+      '"3:Spider Climb,Web",' +
+      '"5:Gaseous Form,Stinking Cloud",' +
+      '"7:Greater Invisibility,Stone Shape",' +
+      '"9:Cloudkill,Insect Plague"',
   'Circle Of The Moon':
     'Group=Druid Level=levels.Druid ' +
     'Features=' +
@@ -1039,62 +1038,57 @@ PHB5E.PATHS_ADDED = {
     'Features=' +
       '"1:Blessings Of Knowledge","2:Knowledge Of The Ages",' +
       '"6:Read Thoughts","8:Potent Spellcasting","17:Visions Of The Past" ' +
-    'SpellAbility=wisdom ' +
-    'SpellSlots=' +
-      'Knowledge1:1=2,' +
-      'Knowledge2:3=2,' +
-      'Knowledge3:5=2,' +
-      'Knowledge4:7=2,' +
-      'Knowledge5:9=2',
+    'Spells=' +
+      '"1:Command,Identify",' +
+      '"3:Augury,Suggestion",' +
+      '"5:Nondetection,Speak With Dead",' +
+      '"7:Arcane Eye,Confusion",' +
+      '"9:Legend Lore,Scrying"',
   'Light Domain':
     'Group=Cleric Level=levels.Cleric ' +
     'Features=' +
       '"1:Light Bonus Cantrip","1:Warding Flare","2:Radiance Of The Dawn",' +
       '"6:Improved Flare","8:Potent Spellcasting","17:Corona Of Light" ' +
-    'SpellAbility=wisdom ' +
-    'SpellSlots=' +
-      'Light1:1=2,' +
-      'Light2:3=2,' +
-      'Light3:5=2,' +
-      'Light4:7=2,' +
-      'Light5:9=2',
+    'Spells=' +
+      '"1:Burning Hands,Faerie Fire",' +
+      '"3:Flaming Sphere,Scorching Ray",' +
+      '"5:Daylight,Fireball",' +
+      '"7:Guardian Of Faith,Wall Of Fire",' +
+      '"9:Flame Strike,Scrying"',
   'Nature Domain':
     'Group=Cleric Level=levels.Cleric ' +
     'Features=' +
       '"1:Acolyte Of Nature","1:Nature Bonus Proficiency",' +
       '"2:Charm Animals And Plants","6:Dampen Elements","8:Divine Strike",' +
       '"17:Master Of Nature" ' +
-    'SpellAbility=wisdom ' +
-    'SpellSlots=' +
-      'Nature1:1=2,' +
-      'Nature2:3=2,' +
-      'Nature3:5=2,' +
-      'Nature4:7=2,' +
-      'Nature5:9=2',
+    'Spells=' +
+      '"1:Animal Friendship,Speak With Animals",' +
+      '"3:Barkskin,Spike Growth",' +
+      '"5:Plant Growth,Wind Wall",' +
+      '"7:Dominate Beast,Grasping Vine",' +
+      '"9:Insect Plague,Tree Stride"',
   'Oath Of The Ancients':
     'Group=Paladin Level=levels.Paladin ' +
     'Features=' +
       '"3:Nature\'s Wrath","3:Turn The Faithless","7:Aura Of Warding",' +
       '"15:Undying Sentinel","20:Elder Champion" ' +
-    'SpellAbility=charisma ' +
-    'SpellSlots=' +
-      'Ancients1:3=2,' +
-      'Ancients2:5=2,' +
-      'Ancients3:9=2,' +
-      'Ancients4:13=2,' +
-      'Ancients5:17=2',
+    'Spells=' +
+      '"3:Ensnaring Strike,Speak With Animals",' +
+      '"5:Moonbeam,Misty Step",' +
+      '"9:Plant Growth,Protection From Energy",' +
+      '"13:Ice Storm,Stoneskin",' +
+      '"17:Commune With Nature,Tree Stride"',
   'Oath Of Vengeance':
     'Group=Paladin Level=levels.Paladin ' +
     'Features=' +
       '"3:Abjure Enemy","3:Vow Of Enmity","7:Relentless Avenger",' +
       '"15:Soul Of Vengeance","20:Avenging Angel" ' +
-    'SpellAbility=charisma ' +
-    'SpellSlots=' +
-      'Vengeance1:3=2,' +
-      'Vengeance2:5=2,' +
-      'Vengeance3:9=2,' +
-      'Vengeance4:13=2,' +
-      'Vengeance5:17=2',
+    'Spells=' +
+      '"3:Bane,Hunter\'s Mark",' +
+      '"5:Hold Person,Misty Step",' +
+      '"9:Haste,Protection From Energy",' +
+      '"13:Banishment,Dimension Door",' +
+      '"17:Hold Monster,Scrying"',
   'Path Of The Totem Warrior (Bear)':
     'Group=Barbarian Level=levels.Barbarian ' +
     'Features=' +
@@ -1151,13 +1145,12 @@ PHB5E.PATHS_ADDED = {
       '"1:Tempest Bonus Proficiencies","1:Wrath Of The Storm",' +
       '"2:Destructive Wrath","6:Thunderbolt Strike","8:Divine Strike",' +
       '17:Stormborn ' +
-    'SpellAbility=wisdom ' +
-    'SpellSlots=' +
-      'Tempest1:1=2,' +
-      'Tempest2:3=2,' +
-      'Tempest3:5=2,' +
-      'Tempest4:7=2,' +
-      'Tempest5:9=2',
+    'Spells=' +
+      '"1:Fog Cloud,Thunderwave",' +
+      '"3:Gust Of Wind,Shatter",' +
+      '"5:Call Lightning,Sleet Storm",' +
+      '"7:Control Water,Ice Storm",' +
+      '"9:Destructive Wave,Insect Plague"',
   'The Archfey':
     'Group=Warlock Level=levels.Warlock ' +
     'Features=' +
@@ -1174,25 +1167,23 @@ PHB5E.PATHS_ADDED = {
       '"1:Blessing Of The Trickster","2:Invoke Duplicity",' +
       '"6:Trickster Cloak Of Shadows","8:Divine Strike",' +
       '"17:Improved Duplicity" ' +
-    'SpellAbility=wisdom ' +
-    'SpellSlots=' +
-      'Trickery1:1=2,' +
-      'Trickery2:3=2,' +
-      'Trickery3:5=2,' +
-      'Trickery4:7=2,' +
-      'Trickery5:9=2',
+    'Spells=' +
+      '"1:Charm Person,Disguise Self",' +
+      '"3:Mirror Image,Pass Without Trace",' +
+      '"5:Blink,Dispel Magic",' +
+      '"7:Dimension Door,Polymorph",' +
+      '"9:Dominate Person,Modify Memory"',
   'War Domain':
     'Group=Cleric Level=levels.Cleric ' +
     'Features=' +
       '"1:War Bonus Proficiencies","1:War Priest","2:Guided Strike",' +
       '"6:War God\'s Blessing","8:Divine Strike","17:Avatar Of Battle" ' +
-    'SpellAbility=wisdom ' +
-    'SpellSlots=' +
-      'War1:1=2,' +
-      'War2:3=2,' +
-      'War3:5=2,' +
-      'War4:7=2,' +
-      'War5:9=2',
+    'Spells=' +
+      '"1:Divine Favor,Shield Of Faith",' +
+      '"3:Magic Weapon,Spiritual Weapon",' +
+      '"5:Crusader\'s Mantle,Spirit Guardians",' +
+      '"7:Freedom Of Movement,Stoneskin",' +
+      '"9:Flame Strike,Hold Monster"',
   'Way Of Shadow':
     'Group=Monk Level=levels.Monk ' +
     'Features=' +
@@ -1320,12 +1311,12 @@ PHB5E.SPELLS_ADDED = {
     'Description="R120\' Self directs target\'s attacks (Wis neg) for conc or 1 min"',
   "Crusader's Mantle":
     'School=Evocation ' +
-    'Level=P3,War3 ' +
+    'Level=P3 ' +
     'Description="Allies in 30\' radius inflict +1d4 HP radiant for conc or 1 min"',
 
   'Destructive Wave':
     'School=Evocation ' +
-    'Level=P5,Tempest5 ' +
+    'Level=P5 ' +
     'Description="30\' radius inflicts 5d6 HP thunder and knocks prone (Con half HP, not prone)"',
   'Dissonant Whispers':
     'School=Enchantment ' +
@@ -1338,7 +1329,7 @@ PHB5E.SPELLS_ADDED = {
     'Description="Touched weapon gains +1 attack and +1d4 HP acid, cold, fire, lightning, or thunder for conc or 1 hr"',
   'Ensnaring Strike':
     'School=Conjuration ' +
-    'Level=Ancients1,R1 ' +
+    'Level=R1 ' +
     'Description="Successful attack restrains foe and inflicts 1d6 HP/rd piercing (Str neg) for conc or 1 min"',
 
   'Feign Death':
@@ -1352,7 +1343,7 @@ PHB5E.SPELLS_ADDED = {
 
   'Grasping Vine':
     'School=Conjuration ' +
-    'Level=D4,Nature4,R4 ' +
+    'Level=D4,R4 ' +
     'Description="R30\' Vine pulls target 20\' (Dex neg) for conc or 1 min"',
 
   'Hail Of Thorns':
@@ -1433,85 +1424,21 @@ PHB5E.SPELLS_ADDED = {
 
 };
 PHB5E.SPELLS_LEVELS_ADDED = {
-  'Animal Friendship':'Nature1',
-  'Arcane Eye':'Knowledge4',
-  'Augury':'Knowledge2',
-  'Bane':'Vengeance1',
-  'Banishment':'Vengeance4',
-  'Barkskin':'Nature2',
   'Black Tentacles':'"K4 [The Great Old One]"',
-  'Blink':'"K3 [The Archfey]",Trickery3',
-  'Burning Hands':'Light1',
-  'Call Lightning':'Tempest3',
+  'Blink':'"K3 [The Archfey]"',
   'Calm Emotions':'"K2 [The Archfey]"',
-  'Charm Person':'Trickery1',
   'Clairvoyance':'"K3 [The Great Old One]"',
-  'Cloudkill':'Underdark5',
-  'Command':'Knowledge1',
-  'Commune With Nature':'Ancients5',
-  'Confusion':'Knowledge4',
-  'Control Water':'Tempest4',
-  'Daylight':'Light3',
   'Detect Thoughts':'"K2 [The Great Old One]"',
-  'Dimension Door':'Trickery4,Vengeance4',
-  'Disguise Self':'Trickery1',
-  'Dispel Magic':'Trickery3',
-  'Divine Favor':'War1',
-  'Dominate Beast':'"K4 [The Archfey]","K4 [The Great Old One]",Nature4',
-  'Dominate Person':'"K5 [The Archfey]","K5 [The Great Old One]",Trickery5',
-  'Faerie Fire':'"K1 [The Archfey]",Light1',
-  'Fireball':'Light3',
-  'Flame Strike':'Light5,War5',
-  'Flaming Sphere':'Light2',
-  'Fog Cloud':'Tempest1',
-  'Freedom Of Movement':'War4',
-  'Gaseous Form':'Underdark3',
-  'Greater Invisibility':'"K4 [The Archfey]",Underdark4',
-  'Guardian Of Faith':'Light4',
-  'Gust Of Wind':'Tempest2',
-  'Haste':'Vengeance3',
+  'Dominate Beast':'"K4 [The Archfey]","K4 [The Great Old One]"',
+  'Dominate Person':'"K5 [The Archfey]","K5 [The Great Old One]"',
+  'Faerie Fire':'"K1 [The Archfey]"',
+  'Greater Invisibility':'"K4 [The Archfey]"',
   'Hideous Laughter':'"K1 [The Great Old One]"',
-  'Hold Monster':'Vengeance5,War5',
-  'Hold Person':'Vengeance2',
-  'Hunter\'s Mark':'Vengeance1',
-  'Ice Storm':'Ancients4,Tempest4',
-  'Identify':'Knowledge1',
-  'Insect Plague':'Nature5,Tempest5,Underdark5',
-  'Legend Lore':'Knowledge5',
-  'Magic Weapon':'War2',
-  'Mirror Image':'Trickery2',
-  'Misty Step':'Ancients2,Vengeance2',
-  'Modify Memory':'Trickery5',
-  'Moonbeam':'Ancients2',
-  'Nondetection':'Knowledge3',
-  'Pass Without Trace':'Trickery2',
-  'Plant Growth':'Ancients3,"K3 [The Archfey]",Nature3',
-  'Polymorph':'Trickery4',
-  'Protection From Energy':'Ancients3,Vengeance3',
-  'Scorching Ray':'Light2',
-  'Scrying':'Knowledge5,Light5,Vengeance5',
+  'Plant Growth':'"K3 [The Archfey]"',
   'Seeming':'"K5 [The Archfey]"',
   'Sending':'"K3 [The Great Old One]"',
-  'Shatter':'Tempest2',
-  'Shield Of Faith':'War1',
   'Sleep':'"K1 [The Archfey]"',
-  'Sleet Storm':'Tempest3',
-  'Speak With Animals':'Ancients1,Nature1',
-  'Speak With Dead':'Knowledge3',
-  'Spider Climb':'Underdark2',
-  'Spike Growth':'Nature2',
-  'Spirit Guardians':'War3',
-  'Spiritual Weapon':'War2',
-  'Stinking Cloud':'Underdark3',
-  'Stone Shape':'Underdark4',
-  'Stoneskin':'Ancients4,War4',
-  'Suggestion':'Knowledge2',
-  'Telekinesis':'"K5 [The Great Old One]"',
-  'Thunderwave':'Tempest1',
-  'Tree Stride':'Ancients5,Nature5',
-  'Wall Of Fire':'Light4',
-  'Web':'Underdark2',
-  'Wind Wall':'Nature3'
+  'Telekinesis':'"K5 [The Great Old One]"'
 };
 PHB5E.SPELLS_RENAMED = {
   'Acid Arrow':"Melf's Acid Arrow",
@@ -1540,6 +1467,9 @@ for(var s in PHB5E.SPELLS_RENAMED) {
   PHB5E.SPELLS[PHB5E.SPELLS_RENAMED[s]] = PHB5E.SPELLS[s];
   delete PHB5E.SPELLS[s];
 }
+// Presently, there's only known use of a renamed spell in a spell list
+PHB5E.PATHS['Circle Of The Land (Swamp)'] =
+  PHB5E.PATHS['Circle Of The Land (Swamp)'].replace('Acid Arrow', "Melf's Acid Arrow");
 PHB5E.DEITIES_ADDED = {
   // Allow clerics w/no deity to have a domain
   'None':'Domain=' + QuilvynUtils.getKeys(PHB5E.PATHS).filter(x => x.match(/Domain$/)).map(x => x.replace(' Domain', '')).join(','),
@@ -1657,32 +1587,39 @@ PHB5E.choiceRules = function(rules, type, name, attrs) {
  */
 PHB5E.classRulesExtra = function(rules, name) {
   if(name == 'Barbarian') {
-    SRD5E.featureSpell(rules, 'Beast Sense', 'Spirit Seeker', 'R', 2);
-    SRD5E.featureSpell(rules, 'Speak With Animals', 'Spirit Seeker', 'R', 1);
-    SRD5E.featureSpell(rules, 'Commune With Nature', 'Spirit Walker', 'R', 5);
+    SRD5E.featureSpells
+      (rules, 'Spirit Seeker', 'R', null, ['Beast Sense,Speak With Animals']);
+    SRD5E.featureSpells
+      (rules, 'Spirit Walker', 'R', null, ['Commune With Nature']);
+    SRD5E.featureSpells(rules, 'Commune With Nature', 'Spirit Walker', 'R', 5);
   } else if(name == 'Monk') {
     rules.defineRule('magicNotes.fistOfUnbrokenAir', 'kiSaveDC', '=', null);
     rules.defineRule('magicNotes.waterWhip', 'kiSaveDC', '=', null);
-    SRD5E.featureSpell(rules, 'Minor Illusion', 'Shadow Arts', 'M', 0);
-    SRD5E.featureSpell(rules, 'Thunderwave', 'Fist Of Four Thunders', 'M', 1);
-    SRD5E.featureSpell
-      (rules, 'Burning Hands', 'Sweeping Cinder Strike', 'M', 1);
-    SRD5E.featureSpell
-      (rules, 'Hold Person', 'Clench Of The North Wind', 'M', 2);
-    SRD5E.featureSpell(rules, 'Shatter', 'Gong Of The Summit', 'M', 2);
-    SRD5E.featureSpell
-      (rules, 'Gust Of Wind', 'Rush Of The Gale Spirits', 'M', 2);
-    SRD5E.featureSpell(rules, 'Darkness', 'Shadow Arts', 'M', 2);
-    SRD5E.featureSpell(rules, 'Darkvision', 'Shadow Arts', 'M', 2);
-    SRD5E.featureSpell(rules, 'Pass Without Trace', 'Shadow Arts', 'M', 2);
-    SRD5E.featureSpell(rules, 'Silence', 'Shadow Arts', 'M', 2);
-    SRD5E.featureSpell(rules, 'Fireball', 'Flames Of The Phoenix', 'M', 3);
-    SRD5E.featureSpell(rules, 'Gaseous Form', 'Mist Stance', 'M', 3);
-    SRD5E.featureSpell(rules, 'Fly', 'Ride The Wind', 'M', 3);
-    SRD5E.featureSpell(rules, 'Stoneskin', 'Eternal Mountain Defense', 'M', 4);
-    SRD5E.featureSpell(rules, 'Wall Of Fire', 'River Of Hungry Flame', 'M', 4);
-    SRD5E.featureSpell(rules, 'Cone Of Cold', 'Breath Of Winter', 'M', 5);
-    SRD5E.featureSpell(rules, 'Wall Of Stone', 'Wave Of Rolling Earth', 'M', 5);
+    SRD5E.featureSpells(
+      rules, 'Shadow Arts', 'M', null,
+      ['Darkness,Darkvision,Minor Illusion,Pass Without Trace,Silence']
+    );
+    SRD5E.featureSpells
+      (rules, 'Fist Of Four Thunders', 'M', null, ['Thunderwave']);
+    SRD5E.featureSpells
+      (rules, 'Sweeping Cinder Strike', 'M', null, ['Burning Hands']);
+    SRD5E.featureSpells
+      (rules, 'Clench Of The North Wind', 'M', null, ['Hold Person']);
+    SRD5E.featureSpells(rules, 'Gong Of The Summit', 'M', null, ['Shatter']);
+    SRD5E.featureSpells
+      (rules, 'Rush Of The Gale Spirits', 'M', null, ['Gust Of Wind']);
+    SRD5E.featureSpells(rules, 'Gong Of The Summit', 'M', null, ['Shatter']);
+    SRD5E.featureSpells
+      (rules, 'Flames Of The Phoenix', 'M', null, ['Fireball']);
+    SRD5E.featureSpells(rules, 'Mist Stance', 'M', null, ['Gaseous Form']);
+    SRD5E.featureSpells(rules, 'Ride The Wind', 'M', null, ['Fly']);
+    SRD5E.featureSpells
+      (rules, 'Eternal Mountain Defense', 'M', null, ['Stoneskin']);
+    SRD5E.featureSpells
+      (rules, 'River Of Hungry Flame', 'M', null, ['Wall Of Fire']);
+    SRD5E.featureSpells(rules, 'Breath Of Winter', 'M', null, ['Cone Of Cold']);
+    SRD5E.featureSpells
+      (rules, 'Wave Of Rolling Earth', 'M', null, ['Wall Of Stone']);
   } else if(name == 'Paladin') {
     rules.defineRule
       ('combatNotes.avengingAngel', 'spellDifficultyClass.P', '=', null);
@@ -1703,7 +1640,8 @@ PHB5E.classRulesExtra = function(rules, name) {
     rules.defineRule
       ('saveNotes.beguilingDefenses', 'spellDifficultyClass.K', '=', null);
   } else if(name == 'Rogue') {
-    SRD5E.featureSpell(rules, 'Mage Hand', 'Mage Hand Legerdemain', 'W', 0);
+    SRD5E.featureSpells
+      (rules, 'Mage Hand Legerdemain', 'W', null, ['Mage Hand']);
   } else if(name == 'Wizard') {
     rules.defineRule
       ('magicNotes.alterMemories.1', 'spellDifficultyClass.W', '=', null);
@@ -1713,11 +1651,11 @@ PHB5E.classRulesExtra = function(rules, name) {
       ('magicNotes.hypnoticGaze', 'spellDifficultyClass.W', '=', null);
     rules.defineRule
       ('magicNotes.instinctiveCharm', 'spellDifficultyClass.W', '=', null);
-    SRD5E.featureSpell
-      (rules, 'Minor Illusion', 'Improved Minor Illusion', 'W', 0);
-    SRD5E.featureSpell(rules, 'Animate Dead', 'Undead Thralls', 'W', 3);
-    SRD5E.featureSpell(rules, 'Polymorph', 'Shapechanger', 'W', 4);
-    SRD5E.featureSpell(rules, 'Raise Dead', 'Master Transmuter', 'W', 5);
+    SRD5E.featureSpells
+      (rules, 'Improved Minor Illusion', 'W', null, ['Minor Illusion']);
+    SRD5E.featureSpells(rules, 'Undead Thralls', 'W', null, ['Animate Dead']);
+    SRD5E.featureSpells(rules, 'Shapechanger', 'W', null, ['Polymorph']);
+    SRD5E.featureSpells(rules, 'Master Transmuter', 'W', null, ['Raise Dead']);
   }
 };
 
@@ -1878,7 +1816,7 @@ PHB5E.pathRulesExtra = function(rules, name) {
     rules.defineRule('magicNotes.circleForms',
       pathLevel, '=', 'source < 6 ? 1 : Math.floor(source / 3)'
     );
-    SRD5E.featureSpell(rules, 'Alter Self', 'Thousand Forms', 'D', 2);
+    SRD5E.featureSpells(rules, 'Thousand Forms', 'D', null, ['Alter Self']);
 
   } else if(name == 'College Of Valor') {
 
@@ -1910,7 +1848,7 @@ PHB5E.pathRulesExtra = function(rules, name) {
 
     rules.defineRule
       ('magicNotes.potentSpellcasting.1', 'wisdomModifier', '=', null);
-    SRD5E.featureSpell(rules, 'Suggestion', 'Read Thoughts', 'C', 2);
+    SRD5E.featureSpells(rules, 'Read Thoughts', 'C', null, ['Suggestion']);
 
   } else if(name == 'Light Domain') {
 
@@ -1919,7 +1857,7 @@ PHB5E.pathRulesExtra = function(rules, name) {
     rules.defineRule('magicNotes.radianceOfTheDawn', pathLevel, '=', null);
     rules.defineRule
       ('magicNotes.wardingFlare', 'wisdomModifier', '=', 'Math.max(source, 1)');
-    SRD5E.featureSpell(rules, 'Light', 'Light Bonus Cantrip', 'C', 0);
+    SRD5E.featureSpells(rules, 'Light Bonus Cantrip', 'C', null, ['Light']);
 
   } else if(name == 'Nature Domain') {
 
@@ -2035,16 +1973,13 @@ PHB5E.raceRulesExtra = function(rules, name) {
       'level', '=',
         'source<3 ? "" : ' +
         'source<5 ? ", cast <i>Faerie Fire</i> 1/long rest" : ' +
-        '"cast <i>Faerie Fire</i> and <i>Darkness</i> 1/long rest"'
+        '", cast <i>Faerie Fire</i> and <i>Darkness</i> 1/long rest"'
     );
-    SRD5E.featureSpell(rules, 'Dancing Lights', 'Drow Magic', 'B', 0);
-    SRD5E.featureSpell(rules, 'Faerie Fire', 'Drow Magic', 'B', 1);
-    SRD5E.featureSpell(rules, 'Darkness', 'Drow Magic', 'B', 2);
-    rules.defineRule('spells.Faerie Fire(B1 [Drow Magic] Evoc)',
-      'spellCasterLevel.Drow Magic', '?', 'source >= 3'
-    );
-    rules.defineRule('spells.Darkness(B2 [Drow Magic] Evoc)',
-      'spellCasterLevel.Drow Magic', '?', 'source >= 5'
+    SRD5E.featureSpells(
+      rules, 'Drow Magic', 'B', 'level',
+      ['Dancing Lights',
+       '3:Faerie Fire',
+       '5:Darkness']
     );
     rules.defineRule('spellCasterLevel.Drow Magic',
       'features.Drow Magic', '?', null,
@@ -2054,7 +1989,8 @@ PHB5E.raceRulesExtra = function(rules, name) {
       'spellCasterLevel.Drow Magic', '^=', null
     );
   } else if(name == 'Forest Gnome') {
-    SRD5E.featureSpell(rules, 'Minor Illusion', 'Natural Illusionist', 'W', 0);
+    SRD5E.featureSpells
+      (rules, 'Natural Illusionist', 'W', null, ['Minor Illusion']);
     rules.defineRule('spellCasterLevel.Natural Illusionist',
       'features.Natural Illusionist', '?', null,
       'level', '=', null
