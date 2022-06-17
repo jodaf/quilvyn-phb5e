@@ -1238,7 +1238,7 @@ PHB5E.SPELLS_ADDED = {
   'Arcane Gate':
     'School=Conjuration ' +
     'Level=K6,S6,W6 ' +
-    'Description="R10\'/500\' Creates teleporation portal pair for conc or 10 min"',
+    'Description="R10\'/500\' Creates teleportation portal pair for conc or 10 min"',
   'Armor Of Agathys':
     'School=Abjuration ' +
     'Level=K1 ' +
