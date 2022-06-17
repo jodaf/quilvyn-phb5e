@@ -73,7 +73,7 @@ function PHB5E() {
 
 }
 
-PHB5E.VERSION = '2.3.3.0';
+PHB5E.VERSION = '2.3.3.1';
 
 PHB5E.BACKGROUNDS_ADDED = {
   'Charlatan':
@@ -796,7 +796,7 @@ PHB5E.FEATURES_ADDED = {
     'Note="+5 Initiative; cannot be surprised; no Adv to unseen foes"',
   'Athlete':
     'Section=ability ' +
-    'Note="+1 Dexterity or Strength; standing, long jump, and running high jump each use only 5\' move; climb at full speed"',
+    'Note="Ability Boost (Choose 1 from Dexterity, Strength)/Standing, long jump, and running high jump each use only 5\' move/Climb at full speed"',
   'Charger':
     'Section=combat ' +
     'Note="After dash, bonus attack inflicts +5 HP damage or bonus 10\' push"',
@@ -850,7 +850,7 @@ PHB5E.FEATURES_ADDED = {
          '"Always know direction of north and hours until sunrise or sunset; recall anything seen or heard during the past month"',
   'Lightly Armored':
     'Section=ability,combat ' +
-    'Note="+1 Dexterity or Strength",' +
+    'Note="Ability Boost (Choose 1 from Dexterity, Strength)",' +
          '"Armor Proficiency (Light)"',
   'Linguist':
     'Section=ability,feature,skill ' +
@@ -888,14 +888,14 @@ PHB5E.FEATURES_ADDED = {
          '"Dash at full speed in difficult terrain, no OA from targeted foe"',
   'Moderately Armored':
     'Section=ability,combat ' +
-    'Note="+1 Dexterity or Strength",' +
+    'Note="Ability Boost (Choose 1 from Dexterity, Strength)",' +
          '"Armor Proficiency (Medium/Shield)"',
   'Mounted Combatant':
     'Section=combat ' +
     'Note="Adv on melee attacks on unmounted foe smaller than mount, redirect attack on mount to self, mount takes no damage on Dex save, half on fail"',
   'Observant':
     'Section=ability,feature,skill ' +
-    'Note="+1 Intelligence or Wisdom",' +
+    'Note="Ability Boost (Choose 1 from Intelligence, Wisdom)",' +
          '"Read lips",' +
          '"+5 passive Investigation and Perception"',
   'Polearm Master':
@@ -903,7 +903,7 @@ PHB5E.FEATURES_ADDED = {
     'Note="Bonus attack w/polearm butt inflicts 1d4 HP bludgeoning, OA when foe enters reach"',
   'Resilient':
     'Section=ability,save ' +
-    'Note="+1 Ability Boosts",' +
+    'Note="Ability Boost (Choose 1 from any)",' +
          '"Save Proficiency (Choose 1 from any)"',
   'Ritual Caster':
     'Section=magic Note="Cast spells from ritual book"',
@@ -929,7 +929,7 @@ PHB5E.FEATURES_ADDED = {
     'Note="Dbl attack spell range, ignore 3/4 cover, know additional attack cantrip"',
   'Tavern Brawler':
     'Section=ability,combat ' +
-    'Note="+1 Constitution or Strength",' +
+    'Note="Ability Boost (Choose 1 from Constitution, Strength)",' +
          '"Weapon Proficiency (Improvised)/Unarmed d4 damage/Bonus grapple after Unarmed or Improvised strike"',
   'Tough':'Section=combat Note="+%V HP"',
   'War Caster':
@@ -937,7 +937,7 @@ PHB5E.FEATURES_ADDED = {
     'Note="Adv on concentration to maintain spell, cast when holding shield and/or weapon, use Reaction to cast as OA"',
   'Weapon Master':
     'Section=ability,combat ' +
-    'Note="+1 Dexterity or Strength",' +
+    'Note="Ability Boost (Choose 1 from Dexterity, Strength)",' +
          '"Weapon Proficiency (Choose 4 from any)"',
   // Races
   'Dark Elf Ability Adjustment':
@@ -1669,8 +1669,6 @@ PHB5E.featRulesExtra = function(rules, name) {
 
   if(name == 'Alert') {
     rules.defineRule('initiative', 'combatNotes.alert', '+', '5');
-  } else if(name == 'Athlete') {
-    rules.defineRule('abilityBoosts', 'abilityNotes.athlete', '+=', '1');
   } else if(name == 'Defensive Duelist') {
     rules.defineRule
       ('combatNotes.defensiveDuelist', 'proficiencyBonus', '=', null);
@@ -1683,8 +1681,6 @@ PHB5E.featRulesExtra = function(rules, name) {
       'level', '=', null,
       'charismaModifier', '+', null
     );
-  } else if(name == 'Lightly Armored') {
-    rules.defineRule('abilityBoosts', 'abilityNotes.lightlyArmored', '+=', '1');
   } else if(name == 'Linguist') {
     rules.defineRule('featureNotes.linguist',
       'intelligence', '=', null,
@@ -1731,19 +1727,12 @@ PHB5E.featRulesExtra = function(rules, name) {
       'dexterity', '?', 'source >= 16',
       'armorWeight', '=', 'source == 2 ? 1 : null'
     );
-  } else if(name == 'Moderately Armored') {
-    rules.defineRule
-      ('abilityBoosts', 'abilityNotes.moderatelyArmored', '+=', '1');
-  } else if(name == 'Observant') {
-    rules.defineRule('abilityBoosts', 'abilityNotes.observant', '+=', '1');
   } else if(name == 'Tavern Brawler') {
-    rules.defineRule('abilityBoosts', 'abilityNotes.tavernBrawler', '+=', '1');
     rules.defineRule
       ('weapons.Unarmed.2', 'combatNotes.tavernBrawler', '^=', '"1d4"');
   } else if(name == 'Tough') {
     rules.defineRule('combatNotes.tough', 'level', '=', '2 * source');
   } else if(name == 'Weapon Master') {
-    rules.defineRule('abilityBoosts', 'abilityNotes.weaponMaster', '+=', '1');
     rules.defineRule
       ('weaponChoiceCount', 'combatNotes.weaponMaster', '+=', '4');
   }
