@@ -73,7 +73,7 @@ function PHB5E() {
 
 }
 
-PHB5E.VERSION = '2.3.3.2';
+PHB5E.VERSION = '2.3.4.0';
 
 PHB5E.BACKGROUNDS_ADDED = {
   'Charlatan':
@@ -111,8 +111,7 @@ PHB5E.BACKGROUNDS_ADDED = {
       '"1:Skill Proficiency (Insight/Persuasion)",' +
       '"1:Tool Proficiency (Choose 1 from any Artisan)",' +
       '"1:Language (Choose 1 from any)",' +
-      '"1:Guild Membership" ' +
-    'Languages=any',
+      '"1:Guild Membership"',
   'Hermit':
     'Equipment=' +
       'Clothes,"Herbalism Kit","Scroll Case With Notes","Winter Blanket",' +
@@ -121,8 +120,7 @@ PHB5E.BACKGROUNDS_ADDED = {
       '"1:Skill Proficiency (Medicine/Religion)",' +
       '"1:Tool Proficiency (Herbalism Kit)",' +
       '"1:Language (Choose 1 from any)",' +
-      '1:Discovery ' +
-    'Languages=any',
+      '1:Discovery',
   'Noble':
     'Equipment=' +
       '"Fine Clothes","Pedigree Scroll","Signet Ring","25 GP" ' +
@@ -130,8 +128,7 @@ PHB5E.BACKGROUNDS_ADDED = {
       '"1:Skill Proficiency (History/Persuasion)",' +
       '"1:Tool Proficiency (Choose 1 from any Game)",' +
       '"1:Language (Choose 1 from any)",' +
-      '"1:Position Of Privilege" ' +
-    'Languages=any',
+      '"1:Position Of Privilege"',
   'Outlander':
     'Equipment=' +
       '"Animal Trophy","Hunting Trap",Staff,"Traveler\'s Clothes","10 GP" ' +
@@ -139,8 +136,7 @@ PHB5E.BACKGROUNDS_ADDED = {
       '"1:Skill Proficiency (Athletics/Survival)",' +
       '"1:Tool Proficiency (Choose 1 from any Music)",' +
       '"1:Language (Choose 1 from any)",' +
-      '1:Wanderer ' +
-    'Languages=any',
+      '1:Wanderer',
   'Sage':
     'Equipment=' +
       '"Bottle Ink",Clothes,"Letter W/Unanswered Question","Quill",' +
@@ -148,8 +144,7 @@ PHB5E.BACKGROUNDS_ADDED = {
     'Features=' +
       '"1:Skill Proficiency (Arcana/History)",' +
       '"1:Language (Choose 2 from any)",' +
-      '1:Researcher ' +
-    'Languages=any,any',
+      '1:Researcher',
   'Sailor':
     'Equipment=' +
       '"Belaying Pin",Clothes,"Lucky Charm","50\' Silk Rope","10 GP" ' +
@@ -451,7 +446,7 @@ PHB5E.FEATURES_ADDED = {
   'Blessings Of Knowledge':
     'Section=feature,skill ' +
     'Note="Skill Proficiency (Choose 2 from Arcana, History, Nature, Religion)",' +
-         '"+2 Language Count/+%{proficiencyBonus} on chosen skills"',
+         '"Language (Choose 2 from any)/+%{proficiencyBonus} on chosen skills"',
   'Breath Of Winter':
     'Section=magic Note="Spend 6 Ki Points to cast <i>Cone Of Cold</i>"',
   'Charm Animals And Plants':
@@ -861,7 +856,7 @@ PHB5E.FEATURES_ADDED = {
     'Section=ability,feature,skill ' +
     'Note="+1 Intelligence",' +
          '"Create ciphers that require a DC %V Int check to decode",' +
-         '"+3 Language Count"',
+         '"Language (Choose 3 from any)"',
   'Lucky':
     'Section=feature ' +
     'Note="Adv on attack, ability, or saving throw or foe Disadv on self attack 3/long rest"',
@@ -1211,36 +1206,31 @@ PHB5E.RACES_ADDED = {
       '"1:Language (Common/Elvish)",' +
       '"1:Dark Elf Ability Adjustment","1:Drow Magic",' +
       '"1:Drow Weapon Training","1:Fey Ancestry","1:Keen Senses",' +
-      '"1:Sunlight Sensitivity","1:Superior Darkvision",1:Trance ' +
-    'Languages=Common,Elvish',
+      '"1:Sunlight Sensitivity","1:Superior Darkvision",1:Trance',
   'Forest Gnome':
     'Features=' +
       '"1:Language (Common/Gnomish)",' +
       '1:Darkvision,"1:Gnome Cunning","1:Natural Illusionist",' +
       '"1:Forest Gnome Ability Adjustment",1:Slow,1:Small,' +
-      '"1:Speak With Small Beasts" ' +
-    'Languages=Common,Gnomish',
+      '"1:Speak With Small Beasts"',
   'Mountain Dwarf':
     'Features=' +
       '"1:Language (Common/Dwarvish)",' +
       '"1:Tool Proficiency (Choose 1 from Brewer\'s Tools, Mason\'s Tools, Smith\'s Tools)",' +
       '1:Darkvision,"1:Dwarven Armor Training","1:Dwarven Combat Training",' +
       '"1:Dwarven Resilience","1:Mountain Dwarf Ability Adjustment",1:Slow,' +
-      '1:Steady,1:Stonecunning ' +
-    'Languages=Common,Dwarvish',
+      '1:Steady,1:Stonecunning',
   'Stout Halfling':
     'Features=' +
       '"1:Language (Common/Halfling)",' +
       '1:Brave,"1:Halfling Nimbleness","1:Lucky Halfling",1:Slow,1:Small,' +
-      '"1:Stout Halfling Ability Adjustment","1:Stout Resilience" ' +
-    'Languages=Common,Halfling',
+      '"1:Stout Halfling Ability Adjustment","1:Stout Resilience"',
   'Wood Elf':
     'Features=' +
       '"1:Language (Common/Elvish)",' +
       '1:Darkvision,"1:Elf Weapon Training","1:Fey Ancestry",' +
       '"1:Fleet Of Foot","1:Keen Senses","1:Mask Of The Wild",1:Trance,' +
-      '"1:Wood Elf Ability Adjustment" ' +
-    'Languages=Common,Elvish'
+      '"1:Wood Elf Ability Adjustment"'
 };
 PHB5E.RACES = Object.assign({}, SRD5E.RACES, PHB5E.RACES_ADDED);
 PHB5E.SPELLS_ADDED = {
