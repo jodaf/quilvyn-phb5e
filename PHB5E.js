@@ -73,7 +73,7 @@ function PHB5E() {
 
 }
 
-PHB5E.VERSION = '2.3.4.0';
+PHB5E.VERSION = '2.3.4.1';
 
 PHB5E.BACKGROUNDS_ADDED = {
   'Charlatan':
@@ -1242,10 +1242,12 @@ PHB5E.SPELLS_ADDED = {
   'Armor Of Agathys':
     'School=Abjuration ' +
     'Level=K1 ' +
+    'AtHigherLevels="gives +5 temporary HP and inflicts +5 HP cold" ' +
     'Description="Self gains +5 temporary HP, successful attacker suffers 5 HP cold for 1 hr"',
   'Arms Of Hadar':
     'School=Conjuration ' +
     'Level=K1 ' +
+    'AtHigherLevels="inflicts +1d6 HP" ' +
     'Description="10\' radius inflicts 2d6 HP necrotic and no Reaction (Str half, no loss of Reaction) for 1 rd"',
   'Aura Of Life':
     'School=Abjuration ' +
@@ -1280,6 +1282,7 @@ PHB5E.SPELLS_ADDED = {
   'Chromatic Orb':
     'School=Evocation ' +
     'Level=S1,W1 ' +
+    'AtHigherLevels="inflicts +1d8 HP" ' +
     'Description="R90\' Ranged spell inflicts 3d8 HP acid, cold, fire, lightning, poison, or energy"',
   'Circle Of Power':
     'School=Abjuration ' +
@@ -1288,6 +1291,7 @@ PHB5E.SPELLS_ADDED = {
   'Cloud Of Daggers':
     'School=Conjuration ' +
     'Level=B2,K2,S2,W2 ' +
+    'AtHigherLevels="inflicts +2d4 HP" ' +
     'Description="R60\' 5\' cu inflicts 4d4 HP slashing for conc or 1 min"',
   'Compelled Duel':
     'School=Enchantment ' +
@@ -1304,6 +1308,7 @@ PHB5E.SPELLS_ADDED = {
   'Cordon Of Arrows':
     'School=Transmutation ' +
     'Level=R2 ' +
+    'AtHigherLevels="affects +2 pieces" ' +
     'Description="R5\' Four pieces of ammo attack w/in 30\', inflict 1d6 HP piercing (Dex neg) for 8 hr"',
   'Crown Of Madness':
     'School=Enchantment ' +
@@ -1321,15 +1326,18 @@ PHB5E.SPELLS_ADDED = {
   'Dissonant Whispers':
     'School=Enchantment ' +
     'Level=B1,"K1 [The Great Old One]" ' +
+    'AtHigherLevels="inflicts +1d6 HP" ' +
     'Description="R60\' Target suffers 3d6 HP psychic and flees (Wis half, need not flee)"',
 
   'Elemental Weapon':
     'School=Transmutation ' +
     'Level=P3 ' +
+    'AtHigherLevels="gives +2/+3 attack and +2d4/+3d4 HP at level 5/7" ' +
     'Description="Touched weapon gains +1 attack and +1d4 HP acid, cold, fire, lightning, or thunder for conc or 1 hr"',
   'Ensnaring Strike':
     'School=Conjuration ' +
     'Level=R1 ' +
+    'AtHigherLevels="inflicts +1d6 HP" ' +
     'Description="Successful attack restrains foe and inflicts 1d6 HP/rd piercing (Str neg) for conc or 1 min"',
 
   'Feign Death':
@@ -1349,10 +1357,12 @@ PHB5E.SPELLS_ADDED = {
   'Hail Of Thorns':
     'School=Conjuration ' +
     'Level=R1 ' +
+    'AtHigherLevels="inflicts +1d10 HP (6d10 max)" ' +
     'Description="5\' radius inflicts 1d10 HP piercing (Dex half) following ranged hit"',
   'Hex':
     'School=Enchantment ' +
     'Level=K1 ' +
+    'AtHigherLevels="extends duration to 8/24 hr at level 3/5" ' +
     'Description="R90\' Self hits on target inflict +1d6 HP necrotic, target has Disadv on chosen ability checks for conc or 1 hr"',
   'Hunger Of Hadar':
     'School=Conjuration ' +
@@ -1362,6 +1372,7 @@ PHB5E.SPELLS_ADDED = {
   'Lightning Arrow':
     'School=Transmutation ' +
     'Level=R3 ' +
+    'AtHigherLevels="inflicts +1d8 HP" ' +
     'Description="Ranged weapon inflicts 8d6 HP lightning on target and 2d8 HP lightning in 10\' radius (Dex half)"',
 
   "Mordenkainen's Sword":
@@ -1381,11 +1392,13 @@ PHB5E.SPELLS_ADDED = {
   'Ray Of Sickness':
     'School=Necromancy ' +
     'Level=S1,W1 ' +
+    'AtHigherLevels="inflicts +1d8 HP" ' +
     'Description="R60\' Target suffers 2d8 HP poison and poisoned 1 rd (Con not poisoned)",',
 
   'Searing Smite':
     'School=Evocation ' +
     'Level=P1 ' +
+    'AtHigherLevels="inflicts +1d6 HP initial" ' +
     'Description="Self weapon inflicts +1d6 HP fire, target suffers 1d6 HP fire/rd (Con ends per-rd damage) for conc or 1 min"',
   'Staggering Smite':
     'School=Evocation ' +
@@ -1416,6 +1429,7 @@ PHB5E.SPELLS_ADDED = {
   'Witch Bolt':
     'School=Evocation ' +
     'Level=K1,S1,W1 ' +
+    'AtHigherLevels="inflicts +1d12 HP initial" ' +
     'Description="R30\' Ranged spell inflicts 1d12 HP lightning/rd for conc or 1 min"',
   'Wrathful Smite':
     'School=Evocation ' +
