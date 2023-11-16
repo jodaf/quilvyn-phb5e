@@ -35,18 +35,21 @@ function PHB5E() {
     return;
   }
 
-  var rules = new QuilvynRules('D&D 5E', PHB5E.VERSION);
+  let rules = new QuilvynRules('D&D 5E', PHB5E.VERSION);
   PHB5E.rules = rules;
+  rules.plugin = PHB5E;
 
   rules.defineChoice('choices', SRD5E.CHOICES);
   rules.choiceEditorElements = SRD5E.choiceEditorElements;
   rules.choiceRules = PHB5E.choiceRules;
+  rules.removeChoice = SRD5E.removeChoice;
   rules.editorElements = SRD5E.initialEditorElements();
   rules.getFormats = SRD5E.getFormats;
   rules.getPlugins = PHB5E.getPlugins;
   rules.makeValid = SRD5E.makeValid;
   rules.randomizeOneAttribute = SRD5E.randomizeOneAttribute;
   rules.defineChoice('random', SRD5E.RANDOMIZABLE_ATTRIBUTES);
+  rules.getChoices = SRD5E.getChoices;
   rules.ruleNotes = PHB5E.ruleNotes;
 
   SRD5E.createViewers(rules, SRD5E.VIEWERS);
@@ -73,7 +76,7 @@ function PHB5E() {
 
 }
 
-PHB5E.VERSION = '2.3.4.1';
+PHB5E.VERSION = '2.4.1.0';
 
 PHB5E.BACKGROUNDS_ADDED = {
   'Charlatan':
@@ -169,7 +172,253 @@ PHB5E.BACKGROUNDS_ADDED = {
 };
 PHB5E.BACKGROUNDS =
   Object.assign({}, SRD5E.BACKGROUNDS, PHB5E.BACKGROUNDS_ADDED);
+PHB5E.CLASSES_FEATURES_ADDED = {
+  'Barbarian':
+    '"features.Path Of The Totem Warrior ? 3:Spirit Seeker",' +
+    '"features.Path Of The Totem Warrior ? 10:Spirit Walker",' +
+    '"features.Path Of The Totem Warrior (Bear) ? 3:Totem Spirit (Bear)",' +
+    '"features.Path Of The Totem Warrior (Bear) ? 6:Aspect Of The Beast (Bear)",' +
+    '"features.Path Of The Totem Warrior (Bear) ? 14:Totemic Attunement (Bear)",'+
+    '"features.Path Of The Totem Warrior (Eagle) ? 3:Totem Spirit (Eagle)",' +
+    '"features.Path Of The Totem Warrior (Eagle) ? 6:Aspect Of The Beast (Eagle)",' +
+    '"features.Path Of The Totem Warrior (Eagle) ? 14:Totemic Attunement (Eagle)",' +
+    '"features.Path Of The Totem Warrior (Wolf) ? 3:Totem Spirit (Wolf)",' +
+    '"features.Path Of The Totem Warrior (Wolf) ? 6:Aspect Of The Beast (Wolf)",' +
+    '"features.Path Of The Totem Warrior (Wolf) ? 14:Totemic Attunement (Wolf)"',
+  'Bard':
+    '"features.College Of Valor ? 3:Bonus Skills",' +
+    '"features.College Of Valor ? 3:Combat Inspiration",' +
+    '"features.College Of Valor ? 3:Bonus Proficiencies (College Of Valor)",' +
+    '"features.College Of Valor ? 6:Extra Attack",' +
+    '"features.College Of Valor ? 14:Battle Magic"',
+  'Cleric':
+    '"features.Knowledge Domain ? 1:Blessings Of Knowledge",' +
+    '"features.Knowledge Domain ? 2:Knowledge Of The Ages",' +
+    '"features.Knowledge Domain ? 6:Read Thoughts",' +
+    '"features.Knowledge Domain ? 8:Potent Spellcasting",' +
+    '"features.Knowledge Domain ? 17:Visions Of The Past",' +
+    '"features.Light Domain ? 1:Bonus Cantrip (Light Domain)",' +
+    '"features.Light Domain ? 1:Warding Flare",' +
+    '"features.Light Domain ? 2:Radiance Of The Dawn",' +
+    '"features.Light Domain ? 6:Improved Flare",' +
+    '"features.Light Domain ? 8:Potent Spellcasting",' +
+    '"features.Light Domain ? 17:Corona Of Light",' +
+    '"features.Nature Domain ? 1:Acolyte Of Nature",' +
+    '"features.Nature Domain ? 1:Bonus Proficiency (Nature Domain)",' +
+    '"features.Nature Domain ? 2:Charm Animals And Plants",' +
+    '"features.Nature Domain ? 6:Dampen Elements","8:Divine Strike",' +
+    '"features.Nature Domain ? 17:Master Of Nature",' +
+    '"features.Tempest Domain ? 1:Bonus Proficiencies (Tempest Domain)",' +
+    '"features.Tempest Domain ? 1:Wrath Of The Storm",' +
+    '"features.Tempest Domain ? 2:Destructive Wrath",' +
+    '"features.Tempest Domain ? 6:Thunderbolt Strike",' +
+    '"features.Tempest Domain ? 8:Divine Strike",' +
+    '"features.Tempest Domain ? 17:Stormborn",' +
+    '"features.Trickery Domain ? 1:Blessing Of The Trickster",' +
+    '"features.Trickery Domain ? 2:Invoke Duplicity",' +
+    '"features.Trickery Domain ? 6:Cloak Of Shadows (Trickery Domain)",' +
+    '"features.Trickery Domain ? 8:Divine Strike",' +
+    '"features.Trickery Domain ? 17:Improved Duplicity",' +
+    '"features.War Domain ? 1:Bonus Proficiencies (War Domain)",' +
+    '"features.War Domain ? 1:War Priest",' +
+    '"features.War Domain ? 2:Guided Strike",' +
+    '"features.War Domain ? 6:War God\'s Blessing",' +
+    '"features.War Domain ? 8:Divine Strike",' +
+    '"features.War Domain ? 17:Avatar Of Battle"',
+/*
+ * Knowledge Domain
+    'Spells=' +
+      '"1:Command,Identify",' +
+      '"3:Augury,Suggestion",' +
+      '"5:Nondetection,Speak With Dead",' +
+      '"7:Arcane Eye,Confusion",' +
+      '"9:Legend Lore,Scrying"',
+  'Light Domain':
+    'Spells=' +
+      '"1:Burning Hands,Faerie Fire",' +
+      '"3:Flaming Sphere,Scorching Ray",' +
+      '"5:Daylight,Fireball",' +
+      '"7:Guardian Of Faith,Wall Of Fire",' +
+      '"9:Flame Strike,Scrying"',
+  'Nature Domain':
+    'Spells=' +
+      '"1:Animal Friendship,Speak With Animals",' +
+      '"3:Barkskin,Spike Growth",' +
+      '"5:Plant Growth,Wind Wall",' +
+      '"7:Dominate Beast,Grasping Vine",' +
+      '"9:Insect Plague,Tree Stride"',
+  'Tempest Domain':
+    'Spells=' +
+      '"1:Fog Cloud,Thunderwave",' +
+      '"3:Gust Of Wind,Shatter",' +
+      '"5:Call Lightning,Sleet Storm",' +
+      '"7:Control Water,Ice Storm",' +
+      '"9:Destructive Wave,Insect Plague"',
+  'Trickery Domain':
+    'Spells=' +
+      '"1:Charm Person,Disguise Self",' +
+      '"3:Mirror Image,Pass Without Trace",' +
+      '"5:Blink,Dispel Magic",' +
+      '"7:Dimension Door,Polymorph",' +
+      '"9:Dominate Person,Modify Memory"',
+  'War Domain':
+    'Spells=' +
+      '"1:Divine Favor,Shield Of Faith",' +
+      '"3:Magic Weapon,Spiritual Weapon",' +
+      '"5:Crusader\'s Mantle,Spirit Guardians",' +
+      '"7:Freedom Of Movement,Stoneskin",' +
+      '"9:Flame Strike,Hold Monster"',
+  */
+  'Druid':
+    '"features.Circle Of The Moon ? 2:Combat Wild Shape",' +
+    '"features.Circle Of The Moon ? 2:Circle Forms",' +
+    '"features.Circle Of The Moon ? 6:Primal Strike",' +
+    '"features.Circle Of The Moon ? 10:Elemental Wild Shape",' +
+    '"features.Circle Of The Moon ? 14:Thousand Forms"',
+  /* TODO Circle Spells feature spells:
+  'Circle Of The Land (Underdark)':
+      '"3:Spider Climb,Web",' +
+      '"5:Gaseous Form,Stinking Cloud",' +
+      '"7:Greater Invisibility,Stone Shape",' +
+      '"9:Cloudkill,Insect Plague"',
+  */
+  'Fighter':
+    '"features.Battle Master ? 3:Student Of War",' +
+    '"features.Battle Master ? 3:Combat Superiority",' +
+    '"features.Battle Master ? 7:Know Your Enemy",' +
+    '"features.Battle Master ? 10:Improved Combat Superiority",' +
+    '"features.Battle Master ? 15:Relentless",' +
+    '"features.Eldritch Knight ? 3:Spellcasting",' +
+    '"features.Eldritch Knight ? 3:Weapon Bond",' +
+    '"features.Eldritch Knight ? 7:War Magic",' +
+    '"features.Eldritch Knight ? 10:Eldritch Strike",' +
+    '"features.Eldritch Knight ? 15:Arcane Charge",' +
+    '"features.Eldritch Knight ? 18:Improved War Magic"',
+    /* TODO
+    'SpellAbility=intelligence ' +
+    'SpellSlots=' +
+      'W0:3=2;10=3,' +
+      'W1:3=2;4=3;7=4,' +
+      'W2:7=2;10=3,' +
+      'W3:13=2;16=3,' +
+      'W4:19=1',
+    */
+  'Monk':
+    '"features.Way Of Shadow ? 3:Shadow Arts",' +
+    '"features.Way Of Shadow ? 6:Shadow Step",' +
+    '"features.Way Of Shadow ? 11:Cloak Of Shadows (Way Of Shadow)",' +
+    '"features.Way Of Shadow ? 17:Opportunist",' +
+    '"features.Way Of The Four Elements ? 3:Disciple Of The Elements",' +
+    '"features.Way Of The Four Elements ? 3:Elemental Attunement"',
+  'Paladin':
+    '"features.Oath Of The Ancients ? 3:Nature\'s Wrath",' +
+    '"features.Oath Of The Ancients ? 3:Turn The Faithless",' +
+    '"features.Oath Of The Ancients ? 7:Aura Of Warding",' +
+    '"features.Oath Of The Ancients ? 15:Undying Sentinel",' +
+    '"features.Oath Of The Ancients ? 20:Elder Champion",' +
+    '"features.Oath Of Vengeance ? 3:Abjure Enemy",' +
+    '"features.Oath Of Vengeance ? 3:Vow Of Enmity",' +
+    '"features.Oath Of Vengeance ? 7:Relentless Avenger",' +
+    '"features.Oath Of Vengeance ? 15:Soul Of Vengeance",' +
+    '"features.Oath Of Vengeance ? 20:Avenging Angel"',
+  /* TODO
+  'Oath Of The Ancients':
+    'Spells=' +
+      '"3:Ensnaring Strike,Speak With Animals",' +
+      '"5:Moonbeam,Misty Step",' +
+      '"9:Plant Growth,Protection From Energy",' +
+      '"13:Ice Storm,Stoneskin",' +
+      '"17:Commune With Nature,Tree Stride"',
+  'Oath Of Vengeance':
+    'Spells=' +
+      '"3:Bane,Hunter\'s Mark",' +
+      '"5:Hold Person,Misty Step",' +
+      '"9:Haste,Protection From Energy",' +
+      '"13:Banishment,Dimension Door",' +
+      '"17:Hold Monster,Scrying"',
+   */
+  'Ranger':
+    '"features.Beast Master ? 3:Ranger\'s Companion",' +
+    '"features.Beast Master ? 7:Exceptional Training",' +
+    '"features.Beast Master ? 11:Bestial Fury",' +
+    '"features.Beast Master ? 15:Share Spells"',
+  'Rogue':
+    '"features.Arcane Trickster ? 3:Spellcasting",' +
+    '"features.Arcane Trickster ? 3:Mage Hand Legerdemain",' +
+    '"features.Arcane Trickster ? 9:Magical Ambush",' +
+    '"features.Arcane Trickster ? 13:Versatile Trickster",' +
+    '"features.Arcane Trickster ? 17:Spell Thief",' +
+    /* TODO
+    'SpellAbility=intelligence ' +
+    'SpellSlots=' +
+      'W0:3=3;10=4,' +
+      'W1:3=2;4=3;7=4,' +
+      'W2:7=2;10=3,' +
+      'W3:13=2;16=3,' +
+      'W4:19=1',
+    */
+    '"features.Assassin ? 3:Assassin Bonus Proficiencies",' +
+    '"features.Assassin ? 3:Assassinate",' +
+    '"features.Assassin ? 9:Infiltration Expertise",' +
+    '"features.Assassin ? 13:Impostor",' +
+    '"features.Assassin ? 17:Death Strike"',
+  'Sorcerer':
+    '"features.Wild Magic ? 1:Wild Magic Surge",' +
+    '"features.Wild Magic ? 1:Tides Of Chaos",' +
+    '"features.Wild Magic ? 6:Bend Luck",' +
+    '"features.Wild Magic ? 14:Controlled Chaos",' +
+    '"features.Wild Magic ? 18:Spell Bombardment"',
+  'Warlock':
+    '"features.The Archfey ? 1:Fey Presence",' +
+    '"features.The Archfey ? 6:Misty Escape",' +
+    '"features.The Archfey ? 10:Beguiling Defenses",' +
+    '"features.The Archfey ? 14:Dark Delirium",' +
+    '"features.The Great Old One ? 1:Awakened Mind",' +
+    '"features.The Great Old One ? 6:Entropic Ward",' +
+    '"features.The Great Old One ? 10:Thought Shield",' +
+    '"features.The Great Old One ? 14:Create Thrall"',
+  'Wizard':
+    '"features.School Of Abjuration ? 2:Abjuration Savant",' +
+    '"features.School Of Abjuration ? 2:Arcane Ward",' +
+    '"features.School Of Abjuration ? 6:Projected Ward",' +
+    '"features.School Of Abjuration ? 10:Improved Abjuration",' +
+    '"features.School Of Abjuration ? 14:Spell Resistance",' +
+    '"features.School Of Conjuration ? 2:Conjuration Savant",' +
+    '"features.School Of Conjuration ? 2:Minor Conjuration",' +
+    '"features.School Of Conjuration ? 6:Benign Transposition",' +
+    '"features.School Of Conjuration ? 10:Focused Conjuration",' +
+    '"features.School Of Conjuration ? 14:Durable Summons",' +
+    '"features.School Of Divination ? 2:Divination Savant",' +
+    '"features.School Of Divination ? 2:Portent",' +
+    '"features.School Of Divination ? 6:Expert Divination",' +
+    '"features.School Of Divination ? 10:The Third Eye",' +
+    '"features.School Of Divination ? 14:Greater Portent",' +
+    '"features.School Of Enchantment ? 2:Enchantment Savant",' +
+    '"features.School Of Enchantment ? 2:Hypnotic Gaze",' +
+    '"features.School Of Enchantment ? 6:Instinctive Charm",' +
+    '"features.School Of Enchantment ? 10:Split Enchantment",' +
+    '"features.School Of Enchantment ? 14:Alter Memories",' +
+    '"features.School Of Illusion ? 2:Illusion Savant",' +
+    '"features.School Of Illusion ? 2:Improved Minor Illusion",' +
+    '"features.School Of Illusion ? 6:Malleable Illusions",' +
+    '"features.School Of Illusion ? 10:Illusory Self",' +
+    '"features.School Of Illusion ? 14:Illusory Reality",' +
+    '"features.School Of Necromancy ? 2:Necromancy Savant",' +
+    '"features.School Of Necromancy ? 2:Grim Harvest",' +
+    '"features.School Of Necromancy ? 6:Undead Thralls",' +
+    '"features.School Of Necromancy ? 10:Inured To Undeath",' +
+    '"features.School Of Necromancy ? 14:Command Undead",' +
+    '"features.School Of Transmutation ? 2:Transmutation Savant",' +
+    '"features.School Of Transmutation ? 2:Minor Alchemy",' +
+    '"features.School Of Transmutation ? 6:Transmuter\'s Stone",' +
+    '"features.School Of Transmutation ? 10:Shapechanger",' +
+    '"features.School Of Transmutation ? 14:Master Transmuter"'
+};
 PHB5E.CLASSES_SELECTABLES_ADDED = {
+  'Barbarian':
+    '"3:Path Of The Totem Warrior (Bear):Primal Path",' +
+    '"3:Path Of The Totem Warrior (Eagle):Primal Path",' +
+    '"3:Path Of The Totem Warrior (Wolf):Primal Path"',
   'Bard':'"3:College Of Valor:Bard College"',
   'Cleric':
     '"deityDomains =~ \'Knowledge\' ? 1:Knowledge Domain:Divine Domain",' +
@@ -230,7 +479,11 @@ PHB5E.CLASSES_SELECTABLES_ADDED = {
     '"2:School Of Transmutation:Arcane Tradition"'
 };
 PHB5E.CLASSES = Object.assign({}, SRD5E.CLASSES);
-for(var c in PHB5E.CLASSES_SELECTABLES_ADDED) {
+for(let c in PHB5E.CLASSES_FEATURES_ADDED) {
+  PHB5E.CLASSES[c] =
+    PHB5E.CLASSES[c].replace('Features=', 'Features=' + PHB5E.CLASSES_FEATURES_ADDED[c] + ',');
+}
+for(let c in PHB5E.CLASSES_SELECTABLES_ADDED) {
   PHB5E.CLASSES[c] =
     PHB5E.CLASSES[c].replace('Selectables=', 'Selectables=' + PHB5E.CLASSES_SELECTABLES_ADDED[c] + ',');
 }
@@ -398,13 +651,13 @@ PHB5E.FEATURES_ADDED = {
   'Arcane Ward':
     'Section=magic ' +
     'Note="Abjuration casting creates %V HP shield around self until long rest"',
-  'Aspect Of The Bear':
+  'Aspect Of The Beast (Bear)':
     'Section=ability ' +
     'Note="Dbl load and lift, Adv on Str checks to push, pull, lift, or break"',
-  'Aspect Of The Eagle':
+  'Aspect Of The Beast (Eagle)':
     'Section=skill ' +
     'Note="See 1 mile clearly, no Disadv on Perception in dim light"',
-  'Aspect Of The Wolf':
+  'Aspect Of The Beast (Wolf)':
     'Section=skill Note="Track at fast pace and Stealth at normal pace"',
   'Assassin Bonus Proficiencies':
     'Section=feature Note="Tool Proficiency (Disguise Kit/Poisoner\'s Kit)"',
@@ -425,11 +678,6 @@ PHB5E.FEATURES_ADDED = {
     'Section=feature Note="R30\' Telepathic communication"',
   'Battle Magic':
     'Section=combat Note="Bonus attack after casting spell"',
-  'Bear Totem Spirit':
-    'Section=save Note="Resistance to non-psychic damage during rage"',
-  'Bear Totemic Attunement':
-    'Section=combat ' +
-    'Note="Adjacent foes Disadv on attacks on others during self rage"',
   'Beguiling Defenses':
     'Section=save ' +
     'Note="Immune to charm, reflect on caster (DC %V Wis neg) for conc or 1 min"',
@@ -447,6 +695,19 @@ PHB5E.FEATURES_ADDED = {
     'Section=feature,skill ' +
     'Note="Skill Proficiency (Choose 2 from Arcana, History, Nature, Religion)",' +
          '"Language (Choose 2 from any)/+%{proficiencyBonus} on chosen skills"',
+  'Bonus Cantrip (Light Domain)':
+    'Section=magic Note="Know <i>Light</i> cantrip"',
+  'Bonus Proficiencies (College Of Valor)':
+    'Section=combat ' +
+    'Note="Armor Proficiency (Medium/Shield)/Weapon Proficiency (Martial)"',
+  'Bonus Proficiency (Nature Domain)':
+    'Section=combat Note="Armor Proficiency (Heavy)"',
+  'Bonus Proficiencies (Tempest Domain)':
+    'Section=combat ' +
+    'Note="Armor Proficiency (Heavy)/Weapon Proficiency (Martial)"',
+  'Bonus Proficiencies (War Domain)':
+    'Section=combat ' +
+    'Note="Armor Proficiency (Heavy)/Weapon Proficiency (Martial)"',
   'Breath Of Winter':
     'Section=magic Note="Spend 6 Ki Points to cast <i>Cone Of Cold</i>"',
   'Charm Animals And Plants':
@@ -456,9 +717,11 @@ PHB5E.FEATURES_ADDED = {
     'Section=magic Note="Increase Wild Shape CR to %V"',
   'Clench Of The North Wind':
     'Section=magic Note="Spend 3 Ki Points to cast <i>Hold Person</i>"',
-  'Cloak Of Shadows':
+  'Cloak Of Shadows (Way Of Shadow)':
     'Section=magic ' +
     'Note="Self invisible in dim and unlit areas until attacks or casts"',
+  'Cloak Of Shadows (Trickery Domain)':
+    'Section=magic Note="Use Channel Divinity to make self invisible for 1 rd"',
   'Combat Inspiration':
     'Section=combat ' +
     'Note="Ally can use Bardic Inspiration die to boost weapon damage or AC"',
@@ -504,11 +767,6 @@ PHB5E.FEATURES_ADDED = {
     'Section=magic Note="Copy divination spells into spellbook for half cost"',
   'Durable Summons':
     'Section=magic Note="Summoned creatures gain 30 temporary HP"',
-  'Eagle Totem Spirit':
-    'Section=combat ' +
-    'Note="Gain bonus Dash and foes suffer Disadv on OA during rage (heavy armor neg)"',
-  'Eagle Totemic Attunement':
-    'Section=ability Note="Fly %{speed}\' 1/rd during rage"',
   'Elder Champion':
     'Section=magic ' +
     'Note="Regain 10 HP/rd, cast spells as a bonus action, and inflict Disadv on saves vs. self spells on foes w/in 10\' for 1 min 1/long rest"',
@@ -602,8 +860,6 @@ PHB5E.FEATURES_ADDED = {
   'Knowledge Of The Ages':
     'Section=skill ' +
     'Note="Use Channel Divinity to gain proficiency in chosen skill or tool for 10 min"',
-  'Light Bonus Cantrip':
-    'Section=magic Note="Know <i>Light</i> cantrip"',
   'Lunging Attack':
     'Section=combat ' +
     'Note="Gain +5\' melee range, add Superiority Die to damage"',
@@ -636,7 +892,6 @@ PHB5E.FEATURES_ADDED = {
   'Misty Escape':
     'Section=magic ' +
     'Note="After damage, teleport 60\' and become invisible for 1 rd 1/short rest"',
-  'Nature Bonus Proficiency':'Section=combat Note="Armor Proficiency (Heavy)"',
   'Necromancy Savant':
     'Section=magic Note="Copy necromancy spells into spellbook for half cost"',
   'Opportunist':
@@ -715,9 +970,6 @@ PHB5E.FEATURES_ADDED = {
     'Note="After hit, inflict Superiority Die HP on adjacent foe"',
   'Sweeping Cinder Strike':
     'Section=magic Note="Spend 2 Ki Points to cast <i>Burning Hands</i>"',
-  'Tempest Bonus Proficiencies':
-    'Section=combat ' +
-    'Note="Armor Proficiency (Heavy)/Weapon Proficiency (Martial)"',
   'The Third Eye':
     'Section=magic ' +
     'Note="Use action to gain 60\' darkvision, 60\' ethereal sight, universal language comprehension, or 10\' invisibility sight"',
@@ -732,11 +984,25 @@ PHB5E.FEATURES_ADDED = {
   'Tides Of Chaos':
     'Section=feature ' +
     'Note="Adv on attack, ability, or saving throw 1/long rest; subsequent spell use may cause Wild Magic Surge"',
+  'Totem Spirit (Bear)':
+    'Section=save Note="Resistance to non-psychic damage during rage"',
+  'Totem Spirit (Eagle)':
+    'Section=combat ' +
+    'Note="Gain bonus Dash and foes suffer Disadv on OA during rage (heavy armor neg)"',
+  'Totem Spirit (Wolf)':
+    'Section=combat ' +
+    'Note="Allies Adv on attacks vs. foes adjacent to self during rage"',
+  'Totemic Attunement (Bear)':
+    'Section=combat ' +
+    'Note="Adjacent foes Disadv on attacks on others during self rage"',
+  'Totemic Attunement (Eagle)':
+    'Section=ability Note="Fly %{speed}\' 1/rd during rage"',
+  'Totemic Attunement (Wolf)':
+    'Section=combat ' +
+    'Note="Melee hit during rage knocks prone Large or smaller foe"',
   'Transmutation Savant':
     'Section=magic ' +
     'Note="Copy transmutation spells into spellbook for half cost"',
-  'Trickster Cloak Of Shadows':
-    'Section=magic Note="Use Channel Divinity to make self invisible for 1 rd"',
   'Trip Attack':
     'Section=combat ' +
     'Note="Add Superiority Die to damage, knock foe prone (DC %V Str neg)"',
@@ -749,9 +1015,6 @@ PHB5E.FEATURES_ADDED = {
     'Section=combat,feature ' +
     'Note="Keep 1 HP when brought to 0 HP 1/long rest",' +
          '"No debility from aging"',
-  'Valor Bonus Proficiencies':
-    'Section=combat ' +
-    'Note="Armor Proficiency (Medium/Shield)/Weapon Proficiency (Martial)"',
   'Versatile Trickster':
     'Section=magic Note="Distract foe (self Adv on attacks) via <i>Mage Hand</i>"',
   'Visions Of The Past':
@@ -760,9 +1023,6 @@ PHB5E.FEATURES_ADDED = {
   'Vow Of Enmity':
     'Section=combat ' +
     'Note="R10\' Use Channel Divinity to give self Adv on attacks against target for 1 min"',
-  'War Bonus Proficiencies':
-    'Section=combat ' +
-    'Note="Armor Proficiency (Heavy)/Weapon Proficiency (Martial)"',
   'War Magic':'Section=combat Note="Bonus attack after casting %V"',
   'War Priest':'Section=combat Note="Bonus attack %V/long rest"',
   'Warding Flare':
@@ -777,12 +1037,6 @@ PHB5E.FEATURES_ADDED = {
     'Section=combat Note="Cannot be disarmed, can summon weapon"',
   'Wild Magic Surge':
     'Section=magic Note="5% chance of random magic effect"',
-  'Wolf Totem Spirit':
-    'Section=combat ' +
-    'Note="Allies Adv on attacks vs. foes adjacent to self during rage"',
-  'Wolf Totemic Attunement':
-    'Section=combat ' +
-    'Note="Melee hit during rage knocks prone Large or smaller foe"',
   'Wrath Of The Storm':
     'Section=combat ' +
     'Note="Use Reaction to inflict 2d8 HP lightning or thunder (Dex half) on successful attacker %V/long rest"',
@@ -973,233 +1227,7 @@ PHB5E.FEATURES_ADDED = {
     'Section=ability Note="+2 Dexterity/+1 Wisdom"'
 };
 PHB5E.FEATURES = Object.assign({}, SRD5E.FEATURES, PHB5E.FEATURES_ADDED);
-PHB5E.PATHS_ADDED = {
-  'Arcane Trickster':
-    'Group=Rogue Level=levels.Rogue ' +
-    'Features=' +
-      '3:Spellcasting,"3:Mage Hand Legerdemain","9:Magical Ambush",' +
-      '"13:Versatile Trickster","17:Spell Thief" ' +
-    'SpellAbility=intelligence ' +
-    'SpellSlots=' +
-      'W0:3=3;10=4,' +
-      'W1:3=2;4=3;7=4,' +
-      'W2:7=2;10=3,' +
-      'W3:13=2;16=3,' +
-      'W4:19=1',
-  'Assassin':
-    'Group=Rogue Level=levels.Rogue ' +
-    'Features=' +
-      '"3:Assassin Bonus Proficiencies",3:Assassinate,' +
-      '"9:Infiltration Expertise",13:Impostor,"17:Death Strike"',
-  'Battle Master':
-    'Group=Fighter Level=levels.Fighter ' +
-    'Features=' +
-      '"3:Student Of War","3:Combat Superiority","7:Know Your Enemy",' +
-      '"10:Improved Combat Superiority",15:Relentless',
-  'Beast Master':
-    'Group=Ranger Level=levels.Ranger ' +
-    'Features=' +
-      '"3:Ranger\'s Companion","7:Exceptional Training","11:Bestial Fury",' +
-      '"15:Share Spells"',
-  'Circle Of The Land (Underdark)':
-    'Group=Druid Level=levels.Druid ' +
-    'Features=' +
-      '"2:Druid Bonus Cantrip","2:Natural Recovery",' +
-      '"6:Land\'s Stride","10:Nature\'s Ward","14:Nature\'s Sanctuary" ' +
-    'Spells=' +
-      '"3:Spider Climb,Web",' +
-      '"5:Gaseous Form,Stinking Cloud",' +
-      '"7:Greater Invisibility,Stone Shape",' +
-      '"9:Cloudkill,Insect Plague"',
-  'Circle Of The Moon':
-    'Group=Druid Level=levels.Druid ' +
-    'Features=' +
-      '"2:Combat Wild Shape","2:Circle Forms","6:Primal Strike",' +
-      '"10:Elemental Wild Shape","14:Thousand Forms"',
-  'College Of Valor':
-    'Group=Bard Level=levels.Bard ' +
-    'Features=' +
-      '"3:Bonus Skills","3:Combat Inspiration","3:Valor Bonus Proficiencies",' +
-      '"6:Extra Attack","14:Battle Magic"',
-  'Eldritch Knight':
-    'Group=Fighter Level=levels.Fighter ' +
-    'Features=' +
-      '3:Spellcasting,"3:Weapon Bond","7:War Magic","10:Eldritch Strike",' +
-      '"15:Arcane Charge","18:Improved War Magic" ' +
-    'SpellAbility=intelligence ' +
-    'SpellSlots=' +
-      'W0:3=2;10=3,' +
-      'W1:3=2;4=3;7=4,' +
-      'W2:7=2;10=3,' +
-      'W3:13=2;16=3,' +
-      'W4:19=1',
-  'Knowledge Domain':
-    'Group=Cleric Level=levels.Cleric ' +
-    'Features=' +
-      '"1:Blessings Of Knowledge","2:Knowledge Of The Ages",' +
-      '"6:Read Thoughts","8:Potent Spellcasting","17:Visions Of The Past" ' +
-    'Spells=' +
-      '"1:Command,Identify",' +
-      '"3:Augury,Suggestion",' +
-      '"5:Nondetection,Speak With Dead",' +
-      '"7:Arcane Eye,Confusion",' +
-      '"9:Legend Lore,Scrying"',
-  'Light Domain':
-    'Group=Cleric Level=levels.Cleric ' +
-    'Features=' +
-      '"1:Light Bonus Cantrip","1:Warding Flare","2:Radiance Of The Dawn",' +
-      '"6:Improved Flare","8:Potent Spellcasting","17:Corona Of Light" ' +
-    'Spells=' +
-      '"1:Burning Hands,Faerie Fire",' +
-      '"3:Flaming Sphere,Scorching Ray",' +
-      '"5:Daylight,Fireball",' +
-      '"7:Guardian Of Faith,Wall Of Fire",' +
-      '"9:Flame Strike,Scrying"',
-  'Nature Domain':
-    'Group=Cleric Level=levels.Cleric ' +
-    'Features=' +
-      '"1:Acolyte Of Nature","1:Nature Bonus Proficiency",' +
-      '"2:Charm Animals And Plants","6:Dampen Elements","8:Divine Strike",' +
-      '"17:Master Of Nature" ' +
-    'Spells=' +
-      '"1:Animal Friendship,Speak With Animals",' +
-      '"3:Barkskin,Spike Growth",' +
-      '"5:Plant Growth,Wind Wall",' +
-      '"7:Dominate Beast,Grasping Vine",' +
-      '"9:Insect Plague,Tree Stride"',
-  'Oath Of The Ancients':
-    'Group=Paladin Level=levels.Paladin ' +
-    'Features=' +
-      '"3:Nature\'s Wrath","3:Turn The Faithless","7:Aura Of Warding",' +
-      '"15:Undying Sentinel","20:Elder Champion" ' +
-    'Spells=' +
-      '"3:Ensnaring Strike,Speak With Animals",' +
-      '"5:Moonbeam,Misty Step",' +
-      '"9:Plant Growth,Protection From Energy",' +
-      '"13:Ice Storm,Stoneskin",' +
-      '"17:Commune With Nature,Tree Stride"',
-  'Oath Of Vengeance':
-    'Group=Paladin Level=levels.Paladin ' +
-    'Features=' +
-      '"3:Abjure Enemy","3:Vow Of Enmity","7:Relentless Avenger",' +
-      '"15:Soul Of Vengeance","20:Avenging Angel" ' +
-    'Spells=' +
-      '"3:Bane,Hunter\'s Mark",' +
-      '"5:Hold Person,Misty Step",' +
-      '"9:Haste,Protection From Energy",' +
-      '"13:Banishment,Dimension Door",' +
-      '"17:Hold Monster,Scrying"',
-  'Path Of The Totem Warrior (Bear)':
-    'Group=Barbarian Level=levels.Barbarian ' +
-    'Features=' +
-      '"3:Spirit Seeker","3:Bear Totem Spirit","6:Aspect Of The Bear",' +
-      '"10:Spirit Walker","14:Bear Totemic Attunement"',
-  'Path Of The Totem Warrior (Eagle)':
-    'Group=Barbarian Level=levels.Barbarian ' +
-    'Features=' +
-      '"3:Spirit Seeker","3:Eagle Totem Spirit","6:Aspect Of The Eagle",' +
-      '"10:Spirit Walker","14:Eagle Totemic Attunement"',
-  'Path Of The Totem Warrior (Wolf)':
-    'Group=Barbarian Level=levels.Barbarian ' +
-    'Features=' +
-      '"3:Spirit Seeker","3:Wolf Totem Spirit","6:Aspect Of The Wolf",' +
-      '"10:Spirit Walker","14:Wolf Totemic Attunement"',
-  'School Of Abjuration':
-    'Group=Wizard Level=levels.Wizard ' +
-    'Features=' +
-      '"2:Abjuration Savant","2:Arcane Ward","6:Projected Ward",' +
-      '"10:Improved Abjuration","14:Spell Resistance"',
-  'School Of Conjuration':
-    'Group=Wizard Level=levels.Wizard ' +
-    'Features=' +
-      '"2:Conjuration Savant","2:Minor Conjuration","6:Benign Transposition",' +
-      '"10:Focused Conjuration","14:Durable Summons"',
-  'School Of Divination':
-    'Group=Wizard Level=levels.Wizard ' +
-    'Features=' +
-      '"2:Divination Savant",2:Portent,"6:Expert Divination",' +
-      '"10:The Third Eye","14:Greater Portent"',
-  'School Of Enchantment':
-    'Group=Wizard Level=levels.Wizard ' +
-    'Features=' +
-      '"2:Enchantment Savant","2:Hypnotic Gaze","6:Instinctive Charm",' +
-      '"10:Split Enchantment","14:Alter Memories"',
-  'School Of Illusion':
-    'Group=Wizard Level=levels.Wizard ' +
-    'Features=' +
-      '"2:Illusion Savant","2:Improved Minor Illusion",' +
-      '"6:Malleable Illusions","10:Illusory Self","14:Illusory Reality"',
-  'School Of Necromancy':
-    'Group=Wizard Level=levels.Wizard ' +
-    'Features=' +
-      '"2:Necromancy Savant","2:Grim Harvest","6:Undead Thralls",' +
-      '"10:Inured To Undeath","14:Command Undead"',
-  'School Of Transmutation':
-    'Group=Wizard Level=levels.Wizard ' +
-    'Features=' +
-      '"2:Transmutation Savant","2:Minor Alchemy","6:Transmuter\'s Stone",' +
-      '10:Shapechanger,"14:Master Transmuter"',
-  'Tempest Domain':
-    'Group=Cleric Level=levels.Cleric ' +
-    'Features=' +
-      '"1:Tempest Bonus Proficiencies","1:Wrath Of The Storm",' +
-      '"2:Destructive Wrath","6:Thunderbolt Strike","8:Divine Strike",' +
-      '17:Stormborn ' +
-    'Spells=' +
-      '"1:Fog Cloud,Thunderwave",' +
-      '"3:Gust Of Wind,Shatter",' +
-      '"5:Call Lightning,Sleet Storm",' +
-      '"7:Control Water,Ice Storm",' +
-      '"9:Destructive Wave,Insect Plague"',
-  'The Archfey':
-    'Group=Warlock Level=levels.Warlock ' +
-    'Features=' +
-      '"1:Fey Presence","6:Misty Escape","10:Beguiling Defenses",' +
-      '"14:Dark Delirium"',
-  'The Great Old One':
-    'Group=Warlock Level=levels.Warlock ' +
-    'Features=' +
-        '"1:Awakened Mind","6:Entropic Ward","10:Thought Shield",' +
-        '"14:Create Thrall"',
-  'Trickery Domain':
-    'Group=Cleric Level=levels.Cleric ' +
-    'Features=' +
-      '"1:Blessing Of The Trickster","2:Invoke Duplicity",' +
-      '"6:Trickster Cloak Of Shadows","8:Divine Strike",' +
-      '"17:Improved Duplicity" ' +
-    'Spells=' +
-      '"1:Charm Person,Disguise Self",' +
-      '"3:Mirror Image,Pass Without Trace",' +
-      '"5:Blink,Dispel Magic",' +
-      '"7:Dimension Door,Polymorph",' +
-      '"9:Dominate Person,Modify Memory"',
-  'War Domain':
-    'Group=Cleric Level=levels.Cleric ' +
-    'Features=' +
-      '"1:War Bonus Proficiencies","1:War Priest","2:Guided Strike",' +
-      '"6:War God\'s Blessing","8:Divine Strike","17:Avatar Of Battle" ' +
-    'Spells=' +
-      '"1:Divine Favor,Shield Of Faith",' +
-      '"3:Magic Weapon,Spiritual Weapon",' +
-      '"5:Crusader\'s Mantle,Spirit Guardians",' +
-      '"7:Freedom Of Movement,Stoneskin",' +
-      '"9:Flame Strike,Hold Monster"',
-  'Way Of Shadow':
-    'Group=Monk Level=levels.Monk ' +
-    'Features=' +
-      '"3:Shadow Arts","6:Shadow Step","11:Cloak Of Shadows",' +
-      '17:Opportunist',
-  'Way Of The Four Elements':
-    'Group=Monk Level=levels.Monk ' +
-    'Features=' +
-      '"3:Disciple Of The Elements","3:Elemental Attunement"',
-  'Wild Magic':
-    'Group=Sorcerer Level=levels.Sorcerer ' +
-    'Features=' +
-      '"1:Wild Magic Surge","1:Tides Of Chaos","6:Bend Luck",' +
-      '"14:Controlled Chaos","18:Spell Bombardment"'
-};
-PHB5E.PATHS = Object.assign({}, SRD5E.PATHS, PHB5E.PATHS_ADDED);
+PHB5E.PATHS = Object.assign({}, SRD5E.PATHS);
 PHB5E.RACES_ADDED = {
   'Dark Elf':
     'Features=' +
@@ -1473,109 +1501,110 @@ PHB5E.SPELLS_RENAMED = {
   'Tiny Hut':"Leomund's Tiny Hut"
 };
 PHB5E.SPELLS = Object.assign({}, SRD5E.SPELLS, PHB5E.SPELLS_ADDED);
-for(var s in PHB5E.SPELLS_LEVELS_ADDED) {
+for(let s in PHB5E.SPELLS_LEVELS_ADDED) {
   PHB5E.SPELLS[s] =
     PHB5E.SPELLS[s].replace('Level=', 'Level=' + PHB5E.SPELLS_LEVELS_ADDED[s] + ',');
 }
-for(var s in PHB5E.SPELLS_RENAMED) {
+for(let s in PHB5E.SPELLS_RENAMED) {
   PHB5E.SPELLS[PHB5E.SPELLS_RENAMED[s]] = PHB5E.SPELLS[s];
   delete PHB5E.SPELLS[s];
 }
 // Presently, there's only known use of a renamed spell in a spell list
-PHB5E.PATHS['Circle Of The Land (Swamp)'] =
-  PHB5E.PATHS['Circle Of The Land (Swamp)'].replace('Acid Arrow', "Melf's Acid Arrow");
+//PHB5E.PATHS['Circle Of The Land (Swamp)'] =
+//  PHB5E.PATHS['Circle Of The Land (Swamp)'].replace('Acid Arrow', "Melf's Acid Arrow");
 PHB5E.DEITIES_ADDED = {
-  // Allow clerics w/no deity to have a domain
-  'None':'Domain=' + QuilvynUtils.getKeys(PHB5E.PATHS).filter(x => x.match(/Domain$/)).map(x => x.replace(' Domain', '')).join(','),
   // Forgotten Realms
-  'FR-Auril':'Alignment=NE Domain=Nature,Tempest',
-  'FR-Azuth':'Alignment=LN Domain=Knowledge',
-  'FR-Bane':'Alignment=LE Domain=War',
-  'FR-Beshaba':'Alignment=CE Domain=Trickery',
-  'FR-Bhaal':'Alignment=NE Domain=Death',
-  'FR-Chauntea':'Alignment=NG Domain=Life',
-  'FR-Cyric':'Alignment=CE Domain=Trickery',
-  'FR-Deneir':'Alignment=NG Domain=Knowledge',
-  'FR-Eldath':'Alignment=NG Domain=Life,Nature',
-  'FR-Gond':'Alignment=N Domain=Knowledge',
-  'FR-Helm':'Alignment=LN Domain=Life,Light',
-  'FR-Ilmater':'Alignment=LG Domain=Life',
-  'FR-Kelemvor':'Alignment=LN Domain=Death',
-  'FR-Lathander':'Alignment=NG Domain=Life,Light',
+  'FR-Auril':'Alignment="Neutral Evil" Domain=Nature,Tempest',
+  'FR-Azuth':'Alignment="Lawful Neutral" Domain=Knowledge',
+  'FR-Bane':'Alignment="Lawful Evil" Domain=War',
+  'FR-Beshaba':'Alignment="Chaotic Evil" Domain=Trickery',
+  'FR-Bhaal':'Alignment="Neutral Evil" Domain=Death',
+  'FR-Chauntea':'Alignment="Neutral Good" Domain=Life',
+  'FR-Cyric':'Alignment="Chaotic Evil" Domain=Trickery',
+  'FR-Deneir':'Alignment="Neutral Good" Domain=Knowledge',
+  'FR-Eldath':'Alignment="Neutral Good" Domain=Life,Nature',
+  'FR-Gond':'Alignment=Neutral Domain=Knowledge',
+  'FR-Helm':'Alignment="Lawful Neutral" Domain=Life,Light',
+  'FR-Ilmater':'Alignment="Lawful Good" Domain=Life',
+  'FR-Kelemvor':'Alignment="Lawful Neutral" Domain=Death',
+  'FR-Lathander':'Alignment="Neutral Good" Domain=Life,Light',
   'FR-Leira':'Alignment=CN Domain=Trickery',
-  'FR-Lliira':'Alignment=CG Domain=Life',
-  'FR-Loviatar':'Alignment=LE Domain=Death',
-  'FR-Malar':'Alignment=CE Domain=Nature',
+  'FR-Lliira':'Alignment="Chaotic Good" Domain=Life',
+  'FR-Loviatar':'Alignment="Lawful Evil" Domain=Death',
+  'FR-Malar':'Alignment="Chaotic Evil" Domain=Nature',
   'FR-Mask':'Alignment=CN Domain=Trickery',
-  'FR-Mielikki':'Alignment=NG Domain=Nature',
-  'FR-Milil':'Alignment=NG Domain=Light',
-  'FR-Myrkul':'Alignment=NE Domain=Death',
-  'FR-Mystra':'Alignment=NG Domain=Knowledge',
-  'FR-Oghma':'Alignment=N Domain=Knowledge',
-  'FR-Savras':'Alignment=LN Domain=Knowledge',
-  'FR-Selune':'Alignment=CG Domain=Knowledge,Life',
-  'FR-Shar':'Alignment=NE Domain=Death,Trickery',
-  'FR-Silvanus':'Alignment=N Domain=Nature',
-  'FR-Sune':'Alignment=CG Domain=Life,Light',
-  'FR-Talona':'Alignment=CE Domain=Death',
-  'FR-Talos':'Alignment=CE Domain=Tempest',
-  'FR-Tempus':'Alignment=N Domain=War',
-  'FR-Torm':'Alignment=LG Domain=War',
-  'FR-Tymora':'Alignment=CG Domain=Trickery',
-  'FR-Tyr':'Alignment=LG Domain=War',
-  'FR-Umberlee':'Alignment=CE Domain=Tempest',
-  'FR-Waukeen':'Alignment=N Domain=Knowledge,Trickery',
+  'FR-Mielikki':'Alignment="Neutral Good" Domain=Nature',
+  'FR-Milil':'Alignment="Neutral Good" Domain=Light',
+  'FR-Myrkul':'Alignment="Neutral Evil" Domain=Death',
+  'FR-Mystra':'Alignment="Neutral Good" Domain=Knowledge',
+  'FR-Oghma':'Alignment=Neutral Domain=Knowledge',
+  'FR-Savras':'Alignment="Lawful Neutral" Domain=Knowledge',
+  'FR-Selune':'Alignment="Chaotic Good" Domain=Knowledge,Life',
+  'FR-Shar':'Alignment="Neutral Evil" Domain=Death,Trickery',
+  'FR-Silvanus':'Alignment=Neutral Domain=Nature',
+  'FR-Sune':'Alignment="Chaotic Good" Domain=Life,Light',
+  'FR-Talona':'Alignment="Chaotic Evil" Domain=Death',
+  'FR-Talos':'Alignment="Chaotic Evil" Domain=Tempest',
+  'FR-Tempus':'Alignment=Neutral Domain=War',
+  'FR-Torm':'Alignment="Lawful Good" Domain=War',
+  'FR-Tymora':'Alignment="Chaotic Good" Domain=Trickery',
+  'FR-Tyr':'Alignment="Lawful Good" Domain=War',
+  'FR-Umberlee':'Alignment="Chaotic Evil" Domain=Tempest',
+  'FR-Waukeen':'Alignment=Neutral Domain=Knowledge,Trickery',
   // Greyhawk
-  'Greyhawk-Beory':'Alignment=N Domain=Nature',
-  'Greyhawk-Boccob':'Alignment=N Domain=Knowledge',
-  'Greyhawk-Celestian':'Alignment=N Domain=Knowledge',
-  'Greyhawk-Ehlonna':'Alignment=NG Domain=Life,Nature',
-  'Greyhawk-Erythnul':'Alignment=CE Domain=War',
-  'Greyhawk-Fharlanghn':'Alignment=NG Domain=Knowledge,Trickery',
-  'Greyhawk-Heironeous':'Alignment=LG Domain=War',
-  'Greyhawk-Hextor':'Alignment=LE Domain=War',
-  'Greyhawk-Kord':'Alignment=CG Domain=Tempest,War',
-  'Greyhawk-Incabulous':'Alignment=NE Domain=Death',
-  'Greyhawk-Istus':'Alignment=N Domain=Knowledge',
-  'Greyhawk-Iuz':'Alignment=CE Domain=Death',
-  'Greyhawk-Nerull':'Alignment=NE Domain=Death',
-  'Greyhawk-Obad-Hai':'Alignment=N Domain=Nature',
+  'Greyhawk-Beory':'Alignment=Neutral Domain=Nature',
+  'Greyhawk-Boccob':'Alignment=Neutral Domain=Knowledge',
+  'Greyhawk-Celestian':'Alignment=Neutral Domain=Knowledge',
+  'Greyhawk-Ehlonna':'Alignment="Neutral Good" Domain=Life,Nature',
+  'Greyhawk-Erythnul':'Alignment="Chaotic Evil" Domain=War',
+  'Greyhawk-Fharlanghn':'Alignment="Neutral Good" Domain=Knowledge,Trickery',
+  'Greyhawk-Heironeous':'Alignment="Lawful Good" Domain=War',
+  'Greyhawk-Hextor':'Alignment="Lawful Evil" Domain=War',
+  'Greyhawk-Kord':'Alignment="Chaotic Good" Domain=Tempest,War',
+  'Greyhawk-Incabulous':'Alignment="Neutral Evil" Domain=Death',
+  'Greyhawk-Istus':'Alignment=Neutral Domain=Knowledge',
+  'Greyhawk-Iuz':'Alignment="Chaotic Evil" Domain=Death',
+  'Greyhawk-Nerull':'Alignment="Neutral Evil" Domain=Death',
+  'Greyhawk-Obad-Hai':'Alignment=Neutral Domain=Nature',
   'Greyhawk-Olidammara':'Alignment=CN Domain=Trickery',
-  'Greyhawk-Pelor':'Alignment=NG Domain=Life,Light',
-  'Greyhawk-Pholtus':'Alignment=LG Domain=Light',
+  'Greyhawk-Pelor':'Alignment="Neutral Good" Domain=Life,Light',
+  'Greyhawk-Pholtus':'Alignment="Lawful Good" Domain=Light',
   'Greyhawk-Ralishaz':'Alignment=CN Domain=Trickery',
-  'Greyhawk-Rao':'Alignment=LG Domain=Knowledge',
-  'Greyhawk-St. Cuthbert':'Alignment=LN Domain=Knowledge',
-  'Greyhawk-Tharizdun':'Alignment=CE Domain=Trickery',
-  'Greyhawk-Trithereon':'Alignment=CG Domain=War',
-  'Greyhawk-Ulaa':'Alignment=LG Domain=Life,War',
-  'Greyhawk-Vecna':'Alignment=NE Domain=Knowledge',
-  'Greyhawk-Wee Jas':'Alignment=LN Domain=Death,Knowledge',
+  'Greyhawk-Rao':'Alignment="Lawful Good" Domain=Knowledge',
+  'Greyhawk-St. Cuthbert':'Alignment="Lawful Neutral" Domain=Knowledge',
+  'Greyhawk-Tharizdun':'Alignment="Chaotic Evil" Domain=Trickery',
+  'Greyhawk-Trithereon':'Alignment="Chaotic Good" Domain=War',
+  'Greyhawk-Ulaa':'Alignment="Lawful Good" Domain=Life,War',
+  'Greyhawk-Vecna':'Alignment="Neutral Evil" Domain=Knowledge',
+  'Greyhawk-Wee Jas':'Alignment="Lawful Neutral" Domain=Death,Knowledge',
   // Nonhuman
-  'NH-Bahamut':'Alignment=LG Domain=Life,War Sphere=Dragon',
-  'NH-Blibdoolpoolp':'Alignment=NE Domain=Death Sphere=Kuo-Toa',
-  'NH-Corellon Larethian':'Alignment=CG Domain=Light Sphere=Elf',
-  'NH-Deep Sashelas':'Alignment=CG Domain=Nature,Tempest Sphere=Elf',
-  'NH-Eadro':'Alignment=N Domain=Nature,Tempest Sphere=Merfolk',
-  'NH-Garl Glittergold':'Alignment=LG Domain=Trickery Sphere=Gnome',
-  'NH-Grolantor':'Alignment=CE Domain=War Sphere="Hill Giant"',
-  'NH-Gruumsh':'Alignment=CE Domain=Tempest,War Sphere=Orc',
-  'NH-Hruggek':'Alignment=CE Domain=War Sphere=Bugbear',
-  'NH-Kurtulmak':'Alignment=LE Domain=War Sphere=Kobold',
-  'NH-Laogzed':'Alignment=CE Domain=Death Sphere=Troglodyte',
-  'NH-Lolth':'Alignment=CE Domain=Trickery Sphere=Drow',
-  'NH-Maglubiyet':'Alignment=LE Domain=War Sphere=Goblinoid',
-  'NH-Moradin':'Alignment=LG Domain=Knowledge Sphere=Dwarf',
-  'NH-Rillifane Rallathil':'Alignment=CG Domain=Nature Sphere=Elf',
-  'NH-Sehanine Moonbow':'Alignment=CG Domain=Knowledge Sphere=Elf',
-  'NH-Sekolah':'Alignment=LE Domain=Nature,Tempest Sphere=Sahuagin',
-  'NH-Semuanya':'Alignment=N Domain=Life Sphere=Lizardfolk',
-  'NH-Skerrit':'Alignment=N Domain=Knowledge Sphere=Centaur',
-  'NH-Skoraeus Stonebones':'Alignment=N Domain=Knowledge Sphere="Stone Giant"',
-  'NH-Surtur':'Alignment=LE Domain=Knowledge,War Sphere="Fire Giant"',
-  'NH-Thryn':'Alignment=CE Domain=War Sphere="Frost Giant"',
-  'NH-Tiamat':'Alignment=LE Domain=Trickery Sphere=Dragon',
-  'NH-Yondalla':'Alignment=LG Domain=Life Sphere=Halfling'
+  'NH-Bahamut':'Alignment="Lawful Good" Domain=Life,War Sphere=Dragon',
+  'NH-Blibdoolpoolp':'Alignment="Neutral Evil" Domain=Death Sphere=Kuo-Toa',
+  'NH-Corellon Larethian':'Alignment="Chaotic Good" Domain=Light Sphere=Elf',
+  'NH-Deep Sashelas':
+    'Alignment="Chaotic Good" Domain=Nature,Tempest Sphere=Elf',
+  'NH-Eadro':'Alignment=Neutral Domain=Nature,Tempest Sphere=Merfolk',
+  'NH-Garl Glittergold':'Alignment="Lawful Good" Domain=Trickery Sphere=Gnome',
+  'NH-Grolantor':'Alignment="Chaotic Evil" Domain=War Sphere="Hill Giant"',
+  'NH-Gruumsh':'Alignment="Chaotic Evil" Domain=Tempest,War Sphere=Orc',
+  'NH-Hruggek':'Alignment="Chaotic Evil" Domain=War Sphere=Bugbear',
+  'NH-Kurtulmak':'Alignment="Lawful Evil" Domain=War Sphere=Kobold',
+  'NH-Laogzed':'Alignment="Chaotic Evil" Domain=Death Sphere=Troglodyte',
+  'NH-Lolth':'Alignment="Chaotic Evil" Domain=Trickery Sphere=Drow',
+  'NH-Maglubiyet':'Alignment="Lawful Evil" Domain=War Sphere=Goblinoid',
+  'NH-Moradin':'Alignment="Lawful Good" Domain=Knowledge Sphere=Dwarf',
+  'NH-Rillifane Rallathil':'Alignment="Chaotic Good" Domain=Nature Sphere=Elf',
+  'NH-Sehanine Moonbow':'Alignment="Chaotic Good" Domain=Knowledge Sphere=Elf',
+  'NH-Sekolah':'Alignment="Lawful Evil" Domain=Nature,Tempest Sphere=Sahuagin',
+  'NH-Semuanya':'Alignment=Neutral Domain=Life Sphere=Lizardfolk',
+  'NH-Skerrit':'Alignment=Neutral Domain=Knowledge Sphere=Centaur',
+  'NH-Skoraeus Stonebones':
+    'Alignment=Neutral Domain=Knowledge Sphere="Stone Giant"',
+  'NH-Surtur':
+    'Alignment="Lawful Evil" Domain=Knowledge,War Sphere="Fire Giant"',
+  'NH-Thryn':'Alignment="Chaotic Evil" Domain=War Sphere="Frost Giant"',
+  'NH-Tiamat':'Alignment="Lawful Evil" Domain=Trickery Sphere=Dragon',
+  'NH-Yondalla':'Alignment="Lawful Good" Domain=Life Sphere=Halfling'
 };
 PHB5E.DEITIES = Object.assign({}, SRD5E.DEITIES, PHB5E.DEITIES_ADDED);
 
@@ -1601,6 +1630,11 @@ PHB5E.choiceRules = function(rules, type, name, attrs) {
  */
 PHB5E.classRulesExtra = function(rules, name) {
   if(name == 'Barbarian') {
+    rules.defineRule('features.Path Of The Totem Warrior',
+      'features.Path Of The Totem Warrior (Bear)', '=', '1',
+      'features.Path Of The Totem Warrior (Eagle)', '=', '1',
+      'features.Path Of The Totem Warrior (Wolf)', '=', '1'
+    );
     SRD5E.featureSpells
       (rules, 'Spirit Seeker', 'R', null, ['Beast Sense,Speak With Animals']);
     SRD5E.featureSpells
@@ -1679,7 +1713,7 @@ PHB5E.classRulesExtra = function(rules, name) {
  */
 PHB5E.featRulesExtra = function(rules, name) {
 
-  var matchInfo;
+  let matchInfo;
 
   if(name == 'Alert') {
     rules.defineRule('initiative', 'combatNotes.alert', '+', '5');
@@ -1701,8 +1735,8 @@ PHB5E.featRulesExtra = function(rules, name) {
       'proficiencyBonus', '+', null
     );
   } else if((matchInfo = name.match(/Magic\sInitiate\s.(.*)./)) != null) {
-    var clas = matchInfo[1];
-    var spellCode = clas == 'Warlock' ? 'K' : clas.charAt(0);
+    let clas = matchInfo[1];
+    let spellCode = clas == 'Warlock' ? 'K' : clas.charAt(0);
     rules.defineRule('casterLevels.' + spellCode,
       'magicNotes.magicInitiate(' + clas + ')', '^=', '1'
     );
@@ -1723,8 +1757,8 @@ PHB5E.featRulesExtra = function(rules, name) {
     );
     rules.defineRule
       ('features.Combat Superiority', 'combatNotes.martialAdept', '=', '1');
-    var selectables = rules.getChoices('selectableFeatures');
-    for(var s in selectables) {
+    let selectables = rules.getChoices('selectableFeatures');
+    for(let s in selectables) {
       if(selectables[s].includes('Maneuver'))
         rules.defineRule(
           'validationNotes.fighter-' + s.replaceAll(' ', '') + 'SelectableFeature',
@@ -1759,7 +1793,7 @@ PHB5E.featRulesExtra = function(rules, name) {
  */
 PHB5E.pathRulesExtra = function(rules, name) {
 
-  var pathLevel =
+  let pathLevel =
     name.charAt(0).toLowerCase() + name.substring(1).replaceAll(' ', '') +
     'Level';
 
@@ -1860,7 +1894,7 @@ PHB5E.pathRulesExtra = function(rules, name) {
     rules.defineRule('magicNotes.radianceOfTheDawn', pathLevel, '=', null);
     rules.defineRule
       ('magicNotes.wardingFlare', 'wisdomModifier', '=', 'Math.max(source, 1)');
-    SRD5E.featureSpells(rules, 'Light Bonus Cantrip', 'C', null, ['Light']);
+    SRD5E.featureSpells(rules, 'Bonus Cantrip (Light Domain)', 'C', null, ['Light']);
 
   } else if(name == 'Nature Domain') {
 
@@ -2006,7 +2040,7 @@ PHB5E.raceRulesExtra = function(rules, name) {
 
 /* Returns an array of plugins upon which this one depends. */
 PHB5E.getPlugins = function() {
-  var result = [SRD5E];
+  let result = [SRD5E];
   if(window.Tasha != null &&
      QuilvynUtils.getKeys(PHB5E.rules.getChoices('selectableFeatures'), /Peace Domain/).length > 0)
     result.unshift(Tasha);
