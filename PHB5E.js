@@ -195,93 +195,43 @@ PHB5E.CLASSES_FEATURES_ADDED = {
     '"features.Knowledge Domain ? 1:Blessings Of Knowledge",' +
     '"features.Knowledge Domain ? 2:Knowledge Of The Ages",' +
     '"features.Knowledge Domain ? 6:Read Thoughts",' +
-    '"features.Knowledge Domain ? 8:Potent Spellcasting",' +
+    '"clericHasPotentSpellcasting ? 8:Potent Spellcasting",' +
     '"features.Knowledge Domain ? 17:Visions Of The Past",' +
     '"features.Light Domain ? 1:Bonus Cantrip (Light Domain)",' +
     '"features.Light Domain ? 1:Warding Flare",' +
     '"features.Light Domain ? 2:Radiance Of The Dawn",' +
     '"features.Light Domain ? 6:Improved Flare",' +
-    '"features.Light Domain ? 8:Potent Spellcasting",' +
+    '"clericHasPotentSpellcasting ? 8:Potent Spellcasting",' +
     '"features.Light Domain ? 17:Corona Of Light",' +
     '"features.Nature Domain ? 1:Acolyte Of Nature",' +
     '"features.Nature Domain ? 1:Bonus Proficiency (Nature Domain)",' +
     '"features.Nature Domain ? 2:Charm Animals And Plants",' +
-    '"features.Nature Domain ? 6:Dampen Elements","8:Divine Strike",' +
+    '"features.Nature Domain ? 6:Dampen Elements",' +
+    '"clericHasDivineStrike ? 8:Divine Strike",' +
     '"features.Nature Domain ? 17:Master Of Nature",' +
     '"features.Tempest Domain ? 1:Bonus Proficiencies (Tempest Domain)",' +
     '"features.Tempest Domain ? 1:Wrath Of The Storm",' +
     '"features.Tempest Domain ? 2:Destructive Wrath",' +
     '"features.Tempest Domain ? 6:Thunderbolt Strike",' +
-    '"features.Tempest Domain ? 8:Divine Strike",' +
+    '"clericHasDivineStrike ? 8:Divine Strike",' +
     '"features.Tempest Domain ? 17:Stormborn",' +
     '"features.Trickery Domain ? 1:Blessing Of The Trickster",' +
     '"features.Trickery Domain ? 2:Invoke Duplicity",' +
     '"features.Trickery Domain ? 6:Cloak Of Shadows (Trickery Domain)",' +
-    '"features.Trickery Domain ? 8:Divine Strike",' +
+    '"clericHasDivineStrike ? 8:Divine Strike",' +
     '"features.Trickery Domain ? 17:Improved Duplicity",' +
     '"features.War Domain ? 1:Bonus Proficiencies (War Domain)",' +
     '"features.War Domain ? 1:War Priest",' +
     '"features.War Domain ? 2:Guided Strike",' +
     '"features.War Domain ? 6:War God\'s Blessing",' +
-    '"features.War Domain ? 8:Divine Strike",' +
+    '"clericHasDivineStrike ? 8:Divine Strike",' +
     '"features.War Domain ? 17:Avatar Of Battle"',
-/*
- * Knowledge Domain
-    'Spells=' +
-      '"1:Command,Identify",' +
-      '"3:Augury,Suggestion",' +
-      '"5:Nondetection,Speak With Dead",' +
-      '"7:Arcane Eye,Confusion",' +
-      '"9:Legend Lore,Scrying"',
-  'Light Domain':
-    'Spells=' +
-      '"1:Burning Hands,Faerie Fire",' +
-      '"3:Flaming Sphere,Scorching Ray",' +
-      '"5:Daylight,Fireball",' +
-      '"7:Guardian Of Faith,Wall Of Fire",' +
-      '"9:Flame Strike,Scrying"',
-  'Nature Domain':
-    'Spells=' +
-      '"1:Animal Friendship,Speak With Animals",' +
-      '"3:Barkskin,Spike Growth",' +
-      '"5:Plant Growth,Wind Wall",' +
-      '"7:Dominate Beast,Grasping Vine",' +
-      '"9:Insect Plague,Tree Stride"',
-  'Tempest Domain':
-    'Spells=' +
-      '"1:Fog Cloud,Thunderwave",' +
-      '"3:Gust Of Wind,Shatter",' +
-      '"5:Call Lightning,Sleet Storm",' +
-      '"7:Control Water,Ice Storm",' +
-      '"9:Destructive Wave,Insect Plague"',
-  'Trickery Domain':
-    'Spells=' +
-      '"1:Charm Person,Disguise Self",' +
-      '"3:Mirror Image,Pass Without Trace",' +
-      '"5:Blink,Dispel Magic",' +
-      '"7:Dimension Door,Polymorph",' +
-      '"9:Dominate Person,Modify Memory"',
-  'War Domain':
-    'Spells=' +
-      '"1:Divine Favor,Shield Of Faith",' +
-      '"3:Magic Weapon,Spiritual Weapon",' +
-      '"5:Crusader\'s Mantle,Spirit Guardians",' +
-      '"7:Freedom Of Movement,Stoneskin",' +
-      '"9:Flame Strike,Hold Monster"',
-  */
   'Druid':
     '"features.Circle Of The Moon ? 2:Combat Wild Shape",' +
     '"features.Circle Of The Moon ? 2:Circle Forms",' +
     '"features.Circle Of The Moon ? 6:Primal Strike",' +
     '"features.Circle Of The Moon ? 10:Elemental Wild Shape",' +
     '"features.Circle Of The Moon ? 14:Thousand Forms"',
-  /* TODO Circle Spells feature spells:
-  'Circle Of The Land (Underdark)':
-      '"3:Spider Climb,Web",' +
-      '"5:Gaseous Form,Stinking Cloud",' +
-      '"7:Greater Invisibility,Stone Shape",' +
-      '"9:Cloudkill,Insect Plague"',
-  */
   'Fighter':
     '"features.Battle Master ? 3:Student Of War",' +
     '"features.Battle Master ? 3:Combat Superiority",' +
@@ -294,15 +244,6 @@ PHB5E.CLASSES_FEATURES_ADDED = {
     '"features.Eldritch Knight ? 10:Eldritch Strike",' +
     '"features.Eldritch Knight ? 15:Arcane Charge",' +
     '"features.Eldritch Knight ? 18:Improved War Magic"',
-    /* TODO
-    'SpellAbility=intelligence ' +
-    'SpellSlots=' +
-      'W0:3=2;10=3,' +
-      'W1:3=2;4=3;7=4,' +
-      'W2:7=2;10=3,' +
-      'W3:13=2;16=3,' +
-      'W4:19=1',
-    */
   'Monk':
     '"features.Way Of Shadow ? 3:Shadow Arts",' +
     '"features.Way Of Shadow ? 6:Shadow Step",' +
@@ -321,22 +262,6 @@ PHB5E.CLASSES_FEATURES_ADDED = {
     '"features.Oath Of Vengeance ? 7:Relentless Avenger",' +
     '"features.Oath Of Vengeance ? 15:Soul Of Vengeance",' +
     '"features.Oath Of Vengeance ? 20:Avenging Angel"',
-  /* TODO
-  'Oath Of The Ancients':
-    'Spells=' +
-      '"3:Ensnaring Strike,Speak With Animals",' +
-      '"5:Moonbeam,Misty Step",' +
-      '"9:Plant Growth,Protection From Energy",' +
-      '"13:Ice Storm,Stoneskin",' +
-      '"17:Commune With Nature,Tree Stride"',
-  'Oath Of Vengeance':
-    'Spells=' +
-      '"3:Bane,Hunter\'s Mark",' +
-      '"5:Hold Person,Misty Step",' +
-      '"9:Haste,Protection From Energy",' +
-      '"13:Banishment,Dimension Door",' +
-      '"17:Hold Monster,Scrying"',
-   */
   'Ranger':
     '"features.Beast Master ? 3:Ranger\'s Companion",' +
     '"features.Beast Master ? 7:Exceptional Training",' +
@@ -348,15 +273,6 @@ PHB5E.CLASSES_FEATURES_ADDED = {
     '"features.Arcane Trickster ? 9:Magical Ambush",' +
     '"features.Arcane Trickster ? 13:Versatile Trickster",' +
     '"features.Arcane Trickster ? 17:Spell Thief",' +
-    /* TODO
-    'SpellAbility=intelligence ' +
-    'SpellSlots=' +
-      'W0:3=3;10=4,' +
-      'W1:3=2;4=3;7=4,' +
-      'W2:7=2;10=3,' +
-      'W3:13=2;16=3,' +
-      'W4:19=1',
-    */
     '"features.Assassin ? 3:Assassin Bonus Proficiencies",' +
     '"features.Assassin ? 3:Assassinate",' +
     '"features.Assassin ? 9:Infiltration Expertise",' +
@@ -419,7 +335,8 @@ PHB5E.CLASSES_SELECTABLES_ADDED = {
     '"3:Path Of The Totem Warrior (Bear):Primal Path",' +
     '"3:Path Of The Totem Warrior (Eagle):Primal Path",' +
     '"3:Path Of The Totem Warrior (Wolf):Primal Path"',
-  'Bard':'"3:College Of Valor:Bard College"',
+  'Bard':
+    '"3:College Of Valor:Bard College"',
   'Cleric':
     '"deityDomains =~ \'Knowledge\' ? 1:Knowledge Domain:Divine Domain",' +
     '"deityDomains =~ \'Light\' ? 1:Light Domain:Divine Domain",' +
@@ -462,10 +379,12 @@ PHB5E.CLASSES_SELECTABLES_ADDED = {
     '"17:Wave Of Rolling Earth:Elemental Discipline"',
   'Paladin':
     '"3:Oath Of The Ancients:Sacred Oath","3:Oath Of Vengeance:Sacred Oath"',
-  'Ranger':'"3:Beast Master:Ranger Archetype"',
+  'Ranger':
+    '"3:Beast Master:Ranger Archetype"',
   'Rogue':
     '"3:Arcane Trickster:Roguish Archetype","3:Assassin:Roguish Archetype"',
-  'Sorcerer':'"1:Wild Magic:Sorcerous Origin"',
+  'Sorcerer':
+    '"1:Wild Magic:Sorcerous Origin"',
   'Warlock':
     '"1:The Archfey:Otherworldly Patron",' +
     '"1:The Great Old One:Otherworldly Patron"',
@@ -1509,9 +1428,6 @@ for(let s in PHB5E.SPELLS_RENAMED) {
   PHB5E.SPELLS[PHB5E.SPELLS_RENAMED[s]] = PHB5E.SPELLS[s];
   delete PHB5E.SPELLS[s];
 }
-// Presently, there's only known use of a renamed spell in a spell list
-//PHB5E.PATHS['Circle Of The Land (Swamp)'] =
-//  PHB5E.PATHS['Circle Of The Land (Swamp)'].replace('Acid Arrow', "Melf's Acid Arrow");
 PHB5E.DEITIES_ADDED = {
   // Forgotten Realms
   'FR-Auril':'Alignment="Neutral Evil" Domain=Nature,Tempest',
@@ -1618,8 +1534,6 @@ PHB5E.choiceRules = function(rules, type, name, attrs) {
     PHB5E.classRulesExtra(rules, name);
   else if(type == 'Feat')
     PHB5E.featRulesExtra(rules, name);
-  else if(type == 'Path')
-    PHB5E.pathRulesExtra(rules, name);
   else if(type == 'Race')
     PHB5E.raceRulesExtra(rules, name);
 };
@@ -1629,7 +1543,13 @@ PHB5E.choiceRules = function(rules, type, name, attrs) {
  * derived directly from the attributes passed to classRules.
  */
 PHB5E.classRulesExtra = function(rules, name) {
+
+  let classLevel = 'levels.' + name;
+
   if(name == 'Barbarian') {
+
+    rules.defineRule('carry', 'abilityNotes.aspectOfTheBeast(Bear)', '*', '2');
+    rules.defineRule('lift', 'abilityNotes.aspectOfTheBeast(Bear)', '*', '2');
     rules.defineRule('features.Path Of The Totem Warrior',
       'features.Path Of The Totem Warrior (Bear)', '=', '1',
       'features.Path Of The Totem Warrior (Eagle)', '=', '1',
@@ -1640,9 +1560,222 @@ PHB5E.classRulesExtra = function(rules, name) {
     SRD5E.featureSpells
       (rules, 'Spirit Walker', 'R', null, ['Commune With Nature']);
     SRD5E.featureSpells(rules, 'Commune With Nature', 'Spirit Walker', 'R', 5);
+
+  } else if(name == 'Bard') {
+
+    rules.defineRule('bardExtraAttacks',
+      'bardFeatures.Extra Attack', '?', null,
+      classLevel, '=', 'source<6 ? null : 1'
+    );
+    rules.defineRule('combatNotes.extraAttack', 'bardExtraAttacks', '+=', null);
+    // Have to hard-code these proficiencies, since featureRules only handles
+    // notes w/a single type of granted proficiency
+    rules.defineRule('armorProficiency.Medium',
+      'combatNotes.bonusProficiencies(CollegeOfValor)', '=', '1'
+    );
+    rules.defineRule('armorProficiency.Shield',
+      'combatNotes.bonusProficiencies(CollegeOfValor)', '=', '1'
+    );
+    rules.defineRule('weaponProficiency.Martial',
+      'combatNotes.bonusProficiencies(CollegeOfValor)', '=', '1'
+    );
+
+  } else if(name == 'Cleric') {
+
+    rules.defineRule('clericHasDivineStrike',
+      'features.Nature Domain', '=', '1',
+      'features.Tempest Domain', '=', '1',
+      'features.Trickery Domain', '=', '1',
+      'features.War Domain', '=', '1'
+    );
+    rules.defineRule('clericHasPotentSpellcasting',
+      'features.Knowledge Domain', '=', '1',
+      'features.Light Domain', '=', '1'
+    );
+    rules.defineRule('magicNotes.potentSpellcasting.1',
+      'features.Potent Spellcasting', '?', null,
+      'wisdomModifier', '=', null
+    );
+    rules.defineRule('magicNotes.radianceOfTheDawn', classLevel, '=', null);
+    rules.defineRule
+      ('magicNotes.wardingFlare', 'wisdomModifier', '=', 'Math.max(source, 1)');
+    rules.defineRule
+      ('combatNotes.divineStrike', classLevel, '=', 'source<14 ? 1 : 2');
+    rules.defineRule('combatNotes.divineStrike.1',
+      'features.Divine Strike', '?', null,
+      'features.Nature Domain', '=', '"cold, fire, or lightning"',
+      'features.Tempest Domain', '=', '"thunder"',
+      'features.Trickery Domain', '=', '"poison"',
+      'features.War Domain', '=', '"weapon damage type"'
+    );
+    rules.defineRule('spellSlots.D0', 'magicNotes.acolyteOfNature', '+=', '1');
+    rules.defineRule('spellCasterLevel.D', 'casterLevels.Nature', '=', null);
+    rules.defineRule('combatNotes.wrathOfTheStorm',
+      'wisdomModifier', '=', 'Math.max(source, 1)'
+    );
+    // Have to hard-code these proficiencies, since featureRules only handles
+    // notes w/a single type of granted proficiency
+    rules.defineRule('armorProficiency.Heavy',
+      'combatNotes.bonusProficiencies(TempestDomain)', '=', '1'
+    );
+    rules.defineRule('weaponProficiency.Martial',
+      'combatNotes.bonusProficiencies(TempestDomain)', '=', '1'
+    );
+    rules.defineRule('magicNotes.invokeDuplicity',
+      classLevel, '=', '"1 illusionary duplicate"',
+      'magicNotes.improvedDuplicity', '=', '"4 illusionary duplicates"'
+    );
+    rules.defineRule
+      ('combatNotes.warPriest', 'wisdomModifier', '=', 'Math.max(source, 1)');
+    // Have to hard-code these proficiencies, since featureRules only handles
+    // notes w/a single type of granted proficiency
+    rules.defineRule
+      ('armorProficiency.Heavy', 'combatNotes.bonusProficiencies(WarDomain)', '=', '1');
+    rules.defineRule('weaponProficiency.Martial',
+      'combatNotes.bonusProficiencies(WarDomain)', '=', '1'
+    );
+
+    SRD5E.featureSpells(rules, 'Read Thoughts', 'C', null, ['Suggestion']);
+    SRD5E.featureSpells(rules, 'Bonus Cantrip (Light Domain)', 'C', null, ['Light']);
+    SRD5E.featureSpells(
+      rules, 'Knowledge Domain', 'C', classLevel, [
+      '1:Command', '1:Identify',
+      '3:Augury', '3:Suggestion',
+      '5:Nondetection', '5:Speak With Dead',
+      '7:Arcane Eye', '7:Confusion',
+      '9:Legend Lore', '9:Scrying'
+    ]);
+    SRD5E.featureSpells(
+      rules, 'Light Domain', 'C', classLevel, [
+      '1:Burning Hands', '1:Faerie Fire',
+      '3:Flaming Sphere', '3:Scorching Ray',
+      '5:Daylight', '5:Fireball',
+      '7:Guardian Of Faith', '7:Wall Of Fire',
+      '9:Flame Strike', '9:Scrying'
+    ]);
+    SRD5E.featureSpells(
+      rules, 'Nature Domain', 'C', classLevel, [
+      '1:Animal Friendship', '1:Speak With Animals',
+      '3:Barkskin', '3:Spike Growth',
+      '5:Plant Growth', '5:Wind Wall',
+      '7:Dominate Beast', '7:Grasping Vine',
+      '9:Insect Plague', '9:Tree Stride'
+    ]);
+    SRD5E.featureSpells(
+      rules, 'Tempest Domain', 'C', classLevel, [
+      '1:Fog Cloud', '1:Thunderwave',
+      '3:Gust Of Wind', '3:Shatter',
+      '5:Call Lightning', '5:Sleet Storm',
+      '7:Control Water', '7:Ice Storm',
+      '9:Destructive Wave', '9:Insect Plague'
+    ]);
+    SRD5E.featureSpells(
+      rules, 'Trickery Domain', 'C', classLevel, [
+      '1:Charm Person', '1:Disguise Self',
+      '3:Mirror Image', '3:Pass Without Trace',
+      '5:Blink', '5:Dispel Magic',
+      '7:Dimension Door', '7:Polymorph',
+      '9:Dominate Person', '9:Modify Memory'
+    ]);
+    SRD5E.featureSpells(
+      rules, 'War Domain', 'C', classLevel, [
+      '1:Divine Favor', '1:Shield Of Faith',
+      '3:Magic Weapon', '3:Spiritual Weapon',
+      '5:Crusader\'s Mantle', '5:Spirit Guardians',
+      '7:Freedom Of Movement', '7:Stoneskin',
+      '9:Flame Strike', '9:Hold Monster'
+    ]);
+
+  } else if(name == 'Druid') {
+
+    rules.defineRule
+      ('magicNotes.wildShape.1', 'magicNotes.circleForms', '=', null);
+    rules.defineRule('magicNotes.circleForms',
+      classLevel, '=', 'source < 6 ? 1 : Math.floor(source / 3)'
+    );
+
+    SRD5E.featureSpells(rules, 'Thousand Forms', 'D', null, ['Alter Self']);
+    SRD5E.featureSpells(
+      rules, 'Circle Of The Land (Underdark)', 'D', classLevel, [
+      '3:Spider Climb', '3:Web',
+      '5:Gaseous Form', '5:Stinking Cloud',
+      '7:Greater Invisibility', '7:Stone Shape',
+      '9:Cloudkill', '9:Insect Plague'
+    ]);
+
+  } else if(name == 'Fighter') {
+
+    rules.defineRule('battleMasterLevel',
+      'features.Battle Master', '?', null,
+      'levels.Fighter', '=', null
+    );
+    rules.defineRule('maxDexOrStrMod',
+      'dexterityModifier', '=', null,
+      'strengthModifier', '^', null
+    );
+    rules.defineRule('maneuverSaveDC',
+      'features.Combat Superiority', '?', null,
+      'proficiencyBonus', '=', '8 + source',
+      'maxDexOrStrMod', '+', null
+    );
+    rules.defineRule('combatNotes.combatSuperiority',
+      'battleMasterLevel', '+=', 'source<7 ? 4 : source<15 ? 5 : 6'
+    );
+    rules.defineRule('combatNotes.combatSuperiority.1',
+      'features.Combat Superiority', '?', null,
+      'battleMasterLevel', '=', '8',
+      'combatNotes.improvedCombatSuperiority', '=', null
+    );
+    rules.defineRule('combatNotes.combatSuperiority.2',
+      'features.Combat Superiority', '?', null,
+      'battleMasterLevel', '=', 'source<7 ? 3 : source<10 ? 5 : source<15 ? 7 : 9'
+    );
+    rules.defineRule
+      ('combatNotes.disarmingAttack', 'maneuverSaveDC', '=', null);
+    rules.defineRule('combatNotes.goadingAttack', 'maneuverSaveDC', '=', null);
+    rules.defineRule('combatNotes.improvedCombatSuperiority',
+      classLevel, '=', 'source<18 ? 10 : 12'
+    );
+    rules.defineRule('combatNotes.menacingAttack', 'maneuverSaveDC', '=', null);
+    rules.defineRule('combatNotes.parry', 'dexterityModifier', '=', null);
+    rules.defineRule('combatNotes.pushingAttack', 'maneuverSaveDC', '=', null);
+    rules.defineRule('combatNotes.rally', 'charismaModifier', '=', null);
+    rules.defineRule('combatNotes.tripAttack', 'maneuverSaveDC', '=', null);
+    rules.defineRule('selectableFeatureCount.Fighter (Maneuver)',
+      'combatNotes.combatSuperiority.2', '=', null
+    );
+    rules.defineRule('combatNotes.warMagic',
+      classLevel, '=', '"cantrip"',
+      'combatNotes.improvedWarMagic', '=', '"any spell"'
+    );
+
+    let slots = [
+      'W0:2@3;3@10',
+      'W1:2@3;3@4;4@7',
+      'W2:2@7;3@10',
+      'W3:2@13;3@16',
+      'W4:1@19'
+    ];
+    rules.defineRule('casterLevels.Eldritch Knight',
+      'features.Eldritch Knight', '?', null,
+      'levels.Fighter','=', null
+    );
+    QuilvynRules.spellSlotRules(rules, 'casterLevels.Eldritch Knight', slots);
+    rules.defineRule
+      ('casterLevels.W', 'casterLevels.Eldritch Knight', '^=', null);
+
   } else if(name == 'Monk') {
+
+    rules.defineRule('magicNotes.discipleOfTheElements',
+      'monkFeatures.Way Of The Four Elements', '?', null,
+      classLevel, '=', 'Math.floor( (source + 4) / 5)'
+    );
+    rules.defineRule('selectableFeatureCount.Monk (Elemental Discipline)',
+      'magicNotes.discipleOfTheElements', '=', null
+    );
     rules.defineRule('magicNotes.fistOfUnbrokenAir', 'kiSaveDC', '=', null);
     rules.defineRule('magicNotes.waterWhip', 'kiSaveDC', '=', null);
+
     SRD5E.featureSpells(
       rules, 'Shadow Arts', 'M', null,
       ['Darkness,Darkvision,Minor Illusion,Pass Without Trace,Silence']
@@ -1668,7 +1801,9 @@ PHB5E.classRulesExtra = function(rules, name) {
     SRD5E.featureSpells(rules, 'Breath Of Winter', 'M', null, ['Cone Of Cold']);
     SRD5E.featureSpells
       (rules, 'Wave Of Rolling Earth', 'M', null, ['Wall Of Stone']);
+
   } else if(name == 'Paladin') {
+
     rules.defineRule
       ('combatNotes.avengingAngel', 'spellDifficultyClass.P', '=', null);
     rules.defineRule
@@ -1677,34 +1812,105 @@ PHB5E.classRulesExtra = function(rules, name) {
       ("magicNotes.nature'sWrath", 'spellDifficultyClass.P', '=', null);
     rules.defineRule
       ('magicNotes.turnTheFaithless', 'spellDifficultyClass.P', '=', null);
-  } else if(name == 'Ranger') {
     rules.defineRule
-      ("featureNotes.ranger'sCompanion", 'levels.Ranger', '=', '"1/4"');
+      ('saveNotes.auraOfWarding', classLevel, '=', 'source<18 ? 10 : 30');
+
+    SRD5E.featureSpells(
+      rules, 'Oath Of The Ancients', 'P', classLevel, [
+      '3:Ensnaring Strike', '3:Speak With Animals',
+      '5:Moonbeam', '5:Misty Step',
+      '9:Plant Growth', '9:Protection From Energy',
+      '13:Ice Storm', '13:Stoneskin',
+      '17:Commune With Nature', '17:Tree Stride'
+    ]);
+    SRD5E.featureSpells(
+      rules, 'Oath Of Vengeance', 'P', classLevel, [
+      '3:Bane', '3:Hunter\'s Mark',
+      '5:Hold Person', '5:Misty Step',
+      '9:Haste', '9:Protection From Energy',
+      '13:Banishment', '13:Dimension Door',
+      '17:Hold Monster', '17:Scrying'
+    ]);
+
+  } else if(name == 'Ranger') {
+
+    rules.defineRule
+      ("featureNotes.ranger'sCompanion", classLevel, '=', '"1/4"');
+
+  } else if(name == 'Rogue') {
+
+    rules.defineRule('combatNotes.deathStrike',
+      'dexterityModifier', '=', '8 + source',
+      'proficiencyBonus', '+', null
+    );
+    rules.defineRule('magicNotes.spellThief',
+      'intelligenceModifier', '=', '8 + source',
+      'proficiencyBonus', '+', null
+    );
+
+    SRD5E.featureSpells
+      (rules, 'Mage Hand Legerdemain', 'W', null, ['Mage Hand']);
+    let slots = [
+      'W0:3@3;4@10',
+      'W1:2@3;3@4;4@7',
+      'W2:2@7;3@10',
+      'W3:2@13;3@16',
+      'W4:1@19'
+    ];
+    rules.defineRule('casterLevels.Arcane Trickster',
+      'features.Arcane Trickster', '?', null,
+      'levels.Rogue','=', null
+    );
+    QuilvynRules.spellSlotRules(rules, 'casterLevels.Arcane Trickster', slots);
+    rules.defineRule
+      ('casterLevels.W', 'casterLevels.Arcane Trickster', '^=', null);
+
   } else if(name == 'Warlock') {
+
     rules.defineRule
       ('magicNotes.darkDelirium', 'spellDifficultyClass.K', '=', null);
     rules.defineRule
       ('magicNotes.feyPresence', 'spellDifficultyClass.K', '=', null);
     rules.defineRule
       ('saveNotes.beguilingDefenses', 'spellDifficultyClass.K', '=', null);
-  } else if(name == 'Rogue') {
-    SRD5E.featureSpells
-      (rules, 'Mage Hand Legerdemain', 'W', null, ['Mage Hand']);
+
   } else if(name == 'Wizard') {
-    rules.defineRule
-      ('magicNotes.alterMemories.1', 'spellDifficultyClass.W', '=', null);
+
+    rules.defineRule('magicNotes.alterMemories',
+      'charismaModifier', '=', 'Math.max(source + 1, 1)'
+    );
+    rules.defineRule('magicNotes.alterMemories.1',
+      'features.Alter Memories', '?', null,
+      'spellDifficultyClass.W', '=', null
+    );
+    rules.defineRule('magicNotes.arcaneWard',
+      classLevel, '=', 'source * 2',
+      'intelligenceModifier', '+', null
+    );
     rules.defineRule
       ('magicNotes.commandUndead', 'spellDifficultyClass.W', '=', null);
     rules.defineRule
       ('magicNotes.hypnoticGaze', 'spellDifficultyClass.W', '=', null);
     rules.defineRule
       ('magicNotes.instinctiveCharm', 'spellDifficultyClass.W', '=', null);
+    rules.defineRule('magicNotes.portent',
+      classLevel, '=', '2',
+      'magicNotes.greaterPortent', '^', '3'
+    );
+    rules.defineRule('magicNotes.undeadThralls', classLevel, '=', null);
+    rules.defineRule('magicNotes.undeadThralls.1',
+      'features.Undead Thralls', '?', null,
+      'proficiencyBonus', '=', null
+    );
+
     SRD5E.featureSpells
       (rules, 'Improved Minor Illusion', 'W', null, ['Minor Illusion']);
     SRD5E.featureSpells(rules, 'Undead Thralls', 'W', null, ['Animate Dead']);
     SRD5E.featureSpells(rules, 'Shapechanger', 'W', null, ['Polymorph']);
     SRD5E.featureSpells(rules, 'Master Transmuter', 'W', null, ['Raise Dead']);
+
   }
+
 };
 
 /*
@@ -1783,218 +1989,6 @@ PHB5E.featRulesExtra = function(rules, name) {
   } else if(name == 'Weapon Master') {
     rules.defineRule
       ('weaponChoiceCount', 'combatNotes.weaponMaster', '+=', '4');
-  }
-
-};
-
-/*
- * Defines in #rules# the rules associated with path #name# that cannot be
- * derived directly from the attributes passed to pathRules.
- */
-PHB5E.pathRulesExtra = function(rules, name) {
-
-  let pathLevel =
-    name.charAt(0).toLowerCase() + name.substring(1).replaceAll(' ', '') +
-    'Level';
-
-  if(name == 'Arcane Trickster') {
-
-    rules.defineRule('magicNotes.spellThief',
-      'intelligenceModifier', '=', '8 + source',
-      'proficiencyBonus', '+', null
-    );
-
-  } else if(name == 'Assassin') {
-
-    rules.defineRule('combatNotes.deathStrike',
-      'dexterityModifier', '=', '8 + source',
-      'proficiencyBonus', '+', null
-    );
-
-  } else if(name == 'Battle Master') {
-
-    rules.defineRule('maxDexOrStrMod',
-      'dexterityModifier', '=', null,
-      'strengthModifier', '^', null
-    );
-    rules.defineRule('maneuverSaveDC',
-      'features.Combat Superiority', '?', null,
-      'proficiencyBonus', '=', '8 + source',
-      'maxDexOrStrMod', '+', null
-    );
-    rules.defineRule('combatNotes.combatSuperiority',
-      pathLevel, '=', 'source<7 ? 4 : source<15 ? 5 : 6'
-    );
-    rules.defineRule('combatNotes.combatSuperiority.1',
-      'combatNotes.improvedCombatSuperiority', '=', null
-    );
-    rules.defineRule('combatNotes.combatSuperiority.2',
-      pathLevel, '=', 'source<7 ? 3 : source<10 ? 5 : source<15 ? 7 : 9'
-    );
-    rules.defineRule
-      ('combatNotes.disarmingAttack', 'maneuverSaveDC', '=', null);
-    rules.defineRule('combatNotes.goadingAttack', 'maneuverSaveDC', '=', null);
-    rules.defineRule('combatNotes.improvedCombatSuperiority',
-      pathLevel, '=', 'source<18 ? 10 : 12'
-    );
-    rules.defineRule('combatNotes.menacingAttack', 'maneuverSaveDC', '=', null);
-    rules.defineRule('combatNotes.parry', 'dexterityModifier', '=', null);
-    rules.defineRule('combatNotes.pushingAttack', 'maneuverSaveDC', '=', null);
-    rules.defineRule('combatNotes.rally', 'charismaModifier', '=', null);
-    rules.defineRule('combatNotes.tripAttack', 'maneuverSaveDC', '=', null);
-    rules.defineRule('selectableFeatureCount.Fighter (Maneuver)',
-      'combatNotes.combatSuperiority.2', '=', null
-    );
-
-  } else if(name == 'Circle Of The Moon') {
-
-    rules.defineRule
-      ('magicNotes.wildShape.1', 'magicNotes.circleForms', '=', null);
-    rules.defineRule('magicNotes.circleForms',
-      pathLevel, '=', 'source < 6 ? 1 : Math.floor(source / 3)'
-    );
-    SRD5E.featureSpells(rules, 'Thousand Forms', 'D', null, ['Alter Self']);
-
-  } else if(name == 'College Of Valor') {
-
-    rules.defineRule('bardExtraAttacks',
-      'bardFeatures.Extra Attack', '?', null,
-      pathLevel, '=', 'source<6 ? null : 1'
-    );
-    rules.defineRule('combatNotes.extraAttack', 'bardExtraAttacks', '+=', null);
-    // Have to hard-code these proficiencies, since featureRules only handles
-    // notes w/a single type of granted proficiency
-    rules.defineRule('armorProficiency.Medium',
-      'combatNotes.valorBonusProficiencies', '=', '1'
-    );
-    rules.defineRule('armorProficiency.Shield',
-      'combatNotes.valorBonusProficiencies', '=', '1'
-    );
-    rules.defineRule('weaponProficiency.Martial',
-      'combatNotes.valorBonusProficiencies', '=', '1'
-    );
-
-  } else if(name == 'Eldritch Knight') {
-
-    rules.defineRule('combatNotes.warMagic',
-      pathLevel, '=', '"cantrip"',
-      'combatNotes.improvedWarMagic', '=', '"any spell"'
-    );
-
-  } else if(name == 'Knowledge Domain') {
-
-    rules.defineRule
-      ('magicNotes.potentSpellcasting.1', 'wisdomModifier', '=', null);
-    SRD5E.featureSpells(rules, 'Read Thoughts', 'C', null, ['Suggestion']);
-
-  } else if(name == 'Light Domain') {
-
-    rules.defineRule
-      ('magicNotes.potentSpellcasting.1', 'wisdomModifier', '=', null);
-    rules.defineRule('magicNotes.radianceOfTheDawn', pathLevel, '=', null);
-    rules.defineRule
-      ('magicNotes.wardingFlare', 'wisdomModifier', '=', 'Math.max(source, 1)');
-    SRD5E.featureSpells(rules, 'Bonus Cantrip (Light Domain)', 'C', null, ['Light']);
-
-  } else if(name == 'Nature Domain') {
-
-    rules.defineRule
-      ('combatNotes.divineStrike', pathLevel, '=', 'source<14 ? 1 : 2');
-    rules.defineRule('combatNotes.divineStrike.1',
-      pathLevel, '=', '"cold, fire, or lightning"'
-    );
-    rules.defineRule('spellSlots.D0', 'magicNotes.acolyteOfNature', '+=', '1');
-    rules.defineRule('spellCasterLevel.D', 'casterLevels.Nature', '=', null);
-
-  } else if(name == 'Oath Of The Ancients') {
-
-    rules.defineRule
-      ('saveNotes.auraOfWarding', pathLevel, '=', 'source<18 ? 10 : 30');
-
-  } else if(name == 'Path Of The Totem Warrior (Bear)') {
-
-    rules.defineRule('carry', 'abilityNotes.aspectOfTheBear', '*', '2');
-    rules.defineRule('lift', 'abilityNotes.aspectOfTheBear', '*', '2');
-
-  } else if(name == 'School Of Abjuration') {
-
-    rules.defineRule('magicNotes.arcaneWard',
-      pathLevel, '=', 'source * 2',
-      'intelligenceModifier', '+', null
-    );
-
-  } else if(name == 'School Of Divination') {
-
-    rules.defineRule('magicNotes.portent',
-      pathLevel, '=', '2',
-      'magicNotes.greaterPortent', '^', '3'
-    );
-
-  } else if(name == 'School Of Enchantment') {
-
-    rules.defineRule('magicNotes.alterMemories',
-      'charismaModifier', '=', 'Math.max(source + 1, 1)'
-    );
-
-  } else if(name == 'School Of Necromancy') {
-
-    rules.defineRule('magicNotes.undeadThralls', pathLevel, '=', null);
-    rules.defineRule
-      ('magicNotes.undeadThralls.1', 'proficiencyBonus', '=', null);
-
-  } else if(name == 'Tempest Domain') {
-
-    rules.defineRule
-      ('combatNotes.divineStrike', pathLevel, '=', 'source<14 ? 1 : 2');
-    rules.defineRule('combatNotes.divineStrike.1', pathLevel, '=', '"thunder"');
-    rules.defineRule('combatNotes.wrathOfTheStorm',
-      'wisdomModifier', '=', 'Math.max(source, 1)'
-    );
-    // Have to hard-code these proficiencies, since featureRules only handles
-    // notes w/a single type of granted proficiency
-    rules.defineRule('armorProficiency.Heavy',
-      'combatNotes.tempestBonusProficiencies', '=', '1'
-    );
-    rules.defineRule('weaponProficiency.Martial',
-      'combatNotes.tempestBonusProficiencies', '=', '1'
-    );
-
-  } else if(name == 'Trickery Domain') {
-
-    rules.defineRule
-      ('combatNotes.divineStrike', pathLevel, '=', 'source<14 ? 1 : 2');
-    rules.defineRule('combatNotes.divineStrike.1', pathLevel, '=', '"poison"');
-    rules.defineRule('magicNotes.invokeDuplicity',
-      pathLevel, '=', '"1 illusionary duplicate"',
-      'magicNotes.improvedDuplicity', '=', '"4 illusionary duplicates"'
-    );
-
-  } else if(name == 'War Domain') {
-
-    rules.defineRule
-      ('combatNotes.divineStrike', pathLevel, '=', 'source<14 ? 1 : 2');
-    rules.defineRule
-      ('combatNotes.divineStrike.1', pathLevel, '=', '"weapon damage type"');
-    rules.defineRule
-      ('combatNotes.warPriest', 'wisdomModifier', '=', 'Math.max(source, 1)');
-    // Have to hard-code these proficiencies, since featureRules only handles
-    // notes w/a single type of granted proficiency
-    rules.defineRule
-      ('armorProficiency.Heavy', 'combatNotes.warBonusProficiencies', '=', '1');
-    rules.defineRule('weaponProficiency.Martial',
-      'combatNotes.warBonusProficiencies', '=', '1'
-    );
-
-  } else if(name == 'Way Of The Four Elements') {
-
-    rules.defineRule('magicNotes.discipleOfTheElements',
-      'monkFeatures.Way Of The Four Elements', '?', null,
-      pathLevel, '=', 'Math.floor( (source + 4) / 5)'
-    );
-    rules.defineRule('selectableFeatureCount.Monk (Elemental Discipline)',
-      'magicNotes.discipleOfTheElements', '=', null
-    );
-
   }
 
 };
