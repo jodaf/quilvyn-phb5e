@@ -195,17 +195,17 @@ var attributes = {
       </tr><tr style="text-align:center">
         <td><i>Dexterity Damage Adjustment: +1</i></td>
       </tr><tr style="text-align:center">
-        <td><i>Tavern Brawler: Weapon Proficiency (Improvised)/Unarmed attacks inflict d4 HP</i></td>
+        <td><i>Tavern Brawler: Weapon Proficiency (Improvised)/Unarmed attacks inflict 1d4 HP</i></td>
       </tr><tr style="text-align:center">
         <td>Combat Wild Shape: May use Wild Shape as a bonus action</td>
       </tr><tr style="text-align:center">
-        <td>Mounted Combatant: Adv on melee attacks on an unmounted foe smaller than mount/May redirect attack on mount to self/Mount takes no damage on successful Dex save and half on fail</td>
+        <td>Mounted Combatant: Adv on melee attacks on an unmounted foe smaller than mount/May redirect attack on mount to self/Mount takes no damage on successful Dexterity save and half on fail</td>
       </tr><tr style="text-align:center">
         <td>Nature's Sanctuary: Beasts and plants cannot attack self (DC 16 Will neg)</td>
       </tr><tr style="text-align:center">
         <td>Primal Strike: Wild Shape attacks count as magical</td>
       </tr><tr style="text-align:center">
-        <td>Tavern Brawler-1: May make a bonus grapple after an Unarmed or Improvised strike</td>
+        <td>Tavern Brawler-1: May make a bonus grapple after a successful Unarmed or Improvised attack</td>
       </tr></table>
 </td>
     </tr></table>
@@ -251,15 +251,15 @@ var attributes = {
     </tr><tr style="text-align:left">
       <td>Barkskin (D2 [Circle Of The Land (Forest)] Tran): Touched gains AC 16 for conc or 1 hr</td>
     </tr><tr style="text-align:left">
-      <td>Blight (D4 [Circle Of The Land (Desert)] Necr): R30' target suffers 8d8 HP necrotic (Con half (plant Disadv, 64 HP on fail)) [+Level inflicts +1d8 HP]</td>
+      <td>Blight (D4 [Circle Of The Land (Desert)] Necr): R30' target suffers 8d8 HP necrotic (Constitution half (plant Disadv, 64 HP on fail)) [+Level inflicts +1d8 HP]</td>
     </tr><tr style="text-align:left">
       <td>Blur (D2 [Circle Of The Land (Desert)] Illu): Foes suffer Disadv on self attacks for conc or 1 min</td>
     </tr><tr style="text-align:left">
-      <td>Call Lightning (D3 Conj): R120' Bolt inflicts 3d10 HP lightning (Dex half) in 5' radius 1/rd for conc or 10 min [+Level inflicts +1d10 HP]</td>
+      <td>Call Lightning (D3 Conj): R120' Bolt inflicts 3d10 HP lightning (Dexterity half) in 5' radius 1/rd for conc or 10 min [+Level inflicts +1d10 HP]</td>
     </tr><tr style="text-align:left">
-      <td>Call Lightning (D3 [Circle Of The Land (Forest)] Conj): R120' Bolt inflicts 3d10 HP lightning (Dex half) in 5' radius 1/rd for conc or 10 min [+Level inflicts +1d10 HP]</td>
+      <td>Call Lightning (D3 [Circle Of The Land (Forest)] Conj): R120' Bolt inflicts 3d10 HP lightning (Dexterity half) in 5' radius 1/rd for conc or 10 min [+Level inflicts +1d10 HP]</td>
     </tr><tr style="text-align:left">
-      <td>Cloudkill (D5 [Circle Of The Land (Underdark)] Conj): R120' 20' radius inflicts 5d8 HP poison (Con half), moves away 10'/rd for conc or 10 min [+Level inflicts +1d8 HP]</td>
+      <td>Cloudkill (D5 [Circle Of The Land (Underdark)] Conj): R120' 20' radius inflicts 5d8 HP poison (Constitution half), moves away 10'/rd for conc or 10 min [+Level inflicts +1d8 HP]</td>
     </tr><tr style="text-align:left">
       <td>Commune With Nature (D5 Divi): Self gains 3 facts about nature w/in 3 miles (300' underground)</td>
     </tr><tr style="text-align:left">
@@ -267,7 +267,7 @@ var attributes = {
     </tr><tr style="text-align:left">
       <td>Commune With Nature (D5 [Circle Of The Land (Forest)] Divi): Self gains 3 facts about nature w/in 3 miles (300' underground)</td>
     </tr><tr style="text-align:left">
-      <td>Cone Of Cold (D5 [Circle Of The Land (Arctic)] Evoc): 60' cone inflicts 8d8 HP cold (Con half) [+Level inflicts +1d8 HP]</td>
+      <td>Cone Of Cold (D5 [Circle Of The Land (Arctic)] Evoc): 60' cone inflicts 8d8 HP cold (Constitution half) [+Level inflicts +1d8 HP]</td>
     </tr><tr style="text-align:left">
       <td>Conjure Elemental (D5 [Circle Of The Land (Coast)] Conj): R90' Summons obedient environment-appropriate CR 5 elemental for conc or 1 hr [+Level summons +1 CR]</td>
     </tr><tr style="text-align:left">
@@ -293,7 +293,7 @@ var attributes = {
     </tr><tr style="text-align:left">
       <td>Dream (D5 [Circle Of The Land (Grassland)] Illu): Touched communicates via dreams of known target</td>
     </tr><tr style="text-align:left">
-      <td>Faerie Fire (D1 Evoc): R60' Objects in 20' cu glow (foe Adv on attacks) (Dex neg) for conc or 1 min</td>
+      <td>Faerie Fire (D1 Evoc): R60' Objects in 20' cu glow (foe Adv on attacks) (Dexterity neg) for conc or 1 min</td>
     </tr><tr style="text-align:left">
       <td>Find Traps (D2 Divi): R120' Self senses presence of traps</td>
     </tr><tr style="text-align:left">
@@ -317,25 +317,25 @@ var attributes = {
     </tr><tr style="text-align:left">
       <td>Hallucinatory Terrain (D4 [Circle Of The Land (Desert)] Illu): R300' Creates 150' cu terrain illusion (Investigation disbelieve) for 1 dy</td>
     </tr><tr style="text-align:left">
-      <td>Haste (D3 [Circle Of The Land (Grassland)] Tran): R30' Willing target gains dbl Speed, +2 AC, Adv on Dex, and bonus action for conc or 1 min</td>
+      <td>Haste (D3 [Circle Of The Land (Grassland)] Tran): R30' Willing target gains dbl Speed, +2 AC, Adv on Dexterity, and bonus action for conc or 1 min</td>
     </tr><tr style="text-align:left">
-      <td>Hold Person (D2 [Circle Of The Land (Arctic)] Ench): R60' Immobilizes target (Wis neg) for conc or 1 min [+Level affects +1 target]</td>
+      <td>Hold Person (D2 [Circle Of The Land (Arctic)] Ench): R60' Immobilizes target (Wisdom neg) for conc or 1 min [+Level affects +1 target]</td>
     </tr><tr style="text-align:left">
-      <td>Ice Storm (D4 [Circle Of The Land (Arctic)] Evoc): R300' 20' radius inflicts 2d8 bludgeoning and 4d6 HP cold (Dex half) [+Level inflicts +1d8 HP bludgeoning]</td>
+      <td>Ice Storm (D4 [Circle Of The Land (Arctic)] Evoc): R300' 20' radius inflicts 2d8 bludgeoning and 4d6 HP cold (Dexterity half) [+Level inflicts +1d8 HP bludgeoning]</td>
     </tr><tr style="text-align:left">
-      <td>Insect Plague (D5 Conj): R300' 20' radius inflicts 4d10 HP piercing (Con half) for conc or 10 min [+Level inflicts +1d10 HP]</td>
+      <td>Insect Plague (D5 Conj): R300' 20' radius inflicts 4d10 HP piercing (Constitution half) for conc or 10 min [+Level inflicts +1d10 HP]</td>
     </tr><tr style="text-align:left">
-      <td>Insect Plague (D5 [Circle Of The Land (Desert)] Conj): R300' 20' radius inflicts 4d10 HP piercing (Con half) for conc or 10 min [+Level inflicts +1d10 HP]</td>
+      <td>Insect Plague (D5 [Circle Of The Land (Desert)] Conj): R300' 20' radius inflicts 4d10 HP piercing (Constitution half) for conc or 10 min [+Level inflicts +1d10 HP]</td>
     </tr><tr style="text-align:left">
-      <td>Insect Plague (D5 [Circle Of The Land (Grassland)] Conj): R300' 20' radius inflicts 4d10 HP piercing (Con half) for conc or 10 min [+Level inflicts +1d10 HP]</td>
+      <td>Insect Plague (D5 [Circle Of The Land (Grassland)] Conj): R300' 20' radius inflicts 4d10 HP piercing (Constitution half) for conc or 10 min [+Level inflicts +1d10 HP]</td>
     </tr><tr style="text-align:left">
-      <td>Insect Plague (D5 [Circle Of The Land (Swamp)] Conj): R300' 20' radius inflicts 4d10 HP piercing (Con half) for conc or 10 min [+Level inflicts +1d10 HP]</td>
+      <td>Insect Plague (D5 [Circle Of The Land (Swamp)] Conj): R300' 20' radius inflicts 4d10 HP piercing (Constitution half) for conc or 10 min [+Level inflicts +1d10 HP]</td>
     </tr><tr style="text-align:left">
-      <td>Insect Plague (D5 [Circle Of The Land (Underdark)] Conj): R300' 20' radius inflicts 4d10 HP piercing (Con half) for conc or 10 min [+Level inflicts +1d10 HP]</td>
+      <td>Insect Plague (D5 [Circle Of The Land (Underdark)] Conj): R300' 20' radius inflicts 4d10 HP piercing (Constitution half) for conc or 10 min [+Level inflicts +1d10 HP]</td>
     </tr><tr style="text-align:left">
       <td>Invisibility (D2 [Circle Of The Land (Grassland)] Illu): Touched becomes invisible for conc or 1 hr or until attacks or casts [+Level affects +1 target]</td>
     </tr><tr style="text-align:left">
-      <td>Lightning Bolt (D3 [Circle Of The Land (Mountain)] Evoc): 100'x5' line inflicts 8d6 HP lightning (Dex half) [+Level inflicts +1d6 HP]</td>
+      <td>Lightning Bolt (D3 [Circle Of The Land (Mountain)] Evoc): 100'x5' line inflicts 8d6 HP lightning (Dexterity half) [+Level inflicts +1d6 HP]</td>
     </tr><tr style="text-align:left">
       <td>Locate Creature (D4 Divi): Self learns location of named creature or species w/in 1000' for conc or 1 hr</td>
     </tr><tr style="text-align:left">
@@ -359,13 +359,13 @@ var attributes = {
     </tr><tr style="text-align:left">
       <td>Passwall (D5 [Circle Of The Land (Mountain)] Tran): R30' Creates 5'x8'x20' passage through wood, plaster, or stone for 1 hr</td>
     </tr><tr style="text-align:left">
-      <td>Planar Binding (D5 Abju): R60' Binds outsider to service (Cha neg) for 1 dy [+Level extends duration to 10/30/180/366 dy at level 6/7/8/9]</td>
+      <td>Planar Binding (D5 Abju): R60' Binds outsider to service (Charisma neg) for 1 dy [+Level extends duration to 10/30/180/366 dy at level 6/7/8/9]</td>
     </tr><tr style="text-align:left">
-      <td>Plane Shift (D7 Conj): Target or self and 8 willing others travel to another plane (Cha neg)</td>
+      <td>Plane Shift (D7 Conj): Target or self and 8 willing others travel to another plane (Charisma neg)</td>
     </tr><tr style="text-align:left">
       <td>Plant Growth (D3 [Circle Of The Land (Forest)] Tran): R150' Overgrows 100' radius or enriches 1/2 mile radius for 1 yr</td>
     </tr><tr style="text-align:left">
-      <td>Poison Spray (D0 Conj): R10' Target suffers 4d12 HP poison (Con neg)</td>
+      <td>Poison Spray (D0 Conj): R10' Target suffers 4d12 HP poison (Constitution neg)</td>
     </tr><tr style="text-align:left">
       <td>Protection From Energy (D3 [Circle Of The Land (Desert)] Abju): Touched gains resistance to acid, cold, fire, lightning, or thunder damage for conc or 1 hr</td>
     </tr><tr style="text-align:left">
@@ -373,9 +373,9 @@ var attributes = {
     </tr><tr style="text-align:left">
       <td>Resistance (D0 Abju): Touched gains +1d4 on 1 save w/in conc or 1 min</td>
     </tr><tr style="text-align:left">
-      <td>Scrying (D5 [Circle Of The Land (Coast)] Divi): Self sees and hears chosen target (Wis neg) for conc or 10 min</td>
+      <td>Scrying (D5 [Circle Of The Land (Coast)] Divi): Self sees and hears chosen target (Wisdom neg) for conc or 10 min</td>
     </tr><tr style="text-align:left">
-      <td>Scrying (D5 [Circle Of The Land (Swamp)] Divi): Self sees and hears chosen target (Wis neg) for conc or 10 min</td>
+      <td>Scrying (D5 [Circle Of The Land (Swamp)] Divi): Self sees and hears chosen target (Wisdom neg) for conc or 10 min</td>
     </tr><tr style="text-align:left">
       <td>Shillelagh (D0 Tran): Touched club gains +8 attacks, inflicts 1d8 HP for 1 min</td>
     </tr><tr style="text-align:left">
@@ -383,9 +383,9 @@ var attributes = {
     </tr><tr style="text-align:left">
       <td>Sleep (W1 Ench): R90' 20' radius sleeps up to 5d8 HP of creatures, weakest first [+Level affects +2d8 HP of creatures]</td>
     </tr><tr style="text-align:left">
-      <td>Sleet Storm (D3 [Circle Of The Land (Arctic)] Conj): R150' 40' radius causes falls (Dex neg)</td>
+      <td>Sleet Storm (D3 [Circle Of The Land (Arctic)] Conj): R150' 40' radius causes falls (Dexterity neg)</td>
     </tr><tr style="text-align:left">
-      <td>Slow (D3 [Circle Of The Land (Arctic)] Tran): R120' 6 targets in 40' cu suffer half Speed, -2 AC and Dex saves, and 1 action/rd (Wis neg) for conc or 1 min</td>
+      <td>Slow (D3 [Circle Of The Land (Arctic)] Tran): R120' 6 targets in 40' cu suffer half Speed, -2 AC and Dexterity saves, and 1 action/rd (Wisdom neg) for conc or 1 min</td>
     </tr><tr style="text-align:left">
       <td>Spider Climb (D2 [Circle Of The Land (Forest)] Tran): Touched crawls on walls and ceilings for conc or 1 hr</td>
     </tr><tr style="text-align:left">
@@ -409,11 +409,11 @@ var attributes = {
     </tr><tr style="text-align:left">
       <td>Stoneskin (D4 [Circle Of The Land (Mountain)] Abju): Touched gains resistance to bludgeoning, piercing, and slashing damage for conc or 1 hr</td>
     </tr><tr style="text-align:left">
-      <td>Sunbeam (D6 Evoc): 60' line inflicts 6d8 HP radiant and blindness for 1 rd (Con half, no blindness) for conc or 1 min</td>
+      <td>Sunbeam (D6 Evoc): 60' line inflicts 6d8 HP radiant and blindness for 1 rd (Constitution half, no blindness) for conc or 1 min</td>
     </tr><tr style="text-align:left">
       <td>Thorn Whip (D0 Tran): R30' Ranged spell inflicts 4d6 HP and pulls 10'</td>
     </tr><tr style="text-align:left">
-      <td>Thunderwave (D1 Evoc): 15' cu inflicts 2d8 HP thunder and pushes 10' (Con half, no push) [+Level inflicts +1d8 HP]</td>
+      <td>Thunderwave (D1 Evoc): 15' cu inflicts 2d8 HP thunder and pushes 10' (Constitution half, no push) [+Level inflicts +1d8 HP]</td>
     </tr><tr style="text-align:left">
       <td>Tree Stride (D5 [Circle Of The Land (Forest)] Conj): Self teleports between like trees 1/rd for conc or 1 min</td>
     </tr><tr style="text-align:left">
@@ -423,7 +423,7 @@ var attributes = {
     </tr><tr style="text-align:left">
       <td>Wall Of Stone (D5 [Circle Of The Land (Mountain)] Evoc): R120' Creates 10 10'x10' panels for conc or 10 min</td>
     </tr><tr style="text-align:left">
-      <td>Wall Of Thorns (D6 Conj): R120' 60'x10' wall inflicts 7d8 HP piercing (Dex half) initially plus 7d8 HP slashing to passers (Dex half) for conc or 10 min [+Level inflicts +1d8 HP]</td>
+      <td>Wall Of Thorns (D6 Conj): R120' 60'x10' wall inflicts 7d8 HP piercing (Dexterity half) initially plus 7d8 HP slashing to passers (Dexterity half) for conc or 10 min [+Level inflicts +1d8 HP]</td>
     </tr><tr style="text-align:left">
       <td>Water Breathing (D3 [Circle Of The Land (Coast)] Tran): R30' 10 targets can breathe underwater for 1 dy</td>
     </tr><tr style="text-align:left">
@@ -433,7 +433,7 @@ var attributes = {
     </tr><tr style="text-align:left">
       <td>Water Walk (D3 [Circle Of The Land (Swamp)] Tran): R30' 10 targets can traverse liquid for 1 hr</td>
     </tr><tr style="text-align:left">
-      <td>Web (D2 [Circle Of The Land (Underdark)] Conj): R60' 20' cu restrains creatures (Dex neg, Str frees) for conc or 1 hr</td>
+      <td>Web (D2 [Circle Of The Land (Underdark)] Conj): R60' 20' cu restrains creatures (Dexterity neg, Strength frees) for conc or 1 hr</td>
     </tr></table>
 </td>
   </tr><tr style="text-align:center">
@@ -443,7 +443,7 @@ var attributes = {
     </tr><tr style="text-align:center">
       <td><i>Bonus Cantrip (Druid): Knows an additional Druid cantrip</i></td>
     </tr><tr style="text-align:center">
-      <td><i>Circle Forms: May Wild Shape to a CR 6 creature</i></td>
+      <td><i>Circle Forms: May Wild Shape into a CR 6 creature</i></td>
     </tr><tr style="text-align:center">
       <td><i>Magic Initiate (Wizard): Knows 2 W0 spells/May cast 1 W1 spell/long rest</i></td>
     </tr><tr style="text-align:center">
@@ -451,9 +451,9 @@ var attributes = {
     </tr><tr style="text-align:center">
       <td>Combat Wild Shape: May use a spell slot to regain (slot level)d8 HP during Wild Shape</td>
     </tr><tr style="text-align:center">
-      <td>Elemental Adept (Cold): Cold spells ignore resistance and treat 1s as 2s on damage die</td>
+      <td>Elemental Adept (Cold): Cold spells ignore resistance and treat 1s as 2s on damage dice</td>
     </tr><tr style="text-align:center">
-      <td>Elemental Adept (Thunder): Thunder spells ignore resistance and treat 1s as 2s on damage die</td>
+      <td>Elemental Adept (Thunder): Thunder spells ignore resistance and treat 1s as 2s on damage dice</td>
     </tr><tr style="text-align:center">
       <td>Elemental Wild Shape: May use 2 Wild Shape uses to become an elemental</td>
     </tr><tr style="text-align:center">

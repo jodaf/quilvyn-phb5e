@@ -192,7 +192,7 @@ var attributes = {
       </tr><tr style="text-align:center">
         <td><i>Tough: +40 HP</i></td>
       </tr><tr style="text-align:center">
-        <td>Avenging Angel: R30' Frightens foes (DC 16 Wis neg) for 1 hr/long rest</td>
+        <td>Avenging Angel: R30' Frightens foes (DC 16 Wisdom neg) for 1 hr/long rest</td>
       </tr><tr style="text-align:center">
         <td>Divine Smite: May spend a spell slot to gain +(spell level + 1)d8 HP (+1d8 vs. undead and fiends) radiant melee weapon damage</td>
       </tr><tr style="text-align:center">
@@ -206,7 +206,7 @@ var attributes = {
       </tr><tr style="text-align:center">
         <td>Improved Divine Smite: +1d8 HP radiant melee damage</td>
       </tr><tr style="text-align:center">
-        <td>Relentless Avenger: May move 15' after OA hit</td>
+        <td>Relentless Avenger: May move 15' after a successful OA</td>
       </tr><tr style="text-align:center">
         <td>Sacred Weapon: May use Channel Divinity to give weapon +2 attack and 20' light for 1 min</td>
       </tr><tr style="text-align:center">
@@ -266,13 +266,13 @@ var attributes = {
     </tr><tr style="text-align:left">
       <td>Aura Of Vitality (P3 Evoc): R30' Target heals 2d6 HP 1/rd for conc or 1 min</td>
     </tr><tr style="text-align:left">
-      <td>Bane (P1 [Oath Of Vengeance] Ench): R30' 3 targets suffer -1d4 on attacks and saving throws (Cha neg) for conc or 1 min [+Level affects +1 target]</td>
+      <td>Bane (P1 [Oath Of Vengeance] Ench): R30' 3 targets suffer -1d4 on attacks and saving throws (Charisma neg) for conc or 1 min [+Level affects +1 target]</td>
     </tr><tr style="text-align:left">
-      <td>Banishment (P4 [Oath Of Vengeance] Abju): R60' Banishes target to home or demiplane (Cha neg) for conc or 1 min [+Level affects +1 target]</td>
+      <td>Banishment (P4 [Oath Of Vengeance] Abju): R60' Banishes target to home or demiplane (Charisma neg) for conc or 1 min [+Level affects +1 target]</td>
     </tr><tr style="text-align:left">
-      <td>Beacon Of Hope (P3 [Oath Of Devotion] Abju): R30' Targets gain Adv on Wis and death saves and maximum HP from healing for conc or 1 min</td>
+      <td>Beacon Of Hope (P3 [Oath Of Devotion] Abju): R30' Targets gain Adv on Wisdom and death saves and maximum HP from healing for conc or 1 min</td>
     </tr><tr style="text-align:left">
-      <td>Blinding Smite (P3 Evoc): Self attack inflicts +3d8 HP radiant and blinds (Con neg) for conc or 1 min</td>
+      <td>Blinding Smite (P3 Evoc): Self attack inflicts +3d8 HP radiant and blinds (Constitution neg) for conc or 1 min</td>
     </tr><tr style="text-align:left">
       <td>Branding Smite (P2 Evoc): Self attack inflicts +2d6 HP radiant and lights target for conc or 1 min [+Level inflicts +1d6 HP]</td>
     </tr><tr style="text-align:left">
@@ -286,7 +286,7 @@ var attributes = {
     </tr><tr style="text-align:left">
       <td>Death Ward (P4 Abju): Touched keeps 1 HP when next reduced to 0 HP for 8 hrs</td>
     </tr><tr style="text-align:left">
-      <td>Destructive Wave (P5 Evoc): 30' radius inflicts 5d6 HP thunder and knocks prone (Con half HP, not prone)</td>
+      <td>Destructive Wave (P5 Evoc): 30' radius inflicts 5d6 HP thunder and knocks prone (Constitution half HP, not prone)</td>
     </tr><tr style="text-align:left">
       <td>Detect Evil And Good (P1 Divi): R30' Self senses aligned outsider, consecration, and desecration for conc or 10 min</td>
     </tr><tr style="text-align:left">
@@ -296,23 +296,23 @@ var attributes = {
     </tr><tr style="text-align:left">
       <td>Dispel Magic (P3 [Oath Of Devotion] Abju): R120' Ends spell effects up to spell level 3 on target, higher levels require DC 10 + spell level check [+Level affects any spell of equal or lesser level]</td>
     </tr><tr style="text-align:left">
-      <td>Ensnaring Strike (P1 [Oath Of The Ancients] Conj): Successful attack restrains foe and inflicts 1d6 HP/rd piercing (Str neg) for conc or 1 min [+Level inflicts +1d6 HP]</td>
+      <td>Ensnaring Strike (P1 [Oath Of The Ancients] Conj): Successful attack restrains foe and inflicts 1d6 HP/rd piercing (Strength neg) for conc or 1 min [+Level inflicts +1d6 HP]</td>
     </tr><tr style="text-align:left">
-      <td>Flame Strike (P5 [Oath Of Devotion] Evoc): R60' 10' radius inflicts 4d6 HP fire and 4d6 HP radiant (Dex half) [+Level inflicts +1d6 HP fire or radiant]</td>
+      <td>Flame Strike (P5 [Oath Of Devotion] Evoc): R60' 10' radius inflicts 4d6 HP fire and 4d6 HP radiant (Dexterity half) [+Level inflicts +1d6 HP fire or radiant]</td>
     </tr><tr style="text-align:left">
       <td>Freedom Of Movement (P4 [Oath Of Devotion] Abju): Touched gains immunity to impediments for 1 hr</td>
     </tr><tr style="text-align:left">
-      <td>Guardian Of Faith (P4 [Oath Of Devotion] Conj): R30' 10' radius inflicts 20 HP radiant to hostile creatures (Dex half) for 8 hr or 60 HP</td>
+      <td>Guardian Of Faith (P4 [Oath Of Devotion] Conj): R30' 10' radius inflicts 20 HP radiant to hostile creatures (Dexterity half) for 8 hr or 60 HP</td>
     </tr><tr style="text-align:left">
-      <td>Haste (P3 [Oath Of Vengeance] Tran): R30' Willing target gains dbl Speed, +2 AC, Adv on Dex, and bonus action for conc or 1 min</td>
+      <td>Haste (P3 [Oath Of Vengeance] Tran): R30' Willing target gains dbl Speed, +2 AC, Adv on Dexterity, and bonus action for conc or 1 min</td>
     </tr><tr style="text-align:left">
-      <td>Hold Monster (P5 [Oath Of Vengeance] Ench): R90' Immobilizes target (Wis neg) for conc or 1 min [+Level affects +1 target]</td>
+      <td>Hold Monster (P5 [Oath Of Vengeance] Ench): R90' Immobilizes target (Wisdom neg) for conc or 1 min [+Level affects +1 target]</td>
     </tr><tr style="text-align:left">
-      <td>Hold Person (P2 [Oath Of Vengeance] Ench): R60' Immobilizes target (Wis neg) for conc or 1 min [+Level affects +1 target]</td>
+      <td>Hold Person (P2 [Oath Of Vengeance] Ench): R60' Immobilizes target (Wisdom neg) for conc or 1 min [+Level affects +1 target]</td>
     </tr><tr style="text-align:left">
       <td>Hunter's Mark (P1 [Oath Of Vengeance] Divi): R90' Self gains Adv on Perception and Wisdom to locate target and +1d6 HP damage on weapon attacks for conc or 1 hr [+Level extends duration to 8/24 hr at level 3/5]</td>
     </tr><tr style="text-align:left">
-      <td>Ice Storm (P4 [Oath Of The Ancients] Evoc): R300' 20' radius inflicts 2d8 bludgeoning and 4d6 HP cold (Dex half) [+Level inflicts +1d8 HP bludgeoning]</td>
+      <td>Ice Storm (P4 [Oath Of The Ancients] Evoc): R300' 20' radius inflicts 2d8 bludgeoning and 4d6 HP cold (Dexterity half) [+Level inflicts +1d8 HP bludgeoning]</td>
     </tr><tr style="text-align:left">
       <td>Lesser Restoration (P2 Abju): Touched becomes unblinded, undeafened, undiseased, unparalyzed, or unpoisoned</td>
     </tr><tr style="text-align:left">
@@ -326,7 +326,7 @@ var attributes = {
     </tr><tr style="text-align:left">
       <td>Misty Step (P2 [Oath Of Vengeance] Conj): Self teleports 30'</td>
     </tr><tr style="text-align:left">
-      <td>Moonbeam (P2 [Oath Of The Ancients] Evoc): R120' 5' radius inflicts 2d10 HP radiant (Con half) for conc or 1 min [+Level inflicts +1d10 HP]</td>
+      <td>Moonbeam (P2 [Oath Of The Ancients] Evoc): R120' 5' radius inflicts 2d10 HP radiant (Constitution half) for conc or 1 min [+Level inflicts +1d10 HP]</td>
     </tr><tr style="text-align:left">
       <td>Plant Growth (P3 [Oath Of The Ancients] Tran): R150' Overgrows 100' radius or enriches 1/2 mile radius for 1 yr</td>
     </tr><tr style="text-align:left">
@@ -338,25 +338,25 @@ var attributes = {
     </tr><tr style="text-align:left">
       <td>Ray Of Frost (S0 Evoc): R60' Ranged spell inflicts 4d8 HP cold and -10' Speed for 1 rd</td>
     </tr><tr style="text-align:left">
-      <td>Sanctuary (P1 [Oath Of Devotion] Abju): R30' Foes of target attack another (Wis neg) for 1 min</td>
+      <td>Sanctuary (P1 [Oath Of Devotion] Abju): R30' Foes of target attack another (Wisdom neg) for 1 min</td>
     </tr><tr style="text-align:left">
-      <td>Scrying (P5 [Oath Of Vengeance] Divi): Self sees and hears chosen target (Wis neg) for conc or 10 min</td>
+      <td>Scrying (P5 [Oath Of Vengeance] Divi): Self sees and hears chosen target (Wisdom neg) for conc or 10 min</td>
     </tr><tr style="text-align:left">
       <td>Shield Of Faith (P1 Abju): R60' Target gains +2 AC for conc or 10 min</td>
     </tr><tr style="text-align:left">
       <td>Speak With Animals (P1 [Oath Of The Ancients] Divi): Self talks to animals for 10 min</td>
     </tr><tr style="text-align:left">
-      <td>Staggering Smite (P4 Evoc): Next hit w/in conc or 1 min inflicts +4d6 HP psychic, Disadv on attacks and ability checks, and no Reaction for 1 rd</td>
+      <td>Staggering Smite (P4 Evoc): Next successful attack w/in conc or 1 min inflicts +4d6 HP psychic, Disadv on attacks and ability checks, and no Reaction for 1 rd</td>
     </tr><tr style="text-align:left">
       <td>Stoneskin (P4 [Oath Of The Ancients] Abju): Touched gains resistance to bludgeoning, piercing, and slashing damage for conc or 1 hr</td>
     </tr><tr style="text-align:left">
-      <td>Thunderous Smite (P1 Evoc): Next hit w/in conc or 1 min inflicts +2d6 HP thunder and pushes 10' (Str no push)</td>
+      <td>Thunderous Smite (P1 Evoc): Next successful attack w/in conc or 1 min inflicts +2d6 HP thunder and pushes 10' (Strength no push)</td>
     </tr><tr style="text-align:left">
       <td>Tree Stride (P5 [Oath Of The Ancients] Conj): Self teleports between like trees 1/rd for conc or 1 min</td>
     </tr><tr style="text-align:left">
       <td>True Strike (S0 Divi): R30' Self gains Adv on next attack on target w/in 1 rd</td>
     </tr><tr style="text-align:left">
-      <td>Zone Of Truth (P2 [Oath Of Devotion] Ench): R60' Creatures in 15' radius cannot lie (Cha neg) for 10 min</td>
+      <td>Zone Of Truth (P2 [Oath Of Devotion] Ench): R60' Creatures in 15' radius cannot lie (Charisma neg) for 10 min</td>
     </tr></table>
 </td>
   </tr><tr style="text-align:center">
@@ -364,7 +364,7 @@ var attributes = {
     <tr style="text-align:center">
       <td><i>Magic Initiate (Sorcerer): Knows 2 S0 spells/May cast 1 S1 spell/long rest</i></td>
     </tr><tr style="text-align:center">
-      <td>Abjure Enemy: R60' May use Channel Divinity to halt target (DC 16 Wis half speed) for 1 min</td>
+      <td>Abjure Enemy: R60' May use Channel Divinity to halt target (DC 16 Wisdom half speed) for 1 min</td>
     </tr><tr style="text-align:center">
       <td>Cleansing Touch: May dispel a spell effect on a touched willing creature 2/long rest</td>
     </tr><tr style="text-align:center">
@@ -372,19 +372,19 @@ var attributes = {
     </tr><tr style="text-align:center">
       <td>Elder Champion: Regains 10 HP/rd, may cast spells as a bonus action, and inflicts Disadv on saves vs. self spells on foes w/in 10' for 1 min 1/long rest</td>
     </tr><tr style="text-align:center">
-      <td>Elemental Adept (Acid): Acid spells ignore resistance and treat 1s as 2s on damage die</td>
+      <td>Elemental Adept (Acid): Acid spells ignore resistance and treat 1s as 2s on damage dice</td>
     </tr><tr style="text-align:center">
       <td>Holy Nimbus: May emit a 30' bright light that inflicts 10 HP radiant to foes for 1 min 1/long rest</td>
     </tr><tr style="text-align:center">
       <td>Lay On Hands: May heal 100 HP/long rest; may use 5 HP worth to cure disease or poison</td>
     </tr><tr style="text-align:center">
-      <td>Nature's Wrath: R10' May use Channel Divinity to create spectral vines that restrain target (DC 16 Dex or Str neg)</td>
+      <td>Nature's Wrath: R10' May use Channel Divinity to create spectral vines that restrain target (DC 16 Dexterity or Strength neg)</td>
     </tr><tr style="text-align:center">
       <td>Purity Of Spirit: Has a continuous <i>Protection From Evil And Good</i> effect</td>
     </tr><tr style="text-align:center">
       <td>Spell Sniper: Dbl attack spell range/Spells ignore 3/4 cover/Knows an additional attack cantrip</td>
     </tr><tr style="text-align:center">
-      <td>Turn The Faithless: R30' May use Channel Divinity to cause fiends and fey to flee (DC 16 Wis neg) for 1 min</td>
+      <td>Turn The Faithless: R30' May use Channel Divinity to cause fiends and fey to flee (DC 16 Wisdom neg) for 1 min</td>
     </tr><tr style="text-align:center">
       <td>Turn The Unholy: R30' May use Channel Divinity to make fiends and undead flee (DC 16 Wisdom neg) for 1 min</td>
     </tr></table>
