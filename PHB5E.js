@@ -513,109 +513,113 @@ PHB5E.FEATURES_ADDED = {
   // Backgrounds
   'By Popular Demand':
     'Section=feature ' +
-    'Note="Receive welcome and lodging in exchange for performing"',
-  'City Secrets':'Section=feature Note="Travel through city at dbl speed"',
+    'Note="May receive welcome and lodging in exchange for performing"',
+  'City Secrets':
+    'Section=feature Note="May travel through a city at dbl speed"',
   'Criminal Contact':
     'Section=feature ' +
-    'Note="Know liaison to criminal network and local underworld connections"',
-  'Discovery':'Section=feature Note="Know unique and powerful truth"',
+    'Note="Knows a liaison to criminal networks and local underworld connections"',
+  'Discovery':'Section=feature Note="Knows a unique and powerful truth"',
   'False Identity':
-    'Section=feature Note="Have documented 2nd ID and forgery skills"',
+    'Section=feature Note="Has a documented second ID and forgery skills"',
   'Guild Membership':
-    'Section=feature Note="Receive assistance from fellow guild members"',
+    'Section=feature Note="May receive assistance from fellow guild members"',
   'Military Rank':
-    'Section=feature Note="Receive respect and deference from fellow soldiers"',
+    'Section=feature ' +
+    'Note="Receives respect and deference from fellow soldiers"',
   'Position Of Privilege':
     'Section=feature ' +
-    'Note="Receive welcome from upper class, deference from commoners"',
-  'Researcher':'Section=feature Note="Know where and whom to ask about lore"',
+    'Note="Receives welcome from the upper class and deference from commoners"',
+  'Researcher':'Section=feature Note="Knows where and whom to ask about lore"',
   'Rustic Hospitality':
-    'Section=feature Note="Receive shelter from common folk"',
+    'Section=feature Note="May receive shelter from common folk"',
   "Ship's Passage":
     'Section=feature ' +
-    'Note="Receive water passage for self and companions in exchange for labor"',
+    'Note="May receive water passage for self and companions in exchange for labor"',
   'Wanderer':
     'Section=feature ' +
-    'Note="Have excellent geographic memory, can forage for 6 people"',
+    'Note="Has an excellent geographic memory and can forage for 6 people"',
   // Paths
   "Commander's Strike":
     'Section=combat ' +
-    'Note="Forego 1 attack to add Superiority Die to ally attack"',
+    'Note="May forego 1 attack to add a Superiority Die to an ally\'s attack"',
   "Nature's Wrath":
     'Section=magic ' +
-    'Note="R10\' Use Channel Divinity to create spectral vines that restrain target (DC %V Dex or Str neg)"',
+    'Note="R10\' May use Channel Divinity to create spectral vines that restrain target (DC %V Dexterity or Strength neg)"',
   "Ranger's Companion":
-    'Section=feature Note="Companion beast up to CR %V gains +%{proficiencyBonus} AC, attack, damage, skills, and saving throws and obeys self commands"',
+    'Section=feature ' +
+    'Note="Companion beast up to CR %V gains +%{proficiencyBonus} AC, attack, damage, skills, and saving throws and obeys self commands"',
   'Student Of War':
     'Section=feature Note="Tool Proficiency (Choose 1 from any Artisan)"',
   "Transmuter's Stone":
     'Section=magic ' +
-    'Note="Stone gives 60\' darkvision, +10\' speed, proficiency in constitution saves, or resistance to chosen energy damage; change effect when casting transmutation spell"',
+    'Note="Stone gives choice of 60\' darkvision, +10\' speed, proficiency in constitution saves, or resistance to chosen energy damage; may change effect when casting a transmutation spell"',
   "War God's Blessing":
     'Section=magic ' +
-    'Note="R30\' Use Reaction and Channel Divinity to give ally +10 attack"',
+    'Note="R30\' May use Reaction and Channel Divinity to give an ally a +10 attack"',
   'Abjuration Savant':
-    'Section=magic Note="Copy abjuration spells into spellbook for half cost"',
+    'Section=magic ' +
+    'Note="May copy abjuration spells into spellbook for half cost"',
   'Abjure Enemy':
     'Section=magic ' +
-    'Note="R60\' Use Channel Divinity to halt target (DC %V Wis half speed) for 1 min"',
+    'Note="R60\' May use Channel Divinity to halt target (DC %V Wisdom half speed) for 1 min"',
   'Acolyte Of Nature':
     'Section=magic,skill ' +
-    'Note="Know D0 cantrip",' +
-         '"Skill Proficiency (Choose 1 from Animal Handling, Nature, Survival)"',
+    'Note=' +
+      '"Knows 1 D0 cantrip",' +
+      '"Skill Proficiency (Choose 1 from Animal Handling, Nature, Survival)"',
   'Alter Memories':
     'Section=magic ' +
-    'Note="Target unaware of enchantment, forgets %V hrs (DC %1 Int neg)"',
-  'Arcane Charge':'Section=magic Note="Teleport 30\' during Action Surge"',
+    'Note="Target becomes unaware of self charm and forgets preceding %V hrs (DC %1 Intelligence neg)"',
+  'Arcane Charge':'Section=magic Note="May teleport 30\' during Action Surge"',
   'Arcane Ward':
     'Section=magic ' +
-    'Note="Abjuration casting creates %V HP shield around self until long rest"',
+    'Note="Abjuration casting creates a %V HP shield around self until next long rest"',
   'Aspect Of The Beast (Bear)':
     'Section=ability ' +
-    'Note="Dbl load and lift, Adv on Str checks to push, pull, lift, or break"',
+    'Note="Dbl load and lift, Adv on Strength to push, pull, lift, or break"',
   'Aspect Of The Beast (Eagle)':
     'Section=skill ' +
-    'Note="See 1 mile clearly, no Disadv on Perception in dim light"',
+    'Note="Sees 1 mile clearly and suffers no Disadv on Perception in dim light"',
   'Aspect Of The Beast (Wolf)':
-    'Section=skill Note="Track at fast pace and Stealth at normal pace"',
+    'Section=skill Note="May track at fast pace and Stealth at normal pace"',
   'Assassin Bonus Proficiencies':
     'Section=feature Note="Tool Proficiency (Disguise Kit/Poisoner\'s Kit)"',
   'Assassinate':
     'Section=combat ' +
-    'Note="Adv on attack before foe\'s first turn, crit on surprise hit"',
+    'Note="Adv on attack before foe\'s first turn/Successful surprise attack automatically crits"',
   'Aura Of Warding':
-    'Section=save ' +
-    'Note="R%V\' Gives self and allies resistance to spell damage"',
+    'Section=save Note="R%V\' Self and allies have resistance to spell damage"',
   'Avatar Of Battle':
     'Section=save ' +
     'Note="Resistance to nonmagical bludgeoning, piercing and slashing damage"',
   'Avenging Angel':
     'Section=ability,combat ' +
-    'Note="60\' fly speed 1 hr/long rest",' +
-         '"R30\' foes frightened (DC %V Wis neg) 1 hr/long rest"',
-  'Awakened Mind':
-    'Section=feature Note="R30\' Telepathic communication"',
+    'Note=' +
+      '"60\' fly speed for 1 hr/long rest",' +
+      '"R30\' Frightens foes (DC %V Wisdom neg) for 1 hr/long rest"',
+  'Awakened Mind':'Section=feature Note="R30\' May communicate telepathically"',
   'Battle Magic':
-    'Section=combat Note="Bonus attack after casting spell"',
+    'Section=combat Note="May make a bonus attack after casting a spell"',
   'Beguiling Defenses':
     'Section=save ' +
-    'Note="Immune to charm, reflect on caster (DC %V Wis neg) for conc or 1 min"',
+    'Note="Immune to charm; may reflect onto caster (DC %V Wisdom neg) for conc or 1 min"',
   'Bend Luck':
     'Section=magic ' +
-    'Note="Spend 2 Sorcery Points to add or subtract 1d4 from target attack, ability, or save"',
+    'Note="May spend 2 Sorcery Points to add or subtract 1d4 from a target attack, ability, or save"',
   'Benign Transposition':
     'Section=magic ' +
-    'Note="R30\' Teleport self or swap w/willing creature 1/long rest or conjuration spell casting"',
-  'Bestial Fury':
-    'Section=feature Note="Companion makes 2 attacks/rd"',
+    'Note="R30\' May teleport self or swap w/a willing creature 1/long rest or conjuration spell casting"',
+  'Bestial Fury':'Section=feature Note="Companion makes 2 attacks/rd"',
   'Blessing Of The Trickster':
-    'Section=magic Note="Gives touched Adv on Stealth for 1 hr"',
+    'Section=magic Note="Touch gives target Adv on Stealth for 1 hr"',
   'Blessings Of Knowledge':
-    'Section=feature,skill ' +
-    'Note="Skill Proficiency (Choose 2 from Arcana, History, Nature, Religion)",' +
-         '"Language (Choose 2 from any)/+%{proficiencyBonus} on chosen skills"',
+    'Section=skill,skill ' +
+    'Note=' +
+      '"Skill Proficiency (Choose 2 from Arcana, History, Nature, Religion)/Language (Choose 2 from any)",' +
+      '"+%{proficiencyBonus} on chosen skills"',
   'Bonus Cantrip (Light Domain)':
-    'Section=magic Note="Know <i>Light</i> cantrip"',
+    'Section=magic Note="Knows <i>Light</i> cantrip"',
   'Bonus Proficiencies (College Of Valor)':
     'Section=combat ' +
     'Note="Armor Proficiency (Medium/Shield)/Weapon Proficiency (Martial)"',
@@ -628,520 +632,553 @@ PHB5E.FEATURES_ADDED = {
     'Section=combat ' +
     'Note="Armor Proficiency (Heavy)/Weapon Proficiency (Martial)"',
   'Breath Of Winter':
-    'Section=magic Note="Spend 6 Ki Points to cast <i>Cone Of Cold</i>"',
+    'Section=magic Note="May spend 6 Ki Points to cast <i>Cone Of Cold</i>"',
   'Charm Animals And Plants':
     'Section=magic ' +
-    'Note="R30\' Use Channel Divinity to charm beasts and plants (Wis neg) for 1 min"',
-  'Circle Forms':
-    'Section=magic Note="Increase Wild Shape CR to %V"',
+    'Note="R30\' May use Channel Divinity to charm beasts and plants (Wisdom neg) for 1 min"',
+  'Circle Forms':'Section=magic Note="May Wild Shape into a CR %V creature"',
   'Clench Of The North Wind':
-    'Section=magic Note="Spend 3 Ki Points to cast <i>Hold Person</i>"',
+    'Section=magic Note="May spend 3 Ki Points to cast <i>Hold Person</i>"',
   'Cloak Of Shadows (Way Of Shadow)':
     'Section=magic ' +
-    'Note="Self invisible in dim and unlit areas until attacks or casts"',
+    'Note="May become invisible in dim and unlit areas (attacking or casting ends)"',
   'Cloak Of Shadows (Trickery Domain)':
-    'Section=magic Note="Use Channel Divinity to make self invisible for 1 rd"',
+    'Section=magic ' +
+    'Note="May use Channel Divinity to make self invisible for 1 rd"',
   'Combat Inspiration':
     'Section=combat ' +
-    'Note="Ally can use Bardic Inspiration die to boost weapon damage or AC"',
+    'Note="Ally may use a Bardic Inspiration die to boost weapon damage or AC"',
   'Combat Superiority':
     'Section=combat ' +
-    'Note="Use %Vd%1 Superiority Dice to perform %2 chosen Maneuvers/short rest"',
+    'Note="May use %Vd%1 Superiority Dice to perform %2 chosen Maneuvers/short rest"',
   'Combat Wild Shape':
     'Section=combat,magic ' +
-    'Note="Use Wild Shape as bonus action",' +
-         '"Use spell slot to regain (slot level)d8 HP during Wild Shape"',
+    'Note=' +
+      '"May use Wild Shape as a bonus action",' +
+      '"May use a spell slot to regain (slot level)d8 HP during Wild Shape"',
   'Command Undead':
     'Section=magic ' +
-    'Note="R60\' Take control of undead target (DC %V Cha neg (Adv intelligence 8 or higher))"',
+    'Note="R60\' May control undead target (DC %V Charisma neg; Adv if intelligence is 8 or higher)"',
   'Conjuration Savant':
-    'Section=magic Note="Copy conjuration spells into spellbook for half cost"',
+    'Section=magic ' +
+    'Note="May copy conjuration spells into spellbook for half cost"',
   'Controlled Chaos':
-    'Section=magic Note="Choose from 2 Wild Magic Surge effects"',
+    'Section=magic Note="May choose from 2 Wild Magic Surge effects"',
   'Corona Of Light':
     'Section=magic ' +
     'Note="60\' light inflicts foe Disadv on saves vs. fire and radiant spells for 1 min"',
-  'Create Thrall':
-    'Section=magic Note="Touch charms incapacitated humanoid"',
+  'Create Thrall':'Section=magic Note="Touch charms incapacitated humanoid"',
   'Dampen Elements':
     'Section=magic ' +
-    'Note="R30\' Use Reaction to grant resistance to immediate acid, cold, fire, lightning, or thunder damage"',
+    'Note="R30\' May use Reaction to grant resistance to immediate acid, cold, fire, lightning, or thunder damage"',
   'Dark Delirium':
     'Section=magic ' +
-    'Note="R60\' Target charmed or frightened and unaware of surroundings (DC %V Wis neg) for conc or 1 min 1/short rest"',
+    'Note="R60\' Target charmed or frightened and unaware of surroundings (DC %V Wisdom neg) for conc or 1 min 1/short rest"',
   'Death Strike':
-    'Section=combat Note="Dbl damage on surprise hit (DC %V Con neg)"',
+    'Section=combat Note="Dbl damage on a successful surprise attack (DC %V Con neg)"',
   'Destructive Wrath':
     'Section=magic ' +
-    'Note="Use Channel Divinity to maximize lightning or thunder damage"',
+    'Note="May use Channel Divinity to maximize lightning or thunder damage"',
   'Disarming Attack':
     'Section=combat ' +
-    'Note="Add Superiority Die to damage, foe drops item (DC %V Str neg)"',
+    'Note="May add a Superiority Die to damage and to cause foe to drop an item (DC %V Strength neg)"',
   'Disciple Of The Elements':
-    'Section=magic Note="Select %V elemental disciplines"',
+    'Section=magic Note="May select %V elemental disciplines"',
   'Distracting Strike':
     'Section=combat ' +
-    'Note="Add Superiority Die to damage, next ally attack against same foe in same rd gains Adv"',
+    'Note="May add a Superiority Die to damage and to give Adv to the next ally attack against the same foe in the same rd"',
   'Divination Savant':
-    'Section=magic Note="Copy divination spells into spellbook for half cost"',
+    'Section=magic ' +
+    'Note="May copy divination spells into spellbook for half cost"',
   'Durable Summons':
     'Section=magic Note="Summoned creatures gain 30 temporary HP"',
   'Elder Champion':
     'Section=magic ' +
-    'Note="Regain 10 HP/rd, cast spells as a bonus action, and inflict Disadv on saves vs. self spells on foes w/in 10\' for 1 min 1/long rest"',
+    'Note="Regains 10 HP/rd, may cast spells as a bonus action, and inflicts Disadv on saves vs. self spells on foes w/in 10\' for 1 min 1/long rest"',
   'Eldritch Strike':
     'Section=combat ' +
-    'Note="Inflicts Disadv on saves vs. self spells for 1 rd after hit"',
+    'Note="Successful attack inflicts Disadv on saves vs. self spells for 1 rd"',
   'Elemental Attunement':
     'Section=magic ' +
-    'Note="Create harmless instantaneous elemental effect, light or snuff small flame, chill or warm 1 lb object for 1 hr, or shape 1\' cu earth, fire, water, or mist for 1 min"',
+    'Note="May create a harmless instantaneous elemental effect, light or snuff small flame, chill or warm 1 lb object for 1 hr, or shape 1\' cu earth, fire, water, or mist for 1 min"',
   'Elemental Wild Shape':
-    'Section=magic Note="Use 2 Wild Shape uses to become an elemental"',
+    'Section=magic Note="May use 2 Wild Shape uses to become an elemental"',
   'Enchantment Savant':
-    'Section=magic Note="Copy enchantment spells into spellbook for half cost"',
+    'Section=magic ' +
+    'Note="May copy enchantment spells into spellbook for half cost"',
   'Entropic Ward':
     'Section=combat ' +
-    'Note="Use Reaction to inflict Disadv on attack by foe, miss gives you Adv on next attack 1/short rest"',
+    'Note="May use Reaction to inflict Disadv on attack by foe/Miss gives self Adv on next attack 1/short rest"',
   'Eternal Mountain Defense':
-    'Section=magic Note="Spend 5 Ki Points to cast <i>Stoneskin</i> on self"',
+    'Section=magic ' +
+    'Note="May spend 5 Ki Points to cast <i>Stoneskin</i> on self"',
   'Evasive Footwork':
-    'Section=combat Note="Add Superiority Die to AC during move"',
+    'Section=combat Note="May add a Superiority Die to AC during move"',
   'Exceptional Training':
     'Section=feature ' +
-    'Note="Companion can Dash, Disengage, or Help instead of Attack; attacks count as magical"',
+    'Note="Companion can Dash, Disengage, or Help instead of Attack/Companion attacks count as magical"',
   'Expert Divination':
-    'Section=magic Note="Casting divination spell restores lower spell slot"',
+    'Section=magic ' +
+    'Note="Casting a divination spell restores a lower spell slot"',
   'Fangs Of The Fire Snake':
     'Section=magic ' +
-    'Note="Spend 1 Ki Point for +10\' unarmed reach, 2nd Ki Point to inflict +1d10 HP fire"',
+    'Note="May spend 1 Ki Point for +10\' unarmed reach or 2 Ki Points to inflict +1d10 HP fire"',
   'Feinting Attack':
     'Section=combat ' +
-    'Note="Use bonus action to gain Adv on next attack on adjacent foe and add Superiority Die to damage"',
+    'Note="May use a bonus action to gain Adv on next attack on adjacent foe and add a Superiority Die to damage"',
   'Fey Presence':
     'Section=magic ' +
-    'Note="R10\' All creatures charmed or frightened (DC %V Wis neg) for 1 rd 1/short rest"',
+    'Note="R10\' May make all creatures choice of charmed or frightened (DC %V Wisdom neg) for 1 rd 1/short rest"',
   'Fist Of Four Thunders':
-    'Section=magic Note="Spend 2 Ki Points to cast <i>Thunderwave</i>"',
+    'Section=magic Note="May spend 2 Ki Points to cast <i>Thunderwave</i>"',
   'Fist Of Unbroken Air':
     'Section=magic ' +
-    'Note="R30\' Spend 2+ Ki Points to inflict 3d10+ HP, push 20\', and knock prone (DC %V Str half HP only)"',
+    'Note="R30\' May spend 2+ Ki Points to inflict 3d10+ HP, push 20\', and knock prone (DC %V Strength half HP only)"',
   'Flames Of The Phoenix':
-    'Section=magic Note="Spend 4 Ki Points to cast <i>Fireball</i>"',
+    'Section=magic Note="May spend 4 Ki Points to cast <i>Fireball</i>"',
   'Focused Conjuration':
     'Section=magic Note="Damage cannot break conjuration concentration"',
   'Goading Attack':
     'Section=combat ' +
-    'Note="Add Superiority Die to damage, foe attacks on others suffer Disadv (DC %V Wis neg) for 1 rd"',
+    'Note="May add a Superiority Die to damage and inflict Disadv on foe attacks on others (DC %V Wisdom neg) for 1 rd"',
   'Gong Of The Summit':
-    'Section=magic Note="Spend 3 Ki Points to cast <i>Shatter</i>"',
-  'Greater Portent':'Section=magic Note="Replace roll 3/long rest"',
+    'Section=magic Note="May spend 3 Ki Points to cast <i>Shatter</i>"',
+  'Greater Portent':'Section=magic Note="May replace roll 3/long rest"',
   'Grim Harvest':
     'Section=magic ' +
-    'Note="Regain 2x spell level HP (3x for necromantic spells) when self spell kills"',
+    'Note="Regains 2x spell level HP (3x for necromantic spells) when self spell kills"',
   'Guided Strike':
-    'Section=combat Note="Use Channel Divinity to give self +10 attack"',
+    'Section=combat Note="May use Channel Divinity to give self +10 attack"',
   'Hypnotic Gaze':
-    'Section=magic Note="R5\' Daze target (DC %V Wis neg) 1/long rest"',
+    'Section=magic Note="R5\' May daze target (DC %V Wisdom neg) 1/long rest"',
   'Illusion Savant':
-    'Section=magic Note="Copy illusion spells into spellbook for half cost"',
+    'Section=magic ' +
+    'Note="May copy illusion spells into spellbook for half cost"',
   'Illusory Reality':
-    'Section=magic Note="Make object in self illusion real for 1 min"',
+    'Section=magic Note="May make object in self illusion real for 1 min"',
   'Illusory Self':
-    'Section=magic Note="Use Reaction to cause foe miss 1/short rest"',
-  'Impostor':
-    'Section=feature Note="Unerring mimicry"',
+    'Section=magic Note="May use Reaction to cause a foe miss 1/short rest"',
+  'Impostor':'Section=feature Note="May use unerring mimicry"',
   'Improved Abjuration':
     'Section=magic ' +
     'Note="+%{proficiencyBonus} abjuration spell ability checks"',
   'Improved Combat Superiority':
-    'Section=combat Note="Use d%V Superiority Dice"',
+    'Section=combat Note="Superiority Dice increase to d%V"',
   'Improved Duplicity':
     'Section=magic Note="Invoke Duplicity creates 4 duplicates"',
   'Improved Flare':
-    'Section=magic Note="Warding Flare protects allies"',
+    'Section=magic Note="Warding Flare also protects allies"',
   'Improved Minor Illusion':
     'Section=magic ' +
-    'Note="Know <i>Minor Illusion</i>, effect includes both sound and image"',
-  'Improved War Magic':'Section=combat Note="Bonus attack after any spell"',
+    'Note="Knows <i>Minor Illusion</i> cantrip; effects include both sound and image"',
+  'Improved War Magic':
+    'Section=combat Note="May make a bonus attack after any spell"',
   'Infiltration Expertise':
-    'Section=feature Note="Forge and adopt different identities"',
+    'Section=feature Note="May forge and adopt different identities"',
   'Instinctive Charm':
     'Section=magic ' +
-    'Note="R30\' Redirect foe attack on self to another (DC %V Wis neg until long rest)"',
+    'Note="R30\' May redirect a foe attack on self to another (DC %V Wisdom neg until long rest)"',
   'Inured To Undeath':
     'Section=save ' +
-    'Note="Resistance to necrotic damage, immunity to maximum HP reduction"',
+    'Note="Has resistance to necrotic damage and immunity to maximum HP reduction"',
   'Invoke Duplicity':
     'Section=magic ' +
-    'Note="R30\' Use Channel Divinity to create %V, giving Adv on attacks when w/in 5\' and allowing remote spellcasting for conc or 1 min"',
+    'Note="R30\' May use Channel Divinity to create %V, giving Adv on attacks when w/in 5\' and allowing remote spellcasting for conc or 1 min"',
   'Know Your Enemy':
-    'Section=combat Note="Know how foe compares to self after 1 min study"',
+    'Section=combat Note="Knows how foe compares to self after 1 min study"',
   'Knowledge Of The Ages':
     'Section=skill ' +
-    'Note="Use Channel Divinity to gain proficiency in chosen skill or tool for 10 min"',
+    'Note="May use Channel Divinity to gain proficiency in chosen skill or tool for 10 min"',
   'Lunging Attack':
     'Section=combat ' +
-    'Note="Gain +5\' melee range, add Superiority Die to damage"',
+    'Note="+5\' melee range/May add a Superiority Die to damage"',
   'Mage Hand Legerdemain':
     'Section=magic ' +
-    'Note="Stow and retrieve objects, pick locks, and disarm traps via invisible <i>Mage Hand</i>"',
+    'Note="May stow and retrieve objects, pick locks, and disarm traps using an invisible <i>Mage Hand</i>"',
   'Magical Ambush':
     'Section=magic ' +
-    'Note="Foe suffers Disadv on self spell save cast from hiding"',
+    'Note="Foe suffers Disadv on save vs. self spell cast from hiding"',
   'Malleable Illusions':
-    'Section=magic Note="Modify cast illusions throughout duration"',
+    'Section=magic Note="May modify cast illusions throughout duration"',
   'Maneuvering Attack':
     'Section=combat ' +
-    'Note="Add Superiority Die to damage, ally can use Reaction to move half speed w/no OA from target"',
+    'Note="May add a Superiority Die to damage/Ally can use Reaction to move half speed w/no OA from target"',
   'Master Of Nature':
     'Section=magic Note="May command charmed animals and plants"',
   'Master Transmuter':
     'Section=magic ' +
-    'Note="Destroy transmuter\'s stone to transmute 5\' cu, remove curses, diseases, and poisons, cast <i>Raise Dead</i>, or restore youth"',
+    'Note="May destroy a transmuter\'s stone to transmute 5\' cu, remove curses, diseases, and poisons, cast <i>Raise Dead</i>, or restore youth"',
   'Menacing Attack':
     'Section=combat ' +
-    'Note="Add Superiority Die to damage, inflict frightened (DC %V Wis neg) for 1 rd"',
+    'Note="May add a Superiority Die to damage and inflict frightened (DC %V Wisdom neg) for 1 rd"',
   'Minor Alchemy':
-    'Section=magic Note="Transform 1\' cu/10 min effort for 1 hr"',
+    'Section=magic Note="May transform 1\' cu per 10 min effort for 1 hr"',
   'Minor Conjuration':
-    'Section=magic Note="R10\' Create 3\' cu, 10 lb object for 1 hr"',
+    'Section=magic Note="R10\' May create 3\' cu, 10 lb object for 1 hr"',
   'Mist Stance':
     'Section=magic ' +
-    'Note="Spend 4 Ki Points to cast <i>Gaseous Form</i> on self"',
+    'Note="May spend 4 Ki Points to cast <i>Gaseous Form</i> on self"',
   'Misty Escape':
     'Section=magic ' +
-    'Note="After damage, teleport 60\' and become invisible for 1 rd 1/short rest"',
+    'Note="After taking damage, may teleport 60\' and become invisible for 1 rd 1/short rest"',
   'Necromancy Savant':
-    'Section=magic Note="Copy necromancy spells into spellbook for half cost"',
+    'Section=magic ' +
+    'Note="May copy necromancy spells into spellbook for half cost"',
   'Opportunist':
-    'Section=combat Note="Use Reaction to attack adjacent foe after ally hit"',
+    'Section=combat ' +
+    'Note="May use Reaction to attack an adjacent foe after a successful ally attack"',
   'Parry':
-    'Section=combat Note="Reduce damage from foe by Superiority Die + %V"',
+    'Section=combat ' +
+    'Note="May subtract a Superiority Die + %V from self damage by a foe"',
   'Portent':
     'Section=magic ' +
-    'Note="Replace target attack, ability, or saving throw %V/long rest"',
-  'Potent Spellcasting':
-    'Section=magic Note="+%1 Cleric cantrip damage"',
+    'Note="May replace target attack, ability, or saving throw %V/long rest"',
+  'Potent Spellcasting':'Section=magic Note="+%1 Cleric cantrip damage"',
   'Precision Attack':
-    'Section=combat Note="Add Superiority Die to attack"',
-  'Primal Strike':
-    'Section=combat Note="Wild Shape attacks count as magical"',
+    'Section=combat Note="May add a Superiority Die to attack"',
+  'Primal Strike':'Section=combat Note="Wild Shape attacks count as magical"',
   'Projected Ward':
-    'Section=magic Note="R30\' Use Arcane Ward to absorb damage to others"',
+    'Section=magic Note="R30\' May use Arcane Ward to absorb damage to others"',
   'Pushing Attack':
     'Section=combat ' +
-    'Note="Add Superiority Die to damage, push foe 15\' (DC %V Str neg)"',
+    'Note="May add a Superiority Die to damage and push a foe 15\' (DC %V Strength neg)"',
   'Radiance Of The Dawn':
     'Section=magic ' +
-    'Note="R30\' Use Channel Divinity to dispel magical darkness; foes suffer 2d10+%V HP radiant (Con half)"',
+    'Note="R30\' May use Channel Divinity to dispel magical darkness; foes suffer 2d10+%V HP radiant (Con half)"',
   'Rally':
     'Section=combat Note="Chosen ally gains Superiority Die + %V temporary HP"',
   'Read Thoughts':
     'Section=magic ' +
-    'Note="R60\' Use Channel Divinity to read thoughts and cast <i>Suggestion</i> (no save) for 1 min"',
+    'Note="R60\' May use Channel Divinity to read thoughts and cast <i>Suggestion</i> (no save) for 1 min"',
   'Relentless':
-    'Section=combat Note="Minimum 1 Superiority Die after initiative"',
-  'Relentless Avenger':'Section=combat Note="Move %{speed//2}\' after OA hit"',
+    'Section=combat Note="Has a minimum of 1 Superiority Die after initiative"',
+  'Relentless Avenger':
+    'Section=combat Note="May move %{speed//2}\' after a successful OA"',
   'Ride The Wind':
-    'Section=magic Note="Spend 4 Ki Points to cast <i>Fly</i> on self"',
+    'Section=magic Note="May spend 4 Ki Points to cast <i>Fly</i> on self"',
   'Riposte':
     'Section=combat ' +
-    'Note="Use Reaction to attack after foe miss, add Superiority Die to damage"',
+    'Note="May use Reaction to attack after a foe miss and add a Superiority Die to damage"',
   'River Of Hungry Flame':
-    'Section=magic Note="Spend 5 Ki Points to cast <i>Wall Of Fire</i>"',
+    'Section=magic Note="May spend 5 Ki Points to cast <i>Wall Of Fire</i>"',
   'Rush Of The Gale Spirits':
-    'Section=magic Note="Spend 2 Ki Points to cast <i>Gust Of Wind</i>"',
+    'Section=magic Note="May spend 2 Ki Points to cast <i>Gust Of Wind</i>"',
   'Shadow Arts':
     'Section=magic ' +
-    'Note="Know <i>Minor Illusion</i> cantrip, spend 2 Ki Points to cast <i>Darkness</i>, <i>Darkvision</i>, <i>Pass Without Trace</i>, or <i>Silence</i>"',
+    'Note="Knows <i>Minor Illusion</i> cantrip and may spend 2 Ki Points to cast <i>Darkness</i>, <i>Darkvision</i>, <i>Pass Without Trace</i>, or <i>Silence</i>"',
   'Shadow Step':
     'Section=magic ' +
-    'Note="Teleport 60\' between dim or unlit areas, then gain Adv on first melee attack"',
+    'Note="May teleport 60\' between dim or unlit areas, then gain Adv on first melee attack"',
   'Shape The Flowing River':
     'Section=magic ' +
-    'Note="R120\' Spend 1 Ki Point to freeze, thaw, and shape 30\' cu water"',
+    'Note="R120\' May spend 1 Ki Point to freeze, thaw, and shape 30\' cu water"',
   'Shapechanger':
     'Section=magic ' +
-    'Note="Know <i>Polymorph</i>, transform self into CR 1 creature 1/short rest"',
+    'Note="Knows <i>Polymorph</i>; may transform self into a CR 1 creature 1/short rest"',
   'Share Spells':
-    'Section=magic Note="R30\' Self spell also affects companion"',
+    'Section=magic Note="R30\' May have self spell also affect companion"',
   'Soul Of Vengeance':
     'Section=combat ' +
-    'Note="Use Reaction for melee attack on Vow Of Enmity target "',
+    'Note="May use Reaction for a melee attack on Vow Of Enmity target "',
   'Spell Bombardment':
     'Section=magic ' +
-    'Note="Add another die when maximum rolled on spell damage die 1/rd"',
+    'Note="May add another die after rolling the maximum on a spell damage die 1/rd"',
   'Spell Resistance':
-    'Section=save Note="Adv on saves vs. spells; resistance to spell damage"',
+    'Section=save ' +
+    'Note="Adv on saves vs. spells/Has resistance to spell damage"',
   'Spell Thief':
     'Section=magic ' +
-    'Note="Foe spell negated, self cast same w/in 8 hours (DC %V neg) 1/long rest"',
+    'Note="May negate foe spell and cast same w/in 8 hours (DC %V neg) 1/long rest"',
   'Spirit Seeker':
-    'Section=magic Note="Ritual <i>Beast Sense</i>, <i>Speak With Animals</i>"',
+    'Section=magic ' +
+    'Note="May cast ritual <i>Beast Sense</i> and <i>Speak With Animals</i>"',
   'Spirit Walker':
-    'Section=magic Note="Ritual <i>Commune With Nature</i>"',
+    'Section=magic Note="May cast ritual <i>Commune With Nature</i>"',
   'Split Enchantment':
-    'Section=magic Note="Add second target to enchantment spell"',
+    'Section=magic Note="May add a second target to an enchantment spell"',
   'Stormborn':
     'Section=ability Note="%{speed}\' fly speed outdoors"',
   'Sweeping Attack':
     'Section=combat ' +
-    'Note="After hit, inflict Superiority Die HP on adjacent foe"',
+    'Note="After a successful attack, may inflict a Superiority Die HP on an adjacent foe"',
   'Sweeping Cinder Strike':
-    'Section=magic Note="Spend 2 Ki Points to cast <i>Burning Hands</i>"',
+    'Section=magic Note="May spend 2 Ki Points to cast <i>Burning Hands</i>"',
   'The Third Eye':
     'Section=magic ' +
-    'Note="Use action to gain 60\' darkvision, 60\' ethereal sight, universal language comprehension, or 10\' invisibility sight"',
+    'Note="May use an action to gain 60\' darkvision, 60\' ethereal sight, universal language comprehension, or 10\' invisibility sight"',
   'Thought Shield':
     'Section=save ' +
-    'Note="Immune to telepathy, resistance to psychic damage, psychic damage also effects attacker"',
-  'Thousand Forms':
-    'Section=magic Note="<i>Alter Self</i> at will"',
+    'Note="Immune to telepathy, has resistance to psychic damage, and psychic damage also affects attacker"',
+  'Thousand Forms':'Section=magic Note="May cast <i>Alter Self</i> at will"',
   'Thunderbolt Strike':
     'Section=magic ' +
     'Note="Lightning damage pushes away Large and smaller creatures 10\'"',
   'Tides Of Chaos':
     'Section=feature ' +
-    'Note="Adv on attack, ability, or saving throw 1/long rest; subsequent spell use may cause Wild Magic Surge"',
+    'Note="May gain Adv on an attack, ability, or saving throw 1/long rest; subsequent spell use may cause a Wild Magic Surge"',
   'Totem Spirit (Bear)':
-    'Section=save Note="Resistance to non-psychic damage during rage"',
+    'Section=save Note="Has resistance to non-psychic damage during rage"',
   'Totem Spirit (Eagle)':
     'Section=combat ' +
-    'Note="Gain bonus Dash and foes suffer Disadv on OA during rage (heavy armor neg)"',
+    'Note="May take a bonus Dash and inflict Disadv on foe OA during rage (heavy armor neg)"',
   'Totem Spirit (Wolf)':
     'Section=combat ' +
-    'Note="Allies Adv on attacks vs. foes adjacent to self during rage"',
+    'Note="Allies gain Adv on attacks vs. foes adjacent to self during rage"',
   'Totemic Attunement (Bear)':
     'Section=combat ' +
-    'Note="Adjacent foes Disadv on attacks on others during self rage"',
+    'Note="During rage, adjacent foes suffer Disadv on attacks on others"',
   'Totemic Attunement (Eagle)':
     'Section=ability Note="Fly %{speed}\' 1/rd during rage"',
   'Totemic Attunement (Wolf)':
     'Section=combat ' +
-    'Note="Melee hit during rage knocks prone Large or smaller foe"',
+    'Note="Successful melee attack during rage knocks prone a Large or smaller foe"',
   'Transmutation Savant':
     'Section=magic ' +
-    'Note="Copy transmutation spells into spellbook for half cost"',
+    'Note="May copy transmutation spells into spellbook for half cost"',
   'Trip Attack':
     'Section=combat ' +
-    'Note="Add Superiority Die to damage, knock foe prone (DC %V Str neg)"',
+    'Note="May add a Superiority Die to damage and knock foe prone (DC %V Strength neg)"',
   'Turn The Faithless':
     'Section=magic ' +
-    'Note="R30\' Use Channel Divinity to make fiends and fey flee (DC %V Wis neg) for 1 min"',
+    'Note="R30\' May use Channel Divinity to cause fiends and fey to flee (DC %V Wisdom neg) for 1 min"',
   'Undead Thralls':
-    'Section=magic Note="Know <i>Animate Dead</i>, casting animates additional corpse and gives +%V HP and +%1 damage"',
+    'Section=magic Note="Knows <i>Animate Dead</i>; casting animates an additional corpse and gives +%V HP and +%1 damage"',
   'Undying Sentinel':
     'Section=combat,feature ' +
-    'Note="Keep 1 HP when brought to 0 HP 1/long rest",' +
-         '"No debility from aging"',
+    'Note=' +
+      '"May retain 1 HP when brought to 0 HP 1/long rest",' +
+      '"Suffers no debility from aging"',
   'Versatile Trickster':
-    'Section=magic Note="Distract foe (self Adv on attacks) via <i>Mage Hand</i>"',
+    'Section=magic ' +
+    'Note="May distract foe, gaining Adv on attacks, via <i>Mage Hand</i>"',
   'Visions Of The Past':
     'Section=magic ' +
-    'Note="1 min meditation gives visions about surroundings or held object 1/short rest"',
+    'Note="May gain visions about surroundings or a held object via 1 min meditation 1/short rest"',
   'Vow Of Enmity':
     'Section=combat ' +
-    'Note="R10\' Use Channel Divinity to give self Adv on attacks against target for 1 min"',
-  'War Magic':'Section=combat Note="Bonus attack after casting %V"',
-  'War Priest':'Section=combat Note="Bonus attack %V/long rest"',
+    'Note="R10\' May use Channel Divinity to give self Adv on attacks against target for 1 min"',
+  'War Magic':'Section=combat Note="May make a bonus attack after casting %V"',
+  'War Priest':'Section=combat Note="May make a bonus attack %V/long rest"',
   'Warding Flare':
     'Section=magic ' +
-    'Note="R30\' Reaction inflicts foe Disadv on foe attack %V/long rest"',
+    'Note="R30\' May use Reaction to inflict Disadv on a foe attack %V/long rest"',
   'Water Whip':
     'Section=magic ' +
-    'Note="R30\' Spend 2+ Ki Points to inflict 3d10+ HP bludgeoning and pull 25\' or knock prone (DC %V Str half HP only)"',
+    'Note="R30\' May spend 2+ Ki Points to inflict 3d10+ HP bludgeoning and pull 25\' or knock prone (DC %V Strength half HP only)"',
   'Wave Of Rolling Earth':
-    'Section=magic Note="Spend 6 Ki Points to cast <i>Wall Of Stone</i>"',
+    'Section=magic Note="May spend 6 Ki Points to cast <i>Wall Of Stone</i>"',
   'Weapon Bond':
-    'Section=combat Note="Cannot be disarmed, can summon weapon"',
+    'Section=combat Note="Cannot be disarmed; may summon weapon"',
   'Wild Magic Surge':
     'Section=magic Note="5% chance of random magic effect"',
   'Wrath Of The Storm':
     'Section=combat ' +
-    'Note="Use Reaction to inflict 2d8 HP lightning or thunder (Dex half) on successful attacker %V/long rest"',
+    'Note="May use Reaction to inflict 2d8 HP lightning or thunder (Dexterity half) on successful attacker %V/long rest"',
   // Feats
   'Actor':
     'Section=ability,skill ' +
-    'Note="+1 Charisma",' +
-         '"Adv on Deception (Cha) and Performance (Cha) (impersonating), mimic others\' speech or sounds"',
+    'Note=' +
+      '"+1 Charisma",' +
+      '"Adv on Deception and Performance (impersonating)/May mimic others\' speech or sounds"',
   'Alert':
-    'Section=combat ' +
-    'Note="+5 Initiative; cannot be surprised; no Adv to unseen foes"',
+    'Section=combat,combat ' +
+    'Note=' +
+      '"+5 Initiative",' +
+      '"Cannot be surprised/Unseen foes do not have Adv"',
   'Athlete':
-    'Section=ability ' +
-    'Note="Ability Boost (Choose 1 from Dexterity, Strength)/Standing, long jump, and running high jump each use only 5\' move/Climb at full speed"',
+    'Section=ability,ability ' +
+    'Note=' +
+      '"Ability Boost (Choose 1 from Dexterity, Strength)",' +
+      '"Standing, long jump, and running high jump each use only 5\' move/May climb at full speed"',
   'Charger':
     'Section=combat ' +
-    'Note="After dash, bonus attack inflicts +5 HP damage or bonus 10\' push"',
+    'Note="Bonus attack after Dash inflicts +5 HP damage or +10\' push"',
   'Crossbow Expert':
     'Section=combat ' +
-    'Note="Quick load; no Disadv on close shot; bonus hand crossbow shot after one-handed attack"',
+    'Note="May make multiple attacks w/a proficient crossbow/Suffers no Disadv on a close shot/May take a bonus hand crossbow shot after a one-handed attack"',
   'Defensive Duelist':
-    'Section=combat Note="Use Reaction for +%V AC when holding finesse weapon"',
+    'Section=combat Note="May use Reaction for +%V AC when holding a finesse weapon"',
   'Dual Wielder':
     'Section=combat ' +
-    'Note="+1 AC w/two weapons; use two-weapon fighting w/any one-handed weapons; draw or stow two weapons at once"',
+    'Note="+1 AC w/two weapons/May use two-weapon fighting w/any one-handed weapons/May draw or stow two weapons at once"',
   'Dungeon Delver':
     'Section=save,skill ' +
-    'Note="Adv on trap detection and avoidance and resistance to trap damage",' +
-         '"Adv on secret door detection and search for traps at full speed"',
+    'Note=' +
+      '"Adv on trap detection and avoidance/Has resistance to trap damage",' +
+      '"Adv on secret door detection/May search for traps at full speed"',
   'Durable':
     'Section=ability,combat ' +
-    'Note="+1 Constitution","Minimum %V when regaining HP"',
+    'Note=' +
+      '"+1 Constitution",' +
+      '"Recovers a minimum of %{constitutionModifier*2>?2} HP from a Hit Die roll"',
   'Elemental Adept (Acid)':
     'Section=magic ' +
-    'Note="Acid spells ignore resistance; treat 1s as 2s on damage die"',
+    'Note="Acid spells ignore resistance and treat 1s as 2s on damage dice"',
   'Elemental Adept (Cold)':
     'Section=magic ' +
-    'Note="Cold spells ignore resistance; treat 1s as 2s on damage die"',
+    'Note="Cold spells ignore resistance and treat 1s as 2s on damage dice"',
   'Elemental Adept (Fire)':
     'Section=magic ' +
-    'Note="Fire spells ignore resistance; treat 1s as 2s on damage die"',
+    'Note="Fire spells ignore resistance and treat 1s as 2s on damage dice"',
   'Elemental Adept (Lightning)':
     'Section=magic ' +
-    'Note="Lightning spells ignore resistance; treat 1s as 2s on damage die"',
+    'Note="Lightning spells ignore resistance and treat 1s as 2s on damage dice"',
   'Elemental Adept (Thunder)':
     'Section=magic ' +
-    'Note="Thunder spells ignore resistance; treat 1s as 2s on damage die"',
+    'Note="Thunder spells ignore resistance and treat 1s as 2s on damage dice"',
   'Great Weapon Master':
     'Section=combat ' +
-    'Note="Bonus attack after crit or reducing foe to 0 HP; trade -5 attack w/heavy weapon for +10 damage"',
+    'Note="May make a bonus attack after crit or reducing foe to 0 HP/May suffer -5 attack w/a heavy weapon to gain +10 damage"',
   'Healer':
     'Section=feature ' +
-    'Note="Using healer\'s kit to stabilize also restores 1 HP; healer\'s kit heals 1d6 + 4 + target HD HP 1/short rest"',
+    'Note="Using a healer\'s kit to stabilize also restores 1 HP/May use a healer\'s kit to restore 1d6 + 4 + target HD HP 1/short rest"',
   'Heavily Armored':
-    'Section=ability,combat Note="+1 Strength","Armor Proficiency (Heavy)"',
+    'Section=ability,combat ' +
+    'Note=' +
+      '"+1 Strength",' +
+      '"Armor Proficiency (Heavy)"',
   'Heavy Armor Master':
     'Section=ability,combat ' +
-    'Note="+1 Strength",' +
-         '"DR 3/magic to bludgeoning, piercing, and slashing damage"',
+    'Note=' +
+      '"+1 Strength",' +
+      '"Has DR 3/magic to bludgeoning, piercing, and slashing damage"',
   'Inspiring Leader':
     'Section=feature Note="R30\' 10-min speech gives 6 allies %V temporary HP"',
   'Keen Mind':
     'Section=ability,feature ' +
-    'Note="+1 Intelligence",' +
-         '"Always know direction of north and hours until sunrise or sunset; recall anything seen or heard during the past month"',
+    'Note=' +
+      '"+1 Intelligence",' +
+      '"Always knows direction of north and hours until sunrise or sunset/Can recall anything seen or heard during the past month"',
   'Lightly Armored':
     'Section=ability,combat ' +
-    'Note="Ability Boost (Choose 1 from Dexterity, Strength)",' +
-         '"Armor Proficiency (Light)"',
+    'Note=' +
+      '"Ability Boost (Choose 1 from Dexterity, Strength)",' +
+      '"Armor Proficiency (Light)"',
   'Linguist':
     'Section=ability,feature,skill ' +
-    'Note="+1 Intelligence",' +
-         '"Create ciphers that require a DC %V Int check to decode",' +
-         '"Language (Choose 3 from any)"',
+    'Note=' +
+      '"+1 Intelligence",' +
+      '"May create ciphers (DC %V Intelligence decodes)",' +
+      '"Language (Choose 3 from any)"',
   'Lucky':
     'Section=feature ' +
-    'Note="Adv on attack, ability, or saving throw or foe Disadv on self attack 3/long rest"',
+    'Note="May gain Adv on an attack, ability, or saving throw or inflict foe Disadv on self attack 3/long rest"',
   'Mage Slayer':
     'Section=combat,save ' +
-    'Note="Use Reaction to attack adjacent caster; foe Disadv on concentration to maintain spell",' +
-         '"Adv on spells by adjacent foes"',
+    'Note=' +
+      '"May use Reaction to attack an adjacent caster/Foe suffers Disadv on concentration to maintain spell",' +
+      '"Adv on spells by adjacent foes"',
   'Magic Initiate (Bard)':
-    'Section=magic Note="Know 2 B0 spells, cast 1 B1 spell/long rest"',
+    'Section=magic Note="Knows 2 B0 spells/May cast 1 B1 spell/long rest"',
   'Magic Initiate (Cleric)':
-    'Section=magic Note="Know 2 C0 spells, cast 1 C1/long rest"',
+    'Section=magic Note="Knows 2 C0 spells/May cast 1 C1 spell/long rest"',
   'Magic Initiate (Druid)':
-    'Section=magic Note="Know 2 D0 spells, cast 1 D1/long rest"',
+    'Section=magic Note="Knows 2 D0 spells/May cast 1 D1 spell/long rest"',
   'Magic Initiate (Sorcerer)':
-    'Section=magic Note="Know 2 S0 spells, cast 1 S1 spell/long rest"',
+    'Section=magic Note="Knows 2 S0 spells/May cast 1 S1 spell/long rest"',
   'Magic Initiate (Warlock)':
-    'Section=magic Note="Know 2 K0 spells, cast 1 K1 spell/long rest"',
+    'Section=magic Note="Knows 2 K0 spells/May cast 1 K1 spell/long rest"',
   'Magic Initiate (Wizard)':
-    'Section=magic Note="Know 2 W0 spells, cast 1 W1 spell/long rest"',
+    'Section=magic Note="Knows 2 W0 spells/May cast 1 W1 spell/long rest"',
   'Martial Adept':
-    'Section=combat Note="Combat Superiority (2 maneuvers, 1 die)"',
+    'Section=combat Note="Has Combat Superiority feature (2 maneuvers, 1 die)"',
   'Medium Armor Master':
     'Section=combat,skill ' +
-    'Note="+1 AC in medium armor if Dexterity at least 16",' +
-         '"No Stealth check penalty in medium armor"',
+    'Note=' +
+      '"+1 AC in medium armor if Dexterity is at least 16",' +
+      '"Suffers no Stealth check penalty in medium armor"',
   'Mobile':
     'Section=ability,combat ' +
-    'Note="+10 Speed",' +
-         '"Dash at full speed in difficult terrain, no OA from targeted foe"',
+    'Note=' +
+      '"+10 Speed",' +
+      '"May Dash at full speed in difficult terrain/Suffers no OA from targeted foe"',
   'Moderately Armored':
     'Section=ability,combat ' +
-    'Note="Ability Boost (Choose 1 from Dexterity, Strength)",' +
-         '"Armor Proficiency (Medium/Shield)"',
+    'Note=' +
+      '"Ability Boost (Choose 1 from Dexterity, Strength)",' +
+      '"Armor Proficiency (Medium/Shield)"',
   'Mounted Combatant':
     'Section=combat ' +
-    'Note="Adv on melee attacks on unmounted foe smaller than mount, redirect attack on mount to self, mount takes no damage on Dex save, half on fail"',
+    'Note="Adv on melee attacks on an unmounted foe smaller than mount/May redirect attack on mount to self/Mount takes no damage on successful Dexterity save and half on fail"',
   'Observant':
     'Section=ability,feature,skill ' +
-    'Note="Ability Boost (Choose 1 from Intelligence, Wisdom)",' +
-         '"Read lips",' +
-         '"+5 passive Investigation and Perception"',
+    'Note=' +
+      '"Ability Boost (Choose 1 from Intelligence, Wisdom)",' +
+      '"May read lips",' +
+      '"+5 passive Investigation and Perception"',
   'Polearm Master':
     'Section=combat ' +
-    'Note="Bonus attack w/polearm butt inflicts 1d4 HP bludgeoning, OA when foe enters reach"',
+    'Note="Bonus attack w/polearm butt inflicts 1d4 HP bludgeoning/May take OA when a foe enters reach"',
   'Resilient':
     'Section=ability,save ' +
-    'Note="Ability Boost (Choose 1 from any)",' +
-         '"Save Proficiency (Choose 1 from any)"',
-  'Ritual Caster':
-    'Section=magic Note="Cast spells from ritual book"',
+    'Note=' +
+      '"Ability Boost (Choose 1 from any)",' +
+      '"Save Proficiency (Choose 1 from any)"',
+  'Ritual Caster':'Section=magic Note="May cast spells from a ritual book"',
   'Savage Attacker':
-    'Section=combat Note="Take best of two melee damage rolls 1/rd"',
+    'Section=combat Note="May take the best of two melee damage rolls 1/rd"',
   'Sentinel':
     'Section=combat ' +
-    'Note="OA strike halts foe; OA on adjacent foe Disengage; use Reaction to attack when adjacent foe targets other"',
+    'Note="Successful OA halts foe/May take an OA when an adjacent foe uses Disengage/May use Reaction to attack when an adjacent foe targets another"',
   'Sharpshooter':
     'Section=combat ' +
-    'Note="No Disadv on attacks at long range, ignore 3/4 cover, trade -5 attack w/ranged weapon for +10 damage"',
+    'Note="Suffers no Disadv on attacks at long range/Range attacks ignore 3/4 cover/May suffer -5 attack w/ranged weapon to gain +10 damage"',
   'Shield Master':
     'Section=combat,save ' +
-    'Note="Bonus Push during Attack",' +
-         '"+2 Dex vs. targeted spell, Dex save yields no damage instead of half"',
-  'Skilled':
-    'Section=skill Note="Skill Proficiency (Choose 3 from any)"',
+    'Note=' +
+      '"May make a bonus Push during Attack",' +
+      '"+2 Dexterity vs. targeted spell/Successful Dexterity save yields no damage instead of half"',
+  'Skilled':'Section=skill Note="Skill Proficiency (Choose 3 from any)"',
   'Skulker':
     'Section=skill ' +
-    'Note="Hide when lightly obscured, ranged miss does not reveal position, no Disadv on Perception in dim light"',
+    'Note="May hide when lightly obscured/Ranged miss does not reveal position/Suffers no Disadv on Perception in dim light"',
   'Spell Sniper':
     'Section=magic ' +
-    'Note="Dbl attack spell range, ignore 3/4 cover, know additional attack cantrip"',
+    'Note="Dbl attack spell range/Spells ignore 3/4 cover/Knows an additional attack cantrip"',
   'Tavern Brawler':
-    'Section=ability,combat ' +
-    'Note="Ability Boost (Choose 1 from Constitution, Strength)",' +
-         '"Weapon Proficiency (Improvised)/Unarmed d4 damage/Bonus grapple after Unarmed or Improvised strike"',
+    'Section=ability,combat,combat ' +
+    'Note=' +
+      '"Ability Boost (Choose 1 from Constitution, Strength)",' +
+      '"Weapon Proficiency (Improvised)/Unarmed attacks inflict 1d4 HP",' +
+      '"May make a bonus grapple after a successful Unarmed or Improvised attack"',
   'Tough':'Section=combat Note="+%V HP"',
   'War Caster':
     'Section=magic ' +
-    'Note="Adv on concentration to maintain spell, cast when holding shield and/or weapon, use Reaction to cast as OA"',
+    'Note="Adv on concentration to maintain spell/May cast when holding a shield and/or weapon/May use Reaction to cast as an OA"',
   'Weapon Master':
     'Section=ability,combat ' +
-    'Note="Ability Boost (Choose 1 from Dexterity, Strength)",' +
-         '"Weapon Proficiency (Choose 4 from any)"',
+    'Note=' +
+      '"Ability Boost (Choose 1 from Dexterity, Strength)",' +
+      '"Weapon Proficiency (Choose 4 from any)"',
   // Races
   'Dark Elf Ability Adjustment':
     'Section=ability Note="+2 Dexterity/+1 Charisma"',
-  'Drow Magic':'Section=magic Note="Know <i>Dancing Lights</i> cantrip%1"',
+  'Drow Magic':'Section=magic Note="Knows <i>Dancing Lights</i> cantrip%1"',
   'Drow Weapon Training':
     'Section=combat ' +
     'Note="Weapon Proficiency (Hand Crossbow/Rapier/Shortsword)"',
   'Dwarven Armor Training':'Section=combat Note="Armor Proficiency (Medium)"',
-  'Fleet Of Foot':
-    'Section=ability Note="+5 Speed"',
+  'Fleet Of Foot':'Section=ability Note="+5 Speed"',
   'Forest Gnome Ability Adjustment':
     'Section=ability Note="+2 Intelligence/+1 Dexterity"',
-  'Mask Of The Wild':
-    'Section=skill Note="Hide in light natural coverage"',
+  'Mask Of The Wild':'Section=skill Note="May hide in light natural coverage"',
   'Mountain Dwarf Ability Adjustment':
     'Section=ability Note="+2 Constitution/+2 Strength"',
   'Natural Illusionist':
-    'Section=magic Note="Know <i>Minor Illusion</i> cantrip"',
+    'Section=magic Note="Knows <i>Minor Illusion</i> cantrip"',
   'Speak With Small Beasts':
-    'Section=feature Note="Simple communication with small animals"',
+    'Section=feature Note="May communicate with small animals"',
   'Stout Halfling Ability Adjustment':
     'Section=ability Note="+2 Dexterity/+1 Constitution"',
   'Stout Resilience':
-    'Section=save Note="Adv on saves vs. poison, resistance to poison damage"',
+    'Section=save Note="Adv on saves vs. poison/Has resistance to poison damage"',
   'Sunlight Sensitivity':
     'Section=combat,skill ' +
-    'Note="Disadv on attack in direct sunlight",' +
-         '"Disadv on sight Perception in direct sunlight"',
+    'Note=' +
+      '"Disadv on attack in direct sunlight",' +
+      '"Disadv on sight Perception in direct sunlight"',
   'Superior Darkvision':
-    'Section=feature Note="R120\' See one light level better"',
+    'Section=feature Note="R120\' Sees one light level better"',
   'Wood Elf Ability Adjustment':
     'Section=ability Note="+2 Dexterity/+1 Wisdom"'
 };
@@ -1195,7 +1232,7 @@ PHB5E.SPELLS_ADDED = {
     'School=Conjuration ' +
     'Level=K1 ' +
     'AtHigherLevels="inflicts +1d6 HP" ' +
-    'Description="10\' radius inflicts 2d6 HP necrotic and no Reaction (Str half, no loss of Reaction) for 1 rd"',
+    'Description="10\' radius inflicts 2d6 HP necrotic and no Reaction (Strength half, no loss of Reaction) for 1 rd"',
   'Aura Of Life':
     'School=Abjuration ' +
     'Level=P4 ' +
@@ -1224,7 +1261,7 @@ PHB5E.SPELLS_ADDED = {
   'Blinding Smite':
     'School=Evocation ' +
     'Level=P3 ' +
-    'Description="Self attack inflicts +3d8 HP radiant and blinds (Con neg) for conc or 1 min"',
+    'Description="Self attack inflicts +3d8 HP radiant and blinds (Constitution neg) for conc or 1 min"',
 
   'Chromatic Orb':
     'School=Evocation ' +
@@ -1243,24 +1280,24 @@ PHB5E.SPELLS_ADDED = {
   'Compelled Duel':
     'School=Enchantment ' +
     'Level=P1 ' +
-    'Description="R30\' Target stays w/in 30\' of self, suffers Disadv on attacks on others (Wis neg) for conc or 1 min"',
+    'Description="R30\' Target stays w/in 30\' of self, suffers Disadv on attacks on others (Wisdom neg) for conc or 1 min"',
   'Conjure Barrage':
     'School=Conjuration ' +
     'Level=R3 ' +
-    'Description="60\' cone inflicts 3d8 HP weapon type (Dex half)"',
+    'Description="60\' cone inflicts 3d8 HP weapon type (Dexterity half)"',
   'Conjure Volley':
     'School=Conjuration ' +
     'Level=R5 ' +
-    'Description="R150\' 40\' radius inflicts 8d8 HP weapon type (Dex half)"',
+    'Description="R150\' 40\' radius inflicts 8d8 HP weapon type (Dexterity half)"',
   'Cordon Of Arrows':
     'School=Transmutation ' +
     'Level=R2 ' +
     'AtHigherLevels="affects +2 pieces" ' +
-    'Description="R5\' Four pieces of ammo attack w/in 30\', inflict 1d6 HP piercing (Dex neg) for 8 hr"',
+    'Description="R5\' Four pieces of ammo attack w/in 30\', inflict 1d6 HP piercing (Dexterity neg) for 8 hr"',
   'Crown Of Madness':
     'School=Enchantment ' +
     'Level=B2,K2,S2,W2 ' +
-    'Description="R120\' Self directs target\'s attacks (Wis neg) for conc or 1 min"',
+    'Description="R120\' Self directs target\'s attacks (Wisdom neg) for conc or 1 min"',
   "Crusader's Mantle":
     'School=Evocation ' +
     'Level=P3 ' +
@@ -1269,12 +1306,12 @@ PHB5E.SPELLS_ADDED = {
   'Destructive Wave':
     'School=Evocation ' +
     'Level=P5 ' +
-    'Description="30\' radius inflicts 5d6 HP thunder and knocks prone (Con half HP, not prone)"',
+    'Description="30\' radius inflicts 5d6 HP thunder and knocks prone (Constitution half HP, not prone)"',
   'Dissonant Whispers':
     'School=Enchantment ' +
     'Level=B1,"K1 [The Great Old One]" ' +
     'AtHigherLevels="inflicts +1d6 HP" ' +
-    'Description="R60\' Target suffers 3d6 HP psychic and flees (Wis half, need not flee)"',
+    'Description="R60\' Target suffers 3d6 HP psychic and flees (Wisdom half, need not flee)"',
 
   'Elemental Weapon':
     'School=Transmutation ' +
@@ -1285,7 +1322,7 @@ PHB5E.SPELLS_ADDED = {
     'School=Conjuration ' +
     'Level=R1 ' +
     'AtHigherLevels="inflicts +1d6 HP" ' +
-    'Description="Successful attack restrains foe and inflicts 1d6 HP/rd piercing (Str neg) for conc or 1 min"',
+    'Description="Successful attack restrains foe and inflicts 1d6 HP/rd piercing (Strength neg) for conc or 1 min"',
 
   'Feign Death':
     'School=Necromancy ' +
@@ -1294,23 +1331,23 @@ PHB5E.SPELLS_ADDED = {
   'Friends':
     'School=Enchantment ' +
     'Level=B0,K0,S0,W0 ' +
-    'Description="Self gains on Adv on Cha checks w/target for conc or 1 min"',
+    'Description="Self gains on Adv on Charisma w/target for conc or 1 min"',
 
   'Grasping Vine':
     'School=Conjuration ' +
     'Level=D4,R4 ' +
-    'Description="R30\' Vine pulls target 20\' (Dex neg) for conc or 1 min"',
+    'Description="R30\' Vine pulls target 20\' (Dexterity neg) for conc or 1 min"',
 
   'Hail Of Thorns':
     'School=Conjuration ' +
     'Level=R1 ' +
     'AtHigherLevels="inflicts +1d10 HP (6d10 max)" ' +
-    'Description="5\' radius inflicts 1d10 HP piercing (Dex half) following ranged hit"',
+    'Description="5\' radius inflicts 1d10 HP piercing (Dexterity half) following a successful ranged attack"',
   'Hex':
     'School=Enchantment ' +
     'Level=K1 ' +
     'AtHigherLevels="extends duration to 8/24 hr at level 3/5" ' +
-    'Description="R90\' Self hits on target inflict +1d6 HP necrotic, target has Disadv on chosen ability checks for conc or 1 hr"',
+    'Description="R90\' Self hits on target inflict +1d6 HP necrotic, target has Disadv on chosen ability for conc or 1 hr"',
   'Hunger Of Hadar':
     'School=Conjuration ' +
     'Level=K3 ' +
@@ -1320,7 +1357,7 @@ PHB5E.SPELLS_ADDED = {
     'School=Transmutation ' +
     'Level=R3 ' +
     'AtHigherLevels="inflicts +1d8 HP" ' +
-    'Description="Ranged weapon inflicts 8d6 HP lightning on target and 2d8 HP lightning in 10\' radius (Dex half)"',
+    'Description="Ranged weapon inflicts 8d6 HP lightning on target and 2d8 HP lightning in 10\' radius (Dexterity half)"',
 
   "Mordenkainen's Sword":
     'School=Evocation ' +
@@ -1330,7 +1367,7 @@ PHB5E.SPELLS_ADDED = {
   'Phantasmal Force':
     'School=Illusion ' +
     'Level=B2,"K2 [The Archfey]","K2 [The Great Old One]",S2,W2 ' +
-    'Description="R60\' Target perceives illusion that can inflict 1d6 HP psychic/rd (Int neg) for conc or 1 min"',
+    'Description="R60\' Target perceives illusion that can inflict 1d6 HP psychic/rd (Intelligence neg) for conc or 1 min"',
   'Power Word Heal':
     'School=Evocation ' +
     'Level=B9 ' +
@@ -1340,17 +1377,17 @@ PHB5E.SPELLS_ADDED = {
     'School=Necromancy ' +
     'Level=S1,W1 ' +
     'AtHigherLevels="inflicts +1d8 HP" ' +
-    'Description="R60\' Target suffers 2d8 HP poison and poisoned 1 rd (Con not poisoned)",',
+    'Description="R60\' Target suffers 2d8 HP poison and poisoned 1 rd (Constitution not poisoned)",',
 
   'Searing Smite':
     'School=Evocation ' +
     'Level=P1 ' +
     'AtHigherLevels="inflicts +1d6 HP initial" ' +
-    'Description="Self weapon inflicts +1d6 HP fire, target suffers 1d6 HP fire/rd (Con ends per-rd damage) for conc or 1 min"',
+    'Description="Self weapon inflicts +1d6 HP fire, target suffers 1d6 HP fire/rd (Constitution ends per-rd damage) for conc or 1 min"',
   'Staggering Smite':
     'School=Evocation ' +
     'Level=P4 ' +
-    'Description="Next hit w/in conc or 1 min inflicts +4d6 HP psychic, Disadv on attacks and ability checks, and no Reaction for 1 rd"',
+    'Description="Next successful attack w/in conc or 1 min inflicts +4d6 HP psychic, Disadv on attacks and ability checks, and no Reaction for 1 rd"',
   'Swift Quiver':
     'School=Transmutation ' +
     'Level=R5 ' +
@@ -1367,11 +1404,11 @@ PHB5E.SPELLS_ADDED = {
   'Thunderous Smite':
     'School=Evocation ' +
     'Level=P1 ' +
-    'Description="Next hit w/in conc or 1 min inflicts +2d6 HP thunder and pushes 10\' (Str no push)"',
+    'Description="Next successful attack w/in conc or 1 min inflicts +2d6 HP thunder and pushes 10\' (Strength no push)"',
   'Tsunami':
     'School=Conjuration ' +
     'Level=D8 ' +
-    'Description="RSight 300\'x300\' wall of water inflicts 6d10 HP bludgeoning (Str half), moves away 50\'/rd for conc or 6 rd"',
+    'Description="RSight 300\'x300\' wall of water inflicts 6d10 HP bludgeoning (Strength half), moves away 50\'/rd for conc or 6 rd"',
 
   'Witch Bolt':
     'School=Evocation ' +
@@ -1381,7 +1418,7 @@ PHB5E.SPELLS_ADDED = {
   'Wrathful Smite':
     'School=Evocation ' +
     'Level=P1 ' +
-    'Description="Next hit w/in conc or 1 min inflicts +1d6 HP psychic and frightens (Wis no fright)"'
+    'Description="Next successful attack w/in conc or 1 min inflicts +1d6 HP psychic and frightens (Wisdom no fright)"'
 
 };
 PHB5E.SPELLS_LEVELS_ADDED = {
@@ -1926,10 +1963,6 @@ PHB5E.featRulesExtra = function(rules, name) {
   } else if(name == 'Defensive Duelist') {
     rules.defineRule
       ('combatNotes.defensiveDuelist', 'proficiencyBonus', '=', null);
-  } else if(name == 'Durable') {
-    rules.defineRule('combatNotes.durable',
-      'constitutionModifier', '=', 'Math.max(source * 2, 2)'
-    );
   } else if(name == 'Inspiring Leader') {
     rules.defineRule('featureNotes.inspiringLeader',
       'level', '=', null,
