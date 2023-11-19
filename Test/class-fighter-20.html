@@ -123,9 +123,9 @@ var attributes = {
       </tr><tr style="text-align:center">
         <td><i>Student Of War: Tool Proficiency (Choose 1 from any Artisan)</i></td>
       </tr><tr style="text-align:center">
-        <td>Linguist: Create ciphers that require a DC 24 Int check to decode</td>
+        <td>Linguist: May create ciphers that require a DC 24 Int check to decode</td>
       </tr><tr style="text-align:center">
-        <td>Lucky: Adv on attack, ability, or saving throw or foe Disadv on self attack 3/long rest</td>
+        <td>Lucky: May gain Adv on an attack, ability, or saving throw or inflict foe Disadv on self attack 3/long rest</td>
       </tr><tr style="text-align:center">
         <td>Shelter Of The Faithful: May receive aid from temples of FR-Deneir and fellow believers</td>
       </tr></table>
@@ -174,7 +174,7 @@ var attributes = {
     <tr style="text-align:center">
       <td><i>Linguist: Language (Choose 3 from any)</i></td>
     </tr><tr style="text-align:center">
-      <td>Actor: Adv on Deception (Cha) and Performance (Cha) (impersonating), mimic others' speech or sounds</td>
+      <td>Actor: Adv on Deception and Performance (impersonating)/May mimic others' speech or sounds</td>
     </tr><tr style="text-align:center">
       <td>Bulky Armor: Disadv on Stealth</td>
     </tr><tr style="text-align:center">
@@ -228,9 +228,9 @@ var attributes = {
       </tr><tr style="text-align:center">
         <td><i>Fighting Style (Defense): +1 AC in armor</i></td>
       </tr><tr style="text-align:center">
-        <td><i>Improved Combat Superiority: Use d12 Superiority Dice</i></td>
+        <td><i>Improved Combat Superiority: May use d12 Superiority Dice</i></td>
       </tr><tr style="text-align:center">
-        <td><i>Improved War Magic: Bonus attack after any spell</i></td>
+        <td><i>Improved War Magic: May make a bonus attack after any spell</i></td>
       </tr><tr style="text-align:center">
         <td><i>Strength Attack Adjustment: +2</i></td>
       </tr><tr style="text-align:center">
@@ -238,19 +238,19 @@ var attributes = {
       </tr><tr style="text-align:center">
         <td>Action Surge: May take an extra action 2/short rest</td>
       </tr><tr style="text-align:center">
-        <td>Combat Superiority: Use 6d12 Superiority Dice to perform 9 chosen Maneuvers/short rest</td>
+        <td>Combat Superiority: May use 6d12 Superiority Dice to perform 9 chosen Maneuvers/short rest</td>
       </tr><tr style="text-align:center">
-        <td>Commander's Strike: Forego 1 attack to add Superiority Die to ally attack</td>
+        <td>Commander's Strike: May forego 1 attack to add a Superiority Die to an ally's attack</td>
       </tr><tr style="text-align:center">
-        <td>Disarming Attack: Add Superiority Die to damage, foe drops item (DC 16 Str neg)</td>
+        <td>Disarming Attack: May add a Superiority Die to damage and to cause foe to drop an item (DC 16 Str neg)</td>
       </tr><tr style="text-align:center">
-        <td>Distracting Strike: Add Superiority Die to damage, next ally attack against same foe in same rd gains Adv</td>
+        <td>Distracting Strike: May add a Superiority Die to damage and to give Adv to next ally attack against same foe in the same rd</td>
       </tr><tr style="text-align:center">
-        <td>Eldritch Strike: Inflicts Disadv on saves vs. self spells for 1 rd after hit</td>
+        <td>Eldritch Strike: Hit inflicts Disadv on saves vs. self spells for 1 rd</td>
       </tr><tr style="text-align:center">
-        <td>Evasive Footwork: Add Superiority Die to AC during move</td>
+        <td>Evasive Footwork: May add a Superiority Die to AC during move</td>
       </tr><tr style="text-align:center">
-        <td>Feinting Attack: Use bonus action to gain Adv on next attack on adjacent foe and add Superiority Die to damage</td>
+        <td>Feinting Attack: May use bonus action to gain Adv on next attack on adjacent foe and add a Superiority Die to damage</td>
       </tr><tr style="text-align:center">
         <td>Fighting Style (Dueling): +2 damage with a single, one-handed weapon</td>
       </tr><tr style="text-align:center">
@@ -260,35 +260,35 @@ var attributes = {
       </tr><tr style="text-align:center">
         <td>Fighting Style (Two-Weapon Fighting): Adds ability modifier to second attack damage</td>
       </tr><tr style="text-align:center">
-        <td>Goading Attack: Add Superiority Die to damage, foe attacks on others suffer Disadv (DC 16 Wis neg) for 1 rd</td>
+        <td>Goading Attack: May add a Superiority Die to damage and inflict Divadv on foe attacks on others (DC 16 Wis neg) for 1 rd</td>
       </tr><tr style="text-align:center">
-        <td>Great Weapon Master: Bonus attack after crit or reducing foe to 0 HP; trade -5 attack w/heavy weapon for +10 damage</td>
+        <td>Great Weapon Master: May make a bonus attack after crit or reducing foe to 0 HP/May suffer -5 attack w/a heavy weapon to gain +10 damage</td>
       </tr><tr style="text-align:center">
         <td>Improved Critical: Crits on a natural 19</td>
       </tr><tr style="text-align:center">
-        <td>Know Your Enemy: Know how foe compares to self after 1 min study</td>
+        <td>Know Your Enemy: Knows how foe compares to self after 1 min study</td>
       </tr><tr style="text-align:center">
-        <td>Lunging Attack: Gain +5' melee range, add Superiority Die to damage</td>
+        <td>Lunging Attack: +5' melee range/May add a Superiority Die to damage</td>
       </tr><tr style="text-align:center">
-        <td>Maneuvering Attack: Add Superiority Die to damage, ally can use Reaction to move half speed w/no OA from target</td>
+        <td>Maneuvering Attack: May add a Superiority Die to damage/Ally can use Reaction to move half speed w/no OA from target</td>
       </tr><tr style="text-align:center">
-        <td>Menacing Attack: Add Superiority Die to damage, inflict frightened (DC 16 Wis neg) for 1 rd</td>
+        <td>Menacing Attack: May add a Superiority Die to damage and inflict frightened (DC 16 Wis neg) for 1 rd</td>
       </tr><tr style="text-align:center">
-        <td>Parry: Reduce damage from foe by Superiority Die + 1</td>
+        <td>Parry: May subtract a Superiority Die + 1 from self damage by a foe</td>
       </tr><tr style="text-align:center">
-        <td>Polearm Master: Bonus attack w/polearm butt inflicts 1d4 HP bludgeoning, OA when foe enters reach</td>
+        <td>Polearm Master: Bonus attack w/polearm butt inflicts 1d4 HP bludgeoning/May take OA when a foe enters reach</td>
       </tr><tr style="text-align:center">
-        <td>Precision Attack: Add Superiority Die to attack</td>
+        <td>Precision Attack: May add a Superiority Die to attack</td>
       </tr><tr style="text-align:center">
-        <td>Pushing Attack: Add Superiority Die to damage, push foe 15' (DC 16 Str neg)</td>
+        <td>Pushing Attack: May add a Superiority Die to damage and push a foe 15' (DC 16 Str neg)</td>
       </tr><tr style="text-align:center">
         <td>Rally: Chosen ally gains Superiority Die + 2 temporary HP</td>
       </tr><tr style="text-align:center">
-        <td>Relentless: Minimum 1 Superiority Die after initiative</td>
+        <td>Relentless: Has a minimum of 1 Superiority Die after initiative</td>
       </tr><tr style="text-align:center">
-        <td>Riposte: Use Reaction to attack after foe miss, add Superiority Die to damage</td>
+        <td>Riposte: May use Reaction to attack after a foe miss and add a Superiority Die to damage</td>
       </tr><tr style="text-align:center">
-        <td>Savage Attacker: Take best of two melee damage rolls 1/rd</td>
+        <td>Savage Attacker: May take the best of two melee damage rolls 1/rd</td>
       </tr><tr style="text-align:center">
         <td>Second Wind: May regain 1d10+20 HP 1/short rest</td>
       </tr><tr style="text-align:center">
@@ -296,13 +296,13 @@ var attributes = {
       </tr><tr style="text-align:center">
         <td>Survivor: Regains 6 HP each rd when between 1 and 45 HP</td>
       </tr><tr style="text-align:center">
-        <td>Sweeping Attack: After hit, inflict Superiority Die HP on adjacent foe</td>
+        <td>Sweeping Attack: After a hit, may inflict a Superiority Die HP on an adjacent foe</td>
       </tr><tr style="text-align:center">
-        <td>Trip Attack: Add Superiority Die to damage, knock foe prone (DC 16 Str neg)</td>
+        <td>Trip Attack: May add a Superiority Die to damage and knock foe prone (DC 16 Str neg)</td>
       </tr><tr style="text-align:center">
-        <td>War Magic: Bonus attack after casting any spell</td>
+        <td>War Magic: May make bonus attack after casting any spell</td>
       </tr><tr style="text-align:center">
-        <td>Weapon Bond: Cannot be disarmed, can summon weapon</td>
+        <td>Weapon Bond: Cannot be disarmed; may summon weapon</td>
       </tr></table>
 </td>
     </tr></table>
@@ -366,7 +366,7 @@ var attributes = {
     </tr></table>
 </td>
   </tr><tr style="text-align:center">
-    <td><b>Magic Notes</b>: Arcane Charge: Teleport 30' during Action Surge</td>
+    <td><b>Magic Notes</b>: Arcane Charge: May teleport 30' during Action Surge</td>
   </tr></table>
 </td>
 </tr><tr style="text-align:center">
