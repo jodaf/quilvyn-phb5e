@@ -989,38 +989,39 @@ PHB5E.FEATURES_ADDED = {
     'Section=ability,skill ' +
     'Note=' +
       '"+1 Charisma",' +
-      '"Adv on Deception and Performance (impersonating)/May mimic others\' speech or sounds"',
+      '"Adv on Deception and Performance (impersonation)/May mimic others\' speech or sounds"',
   'Alert':
     'Section=combat,combat ' +
     'Note=' +
       '"+5 Initiative",' +
-      '"Cannot be surprised/Unseen foes do not have Adv"',
+      '"Cannot be surprised/Unseen foes gain no Adv on attacks on self"',
   'Athlete':
     'Section=ability,ability ' +
     'Note=' +
       '"Ability Boost (Choose 1 from Dexterity, Strength)",' +
-      '"Standing, long jump, and running high jump each use only 5\' move/May climb at full speed"',
+      '"Standing, running long jump, and running high jump each use only 5\' move/May climb at full speed"',
   'Charger':
     'Section=combat ' +
-    'Note="Bonus attack after Dash inflicts +5 HP damage or +10\' push"',
+    'Note="After a 10\' Dash, may use a bonus action to attack (+5 damage) or to push 10\'"',
   'Crossbow Expert':
     'Section=combat ' +
-    'Note="May make multiple attacks w/a proficient crossbow/Suffers no Disadv on a close shot/May take a bonus hand crossbow shot after a one-handed attack"',
+    'Note="May make multiple attacks w/a proficient crossbow/Suffers no Disadv on a close shot/May make a bonus hand crossbow attack after a one-handed attack"',
   'Defensive Duelist':
-    'Section=combat Note="May use Reaction for +%V AC when holding a finesse weapon"',
+    'Section=combat ' +
+    'Note="May use Reaction to gain +%V AC when wielding a proficient finesse weapon"',
   'Dual Wielder':
     'Section=combat ' +
     'Note="+1 AC w/two weapons/May use two-weapon fighting w/any one-handed weapons/May draw or stow two weapons at once"',
   'Dungeon Delver':
     'Section=save,skill ' +
     'Note=' +
-      '"Adv on trap detection and avoidance/Has resistance to trap damage",' +
-      '"Adv on secret door detection/May search for traps at full speed"',
+      '"Adv on trap avoidance and resistance/Has resistance to trap damage",' +
+      '"Adv on Perception and Investigation (secret door detection)/May search for traps at full speed"',
   'Durable':
     'Section=ability,combat ' +
     'Note=' +
       '"+1 Constitution",' +
-      '"Recovers a minimum of %{constitutionModifier*2>?2} HP from a Hit Die roll"',
+      '"Regains a minimum of %{constitutionModifier*2>?2} HP from a Hit Die roll"',
   'Elemental Adept (Acid)':
     'Section=magic ' +
     'Note="Acid spells ignore resistance and treat 1s as 2s on damage dice"',
@@ -1051,9 +1052,9 @@ PHB5E.FEATURES_ADDED = {
     'Section=ability,combat ' +
     'Note=' +
       '"+1 Strength",' +
-      '"Has DR 3/magic to bludgeoning, piercing, and slashing damage"',
+      '"In heavy armor, suffers -3 HP damage from nonmagical bludgeoning, piercing, and slashing weapons"',
   'Inspiring Leader':
-    'Section=feature Note="R30\' 10-min speech gives 6 allies %V temporary HP"',
+    'Section=feature Note="R30\' 10-min speech gives 6 allies %V temporary HP 1/short rest/ally"',
   'Keen Mind':
     'Section=ability,feature ' +
     'Note=' +
@@ -1076,20 +1077,26 @@ PHB5E.FEATURES_ADDED = {
   'Mage Slayer':
     'Section=combat,save ' +
     'Note=' +
-      '"May use Reaction to attack an adjacent caster/Foe suffers Disadv on concentration to maintain spell",' +
-      '"Adv on spells by adjacent foes"',
+      '"May use Reaction to attack an adjacent caster/Foe suffers Disadv on concentration to maintain a spell",' +
+      '"Adv on saves vs. spells cast by adjacent foes"',
   'Magic Initiate (Bard)':
-    'Section=magic Note="Knows 2 B0 spells/May cast 1 B1 spell/long rest"',
+    'Section=magic ' +
+    'Note="Knows 2 B0 spells/May cast chosen B1 spell 1/long rest"',
   'Magic Initiate (Cleric)':
-    'Section=magic Note="Knows 2 C0 spells/May cast 1 C1 spell/long rest"',
+    'Section=magic ' +
+    'Note="Knows 2 C0 spells/May cast chosen C1 spell 1/long rest"',
   'Magic Initiate (Druid)':
-    'Section=magic Note="Knows 2 D0 spells/May cast 1 D1 spell/long rest"',
+    'Section=magic ' +
+    'Note="Knows 2 D0 spells/May cast chosen D1 spell 1/long rest"',
   'Magic Initiate (Sorcerer)':
-    'Section=magic Note="Knows 2 S0 spells/May cast 1 S1 spell/long rest"',
+    'Section=magic ' +
+    'Note="Knows 2 S0 spells/May cast chosen S1 spell 1/long rest"',
   'Magic Initiate (Warlock)':
-    'Section=magic Note="Knows 2 K0 spells/May cast 1 K1 spell/long rest"',
+    'Section=magic ' +
+    'Note="Knows 2 K0 spells/May cast chosen K1 spell 1/long rest"',
   'Magic Initiate (Wizard)':
-    'Section=magic Note="Knows 2 W0 spells/May cast 1 W1 spell/long rest"',
+    'Section=magic ' +
+    'Note="Knows 2 W0 spells/May cast chosen W1 spell 1/long rest"',
   'Martial Adept':
     'Section=combat Note="Has Combat Superiority feature (2 maneuvers, 1 die)"',
   'Medium Armor Master':
@@ -1109,7 +1116,7 @@ PHB5E.FEATURES_ADDED = {
       '"Armor Proficiency (Medium/Shield)"',
   'Mounted Combatant':
     'Section=combat ' +
-    'Note="Adv on melee attacks on an unmounted foe smaller than mount/May redirect attack on mount to self/Mount takes no damage on successful Dexterity save and half on fail"',
+    'Note="Adv on melee attacks on an unmounted foe smaller than mount/May redirect attack on mount to self/Mount suffers no damage on a successful Dexterity save and half on failure"',
   'Observant':
     'Section=ability,feature,skill ' +
     'Note=' +
@@ -1118,30 +1125,32 @@ PHB5E.FEATURES_ADDED = {
       '"+5 passive Investigation and Perception"',
   'Polearm Master':
     'Section=combat ' +
-    'Note="Bonus attack w/polearm butt inflicts 1d4 HP bludgeoning/May take OA when a foe enters reach"',
+    'Note="Successful bonus attack w/polearm butt inflicts 1d4 HP bludgeoning/Foe entering polearm reach provokes OA"',
   'Resilient':
     'Section=ability,save ' +
     'Note=' +
       '"Ability Boost (Choose 1 from any)",' +
       '"Save Proficiency (Choose 1 from any)"',
-  'Ritual Caster':'Section=magic Note="May cast spells from a ritual book"',
+  'Ritual Caster':
+    'Section=magic ' +
+    'Note="May cast spells of up to level %{(level+1)//2} from a ritual book"',
   'Savage Attacker':
     'Section=combat Note="May take the best of two melee damage rolls 1/rd"',
   'Sentinel':
     'Section=combat ' +
-    'Note="Successful OA halts foe/May take an OA when an adjacent foe uses Disengage/May use Reaction to attack when an adjacent foe targets another"',
+    'Note="Successful OA halts target/May take an OA when an adjacent foe uses Disengage/May use Reaction to attack when an adjacent foe targets another"',
   'Sharpshooter':
     'Section=combat ' +
-    'Note="Suffers no Disadv on attacks at long range/Range attacks ignore 3/4 cover/May suffer -5 attack w/ranged weapon to gain +10 damage"',
+    'Note="Suffers no Disadv on attacks at long range/Range attacks ignore 3/4 cover/May suffer -5 attack w/a ranged weapon to gain +10 damage"',
   'Shield Master':
     'Section=combat,save ' +
     'Note=' +
-      '"May make a bonus Push during Attack",' +
-      '"+2 Dexterity vs. targeted spell/Successful Dexterity save yields no damage instead of half"',
+      '"May use a bonus action to shove foe during an attack",' +
+      '"+2 Dexterity vs. targeted spell or effect/May use Reaction to suffer no damage instead of half on a successful Dexterity save"',
   'Skilled':'Section=skill Note="Skill Proficiency (Choose 3 from any)"',
   'Skulker':
     'Section=skill ' +
-    'Note="May hide when lightly obscured/Ranged miss does not reveal position/Suffers no Disadv on Perception in dim light"',
+    'Note="May hide when lightly obscured/Ranged miss does not reveal position/Suffers no Disadv on Perception from dim light"',
   'Spell Sniper':
     'Section=magic ' +
     'Note="Dbl attack spell range/Spells ignore 3/4 cover/Knows an additional attack cantrip"',
@@ -1150,11 +1159,11 @@ PHB5E.FEATURES_ADDED = {
     'Note=' +
       '"Ability Boost (Choose 1 from Constitution, Strength)",' +
       '"Weapon Proficiency (Improvised)/Unarmed attacks inflict 1d4 HP",' +
-      '"May make a bonus grapple after a successful Unarmed or Improvised attack"',
-  'Tough':'Section=combat Note="+%V HP"',
+      '"May use a bonus action to grapple after a successful unarmed or improvised attack"',
+  'Tough':'Section=combat Note="+%V Hit Points"',
   'War Caster':
     'Section=magic ' +
-    'Note="Adv on concentration to maintain spell/May cast when holding a shield and/or weapon/May use Reaction to cast as an OA"',
+    'Note="Adv on concentration to maintain a spell/May cast when holding a shield and/or weapon/May use Reaction to cast as an OA"',
   'Weapon Master':
     'Section=ability,combat ' +
     'Note=' +
@@ -1237,7 +1246,7 @@ PHB5E.SPELLS_ADDED = {
     'School=Abjuration ' +
     'Level=K1 ' +
     'AtHigherLevels="gives +5 temporary HP and inflicts +5 HP cold" ' +
-    'Description="Self gains +5 temporary HP, successful attacker suffers 5 HP cold for 1 hr"',
+    'Description="Self gains 5 temporary HP, successful attacker suffers 5 HP cold for 1 hr"',
   'Arms Of Hadar':
     'School=Conjuration ' +
     'Level=K1 ' +
@@ -1302,7 +1311,7 @@ PHB5E.SPELLS_ADDED = {
   'Cordon Of Arrows':
     'School=Transmutation ' +
     'Level=R2 ' +
-    'AtHigherLevels="affects +2 pieces" ' +
+    'AtHigherLevels="affects six pieces" ' +
     'Description="R5\' Four pieces of ammo attack w/in 30\', inflict 1d6 HP piercing (Dexterity neg) for 8 hr"',
   'Crown Of Madness':
     'School=Enchantment ' +
@@ -1311,7 +1320,7 @@ PHB5E.SPELLS_ADDED = {
   "Crusader's Mantle":
     'School=Evocation ' +
     'Level=P3 ' +
-    'Description="Allies in 30\' radius inflict +1d4 HP radiant for conc or 1 min"',
+    'Description="Ally attacks in 30\' radius inflict +1d4 HP radiant for conc or 1 min"',
 
   'Destructive Wave':
     'School=Evocation ' +
@@ -1326,7 +1335,7 @@ PHB5E.SPELLS_ADDED = {
   'Elemental Weapon':
     'School=Transmutation ' +
     'Level=P3 ' +
-    'AtHigherLevels="gives +2/+3 attack and +2d4/+3d4 HP at level 5/7" ' +
+    'AtHigherLevels="gives +2/+3 attack and +2d4/+3d4 damage at level 5/7" ' +
     'Description="Touched weapon gains +1 attack and +1d4 HP acid, cold, fire, lightning, or thunder for conc or 1 hr"',
   'Ensnaring Strike':
     'School=Conjuration ' +
@@ -2099,8 +2108,8 @@ PHB5E.ruleNotes = function() {
     '<h3>Limitations</h3>\n' +
     '<ul>\n' +
     '  <li>\n' +
-    '    Quilvyn allows proficiencies from the PHB Skilled feat to be\n' +
-    '    applied only to skills, rather than skills or tools.\n' +
+    '  Quilvyn allows proficiencies from the PHB Skilled feat to be applied\n' +
+    '  only to skills, rather than skills or tools.\n' +
     '  </li>\n' +
     '</ul>\n' +
     '<h3>Copyrights and Licensing</h3>\n' +
