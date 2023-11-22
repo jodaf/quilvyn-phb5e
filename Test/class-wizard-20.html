@@ -92,7 +92,13 @@ var attributes = {
       </tr></table>
 </td>
     </tr><tr style="text-align:center">
-      <td><b>Feature Notes</b>: Shelter Of The Faithful: May receive aid from temples of Egyptian-Ptah and fellow believers</td>
+      <td><b>Feature Notes</b>:       <table id="FeatureNotes" style="width:100%">
+      <tr style="text-align:center">
+        <td><i>Arcane Tradition: 1 selection</i></td>
+      </tr><tr style="text-align:center">
+        <td>Shelter Of The Faithful: May receive aid from temples of Egyptian-Ptah and fellow believers</td>
+      </tr></table>
+</td>
     </tr></table>
 </td>
   </tr><tr style="text-align:center">
@@ -282,19 +288,19 @@ var attributes = {
   </tr><tr style="text-align:center">
     <td><b>Magic Notes</b>:     <table id="MagicNotes" style="width:100%">
     <tr style="text-align:center">
-      <td><i>Greater Portent: May replace roll 3/long rest</i></td>
+      <td><i>Greater Portent: May use Portent 3/long rest</i></td>
     </tr><tr style="text-align:center">
       <td>Abjuration Savant: May copy abjuration spells into spellbook for half cost</td>
     </tr><tr style="text-align:center">
-      <td>Alter Memories: Target becomes unaware of self charm and forgets preceding 5 hrs (DC 16 Intelligence neg)</td>
+      <td>Alter Memories: Chosen target becomes unaware of self charm; may also inflict forgetfulness of the preceding 5 hrs (DC 16 Intelligence neg)</td>
     </tr><tr style="text-align:center">
-      <td>Arcane Recovery: Taking a short rest restores 10 spell slot levels 1/dy</td>
+      <td>Arcane Recovery: May recover 10 spell slot levels (level 6 maximum) during a short rest 1/long rest</td>
     </tr><tr style="text-align:center">
-      <td>Arcane Ward: Abjuration casting creates a 42 HP shield around self until next long rest</td>
+      <td>Arcane Ward: Abjuration casting creates a ward around self that can aborb 42 HP (long rest ends); if taken to 0 HP, abjuration casting restores spell 2x level HP to ward</td>
     </tr><tr style="text-align:center">
       <td>Benign Transposition: R30' May teleport self or swap w/a willing creature 1/long rest or conjuration spell casting</td>
     </tr><tr style="text-align:center">
-      <td>Command Undead: R60' May control undead target (DC 16 Charisma neg; Adv if intelligence is 8 or higher)</td>
+      <td>Command Undead: R60' May control undead target (DC 16 Charisma neg; Adv if target Intelligence is 8 or higher)</td>
     </tr><tr style="text-align:center">
       <td>Conjuration Savant: May copy conjuration spells into spellbook for half cost</td>
     </tr><tr style="text-align:center">
@@ -308,13 +314,13 @@ var attributes = {
     </tr><tr style="text-align:center">
       <td>Evocation Savant: May copy evocation spells into spellbook for half cost</td>
     </tr><tr style="text-align:center">
-      <td>Expert Divination: Casting a divination spell restores a lower spell slot</td>
+      <td>Expert Divination: Casting a divination spell restores a lower expended slot (level 5 maximum)</td>
     </tr><tr style="text-align:center">
       <td>Focused Conjuration: Damage cannot break conjuration concentration</td>
     </tr><tr style="text-align:center">
       <td>Grim Harvest: Regains 2x spell level HP (3x for necromantic spells) when self spell kills</td>
     </tr><tr style="text-align:center">
-      <td>Hypnotic Gaze: R5' May daze target (DC 16 Wisdom neg) 1/long rest</td>
+      <td>Hypnotic Gaze: May daze adjacent target (DC 16 Wisdom neg) 1/long rest</td>
     </tr><tr style="text-align:center">
       <td>Illusion Savant: May copy illusion spells into spellbook for half cost</td>
     </tr><tr style="text-align:center">
@@ -324,25 +330,25 @@ var attributes = {
     </tr><tr style="text-align:center">
       <td>Improved Abjuration: +6 abjuration spell ability checks</td>
     </tr><tr style="text-align:center">
-      <td>Improved Minor Illusion: Knows <i>Minor Illusion</i> cantrip; effects include both sound and image</td>
+      <td>Improved Minor Illusion: Knows <i>Minor Illusion</i> cantrip; effects include both a sound and an image</td>
     </tr><tr style="text-align:center">
-      <td>Instinctive Charm: R30' May redirect a foe attack on self to another (DC 16 Wisdom neg until long rest)</td>
+      <td>Instinctive Charm: R30' May redirect an attack on self to another (DC 16 Wisdom neg until long rest)</td>
     </tr><tr style="text-align:center">
-      <td>Malleable Illusions: May modify cast illusions throughout duration</td>
+      <td>Malleable Illusions: May modify self illusions throughout duration</td>
     </tr><tr style="text-align:center">
       <td>Master Transmuter: May destroy a transmuter's stone to transmute 5' cu, remove curses, diseases, and poisons, cast <i>Raise Dead</i>, or restore youth</td>
     </tr><tr style="text-align:center">
-      <td>Minor Alchemy: May transform 1' cu per 10 min effort for 1 hr</td>
+      <td>Minor Alchemy: May change substance of 1' cu per 10 min effort for conc or 1 hr</td>
     </tr><tr style="text-align:center">
       <td>Minor Conjuration: R10' May create 3' cu, 10 lb object for 1 hr</td>
     </tr><tr style="text-align:center">
       <td>Necromancy Savant: May copy necromancy spells into spellbook for half cost</td>
     </tr><tr style="text-align:center">
-      <td>Overchannel: Evocation spell up to level 5 inflicts maximum damage, self takes 2+ d12 HP necrotic damage per spell level after first time/long rest</td>
+      <td>Overchannel: Evocation spell up to level 5 inflicts maximum damage, self takes 2d12+ HP necrotic damage per spell level after first use/long rest</td>
     </tr><tr style="text-align:center">
-      <td>Portent: May replace target attack, ability, or saving throw 3/long rest</td>
+      <td>Portent: May replace self or target attack, ability, or saving throw 3/long rest</td>
     </tr><tr style="text-align:center">
-      <td>Potent Cantrip: Target takes half damage on cantrip save</td>
+      <td>Potent Cantrip: Target that makes save vs. self cantrip takes half damage</td>
     </tr><tr style="text-align:center">
       <td>Projected Ward: R30' May use Arcane Ward to absorb damage to others</td>
     </tr><tr style="text-align:center">
@@ -358,13 +364,13 @@ var attributes = {
     </tr><tr style="text-align:center">
       <td>Split Enchantment: May add a second target to an enchantment spell</td>
     </tr><tr style="text-align:center">
-      <td>The Third Eye: May use an action to gain 60' darkvision, 60' ethereal sight, universal language comprehension, or 10' invisibility sight</td>
+      <td>The Third Eye: May use an action to gain 60' darkvision, 60' ethereal sight, the ability to read any language, or 10' invisibility sight until next rest, 1 each/short rest</td>
     </tr><tr style="text-align:center">
       <td>Transmutation Savant: May copy transmutation spells into spellbook for half cost</td>
     </tr><tr style="text-align:center">
-      <td>Transmuter's Stone: Stone gives choice of 60' darkvision, +10' speed, proficiency in constitution saves, or resistance to chosen energy damage; may change effect when casting a transmutation spell</td>
+      <td>Transmuter's Stone: Stone gives choice of 60' darkvision, +10' Speed, proficiency on Constitution saves, or resistance to chosen energy damage; may change effect when casting a transmutation spell</td>
     </tr><tr style="text-align:center">
-      <td>Undead Thralls: Knows <i>Animate Dead</i>; casting animates an additional corpse and gives +20 HP and +6 damage</td>
+      <td>Undead Thralls: Knows <i>Animate Dead</i>; casting animates an additional corpse and gives corpses +20 HP and +6 damage</td>
     </tr><tr style="text-align:center">
       <td>War Caster: Adv on concentration to maintain spell/May cast when holding a shield and/or weapon/May use Reaction to cast as an OA</td>
     </tr></table>

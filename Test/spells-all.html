@@ -414,6 +414,8 @@ var attributes = {
     </tr><tr style="text-align:center">
       <td><b>Feature Notes</b>:       <table id="FeatureNotes" style="width:100%">
       <tr style="text-align:center">
+        <td><i>Arcane Tradition: 1 selection</i></td>
+      </tr><tr style="text-align:center">
         <td><i>Divine Domain: 1 selection</i></td>
       </tr><tr style="text-align:center">
         <td><i>Druid Circle: 1 selection</i></td>
@@ -432,7 +434,7 @@ var attributes = {
       </tr><tr style="text-align:center">
         <td>City Secrets: May travel through a city at dbl speed</td>
       </tr><tr style="text-align:center">
-        <td>Tides Of Chaos: May gain Adv on an attack, ability, or saving throw 1/long rest; subsequent spell use may cause a Wild Magic Surge</td>
+        <td>Tides Of Chaos: May gain Adv on an attack, ability, or saving throw 1/long rest or Wild Magic Surge</td>
       </tr></table>
 </td>
     </tr></table>
@@ -481,9 +483,9 @@ var attributes = {
     </tr><tr style="text-align:center">
       <td>Druidic: Speaks a secret language known only by druids</td>
     </tr><tr style="text-align:center">
-      <td>Favored Enemy: Adv on Survival to track and Adv on Intelligence to recall info about and learn the language of 1 chosen creature types</td>
+      <td>Favored Enemy: Adv on Survival to track and on Intelligence to recall info about, and learn the language of, 1 chosen creature types</td>
     </tr><tr style="text-align:center">
-      <td>Natural Explorer: Gains dbl Intelligence and Wisdom Proficiency, moves normally through difficult terrain, never becomes lost, remains always alert, may stealth alone at full speed, locates dbl food, and gains extra info from tracking in 1 chosen terrain types</td>
+      <td>Natural Explorer: Dbl Proficiency on Intelligence and Wisdom, moves normally through difficult terrain, never becomes lost, remains always alert, may stealth alone at full speed, locates dbl food, and gains extra info from tracking in 1 chosen terrain types</td>
     </tr></table>
 </td>
   </tr></table>
@@ -535,9 +537,9 @@ var attributes = {
       </tr><tr style="text-align:center">
         <td>Combat Wild Shape: May use Wild Shape as a bonus action</td>
       </tr><tr style="text-align:center">
-        <td>Divine Smite: May spend a spell slot to gain +(spell level + 1)d8 HP (+1d8 vs. undead and fiends) radiant melee weapon damage</td>
+        <td>Divine Smite: After a successful melee attack, may spend a spell slot to gain +(slot level + 1)d8 HP (maximum 5d8) radiant damage (+1d8 HP vs. undead and fiends)</td>
       </tr><tr style="text-align:center">
-        <td>Fighting Style (Great Weapon Fighting): May re-roll 1s and 2s on two-handed weapon damage</td>
+        <td>Fighting Style (Great Weapon Fighting): May reroll 1s and 2s on two-handed weapon damage</td>
       </tr><tr style="text-align:center">
         <td>Guided Strike: May use Channel Divinity to give self +10 attack</td>
       </tr><tr style="text-align:center">
@@ -1401,7 +1403,7 @@ var attributes = {
     </tr><tr style="text-align:left">
       <td>Gust Of Wind (W2 Evoc): 60'x10' wind pushes 15' (Strength neg), inflicts half movement for conc or 1 min</td>
     </tr><tr style="text-align:left">
-      <td>Hail Of Thorns (R1 Conj): 5' radius inflicts 1d10 HP piercing (Dexterity half) following a successful ranged attack [+Level inflicts +1d10 HP (6d10 max)]</td>
+      <td>Hail Of Thorns (R1 Conj): 5' radius inflicts 1d10 HP piercing (Dexterity half) following a successful ranged attack [+Level inflicts +1d10 HP (6d10 maximum)]</td>
     </tr><tr style="text-align:left">
       <td>Hallow (C5 Evoc): 60' radius becomes warded against outsiders and evokes boon effect</td>
     </tr><tr style="text-align:left">
@@ -2283,7 +2285,7 @@ var attributes = {
     </tr><tr style="text-align:left">
       <td>Wall Of Force (W5 Evoc): R120' Creates 10 10'x10' panels that are impassable by objects for conc or 10 min</td>
     </tr><tr style="text-align:left">
-      <td>Wall Of Ice (W6 Evoc): R120' Creates 10 10'x10' panels that inflict 10d6 HP cold (Dexterity half) initially plus, if broken, 5d6 HP cold to passers (Constitution half) for conc or 10 min [+Level inflicts +2d6 HP initally, +1d6 HP to passers]</td>
+      <td>Wall Of Ice (W6 Evoc): R120' Creates 10 10'x10' panels that inflict 10d6 HP cold (Dexterity half) initially plus, if broken, 5d6 HP cold to passers (Constitution half) for conc or 10 min [+Level inflicts +2d6 HP initially, +1d6 HP to passers]</td>
     </tr><tr style="text-align:left">
       <td>Wall Of Stone (D5 Evoc): R120' Creates 10 10'x10' panels for conc or 10 min</td>
     </tr><tr style="text-align:left">
@@ -2353,9 +2355,9 @@ var attributes = {
     </tr><tr style="text-align:center">
       <td>Abjure Enemy: R60' May use Channel Divinity to halt target (DC 12 Wisdom half speed) for 1 min</td>
     </tr><tr style="text-align:center">
-      <td>Arcane Recovery: Taking a short rest restores 1 spell slot levels 1/dy</td>
+      <td>Arcane Recovery: May recover 1 spell slot levels (level 6 maximum) during a short rest 1/long rest</td>
     </tr><tr style="text-align:center">
-      <td>Armor Of Shadows: May cast <i>Mage Armor</i> on self at will</td>
+      <td>Armor Of Shadows: May cast self <i>Mage Armor</i> at will</td>
     </tr><tr style="text-align:center">
       <td>Combat Wild Shape: May use a spell slot to regain (slot level)d8 HP during Wild Shape</td>
     </tr><tr style="text-align:center">
@@ -2363,13 +2365,13 @@ var attributes = {
     </tr><tr style="text-align:center">
       <td>Elemental Adept (Thunder): Thunder spells ignore resistance and treat 1s as 2s on damage dice</td>
     </tr><tr style="text-align:center">
-      <td>Fey Presence: R10' May make all creatures choice of charmed or frightened (DC 12 Wisdom neg) for 1 rd 1/short rest</td>
+      <td>Fey Presence: R10' May inflict choice of charmed or frightened (DC 12 Wisdom neg) for 1 rd 1/short rest</td>
     </tr><tr style="text-align:center">
       <td>Font Of Magic: May use 2 Sorcery Points/long rest/May convert Sorcery Points to and from spell slots</td>
     </tr><tr style="text-align:center">
       <td>Illusion Savant: May copy illusion spells into spellbook for half cost</td>
     </tr><tr style="text-align:center">
-      <td>Improved Minor Illusion: Knows <i>Minor Illusion</i> cantrip; effects include both sound and image</td>
+      <td>Improved Minor Illusion: Knows <i>Minor Illusion</i> cantrip; effects include both a sound and an image</td>
     </tr><tr style="text-align:center">
       <td>Lay On Hands: May heal 20 HP/long rest; may use 5 HP worth to cure disease or poison</td>
     </tr><tr style="text-align:center">
@@ -2379,7 +2381,7 @@ var attributes = {
     </tr><tr style="text-align:center">
       <td>Thief Of Five Fates: May use a warlock spell slot to cast <i>Bane</i> 1/long rest</td>
     </tr><tr style="text-align:center">
-      <td>Wild Magic Surge: 5% chance of random magic effect</td>
+      <td>Wild Magic Surge: Spellcasting carries a 5% chance of unleashing a random magic effect</td>
     </tr><tr style="text-align:center">
       <td>Wild Shape: May transform into a CR 1 (land only) creature for 1 hr 2/short rest</td>
     </tr></table>
