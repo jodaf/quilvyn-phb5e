@@ -1186,7 +1186,7 @@ PHB5E.FEATURES_ADDED = {
   'Natural Illusionist':
     'Section=magic Note="Knows <i>Minor Illusion</i> cantrip"',
   'Speak With Small Beasts':
-    'Section=feature Note="May communicate with small animals"',
+    'Section=feature Note="May communicate simple ideas with small animals"',
   'Stout Halfling Ability Adjustment':
     'Section=ability Note="+2 Dexterity/+1 Constitution"',
   'Stout Resilience':
@@ -1226,7 +1226,7 @@ PHB5E.RACES_ADDED = {
   'Stout Halfling':
     'Features=' +
       '"1:Language (Common/Halfling)",' +
-      '1:Brave,"1:Halfling Nimbleness","1:Lucky Halfling",1:Slow,1:Small,' +
+      '1:Brave,"1:Halfling Nimbleness","1:Lucky (Halfling)",1:Slow,1:Small,' +
       '"1:Stout Halfling Ability Adjustment","1:Stout Resilience"',
   'Wood Elf':
     'Features=' +
