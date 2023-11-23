@@ -546,10 +546,10 @@ PHB5E.FEATURES_ADDED = {
     'Note="May spend a Superiority Die and forego an attack to use a bonus action directing an ally attack; ally uses Reaction to attack and adds Superiority Die to damage"',
   "Nature's Wrath":
     'Section=magic ' +
-    'Note="R10\' May use Channel Divinity to create spectral vines that restrain target (DC %V Dexterity or Strength neg)"',
+    'Note="R10\' May use Channel Divinity to create spectral vines that restrain target (DC %{spellDifficultyClass.P} Dexterity or Strength neg)"',
   "Ranger's Companion":
     'Section=feature ' +
-    'Note="Companion beast up to CR %V gains +%{proficiencyBonus} AC, attack, damage, skills, and saving throws and obeys self commands"',
+    'Note="Companion beast up to CR 1/4 gains +%{proficiencyBonus} AC, attack, damage, skills, and saving throws and obeys self commands"',
   'Student Of War':
     'Section=feature Note="Tool Proficiency (Choose 1 from any Artisan)"',
   "Transmuter's Stone":
@@ -563,7 +563,7 @@ PHB5E.FEATURES_ADDED = {
     'Note="May copy abjuration spells into spellbook for half cost"',
   'Abjure Enemy':
     'Section=magic ' +
-    'Note="R60\' May use Channel Divinity to halt target (DC %V Wisdom half speed) for 1 min"',
+    'Note="R60\' May use Channel Divinity to halt target (DC %{spellDifficultyClass.P} Wisdom half speed) for 1 min"',
   'Acolyte Of Nature':
     'Section=magic,skill ' +
     'Note=' +
@@ -571,11 +571,11 @@ PHB5E.FEATURES_ADDED = {
       '"Skill Proficiency (Choose 1 from Animal Handling, Nature, Survival)"',
   'Alter Memories':
     'Section=magic ' +
-    'Note="Chosen target becomes unaware of self charm; may also inflict forgetfulness of the preceding %V hrs (DC %1 Intelligence neg)"',
+    'Note="Chosen target becomes unaware of self charm; may also inflict forgetfulness of the preceding %{charismaModifier+1>?1} hrs (DC %{spellDifficultyClass.W} Intelligence neg)"',
   'Arcane Charge':'Section=magic Note="May teleport 30\' during Action Surge"',
   'Arcane Ward':
     'Section=magic ' +
-    'Note="Abjuration casting creates a ward around self that can aborb %V HP (long rest ends); if taken to 0 HP, abjuration casting restores 2x spell level HP to ward"',
+    'Note="Abjuration casting creates a ward around self that can aborb %{levels.Wizard*2+intelligenceModifier} HP (long rest ends); if taken to 0 HP, abjuration casting restores 2x spell level HP to ward"',
   'Aspect Of The Beast (Bear)':
     'Section=ability,ability ' +
     'Note=' +
@@ -593,7 +593,8 @@ PHB5E.FEATURES_ADDED = {
     'Section=combat ' +
     'Note="Adv on attack before foe\'s first turn/Successful surprise attack automatically crits"',
   'Aura Of Warding':
-    'Section=save Note="R%V\' Self and allies have resistance to spell damage"',
+    'Section=save ' +
+    'Note="R%{levels.Paladin<18?10:30}\' Self and allies have resistance to spell damage"',
   'Avatar Of Battle':
     'Section=save ' +
     'Note="Has resistance to nonmagical bludgeoning, piercing and slashing damage"',
@@ -601,13 +602,13 @@ PHB5E.FEATURES_ADDED = {
     'Section=ability,combat ' +
     'Note=' +
       '"60\' fly speed for 1 hr/long rest",' +
-      '"R30\' Aura frightens foes (DC %V Wisdom neg; damage ends), giving Adv on ally attacks, for 1 hr/long rest"',
+      '"R30\' Aura frightens foes (DC %{spellDifficultyClass.P} Wisdom neg; damage ends), giving Adv on ally attacks, for 1 hr/long rest"',
   'Awakened Mind':'Section=feature Note="R30\' May communicate telepathically"',
   'Battle Magic':
     'Section=combat Note="May make a bonus attack after casting a spell"',
   'Beguiling Defenses':
     'Section=save ' +
-    'Note="Immune to charm; may reflect onto caster (DC %V Wisdom neg) for 1 min (damage ends)"',
+    'Note="Immune to charm; may reflect onto caster (DC %{spellDifficultyClass.K} Wisdom neg) for 1 min (damage ends)"',
   'Bend Luck':
     'Section=magic ' +
     'Note="May spend 2 Sorcery Points to add or subtract 1d4 from a target attack, ability, or save"',
@@ -662,7 +663,7 @@ PHB5E.FEATURES_ADDED = {
       '"May use a spell slot to regain (slot level)d8 HP during Wild Shape"',
   'Command Undead':
     'Section=magic ' +
-    'Note="R60\' May control undead target (DC %V Charisma neg; Adv if target Intelligence is 8 or higher)"',
+    'Note="R60\' May control undead target (DC %{spellDifficultyClass.W} Charisma neg; Adv if target Intelligence is 8 or higher)"',
   'Conjuration Savant':
     'Section=magic ' +
     'Note="May copy conjuration spells into spellbook for half cost"',
@@ -679,15 +680,16 @@ PHB5E.FEATURES_ADDED = {
     'Note="R30\' May use Reaction to grant resistance to immediate acid, cold, fire, lightning, or thunder damage"',
   'Dark Delirium':
     'Section=magic ' +
-    'Note="R60\' Target charmed or frightened and unaware of surroundings (DC %V Wisdom neg) for conc or 1 min 1/short rest"',
+    'Note="R60\' Target charmed or frightened and unaware of surroundings (DC %{spellDifficultyClass.K} Wisdom neg) for conc or 1 min 1/short rest"',
   'Death Strike':
-    'Section=combat Note="Inflicts dbl damage on a successful surprise attack (DC %V Constitution neg)"',
+    'Section=combat ' +
+    'Note="Inflicts dbl damage on a successful surprise attack (DC %{8+dexterityModifier+proficiencyBonus} Constitution neg)"',
   'Destructive Wrath':
     'Section=magic ' +
     'Note="May use Channel Divinity to maximize lightning or thunder damage"',
   'Disarming Attack':
     'Section=combat ' +
-    'Note="May add a Superiority Die to damage and cause foe to drop an item (DC %V Strength neg)"',
+    'Note="May add a Superiority Die to damage and cause foe to drop an item (DC %{maneuverSaveDC} Strength neg)"',
   'Disciple Of The Elements':
     'Section=magic Note="May select %V elemental disciplines"',
   'Distracting Strike':
@@ -733,19 +735,19 @@ PHB5E.FEATURES_ADDED = {
     'Note="May spend a Superiority Die and use a bonus action to gain Adv on next attack on an adjacent foe and add Superiority Die to damage"',
   'Fey Presence':
     'Section=magic ' +
-    'Note="R10\' May inflict choice of charmed or frightened (DC %V Wisdom neg) for 1 rd 1/short rest"',
+    'Note="R10\' May inflict choice of charmed or frightened (DC %{spellDifficultyClass.K} Wisdom neg) for 1 rd 1/short rest"',
   'Fist Of Four Thunders':
     'Section=magic Note="May spend 2 Ki Points to cast <i>Thunderwave</i>"',
   'Fist Of Unbroken Air':
     'Section=magic ' +
-    'Note="R30\' May spend 2+ Ki Points to inflict 3d10+ HP, push 20\', and knock prone (DC %V Strength half HP only)"',
+    'Note="R30\' May spend 2+ Ki Points to inflict 3d10+ HP, push 20\', and knock prone (DC %{kiSaveDC} Strength half HP only)"',
   'Flames Of The Phoenix':
     'Section=magic Note="May spend 4 Ki Points to cast <i>Fireball</i>"',
   'Focused Conjuration':
     'Section=magic Note="Damage cannot break conjuration concentration"',
   'Goading Attack':
     'Section=combat ' +
-    'Note="May add a Superiority Die to damage and inflict Disadv on foe attacks on others (DC %V Wisdom neg) for 1 rd"',
+    'Note="May add a Superiority Die to damage and inflict Disadv on foe attacks on others (DC %{maneuverSaveDC} Wisdom neg) for 1 rd"',
   'Gong Of The Summit':
     'Section=magic Note="May spend 3 Ki Points to cast <i>Shatter</i>"',
   'Greater Portent':'Section=magic Note="May use Portent 3/long rest"',
@@ -756,7 +758,7 @@ PHB5E.FEATURES_ADDED = {
     'Section=combat Note="May use Channel Divinity to give self +10 attack"',
   'Hypnotic Gaze':
     'Section=magic ' +
-    'Note="May daze adjacent target (DC %V Wisdom neg) 1/long rest"',
+    'Note="May daze adjacent target (DC %{spellDifficultyClass.W} Wisdom neg) 1/long rest"',
   'Illusion Savant':
     'Section=magic ' +
     'Note="May copy illusion spells into spellbook for half cost"',
@@ -784,13 +786,13 @@ PHB5E.FEATURES_ADDED = {
     'Note="May use 1 wk process to create and adopt a different identity"',
   'Instinctive Charm':
     'Section=magic ' +
-    'Note="R30\' May redirect an attack on self to another (DC %V Wisdom neg until long rest)"',
+    'Note="R30\' May redirect an attack on self to another (DC %{spellDifficultyClass.W} Wisdom neg until long rest)"',
   'Inured To Undeath':
     'Section=save ' +
     'Note="Has resistance to necrotic damage and immunity to maximum HP reduction"',
   'Invoke Duplicity':
     'Section=magic ' +
-    'Note="R30\' May use Channel Divinity to create %V, gaining Adv on attacks when w/in 5\' and allowing remote spellcasting for conc or 1 min"',
+    'Note="R30\' May use Channel Divinity to create %{magicNotes.improvedDuplicity?\'4 illusionary duplicates\':\'1 illusionary duplicate\'}, gaining Adv on attacks when w/in 5\' and allowing remote spellcasting for conc or 1 min"',
   'Know Your Enemy':
     'Section=combat Note="Knows how foe compares to self after 1 min study"',
   'Knowledge Of The Ages':
@@ -817,7 +819,7 @@ PHB5E.FEATURES_ADDED = {
     'Note="May destroy a transmuter\'s stone to transmute 5\' cu, remove curses, diseases, and poisons, cast <i>Raise Dead</i>, or restore youth"',
   'Menacing Attack':
     'Section=combat ' +
-    'Note="May spend a Superiority Die inflict frightened (DC %V Wisdom neg) for 1 rd and add Superiority Die to damage"',
+    'Note="May spend a Superiority Die inflict frightened (DC %{maneuverSaveDC} Wisdom neg) for 1 rd and add Superiority Die to damage"',
   'Minor Alchemy':
     'Section=magic ' +
     'Note="May change substance of 1\' cu per 10 min effort for conc or 1 hr"',
@@ -837,11 +839,12 @@ PHB5E.FEATURES_ADDED = {
     'Note="May use Reaction to attack an adjacent foe damaged by an ally"',
   'Parry':
     'Section=combat ' +
-    'Note="May use a Superiority Die and Reaction to subtract Superiority Die + %V from self damage by a foe"',
+    'Note="May use a Superiority Die and Reaction to subtract Superiority Die + %{dexterityModifier} from self damage by a foe"',
   'Portent':
     'Section=magic ' +
-    'Note="May replace self or target attack, ability, or saving throw %V/long rest"',
-  'Potent Spellcasting':'Section=magic Note="+%1 Cleric cantrip damage"',
+    'Note="May replace self or target attack, ability, or saving throw %{magicNotes.greaterPortent?3:2}/long rest"',
+  'Potent Spellcasting':
+    'Section=magic Note="+%{wisdomModifier} Cleric cantrip damage"',
   'Precision Attack':
     'Section=combat Note="May add a Superiority Die to attack"',
   'Primal Strike':'Section=combat Note="Wild Shape attacks count as magical"',
@@ -849,12 +852,12 @@ PHB5E.FEATURES_ADDED = {
     'Section=magic Note="R30\' May use Arcane Ward to absorb damage to others"',
   'Pushing Attack':
     'Section=combat ' +
-    'Note="May spend a Superiority Die to push a foe 15\' (DC %V Strength neg) and add Superiority Die to damage"',
+    'Note="May spend a Superiority Die to push a foe 15\' (DC %{maneuverSaveDC} Strength neg) and add Superiority Die to damage"',
   'Radiance Of The Dawn':
     'Section=magic ' +
-    'Note="R30\' May use Channel Divinity to dispel magical darkness; foes suffer 2d10+%V HP radiant (Constitution half)"',
+    'Note="R30\' May use Channel Divinity to dispel magical darkness; foes suffer 2d10+%{levels.Cleric} HP radiant (Constitution half)"',
   'Rally':
-    'Section=combat Note="Chosen ally gains Superiority Die + %V temporary HP"',
+    'Section=combat Note="Chosen ally gains Superiority Die + %{charismaModifier} temporary HP"',
   'Read Thoughts':
     'Section=magic ' +
     'Note="R60\' May use Channel Divinity to read target thoughts (Wisdom neg) for 1 min and cast <i>Suggestion</i> (no save)"',
@@ -896,7 +899,7 @@ PHB5E.FEATURES_ADDED = {
     'Note="Adv on saves vs. spells/Has resistance to spell damage"',
   'Spell Thief':
     'Section=magic ' +
-    'Note="May negate foe spell on self and cast same w/in 8 hours (DC %V neg) 1/long rest"',
+    'Note="May negate foe spell on self and cast same w/in 8 hours (DC %{8+intelligenceModifier+proficiencyBonus} neg) 1/long rest"',
   'Spirit Seeker':
     'Section=magic ' +
     'Note="May cast ritual <i>Beast Sense</i> and <i>Speak With Animals</i>"',
@@ -948,9 +951,9 @@ PHB5E.FEATURES_ADDED = {
     'Note="After a successful attack, may spend a Superiority Die to knock foe prone (DC %V Strength neg) and add Superiority Die to damage"',
   'Turn The Faithless':
     'Section=magic ' +
-    'Note="R30\' May use Channel Divinity to make fiends and fey flee (DC %V Wisdom neg) for 1 min"',
+    'Note="R30\' May use Channel Divinity to make fiends and fey flee (DC %{spellDifficultyClass.P} Wisdom neg) for 1 min"',
   'Undead Thralls':
-    'Section=magic Note="Knows <i>Animate Dead</i>; casting animates an additional corpse and gives corpses +%V HP and +%1 damage"',
+    'Section=magic Note="Knows <i>Animate Dead</i>; casting animates an additional corpse and gives corpses +%{levels.Wizard} HP and +%{proficiencyBonus} damage"',
   'Undying Sentinel':
     'Section=combat,feature,save ' +
     'Note=' +
@@ -966,14 +969,18 @@ PHB5E.FEATURES_ADDED = {
   'Vow Of Enmity':
     'Section=combat ' +
     'Note="R10\' May use Channel Divinity to give self Adv on attacks against target for 1 min"',
-  'War Magic':'Section=combat Note="May make a bonus attack after casting %V"',
-  'War Priest':'Section=combat Note="May make a bonus attack %V/long rest"',
+  'War Magic':
+    'Section=combat ' +
+    'Note="May make a bonus attack after casting %{combatNotes.improvedWarMagic?\'any spell\':\'a cantrip\'}"',
+  'War Priest':
+    'Section=combat ' +
+    'Note="May make a bonus attack %{wisdomModifier>?1}/long rest"',
   'Warding Flare':
     'Section=magic ' +
-    'Note="R30\' May use Reaction to inflict Disadv on a foe attack %V/long rest"',
+    'Note="R30\' May use Reaction to inflict Disadv on a foe attack %{wisdomModifier>?1}/long rest"',
   'Water Whip':
     'Section=magic ' +
-    'Note="R30\' May spend 2+ Ki Points to inflict 3d10+ HP bludgeoning and pull 25\' or knock prone (DC %V Strength half HP only)"',
+    'Note="R30\' May spend 2+ Ki Points to inflict 3d10+ HP bludgeoning and pull 25\' or knock prone (DC %{kiSaveDC} Strength half HP only)"',
   'Wave Of Rolling Earth':
     'Section=magic Note="May spend 6 Ki Points to cast <i>Wall Of Stone</i>"',
   'Weapon Bond':
@@ -983,7 +990,7 @@ PHB5E.FEATURES_ADDED = {
     'Note="Spellcasting carries a 5% chance of unleashing a random magic effect"',
   'Wrath Of The Storm':
     'Section=combat ' +
-    'Note="May use Reaction to inflict 2d8 HP lightning or thunder (Dexterity half) on successful attacker %V/long rest"',
+    'Note="May use Reaction to inflict 2d8 HP lightning or thunder (Dexterity half) on successful attacker %{wisdomModifier>?1}/long rest"',
   // Feats
   'Actor':
     'Section=ability,skill ' +
@@ -1008,7 +1015,7 @@ PHB5E.FEATURES_ADDED = {
     'Note="May make multiple attacks w/a proficient crossbow/Suffers no Disadv on a close shot/May make a bonus hand crossbow attack after a one-handed attack"',
   'Defensive Duelist':
     'Section=combat ' +
-    'Note="May use Reaction to gain +%V AC when wielding a proficient finesse weapon"',
+    'Note="May use Reaction to gain +%{proficiencyBonus} AC when wielding a proficient finesse weapon"',
   'Dual Wielder':
     'Section=combat ' +
     'Note="+1 AC w/two weapons/May use two-weapon fighting w/any one-handed weapons/May draw or stow two weapons at once"',
@@ -1054,7 +1061,7 @@ PHB5E.FEATURES_ADDED = {
       '"+1 Strength",' +
       '"In heavy armor, suffers -3 HP damage from nonmagical bludgeoning, piercing, and slashing weapons"',
   'Inspiring Leader':
-    'Section=feature Note="R30\' 10-min speech gives 6 allies %V temporary HP 1/short rest/ally"',
+    'Section=feature Note="R30\' 10-min speech gives 6 allies %{level+charismaModifier} temporary HP 1/short rest/ally"',
   'Keen Mind':
     'Section=ability,feature ' +
     'Note=' +
@@ -1069,7 +1076,7 @@ PHB5E.FEATURES_ADDED = {
     'Section=ability,feature,skill ' +
     'Note=' +
       '"+1 Intelligence",' +
-      '"May create ciphers (DC %V Intelligence decodes)",' +
+      '"May create ciphers (DC %{intelligence+proficiencyBonus} Intelligence decodes)",' +
       '"Language (Choose 3 from any)"',
   'Lucky':
     'Section=feature ' +
@@ -1160,7 +1167,7 @@ PHB5E.FEATURES_ADDED = {
       '"Ability Boost (Choose 1 from Constitution, Strength)",' +
       '"Weapon Proficiency (Improvised)/Unarmed attacks inflict 1d4 HP",' +
       '"May use a bonus action to grapple after a successful unarmed or improvised attack"',
-  'Tough':'Section=combat Note="+%V Hit Points"',
+  'Tough':'Section=combat Note="+%{level*2} Hit Points"',
   'War Caster':
     'Section=magic ' +
     'Note="Adv on concentration to maintain a spell/May cast when holding a shield and/or weapon/May use Reaction to cast as an OA"',
@@ -1172,7 +1179,7 @@ PHB5E.FEATURES_ADDED = {
   // Races
   'Dark Elf Ability Adjustment':
     'Section=ability Note="+2 Dexterity/+1 Charisma"',
-  'Drow Magic':'Section=magic Note="Knows <i>Dancing Lights</i> cantrip%1"',
+  'Drow Magic':'Section=magic Note="Knows <i>Dancing Lights</i> cantrip%{level<3?\'\':level<5?\', may cast <i>Faerie Fire</i> 1/long rest\':\', may cast <i>Faerie Fire</i> and <i>Darkness</i> 1/long rest\'}"',
   'Drow Weapon Training':
     'Section=combat ' +
     'Note="Weapon Proficiency (Hand Crossbow/Rapier/Shortsword)"',
@@ -1649,16 +1656,7 @@ PHB5E.classRulesExtra = function(rules, name) {
       'features.Knowledge Domain', '=', '1',
       'features.Light Domain', '=', '1'
     );
-    rules.defineRule('magicNotes.potentSpellcasting.1',
-      'features.Potent Spellcasting', '?', null,
-      'wisdomModifier', '=', null
-    );
-    rules.defineRule('magicNotes.radianceOfTheDawn', classLevel, '=', null);
-    rules.defineRule
-      ('magicNotes.wardingFlare', 'wisdomModifier', '=', 'Math.max(source, 1)');
-    rules.defineRule
-      ('combatNotes.divineStrike', classLevel, '=', 'source<14 ? 1 : 2');
-    rules.defineRule('combatNotes.divineStrike.1',
+    rules.defineRule('divineStrikeDamageType',
       'features.Divine Strike', '?', null,
       'features.Nature Domain', '=', '"cold, fire, or lightning"',
       'features.Tempest Domain', '=', '"thunder"',
@@ -1667,9 +1665,6 @@ PHB5E.classRulesExtra = function(rules, name) {
     );
     rules.defineRule('spellSlots.D0', 'magicNotes.acolyteOfNature', '+=', '1');
     rules.defineRule('spellCasterLevel.D', 'casterLevels.Nature', '=', null);
-    rules.defineRule('combatNotes.wrathOfTheStorm',
-      'wisdomModifier', '=', 'Math.max(source, 1)'
-    );
     // Have to hard-code these proficiencies, since featureRules only handles
     // notes w/a single type of granted proficiency
     rules.defineRule('armorProficiency.Heavy',
@@ -1678,12 +1673,6 @@ PHB5E.classRulesExtra = function(rules, name) {
     rules.defineRule('weaponProficiency.Martial',
       'combatNotes.bonusProficiencies(TempestDomain)', '=', '1'
     );
-    rules.defineRule('magicNotes.invokeDuplicity',
-      classLevel, '=', '"1 illusionary duplicate"',
-      'magicNotes.improvedDuplicity', '=', '"4 illusionary duplicates"'
-    );
-    rules.defineRule
-      ('combatNotes.warPriest', 'wisdomModifier', '=', 'Math.max(source, 1)');
     // Have to hard-code these proficiencies, since featureRules only handles
     // notes w/a single type of granted proficiency
     rules.defineRule
@@ -1746,7 +1735,7 @@ PHB5E.classRulesExtra = function(rules, name) {
   } else if(name == 'Druid') {
 
     rules.defineRule
-      ('magicNotes.wildShape.1', 'magicNotes.circleForms', '=', null);
+      ('magicNotes.wildShape', 'magicNotes.circleForms', '=', null);
     rules.defineRule('magicNotes.circleForms',
       classLevel, '=', 'source < 6 ? 1 : Math.floor(source / 3)'
     );
@@ -1787,23 +1776,14 @@ PHB5E.classRulesExtra = function(rules, name) {
       'features.Combat Superiority', '?', null,
       'battleMasterLevel', '=', 'source<7 ? 3 : source<10 ? 5 : source<15 ? 7 : 9'
     );
-    rules.defineRule
-      ('combatNotes.disarmingAttack', 'maneuverSaveDC', '=', null);
-    rules.defineRule('combatNotes.goadingAttack', 'maneuverSaveDC', '=', null);
     rules.defineRule('combatNotes.improvedCombatSuperiority',
       classLevel, '=', 'source<18 ? 10 : 12'
     );
-    rules.defineRule('combatNotes.menacingAttack', 'maneuverSaveDC', '=', null);
-    rules.defineRule('combatNotes.parry', 'dexterityModifier', '=', null);
-    rules.defineRule('combatNotes.pushingAttack', 'maneuverSaveDC', '=', null);
-    rules.defineRule('combatNotes.rally', 'charismaModifier', '=', null);
     rules.defineRule('combatNotes.tripAttack', 'maneuverSaveDC', '=', null);
+    rules.defineRule // Italics noop
+      ('combatNotes.warMagic', 'combatNotes.improvedWarMagic', '+', 'null');
     rules.defineRule('selectableFeatureCount.Fighter (Maneuver)',
       'combatNotes.combatSuperiority.2', '=', null
-    );
-    rules.defineRule('combatNotes.warMagic',
-      classLevel, '=', '"cantrip"',
-      'combatNotes.improvedWarMagic', '=', '"any spell"'
     );
 
     let slots = [
@@ -1830,8 +1810,6 @@ PHB5E.classRulesExtra = function(rules, name) {
     rules.defineRule('selectableFeatureCount.Monk (Elemental Discipline)',
       'magicNotes.discipleOfTheElements', '=', null
     );
-    rules.defineRule('magicNotes.fistOfUnbrokenAir', 'kiSaveDC', '=', null);
-    rules.defineRule('magicNotes.waterWhip', 'kiSaveDC', '=', null);
 
     SRD5E.featureSpells(
       rules, 'Shadow Arts', 'M', null,
@@ -1861,17 +1839,6 @@ PHB5E.classRulesExtra = function(rules, name) {
 
   } else if(name == 'Paladin') {
 
-    rules.defineRule
-      ('combatNotes.avengingAngel', 'spellDifficultyClass.P', '=', null);
-    rules.defineRule
-      ('magicNotes.abjureEnemy', 'spellDifficultyClass.P', '=', null);
-    rules.defineRule
-      ("magicNotes.nature'sWrath", 'spellDifficultyClass.P', '=', null);
-    rules.defineRule
-      ('magicNotes.turnTheFaithless', 'spellDifficultyClass.P', '=', null);
-    rules.defineRule
-      ('saveNotes.auraOfWarding', classLevel, '=', 'source<18 ? 10 : 30');
-
     SRD5E.featureSpells(
       rules, 'Oath Of The Ancients', 'P', classLevel, [
       '3:Ensnaring Strike', '3:Speak With Animals',
@@ -1889,21 +1856,7 @@ PHB5E.classRulesExtra = function(rules, name) {
       '17:Hold Monster', '17:Scrying'
     ]);
 
-  } else if(name == 'Ranger') {
-
-    rules.defineRule
-      ("featureNotes.ranger'sCompanion", classLevel, '=', '"1/4"');
-
   } else if(name == 'Rogue') {
-
-    rules.defineRule('combatNotes.deathStrike',
-      'dexterityModifier', '=', '8 + source',
-      'proficiencyBonus', '+', null
-    );
-    rules.defineRule('magicNotes.spellThief',
-      'intelligenceModifier', '=', '8 + source',
-      'proficiencyBonus', '+', null
-    );
 
     SRD5E.featureSpells
       (rules, 'Mage Hand Legerdemain', 'W', null, ['Mage Hand']);
@@ -1922,44 +1875,13 @@ PHB5E.classRulesExtra = function(rules, name) {
     rules.defineRule
       ('casterLevels.W', 'casterLevels.Arcane Trickster', '^=', null);
 
-  } else if(name == 'Warlock') {
-
-    rules.defineRule
-      ('magicNotes.darkDelirium', 'spellDifficultyClass.K', '=', null);
-    rules.defineRule
-      ('magicNotes.feyPresence', 'spellDifficultyClass.K', '=', null);
-    rules.defineRule
-      ('saveNotes.beguilingDefenses', 'spellDifficultyClass.K', '=', null);
-
   } else if(name == 'Wizard') {
 
-    rules.defineRule('magicNotes.alterMemories',
-      'charismaModifier', '=', 'Math.max(source + 1, 1)'
+    rules.defineRule // Italics noop
+      ('magicNotes.portent', 'magicNotes.greaterPortent', '+', 'null');
+    rules.defineRule('magicNotes.invokeDuplicity', // Italics noop
+      'magicNotes.improvedDuplicity', '+', 'null'
     );
-    rules.defineRule('magicNotes.alterMemories.1',
-      'features.Alter Memories', '?', null,
-      'spellDifficultyClass.W', '=', null
-    );
-    rules.defineRule('magicNotes.arcaneWard',
-      classLevel, '=', 'source * 2',
-      'intelligenceModifier', '+', null
-    );
-    rules.defineRule
-      ('magicNotes.commandUndead', 'spellDifficultyClass.W', '=', null);
-    rules.defineRule
-      ('magicNotes.hypnoticGaze', 'spellDifficultyClass.W', '=', null);
-    rules.defineRule
-      ('magicNotes.instinctiveCharm', 'spellDifficultyClass.W', '=', null);
-    rules.defineRule('magicNotes.portent',
-      classLevel, '=', '2',
-      'magicNotes.greaterPortent', '^', '3'
-    );
-    rules.defineRule('magicNotes.undeadThralls', classLevel, '=', null);
-    rules.defineRule('magicNotes.undeadThralls.1',
-      'features.Undead Thralls', '?', null,
-      'proficiencyBonus', '=', null
-    );
-
     SRD5E.featureSpells
       (rules, 'Improved Minor Illusion', 'W', null, ['Minor Illusion']);
     SRD5E.featureSpells(rules, 'Undead Thralls', 'W', null, ['Animate Dead']);
@@ -1978,22 +1900,7 @@ PHB5E.featRulesExtra = function(rules, name) {
 
   let matchInfo;
 
-  if(name == 'Alert') {
-    rules.defineRule('initiative', 'combatNotes.alert', '+', '5');
-  } else if(name == 'Defensive Duelist') {
-    rules.defineRule
-      ('combatNotes.defensiveDuelist', 'proficiencyBonus', '=', null);
-  } else if(name == 'Inspiring Leader') {
-    rules.defineRule('featureNotes.inspiringLeader',
-      'level', '=', null,
-      'charismaModifier', '+', null
-    );
-  } else if(name == 'Linguist') {
-    rules.defineRule('featureNotes.linguist',
-      'intelligence', '=', null,
-      'proficiencyBonus', '+', null
-    );
-  } else if((matchInfo = name.match(/Magic\sInitiate\s.(.*)./)) != null) {
+  if((matchInfo = name.match(/Magic\sInitiate\s.(.*)./)) != null) {
     let clas = matchInfo[1];
     let spellCode = clas == 'Warlock' ? 'K' : clas.charAt(0);
     rules.defineRule('casterLevels.' + spellCode,
@@ -2037,8 +1944,6 @@ PHB5E.featRulesExtra = function(rules, name) {
   } else if(name == 'Tavern Brawler') {
     rules.defineRule
       ('weapons.Unarmed.2', 'combatNotes.tavernBrawler', '^=', '"1d4"');
-  } else if(name == 'Tough') {
-    rules.defineRule('combatNotes.tough', 'level', '=', '2 * source');
   } else if(name == 'Weapon Master') {
     rules.defineRule
       ('weaponChoiceCount', 'combatNotes.weaponMaster', '+=', '4');
@@ -2052,13 +1957,6 @@ PHB5E.featRulesExtra = function(rules, name) {
  */
 PHB5E.raceRulesExtra = function(rules, name) {
   if(name == 'Dark Elf') {
-    rules.defineRule('magicNotes.drowMagic.1',
-      'race', '?', 'source == "Dark Elf"',
-      'level', '=',
-        'source<3 ? "" : ' +
-        'source<5 ? ", cast <i>Faerie Fire</i> 1/long rest" : ' +
-        '", cast <i>Faerie Fire</i> and <i>Darkness</i> 1/long rest"'
-    );
     SRD5E.featureSpells(
       rules, 'Drow Magic', 'B', 'level',
       ['Dancing Lights',
