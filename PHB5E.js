@@ -624,7 +624,7 @@ PHB5E.FEATURES_ADDED = {
       '"Skill Proficiency (Choose 2 from Arcana, History, Nature, Religion)/Language (Choose 2 from any)",' +
       '"+%{proficiencyBonus} on chosen skills"',
   'Bonus Cantrip (Light Domain)':
-    'Section=magic Note="Knows <i>Light</i> cantrip"',
+    'Section=magic Note="Knows <i>Light</i> cantrip" Spells=Light',
   'Bonus Proficiencies (College Of Valor)':
     'Section=combat ' +
     'Note="Armor Proficiency (Medium/Shield)/Weapon Proficiency (Martial)"',
@@ -637,13 +637,23 @@ PHB5E.FEATURES_ADDED = {
     'Section=combat ' +
     'Note="Armor Proficiency (Heavy)/Weapon Proficiency (Martial)"',
   'Breath Of Winter':
-    'Section=magic Note="May spend 6 Ki Points to cast <i>Cone Of Cold</i>"',
+    'Section=magic ' +
+    'Note="May spend 6 Ki Points to cast <i>Cone Of Cold</i>" ' +
+    'Spells="Cone Of Cold"',
   'Charm Animals And Plants':
     'Section=magic ' +
     'Note="R30\' May use Channel Divinity to charm beasts and plants (Wisdom neg) for 1 min"',
+  'Circle Of The Land (Underdark)':
+    'Spells=' +
+      '"3:Spider Climb",3:Web,' +
+      '"5:Gaseous Form","5:Stinking Cloud",' +
+      '"7:Greater Invisibility","7:Stone Shape",' +
+      '9:Cloudkill,"9:Insect Plague"',
   'Circle Forms':'Section=magic Note="May Wild Shape into a CR %V creature"',
   'Clench Of The North Wind':
-    'Section=magic Note="May spend 3 Ki Points to cast <i>Hold Person</i>"',
+    'Section=magic ' +
+    'Note="May spend 3 Ki Points to cast <i>Hold Person</i>" ' +
+    'Spells="Hold Person"',
   'Cloak Of Shadows (Way Of Shadow)':
     'Section=magic ' +
     'Note="May become invisible in dim and dark areas (attacking or casting ends)"',
@@ -718,7 +728,9 @@ PHB5E.FEATURES_ADDED = {
     'Section=combat ' +
     'Note="May use Reaction to inflict Disadv on attack by foe; miss gives self Adv on next attack for 1 rd 1/short rest"',
   'Eternal Mountain Defense':
-    'Section=magic Note="May spend 5 Ki Points to cast self <i>Stoneskin</i>"',
+    'Section=magic ' +
+    'Note="May spend 5 Ki Points to cast self <i>Stoneskin</i>" ' +
+    'Spells=Stoneskin',
   'Evasive Footwork':
     'Section=combat Note="May add a Superiority Die to AC during a move"',
   'Exceptional Training':
@@ -737,19 +749,25 @@ PHB5E.FEATURES_ADDED = {
     'Section=magic ' +
     'Note="R10\' May inflict choice of charmed or frightened (DC %{spellDifficultyClass.K} Wisdom neg) for 1 rd 1/short rest"',
   'Fist Of Four Thunders':
-    'Section=magic Note="May spend 2 Ki Points to cast <i>Thunderwave</i>"',
+    'Section=magic ' +
+    'Note="May spend 2 Ki Points to cast <i>Thunderwave</i>" ' +
+    'Spells=Thunderwave',
   'Fist Of Unbroken Air':
     'Section=magic ' +
     'Note="R30\' May spend 2+ Ki Points to inflict 3d10+ HP, push 20\', and knock prone (DC %{kiSaveDC} Strength half HP only)"',
   'Flames Of The Phoenix':
-    'Section=magic Note="May spend 4 Ki Points to cast <i>Fireball</i>"',
+    'Section=magic ' +
+    'Note="May spend 4 Ki Points to cast <i>Fireball</i>" ' +
+    'Spells=Fireball',
   'Focused Conjuration':
     'Section=magic Note="Damage cannot break conjuration concentration"',
   'Goading Attack':
     'Section=combat ' +
     'Note="May add a Superiority Die to damage and inflict Disadv on foe attacks on others (DC %{maneuverSaveDC} Wisdom neg) for 1 rd"',
   'Gong Of The Summit':
-    'Section=magic Note="May spend 3 Ki Points to cast <i>Shatter</i>"',
+    'Section=magic ' +
+    'Note="May spend 3 Ki Points to cast <i>Shatter</i>" ' +
+    'Spells=Shatter',
   'Greater Portent':'Section=magic Note="May use Portent 3/long rest"',
   'Grim Harvest':
     'Section=magic ' +
@@ -778,7 +796,8 @@ PHB5E.FEATURES_ADDED = {
     'Section=magic Note="May use Warding Flare to protect an ally"',
   'Improved Minor Illusion':
     'Section=magic ' +
-    'Note="Knows <i>Minor Illusion</i> cantrip; effects include both a sound and an image"',
+    'Note="Knows <i>Minor Illusion</i> cantrip; effects include both a sound and an image" ' +
+    'Spells="Minor Illusion"',
   'Improved War Magic':
     'Section=combat Note="May make a bonus attack after any spell"',
   'Infiltration Expertise':
@@ -795,15 +814,30 @@ PHB5E.FEATURES_ADDED = {
     'Note="R30\' May use Channel Divinity to create %{magicNotes.improvedDuplicity?\'4 illusionary duplicates\':\'1 illusionary duplicate\'}, gaining Adv on attacks when w/in 5\' and allowing remote spellcasting for conc or 1 min"',
   'Know Your Enemy':
     'Section=combat Note="Knows how foe compares to self after 1 min study"',
+  'Knowledge Domain':
+    'Spells=' +
+      '1:Command,1:Identify,' +
+      '3:Augury,3:Suggestion,' +
+      '5:Nondetection,"5:Speak With Dead",' +
+      '"7:Arcane Eye",7:Confusion,' +
+      '"9:Legend Lore",9:Scrying',
   'Knowledge Of The Ages':
     'Section=skill ' +
     'Note="May use Channel Divinity to gain proficiency in chosen skill or tool for 10 min"',
+  'Light Domain':
+    'Spells=' +
+      '"1:Burning Hands","1:Faerie Fire",' +
+      '"3:Flaming Sphere","3:Scorching Ray",' +
+      '5:Daylight,5:Fireball,' +
+      '"7:Guardian Of Faith","7:Wall Of Fire",' +
+      '"9:Flame Strike",9:Scrying',
   'Lunging Attack':
     'Section=combat ' +
     'Note="May spend a Superiority Die to gain +5\' melee range and add Superiority Die to damage"',
   'Mage Hand Legerdemain':
     'Section=magic ' +
-    'Note="May stow and retrieve objects, pick locks, and disarm traps using an invisible <i>Mage Hand</i>"',
+    'Note="May stow and retrieve objects, pick locks, and disarm traps using an invisible <i>Mage Hand</i>" ' +
+    'Spells="Mage Hand"',
   'Magical Ambush':
     'Section=magic ' +
     'Note="Foe suffers Disadv on save vs. self spell cast from hiding"',
@@ -816,7 +850,8 @@ PHB5E.FEATURES_ADDED = {
     'Section=magic Note="May command charmed animals and plants"',
   'Master Transmuter':
     'Section=magic ' +
-    'Note="May destroy a transmuter\'s stone to transmute 5\' cu, remove curses, diseases, and poisons, cast <i>Raise Dead</i>, or restore youth"',
+    'Note="May destroy a transmuter\'s stone to transmute 5\' cu, remove curses, diseases, and poisons, cast <i>Raise Dead</i>, or restore youth" ' +
+    'Spells="Raise Dead"',
   'Menacing Attack':
     'Section=combat ' +
     'Note="May spend a Superiority Die inflict frightened (DC %{maneuverSaveDC} Wisdom neg) for 1 rd and add Superiority Die to damage"',
@@ -827,10 +862,18 @@ PHB5E.FEATURES_ADDED = {
     'Section=magic Note="R10\' May create 3\' cu, 10 lb object for 1 hr"',
   'Mist Stance':
     'Section=magic ' +
-    'Note="May spend 4 Ki Points to cast self <i>Gaseous Form</i>"',
+    'Note="May spend 4 Ki Points to cast self <i>Gaseous Form</i>" ' +
+    'Spells="Gaseous Form"',
   'Misty Escape':
     'Section=magic ' +
     'Note="After taking damage, may use Reaction to teleport 60\' and become invisible for 1 rd (attacking or casting ends) 1/short rest"',
+  'Nature Domain':
+    'Spells=' +
+      '"1:Animal Friendship","1:Speak With Animals",' +
+      '3:Barkskin,"3:Spike Growth",' +
+      '"5:Plant Growth","5:Wind Wall",' +
+      '"7:Dominate Beast","7:Grasping Vine",' +
+      '"9:Insect Plague","9:Tree Stride"',
   'Necromancy Savant':
     'Section=magic ' +
     'Note="May copy necromancy spells into spellbook for half cost"',
@@ -860,23 +903,31 @@ PHB5E.FEATURES_ADDED = {
     'Section=combat Note="Chosen ally gains Superiority Die + %{charismaModifier} temporary HP"',
   'Read Thoughts':
     'Section=magic ' +
-    'Note="R60\' May use Channel Divinity to read target thoughts (Wisdom neg) for 1 min and cast <i>Suggestion</i> (no save)"',
+    'Note="R60\' May use Channel Divinity to read target thoughts (Wisdom neg) for 1 min and cast <i>Suggestion</i> (no save)" ' +
+    'Spells=Suggestion',
   'Relentless':
     'Section=combat Note="Has a minimum of 1 Superiority Die after initiative"',
   'Relentless Avenger':
     'Section=combat Note="May move %{speed//2}\' after a successful OA"',
   'Ride The Wind':
-    'Section=magic Note="May spend 4 Ki Points to cast self <i>Fly</i>"',
+    'Section=magic ' +
+    'Note="May spend 4 Ki Points to cast self <i>Fly</i>" ' +
+    'Spells=Fly',
   'Riposte':
     'Section=combat ' +
     'Note="After a foe miss, may spend a Superiority Die and use Reaction to attack and add Superiority Die to damage"',
   'River Of Hungry Flame':
-    'Section=magic Note="May spend 5 Ki Points to cast <i>Wall Of Fire</i>"',
+    'Section=magic ' +
+    'Note="May spend 5 Ki Points to cast <i>Wall Of Fire</i>" ' +
+    'Spells="Wall Of Fire"',
   'Rush Of The Gale Spirits':
-    'Section=magic Note="May spend 2 Ki Points to cast <i>Gust Of Wind</i>"',
+    'Section=magic ' +
+    'Note="May spend 2 Ki Points to cast <i>Gust Of Wind</i>" ' +
+    'Spells="Gust Of Wind"',
   'Shadow Arts':
     'Section=magic ' +
-    'Note="Knows <i>Minor Illusion</i> cantrip and may spend 2 Ki Points to cast <i>Darkness</i>, <i>Darkvision</i>, <i>Pass Without Trace</i>, or <i>Silence</i>"',
+    'Note="Knows <i>Minor Illusion</i> cantrip and may spend 2 Ki Points to cast <i>Darkness</i>, <i>Darkvision</i>, <i>Pass Without Trace</i>, or <i>Silence</i>" ' +
+    'Spells="Minor Illusion",Darkness,Darkvision,"Pass Without Trace",Silence',
   'Shadow Step':
     'Section=magic ' +
     'Note="May use a bonus action to teleport 60\' between dim or dark areas and gain Adv on first melee attack"',
@@ -885,7 +936,8 @@ PHB5E.FEATURES_ADDED = {
     'Note="R120\' May spend 1 Ki Point to freeze, thaw, and shape 30\' cu water"',
   'Shapechanger':
     'Section=magic ' +
-    'Note="Knows <i>Polymorph</i>; may transform self into a CR 1 creature 1/short rest"',
+    'Note="Knows <i>Polymorph</i>; may transform self into a CR 1 creature 1/short rest" ' +
+    'Spells=Polymorph',
   'Share Spells':
     'Section=magic Note="R30\' May have self spell also affect companion"',
   'Soul Of Vengeance':
@@ -902,9 +954,12 @@ PHB5E.FEATURES_ADDED = {
     'Note="May negate foe spell on self and cast same w/in 8 hours (DC %{8+intelligenceModifier+proficiencyBonus} neg) 1/long rest"',
   'Spirit Seeker':
     'Section=magic ' +
-    'Note="May cast ritual <i>Beast Sense</i> and <i>Speak With Animals</i>"',
+    'Note="May cast ritual <i>Beast Sense</i> and <i>Speak With Animals</i>" ' +
+    'Spells="Beast Sense","Speak With Animals"',
   'Spirit Walker':
-    'Section=magic Note="May cast ritual <i>Commune With Nature</i>"',
+    'Section=magic ' +
+    'Note="May cast ritual <i>Commune With Nature</i>" ' +
+    'Spells="Commune With Nature"',
   'Split Enchantment':
     'Section=magic Note="May add a second target to an enchantment spell"',
   'Stormborn':
@@ -913,14 +968,26 @@ PHB5E.FEATURES_ADDED = {
     'Section=combat ' +
     'Note="After a successful attack, may inflict a Superiority Die HP on another adjacent foe"',
   'Sweeping Cinder Strike':
-    'Section=magic Note="May spend 2 Ki Points to cast <i>Burning Hands</i>"',
+    'Section=magic ' +
+    'Note="May spend 2 Ki Points to cast <i>Burning Hands</i>" ' +
+    'Spells="Burning Hands"',
+  'Tempest Domain':
+    'Spells=' +
+      '"1:Fog Cloud",1:Thunderwave,' +
+      '"3:Gust Of Wind",3:Shatter,' +
+      '"5:Call Lightning","5:Sleet Storm",' +
+      '"7:Control Water","7:Ice Storm",' +
+      '"9:Destructive Wave","9:Insect Plague"',
   'The Third Eye':
     'Section=magic ' +
     'Note="May use an action to gain 60\' darkvision, 60\' ethereal sight, the ability to read any language, or 10\' invisibility sight until next rest, 1 each/short rest"',
   'Thought Shield':
     'Section=save ' +
     'Note="Immune to telepathy/Has resistance to psychic damage, and psychic damage also affects attacker"',
-  'Thousand Forms':'Section=magic Note="May cast <i>Alter Self</i> at will"',
+  'Thousand Forms':
+    'Section=magic ' +
+    'Note="May cast <i>Alter Self</i> at will" ' +
+    'Spells="Alter Self"',
   'Thunderbolt Strike':
     'Section=magic ' +
     'Note="Lightning damage pushes away Large and smaller creatures 10\'"',
@@ -946,6 +1013,13 @@ PHB5E.FEATURES_ADDED = {
   'Transmutation Savant':
     'Section=magic ' +
     'Note="May copy transmutation spells into spellbook for half cost"',
+  'Trickery Domain':
+    'Spells=' +
+      '"1:Charm Person","1:Disguise Self",' +
+      '"3:Mirror Image","3:Pass Without Trace",' +
+      '5:Blink,"5:Dispel Magic",' +
+      '"7:Dimension Door",7:Polymorph,' +
+      '"9:Dominate Person","9:Modify Memory"',
   'Trip Attack':
     'Section=combat ' +
     'Note="After a successful attack, may spend a Superiority Die to knock foe prone (DC %V Strength neg) and add Superiority Die to damage"',
@@ -953,7 +1027,9 @@ PHB5E.FEATURES_ADDED = {
     'Section=magic ' +
     'Note="R30\' May use Channel Divinity to make fiends and fey flee (DC %{spellDifficultyClass.P} Wisdom neg) for 1 min"',
   'Undead Thralls':
-    'Section=magic Note="Knows <i>Animate Dead</i>; casting animates an additional corpse and gives corpses +%{levels.Wizard} HP and +%{proficiencyBonus} damage"',
+    'Section=magic ' +
+    'Note="Knows <i>Animate Dead</i>; casting animates an additional corpse and gives corpses +%{levels.Wizard} HP and +%{proficiencyBonus} damage" ' +
+    'Spells="Animate Dead"',
   'Undying Sentinel':
     'Section=combat,feature,save ' +
     'Note=' +
@@ -969,6 +1045,13 @@ PHB5E.FEATURES_ADDED = {
   'Vow Of Enmity':
     'Section=combat ' +
     'Note="R10\' May use Channel Divinity to give self Adv on attacks against target for 1 min"',
+  'War Domain':
+    'Spells=' +
+      '"1:Divine Favor","1:Shield Of Faith",' +
+      '"3:Magic Weapon","3:Spiritual Weapon",' +
+      '"5:Crusader\'s Mantle","5:Spirit Guardians",' +
+      '"7:Freedom Of Movement",7:Stoneskin,' +
+      '"9:Flame Strike","9:Hold Monster"',
   'War Magic':
     'Section=combat ' +
     'Note="May make a bonus attack after casting %{combatNotes.improvedWarMagic?\'any spell\':\'a cantrip\'}"',
@@ -982,7 +1065,9 @@ PHB5E.FEATURES_ADDED = {
     'Section=magic ' +
     'Note="R30\' May spend 2+ Ki Points to inflict 3d10+ HP bludgeoning and pull 25\' or knock prone (DC %{kiSaveDC} Strength half HP only)"',
   'Wave Of Rolling Earth':
-    'Section=magic Note="May spend 6 Ki Points to cast <i>Wall Of Stone</i>"',
+    'Section=magic ' +
+    'Note="May spend 6 Ki Points to cast <i>Wall Of Stone</i>" ' +
+    'Spells="Wall Of Stone"',
   'Weapon Bond':
     'Section=combat Note="Cannot be disarmed; may summon weapon"',
   'Wild Magic Surge':
@@ -1124,6 +1209,20 @@ PHB5E.FEATURES_ADDED = {
   'Mounted Combatant':
     'Section=combat ' +
     'Note="Adv on melee attacks on an unmounted foe smaller than mount/May redirect attack on mount to self/Mount suffers no damage on a successful Dexterity save and half on failure"',
+  'Oath Of The Ancients':
+    'Spells=' +
+      '"3:Ensnaring Strike","3:Speak With Animals",' +
+      '5:Moonbeam,"5:Misty Step",' +
+      '"9:Plant Growth","9:Protection From Energy",' +
+      '"13:Ice Storm",13:Stoneskin,' +
+      '"17:Commune With Nature","17:Tree Stride"',
+  'Oath Of Vengeance':
+    'Spells=' +
+      '3:Bane,"3:Hunter\'s Mark",' +
+      '"5:Hold Person","5:Misty Step",' +
+      '9:Haste,"9:Protection From Energy",' +
+      '13:Banishment,"13:Dimension Door",' +
+      '"17:Hold Monster",17:Scrying',
   'Observant':
     'Section=ability,feature,skill ' +
     'Note=' +
@@ -1179,7 +1278,11 @@ PHB5E.FEATURES_ADDED = {
   // Races
   'Dark Elf Ability Adjustment':
     'Section=ability Note="+2 Dexterity/+1 Charisma"',
-  'Drow Magic':'Section=magic Note="Knows <i>Dancing Lights</i> cantrip%{level<3?\'\':level<5?\', may cast <i>Faerie Fire</i> 1/long rest\':\', may cast <i>Faerie Fire</i> and <i>Darkness</i> 1/long rest\'}"',
+  'Drow Magic':
+    'Section=magic ' +
+    'Note="Knows <i>Dancing Lights</i> cantrip%{level<3?\'\':level<5?\', may cast <i>Faerie Fire</i> 1/long rest\':\', may cast <i>Faerie Fire</i> and <i>Darkness</i> 1/long rest\'}" ' +
+    'Spells="Dancing Lights","3:Faerie Fire",5:Darkness ' +
+    'SpellAbility=Charisma',
   'Drow Weapon Training':
     'Section=combat ' +
     'Note="Weapon Proficiency (Hand Crossbow/Rapier/Shortsword)"',
@@ -1191,7 +1294,10 @@ PHB5E.FEATURES_ADDED = {
   'Mountain Dwarf Ability Adjustment':
     'Section=ability Note="+2 Constitution/+2 Strength"',
   'Natural Illusionist':
-    'Section=magic Note="Knows <i>Minor Illusion</i> cantrip"',
+    'Section=magic ' +
+    'Note="Knows <i>Minor Illusion</i> cantrip" ' +
+    'Spells="Minor Illusion" ' +
+    'SpellAbility=Intelligence',
   'Speak With Small Beasts':
     'Section=feature Note="May communicate simple ideas with small animals"',
   'Stout Halfling Ability Adjustment':
@@ -1557,33 +1663,31 @@ PHB5E.DEITIES_ADDED = {
   'Greyhawk-Vecna':'Alignment="Neutral Evil" Domain=Knowledge',
   'Greyhawk-Wee Jas':'Alignment="Lawful Neutral" Domain=Death,Knowledge',
   // Nonhuman
-  'NH-Bahamut':'Alignment="Lawful Good" Domain=Life,War Sphere=Dragon',
-  'NH-Blibdoolpoolp':'Alignment="Neutral Evil" Domain=Death Sphere=Kuo-Toa',
-  'NH-Corellon Larethian':'Alignment="Chaotic Good" Domain=Light Sphere=Elf',
+  'NH-Bahamut':'Alignment="Lawful Good" Domain=Life,War',
+  'NH-Blibdoolpoolp':'Alignment="Neutral Evil" Domain=Death-Toa',
+  'NH-Corellon Larethian':'Alignment="Chaotic Good" Domain=Light',
   'NH-Deep Sashelas':
-    'Alignment="Chaotic Good" Domain=Nature,Tempest Sphere=Elf',
-  'NH-Eadro':'Alignment=Neutral Domain=Nature,Tempest Sphere=Merfolk',
-  'NH-Garl Glittergold':'Alignment="Lawful Good" Domain=Trickery Sphere=Gnome',
-  'NH-Grolantor':'Alignment="Chaotic Evil" Domain=War Sphere="Hill Giant"',
-  'NH-Gruumsh':'Alignment="Chaotic Evil" Domain=Tempest,War Sphere=Orc',
-  'NH-Hruggek':'Alignment="Chaotic Evil" Domain=War Sphere=Bugbear',
-  'NH-Kurtulmak':'Alignment="Lawful Evil" Domain=War Sphere=Kobold',
-  'NH-Laogzed':'Alignment="Chaotic Evil" Domain=Death Sphere=Troglodyte',
-  'NH-Lolth':'Alignment="Chaotic Evil" Domain=Trickery Sphere=Drow',
-  'NH-Maglubiyet':'Alignment="Lawful Evil" Domain=War Sphere=Goblinoid',
-  'NH-Moradin':'Alignment="Lawful Good" Domain=Knowledge Sphere=Dwarf',
-  'NH-Rillifane Rallathil':'Alignment="Chaotic Good" Domain=Nature Sphere=Elf',
-  'NH-Sehanine Moonbow':'Alignment="Chaotic Good" Domain=Knowledge Sphere=Elf',
-  'NH-Sekolah':'Alignment="Lawful Evil" Domain=Nature,Tempest Sphere=Sahuagin',
-  'NH-Semuanya':'Alignment=Neutral Domain=Life Sphere=Lizardfolk',
-  'NH-Skerrit':'Alignment=Neutral Domain=Knowledge Sphere=Centaur',
-  'NH-Skoraeus Stonebones':
-    'Alignment=Neutral Domain=Knowledge Sphere="Stone Giant"',
-  'NH-Surtur':
-    'Alignment="Lawful Evil" Domain=Knowledge,War Sphere="Fire Giant"',
-  'NH-Thryn':'Alignment="Chaotic Evil" Domain=War Sphere="Frost Giant"',
-  'NH-Tiamat':'Alignment="Lawful Evil" Domain=Trickery Sphere=Dragon',
-  'NH-Yondalla':'Alignment="Lawful Good" Domain=Life Sphere=Halfling'
+    'Alignment="Chaotic Good" Domain=Nature,Tempest',
+  'NH-Eadro':'Alignment=Neutral Domain=Nature,Tempest',
+  'NH-Garl Glittergold':'Alignment="Lawful Good" Domain=Trickery',
+  'NH-Grolantor':'Alignment="Chaotic Evil" Domain=War',
+  'NH-Gruumsh':'Alignment="Chaotic Evil" Domain=Tempest,War',
+  'NH-Hruggek':'Alignment="Chaotic Evil" Domain=War',
+  'NH-Kurtulmak':'Alignment="Lawful Evil" Domain=War',
+  'NH-Laogzed':'Alignment="Chaotic Evil" Domain=Death',
+  'NH-Lolth':'Alignment="Chaotic Evil" Domain=Trickery',
+  'NH-Maglubiyet':'Alignment="Lawful Evil" Domain=War',
+  'NH-Moradin':'Alignment="Lawful Good" Domain=Knowledge',
+  'NH-Rillifane Rallathil':'Alignment="Chaotic Good" Domain=Nature',
+  'NH-Sehanine Moonbow':'Alignment="Chaotic Good" Domain=Knowledge',
+  'NH-Sekolah':'Alignment="Lawful Evil" Domain=Nature,Tempest',
+  'NH-Semuanya':'Alignment=Neutral Domain=Life',
+  'NH-Skerrit':'Alignment=Neutral Domain=Knowledge',
+  'NH-Skoraeus Stonebones':'Alignment=Neutral Domain=Knowledge',
+  'NH-Surtur':'Alignment="Lawful Evil" Domain=Knowledge,War',
+  'NH-Thryn':'Alignment="Chaotic Evil" Domain=War',
+  'NH-Tiamat':'Alignment="Lawful Evil" Domain=Trickery',
+  'NH-Yondalla':'Alignment="Lawful Good" Domain=Life'
 };
 PHB5E.DEITIES = Object.assign({}, SRD5E.DEITIES, PHB5E.DEITIES_ADDED);
 
@@ -1597,8 +1701,6 @@ PHB5E.choiceRules = function(rules, type, name, attrs) {
     PHB5E.classRulesExtra(rules, name);
   else if(type == 'Feat')
     PHB5E.featRulesExtra(rules, name);
-  else if(type == 'Race')
-    PHB5E.raceRulesExtra(rules, name);
 };
 
 /*
@@ -1618,12 +1720,6 @@ PHB5E.classRulesExtra = function(rules, name) {
       'features.Path Of The Totem Warrior (Eagle)', '=', '1',
       'features.Path Of The Totem Warrior (Wolf)', '=', '1'
     );
-    SRD5E.featureSpells
-      (rules, 'Spirit Seeker', 'R', null,
-       ['Beast Sense', 'Speak With Animals']);
-    SRD5E.featureSpells
-      (rules, 'Spirit Walker', 'R', null, ['Commune With Nature']);
-    SRD5E.featureSpells(rules, 'Commune With Nature', 'Spirit Walker', 'R', 5);
 
   } else if(name == 'Bard') {
 
@@ -1664,7 +1760,7 @@ PHB5E.classRulesExtra = function(rules, name) {
       'features.War Domain', '=', '"weapon damage type"'
     );
     rules.defineRule('spellSlots.D0', 'magicNotes.acolyteOfNature', '+=', '1');
-    rules.defineRule('spellCasterLevel.D', 'casterLevels.Nature', '=', null);
+    rules.defineRule('casterLevels.D', 'casterLevels.Nature', '=', null);
     // Have to hard-code these proficiencies, since featureRules only handles
     // notes w/a single type of granted proficiency
     rules.defineRule('armorProficiency.Heavy',
@@ -1681,57 +1777,6 @@ PHB5E.classRulesExtra = function(rules, name) {
       'combatNotes.bonusProficiencies(WarDomain)', '=', '1'
     );
 
-    SRD5E.featureSpells(rules, 'Read Thoughts', 'C', null, ['Suggestion']);
-    SRD5E.featureSpells(rules, 'Bonus Cantrip (Light Domain)', 'C', null, ['Light']);
-    SRD5E.featureSpells(
-      rules, 'Knowledge Domain', 'C', classLevel, [
-      '1:Command', '1:Identify',
-      '3:Augury', '3:Suggestion',
-      '5:Nondetection', '5:Speak With Dead',
-      '7:Arcane Eye', '7:Confusion',
-      '9:Legend Lore', '9:Scrying'
-    ]);
-    SRD5E.featureSpells(
-      rules, 'Light Domain', 'C', classLevel, [
-      '1:Burning Hands', '1:Faerie Fire',
-      '3:Flaming Sphere', '3:Scorching Ray',
-      '5:Daylight', '5:Fireball',
-      '7:Guardian Of Faith', '7:Wall Of Fire',
-      '9:Flame Strike', '9:Scrying'
-    ]);
-    SRD5E.featureSpells(
-      rules, 'Nature Domain', 'C', classLevel, [
-      '1:Animal Friendship', '1:Speak With Animals',
-      '3:Barkskin', '3:Spike Growth',
-      '5:Plant Growth', '5:Wind Wall',
-      '7:Dominate Beast', '7:Grasping Vine',
-      '9:Insect Plague', '9:Tree Stride'
-    ]);
-    SRD5E.featureSpells(
-      rules, 'Tempest Domain', 'C', classLevel, [
-      '1:Fog Cloud', '1:Thunderwave',
-      '3:Gust Of Wind', '3:Shatter',
-      '5:Call Lightning', '5:Sleet Storm',
-      '7:Control Water', '7:Ice Storm',
-      '9:Destructive Wave', '9:Insect Plague'
-    ]);
-    SRD5E.featureSpells(
-      rules, 'Trickery Domain', 'C', classLevel, [
-      '1:Charm Person', '1:Disguise Self',
-      '3:Mirror Image', '3:Pass Without Trace',
-      '5:Blink', '5:Dispel Magic',
-      '7:Dimension Door', '7:Polymorph',
-      '9:Dominate Person', '9:Modify Memory'
-    ]);
-    SRD5E.featureSpells(
-      rules, 'War Domain', 'C', classLevel, [
-      '1:Divine Favor', '1:Shield Of Faith',
-      '3:Magic Weapon', '3:Spiritual Weapon',
-      '5:Crusader\'s Mantle', '5:Spirit Guardians',
-      '7:Freedom Of Movement', '7:Stoneskin',
-      '9:Flame Strike', '9:Hold Monster'
-    ]);
-
   } else if(name == 'Druid') {
 
     rules.defineRule
@@ -1739,15 +1784,6 @@ PHB5E.classRulesExtra = function(rules, name) {
     rules.defineRule('magicNotes.circleForms',
       classLevel, '=', 'source < 6 ? 1 : Math.floor(source / 3)'
     );
-
-    SRD5E.featureSpells(rules, 'Thousand Forms', 'D', null, ['Alter Self']);
-    SRD5E.featureSpells(
-      rules, 'Circle Of The Land (Underdark)', 'D', classLevel, [
-      '3:Spider Climb', '3:Web',
-      '5:Gaseous Form', '5:Stinking Cloud',
-      '7:Greater Invisibility', '7:Stone Shape',
-      '9:Cloudkill', '9:Insect Plague'
-    ]);
 
   } else if(name == 'Fighter') {
 
@@ -1811,55 +1847,8 @@ PHB5E.classRulesExtra = function(rules, name) {
       'magicNotes.discipleOfTheElements', '=', null
     );
 
-    SRD5E.featureSpells(
-      rules, 'Shadow Arts', 'M', null,
-      ['Darkness,Darkvision,Minor Illusion,Pass Without Trace,Silence']
-    );
-    SRD5E.featureSpells
-      (rules, 'Fist Of Four Thunders', 'M', null, ['Thunderwave']);
-    SRD5E.featureSpells
-      (rules, 'Sweeping Cinder Strike', 'M', null, ['Burning Hands']);
-    SRD5E.featureSpells
-      (rules, 'Clench Of The North Wind', 'M', null, ['Hold Person']);
-    SRD5E.featureSpells(rules, 'Gong Of The Summit', 'M', null, ['Shatter']);
-    SRD5E.featureSpells
-      (rules, 'Rush Of The Gale Spirits', 'M', null, ['Gust Of Wind']);
-    SRD5E.featureSpells(rules, 'Gong Of The Summit', 'M', null, ['Shatter']);
-    SRD5E.featureSpells
-      (rules, 'Flames Of The Phoenix', 'M', null, ['Fireball']);
-    SRD5E.featureSpells(rules, 'Mist Stance', 'M', null, ['Gaseous Form']);
-    SRD5E.featureSpells(rules, 'Ride The Wind', 'M', null, ['Fly']);
-    SRD5E.featureSpells
-      (rules, 'Eternal Mountain Defense', 'M', null, ['Stoneskin']);
-    SRD5E.featureSpells
-      (rules, 'River Of Hungry Flame', 'M', null, ['Wall Of Fire']);
-    SRD5E.featureSpells(rules, 'Breath Of Winter', 'M', null, ['Cone Of Cold']);
-    SRD5E.featureSpells
-      (rules, 'Wave Of Rolling Earth', 'M', null, ['Wall Of Stone']);
-
-  } else if(name == 'Paladin') {
-
-    SRD5E.featureSpells(
-      rules, 'Oath Of The Ancients', 'P', classLevel, [
-      '3:Ensnaring Strike', '3:Speak With Animals',
-      '5:Moonbeam', '5:Misty Step',
-      '9:Plant Growth', '9:Protection From Energy',
-      '13:Ice Storm', '13:Stoneskin',
-      '17:Commune With Nature', '17:Tree Stride'
-    ]);
-    SRD5E.featureSpells(
-      rules, 'Oath Of Vengeance', 'P', classLevel, [
-      '3:Bane', '3:Hunter\'s Mark',
-      '5:Hold Person', '5:Misty Step',
-      '9:Haste', '9:Protection From Energy',
-      '13:Banishment', '13:Dimension Door',
-      '17:Hold Monster', '17:Scrying'
-    ]);
-
   } else if(name == 'Rogue') {
 
-    SRD5E.featureSpells
-      (rules, 'Mage Hand Legerdemain', 'W', null, ['Mage Hand']);
     let slots = [
       'W0:3@3;4@10',
       'W1:2@3;3@4;4@7',
@@ -1882,11 +1871,6 @@ PHB5E.classRulesExtra = function(rules, name) {
     rules.defineRule('magicNotes.invokeDuplicity', // Italics noop
       'magicNotes.improvedDuplicity', '+', 'null'
     );
-    SRD5E.featureSpells
-      (rules, 'Improved Minor Illusion', 'W', null, ['Minor Illusion']);
-    SRD5E.featureSpells(rules, 'Undead Thralls', 'W', null, ['Animate Dead']);
-    SRD5E.featureSpells(rules, 'Shapechanger', 'W', null, ['Polymorph']);
-    SRD5E.featureSpells(rules, 'Master Transmuter', 'W', null, ['Raise Dead']);
 
   }
 
@@ -1949,38 +1933,6 @@ PHB5E.featRulesExtra = function(rules, name) {
       ('weaponChoiceCount', 'combatNotes.weaponMaster', '+=', '4');
   }
 
-};
-
-/*
- * Defines in #rules# the rules associated with race #name# that cannot be
- * derived directly from the attributes passed to raceRules.
- */
-PHB5E.raceRulesExtra = function(rules, name) {
-  if(name == 'Dark Elf') {
-    SRD5E.featureSpells(
-      rules, 'Drow Magic', 'B', 'level',
-      ['Dancing Lights',
-       '3:Faerie Fire',
-       '5:Darkness']
-    );
-    rules.defineRule('spellCasterLevel.Drow Magic',
-      'features.Drow Magic', '?', null,
-      'level', '=', null
-    );
-    rules.defineRule('casterLevels.B',
-      'spellCasterLevel.Drow Magic', '^=', null
-    );
-  } else if(name == 'Forest Gnome') {
-    SRD5E.featureSpells
-      (rules, 'Natural Illusionist', 'W', null, ['Minor Illusion']);
-    rules.defineRule('spellCasterLevel.Natural Illusionist',
-      'features.Natural Illusionist', '?', null,
-      'level', '=', null
-    );
-    rules.defineRule('casterLevels.W',
-      'spellCasterLevel.Natural Illusionist', '^=', null
-    );
-  }
 };
 
 /* Returns an array of plugins upon which this one depends. */
