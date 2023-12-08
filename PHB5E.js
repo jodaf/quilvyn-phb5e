@@ -1385,6 +1385,7 @@ PHB5E.SPELLS_ADDED = {
   'Beast Sense':
     'School=Divination ' +
     'Level=D2,R2 ' +
+    'Ritual=true ' +
     'Description="Self perceives through touched beast\'s senses for conc or 1 hr"',
   'Blade Ward':
     'School=Abjuration ' +
@@ -1459,6 +1460,7 @@ PHB5E.SPELLS_ADDED = {
   'Feign Death':
     'School=Necromancy ' +
     'Level=B3,C3,D3,W3 ' +
+    'Ritual=true ' +
     'Description="Touched appears dead for 1 hr"',
   'Friends':
     'School=Enchantment ' +
@@ -1490,11 +1492,6 @@ PHB5E.SPELLS_ADDED = {
     'Level=R3 ' +
     'AtHigherLevels="inflicts +1d8 HP" ' +
     'Description="Ranged weapon inflicts 8d6 HP lightning on target and 2d8 HP lightning in 10\' radius (Dexterity half)"',
-
-  "Mordenkainen's Sword":
-    'School=Evocation ' +
-    'Level=B7,W7 ' +
-    'Description="R60\' Self controls force weapon (melee spell attack inflicts 3d10 HP force, moves 20\'/rd) for conc or 1 min"',
 
   'Phantasmal Force':
     'School=Illusion ' +
@@ -1573,6 +1570,7 @@ PHB5E.SPELLS_LEVELS_ADDED = {
 PHB5E.SPELLS_RENAMED = {
   'Acid Arrow':"Melf's Acid Arrow",
   'Arcane Hand':"Bigby's Hand",
+  'Arcane Sword':"Mordenkainen's Sword",
   "Arcanist's Magic Aura":"Nystul's Magic Aura",
   'Black Tentacles':"Evard's Black Tentacles",
   'Faithful Hound':"Mordenkainen's Faithful Hound",
