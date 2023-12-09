@@ -575,7 +575,7 @@ PHB5E.FEATURES_ADDED = {
   'Arcane Charge':'Section=Magic Note="May teleport 30\' during Action Surge"',
   'Arcane Ward':
     'Section=Magic ' +
-    'Note="Abjuration casting creates a ward around self that can aborb %{levels.Wizard*2+intelligenceModifier} HP (long rest ends); if taken to 0 HP, abjuration casting restores 2x spell level HP to ward"',
+    'Note="Abjuration casting creates a ward around self that can absorb %{levels.Wizard*2+intelligenceModifier} HP (long rest ends); if taken to 0 HP, abjuration casting restores 2x spell level HP to ward"',
   'Aspect Of The Beast (Bear)':
     'Section=Ability,Ability ' +
     'Note=' +
@@ -690,7 +690,7 @@ PHB5E.FEATURES_ADDED = {
     'Note="R30\' May use Reaction to grant resistance to immediate acid, cold, fire, lightning, or thunder damage"',
   'Dark Delirium':
     'Section=Magic ' +
-    'Note="R60\' Target charmed or frightened and unaware of surroundings (DC %{spellDifficultyClass.K} Wisdom neg) for conc or 1 min 1/short rest"',
+    'Note="R60\' Target charmed or frightened and unaware of surroundings (DC %{spellDifficultyClass.K} Wisdom neg) for conc up to 1 min 1/short rest"',
   'Death Strike':
     'Section=Combat ' +
     'Note="Inflicts dbl damage on a successful surprise attack (DC %{8+dexterityModifier+proficiencyBonus} Constitution neg)"',
@@ -718,7 +718,7 @@ PHB5E.FEATURES_ADDED = {
     'Note="Successful attack inflicts Disadv on saves vs. self spells for 1 rd"',
   'Elemental Attunement':
     'Section=Magic ' +
-    'Note="May create a harmless instantaneous elemental effect, light or snuff small flame, chill or warm 1 lb object for 1 hr, or shape 1\' cu earth, fire, water, or mist for 1 min"',
+    'Note="May create a harmless instantaneous elemental effect, light or snuff small flame, chill or warm 1 lb object for 1 hr, or shape a 1\' cube of earth, fire, water, or mist for 1 min"',
   'Elemental Wild Shape':
     'Section=Magic Note="May use 2 Wild Shape uses to become an elemental"',
   'Enchantment Savant':
@@ -805,13 +805,13 @@ PHB5E.FEATURES_ADDED = {
     'Note="May use 1 wk process to create and adopt a different identity"',
   'Instinctive Charm':
     'Section=Magic ' +
-    'Note="R30\' May redirect an attack on self to another (DC %{spellDifficultyClass.W} Wisdom neg until long rest)"',
+    'Note="R30\' May redirect an attack on self to another (DC %{spellDifficultyClass.W} Wisdom neg until a long rest)"',
   'Inured To Undeath':
     'Section=Save ' +
     'Note="Has resistance to necrotic damage and immunity to maximum HP reduction"',
   'Invoke Duplicity':
     'Section=Magic ' +
-    'Note="R30\' May use Channel Divinity to create %{magicNotes.improvedDuplicity?\'4 illusionary duplicates\':\'1 illusionary duplicate\'}, gaining Adv on attacks when w/in 5\' and allowing remote spellcasting for conc or 1 min"',
+    'Note="R30\' May use Channel Divinity to create %{magicNotes.improvedDuplicity?\'4 illusionary duplicates\':\'1 illusionary duplicate\'}, gaining Adv on attacks when w/in 5\' and allowing remote spellcasting for conc up to 1 min"',
   'Know Your Enemy':
     'Section=Combat Note="Knows how foe compares to self after 1 min study"',
   'Knowledge Domain':
@@ -850,16 +850,16 @@ PHB5E.FEATURES_ADDED = {
     'Section=Magic Note="May command charmed animals and plants"',
   'Master Transmuter':
     'Section=Magic ' +
-    'Note="May destroy a transmuter\'s stone to transmute 5\' cu, remove curses, diseases, and poisons, cast <i>Raise Dead</i>, or restore youth" ' +
+    'Note="May destroy a transmuter\'s stone to transmute a 5\' cube, remove curses, diseases, and poisons, cast <i>Raise Dead</i>, or restore youth" ' +
     'Spells="Raise Dead"',
   'Menacing Attack':
     'Section=Combat ' +
     'Note="May spend a Superiority Die inflict frightened (DC %{maneuverSaveDC} Wisdom neg) for 1 rd and add Superiority Die to damage"',
   'Minor Alchemy':
     'Section=Magic ' +
-    'Note="May change substance of 1\' cu per 10 min effort for conc or 1 hr"',
+    'Note="May change substance of a 1\' cube per 10 min effort for conc up to 1 hr"',
   'Minor Conjuration':
-    'Section=Magic Note="R10\' May create 3\' cu, 10 lb object for 1 hr"',
+    'Section=Magic Note="R10\' May create a 3\' cube, 10 lb object for 1 hr"',
   'Mist Stance':
     'Section=Magic ' +
     'Note="May spend 4 Ki Points to cast self <i>Gaseous Form</i>" ' +
@@ -933,7 +933,7 @@ PHB5E.FEATURES_ADDED = {
     'Note="May use a bonus action to teleport 60\' between dim or dark areas and gain Adv on first melee attack"',
   'Shape The Flowing River':
     'Section=Magic ' +
-    'Note="R120\' May spend 1 Ki Point to freeze, thaw, and shape 30\' cu water"',
+    'Note="R120\' May spend 1 Ki Point to freeze, thaw, and shape a 30\' cube of water"',
   'Shapechanger':
     'Section=Magic ' +
     'Note="Knows <i>Polymorph</i>; may transform self into a CR 1 creature 1/short rest" ' +
@@ -1354,66 +1354,78 @@ PHB5E.SPELLS_ADDED = {
   'Arcane Gate':
     'School=Conjuration ' +
     'Level=K6,S6,W6 ' +
-    'Description="R10\'/500\' Creates teleportation portal pair for conc or 10 min"',
+    'Description=' +
+      '"R10\' Creates a portal pair that can teleport 500\' for conc up to 10 min"',
   'Armor Of Agathys':
     'School=Abjuration ' +
     'Level=K1 ' +
-    'AtHigherLevels="gives +5 temporary HP and inflicts +5 HP cold" ' +
-    'Description="Self gains 5 temporary HP, successful attacker suffers 5 HP cold for 1 hr"',
+    'AtHigherLevels="gives +5 temporary HP and inflicts +5 HP" ' +
+    'Description=' +
+      '"Self gains 5 temporary HP, and a successful attacker suffers 5 HP cold, for 1 hr"',
   'Arms Of Hadar':
     'School=Conjuration ' +
     'Level=K1 ' +
     'AtHigherLevels="inflicts +1d6 HP" ' +
-    'Description="10\' radius inflicts 2d6 HP necrotic and no Reaction (Strength half, no loss of Reaction) for 1 rd"',
+    'Description=' +
+      '"10\' radius inflicts 2d6 HP necrotic and no Reaction (Strength half HP only) for 1 rd"',
   'Aura Of Life':
     'School=Abjuration ' +
     'Level=P4 ' +
-    'Description="30\' radius gives resistance to necrotic damage, raises nonhostile creatures w/0 HP to 1 HP for conc or 10 min"',
+    'Description=' +
+      '"30\' radius gives nonhostile creatures resistance to necrotic damage and immunity to maximum HP reduction and raises those w/0 HP to 1 HP for conc up to 10 min"',
   'Aura Of Purity':
     'School=Abjuration ' +
     'Level=P4 ' +
-    'Description="30\' radius gives resistance to poison damage, immunity to disease, and Adv on conditions for conc or 10 min"',
+    'Description=' +
+      '"30\' radius gives nonhostile creatures resistance to poison damage, immunity to disease, and Adv on saves vs. conditions for conc up to 10 min"',
   'Aura Of Vitality':
     'School=Evocation ' +
     'Level=P3 ' +
-    'Description="R30\' Target heals 2d6 HP 1/rd for conc or 1 min"',
+    'Description="R30\' Self may use a bonus action to restore 2d6 HP to target 1/rd for conc up to 1 min"',
 
   'Banishing Smite':
     'School=Abjuration ' +
     'Level=P5 ' +
-    'Description="Self attacks inflict +5d10 HP force, banish to home or demiplane when target reduced to 50 HP for conc or 1 min"',
+    'Description=' +
+      '"Next successful self weapon attack inflicts +5d10 HP force, plus banishment to home plane or demiplane for conc up to 1 min if foe is reduced to 50 HP"',
   'Beast Sense':
     'School=Divination ' +
     'Level=D2,R2 ' +
     'Ritual=true ' +
-    'Description="Self perceives through touched beast\'s senses for conc or 1 hr"',
+    'Description=' +
+      '"Self may perceive through touched willing beast\'s senses for conc up to 1 hr"',
   'Blade Ward':
     'School=Abjuration ' +
     'Level=B0,K0,S0,W0 ' +
-    'Description="Self gains resistance to bludgeoning, piercing, and slashing damage for 1 rd"',
+    'Description=' +
+      '"Self gains resistance to bludgeoning, piercing, and slashing weapon damage for 1 rd"',
   'Blinding Smite':
     'School=Evocation ' +
     'Level=P3 ' +
-    'Description="Self attack inflicts +3d8 HP radiant and blinds (Constitution neg) for conc or 1 min"',
+    'Description=' +
+      '"Next successful self weapon attack inflicts +3d8 HP radiant and blinds (Constitution ends) for conc up to 1 min"',
 
   'Chromatic Orb':
     'School=Evocation ' +
     'Level=S1,W1 ' +
     'AtHigherLevels="inflicts +1d8 HP" ' +
-    'Description="R90\' Ranged spell inflicts 3d8 HP acid, cold, fire, lightning, poison, or energy"',
+    'Description=' +
+      '"R90\' Ranged spell inflicts 3d8 HP choice of acid, cold, fire, lightning, poison, or thunder"',
   'Circle Of Power':
     'School=Abjuration ' +
     'Level=P5 ' +
-    'Description="Allies in 30\' radius gain Adv on save vs. magic and saves yields no damage instead of half for conc or 10 min"',
+    'Description=' +
+      '"Allies in a 30\' radius gain Adv on save vs. magic, and saves yields no damage instead of half, for conc up to 10 min"',
   'Cloud Of Daggers':
     'School=Conjuration ' +
     'Level=B2,K2,S2,W2 ' +
     'AtHigherLevels="inflicts +2d4 HP" ' +
-    'Description="R60\' 5\' cu inflicts 4d4 HP slashing for conc or 1 min"',
+    'Description="R60\' 5\' cube inflicts 4d4 HP slashing for conc up to 1 min"',
   'Compelled Duel':
     'School=Enchantment ' +
     'Level=P1 ' +
-    'Description="R30\' Target stays w/in 30\' of self, suffers Disadv on attacks on others (Wisdom neg) for conc or 1 min"',
+    'Description=' +
+      '"R30\' Target stays w/in 30\' of self (Wisdom neg) and suffers Disadv on attacks on others for conc up to 1 min; self attacking another or a successful attack on target by an ally ends"',
   'Conjure Barrage':
     'School=Conjuration ' +
     'Level=R3 ' +
@@ -1421,133 +1433,159 @@ PHB5E.SPELLS_ADDED = {
   'Conjure Volley':
     'School=Conjuration ' +
     'Level=R5 ' +
-    'Description="R150\' 40\' radius inflicts 8d8 HP weapon type (Dexterity half)"',
+    'Description=' +
+      '"R150\' 40\' radius inflicts 8d8 HP weapon type (Dexterity half)"',
   'Cordon Of Arrows':
     'School=Transmutation ' +
     'Level=R2 ' +
-    'AtHigherLevels="affects six pieces" ' +
-    'Description="R5\' Four pieces of ammo attack w/in 30\', inflict 1d6 HP piercing (Dexterity neg) for 8 hr"',
+    'AtHigherLevels="affects +2 pieces" ' +
+    'Description=' +
+      '"R5\' Four pieces of ammo attack non-designated creatures w/in 30\', inflict 1d6 HP piercing (Dexterity neg) for 8 hr"',
   'Crown Of Madness':
     'School=Enchantment ' +
     'Level=B2,K2,S2,W2 ' +
-    'Description="R120\' Self directs target\'s attacks (Wisdom neg) for conc or 1 min"',
+    'Description=' +
+      '"R120\' Self may order target\'s attacks each rd (Wisdom ends) for conc up to 1 min"',
   "Crusader's Mantle":
     'School=Evocation ' +
     'Level=P3 ' +
-    'Description="Ally attacks in 30\' radius inflict +1d4 HP radiant for conc or 1 min"',
+    'Description=' +
+      '"Ally attacks in 30\' radius inflict +1d4 HP radiant for conc up to 1 min"',
 
   'Destructive Wave':
     'School=Evocation ' +
     'Level=P5 ' +
-    'Description="30\' radius inflicts 5d6 HP thunder and knocks prone (Constitution half HP, not prone)"',
+    'Description=' +
+      '"30\' radius inflicts 5d6 HP thunder, 5d6 HP choice of radiant or necrotic, and knocked prone (Constitution half HP only)"',
   'Dissonant Whispers':
     'School=Enchantment ' +
     'Level=B1,"K1 [The Great Old One]" ' +
     'AtHigherLevels="inflicts +1d6 HP" ' +
-    'Description="R60\' Target suffers 3d6 HP psychic and flees (Wisdom half, need not flee)"',
+    'Description=' +
+      '"R60\' Target suffers 3d6 HP psychic and uses Reaction to flee (Wisdom half HP only)"',
 
   'Elemental Weapon':
     'School=Transmutation ' +
     'Level=P3 ' +
     'AtHigherLevels="gives +2/+3 attack and +2d4/+3d4 damage at level 5/7" ' +
-    'Description="Touched weapon gains +1 attack and +1d4 HP acid, cold, fire, lightning, or thunder for conc or 1 hr"',
+    'Description=' +
+      '"Touched weapon gains +1 attack and +1d4 HP choice of acid, cold, fire, lightning, or thunder for conc up to 1 hr"',
   'Ensnaring Strike':
     'School=Conjuration ' +
     'Level=R1 ' +
     'AtHigherLevels="inflicts +1d6 HP" ' +
-    'Description="Successful attack restrains foe and inflicts 1d6 HP/rd piercing (Strength neg) for conc or 1 min"',
+    'Description=' +
+      '"Self next successful attack restrains foe and inflicts 1d6 HP/rd piercing (Strength ends) for conc up to 1 min"',
 
   'Feign Death':
     'School=Necromancy ' +
     'Level=B3,C3,D3,W3 ' +
     'Ritual=true ' +
-    'Description="Touched appears dead for 1 hr"',
+    'Description=' +
+      '"Touched appears dead and gains resistance to non-psychic damage for 1 hr"',
   'Friends':
     'School=Enchantment ' +
     'Level=B0,K0,S0,W0 ' +
-    'Description="Self gains on Adv on Charisma w/target for conc or 1 min"',
+    'Description="Self gains on Adv on Charisma w/non-hostile target for conc up to 1 min; target becomes hostile afterward"',
 
   'Grasping Vine':
     'School=Conjuration ' +
     'Level=D4,R4 ' +
-    'Description="R30\' Vine pulls target 20\' (Dexterity neg) for conc or 1 min"',
+    'Description=' +
+      '"R30\' 30\' vine pulls target 20\' each rd (Dexterity neg) for conc up to 1 min"',
 
   'Hail Of Thorns':
     'School=Conjuration ' +
     'Level=R1 ' +
-    'AtHigherLevels="inflicts +1d10 HP (6d10 maximum)" ' +
-    'Description="5\' radius inflicts 1d10 HP piercing (Dexterity half) following a successful ranged attack"',
+    'AtHigherLevels="inflicts +1d10 HP (6d10 HP maximum)" ' +
+    'Description=' +
+      '"Self next successful ranged attack inflicts 1d10 HP piercing in a 5\' radius (Dexterity half) for conc up to 1 min"',
   'Hex':
     'School=Enchantment ' +
     'Level=K1 ' +
     'AtHigherLevels="extends duration to 8/24 hr at level 3/5" ' +
-    'Description="R90\' Self hits on target inflict +1d6 HP necrotic, target has Disadv on chosen ability for conc or 1 hr"',
+    'Description=' +
+      '"R90\' Self hits on target inflict +1d6 HP necrotic and target has Disadv on chosen ability for conc up to 1 hr"',
   'Hunger Of Hadar':
     'School=Conjuration ' +
     'Level=K3 ' +
-    'Description="R150\' 20\' void inflicts 2d6 HP cold (start of turn) and 2d6 HP acid (end of turn) for conc or 1 min"',
+    'Description=' +
+      '"R150\' 20\' radius inflicts 2d6 HP cold at creatures\' start of turn and 2d6 HP acid at creatures\' end of turn for conc up to 1 min"',
 
   'Lightning Arrow':
     'School=Transmutation ' +
     'Level=R3 ' +
     'AtHigherLevels="inflicts +1d8 HP" ' +
-    'Description="Ranged weapon inflicts 8d6 HP lightning on target and 2d8 HP lightning in 10\' radius (Dexterity half)"',
+    'Description=' +
+      '"Self next ranged weapon attack inflicts 8d6 HP lightning on target (miss half) and 2d8 HP lightning to others in a 10\' radius (Dexterity half)"',
 
   'Phantasmal Force':
     'School=Illusion ' +
     'Level=B2,"K2 [The Archfey]","K2 [The Great Old One]",S2,W2 ' +
-    'Description="R60\' Target perceives illusion that can inflict 1d6 HP psychic/rd (Intelligence neg) for conc or 1 min"',
+    'Description=' +
+      '"R60\' Target perceives an illusion that may inflict 1d6 HP psychic/rd (Intelligence neg; Investigation ends) for conc up to 1 min"',
   'Power Word Heal':
     'School=Evocation ' +
     'Level=B9 ' +
-    'Description="Touched regains all HP and becomes uncharmed, unfrightened, unparalyzed, and unstunned"',
+    'Description=' +
+      '"Touched regains all HP, recovers from charm, fright, paralysis, and stunning, and may use a Reaction to stand from prone"',
 
   'Ray Of Sickness':
     'School=Necromancy ' +
     'Level=S1,W1 ' +
     'AtHigherLevels="inflicts +1d8 HP" ' +
-    'Description="R60\' Target suffers 2d8 HP poison and poisoned 1 rd (Constitution not poisoned)",',
+    'Description=' +
+      '"R60\' Ranged spell inflicts 2d8 HP poison and poisoned 1 rd (Constitution HP only)",',
 
   'Searing Smite':
     'School=Evocation ' +
     'Level=P1 ' +
     'AtHigherLevels="inflicts +1d6 HP initial" ' +
-    'Description="Self weapon inflicts +1d6 HP fire, target suffers 1d6 HP fire/rd (Constitution ends per-rd damage) for conc or 1 min"',
+    'Description=' +
+      '"Next successful self weapon attack inflicts +1d6 HP fire, plus 1d6 HP fire/rd (Constitution ends) for conc up to 1 min"',
   'Staggering Smite':
     'School=Evocation ' +
     'Level=P4 ' +
-    'Description="Next successful attack w/in conc or 1 min inflicts +4d6 HP psychic, Disadv on attacks and ability checks, and no Reaction for 1 rd"',
+    'Description=' +
+      '"Next successful self weapon attack w/in conc up to 1 min inflicts +4d6 HP psychic, Disadv on attacks and ability checks for 1 rd, and no Reaction for 1 rd"',
   'Swift Quiver':
     'School=Transmutation ' +
     'Level=R5 ' +
-    'Description="Touched quiver contains endless ammo, gives extra attack for conc or 1 min"',
+    'Description=' +
+      '"Touched quiver dispenses ammo endlessly and allows two ranged attacks in a bonus action for conc up to 1 min"',
 
   'Telepathy':
     'School=Evocation ' +
     'Level=W8 ' +
-    'Description="Self communicates with ally mentally for 1 dy"',
+    'Description=' +
+      '"Self may communicate mentally with a willing target for 1 dy"',
   'Thorn Whip':
     'School=Transmutation ' +
     'Level=D0 ' +
-    'Description="R30\' Ranged spell inflicts %{(level+7)//6}d6 HP and pulls 10\'"',
+    'Description=' +
+      '"R30\' Ranged spell inflicts %{(level+7)//6}d6 HP and pulls 10\'"',
   'Thunderous Smite':
     'School=Evocation ' +
     'Level=P1 ' +
-    'Description="Next successful attack w/in conc or 1 min inflicts +2d6 HP thunder and pushes 10\' (Strength no push)"',
+    'Description=' +
+      '"Next successful self weapon attack inflicts +2d6 HP thunder and 10\' push (Strength HP only) for conc up to 1 min"',
   'Tsunami':
     'School=Conjuration ' +
     'Level=D8 ' +
-    'Description="RSight 300\'x300\' wall of water inflicts 6d10 HP bludgeoning (Strength half), moves away 50\'/rd for conc or 6 rd"',
+    'Description=' +
+      '"RSight 300\'x300\'x50\' wall of water inflicts 6d10 HP bludgeoning (Strength half); moves away 50\'/rd, reducing height by 50\' and damage by 1d10 HP each rd, for conc up to 6 rd"',
 
   'Witch Bolt':
     'School=Evocation ' +
     'Level=K1,S1,W1 ' +
     'AtHigherLevels="inflicts +1d12 HP initial" ' +
-    'Description="R30\' Ranged spell inflicts 1d12 HP lightning/rd for conc or 1 min"',
+    'Description=' +
+      '"R30\' Ranged spell inflicts 1d12 HP lightning/rd for conc up to 1 min"',
   'Wrathful Smite':
     'School=Evocation ' +
     'Level=P1 ' +
-    'Description="Next successful attack w/in conc or 1 min inflicts +1d6 HP psychic and frightens (Wisdom no fright)"'
+    'Description=' +
+      '"Next successful self weapon attack inflicts +1d6 HP psychic and frightens (Wisdom ends) for conc up to 1 min"'
 
 };
 PHB5E.SPELLS_LEVELS_ADDED = {
