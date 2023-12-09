@@ -264,7 +264,7 @@ var attributes = {
     <tr style="text-align:left">
       <td>Animal Friendship (D1 Ench): R30' Target beast becomes convinced of self harmlessness (Wisdom neg; Intelligence >= 4 immune) for 1 dy [+Level affects +1 target]</td>
     </tr><tr style="text-align:left">
-      <td>Animal Messenger (D2 Ench): R30' Tiny beast target moves to deliver 25-word message to person described for 1 dy [+Level duration +2 dy] [R]</td>
+      <td>Animal Messenger (D2 Ench): R30' Tiny beast target moves to deliver a 25-word message to a described recipient for 1 dy [+Level duration +2 dy] [R]</td>
     </tr><tr style="text-align:left">
       <td>Animal Shapes (D8 Tran): R30' Willing targets become CR 4, large or smaller creatures for conc, 1 dy, or until reduced to 0 HP</td>
     </tr><tr style="text-align:left">
@@ -294,9 +294,9 @@ var attributes = {
     </tr><tr style="text-align:left">
       <td>Conjure Animals (D3 Conj): R60' Summons 1/2/4/8 obedient CR 2/1/half/quarter fey spirits in beast form for conc, 1 hr, or until slain [+Level doubles/triples/quadruples animal count at level 5/7/9]</td>
     </tr><tr style="text-align:left">
-      <td>Conjure Elemental (D5 Conj): R90' Summons obedient environment-appropriate CR 5 elemental for conc, 1 hr, or until slain [+Level CR +1]</td>
+      <td>Conjure Elemental (D5 Conj): R90' Summons an obedient environment-appropriate CR 5 elemental for conc, 1 hr, or until slain [+Level CR +1]</td>
     </tr><tr style="text-align:left">
-      <td>Conjure Fey (D6 Conj): R90' Summons obedient CR 6 fey for conc, 1 hr, or until slain [+Level CR +1]</td>
+      <td>Conjure Fey (D6 Conj): R90' Summons an obedient CR 6 fey for conc, 1 hr, or until slain [+Level CR +1]</td>
     </tr><tr style="text-align:left">
       <td>Conjure Minor Elementals (D4 Conj): R90' Summons 1/2/4/8 obedient CR 2/1/half/quarter elementals for conc, 1 hr, or until slain [+Level doubles/triples elemental count at level 6/8]</td>
     </tr><tr style="text-align:left">
@@ -310,13 +310,13 @@ var attributes = {
     </tr><tr style="text-align:left">
       <td>Create Food And Water (D3 [Circle Of The Land (Desert)] Conj): R30' Creates 45 lb of food and 30 gallons of water</td>
     </tr><tr style="text-align:left">
-      <td>Create Or Destroy Water (D1 Tran): R30' Creates or destroys 10 gallons of water or 30' cu fog [+Level affects +10 gallons or +5' cu]</td>
+      <td>Create Or Destroy Water (D1 Tran): R30' Creates or destroys 10 gallons of water or fog in a 30' cube [+Level affects +10 gallons or +5' cube]</td>
     </tr><tr style="text-align:left">
       <td>Cure Wounds (D1 Evoc): Touched regains 1d8+2 HP [+Level restores +1d8 HP]</td>
     </tr><tr style="text-align:left">
       <td>Darkvision (D2 Tran): Willing touched sees 60' in darkness for 8 hr</td>
     </tr><tr style="text-align:left">
-      <td>Daylight (D3 Evoc): R60' Target a centers 60' radius bright light for 1 hr</td>
+      <td>Daylight (D3 Evoc): R60' Target centers a 60' radius bright light for 1 hr</td>
     </tr><tr style="text-align:left">
       <td>Detect Magic (D1 Divi): R30' Self senses magic auras for conc up to 10 min [R]</td>
     </tr><tr style="text-align:left">
@@ -326,7 +326,7 @@ var attributes = {
     </tr><tr style="text-align:left">
       <td>Dominate Beast (D4 Ench): R60' Target obeys self telepathic commands (Wisdom neg; damage yields another save) for conc up to 1 min [+Level extends duration to 10 min/1 hr/8 hr at level 5/6/7]</td>
     </tr><tr style="text-align:left">
-      <td>Druidcraft (D0 Tran): R30' Self predicts 1 dy weather, causes a plant to bloom, creates a minor sensory effect, or lights or snuffs a small fire</td>
+      <td>Druidcraft (D0 Tran): R30' Self may predict 1 dy weather, cause a plant to bloom, create a minor sensory effect, or light or snuff a small fire</td>
     </tr><tr style="text-align:left">
       <td>Earthquake (D8 Evoc): R500' 100' radius opens fissures, damages structures, breaks concentration (Constitution neg), and knocks prone (Dexterity neg) for conc up to 1 min</td>
     </tr><tr style="text-align:left">
@@ -334,7 +334,7 @@ var attributes = {
     </tr><tr style="text-align:left">
       <td>Entangle (D1 Conj): R90' 20' sq ensnares creatures (Strength neg) for conc up to 1 min</td>
     </tr><tr style="text-align:left">
-      <td>Faerie Fire (D1 Evoc): R60' Objects in a 20' cu glow, giving foes Adv on attacks (Dexterity neg) for conc up to 1 min</td>
+      <td>Faerie Fire (D1 Evoc): R60' Objects in a 20' cube glow, giving foes Adv on attacks (Dexterity neg) for conc up to 1 min</td>
     </tr><tr style="text-align:left">
       <td>Feeblemind (D8 Ench): R150' Target suffers 4d6 HP psychic and reduction of Charisma and Intelligence to 1 (Intelligence HP only)</td>
     </tr><tr style="text-align:left">
@@ -344,15 +344,15 @@ var attributes = {
     </tr><tr style="text-align:left">
       <td>Find Traps (D2 Divi): R120' Self senses the presence of traps</td>
     </tr><tr style="text-align:left">
-      <td>Fire Storm (D7 Evoc): R150' 10 connected 10' cu inflict 7d10 HP fire (Dexterity half) and ignite unattended flammable objects</td>
+      <td>Fire Storm (D7 Evoc): R150' 10 connected 10' cubes inflict 7d10 HP fire (Dexterity half) and ignite unattended flammable objects</td>
     </tr><tr style="text-align:left">
       <td>Flame Blade (D2 Evoc): Self wields a flaming blade that inflicts 3d6 HP fire and lights a 10' radius for conc up to 10 min [+Level inflicts +1d6 HP per 2 levels]</td>
     </tr><tr style="text-align:left">
-      <td>Flaming Sphere (D2 Conj): R60' 5' diameter sphere lights 20' radius, inflicts 2d6 HP fire (Dexterity half), ignites unattended flammable objects, and moves 30'/rd for conc up to 1 min [+Level inflicts +1d6 HP]</td>
+      <td>Flaming Sphere (D2 Conj): R60' 5' sphere lights 20' radius, inflicts 2d6 HP fire (Dexterity half), ignites unattended flammable objects, and moves 30'/rd for conc up to 1 min [+Level inflicts +1d6 HP]</td>
     </tr><tr style="text-align:left">
       <td>Fog Cloud (D1 Conj): R120' 20' radius obscures vision for conc up to 1 hr [+Level increases radius by 20']</td>
     </tr><tr style="text-align:left">
-      <td>Foresight (D9 Divi): Touched gains immunity to surprise and Adv on attack, ability, and saving throws, and foes suffer Disadv on attacks for 8 hr</td>
+      <td>Foresight (D9 Divi): Touched gains immunity to surprise and Adv on attack, ability, and saving throws, and foes suffer Disadv on attacks, for 8 hr</td>
     </tr><tr style="text-align:left">
       <td>Freedom Of Movement (D4 Abju): Touched gains immunity to movement impediments for 1 hr</td>
     </tr><tr style="text-align:left">
@@ -368,11 +368,11 @@ var attributes = {
     </tr><tr style="text-align:left">
       <td>Guidance (D0 Divi): Touched gains +1d4 on 1 ability check w/in conc up to 1 min</td>
     </tr><tr style="text-align:left">
-      <td>Gust Of Wind (D2 Evoc): 60'x10' wind pushes 15' (Strength neg), inflicts half movement, and has 50% chance of extinguishing flames for conc up to 1 min</td>
+      <td>Gust Of Wind (D2 Evoc): 60'x10' wind pushes 15' (Strength neg), inflicts half movement, and has a 50% chance of extinguishing flames for conc up to 1 min</td>
     </tr><tr style="text-align:left">
-      <td>Hallucinatory Terrain (D4 Illu): R300' Creates 150' cu terrain illusion (Investigation detects) for 1 dy</td>
+      <td>Hallucinatory Terrain (D4 Illu): R300' Creates a 150' cube terrain illusion (Investigation detects) for 1 dy</td>
     </tr><tr style="text-align:left">
-      <td>Hallucinatory Terrain (D4 [Circle Of The Land (Desert)] Illu): R300' Creates 150' cu terrain illusion (Investigation detects) for 1 dy</td>
+      <td>Hallucinatory Terrain (D4 [Circle Of The Land (Desert)] Illu): R300' Creates a 150' cube terrain illusion (Investigation detects) for 1 dy</td>
     </tr><tr style="text-align:left">
       <td>Heal (D6 Evoc): R60' Target regains 70 HP and recovers from blinded, deafened, and diseased [+Level restores +10 HP]</td>
     </tr><tr style="text-align:left">
@@ -412,9 +412,9 @@ var attributes = {
     </tr><tr style="text-align:left">
       <td>Moonbeam (D2 Evoc): R120' 5' radius inflicts 2d10 HP radiant (Constitution half; shapechanger Disadv and reverts form on failure) and moves 60'/rd for conc up to 1 min [+Level inflicts +1d10 HP]</td>
     </tr><tr style="text-align:left">
-      <td>Move Earth (D6 Tran): R120' Each 10 minutes reshapes 40' cu of earth for conc up to 2 hr</td>
+      <td>Move Earth (D6 Tran): R120' Reshapes a 40' cube of earth each 10 minutes for conc up to 2 hr</td>
     </tr><tr style="text-align:left">
-      <td>Pass Without Trace (D2 Abju): Targets in 30' radius gain +10 Stealth and become trackable only by magic for conc up to 1 hr</td>
+      <td>Pass Without Trace (D2 Abju): Targets in a 30' radius gain +10 Stealth and become trackable only by magic for conc up to 1 hr</td>
     </tr><tr style="text-align:left">
       <td>Planar Binding (D5 Abju): R60' Binds a celestial, elemental, fey, or fiend to service (Charisma neg) for 1 dy [+Level extends duration to 10/30/180/366 dy at level 6/7/8/9]</td>
     </tr><tr style="text-align:left">
@@ -426,11 +426,11 @@ var attributes = {
     </tr><tr style="text-align:left">
       <td>Polymorph (D4 Tran): R60' Transforms target creature (Wisdom neg; shapechanger immune) for conc up to 1 hr or until reduced to 0 HP</td>
     </tr><tr style="text-align:left">
-      <td>Produce Flame (D0 Conj): Lights a 10' radius around self for 10 min; a ranged spell attack inflicting 2d8 HP ends spell</td>
+      <td>Produce Flame (D0 Conj): Lights a 10' radius for 10 min; a ranged spell attack inflicting 2d8 HP ends spell</td>
     </tr><tr style="text-align:left">
-      <td>Protection From Energy (D3 Abju): Touched gains resistance to acid, cold, fire, lightning, or thunder damage for conc up to 1 hr</td>
+      <td>Protection From Energy (D3 Abju): Touched gains resistance to choice of acid, cold, fire, lightning, or thunder damage for conc up to 1 hr</td>
     </tr><tr style="text-align:left">
-      <td>Protection From Energy (D3 [Circle Of The Land (Desert)] Abju): Touched gains resistance to acid, cold, fire, lightning, or thunder damage for conc up to 1 hr</td>
+      <td>Protection From Energy (D3 [Circle Of The Land (Desert)] Abju): Touched gains resistance to choice of acid, cold, fire, lightning, or thunder damage for conc up to 1 hr</td>
     </tr><tr style="text-align:left">
       <td>Protection From Poison (D2 Abju): Touched recovers from 1 poison and gains Adv on saves vs. poison and resistance to poison damage for 1 hr</td>
     </tr><tr style="text-align:left">
@@ -438,7 +438,7 @@ var attributes = {
     </tr><tr style="text-align:left">
       <td>Regenerate (D7 Tran): Touched regains 4d8+15 HP and 1 HP/rd for 1 hr and reattaches or regrows severed parts</td>
     </tr><tr style="text-align:left">
-      <td>Reincarnate (D5 Tran): Resurrects touched in new body</td>
+      <td>Reincarnate (D5 Tran): Resurrects willing soul of touched corpse in new body</td>
     </tr><tr style="text-align:left">
       <td>Resistance (D0 Abju): Touched gains +1d4 on 1 save w/in conc up to 1 min</td>
     </tr><tr style="text-align:left">
@@ -448,7 +448,7 @@ var attributes = {
     </tr><tr style="text-align:left">
       <td>Shapechange (D9 Tran): Self polymorphs for conc up to 1 hr or until reduced to 0 HP</td>
     </tr><tr style="text-align:left">
-      <td>Shillelagh (D0 Tran): Touched club inflicts +6 magical attacks and 1d8+spellModifier.D HP damage for 1 min</td>
+      <td>Shillelagh (D0 Tran): Touched club inflicts +6 magical attacks and 1d8+2 HP damage for 1 min</td>
     </tr><tr style="text-align:left">
       <td>Silence (D2 [Circle Of The Land (Desert)] Illu): R120' 20' radius blocks sound for conc up to 10 min [R]</td>
     </tr><tr style="text-align:left">
@@ -472,15 +472,15 @@ var attributes = {
     </tr><tr style="text-align:left">
       <td>Thorn Whip (D0 Tran): R30' Ranged spell inflicts 2d6 HP and pulls 10'</td>
     </tr><tr style="text-align:left">
-      <td>Thunderwave (D1 Evoc): 15' cu inflicts 2d8 HP thunder and pushes 10' (Constitution half HP only) [+Level inflicts +1d8 HP]</td>
+      <td>Thunderwave (D1 Evoc): 15' cube inflicts 2d8 HP thunder and pushes 10' (Constitution half HP only) [+Level inflicts +1d8 HP]</td>
     </tr><tr style="text-align:left">
       <td>Transport Via Plants (D6 Conj): Allows teleportation from target large plant to another for 1 rd</td>
     </tr><tr style="text-align:left">
       <td>Tree Stride (D5 Conj): Self may teleport 500' between like trees 1/rd for conc up to 1 min</td>
     </tr><tr style="text-align:left">
-      <td>True Resurrection (D9 Necr): Restores life to touched or named 200-year-old corpse</td>
+      <td>True Resurrection (D9 Necr): Restores life and full HP to a willing touched or named 200-year-old corpse, removing all diseases, poisons, wounds, and curses</td>
     </tr><tr style="text-align:left">
-      <td>Tsunami (D8 Conj): RSight 300'x300'x50' wall of water inflicts 6d10 HP bludgeoning (Strength half); moves away 50'/rd, reducing height by 50' and damage by 1d10 HP, for conc up to 6 rd</td>
+      <td>Tsunami (D8 Conj): RSight 300'x300'x50' wall of water inflicts 6d10 HP bludgeoning (Strength half); moves away 50'/rd, reducing height by 50' and damage by 1d10 HP each rd, for conc up to 6 rd</td>
     </tr><tr style="text-align:left">
       <td>Wall Of Fire (D4 Evoc): R120' 60'x20'x1' wall inflicts 5d8 HP fire (Dexterity half) w/in 10' of chosen side for conc up to 1 min [+Level inflicts +1d8 HP]</td>
     </tr><tr style="text-align:left">
@@ -488,7 +488,7 @@ var attributes = {
     </tr><tr style="text-align:left">
       <td>Wall Of Stone (D5 [Circle Of The Land (Desert)] Evoc): R120' Creates 10 10'x10'x6" or 10'x20'x3" panels for conc up to 10 min</td>
     </tr><tr style="text-align:left">
-      <td>Wall Of Thorns (D6 Conj): R120' 60'x10'x5' wall inflicts 7d8 HP piercing (Dexterity half) initially plus 1/2 Speed and 7d8 HP slashing to passers (Dexterity half) for conc up to 10 min [+Level inflicts +1d8 HP]</td>
+      <td>Wall Of Thorns (D6 Conj): R120' 60'x10'x5' wall inflicts 7d8 HP piercing (Dexterity half) initially plus half Speed and 7d8 HP slashing to passers (Dexterity half) for conc up to 10 min [+Level inflicts +1d8 HP]</td>
     </tr><tr style="text-align:left">
       <td>Water Breathing (D3 Tran): R30' 10 targets may breathe underwater for 1 dy [R]</td>
     </tr><tr style="text-align:left">
