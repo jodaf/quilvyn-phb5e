@@ -1134,7 +1134,7 @@ PHB5E.FEATURES_ADDED = {
     'Note="May make a bonus attack after crit or reducing foe to 0 HP/May suffer -5 attack w/a heavy weapon to gain +10 damage"',
   'Healer':
     'Section=Feature ' +
-    'Note="Using a healer\'s kit to stabilize also restores 1 HP/May use a healer\'s kit to restore 1d6 + 4 + target HD HP 1/short rest"',
+    'Note="Using a healer\'s kit to stabilize also restores 1 HP/May use a healer\'s kit to restore 1d6+4 + target HD HP 1/short rest"',
   'Heavily Armored':
     'Section=Ability,Combat ' +
     'Note=' +
@@ -1355,7 +1355,7 @@ PHB5E.SPELLS_ADDED = {
     'School=Conjuration ' +
     'Level=K6,S6,W6 ' +
     'Description=' +
-      '"R10\' Creates a portal pair that can teleport 500\' for conc up to 10 min"',
+      '"R10\' Creates a portal pair that can teleport creatures 500\' for conc up to 10 min"',
   'Armor Of Agathys':
     'School=Abjuration ' +
     'Level=K1 ' +
@@ -1367,7 +1367,7 @@ PHB5E.SPELLS_ADDED = {
     'Level=K1 ' +
     'AtHigherLevels="inflicts +1d6 HP" ' +
     'Description=' +
-      '"10\' radius inflicts 2d6 HP necrotic and no Reaction (Strength half HP only) for 1 rd"',
+      '"10\' radius inflicts 2d6 HP necrotic and no Reaction for 1 rd (Strength half HP only)"',
   'Aura Of Life':
     'School=Abjuration ' +
     'Level=P4 ' +
@@ -1387,7 +1387,7 @@ PHB5E.SPELLS_ADDED = {
     'School=Abjuration ' +
     'Level=P5 ' +
     'Description=' +
-      '"Next successful self weapon attack inflicts +5d10 HP force, plus banishment to home plane or demiplane for conc up to 1 min if foe is reduced to 50 HP"',
+      '"Next successful self weapon attack inflicts +5d10 HP force, plus banishment to home plane or a demiplane for conc up to 1 min if foe is reduced to 50 HP"',
   'Beast Sense':
     'School=Divination ' +
     'Level=D2,R2 ' +
@@ -1415,7 +1415,7 @@ PHB5E.SPELLS_ADDED = {
     'School=Abjuration ' +
     'Level=P5 ' +
     'Description=' +
-      '"Allies in a 30\' radius gain Adv on save vs. magic, and saves yields no damage instead of half, for conc up to 10 min"',
+      '"Allies in a 30\' radius gain Adv on saves vs. magic, and saves yields no damage instead of half, for conc up to 10 min"',
   'Cloud Of Daggers':
     'School=Conjuration ' +
     'Level=B2,K2,S2,W2 ' +
@@ -1440,7 +1440,7 @@ PHB5E.SPELLS_ADDED = {
     'Level=R2 ' +
     'AtHigherLevels="affects +2 pieces" ' +
     'Description=' +
-      '"R5\' Four pieces of ammo attack non-designated creatures w/in 30\', inflict 1d6 HP piercing (Dexterity neg) for 8 hr"',
+      '"R5\' Four pieces of ammo attack non-designated creatures w/in 30\', inflicting 1d6 HP piercing each (Dexterity neg), for 8 hr"',
   'Crown Of Madness':
     'School=Enchantment ' +
     'Level=B2,K2,S2,W2 ' +
@@ -1486,7 +1486,8 @@ PHB5E.SPELLS_ADDED = {
   'Friends':
     'School=Enchantment ' +
     'Level=B0,K0,S0,W0 ' +
-    'Description="Self gains on Adv on Charisma w/non-hostile target for conc up to 1 min; target becomes hostile afterward"',
+    'Description=' +
+      '"Self gains on Adv on Charisma w/non-hostile target for conc up to 1 min; target becomes hostile afterward"',
 
   'Grasping Vine':
     'School=Conjuration ' +
@@ -1499,13 +1500,13 @@ PHB5E.SPELLS_ADDED = {
     'Level=R1 ' +
     'AtHigherLevels="inflicts +1d10 HP (6d10 HP maximum)" ' +
     'Description=' +
-      '"Self next successful ranged attack inflicts 1d10 HP piercing in a 5\' radius (Dexterity half) for conc up to 1 min"',
+      '"Next successful self ranged attack inflicts 1d10 HP piercing in a 5\' radius (Dexterity half) for conc up to 1 min"',
   'Hex':
     'School=Enchantment ' +
     'Level=K1 ' +
     'AtHigherLevels="extends duration to 8/24 hr at level 3/5" ' +
     'Description=' +
-      '"R90\' Self hits on target inflict +1d6 HP necrotic and target has Disadv on chosen ability for conc up to 1 hr"',
+      '"R90\' Self attacks on target inflict +1d6 HP necrotic, and target has Disadv on chosen ability, for conc up to 1 hr"',
   'Hunger Of Hadar':
     'School=Conjuration ' +
     'Level=K3 ' +
@@ -1517,7 +1518,7 @@ PHB5E.SPELLS_ADDED = {
     'Level=R3 ' +
     'AtHigherLevels="inflicts +1d8 HP" ' +
     'Description=' +
-      '"Self next ranged weapon attack inflicts 8d6 HP lightning on target (miss half) and 2d8 HP lightning to others in a 10\' radius (Dexterity half)"',
+      '"Next self ranged weapon attack inflicts 8d6 HP lightning on target (miss half) and 2d8 HP lightning to others in a 10\' radius (Dexterity half)"',
 
   'Phantasmal Force':
     'School=Illusion ' +
