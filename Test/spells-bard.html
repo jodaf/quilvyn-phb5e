@@ -274,7 +274,7 @@ var attributes = {
   </tr><tr style="text-align:center">
     <td><b>Spells</b>:     <table id="Spells" style="width:100%">
     <tr style="text-align:left">
-      <td>Animal Friendship (B1 Ench): R30' Target beast becomes convinced of self harmlessness (Wisdom neg; Intelligence >= 4 immune) for 1 dy [+Level affects +1 target]</td>
+      <td>Animal Friendship (B1 Ench): R30' Target beast becomes convinced of self harmlessness (Wisdom neg; Intelligence 4 or higher immune) for 1 dy [+Level affects +1 target]</td>
     </tr><tr style="text-align:left">
       <td>Animal Messenger (B2 Ench): R30' Tiny beast target moves to deliver a 25-word message to a described recipient for 1 dy [+Level duration +2 dy] [R]</td>
     </tr><tr style="text-align:left">
@@ -302,7 +302,7 @@ var attributes = {
     </tr><tr style="text-align:left">
       <td>Compulsion (B4 Ench): R30' Self controls target movement (Wisdom ends) for conc up to 1 min</td>
     </tr><tr style="text-align:left">
-      <td>Confusion (B4 Ench): R90' Creatures in a 10' radius randomly 10% wander/50% do nothing/20% attack adjacent creature/20% act normally (Wisdom neg) for conc up to 1 min [+Level increases radius by 5']</td>
+      <td>Confusion (B4 Ench): R90' Creatures in a 10' radius randomly 10% wander/50% do nothing/20% attack an adjacent creature/20% act normally (Wisdom neg) for conc up to 1 min [+Level increases radius by 5']</td>
     </tr><tr style="text-align:left">
       <td>Crown Of Madness (B2 Ench): R120' Self may order target's attacks each rd (Wisdom ends) for conc up to 1 min</td>
     </tr><tr style="text-align:left">
@@ -328,7 +328,7 @@ var attributes = {
     </tr><tr style="text-align:left">
       <td>Dream (B5 Illu): Touched controls the dreams of a known target for 8 hr; may also inflict 3d6 HP psychic (Wisdom neg)</td>
     </tr><tr style="text-align:left">
-      <td>Enhance Ability (B2 Tran): Touched gains Adv on chosen ability checks for conc up to 1 hr; Constitution also gives 2d6 temporary HP, Strength dbl load, and Dexterity negates damage from 20' fall [+Level affects +1 target]</td>
+      <td>Enhance Ability (B2 Tran): Touched gains Adv on chosen ability checks for conc up to 1 hr; Constitution also gives 2d6 temporary HP, Strength dbl load, and Dexterity negates damage from a 20' fall [+Level affects +1 target]</td>
     </tr><tr style="text-align:left">
       <td>Enthrall (B2 Ench): R60' Target suffers Disadv on Perception to notice others (Wisdom neg) for 1 min</td>
     </tr><tr style="text-align:left">
@@ -390,19 +390,19 @@ var attributes = {
     </tr><tr style="text-align:left">
       <td>Knock (B2 Tran): R60' Unlocks, unsticks, or unbars target and suppresses <i>Arcane Lock</i> for 10 min</td>
     </tr><tr style="text-align:left">
-      <td>Legend Lore (B5 Divi): Self learns info about a named person, place, or object</td>
+      <td>Legend Lore (B5 Divi): Self learns info about a specified person, place, or object</td>
     </tr><tr style="text-align:left">
       <td>Leomund's Tiny Hut (B3 Evoc): Creates a 10' radius dome, impassable by objects and spells, for 8 hr [R]</td>
     </tr><tr style="text-align:left">
       <td>Lesser Restoration (B2 Abju): Touched recovers from blindness, deafness, disease, paralysis, or poison</td>
     </tr><tr style="text-align:left">
-      <td>Light (B0 Evoc): Touched object lights 20' radius (Dexterity neg) for 1 hr</td>
+      <td>Light (B0 Evoc): Touched object lights a 20' radius (Dexterity neg) for 1 hr</td>
     </tr><tr style="text-align:left">
-      <td>Locate Animals Or Plants (B2 Divi): Self learns location of named beast or plant w/in 5 miles [R]</td>
+      <td>Locate Animals Or Plants (B2 Divi): Self learns location of specified beast or plant w/in 5 miles [R]</td>
     </tr><tr style="text-align:left">
-      <td>Locate Creature (B4 Divi): Self learns location of named creature or species w/in 1000' for conc up to 1 hr</td>
+      <td>Locate Creature (B4 Divi): Self learns location of specified creature or species w/in 1000' for conc up to 1 hr</td>
     </tr><tr style="text-align:left">
-      <td>Locate Object (B2 Divi): Self learns location of named object or type w/in 1000' for conc up to 10 min</td>
+      <td>Locate Object (B2 Divi): Self learns location of specified object or type w/in 1000' for conc up to 10 min</td>
     </tr><tr style="text-align:left">
       <td>Longstrider (B1 Tran): Touched gains +10' Speed for 1 hr [+Level affects +1 target]</td>
     </tr><tr style="text-align:left">
@@ -412,13 +412,13 @@ var attributes = {
     </tr><tr style="text-align:left">
       <td>Major Image (B3 Illu): R120' Creates a 20' cube sight, sound, and touch illusion (Investigation detects) for conc up to 10 min [+Level extends duration to permanent at level 6]</td>
     </tr><tr style="text-align:left">
-      <td>Mass Cure Wounds (B5 Evoc): R60' 6 targets in a 30' radius regain 3d8 + -1 HP [+Level restores +1d8 HP]</td>
+      <td>Mass Cure Wounds (B5 Evoc): R60' 6 targets in a 30' radius regain 3d8-1 HP [+Level restores +1d8 HP]</td>
     </tr><tr style="text-align:left">
       <td>Mass Suggestion (B6 Ench): R60' 12 targets follow a reasonable suggestion (Wisdom neg) for 1 dy [+Level extends duration to 10/30/366 dy at level 7/8/9]</td>
     </tr><tr style="text-align:left">
       <td>Mending (B0 Tran): Touch repairs a small break or tear</td>
     </tr><tr style="text-align:left">
-      <td>Message (B0 Tran): R120' Self and target may have a whispered conversation for 1 rd</td>
+      <td>Message (B0 Tran): R120' Self and target may hold a whispered conversation for 1 rd</td>
     </tr><tr style="text-align:left">
       <td>Mind Blank (B8 Abju): Touched gains immunity to psychic damage, thought reading, divination, and charm for 1 dy</td>
     </tr><tr style="text-align:left">
@@ -428,15 +428,15 @@ var attributes = {
     </tr><tr style="text-align:left">
       <td>Mislead (B5 Illu): Makes self invisible (attacking or casting ends) and creates an illusory duplicate that can move 60' and share senses for conc up to 1 hr</td>
     </tr><tr style="text-align:left">
-      <td>Modify Memory (B5 Ench): R30' Changes target's memory of an event from the past dy (Wisdom neg) [+Level changes memory of and event from the past 7/30/365/any dy at level 6/7/8/9]</td>
+      <td>Modify Memory (B5 Ench): R30' Changes target's memory of an event from the past dy (Wisdom neg) [+Level changes memory of an event from the past 7/30/365/any dy at level 6/7/8/9]</td>
     </tr><tr style="text-align:left">
       <td>Mordenkainen's Magnificent Mansion (B7 Conj): R300' Self and designated creatures may enter an extradimensional dwelling for 1 dy</td>
     </tr><tr style="text-align:left">
-      <td>Mordenkainen's Sword (B7 Evoc): R60' Force weapon inflicts 3d10 HP force (spell attack), moves 20'/rd for conc or 1 min</td>
+      <td>Mordenkainen's Sword (B7 Evoc): R60' Spell attack w/force weapon inflicts 3d10 HP force, and weapon moves 20'/rd for conc or 1 min</td>
     </tr><tr style="text-align:left">
       <td>Nondetection (B3 Abju): Willing touched or object gains immunity to divination for 8 hr</td>
     </tr><tr style="text-align:left">
-      <td>Otto's Irresistible Dance (B6 Ench): R30' Target dances (Disadv on Dexterity and attack; foes Adv on attacks) (Wisdom ends) for conc up to 1 min</td>
+      <td>Otto's Irresistible Dance (B6 Ench): R30' Target suffers Disadv on Dexterity and attacks, and foes gain Adv on attacks (Wisdom ends), for conc up to 1 min</td>
     </tr><tr style="text-align:left">
       <td>Phantasmal Force (B2 Illu): R60' Target perceives an illusion that may inflict 1d6 HP psychic/rd (Intelligence neg; Investigation ends) for conc up to 1 min</td>
     </tr><tr style="text-align:left">
@@ -478,7 +478,7 @@ var attributes = {
     </tr><tr style="text-align:left">
       <td>Silent Image (B1 Illu): R60' Creates a 15' cube illusion (Investigation detects) for conc up to 10 min</td>
     </tr><tr style="text-align:left">
-      <td>Sleep (B1 Ench): R90' 20' radius sleeps up to 5d8 HP of creatures, weakest first, for 1 min (damage or shaking wakens) [+Level affects +2d8 HP of creatures]</td>
+      <td>Sleep (B1 Ench): R90' 20' radius sleeps 5d8 HP of creatures, weakest first, for 1 min (damage or shaking wakens) [+Level affects +2d8 HP of creatures]</td>
     </tr><tr style="text-align:left">
       <td>Speak With Animals (B1 Divi): Self may talk with animals for 10 min [R]</td>
     </tr><tr style="text-align:left">
@@ -486,11 +486,11 @@ var attributes = {
     </tr><tr style="text-align:left">
       <td>Speak With Plants (B3 Tran): Self may talk with and command plants for 10 min</td>
     </tr><tr style="text-align:left">
-      <td>Stinking Cloud (B3 Conj): R90' 20' radius causes retching (Constitution neg) for conc up to 1 min</td>
+      <td>Stinking Cloud (B3 Conj): R90' 20' radius inflicts loss of action (Constitution neg) for conc up to 1 min</td>
     </tr><tr style="text-align:left">
       <td>Suggestion (B2 Ench): R30' Target follows a reasonable suggestion (Wisdom neg) for conc up to 8 hr</td>
     </tr><tr style="text-align:left">
-      <td>Symbol (B7 Abju): Inscribes touched w/a permanent glyph that invokes harmful magic effects</td>
+      <td>Symbol (B7 Abju): Inscribes touched w/a permanent glyph that inflicts harmful magic effects</td>
     </tr><tr style="text-align:left">
       <td>Tasha's Hideous Laughter (B1 Ench): R30' Target ROFL (Wisdom ends) for conc up to 1 min</td>
     </tr><tr style="text-align:left">

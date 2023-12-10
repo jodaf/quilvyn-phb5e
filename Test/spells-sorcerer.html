@@ -273,13 +273,13 @@ var attributes = {
     </tr><tr style="text-align:left">
       <td>Animate Objects (S5 Tran): R120' 10 small, 5 medium, 2 large, or 1 huge objects obey mental commands (R500') for conc up to 1 min [+Level animates +2 objects]</td>
     </tr><tr style="text-align:left">
-      <td>Arcane Gate (S6 Conj): R10' Creates a portal pair that can teleport 500' for conc up to 10 min</td>
+      <td>Arcane Gate (S6 Conj): R10' Creates a portal pair that can teleport creatures 500' for conc up to 10 min</td>
     </tr><tr style="text-align:left">
-      <td>Banishment (S4 Abju): R60' Banishes target to home or demiplane (Charisma neg) for conc up to 1 min [+Level affects +1 target]</td>
+      <td>Banishment (S4 Abju): R60' Banishes target to home or a demiplane (Charisma neg) for conc up to 1 min [+Level affects +1 target]</td>
     </tr><tr style="text-align:left">
       <td>Blade Ward (S0 Abju): Self gains resistance to bludgeoning, piercing, and slashing weapon damage for 1 rd</td>
     </tr><tr style="text-align:left">
-      <td>Blight (S4 Necr): R30' target suffers 8d8 HP necrotic (Constitution half (plant Disadv, 64 HP on fail)) [+Level inflicts +1d8 HP]</td>
+      <td>Blight (S4 Necr): R30' target suffers 8d8 HP necrotic (Constitution half; plant target suffers Disadv and maximum damage on failure) [+Level inflicts +1d8 HP]</td>
     </tr><tr style="text-align:left">
       <td>Blindness/Deafness (S2 Necr): R30' Inflicts choice of blindness or deafness on target (Constitution ends) for 1 min [+Level affects +1 target]</td>
     </tr><tr style="text-align:left">
@@ -311,7 +311,7 @@ var attributes = {
     </tr><tr style="text-align:left">
       <td>Cone Of Cold (S5 Evoc): 60' cone inflicts 8d8 HP cold (Constitution half) [+Level inflicts +1d8 HP]</td>
     </tr><tr style="text-align:left">
-      <td>Confusion (S4 Ench): R90' Creatures in a 10' radius randomly 10% wander/50% do nothing/20% attack adjacent creature/20% act normally (Wisdom neg) for conc up to 1 min [+Level increases radius by 5']</td>
+      <td>Confusion (S4 Ench): R90' Creatures in a 10' radius randomly 10% wander/50% do nothing/20% attack an adjacent creature/20% act normally (Wisdom neg) for conc up to 1 min [+Level increases radius by 5']</td>
     </tr><tr style="text-align:left">
       <td>Counterspell (S3 Abju): R60' Negates foe casting up to spell level 3; successful DC 10 + spell level negates a higher-level spell [+Level negates any spell of equal or lesser level]</td>
     </tr><tr style="text-align:left">
@@ -349,13 +349,13 @@ var attributes = {
     </tr><tr style="text-align:left">
       <td>Earthquake (S8 Evoc): R500' 100' radius opens fissures, damages structures, breaks concentration (Constitution neg), and knocks prone (Dexterity neg) for conc up to 1 min</td>
     </tr><tr style="text-align:left">
-      <td>Enhance Ability (S2 Tran): Touched gains Adv on chosen ability checks for conc up to 1 hr; Constitution also gives 2d6 temporary HP, Strength dbl load, and Dexterity negates damage from 20' fall [+Level affects +1 target]</td>
+      <td>Enhance Ability (S2 Tran): Touched gains Adv on chosen ability checks for conc up to 1 hr; Constitution also gives 2d6 temporary HP, Strength dbl load, and Dexterity negates damage from a 20' fall [+Level affects +1 target]</td>
     </tr><tr style="text-align:left">
-      <td>Enlarge/Reduce (S2 Tran): R30' Target becomes dbl size (Adv on Strength, +1d4 weapon damage) or half size (Disadv on Strength, -1d4 weapon damage) (Constitution neg) for conc up to 1 min</td>
+      <td>Enlarge/Reduce (S2 Tran): R30' Target becomes dbl size (Adv on Strength, +1d4 HP weapon damage) or half size (Disadv on Strength, -1d4 HP weapon damage) (Constitution neg) for conc up to 1 min</td>
     </tr><tr style="text-align:left">
       <td>Etherealness (S7 Tran): Self enters Ethereal Plane for up to 8 hr [+Level affects +2/+5 targets at level 8/9]</td>
     </tr><tr style="text-align:left">
-      <td>Expeditious Retreat (S1 Tran): Self gains bonus Dash for conc up to 10 min</td>
+      <td>Expeditious Retreat (S1 Tran): Self gains a bonus Dash 1/rd for conc up to 10 min</td>
     </tr><tr style="text-align:left">
       <td>Eyebite (S6 Necr): R60' Inflicts choice of sleep, panic, or sickened (Disadv on attack and ability rolls) on 1 target/rd (Wisdom neg) for conc up to 1 min</td>
     </tr><tr style="text-align:left">
@@ -367,7 +367,7 @@ var attributes = {
     </tr><tr style="text-align:left">
       <td>Finger Of Death (S7 Necr): R60' Target suffers 7d8+30 HP necrotic (Constitution half); becomes an obedient zombie if killed</td>
     </tr><tr style="text-align:left">
-      <td>Fire Bolt (S0 Evoc): R120' Ranged spell inflicts 2d10 HP fire or ignites unattended flammable target</td>
+      <td>Fire Bolt (S0 Evoc): R120' Ranged spell inflicts 2d10 HP fire or ignites an unattended flammable target</td>
     </tr><tr style="text-align:left">
       <td>Fire Storm (S7 Evoc): R150' 10 connected 10' cubes inflict 7d10 HP fire (Dexterity half) and ignite unattended flammable objects</td>
     </tr><tr style="text-align:left">
@@ -411,7 +411,7 @@ var attributes = {
     </tr><tr style="text-align:left">
       <td>Levitate (S2 Tran): R60' Target floats (Constitution neg) for conc up to 10 min</td>
     </tr><tr style="text-align:left">
-      <td>Light (S0 Evoc): Touched object lights 20' radius (Dexterity neg) for 1 hr</td>
+      <td>Light (S0 Evoc): Touched object lights a 20' radius (Dexterity neg) for 1 hr</td>
     </tr><tr style="text-align:left">
       <td>Lightning Bolt (S3 Evoc): 100'x5' line inflicts 8d6 HP lightning (Dexterity half) and ignites unattended flammable objects [+Level inflicts +1d6 HP]</td>
     </tr><tr style="text-align:left">
@@ -427,13 +427,13 @@ var attributes = {
     </tr><tr style="text-align:left">
       <td>Mending (S0 Tran): Touch repairs a small break or tear</td>
     </tr><tr style="text-align:left">
-      <td>Message (S0 Tran): R120' Self and target may have a whispered conversation for 1 rd</td>
+      <td>Message (S0 Tran): R120' Self and target may hold a whispered conversation for 1 rd</td>
     </tr><tr style="text-align:left">
       <td>Meteor Swarm (S9 Evoc): R1 mile 4 40' radius areas each inflict 20d6 HP fire and 20d6 HP bludgeoning (Dexterity half) and ignite unattended flammable objects</td>
     </tr><tr style="text-align:left">
       <td>Minor Illusion (S0 Illu): R30' Creates the sound of 1 creature or a 5' cube image (Investigation detects) for 1 min</td>
     </tr><tr style="text-align:left">
-      <td>Mirror Image (S2 Illu): 3 duplicates (AC 14) misdirect attacks on self for 1 min</td>
+      <td>Mirror Image (S2 Illu): 3 duplicates (AC 14; damage destroys) misdirect attacks on self for 1 min</td>
     </tr><tr style="text-align:left">
       <td>Misty Step (S2 Conj): Teleports self 30'</td>
     </tr><tr style="text-align:left">
@@ -453,7 +453,7 @@ var attributes = {
     </tr><tr style="text-align:left">
       <td>Prestidigitation (S0 Tran): R10' Self may perform minor magic effects for 1 hr</td>
     </tr><tr style="text-align:left">
-      <td>Prismatic Spray (S7 Evoc): 60' cone randomly inflicts 10d6 HP fire, acid, lightning, poison, or cold (Dexterity half), restrains (Dexterity neg) and petrifies after 3 failed Constitution saves (3 successes neg), or blinds (Dexterity neg) and banishes to another plane (Wisdom neg)</td>
+      <td>Prismatic Spray (S7 Evoc): 60' cone randomly inflicts one of: 10d6 HP fire, acid, lightning, poison, or cold (Dexterity half); restrains (Dexterity neg) and petrifies after 3 failed Constitution saves (3 successes neg); blinds (Dexterity neg) and banishes to another plane (Wisdom neg)</td>
     </tr><tr style="text-align:left">
       <td>Protection From Energy (S3 Abju): Touched gains resistance to choice of acid, cold, fire, lightning, or thunder damage for conc up to 1 hr</td>
     </tr><tr style="text-align:left">
@@ -471,13 +471,13 @@ var attributes = {
     </tr><tr style="text-align:left">
       <td>Shatter (S2 Evoc): R60' 10' radius inflicts 3d8 HP thunder (Constitution half) [+Level inflicts +1d8 HP]</td>
     </tr><tr style="text-align:left">
-      <td>Shield (S1 Abju): Reaction gives +5 AC and immunity to <i>Magic Missile</i> until next turn</td>
+      <td>Shield (S1 Abju): Cast as a Reaction to gain +5 AC and immunity to <i>Magic Missile</i> until next turn</td>
     </tr><tr style="text-align:left">
       <td>Shocking Grasp (S0 Evoc): Touched suffers 2d8 HP lightning and cannot use Reaction until next turn</td>
     </tr><tr style="text-align:left">
       <td>Silent Image (S1 Illu): R60' Creates a 15' cube illusion (Investigation detects) for conc up to 10 min</td>
     </tr><tr style="text-align:left">
-      <td>Sleep (S1 Ench): R90' 20' radius sleeps up to 5d8 HP of creatures, weakest first, for 1 min (damage or shaking wakens) [+Level affects +2d8 HP of creatures]</td>
+      <td>Sleep (S1 Ench): R90' 20' radius sleeps 5d8 HP of creatures, weakest first, for 1 min (damage or shaking wakens) [+Level affects +2d8 HP of creatures]</td>
     </tr><tr style="text-align:left">
       <td>Sleet Storm (S3 Conj): R150' 40' radius douses flames and inflicts difficult terrain and falling prone (Dexterity neg)</td>
     </tr><tr style="text-align:left">
@@ -485,7 +485,7 @@ var attributes = {
     </tr><tr style="text-align:left">
       <td>Spider Climb (S2 Tran): Touched may crawl on walls and ceilings for conc up to 1 hr</td>
     </tr><tr style="text-align:left">
-      <td>Stinking Cloud (S3 Conj): R90' 20' radius causes retching (Constitution neg) for conc up to 1 min</td>
+      <td>Stinking Cloud (S3 Conj): R90' 20' radius inflicts loss of action (Constitution neg) for conc up to 1 min</td>
     </tr><tr style="text-align:left">
       <td>Stoneskin (S4 Abju): Touched gains resistance to bludgeoning, piercing, and slashing damage for conc up to 1 hr</td>
     </tr><tr style="text-align:left">
@@ -503,7 +503,7 @@ var attributes = {
     </tr><tr style="text-align:left">
       <td>Thunderwave (S1 Evoc): 15' cube inflicts 2d8 HP thunder and pushes 10' (Constitution half HP only) [+Level inflicts +1d8 HP]</td>
     </tr><tr style="text-align:left">
-      <td>Time Stop (S9 Tran): Self gains 1d4 + 1 turns (affecting another creature or moving more than 1000' away ends)</td>
+      <td>Time Stop (S9 Tran): Self gains 1d4+1 turns (affecting another creature or moving more than 1000' away ends)</td>
     </tr><tr style="text-align:left">
       <td>Tongues (S3 Divi): Touched understands any language and is universally understood for 1 hr</td>
     </tr><tr style="text-align:left">

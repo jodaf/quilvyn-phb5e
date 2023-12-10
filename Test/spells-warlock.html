@@ -267,19 +267,19 @@ var attributes = {
   </tr><tr style="text-align:center">
     <td><b>Spells</b>:     <table id="Spells" style="width:100%">
     <tr style="text-align:left">
-      <td>Arcane Gate (K6 Conj): R10' Creates a portal pair that can teleport 500' for conc up to 10 min</td>
+      <td>Arcane Gate (K6 Conj): R10' Creates a portal pair that can teleport creatures 500' for conc up to 10 min</td>
     </tr><tr style="text-align:left">
       <td>Armor Of Agathys (K1 Abju): Self gains 5 temporary HP, and a successful attacker suffers 5 HP cold, for 1 hr [+Level gives +5 temporary HP and inflicts +5 HP]</td>
     </tr><tr style="text-align:left">
-      <td>Arms Of Hadar (K1 Conj): 10' radius inflicts 2d6 HP necrotic and no Reaction (Strength half HP only) for 1 rd [+Level inflicts +1d6 HP]</td>
+      <td>Arms Of Hadar (K1 Conj): 10' radius inflicts 2d6 HP necrotic and no Reaction for 1 rd (Strength half HP only) [+Level inflicts +1d6 HP]</td>
     </tr><tr style="text-align:left">
       <td>Astral Projection (K9 Necr): R10' Self and 8 willing targets project to astral plane</td>
     </tr><tr style="text-align:left">
-      <td>Banishment (K4 Abju): R60' Banishes target to home or demiplane (Charisma neg) for conc up to 1 min [+Level affects +1 target]</td>
+      <td>Banishment (K4 Abju): R60' Banishes target to home or a demiplane (Charisma neg) for conc up to 1 min [+Level affects +1 target]</td>
     </tr><tr style="text-align:left">
       <td>Blade Ward (K0 Abju): Self gains resistance to bludgeoning, piercing, and slashing weapon damage for 1 rd</td>
     </tr><tr style="text-align:left">
-      <td>Blight (K4 Necr): R30' target suffers 8d8 HP necrotic (Constitution half (plant Disadv, 64 HP on fail)) [+Level inflicts +1d8 HP]</td>
+      <td>Blight (K4 Necr): R30' target suffers 8d8 HP necrotic (Constitution half; plant target suffers Disadv and maximum damage on failure) [+Level inflicts +1d8 HP]</td>
     </tr><tr style="text-align:left">
       <td>Blindness/Deafness (K2 [The Fiend] Necr): R30' Inflicts choice of blindness or deafness on target (Constitution ends) for 1 min [+Level affects +1 target]</td>
     </tr><tr style="text-align:left">
@@ -317,7 +317,7 @@ var attributes = {
     </tr><tr style="text-align:left">
       <td>Darkness (K2 Evoc): R60' Target centers a 15' radius lightless area for conc up to 10 min</td>
     </tr><tr style="text-align:left">
-      <td>Demiplane (K8 Conj): R60' Door leads to 30'x30'x30' extradimensional room for 1 hr</td>
+      <td>Demiplane (K8 Conj): R60' Door leads to a 30'x30'x30' extradimensional room for 1 hr</td>
     </tr><tr style="text-align:left">
       <td>Detect Thoughts (K2 [The Great Old One] Divi): R30' Self senses target surface thoughts and may probe deeper (Wisdom neg) for conc up to 1 min</td>
     </tr><tr style="text-align:left">
@@ -349,7 +349,7 @@ var attributes = {
     </tr><tr style="text-align:left">
       <td>Evard's Black Tentacles (K4 [The Great Old One] Conj): R90' 20' sq inflicts 3d6 HP bludgeoning and restrains (Dexterity neg, Strength or Dexterity breaks free) for conc up to 1 min</td>
     </tr><tr style="text-align:left">
-      <td>Expeditious Retreat (K1 Tran): Self gains bonus Dash for conc up to 10 min</td>
+      <td>Expeditious Retreat (K1 Tran): Self gains a bonus Dash 1/rd for conc up to 10 min</td>
     </tr><tr style="text-align:left">
       <td>Eyebite (K6 Necr): R60' Inflicts choice of sleep, panic, or sickened (Disadv on attack and ability rolls) on 1 target/rd (Wisdom neg) for conc up to 1 min</td>
     </tr><tr style="text-align:left">
@@ -363,13 +363,13 @@ var attributes = {
     </tr><tr style="text-align:left">
       <td>Finger Of Death (K7 Necr): R60' Target suffers 7d8+30 HP necrotic (Constitution half); becomes an obedient zombie if killed</td>
     </tr><tr style="text-align:left">
-      <td>Fire Shield (K4 [The Fiend] Evoc): Self gains resistance to heat or cold damage and a successful adjacent attacker suffers 2d8 HP fire or cold for 10 min</td>
+      <td>Fire Shield (K4 [The Fiend] Evoc): Self gains resistance to heat or cold damage, and a successful adjacent attacker suffers 2d8 HP fire or cold for 10 min</td>
     </tr><tr style="text-align:left">
       <td>Fireball (K3 [The Fiend] Evoc): R150' 20' radius inflicts 8d6 HP fire (Dexterity half) [+Level inflicts +1d6 HP]</td>
     </tr><tr style="text-align:left">
       <td>Flame Strike (K5 [The Fiend] Evoc): R60' 10' radius inflicts 4d6 HP fire and 4d6 HP radiant (Dexterity half) [+Level inflicts +1d6 HP choice of fire or radiant]</td>
     </tr><tr style="text-align:left">
-      <td>Flesh To Stone (K6 Tran): R60' Target restrained (Constitution neg), then petrified after 3 failed Constitution saves (3 successes neg) for conc up to 1 min</td>
+      <td>Flesh To Stone (K6 Tran): R60' Target becomes restrained (Constitution neg), then petrified after 3 failed Constitution saves (3 successes neg) for conc up to 1 min</td>
     </tr><tr style="text-align:left">
       <td>Fly (K3 Tran): Touched gains 60' fly speed for conc up to 10 min [+Level affects +1 target]</td>
     </tr><tr style="text-align:left">
@@ -385,13 +385,13 @@ var attributes = {
     </tr><tr style="text-align:left">
       <td>Greater Invisibility (K4 [The Archfey] Illu): Touched becomes invisible for conc up to 1 min</td>
     </tr><tr style="text-align:left">
-      <td>Hallow (K5 [The Fiend] Evoc): 60' radius becomes warded against celestials, elementals, fey, fiends, and undead and their effects and evokes boon effect</td>
+      <td>Hallow (K5 [The Fiend] Evoc): 60' radius becomes warded against celestials, elementals, fey, fiends, and undead and their effects and evokes a boon effect</td>
     </tr><tr style="text-align:left">
       <td>Hallucinatory Terrain (K4 Illu): R300' Creates a 150' cube terrain illusion (Investigation detects) for 1 dy</td>
     </tr><tr style="text-align:left">
-      <td>Hellish Rebuke (K1 Evoc): R60' May use Reaction to inflict 2d10 HP fire on a successful attacker (Dexterity half) [+Level inflicts +1d10 HP]</td>
+      <td>Hellish Rebuke (K1 Evoc): R60' Cast as a Reaction to inflict 2d10 HP fire on a successful attacker (Dexterity half) [+Level inflicts +1d10 HP]</td>
     </tr><tr style="text-align:left">
-      <td>Hex (K1 Ench): R90' Self hits on target inflict +1d6 HP necrotic and target has Disadv on chosen ability for conc up to 1 hr [+Level extends duration to 8/24 hr at level 3/5]</td>
+      <td>Hex (K1 Ench): R90' Self attacks on target inflict +1d6 HP necrotic, and target has Disadv on chosen ability, for conc up to 1 hr [+Level extends duration to 8/24 hr at level 3/5]</td>
     </tr><tr style="text-align:left">
       <td>Hold Monster (K5 Ench): R90' Immobilizes target creature (Wisdom ends) for conc up to 1 min [+Level affects +1 target]</td>
     </tr><tr style="text-align:left">
@@ -419,7 +419,7 @@ var attributes = {
     </tr><tr style="text-align:left">
       <td>Minor Illusion (K0 Illu): R30' Creates the sound of 1 creature or a 5' cube image (Investigation detects) for 1 min</td>
     </tr><tr style="text-align:left">
-      <td>Mirror Image (K2 Illu): 3 duplicates (AC 12) misdirect attacks on self for 1 min</td>
+      <td>Mirror Image (K2 Illu): 3 duplicates (AC 12; damage destroys) misdirect attacks on self for 1 min</td>
     </tr><tr style="text-align:left">
       <td>Misty Step (K2 Conj): Teleports self 30'</td>
     </tr><tr style="text-align:left">
@@ -457,13 +457,13 @@ var attributes = {
     </tr><tr style="text-align:left">
       <td>Silent Image (K1 [Misty Visions] Illu): R60' Creates a 15' cube illusion (Investigation detects) for conc up to 10 min</td>
     </tr><tr style="text-align:left">
-      <td>Sleep (K1 [The Archfey] Ench): R90' 20' radius sleeps up to 5d8 HP of creatures, weakest first, for 1 min (damage or shaking wakens) [+Level affects +2d8 HP of creatures]</td>
+      <td>Sleep (K1 [The Archfey] Ench): R90' 20' radius sleeps 5d8 HP of creatures, weakest first, for 1 min (damage or shaking wakens) [+Level affects +2d8 HP of creatures]</td>
     </tr><tr style="text-align:left">
       <td>Speak With Dead (K3 [Whispers Of The Grave] Necr): R10' Self may ask a corpse 5 questions</td>
     </tr><tr style="text-align:left">
       <td>Spider Climb (K2 Tran): Touched may crawl on walls and ceilings for conc up to 1 hr</td>
     </tr><tr style="text-align:left">
-      <td>Stinking Cloud (K3 [The Fiend] Conj): R90' 20' radius causes retching (Constitution neg) for conc up to 1 min</td>
+      <td>Stinking Cloud (K3 [The Fiend] Conj): R90' 20' radius inflicts loss of action (Constitution neg) for conc up to 1 min</td>
     </tr><tr style="text-align:left">
       <td>Suggestion (K2 Ench): R30' Target follows a reasonable suggestion (Wisdom neg) for conc up to 8 hr</td>
     </tr><tr style="text-align:left">

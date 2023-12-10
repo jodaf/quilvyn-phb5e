@@ -251,7 +251,7 @@ var attributes = {
     </tr><tr style="text-align:left">
       <td>Barkskin (D2 [Circle Of The Land (Forest)] Tran): Willing touched gains AC 16 for conc up to 1 hr</td>
     </tr><tr style="text-align:left">
-      <td>Blight (D4 [Circle Of The Land (Desert)] Necr): R30' target suffers 8d8 HP necrotic (Constitution half (plant Disadv, 64 HP on fail)) [+Level inflicts +1d8 HP]</td>
+      <td>Blight (D4 [Circle Of The Land (Desert)] Necr): R30' target suffers 8d8 HP necrotic (Constitution half; plant target suffers Disadv and maximum damage on failure) [+Level inflicts +1d8 HP]</td>
     </tr><tr style="text-align:left">
       <td>Blur (D2 [Circle Of The Land (Desert)] Illu): Foes suffer Disadv when attacking self for conc up to 1 min</td>
     </tr><tr style="text-align:left">
@@ -275,7 +275,7 @@ var attributes = {
     </tr><tr style="text-align:left">
       <td>Control Water (D4 [Circle Of The Land (Coast)] Tran): R300' 100' water rises 20', parts, redirects, or whirlpools for conc up to 10 min</td>
     </tr><tr style="text-align:left">
-      <td>Control Weather (D8 Tran): Modifies seasonal weather in 5 mile radius for conc up to 8 hr</td>
+      <td>Control Weather (D8 Tran): Modifies seasonal weather in a 5 mile radius for conc up to 8 hr</td>
     </tr><tr style="text-align:left">
       <td>Create Food And Water (D3 [Circle Of The Land (Desert)] Conj): R30' Creates 45 lb of food and 30 gallons of water</td>
     </tr><tr style="text-align:left">
@@ -337,9 +337,9 @@ var attributes = {
     </tr><tr style="text-align:left">
       <td>Lightning Bolt (D3 [Circle Of The Land (Mountain)] Evoc): 100'x5' line inflicts 8d6 HP lightning (Dexterity half) and ignites unattended flammable objects [+Level inflicts +1d6 HP]</td>
     </tr><tr style="text-align:left">
-      <td>Locate Creature (D4 Divi): Self learns location of named creature or species w/in 1000' for conc up to 1 hr</td>
+      <td>Locate Creature (D4 Divi): Self learns location of specified creature or species w/in 1000' for conc up to 1 hr</td>
     </tr><tr style="text-align:left">
-      <td>Locate Creature (D4 [Circle Of The Land (Swamp)] Divi): Self learns location of named creature or species w/in 1000' for conc up to 1 hr</td>
+      <td>Locate Creature (D4 [Circle Of The Land (Swamp)] Divi): Self learns location of specified creature or species w/in 1000' for conc up to 1 hr</td>
     </tr><tr style="text-align:left">
       <td>Mage Hand (W0 Conj): R30' Spectral hand performs minor tasks, moving up to 10 lb, for 1 min</td>
     </tr><tr style="text-align:left">
@@ -347,11 +347,11 @@ var attributes = {
     </tr><tr style="text-align:left">
       <td>Meld Into Stone (D3 [Circle Of The Land (Mountain)] Tran): Self may step into rock for 8 hr [R]</td>
     </tr><tr style="text-align:left">
-      <td>Melf's Acid Arrow (D2 [Circle Of The Land (Swamp)] Evoc): R90' Ranged spell inflicts 4d4 HP acid, 2d4 HP next rd (miss half 1st rd only) [+Level inflicts +1d4 HP]</td>
+      <td>Melf's Acid Arrow (D2 [Circle Of The Land (Swamp)] Evoc): R90' Ranged spell inflicts 4d4 HP acid, plus 2d4 HP next rd (miss half 1st rd only) [+Level inflicts +1d4 HP]</td>
     </tr><tr style="text-align:left">
       <td>Mending (D0 Tran): Touch repairs a small break or tear</td>
     </tr><tr style="text-align:left">
-      <td>Mirror Image (D2 [Circle Of The Land (Coast)] Illu): 3 duplicates (AC 11) misdirect attacks on self for 1 min</td>
+      <td>Mirror Image (D2 [Circle Of The Land (Coast)] Illu): 3 duplicates (AC 11; damage destroys) misdirect attacks on self for 1 min</td>
     </tr><tr style="text-align:left">
       <td>Misty Step (D2 [Circle Of The Land (Coast)] Conj): Teleports self 30'</td>
     </tr><tr style="text-align:left">
@@ -381,7 +381,7 @@ var attributes = {
     </tr><tr style="text-align:left">
       <td>Silence (D2 [Circle Of The Land (Desert)] Illu): R120' 20' radius blocks sound for conc up to 10 min [R]</td>
     </tr><tr style="text-align:left">
-      <td>Sleep (W1 Ench): R90' 20' radius sleeps up to 5d8 HP of creatures, weakest first, for 1 min (damage or shaking wakens) [+Level affects +2d8 HP of creatures]</td>
+      <td>Sleep (W1 Ench): R90' 20' radius sleeps 5d8 HP of creatures, weakest first, for 1 min (damage or shaking wakens) [+Level affects +2d8 HP of creatures]</td>
     </tr><tr style="text-align:left">
       <td>Sleet Storm (D3 [Circle Of The Land (Arctic)] Conj): R150' 40' radius douses flames and inflicts difficult terrain and falling prone (Dexterity neg)</td>
     </tr><tr style="text-align:left">
@@ -399,9 +399,9 @@ var attributes = {
     </tr><tr style="text-align:left">
       <td>Spike Growth (D2 [Circle Of The Land (Mountain)] Tran): R150' 20' radius inflicts 2d4 HP per 5' movement for conc up to 10 min</td>
     </tr><tr style="text-align:left">
-      <td>Stinking Cloud (D3 [Circle Of The Land (Swamp)] Conj): R90' 20' radius causes retching (Constitution neg) for conc up to 1 min</td>
+      <td>Stinking Cloud (D3 [Circle Of The Land (Swamp)] Conj): R90' 20' radius inflicts loss of action (Constitution neg) for conc up to 1 min</td>
     </tr><tr style="text-align:left">
-      <td>Stinking Cloud (D3 [Circle Of The Land (Underdark)] Conj): R90' 20' radius causes retching (Constitution neg) for conc up to 1 min</td>
+      <td>Stinking Cloud (D3 [Circle Of The Land (Underdark)] Conj): R90' 20' radius inflicts loss of action (Constitution neg) for conc up to 1 min</td>
     </tr><tr style="text-align:left">
       <td>Stone Shape (D4 [Circle Of The Land (Mountain)] Tran): Reshapes touched medium-sized stone</td>
     </tr><tr style="text-align:left">

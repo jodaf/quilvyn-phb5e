@@ -299,15 +299,15 @@ var attributes = {
     </tr><tr style="text-align:left">
       <td>Antipathy/Sympathy (W8 Ench): R60' Target object repels or attracts specified creatures for 10 dy</td>
     </tr><tr style="text-align:left">
-      <td>Arcane Eye (W4 Divi): R30' Self sees through a remote invisible eye w/darkvision that moves 30'/rd for conc up to 1 hr</td>
+      <td>Arcane Eye (W4 Divi): R30' Self sees w/darkvision through a remote invisible eye that moves 30'/rd for conc up to 1 hr</td>
     </tr><tr style="text-align:left">
-      <td>Arcane Gate (W6 Conj): R10' Creates a portal pair that can teleport 500' for conc up to 10 min</td>
+      <td>Arcane Gate (W6 Conj): R10' Creates a portal pair that can teleport creatures 500' for conc up to 10 min</td>
     </tr><tr style="text-align:left">
-      <td>Arcane Lock (W2 Abju): Touched barrier opens only for designated creatures or specified password (<i>Knock</i> neg for 10 min)</td>
+      <td>Arcane Lock (W2 Abju): Touched barrier opens only for designated creatures or specified password (<i>Knock</i> supresses for 10 min)</td>
     </tr><tr style="text-align:left">
       <td>Astral Projection (W9 Necr): R10' Self and 8 willing targets project to astral plane</td>
     </tr><tr style="text-align:left">
-      <td>Banishment (W4 Abju): R60' Banishes target to home or demiplane (Charisma neg) for conc up to 1 min [+Level affects +1 target]</td>
+      <td>Banishment (W4 Abju): R60' Banishes target to home or a demiplane (Charisma neg) for conc up to 1 min [+Level affects +1 target]</td>
     </tr><tr style="text-align:left">
       <td>Bestow Curse (W3 Necr): Touched suffers choice of Disadv on specified ability rolls, Disadv on attacks on self, require Wisdom save to take any action, or +1d8 HP necrotic from self attacks (Wisdom neg) for conc up to 1 min [+Level extends duration to conc up to 10 min/8 hr/24 hr/permanent at level 4/5/7/9]</td>
     </tr><tr style="text-align:left">
@@ -315,7 +315,7 @@ var attributes = {
     </tr><tr style="text-align:left">
       <td>Blade Ward (W0 Abju): Self gains resistance to bludgeoning, piercing, and slashing weapon damage for 1 rd</td>
     </tr><tr style="text-align:left">
-      <td>Blight (W4 Necr): R30' target suffers 8d8 HP necrotic (Constitution half (plant Disadv, 64 HP on fail)) [+Level inflicts +1d8 HP]</td>
+      <td>Blight (W4 Necr): R30' target suffers 8d8 HP necrotic (Constitution half; plant target suffers Disadv and maximum damage on failure) [+Level inflicts +1d8 HP]</td>
     </tr><tr style="text-align:left">
       <td>Blindness/Deafness (W2 Necr): R30' Inflicts choice of blindness or deafness on target (Constitution ends) for 1 min [+Level affects +1 target]</td>
     </tr><tr style="text-align:left">
@@ -349,7 +349,7 @@ var attributes = {
     </tr><tr style="text-align:left">
       <td>Cone Of Cold (W5 Evoc): 60' cone inflicts 8d8 HP cold (Constitution half) [+Level inflicts +1d8 HP]</td>
     </tr><tr style="text-align:left">
-      <td>Confusion (W4 Ench): R90' Creatures in a 10' radius randomly 10% wander/50% do nothing/20% attack adjacent creature/20% act normally (Wisdom neg) for conc up to 1 min [+Level increases radius by 5']</td>
+      <td>Confusion (W4 Ench): R90' Creatures in a 10' radius randomly 10% wander/50% do nothing/20% attack an adjacent creature/20% act normally (Wisdom neg) for conc up to 1 min [+Level increases radius by 5']</td>
     </tr><tr style="text-align:left">
       <td>Conjure Elemental (W5 Conj): R90' Summons an obedient environment-appropriate CR 5 elemental for conc, 1 hr, or until slain [+Level CR +1]</td>
     </tr><tr style="text-align:left">
@@ -357,13 +357,13 @@ var attributes = {
     </tr><tr style="text-align:left">
       <td>Contact Other Plane (W5 Divi): Contact w/an extraplanar being inflicts 6d6 HP psychic and insanity on self until a long rest (DC 15 Intelligence neg and receive 5 one-word answers) [R]</td>
     </tr><tr style="text-align:left">
-      <td>Contingency (W6 Evoc): Sets trigger for level 5 self spell for 10 dy</td>
+      <td>Contingency (W6 Evoc): Sets trigger for a level 5 self spell for 10 dy</td>
     </tr><tr style="text-align:left">
-      <td>Continual Flame (W2 Evoc): Touched emits heatless torch flame</td>
+      <td>Continual Flame (W2 Evoc): Touched emits a heatless torch flame</td>
     </tr><tr style="text-align:left">
       <td>Control Water (W4 Tran): R300' 100' water rises 20', parts, redirects, or whirlpools for conc up to 10 min</td>
     </tr><tr style="text-align:left">
-      <td>Control Weather (W8 Tran): Modifies seasonal weather in 5 mile radius for conc up to 8 hr</td>
+      <td>Control Weather (W8 Tran): Modifies seasonal weather in a 5 mile radius for conc up to 8 hr</td>
     </tr><tr style="text-align:left">
       <td>Counterspell (W3 Abju): R60' Negates foe casting up to spell level 3; successful DC 10 + spell level negates a higher-level spell [+Level negates any spell of equal or lesser level]</td>
     </tr><tr style="text-align:left">
@@ -381,7 +381,7 @@ var attributes = {
     </tr><tr style="text-align:left">
       <td>Delayed Blast Fireball (W7 Evoc): R150' 20' radius inflicts 12d6 HP + 1d6 HP/rd fire (Dexterity half) within conc up to 1 min [+Level inflicts +1d6 HP]</td>
     </tr><tr style="text-align:left">
-      <td>Demiplane (W8 Conj): R60' Door leads to 30'x30'x30' extradimensional room for 1 hr</td>
+      <td>Demiplane (W8 Conj): R60' Door leads to a 30'x30'x30' extradimensional room for 1 hr</td>
     </tr><tr style="text-align:left">
       <td>Detect Magic (W1 Divi): R30' Self senses magic auras for conc up to 10 min [R]</td>
     </tr><tr style="text-align:left">
@@ -403,13 +403,13 @@ var attributes = {
     </tr><tr style="text-align:left">
       <td>Dream (W5 Illu): Touched controls the dreams of a known target for 8 hr; may also inflict 3d6 HP psychic (Wisdom neg)</td>
     </tr><tr style="text-align:left">
-      <td>Enlarge/Reduce (W2 Tran): R30' Target becomes dbl size (Adv on Strength, +1d4 weapon damage) or half size (Disadv on Strength, -1d4 weapon damage) (Constitution neg) for conc up to 1 min</td>
+      <td>Enlarge/Reduce (W2 Tran): R30' Target becomes dbl size (Adv on Strength, +1d4 HP weapon damage) or half size (Disadv on Strength, -1d4 HP weapon damage) (Constitution neg) for conc up to 1 min</td>
     </tr><tr style="text-align:left">
       <td>Etherealness (W7 Tran): Self enters Ethereal Plane for up to 8 hr [+Level affects +2/+5 targets at level 8/9]</td>
     </tr><tr style="text-align:left">
       <td>Evard's Black Tentacles (W4 Conj): R90' 20' sq inflicts 3d6 HP bludgeoning and restrains (Dexterity neg, Strength or Dexterity breaks free) for conc up to 1 min</td>
     </tr><tr style="text-align:left">
-      <td>Expeditious Retreat (W1 Tran): Self gains bonus Dash for conc up to 10 min</td>
+      <td>Expeditious Retreat (W1 Tran): Self gains a bonus Dash 1/rd for conc up to 10 min</td>
     </tr><tr style="text-align:left">
       <td>Eyebite (W6 Necr): R60' Inflicts choice of sleep, panic, or sickened (Disadv on attack and ability rolls) on 1 target/rd (Wisdom neg) for conc up to 1 min</td>
     </tr><tr style="text-align:left">
@@ -429,15 +429,15 @@ var attributes = {
     </tr><tr style="text-align:left">
       <td>Finger Of Death (W7 Necr): R60' Target suffers 7d8+30 HP necrotic (Constitution half); becomes an obedient zombie if killed</td>
     </tr><tr style="text-align:left">
-      <td>Fire Bolt (W0 Evoc): R120' Ranged spell inflicts 2d10 HP fire or ignites unattended flammable target</td>
+      <td>Fire Bolt (W0 Evoc): R120' Ranged spell inflicts 2d10 HP fire or ignites an unattended flammable target</td>
     </tr><tr style="text-align:left">
-      <td>Fire Shield (W4 Evoc): Self gains resistance to heat or cold damage and a successful adjacent attacker suffers 2d8 HP fire or cold for 10 min</td>
+      <td>Fire Shield (W4 Evoc): Self gains resistance to heat or cold damage, and a successful adjacent attacker suffers 2d8 HP fire or cold for 10 min</td>
     </tr><tr style="text-align:left">
       <td>Fireball (W3 Evoc): R150' 20' radius inflicts 8d6 HP fire (Dexterity half) [+Level inflicts +1d6 HP]</td>
     </tr><tr style="text-align:left">
-      <td>Flaming Sphere (W2 Conj): R60' 5' sphere lights 20' radius, inflicts 2d6 HP fire (Dexterity half), ignites unattended flammable objects, and moves 30'/rd for conc up to 1 min [+Level inflicts +1d6 HP]</td>
+      <td>Flaming Sphere (W2 Conj): R60' 5' sphere lights a 20' radius, inflicts 2d6 HP fire (Dexterity half), ignites unattended flammable objects, and moves 30'/rd for conc up to 1 min [+Level inflicts +1d6 HP]</td>
     </tr><tr style="text-align:left">
-      <td>Flesh To Stone (W6 Tran): R60' Target restrained (Constitution neg), then petrified after 3 failed Constitution saves (3 successes neg) for conc up to 1 min</td>
+      <td>Flesh To Stone (W6 Tran): R60' Target becomes restrained (Constitution neg), then petrified after 3 failed Constitution saves (3 successes neg) for conc up to 1 min</td>
     </tr><tr style="text-align:left">
       <td>Fly (W3 Tran): Touched gains 60' fly speed for conc up to 10 min [+Level affects +1 target]</td>
     </tr><tr style="text-align:left">
@@ -461,7 +461,7 @@ var attributes = {
     </tr><tr style="text-align:left">
       <td>Glyph Of Warding (W3 Abju): 20' radius inflicts 5d8 HP choice of acid, cold, fire, lightning, or thunder (Dexterity half) or spell up to level 3 when triggered [+Level inflicts +1d8 HP or triggers +1 spell level]</td>
     </tr><tr style="text-align:left">
-      <td>Grease (W1 Conj): R60' 10' sq becomes difficulty terrain and causes creatures to fall prone (Dexterity neg) for 1 min</td>
+      <td>Grease (W1 Conj): R60' 10' sq becomes difficult terrain and causes creatures to fall prone (Dexterity neg) for 1 min</td>
     </tr><tr style="text-align:left">
       <td>Greater Invisibility (W4 Illu): Touched becomes invisible for conc up to 1 min</td>
     </tr><tr style="text-align:left">
@@ -495,21 +495,21 @@ var attributes = {
     </tr><tr style="text-align:left">
       <td>Knock (W2 Tran): R60' Unlocks, unsticks, or unbars target and suppresses <i>Arcane Lock</i> for 10 min</td>
     </tr><tr style="text-align:left">
-      <td>Legend Lore (W5 Divi): Self learns info about a named person, place, or object</td>
+      <td>Legend Lore (W5 Divi): Self learns info about a specified person, place, or object</td>
     </tr><tr style="text-align:left">
-      <td>Leomund's Secret Chest (W4 Conj): Self may move touched 12' cube chest to and from the Ethereal Plane for 60+ days</td>
+      <td>Leomund's Secret Chest (W4 Conj): Self may move a touched 12' cube chest to and from the Ethereal Plane for 60+ days</td>
     </tr><tr style="text-align:left">
       <td>Leomund's Tiny Hut (W3 Evoc): Creates a 10' radius dome, impassable by objects and spells, for 8 hr [R]</td>
     </tr><tr style="text-align:left">
       <td>Levitate (W2 Tran): R60' Target floats (Constitution neg) for conc up to 10 min</td>
     </tr><tr style="text-align:left">
-      <td>Light (W0 Evoc): Touched object lights 20' radius (Dexterity neg) for 1 hr</td>
+      <td>Light (W0 Evoc): Touched object lights a 20' radius (Dexterity neg) for 1 hr</td>
     </tr><tr style="text-align:left">
       <td>Lightning Bolt (W3 Evoc): 100'x5' line inflicts 8d6 HP lightning (Dexterity half) and ignites unattended flammable objects [+Level inflicts +1d6 HP]</td>
     </tr><tr style="text-align:left">
-      <td>Locate Creature (W4 Divi): Self learns location of named creature or species w/in 1000' for conc up to 1 hr</td>
+      <td>Locate Creature (W4 Divi): Self learns location of specified creature or species w/in 1000' for conc up to 1 hr</td>
     </tr><tr style="text-align:left">
-      <td>Locate Object (W2 Divi): Self learns location of named object or type w/in 1000' for conc up to 10 min</td>
+      <td>Locate Object (W2 Divi): Self learns location of specified object or type w/in 1000' for conc up to 10 min</td>
     </tr><tr style="text-align:left">
       <td>Longstrider (W1 Tran): Touched gains +10' Speed for 1 hr [+Level affects +1 target]</td>
     </tr><tr style="text-align:left">
@@ -533,11 +533,11 @@ var attributes = {
     </tr><tr style="text-align:left">
       <td>Maze (W8 Conj): R60' Sends target to a labyrinthine demiplane (DC 20 Intelligence escapes) for conc up to 10 min</td>
     </tr><tr style="text-align:left">
-      <td>Melf's Acid Arrow (W2 Evoc): R90' Ranged spell inflicts 4d4 HP acid, 2d4 HP next rd (miss half 1st rd only) [+Level inflicts +1d4 HP]</td>
+      <td>Melf's Acid Arrow (W2 Evoc): R90' Ranged spell inflicts 4d4 HP acid, plus 2d4 HP next rd (miss half 1st rd only) [+Level inflicts +1d4 HP]</td>
     </tr><tr style="text-align:left">
       <td>Mending (W0 Tran): Touch repairs a small break or tear</td>
     </tr><tr style="text-align:left">
-      <td>Message (W0 Tran): R120' Self and target may have a whispered conversation for 1 rd</td>
+      <td>Message (W0 Tran): R120' Self and target may hold a whispered conversation for 1 rd</td>
     </tr><tr style="text-align:left">
       <td>Meteor Swarm (W9 Evoc): R1 mile 4 40' radius areas each inflict 20d6 HP fire and 20d6 HP bludgeoning (Dexterity half) and ignite unattended flammable objects</td>
     </tr><tr style="text-align:left">
@@ -549,21 +549,21 @@ var attributes = {
     </tr><tr style="text-align:left">
       <td>Mirage Arcane (W7 Illu): Creates 1 mile sq of illusionary terrain for 10 dy</td>
     </tr><tr style="text-align:left">
-      <td>Mirror Image (W2 Illu): 3 duplicates (AC 13) misdirect attacks on self for 1 min</td>
+      <td>Mirror Image (W2 Illu): 3 duplicates (AC 13; damage destroys) misdirect attacks on self for 1 min</td>
     </tr><tr style="text-align:left">
       <td>Mislead (W5 Illu): Makes self invisible (attacking or casting ends) and creates an illusory duplicate that can move 60' and share senses for conc up to 1 hr</td>
     </tr><tr style="text-align:left">
       <td>Misty Step (W2 Conj): Teleports self 30'</td>
     </tr><tr style="text-align:left">
-      <td>Modify Memory (W5 Ench): R30' Changes target's memory of an event from the past dy (Wisdom neg) [+Level changes memory of and event from the past 7/30/365/any dy at level 6/7/8/9]</td>
+      <td>Modify Memory (W5 Ench): R30' Changes target's memory of an event from the past dy (Wisdom neg) [+Level changes memory of an event from the past 7/30/365/any dy at level 6/7/8/9]</td>
     </tr><tr style="text-align:left">
-      <td>Mordenkainen's Faithful Hound (W4 Conj): R30' Invisible watchdog barks at intruders w/in 30' and attacks (+4 4d8 HP piercing) those w/in 5' for 8 hr</td>
+      <td>Mordenkainen's Faithful Hound (W4 Conj): R30' Invisible watchdog barks at intruders w/in 30' and attacks those w/in 5' (+4 4d8 HP piercing) for 8 hr</td>
     </tr><tr style="text-align:left">
       <td>Mordenkainen's Magnificent Mansion (W7 Conj): R300' Self and designated creatures may enter an extradimensional dwelling for 1 dy</td>
     </tr><tr style="text-align:left">
       <td>Mordenkainen's Private Sanctum (W4 Abju): R120' Protects up to 100' sq from sound, vision, divination, teleportation, and planar travel for 1 dy [+Level increases area by 100']</td>
     </tr><tr style="text-align:left">
-      <td>Mordenkainen's Sword (W7 Evoc): R60' Force weapon inflicts 3d10 HP force (spell attack), moves 20'/rd for conc or 1 min</td>
+      <td>Mordenkainen's Sword (W7 Evoc): R60' Spell attack w/force weapon inflicts 3d10 HP force, and weapon moves 20'/rd for conc or 1 min</td>
     </tr><tr style="text-align:left">
       <td>Move Earth (W6 Tran): R120' Reshapes a 40' cube of earth each 10 minutes for conc up to 2 hr</td>
     </tr><tr style="text-align:left">
@@ -571,11 +571,11 @@ var attributes = {
     </tr><tr style="text-align:left">
       <td>Nystul's Magic Aura (W2 Illu): Divinations on willing target report false information for 1 dy</td>
     </tr><tr style="text-align:left">
-      <td>Otiluke's Freezing Sphere (W6 Evoc): R300' 60' radius inflicts 10d6 HP cold (Constitution half), freezes water for 1 min [+Level inflicts +1d6 HP]</td>
+      <td>Otiluke's Freezing Sphere (W6 Evoc): R300' 60' radius inflicts 10d6 HP cold (Constitution half) and freezes water for 1 min [+Level inflicts +1d6 HP]</td>
     </tr><tr style="text-align:left">
       <td>Otiluke's Resilient Sphere (W4 Evoc): R30' Traps target in an impervious sphere (Dexterity neg) for conc up to 1 min</td>
     </tr><tr style="text-align:left">
-      <td>Otto's Irresistible Dance (W6 Ench): R30' Target dances (Disadv on Dexterity and attack; foes Adv on attacks) (Wisdom ends) for conc up to 1 min</td>
+      <td>Otto's Irresistible Dance (W6 Ench): R30' Target suffers Disadv on Dexterity and attacks, and foes gain Adv on attacks (Wisdom ends), for conc up to 1 min</td>
     </tr><tr style="text-align:left">
       <td>Passwall (W5 Tran): R30' Creates a 5'x8'x20' passage through wood, plaster, or stone for 1 hr</td>
     </tr><tr style="text-align:left">
@@ -599,7 +599,7 @@ var attributes = {
     </tr><tr style="text-align:left">
       <td>Prestidigitation (W0 Tran): R10' Self may perform minor magic effects for 1 hr</td>
     </tr><tr style="text-align:left">
-      <td>Prismatic Spray (W7 Evoc): 60' cone randomly inflicts 10d6 HP fire, acid, lightning, poison, or cold (Dexterity half), restrains (Dexterity neg) and petrifies after 3 failed Constitution saves (3 successes neg), or blinds (Dexterity neg) and banishes to another plane (Wisdom neg)</td>
+      <td>Prismatic Spray (W7 Evoc): 60' cone randomly inflicts one of: 10d6 HP fire, acid, lightning, poison, or cold (Dexterity half); restrains (Dexterity neg) and petrifies after 3 failed Constitution saves (3 successes neg); blinds (Dexterity neg) and banishes to another plane (Wisdom neg)</td>
     </tr><tr style="text-align:left">
       <td>Prismatic Wall (W9 Abju): R60' 90'x30' area blinds w/in 20' for 1 min (Constitution neg); passers suffer 10d6 HP each fire, acid, lightning, poison, and cold (Dexterity half), restraint (Dexterity neg) and petrification after 3 failed Constitution saves (3 successes neg), and blindness (Dexterity neg) and banishment to another plane (Wisdom neg)</td>
     </tr><tr style="text-align:left">
@@ -641,7 +641,7 @@ var attributes = {
     </tr><tr style="text-align:left">
       <td>Shatter (W2 Evoc): R60' 10' radius inflicts 3d8 HP thunder (Constitution half) [+Level inflicts +1d8 HP]</td>
     </tr><tr style="text-align:left">
-      <td>Shield (W1 Abju): Reaction gives +5 AC and immunity to <i>Magic Missile</i> until next turn</td>
+      <td>Shield (W1 Abju): Cast as a Reaction to gain +5 AC and immunity to <i>Magic Missile</i> until next turn</td>
     </tr><tr style="text-align:left">
       <td>Shocking Grasp (W0 Evoc): Touched suffers 2d8 HP lightning and cannot use Reaction until next turn</td>
     </tr><tr style="text-align:left">
@@ -649,7 +649,7 @@ var attributes = {
     </tr><tr style="text-align:left">
       <td>Simulacrum (W7 Illu): Creates from snow an obedient, half HP duplicate creature</td>
     </tr><tr style="text-align:left">
-      <td>Sleep (W1 Ench): R90' 20' radius sleeps up to 5d8 HP of creatures, weakest first, for 1 min (damage or shaking wakens) [+Level affects +2d8 HP of creatures]</td>
+      <td>Sleep (W1 Ench): R90' 20' radius sleeps 5d8 HP of creatures, weakest first, for 1 min (damage or shaking wakens) [+Level affects +2d8 HP of creatures]</td>
     </tr><tr style="text-align:left">
       <td>Sleet Storm (W3 Conj): R150' 40' radius douses flames and inflicts difficult terrain and falling prone (Dexterity neg)</td>
     </tr><tr style="text-align:left">
@@ -657,7 +657,7 @@ var attributes = {
     </tr><tr style="text-align:left">
       <td>Spider Climb (W2 Tran): Touched may crawl on walls and ceilings for conc up to 1 hr</td>
     </tr><tr style="text-align:left">
-      <td>Stinking Cloud (W3 Conj): R90' 20' radius causes retching (Constitution neg) for conc up to 1 min</td>
+      <td>Stinking Cloud (W3 Conj): R90' 20' radius inflicts loss of action (Constitution neg) for conc up to 1 min</td>
     </tr><tr style="text-align:left">
       <td>Stone Shape (W4 Tran): Reshapes touched medium-sized stone</td>
     </tr><tr style="text-align:left">
@@ -669,7 +669,7 @@ var attributes = {
     </tr><tr style="text-align:left">
       <td>Sunburst (W8 Evoc): R150' 60' radius inflicts 12d6 HP and blindness (Constitution half HP only) for 1 min</td>
     </tr><tr style="text-align:left">
-      <td>Symbol (W7 Abju): Inscribes touched w/a permanent glyph that invokes harmful magic effects</td>
+      <td>Symbol (W7 Abju): Inscribes touched w/a permanent glyph that inflicts harmful magic effects</td>
     </tr><tr style="text-align:left">
       <td>Tasha's Hideous Laughter (W1 Ench): R30' Target ROFL (Wisdom ends) for conc up to 1 min</td>
     </tr><tr style="text-align:left">
@@ -685,7 +685,7 @@ var attributes = {
     </tr><tr style="text-align:left">
       <td>Thunderwave (W1 Evoc): 15' cube inflicts 2d8 HP thunder and pushes 10' (Constitution half HP only) [+Level inflicts +1d8 HP]</td>
     </tr><tr style="text-align:left">
-      <td>Time Stop (W9 Tran): Self gains 1d4 + 1 turns (affecting another creature or moving more than 1000' away ends)</td>
+      <td>Time Stop (W9 Tran): Self gains 1d4+1 turns (affecting another creature or moving more than 1000' away ends)</td>
     </tr><tr style="text-align:left">
       <td>Tongues (W3 Divi): Touched understands any language and is universally understood for 1 hr</td>
     </tr><tr style="text-align:left">
