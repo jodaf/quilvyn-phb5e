@@ -549,7 +549,7 @@ PHB5E.FEATURES_ADDED = {
     'Note="R10\' May use Channel Divinity to create spectral vines that restrain target (DC %{spellDifficultyClass.P} Dexterity or Strength neg)"',
   "Ranger's Companion":
     'Section=Feature ' +
-    'Note="Companion beast up to CR 1/4 gains +%{proficiencyBonus} AC, attack, damage, skills, and saving throws and obeys self commands"',
+    'Note="Companion beast up to CR 1/4 gains +%{proficiencyBonus} Armor Class, attack, damage, skills, and saving throws and obeys self commands"',
   'Student Of War':
     'Section=Feature Note="Tool Proficiency (Choose 1 from any Artisan)"',
   "Transmuter's Stone":
@@ -662,7 +662,7 @@ PHB5E.FEATURES_ADDED = {
     'Note="May use Channel Divinity to make self invisible for 1 rd (attacking or casting ends)"',
   'Combat Inspiration':
     'Section=Combat ' +
-    'Note="Ally may use a Bardic Inspiration die to boost weapon damage or AC"',
+    'Note="Ally may use a Bardic Inspiration die to boost weapon damage or Armor Class"',
   'Combat Superiority':
     'Section=Combat ' +
     'Note="May use %Vd%1 Superiority Dice to perform %2 chosen Maneuvers/short rest"',
@@ -732,7 +732,8 @@ PHB5E.FEATURES_ADDED = {
     'Note="May spend 5 Ki Points to cast self <i>Stoneskin</i>" ' +
     'Spells=Stoneskin',
   'Evasive Footwork':
-    'Section=Combat Note="May add a Superiority Die to AC during a move"',
+    'Section=Combat ' +
+    'Note="May add a Superiority Die to Armor Class during a move"',
   'Exceptional Training':
     'Section=Feature ' +
     'Note="Companion can Dash, Disengage, or Help instead of Attack/Companion attacks count as magical"',
@@ -1100,10 +1101,10 @@ PHB5E.FEATURES_ADDED = {
     'Note="May make multiple attacks w/a proficient crossbow/Suffers no Disadv on a close shot/May make a bonus hand crossbow attack after a one-handed attack"',
   'Defensive Duelist':
     'Section=Combat ' +
-    'Note="May use Reaction to gain +%{proficiencyBonus} AC when wielding a proficient finesse weapon"',
+    'Note="May use Reaction to gain +%{proficiencyBonus} Armor Class when wielding a proficient finesse weapon"',
   'Dual Wielder':
     'Section=Combat ' +
-    'Note="+1 AC w/two weapons/May use two-weapon fighting w/any one-handed weapons/May draw or stow two weapons at once"',
+    'Note="+1 Armor Class w/two weapons/May use two-weapon fighting w/any one-handed weapons/May draw or stow two weapons at once"',
   'Dungeon Delver':
     'Section=Save,Skill ' +
     'Note=' +
@@ -1194,7 +1195,7 @@ PHB5E.FEATURES_ADDED = {
   'Medium Armor Master':
     'Section=Combat,Skill ' +
     'Note=' +
-      '"+1 AC in medium armor if Dexterity is at least 16",' +
+      '"+1 Armor Class in medium armor if Dexterity is at least 16",' +
       '"Suffers no Stealth check penalty in medium armor"',
   'Mobile':
     'Section=Ability,Combat ' +
