@@ -62,15 +62,15 @@ function PHB5E() {
     'race:Race,select-one,races', 'levels:Class Levels,bag,levels');
 
   SRD5E.abilityRules(rules);
-  SRD5E.combatRules(rules, SRD5E.ARMORS, SRD5E.SHIELDS, SRD5E.WEAPONS);
-  SRD5E.magicRules(rules, SRD5E.SCHOOLS, PHB5E.SPELLS);
+  SRD5E.combatRules(rules, PHB5E.ARMORS, PHB5E.SHIELDS, PHB5E.WEAPONS);
+  SRD5E.magicRules(rules, PHB5E.SCHOOLS, PHB5E.SPELLS);
   SRD5E.identityRules(
-    rules, SRD5E.ALIGNMENTS, PHB5E.BACKGROUNDS, PHB5E.CLASSES, PHB5E.DEITIES,
+    rules, PHB5E.ALIGNMENTS, PHB5E.BACKGROUNDS, PHB5E.CLASSES, PHB5E.DEITIES,
     PHB5E.PATHS, PHB5E.RACES
   );
   SRD5E.talentRules
-    (rules, PHB5E.FEATS, PHB5E.FEATURES, SRD5E.GOODIES, SRD5E.LANGUAGES,
-     SRD5E.SKILLS, SRD5E.TOOLS);
+    (rules, PHB5E.FEATS, PHB5E.FEATURES, PHB5E.GOODIES, PHB5E.LANGUAGES,
+     PHB5E.SKILLS, PHB5E.TOOLS);
 
   Quilvyn.addRuleSet(rules);
 
@@ -78,6 +78,8 @@ function PHB5E() {
 
 PHB5E.VERSION = '2.4.1.0';
 
+PHB5E.ALIGNMENTS = Object.assign({}, SRD5E.ALIGNMENTS);
+PHB5E.ARMORS = Object.assign({}, SRD5E.ARMORS);
 PHB5E.BACKGROUNDS_ADDED = {
   'Charlatan':
     'Equipment=' +
@@ -398,14 +400,12 @@ PHB5E.CLASSES_SELECTABLES_ADDED = {
     '"2:School Of Transmutation:Arcane Tradition"'
 };
 PHB5E.CLASSES = Object.assign({}, SRD5E.CLASSES);
-for(let c in PHB5E.CLASSES_FEATURES_ADDED) {
+for(let c in PHB5E.CLASSES_FEATURES_ADDED)
   PHB5E.CLASSES[c] =
     PHB5E.CLASSES[c].replace('Features=', 'Features=' + PHB5E.CLASSES_FEATURES_ADDED[c] + ',');
-}
-for(let c in PHB5E.CLASSES_SELECTABLES_ADDED) {
+for(let c in PHB5E.CLASSES_SELECTABLES_ADDED)
   PHB5E.CLASSES[c] =
     PHB5E.CLASSES[c].replace('Selectables=', 'Selectables=' + PHB5E.CLASSES_SELECTABLES_ADDED[c] + ',');
-}
 PHB5E.FEATS_ADDED = {
   'Alert':
     '',
@@ -508,6 +508,99 @@ PHB5E.FEATS_ADDED = {
   'Weapon Master':
     ''
 };
+PHB5E.DEITIES_ADDED = {
+  // Forgotten Realms
+  'FR-Auril':'Alignment="Neutral Evil" Domain=Nature,Tempest',
+  'FR-Azuth':'Alignment="Lawful Neutral" Domain=Knowledge',
+  'FR-Bane':'Alignment="Lawful Evil" Domain=War',
+  'FR-Beshaba':'Alignment="Chaotic Evil" Domain=Trickery',
+  'FR-Bhaal':'Alignment="Neutral Evil" Domain=Death',
+  'FR-Chauntea':'Alignment="Neutral Good" Domain=Life',
+  'FR-Cyric':'Alignment="Chaotic Evil" Domain=Trickery',
+  'FR-Deneir':'Alignment="Neutral Good" Domain=Knowledge',
+  'FR-Eldath':'Alignment="Neutral Good" Domain=Life,Nature',
+  'FR-Gond':'Alignment=Neutral Domain=Knowledge',
+  'FR-Helm':'Alignment="Lawful Neutral" Domain=Life,Light',
+  'FR-Ilmater':'Alignment="Lawful Good" Domain=Life',
+  'FR-Kelemvor':'Alignment="Lawful Neutral" Domain=Death',
+  'FR-Lathander':'Alignment="Neutral Good" Domain=Life,Light',
+  'FR-Leira':'Alignment=CN Domain=Trickery',
+  'FR-Lliira':'Alignment="Chaotic Good" Domain=Life',
+  'FR-Loviatar':'Alignment="Lawful Evil" Domain=Death',
+  'FR-Malar':'Alignment="Chaotic Evil" Domain=Nature',
+  'FR-Mask':'Alignment=CN Domain=Trickery',
+  'FR-Mielikki':'Alignment="Neutral Good" Domain=Nature',
+  'FR-Milil':'Alignment="Neutral Good" Domain=Light',
+  'FR-Myrkul':'Alignment="Neutral Evil" Domain=Death',
+  'FR-Mystra':'Alignment="Neutral Good" Domain=Knowledge',
+  'FR-Oghma':'Alignment=Neutral Domain=Knowledge',
+  'FR-Savras':'Alignment="Lawful Neutral" Domain=Knowledge',
+  'FR-Selune':'Alignment="Chaotic Good" Domain=Knowledge,Life',
+  'FR-Shar':'Alignment="Neutral Evil" Domain=Death,Trickery',
+  'FR-Silvanus':'Alignment=Neutral Domain=Nature',
+  'FR-Sune':'Alignment="Chaotic Good" Domain=Life,Light',
+  'FR-Talona':'Alignment="Chaotic Evil" Domain=Death',
+  'FR-Talos':'Alignment="Chaotic Evil" Domain=Tempest',
+  'FR-Tempus':'Alignment=Neutral Domain=War',
+  'FR-Torm':'Alignment="Lawful Good" Domain=War',
+  'FR-Tymora':'Alignment="Chaotic Good" Domain=Trickery',
+  'FR-Tyr':'Alignment="Lawful Good" Domain=War',
+  'FR-Umberlee':'Alignment="Chaotic Evil" Domain=Tempest',
+  'FR-Waukeen':'Alignment=Neutral Domain=Knowledge,Trickery',
+  // Greyhawk
+  'Greyhawk-Beory':'Alignment=Neutral Domain=Nature',
+  'Greyhawk-Boccob':'Alignment=Neutral Domain=Knowledge',
+  'Greyhawk-Celestian':'Alignment=Neutral Domain=Knowledge',
+  'Greyhawk-Ehlonna':'Alignment="Neutral Good" Domain=Life,Nature',
+  'Greyhawk-Erythnul':'Alignment="Chaotic Evil" Domain=War',
+  'Greyhawk-Fharlanghn':'Alignment="Neutral Good" Domain=Knowledge,Trickery',
+  'Greyhawk-Heironeous':'Alignment="Lawful Good" Domain=War',
+  'Greyhawk-Hextor':'Alignment="Lawful Evil" Domain=War',
+  'Greyhawk-Kord':'Alignment="Chaotic Good" Domain=Tempest,War',
+  'Greyhawk-Incabulous':'Alignment="Neutral Evil" Domain=Death',
+  'Greyhawk-Istus':'Alignment=Neutral Domain=Knowledge',
+  'Greyhawk-Iuz':'Alignment="Chaotic Evil" Domain=Death',
+  'Greyhawk-Nerull':'Alignment="Neutral Evil" Domain=Death',
+  'Greyhawk-Obad-Hai':'Alignment=Neutral Domain=Nature',
+  'Greyhawk-Olidammara':'Alignment=CN Domain=Trickery',
+  'Greyhawk-Pelor':'Alignment="Neutral Good" Domain=Life,Light',
+  'Greyhawk-Pholtus':'Alignment="Lawful Good" Domain=Light',
+  'Greyhawk-Ralishaz':'Alignment=CN Domain=Trickery',
+  'Greyhawk-Rao':'Alignment="Lawful Good" Domain=Knowledge',
+  'Greyhawk-St. Cuthbert':'Alignment="Lawful Neutral" Domain=Knowledge',
+  'Greyhawk-Tharizdun':'Alignment="Chaotic Evil" Domain=Trickery',
+  'Greyhawk-Trithereon':'Alignment="Chaotic Good" Domain=War',
+  'Greyhawk-Ulaa':'Alignment="Lawful Good" Domain=Life,War',
+  'Greyhawk-Vecna':'Alignment="Neutral Evil" Domain=Knowledge',
+  'Greyhawk-Wee Jas':'Alignment="Lawful Neutral" Domain=Death,Knowledge',
+  // Nonhuman
+  'NH-Bahamut':'Alignment="Lawful Good" Domain=Life,War',
+  'NH-Blibdoolpoolp':'Alignment="Neutral Evil" Domain=Death-Toa',
+  'NH-Corellon Larethian':'Alignment="Chaotic Good" Domain=Light',
+  'NH-Deep Sashelas':
+    'Alignment="Chaotic Good" Domain=Nature,Tempest',
+  'NH-Eadro':'Alignment=Neutral Domain=Nature,Tempest',
+  'NH-Garl Glittergold':'Alignment="Lawful Good" Domain=Trickery',
+  'NH-Grolantor':'Alignment="Chaotic Evil" Domain=War',
+  'NH-Gruumsh':'Alignment="Chaotic Evil" Domain=Tempest,War',
+  'NH-Hruggek':'Alignment="Chaotic Evil" Domain=War',
+  'NH-Kurtulmak':'Alignment="Lawful Evil" Domain=War',
+  'NH-Laogzed':'Alignment="Chaotic Evil" Domain=Death',
+  'NH-Lolth':'Alignment="Chaotic Evil" Domain=Trickery',
+  'NH-Maglubiyet':'Alignment="Lawful Evil" Domain=War',
+  'NH-Moradin':'Alignment="Lawful Good" Domain=Knowledge',
+  'NH-Rillifane Rallathil':'Alignment="Chaotic Good" Domain=Nature',
+  'NH-Sehanine Moonbow':'Alignment="Chaotic Good" Domain=Knowledge',
+  'NH-Sekolah':'Alignment="Lawful Evil" Domain=Nature,Tempest',
+  'NH-Semuanya':'Alignment=Neutral Domain=Life',
+  'NH-Skerrit':'Alignment=Neutral Domain=Knowledge',
+  'NH-Skoraeus Stonebones':'Alignment=Neutral Domain=Knowledge',
+  'NH-Surtur':'Alignment="Lawful Evil" Domain=Knowledge,War',
+  'NH-Thryn':'Alignment="Chaotic Evil" Domain=War',
+  'NH-Tiamat':'Alignment="Lawful Evil" Domain=Trickery',
+  'NH-Yondalla':'Alignment="Lawful Good" Domain=Life'
+};
+PHB5E.DEITIES = Object.assign({}, SRD5E.DEITIES, PHB5E.DEITIES_ADDED);
 PHB5E.FEATS = Object.assign({}, SRD5E.FEATS, PHB5E.FEATS_ADDED);
 PHB5E.FEATURES_ADDED = {
   // Backgrounds
@@ -1316,7 +1409,9 @@ PHB5E.FEATURES_ADDED = {
     'Section=Ability Note="+2 Dexterity/+1 Wisdom"'
 };
 PHB5E.FEATURES = Object.assign({}, SRD5E.FEATURES, PHB5E.FEATURES_ADDED);
-PHB5E.PATHS = Object.assign({}, SRD5E.PATHS);
+PHB5E.GOODIES = Object.assign({}, SRD5E.GOODIES);
+PHB5E.LANGUAGES = Object.assign({}, SRD5E.LANGUAGES);
+PHB5E.PATHS = {};
 PHB5E.RACES_ADDED = {
   'Dark Elf':
     'Features=' +
@@ -1350,6 +1445,9 @@ PHB5E.RACES_ADDED = {
       '"1:Wood Elf Ability Adjustment"'
 };
 PHB5E.RACES = Object.assign({}, SRD5E.RACES, PHB5E.RACES_ADDED);
+PHB5E.SCHOOLS = Object.assign({}, SRD5E.SCHOOLS);
+PHB5E.SHIELDS = Object.assign({}, SRD5E.SHIELDS);
+PHB5E.SKILLS = Object.assign({}, SRD5E.SKILLS);
 PHB5E.SPELLS_ADDED = {
 
   'Arcane Gate':
@@ -1627,107 +1725,15 @@ PHB5E.SPELLS_RENAMED = {
   'Tiny Hut':"Leomund's Tiny Hut"
 };
 PHB5E.SPELLS = Object.assign({}, SRD5E.SPELLS, PHB5E.SPELLS_ADDED);
-for(let s in PHB5E.SPELLS_LEVELS_ADDED) {
+for(let s in PHB5E.SPELLS_LEVELS_ADDED)
   PHB5E.SPELLS[s] =
     PHB5E.SPELLS[s].replace('Level=', 'Level=' + PHB5E.SPELLS_LEVELS_ADDED[s] + ',');
-}
 for(let s in PHB5E.SPELLS_RENAMED) {
   PHB5E.SPELLS[PHB5E.SPELLS_RENAMED[s]] = PHB5E.SPELLS[s];
   delete PHB5E.SPELLS[s];
 }
-PHB5E.DEITIES_ADDED = {
-  // Forgotten Realms
-  'FR-Auril':'Alignment="Neutral Evil" Domain=Nature,Tempest',
-  'FR-Azuth':'Alignment="Lawful Neutral" Domain=Knowledge',
-  'FR-Bane':'Alignment="Lawful Evil" Domain=War',
-  'FR-Beshaba':'Alignment="Chaotic Evil" Domain=Trickery',
-  'FR-Bhaal':'Alignment="Neutral Evil" Domain=Death',
-  'FR-Chauntea':'Alignment="Neutral Good" Domain=Life',
-  'FR-Cyric':'Alignment="Chaotic Evil" Domain=Trickery',
-  'FR-Deneir':'Alignment="Neutral Good" Domain=Knowledge',
-  'FR-Eldath':'Alignment="Neutral Good" Domain=Life,Nature',
-  'FR-Gond':'Alignment=Neutral Domain=Knowledge',
-  'FR-Helm':'Alignment="Lawful Neutral" Domain=Life,Light',
-  'FR-Ilmater':'Alignment="Lawful Good" Domain=Life',
-  'FR-Kelemvor':'Alignment="Lawful Neutral" Domain=Death',
-  'FR-Lathander':'Alignment="Neutral Good" Domain=Life,Light',
-  'FR-Leira':'Alignment=CN Domain=Trickery',
-  'FR-Lliira':'Alignment="Chaotic Good" Domain=Life',
-  'FR-Loviatar':'Alignment="Lawful Evil" Domain=Death',
-  'FR-Malar':'Alignment="Chaotic Evil" Domain=Nature',
-  'FR-Mask':'Alignment=CN Domain=Trickery',
-  'FR-Mielikki':'Alignment="Neutral Good" Domain=Nature',
-  'FR-Milil':'Alignment="Neutral Good" Domain=Light',
-  'FR-Myrkul':'Alignment="Neutral Evil" Domain=Death',
-  'FR-Mystra':'Alignment="Neutral Good" Domain=Knowledge',
-  'FR-Oghma':'Alignment=Neutral Domain=Knowledge',
-  'FR-Savras':'Alignment="Lawful Neutral" Domain=Knowledge',
-  'FR-Selune':'Alignment="Chaotic Good" Domain=Knowledge,Life',
-  'FR-Shar':'Alignment="Neutral Evil" Domain=Death,Trickery',
-  'FR-Silvanus':'Alignment=Neutral Domain=Nature',
-  'FR-Sune':'Alignment="Chaotic Good" Domain=Life,Light',
-  'FR-Talona':'Alignment="Chaotic Evil" Domain=Death',
-  'FR-Talos':'Alignment="Chaotic Evil" Domain=Tempest',
-  'FR-Tempus':'Alignment=Neutral Domain=War',
-  'FR-Torm':'Alignment="Lawful Good" Domain=War',
-  'FR-Tymora':'Alignment="Chaotic Good" Domain=Trickery',
-  'FR-Tyr':'Alignment="Lawful Good" Domain=War',
-  'FR-Umberlee':'Alignment="Chaotic Evil" Domain=Tempest',
-  'FR-Waukeen':'Alignment=Neutral Domain=Knowledge,Trickery',
-  // Greyhawk
-  'Greyhawk-Beory':'Alignment=Neutral Domain=Nature',
-  'Greyhawk-Boccob':'Alignment=Neutral Domain=Knowledge',
-  'Greyhawk-Celestian':'Alignment=Neutral Domain=Knowledge',
-  'Greyhawk-Ehlonna':'Alignment="Neutral Good" Domain=Life,Nature',
-  'Greyhawk-Erythnul':'Alignment="Chaotic Evil" Domain=War',
-  'Greyhawk-Fharlanghn':'Alignment="Neutral Good" Domain=Knowledge,Trickery',
-  'Greyhawk-Heironeous':'Alignment="Lawful Good" Domain=War',
-  'Greyhawk-Hextor':'Alignment="Lawful Evil" Domain=War',
-  'Greyhawk-Kord':'Alignment="Chaotic Good" Domain=Tempest,War',
-  'Greyhawk-Incabulous':'Alignment="Neutral Evil" Domain=Death',
-  'Greyhawk-Istus':'Alignment=Neutral Domain=Knowledge',
-  'Greyhawk-Iuz':'Alignment="Chaotic Evil" Domain=Death',
-  'Greyhawk-Nerull':'Alignment="Neutral Evil" Domain=Death',
-  'Greyhawk-Obad-Hai':'Alignment=Neutral Domain=Nature',
-  'Greyhawk-Olidammara':'Alignment=CN Domain=Trickery',
-  'Greyhawk-Pelor':'Alignment="Neutral Good" Domain=Life,Light',
-  'Greyhawk-Pholtus':'Alignment="Lawful Good" Domain=Light',
-  'Greyhawk-Ralishaz':'Alignment=CN Domain=Trickery',
-  'Greyhawk-Rao':'Alignment="Lawful Good" Domain=Knowledge',
-  'Greyhawk-St. Cuthbert':'Alignment="Lawful Neutral" Domain=Knowledge',
-  'Greyhawk-Tharizdun':'Alignment="Chaotic Evil" Domain=Trickery',
-  'Greyhawk-Trithereon':'Alignment="Chaotic Good" Domain=War',
-  'Greyhawk-Ulaa':'Alignment="Lawful Good" Domain=Life,War',
-  'Greyhawk-Vecna':'Alignment="Neutral Evil" Domain=Knowledge',
-  'Greyhawk-Wee Jas':'Alignment="Lawful Neutral" Domain=Death,Knowledge',
-  // Nonhuman
-  'NH-Bahamut':'Alignment="Lawful Good" Domain=Life,War',
-  'NH-Blibdoolpoolp':'Alignment="Neutral Evil" Domain=Death-Toa',
-  'NH-Corellon Larethian':'Alignment="Chaotic Good" Domain=Light',
-  'NH-Deep Sashelas':
-    'Alignment="Chaotic Good" Domain=Nature,Tempest',
-  'NH-Eadro':'Alignment=Neutral Domain=Nature,Tempest',
-  'NH-Garl Glittergold':'Alignment="Lawful Good" Domain=Trickery',
-  'NH-Grolantor':'Alignment="Chaotic Evil" Domain=War',
-  'NH-Gruumsh':'Alignment="Chaotic Evil" Domain=Tempest,War',
-  'NH-Hruggek':'Alignment="Chaotic Evil" Domain=War',
-  'NH-Kurtulmak':'Alignment="Lawful Evil" Domain=War',
-  'NH-Laogzed':'Alignment="Chaotic Evil" Domain=Death',
-  'NH-Lolth':'Alignment="Chaotic Evil" Domain=Trickery',
-  'NH-Maglubiyet':'Alignment="Lawful Evil" Domain=War',
-  'NH-Moradin':'Alignment="Lawful Good" Domain=Knowledge',
-  'NH-Rillifane Rallathil':'Alignment="Chaotic Good" Domain=Nature',
-  'NH-Sehanine Moonbow':'Alignment="Chaotic Good" Domain=Knowledge',
-  'NH-Sekolah':'Alignment="Lawful Evil" Domain=Nature,Tempest',
-  'NH-Semuanya':'Alignment=Neutral Domain=Life',
-  'NH-Skerrit':'Alignment=Neutral Domain=Knowledge',
-  'NH-Skoraeus Stonebones':'Alignment=Neutral Domain=Knowledge',
-  'NH-Surtur':'Alignment="Lawful Evil" Domain=Knowledge,War',
-  'NH-Thryn':'Alignment="Chaotic Evil" Domain=War',
-  'NH-Tiamat':'Alignment="Lawful Evil" Domain=Trickery',
-  'NH-Yondalla':'Alignment="Lawful Good" Domain=Life'
-};
-PHB5E.DEITIES = Object.assign({}, SRD5E.DEITIES, PHB5E.DEITIES_ADDED);
+PHB5E.TOOLS = Object.assign({}, SRD5E.TOOLS);
+PHB5E.WEAPONS = Object.assign({}, SRD5E.WEAPONS);
 
 /*
  * Adds #name# as a possible user #type# choice and parses #attrs# to add rules
