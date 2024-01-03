@@ -1325,7 +1325,7 @@ PHB5E.FEATURES_ADDED = {
       '"+5 passive Investigation and Perception"',
   'Polearm Master':
     'Section=Combat ' +
-    'Note="Successful bonus attack w/polearm butt inflicts 1d4 HP bludgeoning/Foe entering polearm reach provokes OA"',
+    'Note="Successful bonus attack w/polearm butt inflicts 1d4 HP bludgeoning/Foe entering polearm reach provokes an OA"',
   'Resilient':
     'Section=Ability,Save ' +
     'Note=' +
@@ -1401,7 +1401,7 @@ PHB5E.FEATURES_ADDED = {
   'Sunlight Sensitivity':
     'Section=Combat,Skill ' +
     'Note=' +
-      '"Disadv on attack in direct sunlight",' +
+      '"Disadv on attacks in direct sunlight",' +
       '"Disadv on sight Perception in direct sunlight"',
   'Superior Darkvision':
     'Section=Feature Note="R120\' Sees one light level better"',
