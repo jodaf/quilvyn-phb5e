@@ -1772,17 +1772,6 @@ PHB5E.classRulesExtra = function(rules, name) {
       classLevel, '=', 'source<6 ? null : 1'
     );
     rules.defineRule('combatNotes.extraAttack', 'bardExtraAttacks', '+=', null);
-    // Have to hard-code these proficiencies, since featureRules only handles
-    // notes w/a single type of granted proficiency
-    rules.defineRule('armorProficiency.Medium',
-      'combatNotes.bonusProficiencies(CollegeOfValor)', '=', '1'
-    );
-    rules.defineRule('armorProficiency.Shield',
-      'combatNotes.bonusProficiencies(CollegeOfValor)', '=', '1'
-    );
-    rules.defineRule('weaponProficiency.Martial',
-      'combatNotes.bonusProficiencies(CollegeOfValor)', '=', '1'
-    );
 
   } else if(name == 'Cleric') {
 
@@ -1805,21 +1794,6 @@ PHB5E.classRulesExtra = function(rules, name) {
     );
     rules.defineRule('spellSlots.D0', 'magicNotes.acolyteOfNature', '+=', '1');
     rules.defineRule('casterLevels.D', 'casterLevels.Nature', '=', null);
-    // Have to hard-code these proficiencies, since featureRules only handles
-    // notes w/a single type of granted proficiency
-    rules.defineRule('armorProficiency.Heavy',
-      'combatNotes.bonusProficiencies(TempestDomain)', '=', '1'
-    );
-    rules.defineRule('weaponProficiency.Martial',
-      'combatNotes.bonusProficiencies(TempestDomain)', '=', '1'
-    );
-    // Have to hard-code these proficiencies, since featureRules only handles
-    // notes w/a single type of granted proficiency
-    rules.defineRule
-      ('armorProficiency.Heavy', 'combatNotes.bonusProficiencies(WarDomain)', '=', '1');
-    rules.defineRule('weaponProficiency.Martial',
-      'combatNotes.bonusProficiencies(WarDomain)', '=', '1'
-    );
 
   } else if(name == 'Druid') {
 
