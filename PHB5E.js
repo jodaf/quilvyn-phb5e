@@ -191,7 +191,7 @@ PHB5E.CLASSES_FEATURES_ADDED = {
     '"features.College Of Valor ? 3:Bonus Skills",' +
     '"features.College Of Valor ? 3:Combat Inspiration",' +
     '"features.College Of Valor ? 3:Bonus Proficiencies (College Of Valor)",' +
-    '"features.College Of Valor ? 6:Extra Attack",' +
+    '"bardHasExtraAttack ? 6:Extra Attack",' +
     '"features.College Of Valor ? 14:Battle Magic"',
   'Cleric':
     '"features.Knowledge Domain ? 1:Blessings Of Knowledge",' +
@@ -1767,11 +1767,10 @@ PHB5E.classRulesExtra = function(rules, name) {
 
   } else if(name == 'Bard') {
 
-    rules.defineRule('bardExtraAttacks',
-      'bardFeatures.Extra Attack', '?', null,
-      classLevel, '=', 'source<6 ? null : 1'
-    );
-    rules.defineRule('combatNotes.extraAttack', 'bardExtraAttacks', '+=', null);
+    rules.defineRule
+      ('bardHasExtraAttack', 'features.College Of Valor', '=', '1');
+    rules.defineRule
+      ('combatNotes.extraAttack', 'bardFeatures.Extra Attack', '+=', '1');
 
   } else if(name == 'Cleric') {
 
