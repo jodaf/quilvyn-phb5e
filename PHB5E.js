@@ -698,7 +698,8 @@ PHB5E.FEATURES_ADDED = {
       '"R30\' Aura frightens foes (DC %{spellDifficultyClass.P} Wisdom neg; damage ends), giving Adv on ally attacks, for 1 hr/long rest"',
   'Awakened Mind':'Section=Feature Note="R30\' May communicate telepathically"',
   'Battle Magic':
-    'Section=Combat Note="May make a bonus attack after casting a spell"',
+    'Section=Combat ' +
+    'Note="May use a bonus action to make a weapon attack after casting a spell"',
   'Beguiling Defenses':
     'Section=Save ' +
     'Note="Immune to charm; may reflect onto caster (DC %{spellDifficultyClass.K} Wisdom neg) for 1 min (damage ends)"',
@@ -763,7 +764,7 @@ PHB5E.FEATURES_ADDED = {
     'Section=Combat,Magic ' +
     'Note=' +
       '"May use Wild Shape as a bonus action",' +
-      '"May use a spell slot to regain (slot level)d8 HP during Wild Shape"',
+      '"May spend a spell slot and use a bonus action to regain (slot level)d8 HP during Wild Shape"',
   'Command Undead':
     'Section=Magic ' +
     'Note="R60\' May control undead target (DC %{spellDifficultyClass.W} Charisma neg; Adv if target Intelligence is 8 or higher)"',
@@ -805,13 +806,13 @@ PHB5E.FEATURES_ADDED = {
     'Section=Magic Note="Summoned creatures gain 30 temporary HP"',
   'Elder Champion':
     'Section=Magic ' +
-    'Note="Regains 10 HP/rd, may cast paladin spells as a bonus action, and inflicts Disadv on saves vs. self spells on foes w/in 10\' for 1 min 1/long rest"',
+    'Note="May regain 10 HP/rd, cast paladin spells as a bonus action, and inflict Disadv on saves vs. self spells on foes w/in 10\' for 1 min 1/long rest"',
   'Eldritch Strike':
     'Section=Combat ' +
     'Note="Successful attack inflicts Disadv on saves vs. self spells for 1 rd"',
   'Elemental Attunement':
     'Section=Magic ' +
-    'Note="May create a harmless instantaneous elemental effect, light or snuff small flame, chill or warm 1 lb object for 1 hr, or shape a 1\' cube of earth, fire, water, or mist for 1 min"',
+    'Note="May create a harmless instantaneous elemental effect, light or snuff a small flame, chill or warm a 1 lb object for 1 hr, or shape a 1\' cube of earth, fire, water, or mist for 1 min"',
   'Elemental Wild Shape':
     'Section=Magic Note="May use 2 Wild Shape uses to become an elemental"',
   'Enchantment Savant':
@@ -829,7 +830,7 @@ PHB5E.FEATURES_ADDED = {
     'Note="May add a Superiority Die to Armor Class during a move"',
   'Exceptional Training':
     'Section=Feature ' +
-    'Note="Companion can Dash, Disengage, or Help instead of Attack/Companion attacks count as magical"',
+    'Note="May use a bonus action to command companion to Dash, Disengage, or Help instead of Attack/Companion attacks count as magical"',
   'Expert Divination':
     'Section=Magic ' +
     'Note="Casting a divination spell restores a lower expended slot (level 5 maximum)"',
@@ -875,7 +876,8 @@ PHB5E.FEATURES_ADDED = {
     'Section=Magic ' +
     'Note="May copy illusion spells into spellbook for half cost"',
   'Illusory Reality':
-    'Section=Magic Note="May make object in self illusion real for 1 min"',
+    'Section=Magic ' +
+    'Note="May use a bonus action to make an object in self illusion real for 1 min"',
   'Illusory Self':
     'Section=Magic Note="May use Reaction to cause a foe miss 1/short rest"',
   'Impostor':'Section=Feature Note="May use unerring mimicry w/Adv on Deception to overcome suspicion"',
@@ -892,8 +894,7 @@ PHB5E.FEATURES_ADDED = {
     'Section=Magic ' +
     'Note="Knows <i>Minor Illusion</i> cantrip; effects include both a sound and an image" ' +
     'Spells="Minor Illusion"',
-  'Improved War Magic':
-    'Section=Combat Note="May make a bonus attack after any spell"',
+  'Improved War Magic':'Section=Combat Note="Increased War Magic effects"',
   'Infiltration Expertise':
     'Section=Feature ' +
     'Note="May use 1 wk process to create and adopt a different identity"',
@@ -1000,7 +1001,8 @@ PHB5E.FEATURES_ADDED = {
     'Note="R60\' May use Channel Divinity to read target thoughts (Wisdom neg) for 1 min and cast <i>Suggestion</i> (no save)" ' +
     'Spells=Suggestion',
   'Relentless':
-    'Section=Combat Note="Has a minimum of 1 Superiority Die after initiative"',
+    'Section=Combat ' +
+    'Note="Has a minimum of 1 Superiority Die available after initiative"',
   'Relentless Avenger':
     'Section=Combat Note="May move %{speed//2}\' after a successful OA"',
   'Ride The Wind':
@@ -1092,7 +1094,7 @@ PHB5E.FEATURES_ADDED = {
     'Section=Save Note="Has resistance to non-psychic damage during rage"',
   'Totem Spirit (Eagle)':
     'Section=Combat ' +
-    'Note="May take a bonus Dash, and foes suffer OA Disadv, during rage (heavy armor neg)"',
+    'Note="May use a bonus action to Dash, and foes suffer OA Disadv, during rage (heavy armor neg)"',
   'Totem Spirit (Wolf)':
     'Section=Combat ' +
     'Note="Allies gain Adv on attacks vs. foes adjacent to self during rage"',
@@ -1132,13 +1134,13 @@ PHB5E.FEATURES_ADDED = {
       '"Immune to magical aging"',
   'Versatile Trickster':
     'Section=Magic ' +
-    'Note="May use <i>Mage Hand</i> to distract foe w/in 5\', gaining Adv on attacks</i>"',
+    'Note="May use a bonus action to direct <i>Mage Hand</i> to distract a foe w/in 5\', gaining Adv on attacks</i>"',
   'Visions Of The Past':
     'Section=Magic ' +
     'Note="May gain visions about surroundings or a held object via 1 min meditation 1/short rest"',
   'Vow Of Enmity':
     'Section=Combat ' +
-    'Note="R10\' May use Channel Divinity to give self Adv on attacks against target for 1 min"',
+    'Note="R10\' May use Channel Divinity and a bonus action to give self Adv on attacks against target for 1 min"',
   'War Domain':
     'Spells=' +
       '"1:Divine Favor","1:Shield Of Faith",' +
@@ -1148,10 +1150,10 @@ PHB5E.FEATURES_ADDED = {
       '"9:Flame Strike","9:Hold Monster"',
   'War Magic':
     'Section=Combat ' +
-    'Note="May make a bonus attack after casting %{combatNotes.improvedWarMagic?\'any spell\':\'a cantrip\'}"',
+    'Note="May use a bonus action to make a weapon attack after casting %{combatNotes.improvedWarMagic?\'any spell\':\'a cantrip\'}"',
   'War Priest':
     'Section=Combat ' +
-    'Note="May make a bonus attack %{wisdomModifier>?1}/long rest"',
+    'Note="May use a bonus attack to make an extra weapon attack %{wisdomModifier>?1}/long rest"',
   'Warding Flare':
     'Section=Magic ' +
     'Note="R30\' May use Reaction to inflict Disadv on a foe attack %{wisdomModifier>?1}/long rest"',
@@ -1163,7 +1165,8 @@ PHB5E.FEATURES_ADDED = {
     'Note="May spend 6 Ki Points to cast <i>Wall Of Stone</i>" ' +
     'Spells="Wall Of Stone"',
   'Weapon Bond':
-    'Section=Combat Note="Cannot be disarmed; may summon weapon"',
+    'Section=Combat ' +
+    'Note="Cannot be disarmed/May use a bonus action to summon weapon"',
   'Wild Magic Surge':
     'Section=Magic ' +
     'Note="Spellcasting carries a 5% chance of unleashing a random magic effect"',
@@ -1191,7 +1194,7 @@ PHB5E.FEATURES_ADDED = {
     'Note="After a 10\' Dash, may use a bonus action to attack (+5 damage) or to push 10\'"',
   'Crossbow Expert':
     'Section=Combat ' +
-    'Note="May make multiple attacks w/a proficient crossbow/Suffers no Disadv on a close shot/May make a bonus hand crossbow attack after a one-handed attack"',
+    'Note="May make multiple attacks w/a proficient crossbow/Suffers no Disadv on a close shot/May use a bonus action to make a hand crossbow attack after a one-handed attack"',
   'Defensive Duelist':
     'Section=Combat ' +
     'Note="May use Reaction to gain +%{proficiencyBonus} Armor Class when wielding a proficient finesse weapon"',
@@ -1225,7 +1228,7 @@ PHB5E.FEATURES_ADDED = {
     'Note="Thunder spells ignore resistance and treat 1s as 2s on damage dice"',
   'Great Weapon Master':
     'Section=Combat ' +
-    'Note="May make a bonus attack after crit or reducing foe to 0 HP/May suffer -5 attack w/a heavy weapon to gain +10 damage"',
+    'Note="May use a bonus action to attack after crit or reducing foe to 0 HP/May suffer -5 attack w/a heavy weapon to gain +10 damage"',
   'Healer':
     'Section=Feature ' +
     'Note="Using a healer\'s kit to stabilize also restores 1 HP/May use a healer\'s kit to restore 1d6+4 + target HD HP 1/short rest"',
@@ -1325,7 +1328,7 @@ PHB5E.FEATURES_ADDED = {
       '"+5 passive Investigation and Perception"',
   'Polearm Master':
     'Section=Combat ' +
-    'Note="Successful bonus attack w/polearm butt inflicts 1d4 HP bludgeoning/Foe entering polearm reach provokes an OA"',
+    'Note="May use a bonus action to attack w/polearm butt (inflicts 1d4 HP bludgeoning)/Foe entering polearm reach provokes an OA"',
   'Resilient':
     'Section=Ability,Save ' +
     'Note=' +
@@ -1345,7 +1348,7 @@ PHB5E.FEATURES_ADDED = {
   'Shield Master':
     'Section=Combat,Save ' +
     'Note=' +
-      '"May use a bonus action to shove foe during an attack",' +
+      '"May use a bonus action to shove foe after an attack",' +
       '"+2 Dexterity vs. targeted spell or effect/May use Reaction to suffer no damage instead of half on a successful Dexterity save"',
   'Skilled':'Section=Skill Note="Skill Proficiency (Choose 3 from any)"',
   'Skulker':
