@@ -716,7 +716,7 @@ PHB5E.FEATURES_ADDED = {
     'Section=Skill,Skill ' +
     'Note=' +
       '"Skill Proficiency (Choose 2 from Arcana, History, Nature, Religion)/Language (Choose 2 from any)",' +
-      '"+%{proficiencyBonus} on chosen skills"',
+      '"Dbl proficiency bonus +%{proficiencyBonus} on chosen skills"',
   'Bonus Cantrip (Light Domain)':
     'Section=Magic Note="Knows <i>Light</i> cantrip" Spells=Light',
   'Bonus Proficiencies (College Of Valor)':
