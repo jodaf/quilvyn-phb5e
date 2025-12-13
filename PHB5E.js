@@ -76,7 +76,7 @@ function PHB5E() {
 
 }
 
-PHB5E.VERSION = '2.4.1.0';
+PHB5E.VERSION = '2.4.2.0';
 
 PHB5E.ALIGNMENTS = Object.assign({}, SRD5E.ALIGNMENTS);
 PHB5E.ARMORS = Object.assign({}, SRD5E.ARMORS);
@@ -85,35 +85,35 @@ PHB5E.BACKGROUNDS_ADDED = {
     'Equipment=' +
       '"Fine Clothes","Con Tools","Disguise Kit","15 GP" ' +
     'Features=' +
-      '"1:Skill Proficiency (Deception/Sleight Of Hand)",' +
-      '"1:Tool Proficiency (Disguise Kit/Forgery Kit)",' +
+      '"1:Skill Proficiency (Deception; Sleight Of Hand)",' +
+      '"1:Tool Proficiency (Disguise Kit; Forgery Kit)",' +
       '"1:False Identity"',
   'Criminal':
     'Equipment=' +
       'Crowbar,"Dark Clothes W/Hood","15 GP" ' +
     'Features=' +
-      '"1:Skill Proficiency (Deception/Stealth)",' +
-      '"1:Tool Proficiency (Thieves\' Tools/Choose 1 from any Gaming)",' +
+      '"1:Skill Proficiency (Deception; Stealth)",' +
+      '"1:Tool Proficiency (Thieves\' Tools; Choose 1 from any Gaming)",' +
       '"1:Criminal Contact"',
   'Entertainer':
     'Equipment=' +
       '"Admirer\'s Favor",Costume,"Musical Instrument","15 GP" ' +
     'Features=' +
-      '"1:Skill Proficiency (Acrobatics/Performance)",' +
-      '"1:Tool Proficiency (Disguise Kit/Choose 1 from any Musical)",' +
+      '"1:Skill Proficiency (Acrobatics; Performance)",' +
+      '"1:Tool Proficiency (Disguise Kit; Choose 1 from any Musical)",' +
       '"1:By Popular Demand"',
   'Folk Hero':
     'Equipment=' +
       '"Artisan\'s Tools",Clothes,"Iron Pot",Shovel,"10 GP" ' +
     'Features=' +
-      '"1:Skill Proficiency (Animal Handling/Survival)",' +
-      '"1:Tool Proficiency (Vehicles (Land)/Choose 1 from any Artisan)",' +
+      '"1:Skill Proficiency (Animal Handling; Survival)",' +
+      '"1:Tool Proficiency (Vehicles (Land); Choose 1 from any Artisan)",' +
       '"1:Rustic Hospitality"',
   'Guild Artisan':
     'Equipment=' +
       '"Artisan\'s Tools","Introduction Letter","Traveler\'s Clothes","15 GP" '+
     'Features=' +
-      '"1:Skill Proficiency (Insight/Persuasion)",' +
+      '"1:Skill Proficiency (Insight; Persuasion)",' +
       '"1:Tool Proficiency (Choose 1 from any Artisan)",' +
       '"1:Language (Choose 1 from any)",' +
       '"1:Guild Membership"',
@@ -122,7 +122,7 @@ PHB5E.BACKGROUNDS_ADDED = {
       'Clothes,"Herbalism Kit","Scroll Case With Notes","Winter Blanket",' +
       '"5 GP" ' +
     'Features=' +
-      '"1:Skill Proficiency (Medicine/Religion)",' +
+      '"1:Skill Proficiency (Medicine; Religion)",' +
       '"1:Tool Proficiency (Herbalism Kit)",' +
       '"1:Language (Choose 1 from any)",' +
       '1:Discovery',
@@ -130,7 +130,7 @@ PHB5E.BACKGROUNDS_ADDED = {
     'Equipment=' +
       '"Fine Clothes","Pedigree Scroll","Signet Ring","25 GP" ' +
     'Features=' +
-      '"1:Skill Proficiency (History/Persuasion)",' +
+      '"1:Skill Proficiency (History; Persuasion)",' +
       '"1:Tool Proficiency (Choose 1 from any Gaming)",' +
       '"1:Language (Choose 1 from any)",' +
       '"1:Position Of Privilege"',
@@ -138,38 +138,38 @@ PHB5E.BACKGROUNDS_ADDED = {
     'Equipment=' +
       '"Animal Trophy","Hunting Trap",Staff,"Traveler\'s Clothes","10 GP" ' +
     'Features=' +
-      '"1:Skill Proficiency (Athletics/Survival)",' +
+      '"1:Skill Proficiency (Athletics; Survival)",' +
       '"1:Tool Proficiency (Choose 1 from any Musical)",' +
       '"1:Language (Choose 1 from any)",' +
       '1:Wanderer',
   'Sage':
     'Equipment=' +
-      '"Bottle Ink",Clothes,"Letter W/Unanswered Question","Quill",' +
+      '"Bottle Ink",Clothes,"Letter With an Unanswered Question","Quill",' +
       '"Small Knife","10 GP" ' +
     'Features=' +
-      '"1:Skill Proficiency (Arcana/History)",' +
+      '"1:Skill Proficiency (Arcana; History)",' +
       '"1:Language (Choose 2 from any)",' +
       '1:Researcher',
   'Sailor':
     'Equipment=' +
       '"Belaying Pin",Clothes,"Lucky Charm","50\' Silk Rope","10 GP" ' +
     'Features=' +
-      '"1:Skill Proficiency (Athletics/Perception)",' +
-      '"1:Tool Proficiency (Navigator\'s Tools/Vehicles (Water))",' +
+      '"1:Skill Proficiency (Athletics; Perception)",' +
+      '"1:Tool Proficiency (Navigator\'s Tools; Vehicles (Water))",' +
       '"1:Ship\'s Passage"',
   'Soldier':
     'Equipment=' +
       '"Battle Trophy","Clothes","Gambling Objects","Rank Insignia","10 GP" ' +
     'Features=' +
-      '"1:Skill Proficiency (Athletics/Intimidation)",' +
-      '"1:Tool Proficiency (Vehicles (Land)/Choose 1 from any Gaming)",' +
+      '"1:Skill Proficiency (Athletics; Intimidation)",' +
+      '"1:Tool Proficiency (Vehicles (Land); Choose 1 from any Gaming)",' +
       '"1:Military Rank"',
   'Urchin':
     'Equipment=' +
       '"City Map",Clothes,"Parent\'s Token","Pet Mouse","Small Knife","10 GP" '+
     'Features=' +
-      '"1:Skill Proficiency (Sleight Of Hand/Stealth)",' +
-      '"1:Tool Proficiency (Disguise Kit/Thieves\' Tools)",' +
+      '"1:Skill Proficiency (Sleight Of Hand; Stealth)",' +
+      '"1:Tool Proficiency (Disguise Kit; Thieves\' Tools)",' +
       '"1:City Secrets"'
 };
 PHB5E.BACKGROUNDS =
@@ -603,6 +603,49 @@ PHB5E.DEITIES_ADDED = {
 PHB5E.DEITIES = Object.assign({}, SRD5E.DEITIES, PHB5E.DEITIES_ADDED);
 PHB5E.FEATS = Object.assign({}, SRD5E.FEATS, PHB5E.FEATS_ADDED);
 PHB5E.FEATURES_ADDED = {
+
+  // Race
+
+  // Mountain Dwarf
+  'Dwarven Armor Training':
+    'Section=combat Note="Armor Proficiency (Light; Medium)"',
+  'Mountain Dwarf Ability Adjustment':'Section=ability Note="+2 Strength"',
+  // Wood Elf
+  'Fleet Of Foot':'Section=ability Note="+5 Speed"',
+  'Mask Of The Wild':'Section=skill Note="Can hide in light natural coverage"',
+  'Wood Elf Ability Adjustment':'Section=ability Note="+1 Wisdom"',
+  // Dark Elf
+  'Dark Elf Ability Adjustment':'Section=ability Note="+1 Charisma"',
+  'Drow Magic':
+    'Section=magic ' +
+    'Note="Knows the <i>Dancing Lights</i> cantrip%{level<3?\'\':level<5?\' and can cast <i>Faerie Fire</i> once per long rest\':\' and can cast <i>Faerie Fire</i> and <i>Darkness</i> once per long rest\'}" ' +
+    'Spells="Dancing Lights","3:Faerie Fire",5:Darkness ' +
+    'SpellAbility=Charisma',
+  'Drow Weapon Training':
+    'Section=combat ' +
+    'Note="Weapon Proficiency (Hand Crossbow; Rapier; Shortsword)"',
+  'Sunlight Sensitivity':
+    'Section=combat,skill ' +
+    'Note=' +
+      '"Has disadvantage on attacks in direct sunlight",' +
+      '"Has disadvantage on sight Perception in direct sunlight"',
+  'Superior Darkvision':
+    'Section=feature Note="R120\' Sees one light level better"',
+  // Stout Halfling
+  'Stout Halfling Ability Adjustment':'Section=ability Note="+1 Constitution"',
+  'Stout Resilience':
+    'Section=save ' +
+    'Note="Has advantage vs. poison and resistance to poison damage"',
+  // Forest Gnome
+  'Forest Gnome Ability Adjustment':'Section=Ability Note="+1 Dexterity"',
+  'Natural Illusionist':
+    'Section=magic ' +
+    'Note="Knows the <i>Minor Illusion</i> cantrip" ' +
+    'Spells="Minor Illusion" ' +
+    'SpellAbility=Intelligence',
+  'Speak With Small Beasts':
+    'Section=Feature Note="Can communicate simple ideas with small animals"',
+
   // Backgrounds
   'By Popular Demand':
     'Section=Feature ' +
@@ -1371,81 +1414,39 @@ PHB5E.FEATURES_ADDED = {
     'Section=Ability,Combat ' +
     'Note=' +
       '"Ability Boost (Choose 1 from Dexterity, Strength)",' +
-      '"Weapon Proficiency (Choose 4 from any)"',
-  // Races
-  'Dark Elf Ability Adjustment':
-    'Section=Ability Note="+2 Dexterity/+1 Charisma"',
-  'Drow Magic':
-    'Section=Magic ' +
-    'Note="Knows <i>Dancing Lights</i> cantrip%{level<3?\'\':level<5?\', may cast <i>Faerie Fire</i> 1/long rest\':\', may cast <i>Faerie Fire</i> and <i>Darkness</i> 1/long rest\'}" ' +
-    'Spells="Dancing Lights","3:Faerie Fire",5:Darkness ' +
-    'SpellAbility=Charisma',
-  'Drow Weapon Training':
-    'Section=Combat ' +
-    'Note="Weapon Proficiency (Hand Crossbow/Rapier/Shortsword)"',
-  'Dwarven Armor Training':'Section=Combat Note="Armor Proficiency (Medium)"',
-  'Fleet Of Foot':'Section=Ability Note="+5 Speed"',
-  'Forest Gnome Ability Adjustment':
-    'Section=Ability Note="+2 Intelligence/+1 Dexterity"',
-  'Mask Of The Wild':'Section=Skill Note="May hide in light natural coverage"',
-  'Mountain Dwarf Ability Adjustment':
-    'Section=Ability Note="+2 Constitution/+2 Strength"',
-  'Natural Illusionist':
-    'Section=Magic ' +
-    'Note="Knows <i>Minor Illusion</i> cantrip" ' +
-    'Spells="Minor Illusion" ' +
-    'SpellAbility=Intelligence',
-  'Speak With Small Beasts':
-    'Section=Feature Note="May communicate simple ideas with small animals"',
-  'Stout Halfling Ability Adjustment':
-    'Section=Ability Note="+2 Dexterity/+1 Constitution"',
-  'Stout Resilience':
-    'Section=Save Note="Adv on saves vs. poison/Has resistance to poison damage"',
-  'Sunlight Sensitivity':
-    'Section=Combat,Skill ' +
-    'Note=' +
-      '"Disadv on attacks in direct sunlight",' +
-      '"Disadv on sight Perception in direct sunlight"',
-  'Superior Darkvision':
-    'Section=Feature Note="R120\' Sees one light level better"',
-  'Wood Elf Ability Adjustment':
-    'Section=Ability Note="+2 Dexterity/+1 Wisdom"'
+      '"Weapon Proficiency (Choose 4 from any)"'
+
 };
 PHB5E.FEATURES = Object.assign({}, SRD5E.FEATURES, PHB5E.FEATURES_ADDED);
 PHB5E.GOODIES = Object.assign({}, SRD5E.GOODIES);
 PHB5E.LANGUAGES = Object.assign({}, SRD5E.LANGUAGES);
 PHB5E.PATHS = {};
 PHB5E.RACES_ADDED = {
-  'Dark Elf':
-    'Features=' +
-      '"1:Language (Common/Elvish)",' +
-      '"1:Dark Elf Ability Adjustment","1:Drow Magic",' +
-      '"1:Drow Weapon Training","1:Fey Ancestry","1:Keen Senses",' +
-      '"1:Sunlight Sensitivity","1:Superior Darkvision",1:Trance',
-  'Forest Gnome':
-    'Features=' +
-      '"1:Language (Common/Gnomish)",' +
-      '1:Darkvision,"1:Gnome Cunning","1:Natural Illusionist",' +
-      '"1:Forest Gnome Ability Adjustment",1:Slow,1:Small,' +
-      '"1:Speak With Small Beasts"',
   'Mountain Dwarf':
-    'Features=' +
-      '"1:Language (Common/Dwarvish)",' +
-      '"1:Tool Proficiency (Choose 1 from Brewer\'s Tools, Mason\'s Tools, Smith\'s Tools)",' +
-      '1:Darkvision,"1:Dwarven Armor Training","1:Dwarven Combat Training",' +
-      '"1:Dwarven Resilience","1:Mountain Dwarf Ability Adjustment",1:Slow,' +
-      '1:Steady,1:Stonecunning',
-  'Stout Halfling':
-    'Features=' +
-      '"1:Language (Common/Halfling)",' +
-      '1:Brave,"1:Halfling Nimbleness","1:Lucky (Halfling)",1:Slow,1:Small,' +
-      '"1:Stout Halfling Ability Adjustment","1:Stout Resilience"',
+    SRD5E.RACES['Hill Dwarf']
+    .replace('Hill Dwarf Ability Adjustment', 'Mountain Dwarf Ability Adjustment')
+    .replace('Dwarven Toughness', 'Dwarven Armor Training'),
   'Wood Elf':
-    'Features=' +
-      '"1:Language (Common/Elvish)",' +
-      '1:Darkvision,"1:Elf Weapon Training","1:Fey Ancestry",' +
-      '"1:Fleet Of Foot","1:Keen Senses","1:Mask Of The Wild",1:Trance,' +
-      '"1:Wood Elf Ability Adjustment"'
+    SRD5E.RACES['High Elf']
+    .replace('High Elf Ability Adjustment', 'Wood Elf Ability Adjustment')
+    .replace('Cantrip (High Elf)', 'Fleet Of Foot')
+    .replace('Extra Language', 'Mask Of The Wild'),
+  'Dark Elf':
+    SRD5E.RACES['High Elf']
+    .replace('High Elf Ability Adjustment', 'Dark Elf Ability Adjustment')
+    .replace('Darkvision', 'Superior Darkvision')
+    .replace('Elf Weapon Training', 'Drow Weapon Training')
+    .replace('Cantrip (High Elf)', 'Drow Magic')
+    .replace('Extra Language', 'Sunlight Sensitivity'),
+  'Stout Halfling':
+    SRD5E.RACES['Lightfoot Halfling']
+    .replace('Lightfoot Halfling Ability Adjustment', 'Stout Halfling Ability Adjustment')
+    .replace('Naturally Stealthy', 'Stout Resilience'),
+  'Forest Gnome':
+    SRD5E.RACES['Rock Gnome']
+    .replace('Rock Gnome Ability Adjustment', 'Forest Gnome Ability Adjustment')
+    .replace("Artificer's Lore", 'Natural Illusionist')
+    .replace('Tinker', 'Speak With Small Beasts')
 };
 PHB5E.RACES = Object.assign({}, SRD5E.RACES, PHB5E.RACES_ADDED);
 PHB5E.SCHOOLS = Object.assign({}, SRD5E.SCHOOLS);
