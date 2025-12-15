@@ -1,5 +1,5 @@
 /*
-Copyright 2021, James J. Hayes
+Copyright 2025, James J. Hayes
 
 This program is free software; you can redistribute it and/or modify it under
 the terms of the GNU General Public License as published by the Free Software
@@ -203,30 +203,30 @@ PHB5E.CLASSES_FEATURES_ADDED = {
     '"features.Light Domain ? 1:Warding Flare",' +
     '"features.Light Domain ? 2:Radiance Of The Dawn",' +
     '"features.Light Domain ? 6:Improved Flare",' +
-    '"clericHasPotentSpellcasting ? 8:Potent Spellcasting",' +
+    // '"clericHasPotentSpellcasting ? 8:Potent Spellcasting",' +
     '"features.Light Domain ? 17:Corona Of Light",' +
     '"features.Nature Domain ? 1:Acolyte Of Nature",' +
     '"features.Nature Domain ? 1:Bonus Proficiency (Nature Domain)",' +
     '"features.Nature Domain ? 2:Charm Animals And Plants",' +
     '"features.Nature Domain ? 6:Dampen Elements",' +
-    '"clericHasDivineStrike ? 8:Divine Strike",' +
+    // SRD35 defines this '"clericHasDivineStrike ? 8:Divine Strike",' +
     '"features.Nature Domain ? 17:Master Of Nature",' +
     '"features.Tempest Domain ? 1:Bonus Proficiencies (Tempest Domain)",' +
     '"features.Tempest Domain ? 1:Wrath Of The Storm",' +
     '"features.Tempest Domain ? 2:Destructive Wrath",' +
     '"features.Tempest Domain ? 6:Thunderbolt Strike",' +
-    '"clericHasDivineStrike ? 8:Divine Strike",' +
+    // '"clericHasDivineStrike ? 8:Divine Strike",' +
     '"features.Tempest Domain ? 17:Stormborn",' +
     '"features.Trickery Domain ? 1:Blessing Of The Trickster",' +
     '"features.Trickery Domain ? 2:Invoke Duplicity",' +
     '"features.Trickery Domain ? 6:Cloak Of Shadows (Trickery Domain)",' +
-    '"clericHasDivineStrike ? 8:Divine Strike",' +
+    // '"clericHasDivineStrike ? 8:Divine Strike",' +
     '"features.Trickery Domain ? 17:Improved Duplicity",' +
     '"features.War Domain ? 1:Bonus Proficiencies (War Domain)",' +
     '"features.War Domain ? 1:War Priest",' +
     '"features.War Domain ? 2:Guided Strike",' +
     '"features.War Domain ? 6:War God\'s Blessing",' +
-    '"clericHasDivineStrike ? 8:Divine Strike",' +
+    // '"clericHasDivineStrike ? 8:Divine Strike",' +
     '"features.War Domain ? 17:Avatar Of Battle"',
   'Druid':
     '"features.Circle Of The Moon ? 2:Combat Wild Shape",' +
@@ -646,6 +646,192 @@ PHB5E.FEATURES_ADDED = {
   'Speak With Small Beasts':
     'Section=Feature Note="Can communicate simple ideas with small animals"',
 
+  // Class
+
+  // Barbarian
+  // Totem Warrior
+  'Aspect Of The Beast (Bear)':
+    'Section=ability,ability ' +
+    'Note=' +
+      '"x2 Carry/x2 Lift",' +
+      '"Has advantage on Strength to push, pull, lift, or break"',
+  'Aspect Of The Beast (Eagle)':
+    'Section=skill ' +
+    'Note="Sees 1 mile clearly and suffers no disadvantage on Perception from dim light"',
+  'Aspect Of The Beast (Wolf)':
+    'Section=skill ' +
+    'Note="Can track at a fast pace and Stealth at a normal pace"',
+  'Spirit Seeker':
+    'Section=magic ' +
+    'Note="Can cast ritual <i>Beast Sense</i> and <i>Speak With Animals</i>" ' +
+    'Spells="Beast Sense","Speak With Animals"',
+  'Spirit Walker':
+    'Section=magic ' +
+    'Note="Can cast ritual <i>Commune With Nature</i>" ' +
+    'Spells="Commune With Nature"',
+  'Totemic Attunement (Bear)':
+    'Section=combat ' +
+    'Note="During rage, adjacent foes suffer disadvantage on attacks on others"',
+  'Totemic Attunement (Eagle)':
+    'Section=ability Note="Can fly %{speed}\' each rd during rage"',
+  'Totemic Attunement (Wolf)':
+    'Section=combat ' +
+    'Note="During rage, can use a bonus action after a successful melee attack to knock prone a Large or smaller foe"',
+  'Totem Spirit (Bear)':
+    'Section=save Note="Has resistance to non-psychic damage during rage"',
+  'Totem Spirit (Eagle)':
+    'Section=Combat ' +
+    'Note="During rage, can use a bonus action to Dash, and foes suffer disadvantage on opportunity attacks; heavy armor negates"',
+  'Totem Spirit (Wolf)':
+    'Section=combat ' +
+    'Note="Allies gain advantage on attacks vs. foes adjacent to self during rage"',
+
+  // Bard
+  // College Of Valor
+  'Battle Magic':
+    'Section=Combat ' +
+    'Note="Can use a bonus action to make a weapon attack after casting a spell"',
+  'Bonus Proficiencies (College Of Valor)':
+    'Section=combat ' +
+    'Note="Armor Proficiency (Medium; Shield)/Weapon Proficiency (Martial Weapons)"',
+  'Combat Inspiration':
+    'Section=combat ' +
+    'Note="Allies can use a Bardic Inspiration die to boost weapon damage or Armor Class"',
+  // Extra Attack as above
+
+  // Cleric
+  // Knowledge Domain
+  'Blessings Of Knowledge':
+    'Section=skill,skill ' +
+    'Note=' +
+      '"Skill Proficiency (Choose 2 from Arcana, History, Nature, Religion)/Language (Choose 2 from any)",' +
+      '"+%{proficiencyBonus} on chosen Blessings of Knowledge skills"',
+  'Dampen Elements':
+    'Section=magic ' +
+    'Note="R30\' Can use a Reaction to grant resistance to immediate acid, cold, fire, lightning, or thunder damage"',
+  'Knowledge Domain':
+    'Spells=' +
+      '"1:Command","1:Identify",' +
+      '"3:Augury","3:Suggestion",' +
+      '"5:Nondetection","5:Speak With Dead",' +
+      '"7:Arcane Eye","7:Confusion",' +
+      '"9:Legend Lore","9:Scrying"',
+  'Knowledge Of The Ages':
+    'Section=skill ' +
+    'Note="Can use Channel Divinity to gain proficiency in a chosen skill or tool for 10 min"',
+  'Potent Spellcasting':
+    'Section=magic Note="+%{wisdomModifier} Cleric cantrip damage"',
+  'Read Thoughts':
+    'Section=magic ' +
+    'Note="R60\' Can use Channel Divinity to read the target\'s thoughts (Wisdom neg and blocks additional uses until a long rest) for 1 min; success allows casting <i>Suggestion</i> on the target with no save" ' +
+    'Spells=Suggestion',
+  'Visions Of The Past':
+    'Section=magic ' +
+    'Note="Can gain visions about surroundings or a held object via 1 min meditation once per short rest"',
+  // Nature Domain
+  'Acolyte Of Nature':
+    'Section=magic,skill ' +
+    'Note=' +
+      '"Knows 1 druid cantrip",' +
+      '"Skill Proficiency (Choose 1 from Animal Handling, Nature, Survival)"',
+  'Bonus Proficiency (Nature Domain)':
+    'Section=combat Note="Armor Proficiency (Heavy)"',
+  'Charm Animals And Plants':
+    'Section=magic ' +
+    'Note="R30\' Can use Channel Divinity to charm beasts and plants (Wisdom neg) for 1 min"',
+  // Divine Strike as SRD35
+  'Master Of Nature':
+    'Section=magic Note="Can command charmed animals and plants"',
+  'Nature Domain':
+    'Spells=' +
+      '"1:Animal Friendship","1:Speak With Animals",' +
+      '"3:Barkskin","3:Spike Growth",' +
+      '"5:Plant Growth","5:Wind Wall",' +
+      '"7:Dominate Beast","7:Grasping Vine",' +
+      '"9:Insect Plague","9:Tree Stride"',
+  // Tempest Domain
+  'Bonus Proficiencies (Tempest Domain)':
+    'Section=combat ' +
+    'Note="Armor Proficiency (Heavy)/Weapon Proficiency (Martial Weapons)"',
+  'Destructive Wrath':
+    'Section=magic ' +
+    'Note="Can use Channel Divinity to maximize lightning or thunder damage"',
+  // Divine Strike as above
+  'Stormborn':'Section=ability Note="Has a %{speed}\' fly speed outdoors"',
+  'Tempest Domain':
+    'Spells=' +
+      '"1:Fog Cloud","1:Thunderwave",' +
+      '"3:Gust Of Wind","3:Shatter",' +
+      '"5:Call Lightning","5:Sleet Storm",' +
+      '"7:Control Water","7:Ice Storm",' +
+      '"9:Destructive Wave","9:Insect Plague"',
+  'Thunderbolt Strike':
+    'Section=magic ' +
+    'Note="Can cause lightning damage to also push away Large and smaller creatures 10\'"',
+  'Wrath Of The Storm':
+    'Section=combat ' +
+    'Note="Can use a Reaction to inflict 2d8 HP lightning or thunder (Dexterity half) on a successful attacker %{wisdomModifier>1?wisdomModifier+\' times\':\'once\'} per long rest"',
+  // Trickery Domain
+  'Blessing Of The Trickster':
+    'Section=magic ' +
+    'Note="Touch gives advantage on Stealth for 1 hr or until given to another target"',
+  'Cloak Of Shadows (Trickery Domain)':
+    'Section=magic ' +
+    'Note="Can use Channel Divinity to make self invisible until the end of the next turn; attacking or casting ends"',
+  // Divine Strike as above
+  'Improved Duplicity':
+    'Section=magic Note="Invoke Duplicity creates 4 duplicates"',
+  'Invoke Duplicity':
+    'Section=magic ' +
+    'Note="R30\' Can use Channel Divinity to create %{magicNotes.improvedDuplicity?\'4 illusionary duplicates\':\'1 illusionary duplicate\'}, moving %{magicNotes.improvedDuplicity?\'each\':\'it\'} up to 30\' each rd to a maximum of 120\' away, gaining advantage on attacks when self and duplicate are each within 5\' of the target, and allowing remote spellcasting for conc up to 1 min"',
+  'Trickery Domain':
+    'Spells=' +
+      '"1:Charm Person","1:Disguise Self",' +
+      '"3:Mirror Image","3:Pass Without Trace",' +
+      '"5:Blink","5:Dispel Magic",' +
+      '"7:Dimension Door","7:Polymorph",' +
+      '"9:Dominate Person","9:Modify Memory"',
+  // War Domain
+  'Avatar Of Battle':
+    'Section=save ' +
+    'Note="Has resistance to nonmagical bludgeoning, piercing, and slashing damage"',
+  'Bonus Proficiencies (War Domain)':
+    'Section=combat ' +
+    'Note="Armor Proficiency (Heavy)/Weapon Proficiency (Martial Weapons)"',
+  // Divine Strike as above
+  'Guided Strike':
+    'Section=combat Note="Can use Channel Divinity to give self +10 attack"',
+  'War Domain':
+    'Spells=' +
+      '"1:Divine Favor","1:Shield Of Faith",' +
+      '"3:Magic Weapon","3:Spiritual Weapon",' +
+      '"5:Crusader\'s Mantle","5:Spirit Guardians",' +
+      '"7:Freedom Of Movement","7:Stoneskin",' +
+      '"9:Flame Strike","9:Hold Monster"',
+  "War God's Blessing":
+    'Section=magic ' +
+    'Note="R30\' Can use a Reaction and Channel Divinity to give an ally +10 attack"',
+  'War Priest':
+    'Section=combat ' +
+    'Note="Can use a bonus attack to make an extra weapon attack %{wisdomModifier>1?wisdomModifier+\' times\':\'once\'} per long rest"',
+
+  // Druid
+  // Circle Of The Moon
+  'Circle Forms':'Section=magic Note="Can Wild Shape into a CR %V creature"',
+  'Combat Wild Shape':
+    'Section=combat,magic ' +
+    'Note=' +
+      '"Can use Wild Shape as a bonus action",' +
+      '"While using Wild Shape, can spend a spell slot and use a bonus action to regain 1d8 hit points per slot level"',
+  'Elemental Wild Shape':
+    'Section=magic Note="Can expend 2 Wild Shape uses to become an elemental"',
+  'Primal Strike':
+    'Section=combat Note="Attacks while using Wild Shape count as magical"',
+  'Thousand Forms':
+    'Section=magic ' +
+    'Note="Can cast <i>Alter Self</i> at will" ' +
+    'Spells="Alter Self"',
+
   // Backgrounds
   'By Popular Demand':
     'Section=Feature ' +
@@ -691,20 +877,12 @@ PHB5E.FEATURES_ADDED = {
   "Transmuter's Stone":
     'Section=Magic ' +
     'Note="Stone gives choice of 60\' darkvision, +10\' Speed, proficiency on Constitution saves, or resistance to chosen energy damage; may change effect when casting a transmutation spell"',
-  "War God's Blessing":
-    'Section=Magic ' +
-    'Note="R30\' May use Reaction and Channel Divinity to give an ally +10 attack"',
   'Abjuration Savant':
     'Section=Magic ' +
     'Note="May copy abjuration spells into spellbook for half cost"',
   'Abjure Enemy':
     'Section=Magic ' +
     'Note="R60\' May use Channel Divinity to halt target (DC %{spellDifficultyClass.P} Wisdom half speed) for 1 min"',
-  'Acolyte Of Nature':
-    'Section=Magic,Skill ' +
-    'Note=' +
-      '"Knows 1 D0 cantrip",' +
-      '"Skill Proficiency (Choose 1 from Animal Handling, Nature, Survival)"',
   'Alter Memories':
     'Section=Magic ' +
     'Note="Chosen target becomes unaware of self charm; may also inflict forgetfulness of the preceding %{charismaModifier+1>?1} hrs (DC %{spellDifficultyClass.W} Intelligence neg)"',
@@ -712,17 +890,6 @@ PHB5E.FEATURES_ADDED = {
   'Arcane Ward':
     'Section=Magic ' +
     'Note="Abjuration casting creates a ward around self that can absorb %{levels.Wizard*2+intelligenceModifier} HP (long rest ends); if taken to 0 HP, abjuration casting restores 2x spell level HP to ward"',
-  'Aspect Of The Beast (Bear)':
-    'Section=Ability,Ability ' +
-    'Note=' +
-      '"Dbl load and lift",' +
-      '"Adv on Strength to push, pull, lift, or break"',
-  'Aspect Of The Beast (Eagle)':
-    'Section=Skill ' +
-    'Note="Sees 1 mile clearly and suffers no Disadv on Perception from dim light"',
-  'Aspect Of The Beast (Wolf)':
-    'Section=Skill ' +
-    'Note="May track at a fast pace and Stealth at a normal pace"',
   'Assassin Bonus Proficiencies':
     'Section=Feature Note="Tool Proficiency (Disguise Kit/Poisoner\'s Kit)"',
   'Assassinate':
@@ -731,18 +898,12 @@ PHB5E.FEATURES_ADDED = {
   'Aura Of Warding':
     'Section=Save ' +
     'Note="R%{levels.Paladin<18?10:30}\' Self and allies have resistance to spell damage"',
-  'Avatar Of Battle':
-    'Section=Save ' +
-    'Note="Has resistance to nonmagical bludgeoning, piercing and slashing damage"',
   'Avenging Angel':
     'Section=Ability,Combat ' +
     'Note=' +
       '"60\' fly speed for 1 hr/long rest",' +
       '"R30\' Aura frightens foes (DC %{spellDifficultyClass.P} Wisdom neg; damage ends), giving Adv on ally attacks, for 1 hr/long rest"',
   'Awakened Mind':'Section=Feature Note="R30\' May communicate telepathically"',
-  'Battle Magic':
-    'Section=Combat ' +
-    'Note="May use a bonus action to make a weapon attack after casting a spell"',
   'Beguiling Defenses':
     'Section=Save ' +
     'Note="Immune to charm; may reflect onto caster (DC %{spellDifficultyClass.K} Wisdom neg) for 1 min (damage ends)"',
@@ -753,40 +914,18 @@ PHB5E.FEATURES_ADDED = {
     'Section=Magic ' +
     'Note="R30\' May teleport self or swap w/a willing creature 1/long rest or conjuration spell casting"',
   'Bestial Fury':'Section=Feature Note="Companion may make 2 attacks/rd"',
-  'Blessing Of The Trickster':
-    'Section=Magic Note="May give touched Adv on Stealth for 1 hr"',
-  'Blessings Of Knowledge':
-    'Section=Skill,Skill ' +
-    'Note=' +
-      '"Skill Proficiency (Choose 2 from Arcana, History, Nature, Religion)/Language (Choose 2 from any)",' +
-      '"Dbl proficiency bonus +%{proficiencyBonus} on chosen skills"',
   'Bonus Cantrip (Light Domain)':
     'Section=Magic Note="Knows <i>Light</i> cantrip" Spells=Light',
-  'Bonus Proficiencies (College Of Valor)':
-    'Section=Combat ' +
-    'Note="Armor Proficiency (Medium/Shield)/Weapon Proficiency (Martial)"',
-  'Bonus Proficiency (Nature Domain)':
-    'Section=Combat Note="Armor Proficiency (Heavy)"',
-  'Bonus Proficiencies (Tempest Domain)':
-    'Section=Combat ' +
-    'Note="Armor Proficiency (Heavy)/Weapon Proficiency (Martial)"',
-  'Bonus Proficiencies (War Domain)':
-    'Section=Combat ' +
-    'Note="Armor Proficiency (Heavy)/Weapon Proficiency (Martial)"',
   'Breath Of Winter':
     'Section=Magic ' +
     'Note="May spend 6 Ki Points to cast <i>Cone Of Cold</i>" ' +
     'Spells="Cone Of Cold"',
-  'Charm Animals And Plants':
-    'Section=Magic ' +
-    'Note="R30\' May use Channel Divinity to charm beasts and plants (Wisdom neg) for 1 min"',
   'Circle Of The Land (Underdark)':
     'Spells=' +
       '"3:Spider Climb",3:Web,' +
       '"5:Gaseous Form","5:Stinking Cloud",' +
       '"7:Greater Invisibility","7:Stone Shape",' +
       '9:Cloudkill,"9:Insect Plague"',
-  'Circle Forms':'Section=Magic Note="May Wild Shape into a CR %V creature"',
   'Clench Of The North Wind':
     'Section=Magic ' +
     'Note="May spend 3 Ki Points to cast <i>Hold Person</i>" ' +
@@ -794,20 +933,9 @@ PHB5E.FEATURES_ADDED = {
   'Cloak Of Shadows (Way Of Shadow)':
     'Section=Magic ' +
     'Note="May become invisible in dim and dark areas (attacking or casting ends)"',
-  'Cloak Of Shadows (Trickery Domain)':
-    'Section=Magic ' +
-    'Note="May use Channel Divinity to make self invisible for 1 rd (attacking or casting ends)"',
-  'Combat Inspiration':
-    'Section=Combat ' +
-    'Note="Ally may use a Bardic Inspiration die to boost weapon damage or Armor Class"',
   'Combat Superiority':
     'Section=Combat ' +
     'Note="May use %Vd%1 Superiority Dice to perform %2 chosen Maneuvers/short rest"',
-  'Combat Wild Shape':
-    'Section=Combat,Magic ' +
-    'Note=' +
-      '"May use Wild Shape as a bonus action",' +
-      '"May spend a spell slot and use a bonus action to regain (slot level)d8 HP during Wild Shape"',
   'Command Undead':
     'Section=Magic ' +
     'Note="R60\' May control undead target (DC %{spellDifficultyClass.W} Charisma neg; Adv if target Intelligence is 8 or higher)"',
@@ -822,18 +950,12 @@ PHB5E.FEATURES_ADDED = {
   'Create Thrall':
     'Section=Magic ' +
     'Note="Touch charms incapacitated humanoid and allows telepathic communication"',
-  'Dampen Elements':
-    'Section=Magic ' +
-    'Note="R30\' May use Reaction to grant resistance to immediate acid, cold, fire, lightning, or thunder damage"',
   'Dark Delirium':
     'Section=Magic ' +
     'Note="R60\' Target charmed or frightened and unaware of surroundings (DC %{spellDifficultyClass.K} Wisdom neg) for conc up to 1 min 1/short rest"',
   'Death Strike':
     'Section=Combat ' +
     'Note="Inflicts dbl damage on a successful surprise attack (DC %{8+dexterityModifier+proficiencyBonus} Constitution neg)"',
-  'Destructive Wrath':
-    'Section=Magic ' +
-    'Note="May use Channel Divinity to maximize lightning or thunder damage"',
   'Disarming Attack':
     'Section=Combat ' +
     'Note="May add a Superiority Die to damage and cause foe to drop an item (DC %{maneuverSaveDC} Strength neg)"',
@@ -856,8 +978,6 @@ PHB5E.FEATURES_ADDED = {
   'Elemental Attunement':
     'Section=Magic ' +
     'Note="May create a harmless instantaneous elemental effect, light or snuff a small flame, chill or warm a 1 lb object for 1 hr, or shape a 1\' cube of earth, fire, water, or mist for 1 min"',
-  'Elemental Wild Shape':
-    'Section=Magic Note="May use 2 Wild Shape uses to become an elemental"',
   'Enchantment Savant':
     'Section=Magic ' +
     'Note="May copy enchantment spells into spellbook for half cost"',
@@ -910,8 +1030,6 @@ PHB5E.FEATURES_ADDED = {
   'Grim Harvest':
     'Section=Magic ' +
     'Note="Regains 2x spell level HP (3x for necromantic spells) when self spell kills"',
-  'Guided Strike':
-    'Section=Combat Note="May use Channel Divinity to give self +10 attack"',
   'Hypnotic Gaze':
     'Section=Magic ' +
     'Note="May daze adjacent target (DC %{spellDifficultyClass.W} Wisdom neg) 1/long rest"',
@@ -929,8 +1047,6 @@ PHB5E.FEATURES_ADDED = {
     'Note="+%{proficiencyBonus} abjuration spell ability checks"',
   'Improved Combat Superiority':
     'Section=Combat Note="Superiority Dice increase to d%V"',
-  'Improved Duplicity':
-    'Section=Magic Note="Invoke Duplicity creates 4 duplicates"',
   'Improved Flare':
     'Section=Magic Note="May use Warding Flare to protect an ally"',
   'Improved Minor Illusion':
@@ -940,28 +1056,15 @@ PHB5E.FEATURES_ADDED = {
   'Improved War Magic':'Section=Combat Note="Increased War Magic effects"',
   'Infiltration Expertise':
     'Section=Feature ' +
-    'Note="May use 1 wk process to create and adopt a different identity"',
+    'Note="May use 1-week process to create and adopt a different identity"',
   'Instinctive Charm':
     'Section=Magic ' +
     'Note="R30\' May redirect an attack on self to another (DC %{spellDifficultyClass.W} Wisdom neg until a long rest)"',
   'Inured To Undeath':
     'Section=Save ' +
     'Note="Has resistance to necrotic damage and immunity to maximum HP reduction"',
-  'Invoke Duplicity':
-    'Section=Magic ' +
-    'Note="R30\' May use Channel Divinity to create %{magicNotes.improvedDuplicity?\'4 illusionary duplicates\':\'1 illusionary duplicate\'}, gaining Adv on attacks when w/in 5\' and allowing remote spellcasting for conc up to 1 min"',
   'Know Your Enemy':
     'Section=Combat Note="Knows how foe compares to self after 1 min study"',
-  'Knowledge Domain':
-    'Spells=' +
-      '1:Command,1:Identify,' +
-      '3:Augury,3:Suggestion,' +
-      '5:Nondetection,"5:Speak With Dead",' +
-      '"7:Arcane Eye",7:Confusion,' +
-      '"9:Legend Lore",9:Scrying',
-  'Knowledge Of The Ages':
-    'Section=Skill ' +
-    'Note="May use Channel Divinity to gain proficiency in chosen skill or tool for 10 min"',
   'Light Domain':
     'Spells=' +
       '"1:Burning Hands","1:Faerie Fire",' +
@@ -984,8 +1087,6 @@ PHB5E.FEATURES_ADDED = {
   'Maneuvering Attack':
     'Section=Combat ' +
     'Note="May spend a Superiority Die to allow an ally to use Reaction to move half speed w/no OA from target and add Superiority Die to damage"',
-  'Master Of Nature':
-    'Section=Magic Note="May command charmed animals and plants"',
   'Master Transmuter':
     'Section=Magic ' +
     'Note="May destroy a transmuter\'s stone to transmute a 5\' cube, remove curses, diseases, and poisons, cast <i>Raise Dead</i>, or restore youth" ' +
@@ -1005,13 +1106,6 @@ PHB5E.FEATURES_ADDED = {
   'Misty Escape':
     'Section=Magic ' +
     'Note="After taking damage, may use Reaction to teleport 60\' and become invisible for 1 rd (attacking or casting ends) 1/short rest"',
-  'Nature Domain':
-    'Spells=' +
-      '"1:Animal Friendship","1:Speak With Animals",' +
-      '3:Barkskin,"3:Spike Growth",' +
-      '"5:Plant Growth","5:Wind Wall",' +
-      '"7:Dominate Beast","7:Grasping Vine",' +
-      '"9:Insect Plague","9:Tree Stride"',
   'Necromancy Savant':
     'Section=Magic ' +
     'Note="May copy necromancy spells into spellbook for half cost"',
@@ -1024,11 +1118,8 @@ PHB5E.FEATURES_ADDED = {
   'Portent':
     'Section=Magic ' +
     'Note="May replace self or target attack, ability, or saving throw %{magicNotes.greaterPortent?3:2}/long rest"',
-  'Potent Spellcasting':
-    'Section=Magic Note="+%{wisdomModifier} Cleric cantrip damage"',
   'Precision Attack':
     'Section=Combat Note="May add a Superiority Die to attack"',
-  'Primal Strike':'Section=Combat Note="Wild Shape attacks count as magical"',
   'Projected Ward':
     'Section=Magic Note="R30\' May use Arcane Ward to absorb damage to others"',
   'Pushing Attack':
@@ -1039,10 +1130,6 @@ PHB5E.FEATURES_ADDED = {
     'Note="R30\' May use Channel Divinity to dispel magical darkness; foes suffer 2d10+%{levels.Cleric} HP radiant (Constitution half)"',
   'Rally':
     'Section=Combat Note="Chosen ally gains Superiority Die + %{charismaModifier} temporary HP"',
-  'Read Thoughts':
-    'Section=Magic ' +
-    'Note="R60\' May use Channel Divinity to read target thoughts (Wisdom neg) for 1 min and cast <i>Suggestion</i> (no save)" ' +
-    'Spells=Suggestion',
   'Relentless':
     'Section=Combat ' +
     'Note="Has a minimum of 1 Superiority Die available after initiative"',
@@ -1091,18 +1178,8 @@ PHB5E.FEATURES_ADDED = {
   'Spell Thief':
     'Section=Magic ' +
     'Note="May negate foe spell on self and cast same w/in 8 hours (DC %{8+intelligenceModifier+proficiencyBonus} neg) 1/long rest"',
-  'Spirit Seeker':
-    'Section=Magic ' +
-    'Note="May cast ritual <i>Beast Sense</i> and <i>Speak With Animals</i>" ' +
-    'Spells="Beast Sense","Speak With Animals"',
-  'Spirit Walker':
-    'Section=Magic ' +
-    'Note="May cast ritual <i>Commune With Nature</i>" ' +
-    'Spells="Commune With Nature"',
   'Split Enchantment':
     'Section=Magic Note="May add a second target to an enchantment spell"',
-  'Stormborn':
-    'Section=Ability Note="Has %{speed}\' fly speed outdoors"',
   'Sweeping Attack':
     'Section=Combat ' +
     'Note="After a successful attack, may inflict a Superiority Die HP on another adjacent foe"',
@@ -1110,55 +1187,18 @@ PHB5E.FEATURES_ADDED = {
     'Section=Magic ' +
     'Note="May spend 2 Ki Points to cast <i>Burning Hands</i>" ' +
     'Spells="Burning Hands"',
-  'Tempest Domain':
-    'Spells=' +
-      '"1:Fog Cloud",1:Thunderwave,' +
-      '"3:Gust Of Wind",3:Shatter,' +
-      '"5:Call Lightning","5:Sleet Storm",' +
-      '"7:Control Water","7:Ice Storm",' +
-      '"9:Destructive Wave","9:Insect Plague"',
   'The Third Eye':
     'Section=Magic ' +
     'Note="May use an action to gain 60\' darkvision, 60\' ethereal sight, the ability to read any language, or 10\' invisibility sight until next rest, 1 each/short rest"',
   'Thought Shield':
     'Section=Save ' +
     'Note="Immune to telepathy/Has resistance to psychic damage, and psychic damage also affects attacker"',
-  'Thousand Forms':
-    'Section=Magic ' +
-    'Note="May cast <i>Alter Self</i> at will" ' +
-    'Spells="Alter Self"',
-  'Thunderbolt Strike':
-    'Section=Magic ' +
-    'Note="Lightning damage pushes away Large and smaller creatures 10\'"',
   'Tides Of Chaos':
     'Section=Feature ' +
     'Note="May gain Adv on an attack, ability, or saving throw 1/long rest or Wild Magic Surge"',
-  'Totem Spirit (Bear)':
-    'Section=Save Note="Has resistance to non-psychic damage during rage"',
-  'Totem Spirit (Eagle)':
-    'Section=Combat ' +
-    'Note="May use a bonus action to Dash, and foes suffer OA Disadv, during rage (heavy armor neg)"',
-  'Totem Spirit (Wolf)':
-    'Section=Combat ' +
-    'Note="Allies gain Adv on attacks vs. foes adjacent to self during rage"',
-  'Totemic Attunement (Bear)':
-    'Section=Combat ' +
-    'Note="During rage, adjacent foes suffer Disadv on attacks on others"',
-  'Totemic Attunement (Eagle)':
-    'Section=Ability Note="May fly %{speed}\' 1/rd during rage"',
-  'Totemic Attunement (Wolf)':
-    'Section=Combat ' +
-    'Note="During rage, may use a bonus action after a successful melee attack to knock prone a Large or smaller foe"',
   'Transmutation Savant':
     'Section=Magic ' +
     'Note="May copy transmutation spells into spellbook for half cost"',
-  'Trickery Domain':
-    'Spells=' +
-      '"1:Charm Person","1:Disguise Self",' +
-      '"3:Mirror Image","3:Pass Without Trace",' +
-      '5:Blink,"5:Dispel Magic",' +
-      '"7:Dimension Door",7:Polymorph,' +
-      '"9:Dominate Person","9:Modify Memory"',
   'Trip Attack':
     'Section=Combat ' +
     'Note="After a successful attack, may spend a Superiority Die to knock foe prone (DC %V Strength neg) and add Superiority Die to damage"',
@@ -1178,25 +1218,12 @@ PHB5E.FEATURES_ADDED = {
   'Versatile Trickster':
     'Section=Magic ' +
     'Note="May use a bonus action to direct <i>Mage Hand</i> to distract a foe w/in 5\', gaining Adv on attacks</i>"',
-  'Visions Of The Past':
-    'Section=Magic ' +
-    'Note="May gain visions about surroundings or a held object via 1 min meditation 1/short rest"',
   'Vow Of Enmity':
     'Section=Combat ' +
     'Note="R10\' May use Channel Divinity and a bonus action to give self Adv on attacks against target for 1 min"',
-  'War Domain':
-    'Spells=' +
-      '"1:Divine Favor","1:Shield Of Faith",' +
-      '"3:Magic Weapon","3:Spiritual Weapon",' +
-      '"5:Crusader\'s Mantle","5:Spirit Guardians",' +
-      '"7:Freedom Of Movement",7:Stoneskin,' +
-      '"9:Flame Strike","9:Hold Monster"',
   'War Magic':
     'Section=Combat ' +
     'Note="May use a bonus action to make a weapon attack after casting %{combatNotes.improvedWarMagic?\'any spell\':\'a cantrip\'}"',
-  'War Priest':
-    'Section=Combat ' +
-    'Note="May use a bonus attack to make an extra weapon attack %{wisdomModifier>?1}/long rest"',
   'Warding Flare':
     'Section=Magic ' +
     'Note="R30\' May use Reaction to inflict Disadv on a foe attack %{wisdomModifier>?1}/long rest"',
@@ -1213,9 +1240,6 @@ PHB5E.FEATURES_ADDED = {
   'Wild Magic Surge':
     'Section=Magic ' +
     'Note="Spellcasting carries a 5% chance of unleashing a random magic effect"',
-  'Wrath Of The Storm':
-    'Section=Combat ' +
-    'Note="May use Reaction to inflict 2d8 HP lightning or thunder (Dexterity half) on successful attacker %{wisdomModifier>?1}/long rest"',
   // Feats
   'Actor':
     'Section=Ability,Skill ' +
