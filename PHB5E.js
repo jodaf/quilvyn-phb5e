@@ -728,6 +728,29 @@ PHB5E.FEATURES_ADDED = {
   'Visions Of The Past':
     'Section=magic ' +
     'Note="Can gain visions about surroundings or a held object via 1 min meditation once per short rest"',
+  // Light Domain
+  'Bonus Cantrip (Light Domain)':
+    'Section=magic Note="Knows the <i>Light</i> cantrip" Spells=Light',
+  'Corona Of Light':
+    'Section=magic ' +
+    'Note="Can use an action to emit a 60\' bright light that inflicts foe disadvantage on saves vs. fire and radiant spells for 1 min"',
+  'Improved Flare':
+    'Section=magic ' +
+    'Note="R30\' Can use Warding Flare to protect another creature"',
+  'Light Domain':
+    'Spells=' +
+      '"1:Burning Hands","1:Faerie Fire",' +
+      '"3:Flaming Sphere","3:Scorching Ray",' +
+      '"5:Daylight","5:Fireball",' +
+      '"7:Guardian Of Faith","7:Wall Of Fire",' +
+      '"9:Flame Strike","9:Scrying"',
+  // Potent Spellcasting as above
+  'Radiance Of The Dawn':
+    'Section=magic ' +
+    'Note="R30\' Can use Channel Divinity to dispel magical darkness and to inflict 2d10+%{levels.Cleric} HP radiant (Constitution half) on foes"',
+  'Warding Flare':
+    'Section=magic ' +
+    'Note="R30\' Can use a reaction to inflict disadvantage on a foe attack %{wisdomModifier>1?wisdomModifier+\' times\':\'once\'} per long rest"',
   // Nature Domain
   'Acolyte Of Nature':
     'Section=magic,skill ' +
@@ -816,6 +839,13 @@ PHB5E.FEATURES_ADDED = {
     'Note="Can use a bonus attack to make an extra weapon attack %{wisdomModifier>1?wisdomModifier+\' times\':\'once\'} per long rest"',
 
   // Druid
+  // Circle Of The Land
+  'Circle Of The Land (Underdark)':
+    'Spells=' +
+      '"3:Spider Climb","3:Web",' +
+      '"5:Gaseous Form","5:Stinking Cloud",' +
+      '"7:Greater Invisibility","7:Stone Shape",' +
+      '"9:Cloudkill","9:Insect Plague"',
   // Circle Of The Moon
   'Circle Forms':'Section=magic Note="Can Wild Shape into a CR %V creature"',
   'Combat Wild Shape':
@@ -907,6 +937,88 @@ PHB5E.FEATURES_ADDED = {
     'Section=combat ' +
     'Note="Cannot be disarmed from a bonded weapon and can use a bonus action to summon one"',
 
+  // Monk
+  // Way Of Shadow
+  'Cloak Of Shadows (Way Of Shadow)':
+    'Section=Magic ' +
+    'Note="Can use an action to become invisible in dim and dark areas; attacking or casting ends"',
+  'Opportunist':
+    'Section=combat ' +
+    'Note="Can use a reaction to attack an adjacent foe damaged by another creature"',
+  'Shadow Arts':
+    'Section=magic ' +
+    'Note="Knows the <i>Minor Illusion</i> cantrip and can spend 2 Ki Points to cast <i>Darkness</i>, <i>Darkvision</i>, <i>Pass Without Trace</i>, or <i>Silence</i>" ' +
+    'Spells="Minor Illusion",Darkness,Darkvision,"Pass Without Trace",Silence',
+  'Shadow Step':
+    'Section=magic ' +
+    'Note="Can use a bonus action to teleport 60\' between dim or dark areas and gain advantage on the first melee attack during that turn"',
+  // Way Of The Four Elements
+  'Breath Of Winter':
+    'Section=magic ' +
+    'Note="Can spend 6 Ki Points to cast <i>Cone Of Cold</i>" ' +
+    'Spells="Cone Of Cold"',
+  'Clench Of The North Wind':
+    'Section=magic ' +
+    'Note="Can spend 3 Ki Points to cast <i>Hold Person</i>" ' +
+    'Spells="Hold Person"',
+  'Disciple Of The Elements':
+    'Section=magic Note="Can select %V elemental disciplines"',
+  'Elemental Attunement':
+    'Section=magic ' +
+    'Note="Can create a harmless instantaneous elemental effect, light or snuff a small flame, chill or warm a 1 lb object for 1 hr, or shape a 1\' cube of earth, fire, water, or mist for 1 min"',
+  'Eternal Mountain Defense':
+    'Section=magic ' +
+    'Note="Can spend 5 Ki Points to cast <i>Stoneskin</i> on self" ' +
+    'Spells=Stoneskin',
+  'Fangs Of The Fire Snake':
+    'Section=magic ' +
+    'Note="Can spend 1 Ki Point to make a +10\' unarmed attack, inflicting fire damage, and 1 additional Ki Point to inflict +1d10 HP fire"',
+  'Fist Of Four Thunders':
+    'Section=magic ' +
+    'Note="Can spend 2 Ki Points to cast <i>Thunderwave</i>" ' +
+    'Spells=Thunderwave',
+  'Fist Of Unbroken Air':
+    'Section=magic ' +
+    'Note="R30\' Can spend 2+ Ki Points to inflict 3d10+ HP, push 20\', and knock prone (DC %{kiSaveDC} Strength half HP only)"',
+  'Flames Of The Phoenix':
+    'Section=magic ' +
+    'Note="Can spend 4 Ki Points to cast <i>Fireball</i>" ' +
+    'Spells=Fireball',
+  'Gong Of The Summit':
+    'Section=magic ' +
+    'Note="Can spend 3 Ki Points to cast <i>Shatter</i>" ' +
+    'Spells=Shatter',
+  'Mist Stance':
+    'Section=magic ' +
+    'Note="Can spend 4 Ki Points to cast <i>Gaseous Form</i> on self" ' +
+    'Spells="Gaseous Form"',
+  'Ride The Wind':
+    'Section=magic ' +
+    'Note="Can spend 4 Ki Points to cast <i>Fly</i> on self" ' +
+    'Spells=Fly',
+  'River Of Hungry Flame':
+    'Section=magic ' +
+    'Note="Can spend 5 Ki Points to cast <i>Wall Of Fire</i>" ' +
+    'Spells="Wall Of Fire"',
+  'Rush Of The Gale Spirits':
+    'Section=magic ' +
+    'Note="Can spend 2 Ki Points to cast <i>Gust Of Wind</i>" ' +
+    'Spells="Gust Of Wind"',
+  'Shape The Flowing River':
+    'Section=magic ' +
+    'Note="R120\' Can spend 1 Ki Point to freeze, thaw, and shape a 30\' cube of water"',
+  'Sweeping Cinder Strike':
+    'Section=magic ' +
+    'Note="Can spend 2 Ki Points to cast <i>Burning Hands</i>" ' +
+    'Spells="Burning Hands"',
+  'Water Whip':
+    'Section=magic ' +
+    'Note="R30\' Can spend 2+ Ki Points to inflict 3d10+ HP bludgeoning and pull 25\' or knock prone (DC %{kiSaveDC} Strength half HP only)"',
+  'Wave Of Rolling Earth':
+    'Section=magic ' +
+    'Note="Can spend 6 Ki Points to cast <i>Wall Of Stone</i>" ' +
+    'Spells="Wall Of Stone"',
+
   // Backgrounds
   'By Popular Demand':
     'Section=Feature ' +
@@ -937,6 +1049,7 @@ PHB5E.FEATURES_ADDED = {
   'Wanderer':
     'Section=Feature ' +
     'Note="Has an excellent geographic memory and can forage for 6 people"',
+
   // Paths
   "Nature's Wrath":
     'Section=Magic ' +
@@ -983,25 +1096,6 @@ PHB5E.FEATURES_ADDED = {
     'Section=Magic ' +
     'Note="R30\' May teleport self or swap w/a willing creature 1/long rest or conjuration spell casting"',
   'Bestial Fury':'Section=Feature Note="Companion may make 2 attacks/rd"',
-  'Bonus Cantrip (Light Domain)':
-    'Section=Magic Note="Knows <i>Light</i> cantrip" Spells=Light',
-  'Breath Of Winter':
-    'Section=Magic ' +
-    'Note="May spend 6 Ki Points to cast <i>Cone Of Cold</i>" ' +
-    'Spells="Cone Of Cold"',
-  'Circle Of The Land (Underdark)':
-    'Spells=' +
-      '"3:Spider Climb",3:Web,' +
-      '"5:Gaseous Form","5:Stinking Cloud",' +
-      '"7:Greater Invisibility","7:Stone Shape",' +
-      '9:Cloudkill,"9:Insect Plague"',
-  'Clench Of The North Wind':
-    'Section=Magic ' +
-    'Note="May spend 3 Ki Points to cast <i>Hold Person</i>" ' +
-    'Spells="Hold Person"',
-  'Cloak Of Shadows (Way Of Shadow)':
-    'Section=Magic ' +
-    'Note="May become invisible in dim and dark areas (attacking or casting ends)"',
   'Command Undead':
     'Section=Magic ' +
     'Note="R60\' May control undead target (DC %{spellDifficultyClass.W} Charisma neg; Adv if target Intelligence is 8 or higher)"',
@@ -1010,9 +1104,6 @@ PHB5E.FEATURES_ADDED = {
     'Note="May copy conjuration spells into spellbook for half cost"',
   'Controlled Chaos':
     'Section=Magic Note="May choose from 2 Wild Magic Surge effects"',
-  'Corona Of Light':
-    'Section=Magic ' +
-    'Note="60\' light inflicts foe Disadv on saves vs. fire and radiant spells for 1 min"',
   'Create Thrall':
     'Section=Magic ' +
     'Note="Touch charms incapacitated humanoid and allows telepathic communication"',
@@ -1022,8 +1113,6 @@ PHB5E.FEATURES_ADDED = {
   'Death Strike':
     'Section=Combat ' +
     'Note="Inflicts dbl damage on a successful surprise attack (DC %{8+dexterityModifier+proficiencyBonus} Constitution neg)"',
-  'Disciple Of The Elements':
-    'Section=Magic Note="May select %V elemental disciplines"',
   'Divination Savant':
     'Section=Magic ' +
     'Note="May copy divination spells into spellbook for half cost"',
@@ -1032,48 +1121,23 @@ PHB5E.FEATURES_ADDED = {
   'Elder Champion':
     'Section=Magic ' +
     'Note="May regain 10 HP/rd, cast paladin spells as a bonus action, and inflict Disadv on saves vs. self spells on foes w/in 10\' for 1 min 1/long rest"',
-  'Elemental Attunement':
-    'Section=Magic ' +
-    'Note="May create a harmless instantaneous elemental effect, light or snuff a small flame, chill or warm a 1 lb object for 1 hr, or shape a 1\' cube of earth, fire, water, or mist for 1 min"',
   'Enchantment Savant':
     'Section=Magic ' +
     'Note="May copy enchantment spells into spellbook for half cost"',
   'Entropic Ward':
     'Section=Combat ' +
     'Note="May use Reaction to inflict Disadv on attack by foe; miss gives self Adv on next attack for 1 rd 1/short rest"',
-  'Eternal Mountain Defense':
-    'Section=Magic ' +
-    'Note="May spend 5 Ki Points to cast self <i>Stoneskin</i>" ' +
-    'Spells=Stoneskin',
   'Exceptional Training':
     'Section=Feature ' +
     'Note="May use a bonus action to command companion to Dash, Disengage, or Help instead of Attack/Companion attacks count as magical"',
   'Expert Divination':
     'Section=Magic ' +
     'Note="Casting a divination spell restores a lower expended slot (level 5 maximum)"',
-  'Fangs Of The Fire Snake':
-    'Section=Magic ' +
-    'Note="May spend 1 Ki Point for +10\' unarmed attack, inflicting fire damage, and 1 additional Ki Point to inflict +1d10 HP fire"',
   'Fey Presence':
     'Section=Magic ' +
     'Note="R10\' May inflict choice of charmed or frightened (DC %{spellDifficultyClass.K} Wisdom neg) for 1 rd 1/short rest"',
-  'Fist Of Four Thunders':
-    'Section=Magic ' +
-    'Note="May spend 2 Ki Points to cast <i>Thunderwave</i>" ' +
-    'Spells=Thunderwave',
-  'Fist Of Unbroken Air':
-    'Section=Magic ' +
-    'Note="R30\' May spend 2+ Ki Points to inflict 3d10+ HP, push 20\', and knock prone (DC %{kiSaveDC} Strength half HP only)"',
-  'Flames Of The Phoenix':
-    'Section=Magic ' +
-    'Note="May spend 4 Ki Points to cast <i>Fireball</i>" ' +
-    'Spells=Fireball',
   'Focused Conjuration':
     'Section=Magic Note="Damage cannot break conjuration concentration"',
-  'Gong Of The Summit':
-    'Section=Magic ' +
-    'Note="May spend 3 Ki Points to cast <i>Shatter</i>" ' +
-    'Spells=Shatter',
   'Greater Portent':'Section=Magic Note="May use Portent 3/long rest"',
   'Grim Harvest':
     'Section=Magic ' +
@@ -1093,8 +1157,6 @@ PHB5E.FEATURES_ADDED = {
   'Improved Abjuration':
     'Section=Magic ' +
     'Note="+%{proficiencyBonus} abjuration spell ability checks"',
-  'Improved Flare':
-    'Section=Magic Note="May use Warding Flare to protect an ally"',
   'Improved Minor Illusion':
     'Section=Magic ' +
     'Note="Knows <i>Minor Illusion</i> cantrip; effects include both a sound and an image" ' +
@@ -1108,13 +1170,6 @@ PHB5E.FEATURES_ADDED = {
   'Inured To Undeath':
     'Section=Save ' +
     'Note="Has resistance to necrotic damage and immunity to maximum HP reduction"',
-  'Light Domain':
-    'Spells=' +
-      '"1:Burning Hands","1:Faerie Fire",' +
-      '"3:Flaming Sphere","3:Scorching Ray",' +
-      '5:Daylight,5:Fireball,' +
-      '"7:Guardian Of Faith","7:Wall Of Fire",' +
-      '"9:Flame Strike",9:Scrying',
   'Mage Hand Legerdemain':
     'Section=Magic ' +
     'Note="May stow and retrieve objects, pick locks, and disarm traps using an invisible <i>Mage Hand</i>" ' +
@@ -1133,51 +1188,19 @@ PHB5E.FEATURES_ADDED = {
     'Note="May change substance of a 1\' cube per 10 min effort for conc up to 1 hr"',
   'Minor Conjuration':
     'Section=Magic Note="R10\' May create a 3\' cube, 10 lb object for 1 hr"',
-  'Mist Stance':
-    'Section=Magic ' +
-    'Note="May spend 4 Ki Points to cast self <i>Gaseous Form</i>" ' +
-    'Spells="Gaseous Form"',
   'Misty Escape':
     'Section=Magic ' +
     'Note="After taking damage, may use Reaction to teleport 60\' and become invisible for 1 rd (attacking or casting ends) 1/short rest"',
   'Necromancy Savant':
     'Section=Magic ' +
     'Note="May copy necromancy spells into spellbook for half cost"',
-  'Opportunist':
-    'Section=Combat ' +
-    'Note="May use Reaction to attack an adjacent foe damaged by an ally"',
   'Portent':
     'Section=Magic ' +
     'Note="May replace self or target attack, ability, or saving throw %{magicNotes.greaterPortent?3:2}/long rest"',
   'Projected Ward':
     'Section=Magic Note="R30\' May use Arcane Ward to absorb damage to others"',
-  'Radiance Of The Dawn':
-    'Section=Magic ' +
-    'Note="R30\' May use Channel Divinity to dispel magical darkness; foes suffer 2d10+%{levels.Cleric} HP radiant (Constitution half)"',
   'Relentless Avenger':
     'Section=Combat Note="May move %{speed//2}\' after a successful OA"',
-  'Ride The Wind':
-    'Section=Magic ' +
-    'Note="May spend 4 Ki Points to cast self <i>Fly</i>" ' +
-    'Spells=Fly',
-  'River Of Hungry Flame':
-    'Section=Magic ' +
-    'Note="May spend 5 Ki Points to cast <i>Wall Of Fire</i>" ' +
-    'Spells="Wall Of Fire"',
-  'Rush Of The Gale Spirits':
-    'Section=Magic ' +
-    'Note="May spend 2 Ki Points to cast <i>Gust Of Wind</i>" ' +
-    'Spells="Gust Of Wind"',
-  'Shadow Arts':
-    'Section=Magic ' +
-    'Note="Knows <i>Minor Illusion</i> cantrip and may spend 2 Ki Points to cast <i>Darkness</i>, <i>Darkvision</i>, <i>Pass Without Trace</i>, or <i>Silence</i>" ' +
-    'Spells="Minor Illusion",Darkness,Darkvision,"Pass Without Trace",Silence',
-  'Shadow Step':
-    'Section=Magic ' +
-    'Note="May use a bonus action to teleport 60\' between dim or dark areas and gain Adv on first melee attack"',
-  'Shape The Flowing River':
-    'Section=Magic ' +
-    'Note="R120\' May spend 1 Ki Point to freeze, thaw, and shape a 30\' cube of water"',
   'Shapechanger':
     'Section=Magic ' +
     'Note="Knows <i>Polymorph</i>; may transform self into a CR 1 creature 1/short rest" ' +
@@ -1198,10 +1221,6 @@ PHB5E.FEATURES_ADDED = {
     'Note="May negate foe spell on self and cast same w/in 8 hours (DC %{8+intelligenceModifier+proficiencyBonus} neg) 1/long rest"',
   'Split Enchantment':
     'Section=Magic Note="May add a second target to an enchantment spell"',
-  'Sweeping Cinder Strike':
-    'Section=Magic ' +
-    'Note="May spend 2 Ki Points to cast <i>Burning Hands</i>" ' +
-    'Spells="Burning Hands"',
   'The Third Eye':
     'Section=Magic ' +
     'Note="May use an action to gain 60\' darkvision, 60\' ethereal sight, the ability to read any language, or 10\' invisibility sight until next rest, 1 each/short rest"',
@@ -1233,19 +1252,10 @@ PHB5E.FEATURES_ADDED = {
   'Vow Of Enmity':
     'Section=Combat ' +
     'Note="R10\' May use Channel Divinity and a bonus action to give self Adv on attacks against target for 1 min"',
-  'Warding Flare':
-    'Section=Magic ' +
-    'Note="R30\' May use Reaction to inflict Disadv on a foe attack %{wisdomModifier>?1}/long rest"',
-  'Water Whip':
-    'Section=Magic ' +
-    'Note="R30\' May spend 2+ Ki Points to inflict 3d10+ HP bludgeoning and pull 25\' or knock prone (DC %{kiSaveDC} Strength half HP only)"',
-  'Wave Of Rolling Earth':
-    'Section=Magic ' +
-    'Note="May spend 6 Ki Points to cast <i>Wall Of Stone</i>" ' +
-    'Spells="Wall Of Stone"',
   'Wild Magic Surge':
     'Section=Magic ' +
     'Note="Spellcasting carries a 5% chance of unleashing a random magic effect"',
+
   // Feats
   'Actor':
     'Section=Ability,Skill ' +
