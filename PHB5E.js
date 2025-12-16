@@ -832,6 +832,81 @@ PHB5E.FEATURES_ADDED = {
     'Note="Can cast <i>Alter Self</i> at will" ' +
     'Spells="Alter Self"',
 
+  // Fighter
+  // Battle Master
+  'Combat Superiority':
+    'Section=combat ' +
+    'Note="Can use a d%1 Superiority Die to perform one of %2 chosen Maneuvers %V times per short rest"',
+  "Commander's Strike":
+    'Section=combat ' +
+    'Note="Can use a Superiority Die and forego an attack to gain a bonus action directing an ally to attack; the ally uses a Reaction to attack and adds the Superiority Die to its damage"',
+  'Disarming Attack':
+    'Section=combat ' +
+    'Note="Can add a Superiority Die to damage and cause the target to drop an item (DC %{maneuverSaveDC} Strength neg)"',
+  'Distracting Strike':
+    'Section=combat ' +
+    'Note="Can add a Superiority Die to damage and give advantage to the next ally attack against the same foe in the same rd"',
+  'Evasive Footwork':
+    'Section=combat ' +
+    'Note="Can add a Superiority Die to Armor Class during a move"',
+  'Feinting Attack':
+    'Section=combat ' +
+    'Note="Can add a Superiority Die to damage and use a bonus action to gain advantage on the attack"',
+  'Goading Attack':
+    'Section=combat ' +
+    'Note="Can add a Superiority Die to damage and inflict disadvantage on foe attacks on others (DC %{maneuverSaveDC} Wisdom neg) until the end of the next turn"',
+  'Improved Combat Superiority':
+    'Section=combat Note="Superiority Dice increase to d%V"',
+  'Know Your Enemy':
+    'Section=combat Note="Knows how foe compares to self after 1 min study"',
+  'Lunging Attack':
+    'Section=combat ' +
+    'Note="Can add a Superiority Die to damage and gain +5\' melee range"',
+  'Maneuvering Attack':
+    'Section=combat ' +
+    'Note="Can add a Superiority Die to damage and allow an ally to use a Reaction to move half speed with no opportunity attack from the target"',
+  'Menacing Attack':
+    'Section=combat ' +
+    'Note="Can add a Superiority Die to damage and inflict frightened (DC %{maneuverSaveDC} Wisdom neg) until the end of the next turn"',
+  'Parry':
+    'Section=combat ' +
+    'Note="Can use a Reaction to subtract a Superiority Die + %{dexterityModifier} from a foe\'s melee damage to self"',
+  'Precision Attack':
+    'Section=combat Note="Can add a Superiority Die to an attack"',
+  'Pushing Attack':
+    'Section=combat ' +
+    'Note="Can add Superiority Die to damage and push the Large or smaller target 15\' (DC %{maneuverSaveDC} Strength neg)"',
+  'Rally':
+    'Section=combat ' +
+    'Note="Gives the target a Superiority Die + %{charismaModifier} temporary hit points"',
+  'Riposte':
+    'Section=combat ' +
+    'Note="After a foe melee miss, can spend a Superiority Die and use a Reaction to attack and add the Superiority Die to damage"',
+  'Relentless':
+    'Section=combat ' +
+    'Note="Has a minimum of 1 Superiority Die available after initiative"',
+  'Student Of War':
+    'Section=feature Note="Tool Proficiency (Choose 1 from any Artisan)"',
+  'Sweeping Attack':
+    'Section=combat ' +
+    'Note="After a successful melee attack, can inflict a Superiority Die HP on a second adjacent foe"',
+  'Trip Attack':
+    'Section=combat ' +
+    'Note="After a successful attack, can knock the Large or smaller target prone (DC %V Strength neg) and add a Superiority Die to damage"',
+  // Eldritch Knight
+  'Arcane Charge':'Section=magic Note="Can teleport 30\' during Action Surge"',
+  'Eldritch Strike':
+    'Section=combat ' +
+    'Note="Successful attack inflicts disadvantage on the first save vs. a self spell before the end of the next turn"',
+  'Improved War Magic':'Section=combat Note="Has increased War Magic effects"',
+  // Spellcasting as above
+  'War Magic':
+    'Section=combat ' +
+    'Note="Can use a bonus action to make a weapon attack after casting %{combatNotes.improvedWarMagic?\'any spell\':\'a cantrip\'}"',
+  'Weapon Bond':
+    'Section=combat ' +
+    'Note="Cannot be disarmed from a bonded weapon and can use a bonus action to summon one"',
+
   // Backgrounds
   'By Popular Demand':
     'Section=Feature ' +
@@ -863,17 +938,12 @@ PHB5E.FEATURES_ADDED = {
     'Section=Feature ' +
     'Note="Has an excellent geographic memory and can forage for 6 people"',
   // Paths
-  "Commander's Strike":
-    'Section=Combat ' +
-    'Note="May spend a Superiority Die and forego an attack to use a bonus action directing an ally attack; ally uses Reaction to attack and adds Superiority Die to damage"',
   "Nature's Wrath":
     'Section=Magic ' +
     'Note="R10\' May use Channel Divinity to create spectral vines that restrain target (DC %{spellDifficultyClass.P} Dexterity or Strength neg)"',
   "Ranger's Companion":
     'Section=Feature ' +
     'Note="Companion beast up to CR 1/4 gains +%{proficiencyBonus} Armor Class, attack, damage, skills, and saving throws and obeys self commands"',
-  'Student Of War':
-    'Section=Feature Note="Tool Proficiency (Choose 1 from any Artisan)"',
   "Transmuter's Stone":
     'Section=Magic ' +
     'Note="Stone gives choice of 60\' darkvision, +10\' Speed, proficiency on Constitution saves, or resistance to chosen energy damage; may change effect when casting a transmutation spell"',
@@ -886,7 +956,6 @@ PHB5E.FEATURES_ADDED = {
   'Alter Memories':
     'Section=Magic ' +
     'Note="Chosen target becomes unaware of self charm; may also inflict forgetfulness of the preceding %{charismaModifier+1>?1} hrs (DC %{spellDifficultyClass.W} Intelligence neg)"',
-  'Arcane Charge':'Section=Magic Note="May teleport 30\' during Action Surge"',
   'Arcane Ward':
     'Section=Magic ' +
     'Note="Abjuration casting creates a ward around self that can absorb %{levels.Wizard*2+intelligenceModifier} HP (long rest ends); if taken to 0 HP, abjuration casting restores 2x spell level HP to ward"',
@@ -933,9 +1002,6 @@ PHB5E.FEATURES_ADDED = {
   'Cloak Of Shadows (Way Of Shadow)':
     'Section=Magic ' +
     'Note="May become invisible in dim and dark areas (attacking or casting ends)"',
-  'Combat Superiority':
-    'Section=Combat ' +
-    'Note="May use %Vd%1 Superiority Dice to perform %2 chosen Maneuvers/short rest"',
   'Command Undead':
     'Section=Magic ' +
     'Note="R60\' May control undead target (DC %{spellDifficultyClass.W} Charisma neg; Adv if target Intelligence is 8 or higher)"',
@@ -956,14 +1022,8 @@ PHB5E.FEATURES_ADDED = {
   'Death Strike':
     'Section=Combat ' +
     'Note="Inflicts dbl damage on a successful surprise attack (DC %{8+dexterityModifier+proficiencyBonus} Constitution neg)"',
-  'Disarming Attack':
-    'Section=Combat ' +
-    'Note="May add a Superiority Die to damage and cause foe to drop an item (DC %{maneuverSaveDC} Strength neg)"',
   'Disciple Of The Elements':
     'Section=Magic Note="May select %V elemental disciplines"',
-  'Distracting Strike':
-    'Section=Combat ' +
-    'Note="May add a Superiority Die to damage and to give Adv to the next ally attack against the same foe in the same rd"',
   'Divination Savant':
     'Section=Magic ' +
     'Note="May copy divination spells into spellbook for half cost"',
@@ -972,9 +1032,6 @@ PHB5E.FEATURES_ADDED = {
   'Elder Champion':
     'Section=Magic ' +
     'Note="May regain 10 HP/rd, cast paladin spells as a bonus action, and inflict Disadv on saves vs. self spells on foes w/in 10\' for 1 min 1/long rest"',
-  'Eldritch Strike':
-    'Section=Combat ' +
-    'Note="Successful attack inflicts Disadv on saves vs. self spells for 1 rd"',
   'Elemental Attunement':
     'Section=Magic ' +
     'Note="May create a harmless instantaneous elemental effect, light or snuff a small flame, chill or warm a 1 lb object for 1 hr, or shape a 1\' cube of earth, fire, water, or mist for 1 min"',
@@ -988,9 +1045,6 @@ PHB5E.FEATURES_ADDED = {
     'Section=Magic ' +
     'Note="May spend 5 Ki Points to cast self <i>Stoneskin</i>" ' +
     'Spells=Stoneskin',
-  'Evasive Footwork':
-    'Section=Combat ' +
-    'Note="May add a Superiority Die to Armor Class during a move"',
   'Exceptional Training':
     'Section=Feature ' +
     'Note="May use a bonus action to command companion to Dash, Disengage, or Help instead of Attack/Companion attacks count as magical"',
@@ -1000,9 +1054,6 @@ PHB5E.FEATURES_ADDED = {
   'Fangs Of The Fire Snake':
     'Section=Magic ' +
     'Note="May spend 1 Ki Point for +10\' unarmed attack, inflicting fire damage, and 1 additional Ki Point to inflict +1d10 HP fire"',
-  'Feinting Attack':
-    'Section=Combat ' +
-    'Note="May spend a Superiority Die and use a bonus action to gain Adv on next attack on an adjacent foe and add Superiority Die to damage"',
   'Fey Presence':
     'Section=Magic ' +
     'Note="R10\' May inflict choice of charmed or frightened (DC %{spellDifficultyClass.K} Wisdom neg) for 1 rd 1/short rest"',
@@ -1019,9 +1070,6 @@ PHB5E.FEATURES_ADDED = {
     'Spells=Fireball',
   'Focused Conjuration':
     'Section=Magic Note="Damage cannot break conjuration concentration"',
-  'Goading Attack':
-    'Section=Combat ' +
-    'Note="May add a Superiority Die to damage and inflict Disadv on foe attacks on others (DC %{maneuverSaveDC} Wisdom neg) for 1 rd"',
   'Gong Of The Summit':
     'Section=Magic ' +
     'Note="May spend 3 Ki Points to cast <i>Shatter</i>" ' +
@@ -1045,15 +1093,12 @@ PHB5E.FEATURES_ADDED = {
   'Improved Abjuration':
     'Section=Magic ' +
     'Note="+%{proficiencyBonus} abjuration spell ability checks"',
-  'Improved Combat Superiority':
-    'Section=Combat Note="Superiority Dice increase to d%V"',
   'Improved Flare':
     'Section=Magic Note="May use Warding Flare to protect an ally"',
   'Improved Minor Illusion':
     'Section=Magic ' +
     'Note="Knows <i>Minor Illusion</i> cantrip; effects include both a sound and an image" ' +
     'Spells="Minor Illusion"',
-  'Improved War Magic':'Section=Combat Note="Increased War Magic effects"',
   'Infiltration Expertise':
     'Section=Feature ' +
     'Note="May use 1-week process to create and adopt a different identity"',
@@ -1063,8 +1108,6 @@ PHB5E.FEATURES_ADDED = {
   'Inured To Undeath':
     'Section=Save ' +
     'Note="Has resistance to necrotic damage and immunity to maximum HP reduction"',
-  'Know Your Enemy':
-    'Section=Combat Note="Knows how foe compares to self after 1 min study"',
   'Light Domain':
     'Spells=' +
       '"1:Burning Hands","1:Faerie Fire",' +
@@ -1072,9 +1115,6 @@ PHB5E.FEATURES_ADDED = {
       '5:Daylight,5:Fireball,' +
       '"7:Guardian Of Faith","7:Wall Of Fire",' +
       '"9:Flame Strike",9:Scrying',
-  'Lunging Attack':
-    'Section=Combat ' +
-    'Note="May spend a Superiority Die to gain +5\' melee range and add Superiority Die to damage"',
   'Mage Hand Legerdemain':
     'Section=Magic ' +
     'Note="May stow and retrieve objects, pick locks, and disarm traps using an invisible <i>Mage Hand</i>" ' +
@@ -1084,16 +1124,10 @@ PHB5E.FEATURES_ADDED = {
     'Note="Foe suffers Disadv on save vs. self spell cast from hiding"',
   'Malleable Illusions':
     'Section=Magic Note="May modify self illusions throughout duration"',
-  'Maneuvering Attack':
-    'Section=Combat ' +
-    'Note="May spend a Superiority Die to allow an ally to use Reaction to move half speed w/no OA from target and add Superiority Die to damage"',
   'Master Transmuter':
     'Section=Magic ' +
     'Note="May destroy a transmuter\'s stone to transmute a 5\' cube, remove curses, diseases, and poisons, cast <i>Raise Dead</i>, or restore youth" ' +
     'Spells="Raise Dead"',
-  'Menacing Attack':
-    'Section=Combat ' +
-    'Note="May spend a Superiority Die inflict frightened (DC %{maneuverSaveDC} Wisdom neg) for 1 rd and add Superiority Die to damage"',
   'Minor Alchemy':
     'Section=Magic ' +
     'Note="May change substance of a 1\' cube per 10 min effort for conc up to 1 hr"',
@@ -1112,36 +1146,20 @@ PHB5E.FEATURES_ADDED = {
   'Opportunist':
     'Section=Combat ' +
     'Note="May use Reaction to attack an adjacent foe damaged by an ally"',
-  'Parry':
-    'Section=Combat ' +
-    'Note="May use a Superiority Die and Reaction to subtract Superiority Die + %{dexterityModifier} from self damage by a foe"',
   'Portent':
     'Section=Magic ' +
     'Note="May replace self or target attack, ability, or saving throw %{magicNotes.greaterPortent?3:2}/long rest"',
-  'Precision Attack':
-    'Section=Combat Note="May add a Superiority Die to attack"',
   'Projected Ward':
     'Section=Magic Note="R30\' May use Arcane Ward to absorb damage to others"',
-  'Pushing Attack':
-    'Section=Combat ' +
-    'Note="May spend a Superiority Die to push a foe 15\' (DC %{maneuverSaveDC} Strength neg) and add Superiority Die to damage"',
   'Radiance Of The Dawn':
     'Section=Magic ' +
     'Note="R30\' May use Channel Divinity to dispel magical darkness; foes suffer 2d10+%{levels.Cleric} HP radiant (Constitution half)"',
-  'Rally':
-    'Section=Combat Note="Chosen ally gains Superiority Die + %{charismaModifier} temporary HP"',
-  'Relentless':
-    'Section=Combat ' +
-    'Note="Has a minimum of 1 Superiority Die available after initiative"',
   'Relentless Avenger':
     'Section=Combat Note="May move %{speed//2}\' after a successful OA"',
   'Ride The Wind':
     'Section=Magic ' +
     'Note="May spend 4 Ki Points to cast self <i>Fly</i>" ' +
     'Spells=Fly',
-  'Riposte':
-    'Section=Combat ' +
-    'Note="After a foe miss, may spend a Superiority Die and use Reaction to attack and add Superiority Die to damage"',
   'River Of Hungry Flame':
     'Section=Magic ' +
     'Note="May spend 5 Ki Points to cast <i>Wall Of Fire</i>" ' +
@@ -1180,9 +1198,6 @@ PHB5E.FEATURES_ADDED = {
     'Note="May negate foe spell on self and cast same w/in 8 hours (DC %{8+intelligenceModifier+proficiencyBonus} neg) 1/long rest"',
   'Split Enchantment':
     'Section=Magic Note="May add a second target to an enchantment spell"',
-  'Sweeping Attack':
-    'Section=Combat ' +
-    'Note="After a successful attack, may inflict a Superiority Die HP on another adjacent foe"',
   'Sweeping Cinder Strike':
     'Section=Magic ' +
     'Note="May spend 2 Ki Points to cast <i>Burning Hands</i>" ' +
@@ -1199,9 +1214,6 @@ PHB5E.FEATURES_ADDED = {
   'Transmutation Savant':
     'Section=Magic ' +
     'Note="May copy transmutation spells into spellbook for half cost"',
-  'Trip Attack':
-    'Section=Combat ' +
-    'Note="After a successful attack, may spend a Superiority Die to knock foe prone (DC %V Strength neg) and add Superiority Die to damage"',
   'Turn The Faithless':
     'Section=Magic ' +
     'Note="R30\' May use Channel Divinity to make fiends and fey flee (DC %{spellDifficultyClass.P} Wisdom neg) for 1 min"',
@@ -1221,9 +1233,6 @@ PHB5E.FEATURES_ADDED = {
   'Vow Of Enmity':
     'Section=Combat ' +
     'Note="R10\' May use Channel Divinity and a bonus action to give self Adv on attacks against target for 1 min"',
-  'War Magic':
-    'Section=Combat ' +
-    'Note="May use a bonus action to make a weapon attack after casting %{combatNotes.improvedWarMagic?\'any spell\':\'a cantrip\'}"',
   'Warding Flare':
     'Section=Magic ' +
     'Note="R30\' May use Reaction to inflict Disadv on a foe attack %{wisdomModifier>?1}/long rest"',
@@ -1234,9 +1243,6 @@ PHB5E.FEATURES_ADDED = {
     'Section=Magic ' +
     'Note="May spend 6 Ki Points to cast <i>Wall Of Stone</i>" ' +
     'Spells="Wall Of Stone"',
-  'Weapon Bond':
-    'Section=Combat ' +
-    'Note="Cannot be disarmed/May use a bonus action to summon weapon"',
   'Wild Magic Surge':
     'Section=Magic ' +
     'Note="Spellcasting carries a 5% chance of unleashing a random magic effect"',
