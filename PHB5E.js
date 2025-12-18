@@ -275,7 +275,7 @@ PHB5E.CLASSES_FEATURES_ADDED = {
     '"features.Arcane Trickster ? 9:Magical Ambush",' +
     '"features.Arcane Trickster ? 13:Versatile Trickster",' +
     '"features.Arcane Trickster ? 17:Spell Thief",' +
-    '"features.Assassin ? 3:Assassin Bonus Proficiencies",' +
+    '"features.Assassin ? 3:Bonus Proficiencies (Assassin)",' +
     '"features.Assassin ? 3:Assassinate",' +
     '"features.Assassin ? 9:Infiltration Expertise",' +
     '"features.Assassin ? 13:Impostor",' +
@@ -1019,6 +1019,105 @@ PHB5E.FEATURES_ADDED = {
     'Note="Can spend 6 Ki Points to cast <i>Wall Of Stone</i>" ' +
     'Spells="Wall Of Stone"',
 
+  // Paladin
+  // Oath Of The Ancients
+  'Aura Of Warding':
+    'Section=save ' +
+    'Note="R%{levels.Paladin<18?10:30}\' Self and allies have resistance to spell damage"',
+  'Elder Champion':
+    'Section=magic ' +
+    'Note="Can regain 10 hit points per rd, cast paladin spells as a bonus action, and inflict Disadv on saves vs. self spells on foes within 10\' for 1 min once per long rest"',
+  "Nature's Wrath":
+    'Section=magic ' +
+    'Note="R10\' Can use Channel Divinity to create spectral vines that restrain a target (DC %{spellDifficultyClass.P} Dexterity or Strength neg)"',
+  'Oath Of The Ancients':
+    'Spells=' +
+      '"3:Ensnaring Strike","3:Speak With Animals",' +
+      '"5:Moonbeam","5:Misty Step",' +
+      '"9:Plant Growth","9:Protection From Energy",' +
+      '"13:Ice Storm","13:Stoneskin",' +
+      '"17:Commune With Nature","17:Tree Stride"',
+  'Turn The Faithless':
+    'Section=combat ' +
+    'Note="R30\' Can use Channel Divinity to make fiends and fey flee (DC %{spellDifficultyClass.P} Wisdom neg) for 1 min"',
+  'Undying Sentinel':
+    'Section=combat,feature,save ' +
+    'Note=' +
+      '"Can retain 1 HP when brought to 0 HP once per long rest",' +
+      '"Suffers no debility from aging",' +
+      '"Has immunity to magical aging"',
+  // Oath Of Vengeance
+  'Abjure Enemy':
+    'Section=magic ' +
+    'Note="R60\' Can use Channel Divinity to halt a target (DC %{spellDifficultyClass.P} Wisdom inflicts half speed) for 1 min"',
+  'Avenging Angel':
+    'Section=ability,combat ' +
+    'Note=' +
+      '"Gives a 60\' fly speed for 1 hr once per long rest",' +
+      '"R30\' Aura frightens foes (DC %{spellDifficultyClass.P} Wisdom neg; damage ends), giving advantage on ally attacks, for 1 hr once per long rest"',
+  'Oath Of Vengeance':
+    'Spells=' +
+      '"3:Bane","3:Hunter\'s Mark",' +
+      '"5:Hold Person","5:Misty Step",' +
+      '"9:Haste","9:Protection From Energy",' +
+      '"13:Banishment","13:Dimension Door",' +
+      '"17:Hold Monster",17:Scrying',
+  'Relentless Avenger':
+    'Section=combat ' +
+    'Note="Can move %{speed//2}\' after a successful opportunity attack"',
+  'Soul Of Vengeance':
+    'Section=combat ' +
+    'Note="Can use a reaction when a Vow Of Enmity target attacks to make a melee attack on the target"',
+  'Vow Of Enmity':
+    'Section=combat ' +
+    'Note="R10\' Can use Channel Divinity and a bonus action to give self advantage on attacks against a target for 1 min"',
+
+  // Ranger
+  // Beast Master
+  'Bestial Fury':'Section=feature Note="Companion can make 2 attacks per rd"',
+  'Exceptional Training':
+    'Section=feature ' +
+    // errata removes Dodge and adds magical attacks
+    'Note="Can use a bonus action to command companion to Dash, Disengage, or Help instead of Attack/Companion attacks count as magical"',
+  "Ranger's Companion":
+    'Section=feature ' +
+    'Note="Companion beast of up to CR 1/4 obeys commands and gains +%{proficiencyBonus} Armor Class, attack, damage, and proficient skills and saving throws"',
+  'Share Spells':
+    'Section=magic ' +
+    'Note="R30\' Can have spells cast on self also affect companion"',
+
+  // Rogue
+  // Assassin
+  'Assassinate':
+    'Section=combat ' +
+    'Note="Has advantage on attacks before the target\'s first turn/Successful surprise attacks are critical hits"',
+  'Bonus Proficiencies (Assassin)':
+    'Section=feature Note="Tool Proficiency (Disguise Kit; Poisoner\'s Kit)"',
+  'Death Strike':
+    'Section=combat ' +
+    'Note="Inflicts double damage on a successful surprise attack (DC %{8+dexterityModifier+proficiencyBonus} Constitution neg)"',
+  'Impostor':
+    'Section=Feature ' +
+    'Note="Can use unerring mimicry and has advantage on Deception to overcome suspicion"',
+  'Infiltration Expertise':
+    'Section=feature ' +
+    'Note="Can use a 1-week process to create and adopt a different identity"',
+  // Arcane Trickster
+  'Mage Hand Legerdemain':
+    'Section=magic ' +
+    'Note="Can use an invisible <i>Mage Hand</i> to stow and retrieve objects, pick locks, and disarm traps" ' +
+    'Spells="Mage Hand"',
+  'Magical Ambush':
+    'Section=magic ' +
+    'Note="Casting a spell from hiding inflicts disadvantage on the target\'s initial save"',
+  'Spell Thief':
+    'Section=magic ' +
+    'Note="Can negate the effects of a spell cast on self and use spell slots to cast the same spell for 8 hr (DC %{8+intelligenceModifier+proficiencyBonus} neg) once per long rest"',
+  // Spellcasting as above
+  'Versatile Trickster':
+    'Section=magic ' +
+    'Note="Can use a bonus action to direct <i>Mage Hand</i> to distract a target within 5\', gaining advantage on attacks vs. it until the end of the turn"',
+
   // Backgrounds
   'By Popular Demand':
     'Section=Feature ' +
@@ -1051,40 +1150,18 @@ PHB5E.FEATURES_ADDED = {
     'Note="Has an excellent geographic memory and can forage for 6 people"',
 
   // Paths
-  "Nature's Wrath":
-    'Section=Magic ' +
-    'Note="R10\' May use Channel Divinity to create spectral vines that restrain target (DC %{spellDifficultyClass.P} Dexterity or Strength neg)"',
-  "Ranger's Companion":
-    'Section=Feature ' +
-    'Note="Companion beast up to CR 1/4 gains +%{proficiencyBonus} Armor Class, attack, damage, skills, and saving throws and obeys self commands"',
   "Transmuter's Stone":
     'Section=Magic ' +
     'Note="Stone gives choice of 60\' darkvision, +10\' Speed, proficiency on Constitution saves, or resistance to chosen energy damage; may change effect when casting a transmutation spell"',
   'Abjuration Savant':
     'Section=Magic ' +
     'Note="May copy abjuration spells into spellbook for half cost"',
-  'Abjure Enemy':
-    'Section=Magic ' +
-    'Note="R60\' May use Channel Divinity to halt target (DC %{spellDifficultyClass.P} Wisdom half speed) for 1 min"',
   'Alter Memories':
     'Section=Magic ' +
     'Note="Chosen target becomes unaware of self charm; may also inflict forgetfulness of the preceding %{charismaModifier+1>?1} hrs (DC %{spellDifficultyClass.W} Intelligence neg)"',
   'Arcane Ward':
     'Section=Magic ' +
     'Note="Abjuration casting creates a ward around self that can absorb %{levels.Wizard*2+intelligenceModifier} HP (long rest ends); if taken to 0 HP, abjuration casting restores 2x spell level HP to ward"',
-  'Assassin Bonus Proficiencies':
-    'Section=Feature Note="Tool Proficiency (Disguise Kit/Poisoner\'s Kit)"',
-  'Assassinate':
-    'Section=Combat ' +
-    'Note="Adv on attack before foe\'s first turn/Successful surprise attack automatically crits"',
-  'Aura Of Warding':
-    'Section=Save ' +
-    'Note="R%{levels.Paladin<18?10:30}\' Self and allies have resistance to spell damage"',
-  'Avenging Angel':
-    'Section=Ability,Combat ' +
-    'Note=' +
-      '"60\' fly speed for 1 hr/long rest",' +
-      '"R30\' Aura frightens foes (DC %{spellDifficultyClass.P} Wisdom neg; damage ends), giving Adv on ally attacks, for 1 hr/long rest"',
   'Awakened Mind':'Section=Feature Note="R30\' May communicate telepathically"',
   'Beguiling Defenses':
     'Section=Save ' +
@@ -1095,7 +1172,6 @@ PHB5E.FEATURES_ADDED = {
   'Benign Transposition':
     'Section=Magic ' +
     'Note="R30\' May teleport self or swap w/a willing creature 1/long rest or conjuration spell casting"',
-  'Bestial Fury':'Section=Feature Note="Companion may make 2 attacks/rd"',
   'Command Undead':
     'Section=Magic ' +
     'Note="R60\' May control undead target (DC %{spellDifficultyClass.W} Charisma neg; Adv if target Intelligence is 8 or higher)"',
@@ -1110,26 +1186,17 @@ PHB5E.FEATURES_ADDED = {
   'Dark Delirium':
     'Section=Magic ' +
     'Note="R60\' Target charmed or frightened and unaware of surroundings (DC %{spellDifficultyClass.K} Wisdom neg) for conc up to 1 min 1/short rest"',
-  'Death Strike':
-    'Section=Combat ' +
-    'Note="Inflicts dbl damage on a successful surprise attack (DC %{8+dexterityModifier+proficiencyBonus} Constitution neg)"',
   'Divination Savant':
     'Section=Magic ' +
     'Note="May copy divination spells into spellbook for half cost"',
   'Durable Summons':
     'Section=Magic Note="Summoned creatures gain 30 temporary HP"',
-  'Elder Champion':
-    'Section=Magic ' +
-    'Note="May regain 10 HP/rd, cast paladin spells as a bonus action, and inflict Disadv on saves vs. self spells on foes w/in 10\' for 1 min 1/long rest"',
   'Enchantment Savant':
     'Section=Magic ' +
     'Note="May copy enchantment spells into spellbook for half cost"',
   'Entropic Ward':
     'Section=Combat ' +
     'Note="May use Reaction to inflict Disadv on attack by foe; miss gives self Adv on next attack for 1 rd 1/short rest"',
-  'Exceptional Training':
-    'Section=Feature ' +
-    'Note="May use a bonus action to command companion to Dash, Disengage, or Help instead of Attack/Companion attacks count as magical"',
   'Expert Divination':
     'Section=Magic ' +
     'Note="Casting a divination spell restores a lower expended slot (level 5 maximum)"',
@@ -1153,7 +1220,6 @@ PHB5E.FEATURES_ADDED = {
     'Note="May use a bonus action to make an object in self illusion real for 1 min"',
   'Illusory Self':
     'Section=Magic Note="May use Reaction to cause a foe miss 1/short rest"',
-  'Impostor':'Section=Feature Note="May use unerring mimicry w/Adv on Deception to overcome suspicion"',
   'Improved Abjuration':
     'Section=Magic ' +
     'Note="+%{proficiencyBonus} abjuration spell ability checks"',
@@ -1161,22 +1227,12 @@ PHB5E.FEATURES_ADDED = {
     'Section=Magic ' +
     'Note="Knows <i>Minor Illusion</i> cantrip; effects include both a sound and an image" ' +
     'Spells="Minor Illusion"',
-  'Infiltration Expertise':
-    'Section=Feature ' +
-    'Note="May use 1-week process to create and adopt a different identity"',
   'Instinctive Charm':
     'Section=Magic ' +
     'Note="R30\' May redirect an attack on self to another (DC %{spellDifficultyClass.W} Wisdom neg until a long rest)"',
   'Inured To Undeath':
     'Section=Save ' +
     'Note="Has resistance to necrotic damage and immunity to maximum HP reduction"',
-  'Mage Hand Legerdemain':
-    'Section=Magic ' +
-    'Note="May stow and retrieve objects, pick locks, and disarm traps using an invisible <i>Mage Hand</i>" ' +
-    'Spells="Mage Hand"',
-  'Magical Ambush':
-    'Section=Magic ' +
-    'Note="Foe suffers Disadv on save vs. self spell cast from hiding"',
   'Malleable Illusions':
     'Section=Magic Note="May modify self illusions throughout duration"',
   'Master Transmuter':
@@ -1199,26 +1255,16 @@ PHB5E.FEATURES_ADDED = {
     'Note="May replace self or target attack, ability, or saving throw %{magicNotes.greaterPortent?3:2}/long rest"',
   'Projected Ward':
     'Section=Magic Note="R30\' May use Arcane Ward to absorb damage to others"',
-  'Relentless Avenger':
-    'Section=Combat Note="May move %{speed//2}\' after a successful OA"',
   'Shapechanger':
     'Section=Magic ' +
     'Note="Knows <i>Polymorph</i>; may transform self into a CR 1 creature 1/short rest" ' +
     'Spells=Polymorph',
-  'Share Spells':
-    'Section=Magic Note="R30\' May have self spell also affect companion"',
-  'Soul Of Vengeance':
-    'Section=Combat ' +
-    'Note="May use Reaction when Vow Of Enmity target attacks to attempt a melee attack"',
   'Spell Bombardment':
     'Section=Magic ' +
     'Note="May add another die after rolling the maximum on a spell damage die 1/rd"',
   'Spell Resistance':
     'Section=Save ' +
     'Note="Adv on saves vs. spells/Has resistance to spell damage"',
-  'Spell Thief':
-    'Section=Magic ' +
-    'Note="May negate foe spell on self and cast same w/in 8 hours (DC %{8+intelligenceModifier+proficiencyBonus} neg) 1/long rest"',
   'Split Enchantment':
     'Section=Magic Note="May add a second target to an enchantment spell"',
   'The Third Eye':
@@ -1233,25 +1279,10 @@ PHB5E.FEATURES_ADDED = {
   'Transmutation Savant':
     'Section=Magic ' +
     'Note="May copy transmutation spells into spellbook for half cost"',
-  'Turn The Faithless':
-    'Section=Magic ' +
-    'Note="R30\' May use Channel Divinity to make fiends and fey flee (DC %{spellDifficultyClass.P} Wisdom neg) for 1 min"',
   'Undead Thralls':
     'Section=Magic ' +
     'Note="Knows <i>Animate Dead</i>; casting animates an additional corpse and gives corpses +%{levels.Wizard} HP and +%{proficiencyBonus} damage" ' +
     'Spells="Animate Dead"',
-  'Undying Sentinel':
-    'Section=Combat,Feature,Save ' +
-    'Note=' +
-      '"May retain 1 HP when brought to 0 HP 1/long rest",' +
-      '"Suffers no debility from aging",' +
-      '"Immune to magical aging"',
-  'Versatile Trickster':
-    'Section=Magic ' +
-    'Note="May use a bonus action to direct <i>Mage Hand</i> to distract a foe w/in 5\', gaining Adv on attacks</i>"',
-  'Vow Of Enmity':
-    'Section=Combat ' +
-    'Note="R10\' May use Channel Divinity and a bonus action to give self Adv on attacks against target for 1 min"',
   'Wild Magic Surge':
     'Section=Magic ' +
     'Note="Spellcasting carries a 5% chance of unleashing a random magic effect"',
@@ -1389,20 +1420,6 @@ PHB5E.FEATURES_ADDED = {
   'Mounted Combatant':
     'Section=Combat ' +
     'Note="Adv on melee attacks on an unmounted foe smaller than mount/May redirect attack on mount to self/Mount suffers no damage on a successful Dexterity save and half on failure"',
-  'Oath Of The Ancients':
-    'Spells=' +
-      '"3:Ensnaring Strike","3:Speak With Animals",' +
-      '5:Moonbeam,"5:Misty Step",' +
-      '"9:Plant Growth","9:Protection From Energy",' +
-      '"13:Ice Storm",13:Stoneskin,' +
-      '"17:Commune With Nature","17:Tree Stride"',
-  'Oath Of Vengeance':
-    'Spells=' +
-      '3:Bane,"3:Hunter\'s Mark",' +
-      '"5:Hold Person","5:Misty Step",' +
-      '9:Haste,"9:Protection From Energy",' +
-      '13:Banishment,"13:Dimension Door",' +
-      '"17:Hold Monster",17:Scrying',
   'Observant':
     'Section=Ability,Feature,Skill ' +
     'Note=' +
