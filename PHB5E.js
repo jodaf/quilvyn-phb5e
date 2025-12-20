@@ -1118,6 +1118,160 @@ PHB5E.FEATURES_ADDED = {
     'Section=magic ' +
     'Note="Can use a bonus action to direct <i>Mage Hand</i> to distract a target within 5\', gaining advantage on attacks vs. it until the end of the turn"',
 
+  // Sorcerer
+  // Wild Magic
+  'Bend Luck':
+    'Section=magic ' +
+    'Note="Can spend 2 Sorcery Points to add or subtract 1d4 from a target attack, ability check, or save"',
+  'Controlled Chaos':
+    'Section=magic Note="Can choose from 2 Wild Magic Surge effects"',
+  'Spell Bombardment':
+    'Section=Magic ' +
+    'Note="Can add another die after rolling the maximum on a spell damage die once per turn"',
+  'Tides Of Chaos':
+    'Section=feature ' +
+    'Note="Can gain advantage on an attack, ability, or saving throw once per long rest or Wild Magic Surge"',
+  'Wild Magic Surge':
+    'Section=magic ' +
+    'Note="Casting a spell has a 5% chance of unleashing a random magic effect"',
+
+  // Warlock
+  // The Archfey
+  'Beguiling Defenses':
+    'Section=save ' +
+    'Note="Has immunity to charm and can reflect charm spells onto the caster (DC %{spellDifficultyClass.K} Wisdom neg) for 1 min or until the caster takes damage"',
+  'Dark Delirium':
+    'Section=magic ' +
+    'Note="R60\' Inflicts charmed or frightened and unaware of surroundings (DC %{spellDifficultyClass.K} Wisdom neg) for conc up to 1 min once per short rest"',
+  'Fey Presence':
+    'Section=magic ' +
+    'Note="Can inflict a choice of charmed or frightened (DC %{spellDifficultyClass.K} Wisdom neg) for 1 rd on all creatures in a 10\' cube once per short rest"',
+  'Misty Escape':
+    'Section=magic ' +
+    'Note="Can use a reaction upon taking damage to teleport 60\' and become invisible for 1 rd once per short rest; attacking or casting ends"',
+  // The Great Old One
+  'Awakened Mind':'Section=feature Note="R30\' Can communicate telepathically"',
+  'Create Thrall':
+    'Section=magic ' +
+    'Note="Touch charms an incapacitated humanoid and allows telepathic communication with it"',
+  'Entropic Ward':
+    'Section=combat ' +
+    'Note="Can use a reaction to inflict disadvantage on an attacker once per short rest; a miss gives self advantage on the first attack on that foe until the end of the next turn"',
+  'Thought Shield':
+    'Section=save ' +
+    'Note="Has immunity to telepathy and resistance to psychic damage, and taking psychic damage inflicts equal damage on the attacker"',
+
+  // Wizard
+  // School Of Abjuration
+  'Abjuration Savant':
+    'Section=magic ' +
+    'Note="Can copy abjuration spells into spellbook for half cost"',
+  'Arcane Ward':
+    'Section=magic ' +
+    'Note="After a long rest, can cause an abjuration spell to create a ward that can absorb %{levels.Wizard*2+intelligenceModifier} hit points around self; if exhausted, casting another abjuration spells restores 2x the spell level hit points to the ward"',
+  'Improved Abjuration':
+    'Section=magic Note="+%{proficiencyBonus} abjuration spell ability checks"',
+  'Projected Ward':
+    'Section=magic Note="R30\' Can use Arcane Ward to absorb damage to others"',
+  'Spell Resistance':
+    'Section=save ' +
+    'Note="Has advantage on vs. spells and resistance to spell damage"',
+  // School Of Conjuration
+  'Benign Transposition':
+    'Section=magic ' +
+    'Note="R30\' Can teleport self or swap with a willing creature once per long rest or conjuration spell casting"',
+  'Conjuration Savant':
+    'Section=magic ' +
+    'Note="Can copy conjuration spells into spellbook for half cost"',
+  'Durable Summons':
+    'Section=magic Note="Summoned creatures gain 30 temporary HP"',
+  'Focused Conjuration':
+    'Section=magic Note="Damage cannot break conjuration concentration"',
+  'Minor Conjuration':
+    'Section=magic ' +
+    'Note="R10\' Can create a 3\' cube inanimate object weighing up to 10 lb that emits 5\' dim light and lasts for 1 hr"',
+  // School Of Divination
+  'Divination Savant':
+    'Section=magic ' +
+    'Note="Can copy divination spells into spellbook for half cost"',
+  'Expert Divination':
+    'Section=magic ' +
+    'Note="Casting a divination spell restores a lower-level expended slot of up to level 5"',
+  'Greater Portent':
+    'Section=Magic Note="Can use Portent 3 times per long rest"',
+  'Portent':
+    'Section=magic ' +
+    'Note="Can replace a visible target\'s attack, ability, or saving throw with one of two pre-rolled values %{magicNotes.greaterPortent?3:2} times per long rest"',
+  'The Third Eye':
+    'Section=Magic ' +
+    'Note="Can use an action to gain 60\' darkvision, 60\' ethereal sight, the ability to read any language, or 10\' invisibility sight until the next rest, once each per short rest"',
+  // School Of Enchantment
+  'Alter Memories':
+    'Section=magic ' +
+    'Note="Chosen target becomes unaware of self charm; can also inflict forgetfulness of the preceding %{charismaModifier+1>?1} hr (DC %{spellDifficultyClass.W} Intelligence neg)"',
+  'Enchantment Savant':
+    'Section=magic ' +
+    'Note="Can copy enchantment spells into spellbook for half cost"',
+  'Hypnotic Gaze':
+    'Section=magic ' +
+    'Note="Can daze an adjacent creature (DC %{spellDifficultyClass.W} Wisdom neg) while maintained once per target per long rest"',
+  'Instinctive Charm':
+    'Section=magic ' +
+    'Note="R30\' Can use a reaction to redirect an attack on self to another (DC %{spellDifficultyClass.W} Wisdom neg until a long rest)"',
+  'Split Enchantment':
+    'Section=magic Note="Can add a second target to an enchantment spell"',
+  // School Of Illusion
+  'Illusion Savant':
+    'Section=magic ' +
+    'Note="Can copy illusion spells into spellbook for half cost"',
+  'Illusory Reality':
+    'Section=magic ' +
+    'Note="Can use a bonus action to make a harmless object in a self illusion real for 1 min"',
+  'Illusory Self':
+    'Section=magic ' +
+    'Note="Can use a reaction to cause an attack on self to miss once per short rest"',
+  'Improved Minor Illusion':
+    'Section=magic ' +
+    'Note="Knows the <i>Minor Illusion</i> cantrip; effects can include both a sound and an image" ' +
+    'Spells="Minor Illusion"',
+  'Malleable Illusions':
+    'Section=magic Note="Can modify self illusions throughout their durations"',
+  // School Of Necromancy
+  'Command Undead':
+    'Section=magic ' +
+    'Note="R60\' Can use an action to control an undead target (DC %{spellDifficultyClass.W} Charisma neg permanently; targets with Intelligence of at least 8 have advantage on the save, and targets with Intelligence of at least 12 repeat the save every hr)"',
+  'Grim Harvest':
+    'Section=magic ' +
+    'Note="Regains 2x spell level hit points, or 3x for necromantic spells, when a self spell kills"',
+  'Inured To Undeath':
+    'Section=save ' +
+    'Note="Has resistance to necrotic damage and immunity to maximum hit point reduction"',
+  'Necromancy Savant':
+    'Section=magic ' +
+    'Note="Can copy necromancy spells into spellbook for half cost"',
+  'Undead Thralls':
+    'Section=magic ' +
+    'Note="Knows the <i>Animate Dead</i> spell; casting it animates an additional corpse and gives corpses +%{levels.Wizard} hit points and +%{proficiencyBonus} HP weapon damage" ' +
+    'Spells="Animate Dead"',
+  // School Of Transmutation
+  'Master Transmuter':
+    'Section=magic ' +
+    'Note="Can destroy a transmuter\'s stone to transmute a 5\' cube, remove curses, diseases, and poisons, cast <i>Raise Dead</i>, or restore youth" ' +
+    'Spells="Raise Dead"',
+  'Minor Alchemy':
+    'Section=magic ' +
+    'Note="Can change the substance of a 1\' cube per 10 min effort for conc up to 1 hr"',
+  'Shapechanger':
+    'Section=magic ' +
+    'Note="Knows the <i>Polymorph</i> spell; may transform self into a CR 1 creature once per short rest" ' +
+    'Spells=Polymorph',
+  'Transmutation Savant':
+    'Section=magic ' +
+    'Note="Can copy transmutation spells into spellbook for half cost"',
+  "Transmuter's Stone":
+    'Section=magic ' +
+    'Note="Can use an 8-hr process to create a stone that gives a choice of 60\' darkvision, +10\' Speed, proficiency on Constitution saves, or resistance to a chosen energy damage and can change the effect of a possessed stone when casting a transmutation spell"',
+
   // Backgrounds
   'By Popular Demand':
     'Section=Feature ' +
@@ -1148,144 +1302,6 @@ PHB5E.FEATURES_ADDED = {
   'Wanderer':
     'Section=Feature ' +
     'Note="Has an excellent geographic memory and can forage for 6 people"',
-
-  // Paths
-  "Transmuter's Stone":
-    'Section=Magic ' +
-    'Note="Stone gives choice of 60\' darkvision, +10\' Speed, proficiency on Constitution saves, or resistance to chosen energy damage; may change effect when casting a transmutation spell"',
-  'Abjuration Savant':
-    'Section=Magic ' +
-    'Note="May copy abjuration spells into spellbook for half cost"',
-  'Alter Memories':
-    'Section=Magic ' +
-    'Note="Chosen target becomes unaware of self charm; may also inflict forgetfulness of the preceding %{charismaModifier+1>?1} hrs (DC %{spellDifficultyClass.W} Intelligence neg)"',
-  'Arcane Ward':
-    'Section=Magic ' +
-    'Note="Abjuration casting creates a ward around self that can absorb %{levels.Wizard*2+intelligenceModifier} HP (long rest ends); if taken to 0 HP, abjuration casting restores 2x spell level HP to ward"',
-  'Awakened Mind':'Section=Feature Note="R30\' May communicate telepathically"',
-  'Beguiling Defenses':
-    'Section=Save ' +
-    'Note="Immune to charm; may reflect onto caster (DC %{spellDifficultyClass.K} Wisdom neg) for 1 min (damage ends)"',
-  'Bend Luck':
-    'Section=Magic ' +
-    'Note="May spend 2 Sorcery Points to add or subtract 1d4 from a target attack, ability, or save"',
-  'Benign Transposition':
-    'Section=Magic ' +
-    'Note="R30\' May teleport self or swap w/a willing creature 1/long rest or conjuration spell casting"',
-  'Command Undead':
-    'Section=Magic ' +
-    'Note="R60\' May control undead target (DC %{spellDifficultyClass.W} Charisma neg; Adv if target Intelligence is 8 or higher)"',
-  'Conjuration Savant':
-    'Section=Magic ' +
-    'Note="May copy conjuration spells into spellbook for half cost"',
-  'Controlled Chaos':
-    'Section=Magic Note="May choose from 2 Wild Magic Surge effects"',
-  'Create Thrall':
-    'Section=Magic ' +
-    'Note="Touch charms incapacitated humanoid and allows telepathic communication"',
-  'Dark Delirium':
-    'Section=Magic ' +
-    'Note="R60\' Target charmed or frightened and unaware of surroundings (DC %{spellDifficultyClass.K} Wisdom neg) for conc up to 1 min 1/short rest"',
-  'Divination Savant':
-    'Section=Magic ' +
-    'Note="May copy divination spells into spellbook for half cost"',
-  'Durable Summons':
-    'Section=Magic Note="Summoned creatures gain 30 temporary HP"',
-  'Enchantment Savant':
-    'Section=Magic ' +
-    'Note="May copy enchantment spells into spellbook for half cost"',
-  'Entropic Ward':
-    'Section=Combat ' +
-    'Note="May use Reaction to inflict Disadv on attack by foe; miss gives self Adv on next attack for 1 rd 1/short rest"',
-  'Expert Divination':
-    'Section=Magic ' +
-    'Note="Casting a divination spell restores a lower expended slot (level 5 maximum)"',
-  'Fey Presence':
-    'Section=Magic ' +
-    'Note="R10\' May inflict choice of charmed or frightened (DC %{spellDifficultyClass.K} Wisdom neg) for 1 rd 1/short rest"',
-  'Focused Conjuration':
-    'Section=Magic Note="Damage cannot break conjuration concentration"',
-  'Greater Portent':'Section=Magic Note="May use Portent 3/long rest"',
-  'Grim Harvest':
-    'Section=Magic ' +
-    'Note="Regains 2x spell level HP (3x for necromantic spells) when self spell kills"',
-  'Hypnotic Gaze':
-    'Section=Magic ' +
-    'Note="May daze adjacent target (DC %{spellDifficultyClass.W} Wisdom neg) 1/long rest"',
-  'Illusion Savant':
-    'Section=Magic ' +
-    'Note="May copy illusion spells into spellbook for half cost"',
-  'Illusory Reality':
-    'Section=Magic ' +
-    'Note="May use a bonus action to make an object in self illusion real for 1 min"',
-  'Illusory Self':
-    'Section=Magic Note="May use Reaction to cause a foe miss 1/short rest"',
-  'Improved Abjuration':
-    'Section=Magic ' +
-    'Note="+%{proficiencyBonus} abjuration spell ability checks"',
-  'Improved Minor Illusion':
-    'Section=Magic ' +
-    'Note="Knows <i>Minor Illusion</i> cantrip; effects include both a sound and an image" ' +
-    'Spells="Minor Illusion"',
-  'Instinctive Charm':
-    'Section=Magic ' +
-    'Note="R30\' May redirect an attack on self to another (DC %{spellDifficultyClass.W} Wisdom neg until a long rest)"',
-  'Inured To Undeath':
-    'Section=Save ' +
-    'Note="Has resistance to necrotic damage and immunity to maximum HP reduction"',
-  'Malleable Illusions':
-    'Section=Magic Note="May modify self illusions throughout duration"',
-  'Master Transmuter':
-    'Section=Magic ' +
-    'Note="May destroy a transmuter\'s stone to transmute a 5\' cube, remove curses, diseases, and poisons, cast <i>Raise Dead</i>, or restore youth" ' +
-    'Spells="Raise Dead"',
-  'Minor Alchemy':
-    'Section=Magic ' +
-    'Note="May change substance of a 1\' cube per 10 min effort for conc up to 1 hr"',
-  'Minor Conjuration':
-    'Section=Magic Note="R10\' May create a 3\' cube, 10 lb object for 1 hr"',
-  'Misty Escape':
-    'Section=Magic ' +
-    'Note="After taking damage, may use Reaction to teleport 60\' and become invisible for 1 rd (attacking or casting ends) 1/short rest"',
-  'Necromancy Savant':
-    'Section=Magic ' +
-    'Note="May copy necromancy spells into spellbook for half cost"',
-  'Portent':
-    'Section=Magic ' +
-    'Note="May replace self or target attack, ability, or saving throw %{magicNotes.greaterPortent?3:2}/long rest"',
-  'Projected Ward':
-    'Section=Magic Note="R30\' May use Arcane Ward to absorb damage to others"',
-  'Shapechanger':
-    'Section=Magic ' +
-    'Note="Knows <i>Polymorph</i>; may transform self into a CR 1 creature 1/short rest" ' +
-    'Spells=Polymorph',
-  'Spell Bombardment':
-    'Section=Magic ' +
-    'Note="May add another die after rolling the maximum on a spell damage die 1/rd"',
-  'Spell Resistance':
-    'Section=Save ' +
-    'Note="Adv on saves vs. spells/Has resistance to spell damage"',
-  'Split Enchantment':
-    'Section=Magic Note="May add a second target to an enchantment spell"',
-  'The Third Eye':
-    'Section=Magic ' +
-    'Note="May use an action to gain 60\' darkvision, 60\' ethereal sight, the ability to read any language, or 10\' invisibility sight until next rest, 1 each/short rest"',
-  'Thought Shield':
-    'Section=Save ' +
-    'Note="Immune to telepathy/Has resistance to psychic damage, and psychic damage also affects attacker"',
-  'Tides Of Chaos':
-    'Section=Feature ' +
-    'Note="May gain Adv on an attack, ability, or saving throw 1/long rest or Wild Magic Surge"',
-  'Transmutation Savant':
-    'Section=Magic ' +
-    'Note="May copy transmutation spells into spellbook for half cost"',
-  'Undead Thralls':
-    'Section=Magic ' +
-    'Note="Knows <i>Animate Dead</i>; casting animates an additional corpse and gives corpses +%{levels.Wizard} HP and +%{proficiencyBonus} damage" ' +
-    'Spells="Animate Dead"',
-  'Wild Magic Surge':
-    'Section=Magic ' +
-    'Note="Spellcasting carries a 5% chance of unleashing a random magic effect"',
 
   // Feats
   'Actor':
