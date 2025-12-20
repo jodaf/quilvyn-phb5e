@@ -866,7 +866,7 @@ PHB5E.FEATURES_ADDED = {
   // Battle Master
   'Combat Superiority':
     'Section=combat ' +
-    'Note="Can use a d%1 Superiority Die to perform one of %2 chosen Maneuvers %V times per short rest"',
+    'Note="Can use a d%1 Superiority Die to perform one of %2 chosen Maneuvers %V time%{combatNotes.combatSuperiority>1?\'s\':\'\'} per short rest"',
   "Commander's Strike":
     'Section=combat ' +
     'Note="Can use a Superiority Die and forego an attack to gain a bonus action directing an ally to attack; the ally uses a Reaction to attack and adds the Superiority Die to its damage"',
@@ -1168,14 +1168,14 @@ PHB5E.FEATURES_ADDED = {
     'Note="Can copy abjuration spells into spellbook for half cost"',
   'Arcane Ward':
     'Section=magic ' +
-    'Note="After a long rest, can cause an abjuration spell to create a ward that can absorb %{levels.Wizard*2+intelligenceModifier} hit points around self; if exhausted, casting another abjuration spells restores 2x the spell level hit points to the ward"',
+    'Note="After a long rest, can cause an abjuration spell to create a ward around self that can absorb %{levels.Wizard*2+intelligenceModifier} hit points; if exhausted, casting another abjuration spell restores 2x the spell level hit points to the ward"',
   'Improved Abjuration':
     'Section=magic Note="+%{proficiencyBonus} abjuration spell ability checks"',
   'Projected Ward':
     'Section=magic Note="R30\' Can use Arcane Ward to absorb damage to others"',
   'Spell Resistance':
     'Section=save ' +
-    'Note="Has advantage on vs. spells and resistance to spell damage"',
+    'Note="Has advantage vs. spells and resistance to spell damage"',
   // School Of Conjuration
   'Benign Transposition':
     'Section=magic ' +
@@ -1242,7 +1242,7 @@ PHB5E.FEATURES_ADDED = {
     'Note="R60\' Can use an action to control an undead target (DC %{spellDifficultyClass.W} Charisma neg permanently; targets with Intelligence of at least 8 have advantage on the save, and targets with Intelligence of at least 12 repeat the save every hr)"',
   'Grim Harvest':
     'Section=magic ' +
-    'Note="Regains 2x spell level hit points, or 3x for necromantic spells, when a self spell kills"',
+    'Note="Regains hit points equal to twice the spell level, or 3x for necromantic spells, when a self spell kills"',
   'Inured To Undeath':
     'Section=save ' +
     'Note="Has resistance to necrotic damage and immunity to maximum hit point reduction"',
@@ -1260,17 +1260,17 @@ PHB5E.FEATURES_ADDED = {
     'Spells="Raise Dead"',
   'Minor Alchemy':
     'Section=magic ' +
-    'Note="Can change the substance of a 1\' cube per 10 min effort for conc up to 1 hr"',
+    'Note="Can change the substance of 1 cubic foot of matter per 10 min effort for conc up to 1 hr"',
   'Shapechanger':
     'Section=magic ' +
-    'Note="Knows the <i>Polymorph</i> spell; may transform self into a CR 1 creature once per short rest" ' +
+    'Note="Knows the <i>Polymorph</i> spell; can transform self into a CR 1 creature once per short rest" ' +
     'Spells=Polymorph',
   'Transmutation Savant':
     'Section=magic ' +
     'Note="Can copy transmutation spells into spellbook for half cost"',
   "Transmuter's Stone":
     'Section=magic ' +
-    'Note="Can use an 8-hr process to create a stone that gives a choice of 60\' darkvision, +10\' Speed, proficiency on Constitution saves, or resistance to a chosen energy damage and can change the effect of a possessed stone when casting a transmutation spell"',
+    'Note="Can use an 8-hr process to create a stone that gives a choice of 60\' darkvision, +10\' Speed, proficiency on Constitution saves, or resistance to a chosen energy damage, and can change the effect of a possessed stone when casting a transmutation spell"',
 
   // Backgrounds
   'By Popular Demand':
