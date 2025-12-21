@@ -637,14 +637,14 @@ PHB5E.FEATURES_ADDED = {
     'Section=save ' +
     'Note="Has advantage vs. poison and resistance to poison damage"',
   // Forest Gnome
-  'Forest Gnome Ability Adjustment':'Section=Ability Note="+1 Dexterity"',
+  'Forest Gnome Ability Adjustment':'Section=ability Note="+1 Dexterity"',
   'Natural Illusionist':
     'Section=magic ' +
     'Note="Knows the <i>Minor Illusion</i> cantrip" ' +
     'Spells="Minor Illusion" ' +
     'SpellAbility=Intelligence',
   'Speak With Small Beasts':
-    'Section=Feature Note="Can communicate simple ideas with small animals"',
+    'Section=feature Note="Can communicate simple ideas with small animals"',
 
   // Class
 
@@ -680,7 +680,7 @@ PHB5E.FEATURES_ADDED = {
   'Totem Spirit (Bear)':
     'Section=save Note="Has resistance to non-psychic damage during rage"',
   'Totem Spirit (Eagle)':
-    'Section=Combat ' +
+    'Section=combat ' +
     'Note="During rage, can use a bonus action to Dash, and foes suffer disadvantage on opportunity attacks; heavy armor negates"',
   'Totem Spirit (Wolf)':
     'Section=combat ' +
@@ -689,7 +689,7 @@ PHB5E.FEATURES_ADDED = {
   // Bard
   // College Of Valor
   'Battle Magic':
-    'Section=Combat ' +
+    'Section=combat ' +
     'Note="Can use a bonus action to make a weapon attack after casting a spell"',
   'Bonus Proficiencies (College Of Valor)':
     'Section=combat ' +
@@ -940,7 +940,7 @@ PHB5E.FEATURES_ADDED = {
   // Monk
   // Way Of Shadow
   'Cloak Of Shadows (Way Of Shadow)':
-    'Section=Magic ' +
+    'Section=magic ' +
     'Note="Can use an action to become invisible in dim and dark areas; attacking or casting ends"',
   'Opportunist':
     'Section=combat ' +
@@ -1097,7 +1097,7 @@ PHB5E.FEATURES_ADDED = {
     'Section=combat ' +
     'Note="Inflicts double damage on a successful surprise attack (DC %{8+dexterityModifier+proficiencyBonus} Constitution neg)"',
   'Impostor':
-    'Section=Feature ' +
+    'Section=feature ' +
     'Note="Can use unerring mimicry and has advantage on Deception to overcome suspicion"',
   'Infiltration Expertise':
     'Section=feature ' +
@@ -1126,7 +1126,7 @@ PHB5E.FEATURES_ADDED = {
   'Controlled Chaos':
     'Section=magic Note="Can choose from 2 Wild Magic Surge effects"',
   'Spell Bombardment':
-    'Section=Magic ' +
+    'Section=magic ' +
     'Note="Can add another die after rolling the maximum on a spell damage die once per turn"',
   'Tides Of Chaos':
     'Section=feature ' +
@@ -1198,12 +1198,12 @@ PHB5E.FEATURES_ADDED = {
     'Section=magic ' +
     'Note="Casting a divination spell restores a lower-level expended slot of up to level 5"',
   'Greater Portent':
-    'Section=Magic Note="Can use Portent 3 times per long rest"',
+    'Section=magic Note="Can use Portent 3 times per long rest"',
   'Portent':
     'Section=magic ' +
     'Note="Can replace a visible target\'s attack, ability, or saving throw with one of two pre-rolled values %{magicNotes.greaterPortent?3:2} times per long rest"',
   'The Third Eye':
-    'Section=Magic ' +
+    'Section=magic ' +
     'Note="Can use an action to gain 60\' darkvision, 60\' ethereal sight, the ability to read any language, or 10\' invisibility sight until the next rest, once each per short rest"',
   // School Of Enchantment
   'Alter Memories':
@@ -1274,33 +1274,34 @@ PHB5E.FEATURES_ADDED = {
 
   // Backgrounds
   'By Popular Demand':
-    'Section=Feature ' +
-    'Note="May receive welcome and lodging in exchange for performing"',
+    'Section=feature ' +
+    'Note="Can receive welcome and lodging in exchange for performing"',
   'City Secrets':
-    'Section=Feature Note="May travel through a city at dbl speed"',
+    'Section=feature Note="Can travel through a city at twice normal speed"',
   'Criminal Contact':
-    'Section=Feature ' +
+    'Section=feature ' +
     'Note="Knows how to contact a liaison to criminal networks"',
-  'Discovery':'Section=Feature Note="Knows a unique and powerful truth"',
+  'Discovery':'Section=feature Note="Knows a unique and powerful truth"',
   'False Identity':
-    'Section=Feature ' +
+    'Section=feature ' +
     'Note="Has a documented second identity and forgery skills"',
   'Guild Membership':
-    'Section=Feature Note="May receive assistance from fellow guild members/Must pay 5 gp monthly guild fee"',
+    'Section=feature ' +
+    'Note="Can receive assistance from fellow guild members/Must pay a 5 gp monthly guild fee"',
   'Military Rank':
-    'Section=Feature ' +
-    'Note="Receives respect, deference, and lend of resources from fellow soldiers"',
+    'Section=feature ' +
+    'Note="Receives respect, deference, and the loan of resources from fellow soldiers"',
   'Position Of Privilege':
-    'Section=Feature ' +
+    'Section=feature ' +
     'Note="Receives welcome from the upper class and deference from commoners"',
-  'Researcher':'Section=Feature Note="Knows where and whom to ask about lore"',
+  'Researcher':'Section=feature Note="Knows where and whom to ask about lore"',
   'Rustic Hospitality':
-    'Section=Feature Note="May receive shelter from common folk"',
+    'Section=feature Note="Can receive shelter from common folk"',
   "Ship's Passage":
-    'Section=Feature ' +
-    'Note="May receive water passage for self and companions in exchange for labor"',
+    'Section=feature ' +
+    'Note="Can receive water passage for self and companions in exchange for labor"',
   'Wanderer':
-    'Section=Feature ' +
+    'Section=feature ' +
     'Note="Has an excellent geographic memory and can forage for 6 people"',
 
   // Feats
