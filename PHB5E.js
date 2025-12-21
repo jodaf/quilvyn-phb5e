@@ -365,6 +365,7 @@ PHB5E.CLASSES_SELECTABLES_ADDED = {
     '"3:Way Of Shadow:Monastic Tradition",' +
     '"17:Breath Of Winter:Elemental Discipline",' +
     '"6:Clench Of The North Wind:Elemental Discipline",' +
+    // errata changes 11th level to 17th
     '"17:Eternal Mountain Defense:Elemental Discipline",' +
     '"3:Fangs Of The Fire Snake:Elemental Discipline",' +
     '"3:Fist Of Four Thunders:Elemental Discipline",' +
@@ -618,6 +619,7 @@ PHB5E.FEATURES_ADDED = {
   'Dark Elf Ability Adjustment':'Section=ability Note="+1 Charisma"',
   'Drow Magic':
     'Section=magic ' +
+    // errata replaces once per day with once per long rest
     'Note="Knows the <i>Dancing Lights</i> cantrip%{level<3?\'\':level<5?\' and can cast <i>Faerie Fire</i> once per long rest\':\' and can cast <i>Faerie Fire</i> and <i>Darkness</i> once per long rest\'}" ' +
     'Spells="Dancing Lights","3:Faerie Fire",5:Darkness ' +
     'SpellAbility=Charisma',
@@ -965,7 +967,8 @@ PHB5E.FEATURES_ADDED = {
     'Section=magic Note="Can select %V elemental disciplines"',
   'Elemental Attunement':
     'Section=magic ' +
-    'Note="Can create a harmless instantaneous elemental effect, light or snuff a small flame, chill or warm a 1 lb object for 1 hr, or shape a 1\' cube of earth, fire, water, or mist for 1 min"',
+    // errata specifies 30' range
+    'Note="R30\' Can create a harmless instantaneous elemental effect, light or snuff a small flame, chill or warm a 1 lb object for 1 hr, or shape a 1\' cube of earth, fire, water, or mist for 1 min"',
   'Eternal Mountain Defense':
     'Section=magic ' +
     'Note="Can spend 5 Ki Points to cast <i>Stoneskin</i> on self" ' +
@@ -1189,7 +1192,8 @@ PHB5E.FEATURES_ADDED = {
     'Section=magic Note="Damage cannot break conjuration concentration"',
   'Minor Conjuration':
     'Section=magic ' +
-    'Note="R10\' Can create a 3\' cube inanimate object weighing up to 10 lb that emits 5\' dim light and lasts for 1 hr"',
+    // errata adds end upon dealing damage
+    'Note="R10\' Can create a 3\' cube inanimate object weighing up to 10 lb that emits 5\' dim light and lasts for 1 hr or until it takes or deals damage"',
   // School Of Divination
   'Divination Savant':
     'Section=magic ' +
