@@ -1310,189 +1310,197 @@ PHB5E.FEATURES_ADDED = {
 
   // Feats
   'Actor':
-    'Section=Ability,Skill ' +
+    'Section=ability,skill ' +
     'Note=' +
       '"+1 Charisma",' +
-      '"Adv on Deception and Performance (impersonation)/May mimic others\' speech or sounds"',
+      '"Has advantage on Deception and Performance to impersonate another person and can mimic others\' speech or sounds"',
   'Alert':
-    'Section=Combat,Combat ' +
+    'Section=combat,combat ' +
     'Note=' +
       '"+5 Initiative",' +
-      '"Cannot be surprised/Unseen foes gain no Adv on attacks on self"',
+      '"Cannot be surprised, and unseen foes gain no advantage on attacks on self"',
   'Athlete':
-    'Section=Ability,Ability ' +
+    'Section=ability,ability ' +
     'Note=' +
       '"Ability Boost (Choose 1 from Dexterity, Strength)",' +
-      '"Standing, running long jump, and running high jump each use only 5\' move/May climb at full speed"',
+      '"Standing, running long jump, and running high jump each use only 5\' of movement/Can climb at full speed"',
   'Charger':
-    'Section=Combat ' +
-    'Note="After a 10\' Dash, may use a bonus action to attack (+5 damage) or to push 10\'"',
+    'Section=combat ' +
+    'Note="Can use a bonus action after a 10\' Dash to attack (+5 damage) or to push 10\'"',
   'Crossbow Expert':
-    'Section=Combat ' +
-    'Note="May make multiple attacks w/a proficient crossbow/Suffers no Disadv on a close shot/May use a bonus action to make a hand crossbow attack after a one-handed attack"',
+    'Section=combat ' +
+    'Note="Ignores the loading quality of proficient crossbows/Suffers no disadvantage on ranged attacks within 5\'/Can use a bonus action to make a hand crossbow attack after a one-handed attack"',
   'Defensive Duelist':
-    'Section=Combat ' +
-    'Note="May use Reaction to gain +%{proficiencyBonus} Armor Class when wielding a proficient finesse weapon"',
+    'Section=combat ' +
+    'Note="Can use a reaction to gain +%{proficiencyBonus} Armor Class when wielding a proficient finesse weapon"',
   'Dual Wielder':
-    'Section=Combat ' +
-    'Note="+1 Armor Class w/two weapons/May use two-weapon fighting w/any one-handed weapons/May draw or stow two weapons at once"',
+    'Section=combat ' +
+    'Note="+1 Armor Class when wielding two melee weapons/Can use two-weapon fighting with any one-handed weapons/Can draw or stow two weapons simultaneously"',
   'Dungeon Delver':
-    'Section=Save,Skill ' +
+    'Section=save,skill ' +
     'Note=' +
-      '"Adv on trap avoidance and resistance/Has resistance to trap damage",' +
-      '"Adv on Perception and Investigation (secret door detection)/May search for traps at full speed"',
+      '"Has advantage to avoid or resist traps and resistance to trap damage",' +
+      // errata changes the second effect
+      '"Has advantage on Perception and Investigation (secret door detection)/Suffers no Perception penalty when traveling at a fast pace"',
   'Durable':
-    'Section=Ability,Combat ' +
+    'Section=ability,combat ' +
     'Note=' +
       '"+1 Constitution",' +
-      '"Regains a minimum of %{constitutionModifier*2>?2} HP from a Hit Die roll"',
+      '"Regains a minimum of %{constitutionModifier*2>?2} hit points from a Hit Die roll"',
   'Elemental Adept (Acid)':
-    'Section=Magic ' +
-    'Note="Acid spells ignore resistance and treat 1s as 2s on damage dice"',
+    'Section=magic ' +
+    'Note="Spells that inflict acid damage ignore resistance and treat 1s as 2s on damage dice"',
   'Elemental Adept (Cold)':
-    'Section=Magic ' +
-    'Note="Cold spells ignore resistance and treat 1s as 2s on damage dice"',
+    'Section=magic ' +
+    'Note="Spells that inflict cold damage ignore resistance and treat 1s as 2s on damage dice"',
   'Elemental Adept (Fire)':
-    'Section=Magic ' +
-    'Note="Fire spells ignore resistance and treat 1s as 2s on damage dice"',
+    'Section=magic ' +
+    'Note="Spells that inflict fire damage ignore resistance and treat 1s as 2s on damage dice"',
   'Elemental Adept (Lightning)':
-    'Section=Magic ' +
-    'Note="Lightning spells ignore resistance and treat 1s as 2s on damage dice"',
+    'Section=magic ' +
+    'Note="Spells that inflict lightning damage ignore resistance and treat 1s as 2s on damage dice"',
   'Elemental Adept (Thunder)':
-    'Section=Magic ' +
-    'Note="Thunder spells ignore resistance and treat 1s as 2s on damage dice"',
+    'Section=magic ' +
+    'Note="Spells that inflict thunder damage ignore resistance and treat 1s as 2s on damage dice"',
   'Great Weapon Master':
-    'Section=Combat ' +
-    'Note="May use a bonus action to attack after crit or reducing foe to 0 HP/May suffer -5 attack w/a heavy weapon to gain +10 damage"',
+    'Section=combat ' +
+    'Note="Can use a bonus action to attack after scoring a critical hit or reducing a foe to 0 hit points with a melee weapon/Can make a -5 attack with a heavy weapon to inflict +10 damage"',
   'Healer':
-    'Section=Feature ' +
-    'Note="Using a healer\'s kit to stabilize also restores 1 HP/May use a healer\'s kit to restore 1d6+4 + target HD HP 1/short rest"',
+    'Section=feature ' +
+    'Note="Using a healer\'s kit to stabilize also restores 1 hit point/Can use a healer\'s kit to restore 1d6+4 + target HD hit points once per creature per short rest"',
   'Heavily Armored':
-    'Section=Ability,Combat ' +
+    'Section=ability,combat ' +
     'Note=' +
       '"+1 Strength",' +
       '"Armor Proficiency (Heavy)"',
   'Heavy Armor Master':
-    'Section=Ability,Combat ' +
+    'Section=ability,combat ' +
     'Note=' +
       '"+1 Strength",' +
-      '"In heavy armor, suffers -3 HP damage from nonmagical bludgeoning, piercing, and slashing weapons"',
+      '"Suffers -3 HP damage from nonmagical bludgeoning, piercing, and slashing weapons when wearing heavy armor"',
   'Inspiring Leader':
-    'Section=Feature Note="R30\' 10-min speech gives 6 allies %{level+charismaModifier} temporary HP 1/short rest/ally"',
+    'Section=feature ' +
+    'Note="R30\' 10-min speech gives 6 allies %{level+charismaModifier} temporary hit points once per target per short rest"',
   'Keen Mind':
-    'Section=Ability,Feature ' +
+    'Section=ability,feature ' +
     'Note=' +
       '"+1 Intelligence",' +
-      '"Always knows direction of north and hours until sunrise or sunset/Can recall anything seen or heard during the past month"',
+      '"Always knows the direction of north and hours until sunrise or sunset/Can recall anything seen or heard during the past month"',
   'Lightly Armored':
-    'Section=Ability,Combat ' +
+    'Section=ability,combat ' +
     'Note=' +
       '"Ability Boost (Choose 1 from Dexterity, Strength)",' +
       '"Armor Proficiency (Light)"',
   'Linguist':
-    'Section=Ability,Feature,Skill ' +
+    'Section=ability,feature,skill ' +
     'Note=' +
       '"+1 Intelligence",' +
-      '"May create ciphers (DC %{intelligence+proficiencyBonus} Intelligence decodes)",' +
+      '"Can create ciphers (DC %{intelligence+proficiencyBonus} Intelligence to decode)",' +
       '"Language (Choose 3 from any)"',
   'Lucky':
-    'Section=Feature ' +
-    'Note="May gain Adv on an attack, ability, or saving throw or inflict foe Disadv on self attack 3/long rest"',
+    'Section=feature ' +
+    'Note="Can gain advantage on an attack, ability, or saving throw or inflict foe disadvantage an attack on self 3 times per long rest"',
   'Mage Slayer':
-    'Section=Combat,Save ' +
+    'Section=combat,save ' +
     'Note=' +
-      '"May use Reaction to attack an adjacent caster/Foe suffers Disadv on concentration to maintain a spell",' +
-      '"Adv on saves vs. spells cast by adjacent foes"',
+      '"Can use a reaction to attack an adjacent caster/Foe suffers disadvantage on concentration to maintain a spell in response to a self attack",' +
+      '"Has advantage on saves vs. spells cast by adjacent foes"',
   'Magic Initiate (Bard)':
     'Section=Magic ' +
-    'Note="Knows 2 B0 spells/May cast chosen B1 spell 1/long rest"',
+    'Note="Knows 2 bard cantrips/Can cast a chosen B1 spell once per long rest"',
   'Magic Initiate (Cleric)':
     'Section=Magic ' +
-    'Note="Knows 2 C0 spells/May cast chosen C1 spell 1/long rest"',
+    'Note="Knows 2 cleric cantrips/Can cast a chosen C1 spell once per long rest"',
   'Magic Initiate (Druid)':
     'Section=Magic ' +
-    'Note="Knows 2 D0 spells/May cast chosen D1 spell 1/long rest"',
+    'Note="Knows 2 druid cantrips/Can cast a chosen D1 spell once per long rest"',
   'Magic Initiate (Sorcerer)':
     'Section=Magic ' +
-    'Note="Knows 2 S0 spells/May cast chosen S1 spell 1/long rest"',
+    'Note="Knows 2 sorcerer cantrips/Can cast a chosen S1 spell once per long rest"',
   'Magic Initiate (Warlock)':
     'Section=Magic ' +
-    'Note="Knows 2 K0 spells/May cast chosen K1 spell 1/long rest"',
+    'Note="Knows 2 warlock cantrips/Can cast a chosen K1 spell once per long rest"',
   'Magic Initiate (Wizard)':
     'Section=Magic ' +
-    'Note="Knows 2 W0 spells/May cast chosen W1 spell 1/long rest"',
+    'Note="Knows 2 wizard cantrips/Can cast a chosen W1 spell once per long rest"',
   'Martial Adept':
-    'Section=Combat Note="Has Combat Superiority feature (2 maneuvers, 1 die)"',
+    'Section=combat ' +
+    'Note="Has the Combat Superiority feature with 2 maneuvers and 1 die"',
   'Medium Armor Master':
-    'Section=Combat,Skill ' +
+    'Section=combat,skill ' +
     'Note=' +
       '"+1 Armor Class in medium armor if Dexterity is at least 16",' +
-      '"Suffers no Stealth check penalty in medium armor"',
+      '"Suffers no Stealth disadvantage from wearing medium armor"',
   'Mobile':
-    'Section=Ability,Combat ' +
+    'Section=ability,combat ' +
     'Note=' +
       '"+10 Speed",' +
-      '"May Dash at full speed in difficult terrain/Suffers no OA from targeted foe"',
+      '"Can Dash at full speed in difficult terrain/Attacking a target does not provoke an opportunity attack"',
   'Moderately Armored':
-    'Section=Ability,Combat ' +
+    'Section=ability,combat ' +
     'Note=' +
       '"Ability Boost (Choose 1 from Dexterity, Strength)",' +
       '"Armor Proficiency (Medium/Shield)"',
   'Mounted Combatant':
-    'Section=Combat ' +
-    'Note="Adv on melee attacks on an unmounted foe smaller than mount/May redirect attack on mount to self/Mount suffers no damage on a successful Dexterity save and half on failure"',
+    'Section=combat,save ' +
+    'Note=' +
+      '"Has advantage on melee attacks on an unmounted foe smaller than mount and can redirect attacks on mount to self",' +
+      '"Mount suffers no damage on a successful Dexterity save and half on failure"',
   'Observant':
-    'Section=Ability,Feature,Skill ' +
+    'Section=ability,feature,skill ' +
     'Note=' +
       '"Ability Boost (Choose 1 from Intelligence, Wisdom)",' +
-      '"May read lips",' +
-      '"+5 passive Investigation and Perception"',
+      '"Can read lips",' +
+      '"+5 passive Investigation and passive Perception"',
   'Polearm Master':
-    'Section=Combat ' +
-    'Note="May use a bonus action to attack w/polearm butt (inflicts 1d4 HP bludgeoning)/Foe entering polearm reach provokes an OA"',
+    'Section=combat ' +
+    'Note="Can use a bonus action to attack with the butt of a polearm, inflicting 1d4 HP bludgeoning, and a foe entering polearm reach provokes an opportunity attack"',
   'Resilient':
-    'Section=Ability,Save ' +
+    'Section=ability,save ' +
     'Note=' +
       '"Ability Boost (Choose 1 from any)",' +
       '"Save Proficiency (Choose 1 from any)"',
   'Ritual Caster':
-    'Section=Magic ' +
-    'Note="May cast spells of up to level %{(level+1)//2} from a ritual book"',
+    'Section=magic ' +
+    'Note="Can cast spells of up to level %{(level+1)//2} from a ritual book"',
   'Savage Attacker':
-    'Section=Combat Note="May take the best of two melee damage rolls 1/rd"',
+    'Section=combat ' +
+    'Note="Can take the best of two melee damage rolls once per rd"',
   'Sentinel':
-    'Section=Combat ' +
-    'Note="Successful OA halts target/May take an OA when an adjacent foe uses Disengage/May use Reaction to attack when an adjacent foe targets another"',
+    'Section=combat ' +
+    'Note="Successful opportunity attacks halt the target/Can take an opportunity attack when a foe uses Disengage/Can use a reaction to attack when an adjacent foe attacks another"',
   'Sharpshooter':
-    'Section=Combat ' +
-    'Note="Suffers no Disadv on attacks at long range/Range attacks ignore 3/4 cover/May suffer -5 attack w/a ranged weapon to gain +10 damage"',
+    'Section=combat ' +
+    'Note="Suffers no disadvantage on attacks at long range/Ranged attacks ignore 3/4 cover/Can make a -5 attack with a ranged weapon to inflict +10 damage"',
   'Shield Master':
-    'Section=Combat,Save ' +
+    'Section=combat,save ' +
     'Note=' +
-      '"May use a bonus action to shove foe after an attack",' +
-      '"+2 Dexterity vs. targeted spell or effect/May use Reaction to suffer no damage instead of half on a successful Dexterity save"',
-  'Skilled':'Section=Skill Note="Skill Proficiency (Choose 3 from any)"',
+      '"Can use a bonus action to shove the target 5\' after an attack",' +
+      '"+%{shieldACBonus} Dexterity vs. targeted spells and effects, and can use a reaction to suffer no damage instead of half on a successful Dexterity save"',
+  // TODO or Tools
+  'Skilled':'Section=skill Note="Skill Proficiency (Choose 3 from any)"',
   'Skulker':
-    'Section=Skill ' +
-    'Note="May hide when lightly obscured/Ranged miss does not reveal position/Suffers no Disadv on Perception from dim light"',
+    'Section=skill ' +
+    'Note="Can hide when lightly obscured/Ranged miss does not reveal position/Suffers no disadvantage on Perception from dim light"',
   'Spell Sniper':
-    'Section=Magic ' +
-    'Note="Dbl attack spell range/Spells ignore 3/4 cover/Knows an additional attack cantrip"',
+    'Section=magic ' +
+    'Note="Can cast attack spells at double normal range/Spells ignore 3/4 cover/Knows an additional attack cantrip"',
   'Tavern Brawler':
     'Section=Ability,Combat,Combat ' +
     'Note=' +
       '"Ability Boost (Choose 1 from Constitution, Strength)",' +
+      // errata removes Unarmed Strike proficiency
       '"Weapon Proficiency (Improvised)/Unarmed attacks inflict 1d4 HP",' +
-      '"May use a bonus action to grapple after a successful unarmed or improvised attack"',
-  'Tough':'Section=Combat Note="+%{level*2} Hit Points"',
+      '"Can use a bonus action to grapple after a successful unarmed or improvised attack"',
+  'Tough':'Section=combat Note="+%{level*2} Hit Points"',
   'War Caster':
-    'Section=Magic ' +
-    'Note="Adv on concentration to maintain a spell/May cast when holding a shield and/or weapon/May use Reaction to cast as an OA"',
+    'Section=magic ' +
+    'Note="Has advantage on concentration saves to maintain a spell/Can cast when holding a shield or a weapon/Can use a reaction to cast as an opportunity attack in response to movement"',
   'Weapon Master':
-    'Section=Ability,Combat ' +
+    'Section=ability,combat ' +
     'Note=' +
       '"Ability Boost (Choose 1 from Dexterity, Strength)",' +
-      '"Weapon Proficiency (Choose 4 from any)"'
+      '"Weapon Proficiency (Choose 4 from any Simple Weapon, any Martial Weapon)"'
 
 };
 PHB5E.FEATURES = Object.assign({}, SRD5E.FEATURES, PHB5E.FEATURES_ADDED);
