@@ -113,7 +113,7 @@ var attributes = {
       </tr><tr style="text-align:center">
         <td>City Secrets: Can travel through a city at twice normal speed</td>
       </tr><tr style="text-align:center">
-        <td>Linguist: May create ciphers (DC 20 Intelligence decodes)</td>
+        <td>Linguist: Can create ciphers (DC 20 Intelligence to decode)</td>
       </tr></table>
 </td>
     </tr></table>
@@ -212,7 +212,7 @@ var attributes = {
       </tr><tr style="text-align:center">
         <td>Fighting Style (Protection): Can use a reaction and a shield to inflict disadvantage on attacks targeting an adjacent creature</td>
       </tr><tr style="text-align:center">
-        <td>Mounted Combatant: Adv on melee attacks on an unmounted foe smaller than mount/May redirect attack on mount to self/Mount suffers no damage on a successful Dexterity save and half on failure</td>
+        <td>Mounted Combatant: Has advantage on melee attacks on an unmounted foe smaller than mount and can redirect attacks on mount to self</td>
       </tr><tr style="text-align:center">
         <td>Turn The Faithless: R30' Can use Channel Divinity to make fiends and fey flee (DC 15 Wisdom neg) for 1 min</td>
       </tr></table>
@@ -235,6 +235,8 @@ var attributes = {
         <td>Aura Of Warding: R10' Self and allies have resistance to spell damage</td>
       </tr><tr style="text-align:center">
         <td>Divine Health: Has immunity to disease</td>
+      </tr><tr style="text-align:center">
+        <td>Mounted Combatant: Mount suffers no damage on a successful Dexterity save and half on failure</td>
       </tr></table>
 </td>
     </tr></table>
@@ -258,33 +260,33 @@ var attributes = {
   </tr><tr style="text-align:center">
     <td><b>Spells</b>:     <table id="Spells" style="width:100%">
     <tr style="text-align:left">
-      <td>Aid (P2 Abju): R30' 3 targets gain +5 temporary HP for 8 hr [+Level gives +5 temporary HP]</td>
+      <td>Aid (P2 Abju): R30' 3 targets gain +5 hit points for 8 hr [+Level gives +5 temporary hit points]</td>
     </tr><tr style="text-align:left">
-      <td>Aura Of Life (P4 Abju): 30' radius gives nonhostile creatures resistance to necrotic damage and immunity to maximum HP reduction and raises those w/0 HP to 1 HP for conc up to 10 min</td>
+      <td>Aura Of Life (P4 Abju): 30' radius gives nonhostile creatures resistance to necrotic damage and immunity to maximum hit point reduction, and raises those with 0 hit points to 1 hit point, for concentration up to 10 min</td>
     </tr><tr style="text-align:left">
-      <td>Aura Of Purity (P4 Abju): 30' radius gives nonhostile creatures resistance to poison damage, immunity to disease, and Adv on saves vs. conditions for conc up to 10 min</td>
+      <td>Aura Of Purity (P4 Abju): 30' radius gives nonhostile creatures resistance to poison damage, immunity to disease, and advantage on saves vs. conditions for concentration up to 10 min</td>
     </tr><tr style="text-align:left">
-      <td>Aura Of Vitality (P3 Evoc): R30' Self may use a bonus action to restore 2d6 HP to target 1/rd for conc up to 1 min</td>
+      <td>Aura Of Vitality (P3 Evoc): R30' Self can use a bonus action to restore 2d6 hit points to a target once per rd for concentration up to 1 min</td>
     </tr><tr style="text-align:left">
-      <td>Banishing Smite (P5 Abju): Next successful self weapon attack inflicts +5d10 HP force, plus banishment to home plane or a demiplane for conc up to 1 min if foe is reduced to 50 HP</td>
+      <td>Banishing Smite (P5 Abju): Next successful self weapon attack inflicts +5d10 HP force, plus banishment to home plane or a demiplane for concentration up to 1 min if the attack reduces the target below 51 hit points</td>
     </tr><tr style="text-align:left">
-      <td>Banishment (P4 Abju): R60' Banishes target to home or a demiplane (Charisma neg) for conc up to 1 min [+Level affects +1 target]</td>
+      <td>Banishment (P4 Abju): R60' Banishes target to its home plane or a demiplane (save Charisma neg) for concentration up to 1 min [+Level affects +1 target]</td>
     </tr><tr style="text-align:left">
-      <td>Bless (P1 Ench): R30' 3 targets gain +1d4 on attacks and saving throws for conc up to 1 min [+Level affects +1 target]</td>
+      <td>Bless (P1 Ench): R30' 3 targets gain +1d4 on attacks and saving throws for concentration up to 1 min [+Level affects +1 target]</td>
     </tr><tr style="text-align:left">
-      <td>Blinding Smite (P3 Evoc): Next successful self weapon attack inflicts +3d8 HP radiant and blinds (Constitution ends) for conc up to 1 min</td>
+      <td>Blinding Smite (P3 Evoc): Next successful self weapon attack inflicts +3d8 HP radiant and blinds (save Constitution ends) for concentration up to 1 min</td>
     </tr><tr style="text-align:left">
-      <td>Branding Smite (P2 Evoc): Next successful self weapon attack inflicts +2d6 HP radiant and lights target for conc up to 1 min [+Level inflicts +1d6 HP]</td>
+      <td>Branding Smite (P2 Evoc): Next successful self weapon attack inflicts +2d6 HP radiant and lights the target for concentration up to 1 min [+Level inflicts +1d6 HP]</td>
     </tr><tr style="text-align:left">
-      <td>Circle Of Power (P5 Abju): Allies in a 30' radius gain Adv on saves vs. magic, and saves yields no damage instead of half, for conc up to 10 min</td>
+      <td>Circle Of Power (P5 Abju): Allies in a 30' radius gain Adv on saves vs. magic, and saves yields no damage instead of half, for concentration up to 10 min</td>
     </tr><tr style="text-align:left">
       <td>Command (P1 Ench): R60' Target obeys self one-word command (Wisdom neg) for 1 rd [+Level affects +1 target]</td>
     </tr><tr style="text-align:left">
-      <td>Compelled Duel (P1 Ench): R30' Target stays w/in 30' of self (Wisdom neg) and suffers Disadv on attacks on others for conc up to 1 min; self attacking another or a successful attack on target by an ally ends</td>
+      <td>Compelled Duel (P1 Ench): R30' Target stays w/in 30' of self (Wisdom neg) and suffers disadvantage on attacks on others for concentration up to 1 min; self attacking another or a successful attack on target by an ally ends</td>
     </tr><tr style="text-align:left">
       <td>Create Food And Water (P3 Conj): R30' Creates 45 lb of food and 30 gallons of water</td>
     </tr><tr style="text-align:left">
-      <td>Crusader's Mantle (P3 Evoc): Ally attacks in 30' radius inflict +1d4 HP radiant for conc up to 1 min</td>
+      <td>Crusader's Mantle (P3 Evoc): Ally attacks in 30' radius inflict +1d4 HP radiant for concentration up to 1 min</td>
     </tr><tr style="text-align:left">
       <td>Cure Wounds (P1 Evoc): Touched regains 1d8+3 HP [+Level restores +1d8 HP]</td>
     </tr><tr style="text-align:left">
@@ -294,47 +296,47 @@ var attributes = {
     </tr><tr style="text-align:left">
       <td>Destructive Wave (P5 Evoc): 30' radius inflicts 5d6 HP thunder, 5d6 HP choice of radiant or necrotic, and knocked prone (Constitution half HP only)</td>
     </tr><tr style="text-align:left">
-      <td>Detect Evil And Good (P1 Divi): R30' Self senses aberrations, celestials, elementals, feys, fiends, undead, consecration, and desecration for conc up to 10 min</td>
+      <td>Detect Evil And Good (P1 Divi): R30' Self senses aberrations, celestials, elementals, feys, fiends, undead, consecration, and desecration for concentration up to 10 min</td>
     </tr><tr style="text-align:left">
-      <td>Detect Magic (P1 Divi): R30' Self senses magic auras for conc up to 10 min [R]</td>
+      <td>Detect Magic (P1 Divi): R30' Self senses magic auras for concentration up to 10 min [R]</td>
     </tr><tr style="text-align:left">
-      <td>Detect Poison And Disease (P1 Divi): R30' Self senses poison, poisonous creatures, and diseases for conc up to 10 min [R]</td>
+      <td>Detect Poison And Disease (P1 Divi): R30' Self senses poison, poisonous creatures, and diseases for concentration up to 10 min [R]</td>
     </tr><tr style="text-align:left">
-      <td>Dispel Evil And Good (P5 Abju): Celestials, elementals, fey, fiends, and undead suffer Disadv on self attacks for conc up to 1 min and a successful spell attack returns them to their home plane (Charisma neg); self touch ends enchantment, fright, or possession by them</td>
+      <td>Dispel Evil And Good (P5 Abju): Celestials, elementals, fey, fiends, and undead suffer Disadv on self attacks for concentration up to 1 min and a successful spell attack returns them to their home plane (Charisma neg); self touch ends enchantment, fright, or possession by them</td>
     </tr><tr style="text-align:left">
       <td>Dispel Magic (P3 Abju): R120' Ends the effects of a spell up to level 3; successful DC 10 + spell level ends a higher-level spell [+Level ends any spell of equal or lesser level]</td>
     </tr><tr style="text-align:left">
-      <td>Divine Favor (P1 Evoc): Self weapons inflict +1d4 HP radiant for conc up to 1 min</td>
+      <td>Divine Favor (P1 Evoc): Self weapons inflict +1d4 HP radiant for concentration up to 1 min</td>
     </tr><tr style="text-align:left">
-      <td>Elemental Weapon (P3 Tran): Touched weapon gains +1 attack and +1d4 HP choice of acid, cold, fire, lightning, or thunder for conc up to 1 hr [+Level gives +2/+3 attack and +2d4/+3d4 damage at level 5/7]</td>
+      <td>Elemental Weapon (P3 Tran): Touched weapon gains +1 attack and +1d4 HP choice of acid, cold, fire, lightning, or thunder for concentration up to 1 hr [+Level gives +2/+3 attack and +2d4/+3d4 damage at level 5/7]</td>
     </tr><tr style="text-align:left">
-      <td>Ensnaring Strike (P1 [Oath Of The Ancients] Conj): Self next successful attack restrains foe and inflicts 1d6 HP/rd piercing (Strength ends) for conc up to 1 min [+Level inflicts +1d6 HP]</td>
+      <td>Ensnaring Strike (P1 [Oath Of The Ancients] Conj): Self next successful attack restrains foe and inflicts 1d6 HP/rd piercing (Strength ends) for concentration up to 1 min [+Level inflicts +1d6 HP]</td>
     </tr><tr style="text-align:left">
       <td>Find Steed (P2 Conj): R10' Self gains service from a summoned spirit in steed form</td>
     </tr><tr style="text-align:left">
-      <td>Geas (P5 Ench): R60' Target carries out self instructions (Wisdom neg) for 30 dy [+Level extends duration to 1 yr/permanent at level 7/9]</td>
+      <td>Geas (P5 Ench): R60' Target carries out self instructions (Wisdom neg) for 30 day [+Level extends duration to 1 yr/permanent at level 7/9]</td>
     </tr><tr style="text-align:left">
       <td>Heal (D6 Evoc): R60' Target regains 70 HP and recovers from blinded, deafened, and diseased [+Level restores +10 HP]</td>
     </tr><tr style="text-align:left">
-      <td>Heroism (P1 Ench): Touched gains immunity to fright and +3 temporary HP each rd for conc up to 1 min [+Level affects +1 target]</td>
+      <td>Heroism (P1 Ench): Touched gains immunity to fright and +3 temporary HP each rd for concentration up to 1 min [+Level affects +1 target]</td>
     </tr><tr style="text-align:left">
       <td>Lesser Restoration (P2 Abju): Touched recovers from blindness, deafness, disease, paralysis, or poison</td>
     </tr><tr style="text-align:left">
-      <td>Locate Creature (P4 Divi): Self learns location of specified creature or species w/in 1000' for conc up to 1 hr</td>
+      <td>Locate Creature (P4 Divi): Self learns location of specified creature or species w/in 1000' for concentration up to 1 hr</td>
     </tr><tr style="text-align:left">
-      <td>Locate Object (P2 Divi): Self learns location of a specified object or type w/in 1000' for conc up to 10 min</td>
+      <td>Locate Object (P2 Divi): Self learns location of a specified object or type w/in 1000' for concentration up to 10 min</td>
     </tr><tr style="text-align:left">
       <td>Magic Circle (P3 Abju): R10' 10' radius prevents choice of entry or exit (Charisma allows magical transit), inflicts Disadv on attacks, and negates charm, fright, and possession by choice of celestials, fey, fiends, or undead for 1 hr [+Level extends duration +1 hr]</td>
     </tr><tr style="text-align:left">
-      <td>Magic Weapon (P2 Tran): Gives touched weapon a +1 magic bonus for conc up to 1 hr [+Level gives +2/+3 bonus at level 4/6]</td>
+      <td>Magic Weapon (P2 Tran): Gives touched weapon a +1 magic bonus for concentration up to 1 hr [+Level gives +2/+3 bonus at level 4/6]</td>
     </tr><tr style="text-align:left">
       <td>Misty Step (P2 [Oath Of The Ancients] Conj): Teleports self 30'</td>
     </tr><tr style="text-align:left">
-      <td>Moonbeam (P2 [Oath Of The Ancients] Evoc): R120' 5' radius inflicts 2d10 HP radiant (Constitution half; shapechanger Disadv and reverts form on failure) and moves 60'/rd for conc up to 1 min [+Level inflicts +1d10 HP]</td>
+      <td>Moonbeam (P2 [Oath Of The Ancients] Evoc): R120' 5' radius inflicts 2d10 HP radiant (Constitution half; shapechanger Disadv and reverts form on failure) and moves 60'/rd for concentration up to 1 min [+Level inflicts +1d10 HP]</td>
     </tr><tr style="text-align:left">
       <td>Plant Growth (P3 [Oath Of The Ancients] Tran): R150' Causes plants to overgrow in a 100' radius or enriches a 1/2 mile radius for 1 yr</td>
     </tr><tr style="text-align:left">
-      <td>Protection From Energy (P3 [Oath Of The Ancients] Abju): Touched gains resistance to choice of acid, cold, fire, lightning, or thunder damage for conc up to 1 hr</td>
+      <td>Protection From Energy (P3 [Oath Of The Ancients] Abju): Touched gains resistance to choice of acid, cold, fire, lightning, or thunder damage for concentration up to 1 hr</td>
     </tr><tr style="text-align:left">
       <td>Protection From Evil And Good (P1 Abju): Willing touched gains immunity to charm, fright, and possession from aberrations, celestials, elementals, fey, fiends, and undead; those creatures suffer Disadv on attacks on target</td>
     </tr><tr style="text-align:left">
@@ -348,17 +350,17 @@ var attributes = {
     </tr><tr style="text-align:left">
       <td>Revivify (P3 Necr): Restores life and 1 HP to a touched 1-minute-old corpse</td>
     </tr><tr style="text-align:left">
-      <td>Searing Smite (P1 Evoc): Next successful self weapon attack inflicts +1d6 HP fire, plus 1d6 HP fire/rd (Constitution ends) for conc up to 1 min [+Level inflicts +1d6 HP initial]</td>
+      <td>Searing Smite (P1 Evoc): Next successful self weapon attack inflicts +1d6 HP fire, plus 1d6 HP fire/rd (Constitution ends) for concentration up to 1 min [+Level inflicts +1d6 HP initial]</td>
     </tr><tr style="text-align:left">
-      <td>Shield Of Faith (P1 Abju): R60' Target gains +2 AC for conc up to 10 min</td>
+      <td>Shield Of Faith (P1 Abju): R60' Target gains +2 AC for concentration up to 10 min</td>
     </tr><tr style="text-align:left">
       <td>Speak With Animals (P1 [Oath Of The Ancients] Divi): Self may talk with animals for 10 min [R]</td>
     </tr><tr style="text-align:left">
       <td>Staggering Smite (P4 Evoc): Next successful self weapon attack w/in conc up to 1 min inflicts +4d6 HP psychic, Disadv on attacks and ability checks for 1 rd, and no Reaction for 1 rd</td>
     </tr><tr style="text-align:left">
-      <td>Thunderous Smite (P1 Evoc): Next successful self weapon attack inflicts +2d6 HP thunder and 10' push (Strength HP only) for conc up to 1 min</td>
+      <td>Thunderous Smite (P1 Evoc): Next successful self weapon attack inflicts +2d6 HP thunder and 10' push (Strength HP only) for concentration up to 1 min</td>
     </tr><tr style="text-align:left">
-      <td>Wrathful Smite (P1 Evoc): Next successful self weapon attack inflicts +1d6 HP psychic and frightens (Wisdom ends) for conc up to 1 min</td>
+      <td>Wrathful Smite (P1 Evoc): Next successful self weapon attack inflicts +1d6 HP psychic and frightens (Wisdom ends) for concentration up to 1 min</td>
     </tr><tr style="text-align:left">
       <td>Zone Of Truth (P2 Ench): R60' Creatures in a 15' radius cannot lie (Charisma neg) for 10 min</td>
     </tr></table>

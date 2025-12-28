@@ -808,7 +808,7 @@ PHB5E.FEATURES_ADDED = {
     'Section=magic Note="Invoke Duplicity creates 4 duplicates"',
   'Invoke Duplicity':
     'Section=magic ' +
-    'Note="R30\' Can use Channel Divinity to create %{magicNotes.improvedDuplicity?\'4 illusionary duplicates\':\'1 illusionary duplicate\'}, moving %{magicNotes.improvedDuplicity?\'each\':\'it\'} up to 30\' each rd to a maximum of 120\' away, gaining advantage on attacks when self and duplicate are each within 5\' of the target, and allowing remote spellcasting for conc up to 1 min"',
+    'Note="R30\' Can use Channel Divinity to create %{magicNotes.improvedDuplicity?\'4 illusionary duplicates\':\'1 illusionary duplicate\'}, moving %{magicNotes.improvedDuplicity?\'each\':\'it\'} up to 30\' each rd to a maximum of 120\' away, gaining advantage on attacks when self and duplicate are each within 5\' of the target, and allowing remote spellcasting for concentration up to 1 min"',
   'Trickery Domain':
     'Spells=' +
       '"1:Charm Person","1:Disguise Self",' +
@@ -1029,7 +1029,7 @@ PHB5E.FEATURES_ADDED = {
     'Note="R%{levels.Paladin<18?10:30}\' Self and allies have resistance to spell damage"',
   'Elder Champion':
     'Section=magic ' +
-    'Note="Can regain 10 hit points per rd, cast paladin spells as a bonus action, and inflict Disadv on saves vs. self spells on foes within 10\' for 1 min once per long rest"',
+    'Note="Can regain 10 hit points per rd, cast paladin spells as a bonus action, and inflict disadvantage on saves vs. self spells on foes within 10\' for 1 min once per long rest"',
   "Nature's Wrath":
     'Section=magic ' +
     'Note="R10\' Can use Channel Divinity to create spectral vines that restrain a target (DC %{spellDifficultyClass.P} Dexterity or Strength neg)"',
@@ -1145,7 +1145,7 @@ PHB5E.FEATURES_ADDED = {
     'Note="Has immunity to charm and can reflect charm spells onto the caster (DC %{spellDifficultyClass.K} Wisdom neg) for 1 min or until the caster takes damage"',
   'Dark Delirium':
     'Section=magic ' +
-    'Note="R60\' Inflicts charmed or frightened and unaware of surroundings (DC %{spellDifficultyClass.K} Wisdom neg) for conc up to 1 min once per short rest"',
+    'Note="R60\' Inflicts charmed or frightened and unaware of surroundings (DC %{spellDifficultyClass.K} Wisdom neg) for concentration up to 1 min once per short rest"',
   'Fey Presence':
     'Section=magic ' +
     'Note="Can inflict a choice of charmed or frightened (DC %{spellDifficultyClass.K} Wisdom neg) for 1 rd on all creatures in a 10\' cube once per short rest"',
@@ -1264,7 +1264,7 @@ PHB5E.FEATURES_ADDED = {
     'Spells="Raise Dead"',
   'Minor Alchemy':
     'Section=magic ' +
-    'Note="Can change the substance of 1 cubic foot of matter per 10 min effort for conc up to 1 hr"',
+    'Note="Can change the substance of 1 cubic foot of matter per 10 min effort for concentration up to 1 hr"',
   'Shapechanger':
     'Section=magic ' +
     'Note="Knows the <i>Polymorph</i> spell; can transform self into a CR 1 creature once per short rest" ' +
@@ -1540,59 +1540,59 @@ PHB5E.SHIELDS = Object.assign({}, SRD5E.SHIELDS);
 PHB5E.SKILLS = Object.assign({}, SRD5E.SKILLS);
 PHB5E.SPELLS_ADDED = {
 
-  'Arcane Gate':
+  'Arcane Gate': // *
     'School=Conjuration ' +
     'Level=K6,S6,W6 ' +
     'Description=' +
-      '"R10\' Creates a portal pair that can teleport creatures 500\' for conc up to 10 min"',
-  'Armor Of Agathys':
+      '"R10\' Creates a portal pair that can teleport creatures 500\' for concentration up to 10 min"',
+  'Armor Of Agathys': // *
     'School=Abjuration ' +
     'Level=K1 ' +
-    'AtHigherLevels="gives +5 temporary HP and inflicts +5 HP" ' +
+    'AtHigherLevels="gives +5 temporary hit points and inflicts +5 HP" ' +
     'Description=' +
-      '"Self gains 5 temporary HP, and a successful attacker suffers 5 HP cold, for 1 hr"',
-  'Arms Of Hadar':
+      '"Self gains 5 temporary hit points, and a successful attacker suffers 5 HP cold, for 1 hr"',
+  'Arms Of Hadar': // *
     'School=Conjuration ' +
     'Level=K1 ' +
     'AtHigherLevels="inflicts +1d6 HP" ' +
     'Description=' +
-      '"10\' radius inflicts 2d6 HP necrotic and no Reaction for 1 rd (Strength half HP only)"',
-  'Aura Of Life':
+      '"10\' radius inflicts 2d6 HP necrotic and loss of reactions for 1 rd (save Strength inflicts half HP only)"',
+  'Aura Of Life': // *
     'School=Abjuration ' +
     'Level=P4 ' +
     'Description=' +
-      '"30\' radius gives nonhostile creatures resistance to necrotic damage and immunity to maximum HP reduction and raises those w/0 HP to 1 HP for conc up to 10 min"',
-  'Aura Of Purity':
+      '"30\' radius gives nonhostile creatures resistance to necrotic damage and immunity to maximum hit point reduction, and raises those with 0 hit points to 1 hit point, for concentration up to 10 min"',
+  'Aura Of Purity': // *
     'School=Abjuration ' +
     'Level=P4 ' +
     'Description=' +
-      '"30\' radius gives nonhostile creatures resistance to poison damage, immunity to disease, and Adv on saves vs. conditions for conc up to 10 min"',
-  'Aura Of Vitality':
+      '"30\' radius gives nonhostile creatures resistance to poison damage, immunity to disease, and advantage on saves vs. conditions for concentration up to 10 min"',
+  'Aura Of Vitality': // *
     'School=Evocation ' +
     'Level=P3 ' +
-    'Description="R30\' Self may use a bonus action to restore 2d6 HP to target 1/rd for conc up to 1 min"',
+    'Description="R30\' Self can use a bonus action to restore 2d6 hit points to a target once per rd for concentration up to 1 min"',
 
-  'Banishing Smite':
+  'Banishing Smite': // *
     'School=Abjuration ' +
     'Level=P5 ' +
     'Description=' +
-      '"Next successful self weapon attack inflicts +5d10 HP force, plus banishment to home plane or a demiplane for conc up to 1 min if foe is reduced to 50 HP"',
-  'Beast Sense':
+      '"Next successful self weapon attack inflicts +5d10 HP force, plus banishment to home plane or a demiplane for concentration up to 1 min if the attack reduces the target below 51 hit points"',
+  'Beast Sense': // *
     'School=Divination ' +
     'Level=D2,R2 ' +
     'Ritual=true ' +
     'Description=' +
-      '"Self may perceive through touched willing beast\'s senses for conc up to 1 hr"',
-  'Blade Ward':
+      '"Self can perceive through a touched willing beast\'s senses for concentration up to 1 hr"',
+  'Blade Ward': // *
     'School=Abjuration ' +
     'Level=B0,K0,S0,W0 ' +
     'Description=' +
       '"Self gains resistance to bludgeoning, piercing, and slashing weapon damage for 1 rd"',
-  'Blinding Smite':
+  'Blinding Smite': // *
     'School=Evocation ' +
     'Level=P3 ' +
     'Description=' +
-      '"Next successful self weapon attack inflicts +3d8 HP radiant and blinds (Constitution ends) for conc up to 1 min"',
+      '"Next successful self weapon attack inflicts +3d8 HP radiant and blinds (save Constitution ends) for concentration up to 1 min"',
 
   'Chromatic Orb':
     'School=Evocation ' +
@@ -1604,17 +1604,17 @@ PHB5E.SPELLS_ADDED = {
     'School=Abjuration ' +
     'Level=P5 ' +
     'Description=' +
-      '"Allies in a 30\' radius gain Adv on saves vs. magic, and saves yields no damage instead of half, for conc up to 10 min"',
+      '"Allies in a 30\' radius gain Adv on saves vs. magic, and saves yields no damage instead of half, for concentration up to 10 min"',
   'Cloud Of Daggers':
     'School=Conjuration ' +
     'Level=B2,K2,S2,W2 ' +
     'AtHigherLevels="inflicts +2d4 HP" ' +
-    'Description="R60\' 5\' cube inflicts 4d4 HP slashing for conc up to 1 min"',
+    'Description="R60\' 5\' cube inflicts 4d4 HP slashing for concentration up to 1 min"',
   'Compelled Duel':
     'School=Enchantment ' +
     'Level=P1 ' +
     'Description=' +
-      '"R30\' Target stays w/in 30\' of self (Wisdom neg) and suffers Disadv on attacks on others for conc up to 1 min; self attacking another or a successful attack on target by an ally ends"',
+      '"R30\' Target stays w/in 30\' of self (Wisdom neg) and suffers disadvantage on attacks on others for concentration up to 1 min; self attacking another or a successful attack on target by an ally ends"',
   'Conjure Barrage':
     'School=Conjuration ' +
     'Level=R3 ' +
@@ -1634,12 +1634,12 @@ PHB5E.SPELLS_ADDED = {
     'School=Enchantment ' +
     'Level=B2,K2,S2,W2 ' +
     'Description=' +
-      '"R120\' Self may order target\'s attacks each rd (Wisdom ends) for conc up to 1 min"',
+      '"R120\' Self may order target\'s attacks each rd (Wisdom ends) for concentration up to 1 min"',
   "Crusader's Mantle":
     'School=Evocation ' +
     'Level=P3 ' +
     'Description=' +
-      '"Ally attacks in 30\' radius inflict +1d4 HP radiant for conc up to 1 min"',
+      '"Ally attacks in 30\' radius inflict +1d4 HP radiant for concentration up to 1 min"',
 
   'Destructive Wave':
     'School=Evocation ' +
@@ -1658,13 +1658,13 @@ PHB5E.SPELLS_ADDED = {
     'Level=P3 ' +
     'AtHigherLevels="gives +2/+3 attack and +2d4/+3d4 damage at level 5/7" ' +
     'Description=' +
-      '"Touched weapon gains +1 attack and +1d4 HP choice of acid, cold, fire, lightning, or thunder for conc up to 1 hr"',
+      '"Touched weapon gains +1 attack and +1d4 HP choice of acid, cold, fire, lightning, or thunder for concentration up to 1 hr"',
   'Ensnaring Strike':
     'School=Conjuration ' +
     'Level=R1 ' +
     'AtHigherLevels="inflicts +1d6 HP" ' +
     'Description=' +
-      '"Self next successful attack restrains foe and inflicts 1d6 HP/rd piercing (Strength ends) for conc up to 1 min"',
+      '"Self next successful attack restrains foe and inflicts 1d6 HP/rd piercing (Strength ends) for concentration up to 1 min"',
 
   'Feign Death':
     'School=Necromancy ' +
@@ -1676,31 +1676,31 @@ PHB5E.SPELLS_ADDED = {
     'School=Enchantment ' +
     'Level=B0,K0,S0,W0 ' +
     'Description=' +
-      '"Self gains on Adv on Charisma w/non-hostile target for conc up to 1 min; target becomes hostile afterward"',
+      '"Self gains on Adv on Charisma w/non-hostile target for concentration up to 1 min; target becomes hostile afterward"',
 
   'Grasping Vine':
     'School=Conjuration ' +
     'Level=D4,R4 ' +
     'Description=' +
-      '"R30\' 30\' vine pulls target 20\' each rd (Dexterity neg) for conc up to 1 min"',
+      '"R30\' 30\' vine pulls target 20\' each rd (Dexterity neg) for concentration up to 1 min"',
 
   'Hail Of Thorns':
     'School=Conjuration ' +
     'Level=R1 ' +
     'AtHigherLevels="inflicts +1d10 HP (6d10 HP maximum)" ' +
     'Description=' +
-      '"Next successful self ranged attack inflicts 1d10 HP piercing in a 5\' radius (Dexterity half) for conc up to 1 min"',
+      '"Next successful self ranged attack inflicts 1d10 HP piercing in a 5\' radius (Dexterity half) for concentration up to 1 min"',
   'Hex':
     'School=Enchantment ' +
     'Level=K1 ' +
     'AtHigherLevels="extends duration to 8/24 hr at level 3/5" ' +
     'Description=' +
-      '"R90\' Self attacks on target inflict +1d6 HP necrotic, and target has Disadv on chosen ability, for conc up to 1 hr"',
+      '"R90\' Self attacks on target inflict +1d6 HP necrotic, and target has Disadv on chosen ability, for concentration up to 1 hr"',
   'Hunger Of Hadar':
     'School=Conjuration ' +
     'Level=K3 ' +
     'Description=' +
-      '"R150\' 20\' radius inflicts 2d6 HP cold at creatures\' start of turn and 2d6 HP acid at creatures\' end of turn for conc up to 1 min"',
+      '"R150\' 20\' radius inflicts 2d6 HP cold at creatures\' start of turn and 2d6 HP acid at creatures\' end of turn for concentration up to 1 min"',
 
   'Lightning Arrow':
     'School=Transmutation ' +
@@ -1713,7 +1713,7 @@ PHB5E.SPELLS_ADDED = {
     'School=Illusion ' +
     'Level=B2,"K2 [The Archfey]","K2 [The Great Old One]",S2,W2 ' +
     'Description=' +
-      '"R60\' Target perceives an illusion that may inflict 1d6 HP psychic/rd (Intelligence neg; Investigation ends) for conc up to 1 min"',
+      '"R60\' Target perceives an illusion that may inflict 1d6 HP psychic/rd (Intelligence neg; Investigation ends) for concentration up to 1 min"',
   'Power Word Heal':
     'School=Evocation ' +
     'Level=B9 ' +
@@ -1732,7 +1732,7 @@ PHB5E.SPELLS_ADDED = {
     'Level=P1 ' +
     'AtHigherLevels="inflicts +1d6 HP initial" ' +
     'Description=' +
-      '"Next successful self weapon attack inflicts +1d6 HP fire, plus 1d6 HP fire/rd (Constitution ends) for conc up to 1 min"',
+      '"Next successful self weapon attack inflicts +1d6 HP fire, plus 1d6 HP fire/rd (Constitution ends) for concentration up to 1 min"',
   'Staggering Smite':
     'School=Evocation ' +
     'Level=P4 ' +
@@ -1742,13 +1742,13 @@ PHB5E.SPELLS_ADDED = {
     'School=Transmutation ' +
     'Level=R5 ' +
     'Description=' +
-      '"Touched quiver dispenses ammo endlessly and allows two ranged attacks in a bonus action for conc up to 1 min"',
+      '"Touched quiver dispenses ammo endlessly and allows two ranged attacks in a bonus action for concentration up to 1 min"',
 
   'Telepathy':
     'School=Evocation ' +
     'Level=W8 ' +
     'Description=' +
-      '"Self may communicate mentally with a willing target for 1 dy"',
+      '"Self may communicate mentally with a willing target for 1 day"',
   'Thorn Whip':
     'School=Transmutation ' +
     'Level=D0 ' +
@@ -1758,24 +1758,24 @@ PHB5E.SPELLS_ADDED = {
     'School=Evocation ' +
     'Level=P1 ' +
     'Description=' +
-      '"Next successful self weapon attack inflicts +2d6 HP thunder and 10\' push (Strength HP only) for conc up to 1 min"',
+      '"Next successful self weapon attack inflicts +2d6 HP thunder and 10\' push (Strength HP only) for concentration up to 1 min"',
   'Tsunami':
     'School=Conjuration ' +
     'Level=D8 ' +
     'Description=' +
-      '"RSight 300\'x300\'x50\' wall of water inflicts 6d10 HP bludgeoning (Strength half); moves away 50\'/rd, reducing height by 50\' and damage by 1d10 HP each rd, for conc up to 6 rd"',
+      '"RSight 300\'x300\'x50\' wall of water inflicts 6d10 HP bludgeoning (Strength half); moves away 50\'/rd, reducing height by 50\' and damage by 1d10 HP each rd, for concentration up to 6 rd"',
 
   'Witch Bolt':
     'School=Evocation ' +
     'Level=K1,S1,W1 ' +
     'AtHigherLevels="inflicts +1d12 HP initial" ' +
     'Description=' +
-      '"R30\' Ranged spell inflicts 1d12 HP lightning/rd for conc up to 1 min"',
+      '"R30\' Ranged spell inflicts 1d12 HP lightning/rd for concentration up to 1 min"',
   'Wrathful Smite':
     'School=Evocation ' +
     'Level=P1 ' +
     'Description=' +
-      '"Next successful self weapon attack inflicts +1d6 HP psychic and frightens (Wisdom ends) for conc up to 1 min"'
+      '"Next successful self weapon attack inflicts +1d6 HP psychic and frightens (Wisdom ends) for concentration up to 1 min"'
 
 };
 PHB5E.SPELLS_LEVELS_ADDED = {

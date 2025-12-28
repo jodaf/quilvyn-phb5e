@@ -137,7 +137,7 @@ var attributes = {
       </tr><tr style="text-align:center">
         <td><i>Pact Boon: 1 selection</i></td>
       </tr><tr style="text-align:center">
-        <td>Linguist: May create ciphers (DC 22 Intelligence decodes)</td>
+        <td>Linguist: Can create ciphers (DC 22 Intelligence to decode)</td>
       </tr><tr style="text-align:center">
         <td>Shelter Of The Faithful: Can receive aid from temples of Norse-Loki and fellow believers</td>
       </tr></table>
@@ -186,7 +186,7 @@ var attributes = {
     </tr><tr style="text-align:center">
       <td>Bulky Armor: Has disadvantage on Stealth</td>
     </tr><tr style="text-align:center">
-      <td>Dungeon Delver: Adv on Perception and Investigation (secret door detection)/May search for traps at full speed</td>
+      <td>Dungeon Delver: Has advantage on Perception and Investigation (secret door detection)/Suffers no Perception penalty when traveling at a fast pace</td>
     </tr></table>
 </td>
   </tr></table>
@@ -246,7 +246,7 @@ var attributes = {
     </tr><tr style="text-align:center">
       <td><b>Save</b>: Charisma: 4; Constitution: 2; Dexterity: 2; Intelligence: 4; Strength: 3; Wisdom: 7</td>
     </tr><tr style="text-align:center">
-      <td><b>Save Notes</b>: Dungeon Delver: Adv on trap avoidance and resistance/Has resistance to trap damage</td>
+      <td><b>Save Notes</b>: Dungeon Delver: Has advantage to avoid or resist traps and resistance to trap damage</td>
     </tr></table>
 </td>
   </tr></table>
@@ -268,27 +268,27 @@ var attributes = {
   </tr><tr style="text-align:center">
     <td><b>Spells</b>:     <table id="Spells" style="width:100%">
     <tr style="text-align:left">
-      <td>Arcane Gate (K6 Conj): R10' Creates a portal pair that can teleport creatures 500' for conc up to 10 min</td>
+      <td>Arcane Gate (K6 Conj): R10' Creates a portal pair that can teleport creatures 500' for concentration up to 10 min</td>
     </tr><tr style="text-align:left">
-      <td>Armor Of Agathys (K1 Abju): Self gains 5 temporary HP, and a successful attacker suffers 5 HP cold, for 1 hr [+Level gives +5 temporary HP and inflicts +5 HP]</td>
+      <td>Armor Of Agathys (K1 Abju): Self gains 5 temporary hit points, and a successful attacker suffers 5 HP cold, for 1 hr [+Level gives +5 temporary HP and inflicts +5 HP]</td>
     </tr><tr style="text-align:left">
-      <td>Arms Of Hadar (K1 Conj): 10' radius inflicts 2d6 HP necrotic and no Reaction for 1 rd (Strength half HP only) [+Level inflicts +1d6 HP]</td>
+      <td>Arms Of Hadar (K1 Conj): 10' radius inflicts 2d6 HP necrotic and loss of reactions for 1 rd (save Strength inflicts half HP only) [+Level inflicts +1d6 HP]</td>
     </tr><tr style="text-align:left">
       <td>Astral Projection (K9 Necr): R10' Self and 8 willing targets project to astral plane</td>
     </tr><tr style="text-align:left">
-      <td>Banishment (K4 Abju): R60' Banishes target to home or a demiplane (Charisma neg) for conc up to 1 min [+Level affects +1 target]</td>
+      <td>Banishment (K4 Abju): R60' Banishes target to its home plane or a demiplane (save Charisma neg) for concentration up to 1 min [+Level affects +1 target]</td>
     </tr><tr style="text-align:left">
       <td>Blade Ward (K0 Abju): Self gains resistance to bludgeoning, piercing, and slashing weapon damage for 1 rd</td>
     </tr><tr style="text-align:left">
-      <td>Blight (K4 Necr): R30' target suffers 8d8 HP necrotic (Constitution half; plant target suffers Disadv and maximum damage on failure) [+Level inflicts +1d8 HP]</td>
+      <td>Blight (K4 Necr): R30' Inflicts 8d8 HP necrotic (save Constitution half; plant target has disadvantage on the save and suffers maximum damage on failure) [+Level inflicts +1d8 HP]</td>
     </tr><tr style="text-align:left">
-      <td>Blindness/Deafness (K2 [The Fiend] Necr): R30' Inflicts choice of blindness or deafness on target (Constitution ends) for 1 min [+Level affects +1 target]</td>
+      <td>Blindness/Deafness (K2 [The Fiend] Necr): R30' Inflicts a choice of blindness or deafness (save Constitution ends) for 1 min [+Level affects +1 target]</td>
     </tr><tr style="text-align:left">
-      <td>Blink (K3 [The Archfey] Tran): Self becomes ethereal 50% of time for 1 min</td>
+      <td>Blink (K3 [The Archfey] Tran): Self has a 50% chance of becoming ethereal at the end each turn, returning to a spot within 10' at the start of the next turn, for 1 min</td>
     </tr><tr style="text-align:left">
-      <td>Burning Hands (K1 [The Fiend] Evoc): 15' cone inflicts 3d6 HP fire (Dexterity half) [+Level inflicts +1d6 HP]</td>
+      <td>Burning Hands (K1 [The Fiend] Evoc): 15' cone inflicts 3d6 HP fire (save Dexterity half) [+Level inflicts +1d6 HP]</td>
     </tr><tr style="text-align:left">
-      <td>Calm Emotions (K2 [The Archfey] Ench): R60' 20' radius suppresses choice of charm and fright or hostility (Charisma neg) for conc up to 1 min</td>
+      <td>Calm Emotions (K2 [The Archfey] Ench): R60' 20' radius suppresses choice of charm and fright or hostility (Charisma neg) for concentration up to 1 min</td>
     </tr><tr style="text-align:left">
       <td>Charm Person (K1 Ench): R30' Target regards you as a friend (Wisdom neg) for 1 hr or until harmed [+Level affects +1 target]</td>
     </tr><tr style="text-align:left">
@@ -296,31 +296,31 @@ var attributes = {
     </tr><tr style="text-align:left">
       <td>Circle Of Death (K6 Necr): R150' 60' radius inflicts 8d6 HP necrotic (Constitution half) [+Level inflicts +2d6 HP]</td>
     </tr><tr style="text-align:left">
-      <td>Clairvoyance (K3 [The Great Old One] Divi): R1 mile Self gains choice of remote sight or hearing through an invisible sensor for conc up to 10 min</td>
+      <td>Clairvoyance (K3 [The Great Old One] Divi): R1 mile Self gains choice of remote sight or hearing through an invisible sensor for concentration up to 10 min</td>
     </tr><tr style="text-align:left">
-      <td>Cloud Of Daggers (K2 Conj): R60' 5' cube inflicts 4d4 HP slashing for conc up to 1 min [+Level inflicts +2d4 HP]</td>
+      <td>Cloud Of Daggers (K2 Conj): R60' 5' cube inflicts 4d4 HP slashing for concentration up to 1 min [+Level inflicts +2d4 HP]</td>
     </tr><tr style="text-align:left">
       <td>Command (K1 [The Fiend] Ench): R60' Target obeys self one-word command (Wisdom neg) for 1 rd [+Level affects +1 target]</td>
     </tr><tr style="text-align:left">
       <td>Comprehend Languages (K1 Divi): Self understands all languages for 1 hr [R]</td>
     </tr><tr style="text-align:left">
-      <td>Compulsion (K4 [Bewitching Whispers] Ench): R30' Self controls target movement (Wisdom ends) for conc up to 1 min</td>
+      <td>Compulsion (K4 [Bewitching Whispers] Ench): R30' Self controls target movement (Wisdom ends) for concentration up to 1 min</td>
     </tr><tr style="text-align:left">
-      <td>Conjure Fey (K6 Conj): R90' Summons an obedient CR 6 fey for conc, 1 hr, or until slain [+Level CR +1]</td>
+      <td>Conjure Fey (K6 Conj): R90' Summons an obedient CR 6 fey for concentration, 1 hr, or until slain [+Level CR +1]</td>
     </tr><tr style="text-align:left">
       <td>Contact Other Plane (K5 Divi): Contact w/an extraplanar being inflicts 6d6 HP psychic and insanity on self until a long rest (DC 15 Intelligence neg and receive 5 one-word answers) [R]</td>
     </tr><tr style="text-align:left">
       <td>Counterspell (K3 Abju): R60' Negates foe casting up to spell level 3; successful DC 10 + spell level negates a higher-level spell [+Level negates any spell of equal or lesser level]</td>
     </tr><tr style="text-align:left">
-      <td>Create Undead (K6 Necr): R10' 3 corpses become obedient (R120') ghouls for 1 dy [+Level creates 4 ghouls/5 ghouls or 2 ghasts or wights/6 ghouls, 3 ghasts or wights, or 2 mummies at level 7/8/9]</td>
+      <td>Create Undead (K6 Necr): R10' 3 corpses become obedient (R120') ghouls for 1 day [+Level creates 4 ghouls/5 ghouls or 2 ghasts or wights/6 ghouls, 3 ghasts or wights, or 2 mummies at level 7/8/9]</td>
     </tr><tr style="text-align:left">
-      <td>Crown Of Madness (K2 Ench): R120' Self may order target's attacks each rd (Wisdom ends) for conc up to 1 min</td>
+      <td>Crown Of Madness (K2 Ench): R120' Self may order target's attacks each rd (Wisdom ends) for concentration up to 1 min</td>
     </tr><tr style="text-align:left">
-      <td>Darkness (K2 Evoc): R60' Target centers a 15' radius lightless area for conc up to 10 min</td>
+      <td>Darkness (K2 Evoc): R60' Target centers a 15' radius lightless area for concentration up to 10 min</td>
     </tr><tr style="text-align:left">
       <td>Demiplane (K8 Conj): R60' Door leads to a 30'x30'x30' extradimensional room for 1 hr</td>
     </tr><tr style="text-align:left">
-      <td>Detect Thoughts (K2 [The Great Old One] Divi): R30' Self senses target surface thoughts and may probe deeper (Wisdom neg) for conc up to 1 min</td>
+      <td>Detect Thoughts (K2 [The Great Old One] Divi): R30' Self senses target surface thoughts and may probe deeper (Wisdom neg) for concentration up to 1 min</td>
     </tr><tr style="text-align:left">
       <td>Dimension Door (K4 Conj): Self teleports up to 500'; may bring along 1 willing creature</td>
     </tr><tr style="text-align:left">
@@ -330,15 +330,15 @@ var attributes = {
     </tr><tr style="text-align:left">
       <td>Dissonant Whispers (K1 [The Great Old One] Ench): R60' Target suffers 3d6 HP psychic and uses Reaction to flee (Wisdom half HP only) [+Level inflicts +1d6 HP]</td>
     </tr><tr style="text-align:left">
-      <td>Dominate Beast (K4 [The Archfey] Ench): R60' Target obeys self telepathic commands (Wisdom neg; damage yields another save) for conc up to 1 min [+Level extends duration to 10 min/1 hr/8 hr at level 5/6/7]</td>
+      <td>Dominate Beast (K4 [The Archfey] Ench): R60' Target obeys self telepathic commands (Wisdom neg; damage yields another save) for concentration up to 1 min [+Level extends duration to 10 min/1 hr/8 hr at level 5/6/7]</td>
     </tr><tr style="text-align:left">
-      <td>Dominate Beast (K4 [The Great Old One] Ench): R60' Target obeys self telepathic commands (Wisdom neg; damage yields another save) for conc up to 1 min [+Level extends duration to 10 min/1 hr/8 hr at level 5/6/7]</td>
+      <td>Dominate Beast (K4 [The Great Old One] Ench): R60' Target obeys self telepathic commands (Wisdom neg; damage yields another save) for concentration up to 1 min [+Level extends duration to 10 min/1 hr/8 hr at level 5/6/7]</td>
     </tr><tr style="text-align:left">
-      <td>Dominate Monster (K8 Ench): R60' Target obeys self telepathic commands (Wisdom neg; damage yields another save) for conc up to 1 hr [+Level extends duration to 8 hr]</td>
+      <td>Dominate Monster (K8 Ench): R60' Target obeys self telepathic commands (Wisdom neg; damage yields another save) for concentration up to 1 hr [+Level extends duration to 8 hr]</td>
     </tr><tr style="text-align:left">
-      <td>Dominate Person (K5 [The Archfey] Ench): R60' Target obeys self telepathic commands (Wisdom neg; damage yields another save) for conc up to 1 min [+Level extends duration to 10 min/1 hr/8 hr at level 6/7/8]</td>
+      <td>Dominate Person (K5 [The Archfey] Ench): R60' Target obeys self telepathic commands (Wisdom neg; damage yields another save) for concentration up to 1 min [+Level extends duration to 10 min/1 hr/8 hr at level 6/7/8]</td>
     </tr><tr style="text-align:left">
-      <td>Dominate Person (K5 [The Great Old One] Ench): R60' Target obeys self telepathic commands (Wisdom neg; damage yields another save) for conc up to 1 min [+Level extends duration to 10 min/1 hr/8 hr at level 6/7/8]</td>
+      <td>Dominate Person (K5 [The Great Old One] Ench): R60' Target obeys self telepathic commands (Wisdom neg; damage yields another save) for concentration up to 1 min [+Level extends duration to 10 min/1 hr/8 hr at level 6/7/8]</td>
     </tr><tr style="text-align:left">
       <td>Dream (K5 Illu): Touched controls the dreams of a known target for 8 hr; may also inflict 3d6 HP psychic (Wisdom neg)</td>
     </tr><tr style="text-align:left">
@@ -348,15 +348,15 @@ var attributes = {
     </tr><tr style="text-align:left">
       <td>Etherealness (K7 Tran): Self enters Ethereal Plane for up to 8 hr [+Level affects +2/+5 targets at level 8/9]</td>
     </tr><tr style="text-align:left">
-      <td>Evard's Black Tentacles (K4 [The Great Old One] Conj): R90' 20' sq inflicts 3d6 HP bludgeoning and restrains (Dexterity neg, Strength or Dexterity breaks free) for conc up to 1 min</td>
+      <td>Evard's Black Tentacles (K4 [The Great Old One] Conj): R90' 20' sq inflicts 3d6 HP bludgeoning and restrains (save Dexterity neg, Strength or Dexterity breaks free) for concentration up to 1 min</td>
     </tr><tr style="text-align:left">
-      <td>Expeditious Retreat (K1 Tran): Self gains a bonus Dash 1/rd for conc up to 10 min</td>
+      <td>Expeditious Retreat (K1 Tran): Self gains a bonus Dash 1/rd for concentration up to 10 min</td>
     </tr><tr style="text-align:left">
-      <td>Eyebite (K6 Necr): R60' Inflicts choice of sleep, panic, or sickened (Disadv on attack and ability rolls) on 1 target/rd (Wisdom neg) for conc up to 1 min</td>
+      <td>Eyebite (K6 Necr): R60' Inflicts choice of sleep, panic, or sickened (Disadv on attack and ability rolls) on 1 target/rd (Wisdom neg) for concentration up to 1 min</td>
     </tr><tr style="text-align:left">
-      <td>Faerie Fire (K1 [The Archfey] Evoc): R60' Objects in a 20' cube glow, giving foes Adv on attacks (Dexterity neg) for conc up to 1 min</td>
+      <td>Faerie Fire (K1 [The Archfey] Evoc): R60' Objects in a 20' cube glow, giving foes Adv on attacks (Dexterity neg) for concentration up to 1 min</td>
     </tr><tr style="text-align:left">
-      <td>Fear (K3 Illu): Creatures in a 30' cone flee (Wisdom ends) for conc up to 1 min</td>
+      <td>Fear (K3 Illu): Creatures in a 30' cone flee (Wisdom ends) for concentration up to 1 min</td>
     </tr><tr style="text-align:left">
       <td>Feeblemind (K8 Ench): R150' Target suffers 4d6 HP psychic and reduction of Charisma and Intelligence to 1 (Intelligence HP only)</td>
     </tr><tr style="text-align:left">
@@ -370,43 +370,43 @@ var attributes = {
     </tr><tr style="text-align:left">
       <td>Flame Strike (K5 [The Fiend] Evoc): R60' 10' radius inflicts 4d6 HP fire and 4d6 HP radiant (Dexterity half) [+Level inflicts +1d6 HP choice of fire or radiant]</td>
     </tr><tr style="text-align:left">
-      <td>Flesh To Stone (K6 Tran): R60' Target becomes restrained (Constitution neg), then petrified after 3 failed Constitution saves (3 successes neg) for conc up to 1 min</td>
+      <td>Flesh To Stone (K6 Tran): R60' Target becomes restrained (Constitution neg), then petrified after 3 failed Constitution saves (3 successes neg) for concentration up to 1 min</td>
     </tr><tr style="text-align:left">
-      <td>Fly (K3 Tran): Touched gains 60' fly speed for conc up to 10 min [+Level affects +1 target]</td>
+      <td>Fly (K3 Tran): Touched gains 60' fly speed for concentration up to 10 min [+Level affects +1 target]</td>
     </tr><tr style="text-align:left">
       <td>Forcecage (K7 Evoc): R100' Creates choice of 20' barred force cube or 10' solid force box for 1 hr</td>
     </tr><tr style="text-align:left">
       <td>Foresight (K9 Divi): Touched gains immunity to surprise and Adv on attack, ability, and saving throws, and foes suffer Disadv on attacks, for 8 hr</td>
     </tr><tr style="text-align:left">
-      <td>Friends (K0 Ench): Self gains on Adv on Charisma w/non-hostile target for conc up to 1 min; target becomes hostile afterward</td>
+      <td>Friends (K0 Ench): Self gains on Adv on Charisma w/non-hostile target for concentration up to 1 min; target becomes hostile afterward</td>
     </tr><tr style="text-align:left">
-      <td>Gaseous Form (K3 Tran): Touched creature becomes gaseous for conc up to 1 hr</td>
+      <td>Gaseous Form (K3 Tran): Touched creature becomes gaseous for concentration up to 1 hr</td>
     </tr><tr style="text-align:left">
       <td>Glibness (K8 Tran): Self may take 15 on Charisma checks and always detects as truthful for 1 hr</td>
     </tr><tr style="text-align:left">
-      <td>Greater Invisibility (K4 [The Archfey] Illu): Touched becomes invisible for conc up to 1 min</td>
+      <td>Greater Invisibility (K4 [The Archfey] Illu): Touched becomes invisible for concentration up to 1 min</td>
     </tr><tr style="text-align:left">
       <td>Hallow (K5 [The Fiend] Evoc): 60' radius becomes warded against celestials, elementals, fey, fiends, and undead and their effects and evokes a boon effect</td>
     </tr><tr style="text-align:left">
-      <td>Hallucinatory Terrain (K4 Illu): R300' Creates a 150' cube terrain illusion (Investigation detects) for 1 dy</td>
+      <td>Hallucinatory Terrain (K4 Illu): R300' Creates a 150' cube terrain illusion (Investigation detects) for 1 day</td>
     </tr><tr style="text-align:left">
       <td>Hellish Rebuke (K1 Evoc): R60' May cast as a Reaction to inflict 2d10 HP fire on a successful attacker (Dexterity half) [+Level inflicts +1d10 HP]</td>
     </tr><tr style="text-align:left">
-      <td>Hex (K1 Ench): R90' Self attacks on target inflict +1d6 HP necrotic, and target has Disadv on chosen ability, for conc up to 1 hr [+Level extends duration to 8/24 hr at level 3/5]</td>
+      <td>Hex (K1 Ench): R90' Self attacks on target inflict +1d6 HP necrotic, and target has Disadv on chosen ability, for concentration up to 1 hr [+Level extends duration to 8/24 hr at level 3/5]</td>
     </tr><tr style="text-align:left">
-      <td>Hold Monster (K5 Ench): R90' Immobilizes target creature (Wisdom ends) for conc up to 1 min [+Level affects +1 target]</td>
+      <td>Hold Monster (K5 Ench): R90' Immobilizes target creature (Wisdom ends) for concentration up to 1 min [+Level affects +1 target]</td>
     </tr><tr style="text-align:left">
-      <td>Hold Person (K2 Ench): R60' Immobilizes target humanoid (Wisdom ends) for conc up to 1 min [+Level affects +1 target]</td>
+      <td>Hold Person (K2 Ench): R60' Immobilizes target humanoid (Wisdom ends) for concentration up to 1 min [+Level affects +1 target]</td>
     </tr><tr style="text-align:left">
-      <td>Hunger Of Hadar (K3 Conj): R150' 20' radius inflicts 2d6 HP cold at creatures' start of turn and 2d6 HP acid at creatures' end of turn for conc up to 1 min</td>
+      <td>Hunger Of Hadar (K3 Conj): R150' 20' radius inflicts 2d6 HP cold at creatures' start of turn and 2d6 HP acid at creatures' end of turn for concentration up to 1 min</td>
     </tr><tr style="text-align:left">
-      <td>Hypnotic Pattern (K3 Illu): R120' Creatures in a 30' cube become charmed (Wisdom neg) for conc up to 1 min</td>
+      <td>Hypnotic Pattern (K3 Illu): R120' Creatures in a 30' cube become charmed (Wisdom neg) for concentration up to 1 min</td>
     </tr><tr style="text-align:left">
-      <td>Illusory Script (K1 Illu): Self writing on target material becomes legible only to specified creatures for 10 dy [R]</td>
+      <td>Illusory Script (K1 Illu): Self writing on target material becomes legible only to specified creatures for 10 day [R]</td>
     </tr><tr style="text-align:left">
       <td>Imprisonment (K9 Abju): R30' Restrains target in chosen prison (Wisdom neg)</td>
     </tr><tr style="text-align:left">
-      <td>Invisibility (K2 Illu): Touched becomes invisible for conc up to 1 hr; target attacking or casting ends [+Level affects +1 target]</td>
+      <td>Invisibility (K2 Illu): Touched becomes invisible for concentration up to 1 hr; target attacking or casting ends [+Level affects +1 target]</td>
     </tr><tr style="text-align:left">
       <td>Mage Armor (K1 [Armor Of Shadows] Abju): Willing, unarmored touched gains AC 13 + Dexterity modifier for 8 hr (target donning armor ends)</td>
     </tr><tr style="text-align:left">
@@ -414,9 +414,9 @@ var attributes = {
     </tr><tr style="text-align:left">
       <td>Magic Circle (K3 Abju): R10' 10' radius prevents choice of entry or exit (Charisma allows magical transit), inflicts Disadv on attacks, and negates charm, fright, and possession by choice of celestials, fey, fiends, or undead for 1 hr [+Level extends duration +1 hr]</td>
     </tr><tr style="text-align:left">
-      <td>Major Image (K3 Illu): R120' Creates a 20' cube sight, sound, and touch illusion (Investigation detects) for conc up to 10 min [+Level extends duration to permanent at level 6]</td>
+      <td>Major Image (K3 Illu): R120' Creates a 20' cube sight, sound, and touch illusion (Investigation detects) for concentration up to 10 min [+Level extends duration to permanent at level 6]</td>
     </tr><tr style="text-align:left">
-      <td>Mass Suggestion (K6 Ench): R60' 12 targets follow a reasonable suggestion (Wisdom neg) for 1 dy [+Level extends duration to 10/30/366 dy at level 7/8/9]</td>
+      <td>Mass Suggestion (K6 Ench): R60' 12 targets follow a reasonable suggestion (Wisdom neg) for 1 day [+Level extends duration to 10/30/366 day at level 7/8/9]</td>
     </tr><tr style="text-align:left">
       <td>Minor Illusion (K0 Illu): R30' Creates the sound of 1 creature or a 5' cube image (Investigation detects) for 1 min</td>
     </tr><tr style="text-align:left">
@@ -424,9 +424,9 @@ var attributes = {
     </tr><tr style="text-align:left">
       <td>Misty Step (K2 Conj): Teleports self 30'</td>
     </tr><tr style="text-align:left">
-      <td>Phantasmal Force (K2 [The Archfey] Illu): R60' Target perceives an illusion that may inflict 1d6 HP psychic/rd (Intelligence neg; Investigation ends) for conc up to 1 min</td>
+      <td>Phantasmal Force (K2 [The Archfey] Illu): R60' Target perceives an illusion that may inflict 1d6 HP psychic/rd (Intelligence neg; Investigation ends) for concentration up to 1 min</td>
     </tr><tr style="text-align:left">
-      <td>Phantasmal Force (K2 [The Great Old One] Illu): R60' Target perceives an illusion that may inflict 1d6 HP psychic/rd (Intelligence neg; Investigation ends) for conc up to 1 min</td>
+      <td>Phantasmal Force (K2 [The Great Old One] Illu): R60' Target perceives an illusion that may inflict 1d6 HP psychic/rd (Intelligence neg; Investigation ends) for concentration up to 1 min</td>
     </tr><tr style="text-align:left">
       <td>Plane Shift (K7 Conj): Target (Charisma neg) or self and 8 willing others travel to another plane</td>
     </tr><tr style="text-align:left">
@@ -442,13 +442,13 @@ var attributes = {
     </tr><tr style="text-align:left">
       <td>Protection From Evil And Good (K1 Abju): Willing touched gains immunity to charm, fright, and possession from aberrations, celestials, elementals, fey, fiends, and undead; those creatures suffer Disadv on attacks on target</td>
     </tr><tr style="text-align:left">
-      <td>Ray Of Enfeeblement (K2 Necr): R60' Ranged spell inflicts half damage with Strength weapons (Constitution ends) for conc up to 1 min</td>
+      <td>Ray Of Enfeeblement (K2 Necr): R60' Ranged spell inflicts half damage with Strength weapons (Constitution ends) for concentration up to 1 min</td>
     </tr><tr style="text-align:left">
       <td>Remove Curse (K3 Abju): Frees touched from all curses</td>
     </tr><tr style="text-align:left">
       <td>Scorching Ray (K2 [The Fiend] Evoc): R120' 3 ranged attacks inflict 2d6 HP fire each [+Level gives +1 ranged attack]</td>
     </tr><tr style="text-align:left">
-      <td>Scrying (K5 Divi): Self sees and hears chosen target (Wisdom neg) for conc up to 10 min</td>
+      <td>Scrying (K5 Divi): Self sees and hears chosen target (Wisdom neg) for concentration up to 10 min</td>
     </tr><tr style="text-align:left">
       <td>Seeming (K5 [The Archfey] Illu): R30' Changes appearance of targets (Charisma neg; Investigation detects) for 8 hr</td>
     </tr><tr style="text-align:left">
@@ -456,25 +456,25 @@ var attributes = {
     </tr><tr style="text-align:left">
       <td>Shatter (K2 Evoc): R60' 10' radius inflicts 3d8 HP thunder (Constitution half) [+Level inflicts +1d8 HP]</td>
     </tr><tr style="text-align:left">
-      <td>Silent Image (K1 [Misty Visions] Illu): R60' Creates a 15' cube illusion (Investigation detects) for conc up to 10 min</td>
+      <td>Silent Image (K1 [Misty Visions] Illu): R60' Creates a 15' cube illusion (Investigation detects) for concentration up to 10 min</td>
     </tr><tr style="text-align:left">
       <td>Sleep (K1 [The Archfey] Ench): R90' 20' radius sleeps 5d8 HP of creatures, weakest first, for 1 min (damage or shaking wakens) [+Level affects +2d8 HP of creatures]</td>
     </tr><tr style="text-align:left">
       <td>Speak With Dead (K3 [Whispers Of The Grave] Necr): R10' Self may ask a corpse 5 questions</td>
     </tr><tr style="text-align:left">
-      <td>Spider Climb (K2 Tran): Touched may crawl on walls and ceilings for conc up to 1 hr</td>
+      <td>Spider Climb (K2 Tran): Touched may crawl on walls and ceilings for concentration up to 1 hr</td>
     </tr><tr style="text-align:left">
-      <td>Stinking Cloud (K3 [The Fiend] Conj): R90' 20' radius inflicts loss of action (Constitution neg) for conc up to 1 min</td>
+      <td>Stinking Cloud (K3 [The Fiend] Conj): R90' 20' radius inflicts loss of action (Constitution neg) for concentration up to 1 min</td>
     </tr><tr style="text-align:left">
-      <td>Suggestion (K2 Ench): R30' Target follows a reasonable suggestion (Wisdom neg) for conc up to 8 hr</td>
+      <td>Suggestion (K2 Ench): R30' Target follows a reasonable suggestion (Wisdom neg) for concentration up to 8 hr</td>
     </tr><tr style="text-align:left">
-      <td>Tasha's Hideous Laughter (K1 [The Great Old One] Ench): R30' Target ROFL (Wisdom ends) for conc up to 1 min</td>
+      <td>Tasha's Hideous Laughter (K1 [The Great Old One] Ench): R30' Target ROFL (Wisdom ends) for concentration up to 1 min</td>
     </tr><tr style="text-align:left">
-      <td>Telekinesis (K5 [The Great Old One] Tran): R60' Self may mentally move a 1000 lb object 30'/rd (Strength neg) for conc up to 10 min</td>
+      <td>Telekinesis (K5 [The Great Old One] Tran): R60' Self may mentally move a 1000 lb object 30'/rd (Strength neg) for concentration up to 10 min</td>
     </tr><tr style="text-align:left">
       <td>Tongues (K3 Divi): Touched understands any language and is universally understood for 1 hr</td>
     </tr><tr style="text-align:left">
-      <td>True Polymorph (K9 Tran): R30' Transforms target creature or object (Wisdom neg) for conc up to 1 hr or until reduced to 0 HP</td>
+      <td>True Polymorph (K9 Tran): R30' Transforms target creature or object (Wisdom neg) for concentration up to 1 hr or until reduced to 0 HP</td>
     </tr><tr style="text-align:left">
       <td>True Seeing (K6 Divi): Touched gains 120' truesight, sees magically concealed doors, and can see into the Ethereal Plane for 1 hr</td>
     </tr><tr style="text-align:left">
@@ -482,11 +482,11 @@ var attributes = {
     </tr><tr style="text-align:left">
       <td>Unseen Servant (K1 Conj): R60' Invisible force (AC 10; 1 HP; Strength 2) moves 15'/rd and performs simple tasks for 1 hr or until damaged [R]</td>
     </tr><tr style="text-align:left">
-      <td>Vampiric Touch (K3 Necr): Touched suffers 3d6 HP and self regains half for conc up to 1 min [+Level inflicts +1d6 HP]</td>
+      <td>Vampiric Touch (K3 Necr): Touched suffers 3d6 HP and self regains half for concentration up to 1 min [+Level inflicts +1d6 HP]</td>
     </tr><tr style="text-align:left">
-      <td>Wall Of Fire (K4 [The Fiend] Evoc): R120' 60'x20'x1' wall inflicts 5d8 HP fire (Dexterity half) w/in 10' of chosen side for conc up to 1 min [+Level inflicts +1d8 HP]</td>
+      <td>Wall Of Fire (K4 [The Fiend] Evoc): R120' 60'x20'x1' wall inflicts 5d8 HP fire (Dexterity half) w/in 10' of chosen side for concentration up to 1 min [+Level inflicts +1d8 HP]</td>
     </tr><tr style="text-align:left">
-      <td>Witch Bolt (K1 Evoc): R30' Ranged spell inflicts 1d12 HP lightning/rd for conc up to 1 min [+Level inflicts +1d12 HP initial]</td>
+      <td>Witch Bolt (K1 Evoc): R30' Ranged spell inflicts 1d12 HP lightning/rd for concentration up to 1 min [+Level inflicts +1d12 HP initial]</td>
     </tr></table>
 </td>
   </tr><tr style="text-align:center">
