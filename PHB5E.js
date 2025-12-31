@@ -1594,77 +1594,78 @@ PHB5E.SPELLS_ADDED = {
     'Description=' +
       '"Next successful self weapon attack inflicts +3d8 HP radiant and blinds (save Constitution ends) for concentration up to 1 min"',
 
-  'Chromatic Orb':
+  'Chromatic Orb': // *
     'School=Evocation ' +
     'Level=S1,W1 ' +
     'AtHigherLevels="inflicts +1d8 HP" ' +
     'Description=' +
-      '"R90\' Ranged spell inflicts 3d8 HP choice of acid, cold, fire, lightning, poison, or thunder"',
-  'Circle Of Power':
+      '"R90\' Ranged spell inflicts 3d8 HP of a choice of acid, cold, fire, lightning, poison, or thunder"',
+  'Circle Of Power': // *
     'School=Abjuration ' +
     'Level=P5 ' +
     'Description=' +
-      '"Allies in a 30\' radius gain Adv on saves vs. magic, and saves yields no damage instead of half, for concentration up to 10 min"',
-  'Cloud Of Daggers':
+      '"Allies in a 30\' radius have advantage on saves vs. magic, and saves yields no damage instead of half, for concentration up to 10 min"',
+  'Cloud Of Daggers': // *
     'School=Conjuration ' +
     'Level=B2,K2,S2,W2 ' +
     'AtHigherLevels="inflicts +2d4 HP" ' +
     'Description="R60\' 5\' cube inflicts 4d4 HP slashing for concentration up to 1 min"',
-  'Compelled Duel':
+  'Compelled Duel': // *
     'School=Enchantment ' +
     'Level=P1 ' +
     'Description=' +
-      '"R30\' Target stays w/in 30\' of self (Wisdom neg) and suffers disadvantage on attacks on others for concentration up to 1 min; self attacking another or a successful attack on target by an ally ends"',
-  'Conjure Barrage':
+      '"R30\' Target stays within 30\' of self (save Wisdom neg) and suffers disadvantage on attacks on others for concentration up to 1 min; self attacking another or a successful attack on the target by an ally ends"',
+  'Conjure Barrage': // *
     'School=Conjuration ' +
     'Level=R3 ' +
-    'Description="60\' cone inflicts 3d8 HP weapon type (Dexterity half)"',
-  'Conjure Volley':
+    'Description=' +
+      '"60\' cone inflicts 3d8 HP weapon type damage (save Dexterity half)"',
+  'Conjure Volley': // *
     'School=Conjuration ' +
     'Level=R5 ' +
     'Description=' +
-      '"R150\' 40\' radius inflicts 8d8 HP weapon type (Dexterity half)"',
-  'Cordon Of Arrows':
+      '"R150\' 40\' radius inflicts 8d8 HP weapon type (save Dexterity half)"',
+  'Cordon Of Arrows': // *
     'School=Transmutation ' +
     'Level=R2 ' +
     'AtHigherLevels="affects +2 pieces" ' +
     'Description=' +
-      '"R5\' Four pieces of ammo attack non-designated creatures w/in 30\', inflicting 1d6 HP piercing each (Dexterity neg), for 8 hr"',
-  'Crown Of Madness':
+      '"R5\' Four arrows or crossbow bolts attack non-designated creatures within 30\', inflicting 1d6 HP piercing each (save Dexterity neg), for 8 hr"',
+  'Crown Of Madness': // *
     'School=Enchantment ' +
     'Level=B2,K2,S2,W2 ' +
     'Description=' +
-      '"R120\' Self may order target\'s attacks each rd (Wisdom ends) for concentration up to 1 min"',
-  "Crusader's Mantle":
+      '"R120\' Self can direct the target\'s attacks each rd (save Wisdom ends) for concentration up to 1 min"',
+  "Crusader's Mantle": // *
     'School=Evocation ' +
     'Level=P3 ' +
     'Description=' +
       '"Ally attacks in 30\' radius inflict +1d4 HP radiant for concentration up to 1 min"',
 
-  'Destructive Wave':
+  'Destructive Wave': // *
     'School=Evocation ' +
     'Level=P5 ' +
     'Description=' +
-      '"30\' radius inflicts 5d6 HP thunder, 5d6 HP choice of radiant or necrotic, and knocked prone (Constitution half HP only)"',
-  'Dissonant Whispers':
+      '"30\' radius inflicts 5d6 HP thunder, knocked prone, and a choice of 5d6 HP radiant or necrotic (save Constitution half HP only) on chosen targets"',
+  'Dissonant Whispers': // *
     'School=Enchantment ' +
     'Level=B1,"K1 [The Great Old One]" ' +
     'AtHigherLevels="inflicts +1d6 HP" ' +
     'Description=' +
-      '"R60\' Target suffers 3d6 HP psychic and uses Reaction to flee (Wisdom half HP only)"',
+      '"R60\' Inflicts 3d6 HP psychic and forces the target to use its reaction to flee (save Wisdom half HP only)"',
 
-  'Elemental Weapon':
+  'Elemental Weapon': // *
     'School=Transmutation ' +
     'Level=P3 ' +
-    'AtHigherLevels="gives +2/+3 attack and +2d4/+3d4 damage at level 5/7" ' +
+    'AtHigherLevels="gives +2 or +3 attack and +2d4 or +3d4 damage at level 5 or 7" ' +
     'Description=' +
-      '"Touched weapon gains +1 attack and +1d4 HP choice of acid, cold, fire, lightning, or thunder for concentration up to 1 hr"',
-  'Ensnaring Strike':
+      '"Touched weapon gains +1 attack and +1d4 HP damage of a choice of acid, cold, fire, lightning, or thunder for concentration up to 1 hr"',
+  'Ensnaring Strike': // *
     'School=Conjuration ' +
     'Level=R1 ' +
     'AtHigherLevels="inflicts +1d6 HP" ' +
     'Description=' +
-      '"Self next successful attack restrains foe and inflicts 1d6 HP/rd piercing (Strength ends) for concentration up to 1 min"',
+      '"Next successful self attack restrains the foe and inflicts 1d6 HP per rd piercing (save Strength ends) for concentration up to 1 min"',
 
   'Feign Death':
     'School=Necromancy ' +
