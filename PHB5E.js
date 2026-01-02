@@ -1667,48 +1667,48 @@ PHB5E.SPELLS_ADDED = {
     'Description=' +
       '"Next successful self attack restrains the foe and inflicts 1d6 HP per rd piercing (save Strength ends) for concentration up to 1 min"',
 
-  'Feign Death':
+  'Feign Death': // *
     'School=Necromancy ' +
     'Level=B3,C3,D3,W3 ' +
     'Ritual=true ' +
     'Description=' +
       '"Touched appears dead and gains resistance to non-psychic damage for 1 hr"',
-  'Friends':
+  'Friends': // *
     'School=Enchantment ' +
     'Level=B0,K0,S0,W0 ' +
     'Description=' +
-      '"Self gains on Adv on Charisma w/non-hostile target for concentration up to 1 min; target becomes hostile afterward"',
+      '"Self gains on advantage on Charisma checks with a non-hostile target for concentration up to 1 min; the target becomes hostile afterward"',
 
-  'Grasping Vine':
+  'Grasping Vine': // *
     'School=Conjuration ' +
     'Level=D4,R4 ' +
     'Description=' +
-      '"R30\' 30\' vine pulls target 20\' each rd (Dexterity neg) for concentration up to 1 min"',
+      '"R30\' 30\' vine pulls the target 20\' each rd (save Dexterity neg) for concentration up to 1 min"',
 
-  'Hail Of Thorns':
+  'Hail Of Thorns': // *
     'School=Conjuration ' +
     'Level=R1 ' +
     'AtHigherLevels="inflicts +1d10 HP (6d10 HP maximum)" ' +
     'Description=' +
-      '"Next successful self ranged attack inflicts 1d10 HP piercing in a 5\' radius (Dexterity half) for concentration up to 1 min"',
-  'Hex':
+      '"Next successful self ranged attack inflicts 1d10 HP piercing in a 5\' radius (save Dexterity half) for concentration within 1 min"',
+  'Hex': // *
     'School=Enchantment ' +
     'Level=K1 ' +
-    'AtHigherLevels="extends duration to 8/24 hr at level 3/5" ' +
+    'AtHigherLevels="extends the duration to 8 or 24 hr at level 3 or 5" ' +
     'Description=' +
-      '"R90\' Self attacks on target inflict +1d6 HP necrotic, and target has Disadv on chosen ability, for concentration up to 1 hr"',
-  'Hunger Of Hadar':
+      '"R90\' Self attacks on the target inflict +1d6 HP necrotic, and the target has disadvantage on a chosen ability, for concentration up to 1 hr"',
+  'Hunger Of Hadar': // *
     'School=Conjuration ' +
     'Level=K3 ' +
     'Description=' +
-      '"R150\' 20\' radius inflicts 2d6 HP cold at creatures\' start of turn and 2d6 HP acid at creatures\' end of turn for concentration up to 1 min"',
+      '"R150\' Creatures in a 20\' radius suffer 2d6 HP cold at the start of their turns (no save) and 2d6 HP acid at the end of their turns (save Dexterity neg) for concentration up to 1 min"',
 
   'Lightning Arrow':
     'School=Transmutation ' +
     'Level=R3 ' +
     'AtHigherLevels="inflicts +1d8 HP" ' +
     'Description=' +
-      '"Next self ranged weapon attack inflicts 8d6 HP lightning on target (miss half) and 2d8 HP lightning to others in a 10\' radius (Dexterity half)"',
+      '"Next self ranged weapon attack within concentration up to 1 min inflicts 8d6 HP lightning on the target (miss half) and 2d8 HP lightning to others in a 10\' radius (save Dexterity half)"',
 
   'Phantasmal Force':
     'School=Illusion ' +
