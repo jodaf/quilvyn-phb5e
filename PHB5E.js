@@ -1710,61 +1710,61 @@ PHB5E.SPELLS_ADDED = {
     'Description=' +
       '"Next self ranged weapon attack within concentration up to 1 min inflicts 8d6 HP lightning on the target (miss half) and 2d8 HP lightning to others in a 10\' radius (save Dexterity half)"',
 
-  'Phantasmal Force':
+  'Phantasmal Force': // *
     'School=Illusion ' +
     'Level=B2,"K2 [The Archfey]","K2 [The Great Old One]",S2,W2 ' +
     'Description=' +
-      '"R60\' Target perceives an illusion that may inflict 1d6 HP psychic/rd (Intelligence neg; Investigation ends) for concentration up to 1 min"',
-  'Power Word Heal':
+      '"R60\' Target perceives an illusion (save Intelligence neg; Investigation ends) that can inflict 1d6 HP psychic per rd for concentration up to 1 min"',
+  'Power Word Heal': // *
     'School=Evocation ' +
     'Level=B9 ' +
     'Description=' +
-      '"Touched regains all HP, recovers from charm, fright, paralysis, and stunning, and may use a Reaction to stand from prone"',
+      '"Touched regains all hit points, recovers from charm, fright, paralysis, and stunning, and can use a reaction to stand from prone"',
 
-  'Ray Of Sickness':
+  'Ray Of Sickness': // *
     'School=Necromancy ' +
     'Level=S1,W1 ' +
     'AtHigherLevels="inflicts +1d8 HP" ' +
     'Description=' +
-      '"R60\' Ranged spell inflicts 2d8 HP poison and poisoned 1 rd (Constitution HP only)",',
+      '"R60\' Ranged spell inflicts 2d8 HP poison and poisoned for 1 rd (save Constitution HP only)",',
 
-  'Searing Smite':
+  'Searing Smite': // *
     'School=Evocation ' +
     'Level=P1 ' +
     'AtHigherLevels="inflicts +1d6 HP initial" ' +
     'Description=' +
-      '"Next successful self weapon attack inflicts +1d6 HP fire, plus 1d6 HP fire/rd (Constitution ends) for concentration up to 1 min"',
-  'Staggering Smite':
+      '"Next successful self weapon attack inflicts +1d6 HP fire, plus 1d6 HP fire per rd (save Constitution ends) for concentration up to 1 min"',
+  'Staggering Smite': // *
     'School=Evocation ' +
     'Level=P4 ' +
     'Description=' +
-      '"Next successful self weapon attack w/in conc up to 1 min inflicts +4d6 HP psychic, Disadv on attacks and ability checks for 1 rd, and no Reaction for 1 rd"',
-  'Swift Quiver':
+      '"Next successful self weapon attack within concentration up to 1 min inflicts +4d6 HP psychic, disadvantage on attacks and ability checks for 1 rd, and loss of reactions for 1 rd (save Wisdom HP only)"',
+  'Swift Quiver': // *
     'School=Transmutation ' +
     'Level=R5 ' +
     'Description=' +
-      '"Touched quiver dispenses ammo endlessly and allows two ranged attacks in a bonus action for concentration up to 1 min"',
+      '"Touched quiver dispenses ammo endlessly and allows two ranged attacks as a bonus action for concentration up to 1 min"',
 
-  'Telepathy':
+  'Telepathy': // *
     'School=Evocation ' +
     'Level=W8 ' +
     'Description=' +
-      '"Self may communicate mentally with a willing target for 1 day"',
-  'Thorn Whip':
+      '"Self can communicate mentally with a willing target for 1 day"',
+  'Thorn Whip': // *
     'School=Transmutation ' +
     'Level=D0 ' +
     'Description=' +
-      '"R30\' Ranged spell inflicts %{(level+7)//6}d6 HP and pulls 10\'"',
-  'Thunderous Smite':
+      '"R30\' Ranged spell inflicts %{(level+7)//6}d6 HP and pulls a Large or smaller target 10\'"',
+  'Thunderous Smite': // *
     'School=Evocation ' +
     'Level=P1 ' +
     'Description=' +
-      '"Next successful self weapon attack inflicts +2d6 HP thunder and 10\' push (Strength HP only) for concentration up to 1 min"',
-  'Tsunami':
+      '"Next successful self weapon attack inflicts +2d6 HP thunder and a 10\' push (save Strength HP only) for concentration up to 1 min"',
+  'Tsunami': // *
     'School=Conjuration ' +
     'Level=D8 ' +
     'Description=' +
-      '"RSight 300\'x300\'x50\' wall of water inflicts 6d10 HP bludgeoning (Strength half); moves away 50\'/rd, reducing height by 50\' and damage by 1d10 HP each rd, for concentration up to 6 rd"',
+      '"300\'x300\'x50\' wall of water within sight inflicts 6d10 HP bludgeoning (save Strength half); it moves away 50\' per rd, reducing its height by 50\' and its damage by 1d10 HP each rd, for concentration up to 6 rd"',
 
   'Witch Bolt':
     'School=Evocation ' +
