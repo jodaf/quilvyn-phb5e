@@ -88,7 +88,7 @@ var attributes = {
       <tr style="text-align:center">
         <td><b>Feats</b>: Alert; Great Weapon Master; Polearm Master; Savage Attacker; War Caster</td>
         <td><b>Human Features</b>: Human Ability Adjustment; Language (Common; Choose 1 from any)</td>
-        <td><b>Wizard Features</b>: Abjuration Savant; Alter Memories; Arcane Recovery; Arcane Tradition; Arcane Ward; Benign Transposition; Command Undead; Conjuration Savant; Divination Savant; Durable Summons; Empowered Evocation; Enchantment Savant; Evocation Savant; Expert Divination; Focused Conjuration; Greater Portent; Grim Harvest; Hypnotic Gaze; Illusion Savant; Illusory Reality; Illusory Self; Improved Abjuration; Improved Minor Illusion; Instinctive Charm; Inured To Undeath; Malleable Illusions; Master Transmuter; Minor Alchemy; Minor Conjuration; Necromancy Savant; Overchannel; Portent; Potent Cantrip; Projected Ward; Ritual Casting; Save Proficiency (Intelligence; Wisdom); School Of Abjuration; School Of Conjuration; School Of Divination; School Of Enchantment; School Of Evocation; School Of Illusion; School Of Necromancy; School Of Transmutation; Sculpt Spells; Shapechanger; Signature Spells; Skill Proficiency (Choose 2 from Arcana, History, Insight, Investigation, Medicine, Religion); Spell Mastery; Spell Resistance; Spellcasting; Split Enchantment; The Third Eye; Transmutation Savant; Transmuter's Stone; Undead Thralls; Weapon Proficiency (Dagger; Dart; Light Crossbow; Quarterstaff; Sling)</td>
+        <td><b>Wizard Features</b>: Abjuration Savant; Alter Memories; Arcane Recovery; Arcane Tradition; Arcane Ward; Benign Transposition; Command Undead; Conjuration Savant; Divination Savant; Durable Summons; Empowered Evocation; Enchantment Savant; Evocation Savant; Expert Divination; Focused Conjuration; Greater Portent; Grim Harvest; Hypnotic Gaze; Illusion Savant; Illusory Reality; Illusory Self; Improved Abjuration; Improved Minor Illusion; Instinctive Charm; Inured To Undeath; Malleable Illusions; Master Transmuter; Minor Alchemy; Minor Conjuration; Necromancy Savant; Overchannel; Portent; Potent Cantrip; Projected Ward; Save Proficiency (Intelligence; Wisdom); School Of Abjuration; School Of Conjuration; School Of Divination; School Of Enchantment; School Of Evocation; School Of Illusion; School Of Necromancy; School Of Transmutation; Sculpt Spells; Shapechanger; Signature Spells; Skill Proficiency (Choose 2 from Arcana, History, Insight, Investigation, Medicine, Religion); Spell Mastery; Spell Resistance; Spellcasting; Split Enchantment; The Third Eye; Transmutation Savant; Transmuter's Stone; Undead Thralls; Weapon Proficiency (Dagger; Dart; Light Crossbow; Quarterstaff; Sling)</td>
         <td><b>Acolyte Features</b>: Language (Choose 2 from any); Shelter Of The Faithful; Skill Proficiency (Insight; Religion)</td>
       </tr></table>
 </td>
@@ -229,61 +229,61 @@ var attributes = {
     </tr><tr style="text-align:left">
       <td>Banishment (W4 Abju): R60' Banishes target to its home plane or a demiplane (save Charisma neg) for concentration up to 1 min [+Level affects +1 target]</td>
     </tr><tr style="text-align:left">
-      <td>Charm Person (W1 Ench): R30' Target regards you as a friend (Wisdom neg) for 1 hr or until harmed [+Level affects +1 target]</td>
+      <td>Charm Person (W1 Ench): R30' Target regards self as a friend (save Wisdom neg) for 1 hr or until harmed [+Level affects +1 target]</td>
     </tr><tr style="text-align:left">
-      <td>Chill Touch (W0 Necr): R120' Ranged spell inflicts 4d8 HP necrotic and target cannot heal for 1 rd, undead also suffer Disadv on self attack for 1 rd</td>
+      <td>Chill Touch (W0 Necr): R120' Ranged spell inflicts 4d8 HP necrotic and target cannot regain hit points for 1 rd; undead also suffer disadvantage vs. self attack for 1 rd</td>
     </tr><tr style="text-align:left">
-      <td>Chromatic Orb (W1 Evoc): R90' Ranged spell inflicts 3d8 HP choice of acid, cold, fire, lightning, poison, or thunder [+Level inflicts +1d8 HP]</td>
+      <td>Chromatic Orb (W1 Evoc): R90' Ranged spell inflicts 3d8 HP of a choice of acid, cold, fire, lightning, poison, or thunder [+Level inflicts +1d8 HP]</td>
     </tr><tr style="text-align:left">
-      <td>Cone Of Cold (W5 Evoc): 60' cone inflicts 8d8 HP cold (Constitution half) [+Level inflicts +1d8 HP]</td>
+      <td>Cone Of Cold (W5 Evoc): 60' cone inflicts 8d8 HP cold (save Constitution half) [+Level inflicts +1d8 HP]</td>
     </tr><tr style="text-align:left">
-      <td>Dimension Door (W4 Conj): Self teleports up to 500'; may bring along 1 willing creature</td>
+      <td>Dimension Door (W4 Conj): Teleports self and 1 adjacent willing creature up to 500'</td>
     </tr><tr style="text-align:left">
-      <td>Disintegrate (W6 Tran): R60' Target suffers 10d6+40 HP force and becomes dust if reduced to 0 HP (Dexterity neg); disintegrates large or smaller objects and magical forces [+Level inflicts +3d6 HP]</td>
+      <td>Disintegrate (W6 Tran): R60' Inflicts 10d6+40 HP force and turns the target to dust if reduced to 0 HP (save Dexterity neg), or disintegrates a Large or smaller object or magical force [+Level inflicts +3d6 HP]</td>
     </tr><tr style="text-align:left">
-      <td>Enlarge/Reduce (W2 Tran): R30' Target becomes dbl size (Adv on Strength, +1d4 HP weapon damage) or half size (Disadv on Strength, -1d4 HP weapon damage) (Constitution neg) for concentration up to 1 min</td>
+      <td>Enlarge/Reduce (W2 Tran): R30' Target increases a size category, gaining advantage on Strength checks and  +1d4 HP weapon damage, or decreases a size category, suffering disadvantage on Strength checks and -1d4 HP weapon damage (save Constitution neg), for concentration up to 1 min; can instead target an unattended object</td>
     </tr><tr style="text-align:left">
-      <td>Friends (W0 Ench): Self gains on Adv on Charisma w/non-hostile target for concentration up to 1 min; target becomes hostile afterward</td>
+      <td>Friends (W0 Ench): Self gains on advantage on Charisma checks with a non-hostile target for concentration up to 1 min; the target becomes hostile afterward</td>
     </tr><tr style="text-align:left">
-      <td>Gaseous Form (W3 Tran): Touched creature becomes gaseous for concentration up to 1 hr</td>
+      <td>Gaseous Form (W3 Tran): Touched creature becomes gaseous, gaining a 10' fly Speed and advantage on Strength, Dexterity, and Constitution saves, for concentration up to 1 hr</td>
     </tr><tr style="text-align:left">
-      <td>Geas (W5 Ench): R60' Target carries out self instructions (Wisdom neg) for 30 day [+Level extends duration to 1 yr/permanent at level 7/9]</td>
+      <td>Geas (W5 Ench): R60' Target obeys self instructions (save Wisdom neg) for 30 days [+Level extends the duration to 1 yr or permanently at level 7 or 9]</td>
     </tr><tr style="text-align:left">
-      <td>Grease (W1 Conj): R60' 10' sq becomes difficult terrain and causes creatures to fall prone (Dexterity neg) for 1 min</td>
+      <td>Grease (W1 Conj): R60' 10' sq becomes difficult terrain and causes creatures to fall prone (save Dexterity neg) for 1 min</td>
     </tr><tr style="text-align:left">
       <td>Invisibility (W2 Illu): Touched becomes invisible for concentration up to 1 hr; target attacking or casting ends [+Level affects +1 target]</td>
     </tr><tr style="text-align:left">
-      <td>Major Image (W3 Illu): R120' Creates a 20' cube sight, sound, and touch illusion (Investigation detects) for concentration up to 10 min [+Level extends duration to permanent at level 6]</td>
+      <td>Major Image (W3 Illu): R120' Creates a 20' cube sight, sound, and touch illusion (Investigation detects) for concentration up to 10 min [+Level extends the duration to permanent at level 6]</td>
     </tr><tr style="text-align:left">
-      <td>Maze (W8 Conj): R60' Sends target to a labyrinthine demiplane (DC 20 Intelligence escapes) for concentration up to 10 min</td>
+      <td>Maze (W8 Conj): R60' Sends the target to a labyrinthine demiplane (DC 20 Intelligence escapes; minotaurs and goristro demons automatically succeed) for concentration up to 10 min</td>
     </tr><tr style="text-align:left">
-      <td>Mending (W0 Tran): Touch repairs a small break or tear</td>
+      <td>Mending (W0 Tran): Touch repairs a break or tear up to 1 ft</td>
     </tr><tr style="text-align:left">
       <td>Minor Illusion (W0 [Improved Minor Illusion] Illu): R30' Creates the sound of 1 creature or a 5' cube image (Investigation detects) for 1 min</td>
     </tr><tr style="text-align:left">
-      <td>Mirror Image (W2 Illu): 3 duplicates (AC 10; damage destroys) misdirect attacks on self for 1 min</td>
+      <td>Mirror Image (W2 Illu): 3 duplicates (AC 10; damage destroys) allow misdirecting attacks on self with a 6, 8, or 11 on a d20 with 3, 2, or 1 remaining duplicate for 1 min</td>
     </tr><tr style="text-align:left">
-      <td>Mordenkainen's Magnificent Mansion (W7 Conj): R300' Self and designated creatures may enter an extradimensional dwelling for 1 day</td>
+      <td>Mordenkainen's Magnificent Mansion (W7 Conj): R300' Self and designated creatures can enter an extradimensional dwelling containing provisions for 100 people for 1 day</td>
     </tr><tr style="text-align:left">
-      <td>Otiluke's Freezing Sphere (W6 Evoc): R300' 60' radius inflicts 10d6 HP cold (Constitution half) and freezes water for 1 min [+Level inflicts +1d6 HP]</td>
+      <td>Otiluke's Freezing Sphere (W6 Evoc): R300' 60' radius inflicts 10d6 HP cold (save Constitution half) and freezes water for 1 min [+Level inflicts +1d6 HP]</td>
     </tr><tr style="text-align:left">
-      <td>Phantom Steed (W3 Illu): R30' Self or target may ride a conjured horse 100'/rd (13 MPH) for 1 hr or until damaged [R]</td>
+      <td>Phantom Steed (W3 Illu): R30' Conjures a mount that can be ridden by a designated creature 100' per rd (13 MPH) for 1 hr or until damaged [R]</td>
     </tr><tr style="text-align:left">
-      <td>Poison Spray (W0 Conj): R10' Target suffers 4d12 HP poison (Constitution neg)</td>
+      <td>Poison Spray (W0 Conj): R10' Inflicts 4d12 HP poison (save Constitution neg)</td>
     </tr><tr style="text-align:left">
-      <td>Polymorph (W4 [Shapechanger] Tran): R60' Transforms target creature (Wisdom neg; shapechanger immune) for concentration up to 1 hr or until reduced to 0 HP</td>
+      <td>Polymorph (W4 [Shapechanger] Tran): R60' Transforms target creature (save Wisdom neg; shapechangers automatically succeed) for concentration up to 1 hr or until reduced to 0 HP</td>
     </tr><tr style="text-align:left">
-      <td>Prismatic Wall (W9 Abju): R60' 90'x30' area blinds w/in 20' for 1 min (Constitution neg); passers suffer 10d6 HP each fire, acid, lightning, poison, and cold (Dexterity half), restraint (Dexterity neg) and petrification after 3 failed Constitution saves (3 successes neg), and blindness (Dexterity neg) and banishment to another plane (Wisdom neg)</td>
+      <td>Prismatic Wall (W9 Abju): R60' 90'x30' area blinds within 20' for 1 min (save Constitution neg); creatures passing through suffer 10d6 HP each fire, acid, lightning, poison, and cold (save Dexterity half), restraint (save Dexterity neg) and petrification after 3 failed Constitution saves (3 successes neg), and blindness (save Dexterity neg) and banishment to another plane (save Wisdom neg)</td>
     </tr><tr style="text-align:left">
-      <td>Raise Dead (W5 [Master Transmuter] Necr): Restores life to and removes diseases and poisons from a willing touched 10-day-old corpse</td>
+      <td>Raise Dead (W5 [Master Transmuter] Necr): Restores life with 1 hit point to and removes nonmagical diseases and poisons from a willing touched 10-day-old corpse; target suffers -4 attacks, saves, and ability checks, reduced by 1 for each long rest</td>
     </tr><tr style="text-align:left">
-      <td>Ray Of Sickness (W1 Necr): R60' Ranged spell inflicts 2d8 HP poison and poisoned 1 rd (Constitution HP only) [+Level inflicts +1d8 HP]</td>
+      <td>Ray Of Sickness (W1 Necr): R60' Ranged spell inflicts 2d8 HP poison and poisoned for 1 rd (save Constitution HP only) [+Level inflicts +1d8 HP]</td>
     </tr><tr style="text-align:left">
-      <td>Seeming (W5 Illu): R30' Changes appearance of targets (Charisma neg; Investigation detects) for 8 hr</td>
+      <td>Seeming (W5 Illu): R30' Changes the appearance of targets (save Charisma neg; Investigation detects) for 8 hr</td>
     </tr><tr style="text-align:left">
-      <td>Shocking Grasp (W0 Evoc): Touched suffers 4d8 HP lightning and cannot use Reaction until next turn</td>
+      <td>Shocking Grasp (W0 Evoc): Touched suffers 4d8 HP lightning and loss of reactions until its next turn</td>
     </tr><tr style="text-align:left">
-      <td>Simulacrum (W7 Illu): Creates from snow an obedient, half HP duplicate creature</td>
+      <td>Simulacrum (W7 Illu): Uses snow to create an obedient copy of a target creature with half its hit points</td>
     </tr></table>
 </td>
   </tr><tr style="text-align:center">
@@ -353,8 +353,6 @@ var attributes = {
     </tr><tr style="text-align:center">
       <td>Projected Ward: R30' Can use Arcane Ward to absorb damage to others</td>
     </tr><tr style="text-align:center">
-      <td>Ritual Casting: Can cast spells marked with [R] using a ritual</td>
-    </tr><tr style="text-align:center">
       <td>Sculpt Spells: Can give spell level + 1 creatures a successful save and no damage instead of half on a self spell</td>
     </tr><tr style="text-align:center">
       <td>Shapechanger: Knows the <i>Polymorph</i> spell; can transform self into a CR 1 creature once per short rest</td>
@@ -362,6 +360,8 @@ var attributes = {
       <td>Signature Spells: Can cast 2 chosen W3 spells without spending a spell slot once per short rest</td>
     </tr><tr style="text-align:center">
       <td>Spell Mastery: Can cast a chosen W1 spell and a chosen W2 spell at will and spend 8 hr to change the choices</td>
+    </tr><tr style="text-align:center">
+      <td>Spellcasting: Can cast spells from the wizard spell list and cast spells marked with [R] using a ritual</td>
     </tr><tr style="text-align:center">
       <td>Split Enchantment: Can add a second target to an enchantment spell</td>
     </tr><tr style="text-align:center">

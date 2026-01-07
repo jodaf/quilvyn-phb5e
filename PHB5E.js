@@ -1944,6 +1944,8 @@ PHB5E.classRulesExtra = function(rules, name) {
     QuilvynRules.spellSlotRules(rules, 'casterLevels.Eldritch Knight', slots);
     rules.defineRule
       ('casterLevels.W', 'casterLevels.Eldritch Knight', '^=', null);
+    rules.defineRule
+      ('magicNotes.spellcasting', 'features.Eldritch Knight', '=', '"wizard"');
 
   } else if(name == 'Monk') {
 
@@ -1971,6 +1973,8 @@ PHB5E.classRulesExtra = function(rules, name) {
     QuilvynRules.spellSlotRules(rules, 'casterLevels.Arcane Trickster', slots);
     rules.defineRule
       ('casterLevels.W', 'casterLevels.Arcane Trickster', '^=', null);
+    rules.defineRule
+      ('magicNotes.spellcasting', 'features.Arcane Trickster', '=', '"wizard"');
 
   } else if(name == 'Wizard') {
 

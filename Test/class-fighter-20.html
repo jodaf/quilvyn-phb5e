@@ -241,7 +241,7 @@ var attributes = {
       </tr><tr style="text-align:center">
         <td>Combat Superiority: Can use a d12 Superiority Die to perform one of 9 chosen Maneuvers 6 times per short rest</td>
       </tr><tr style="text-align:center">
-        <td>Commander's Strike: Can use a Superiority Die and forego an attack to gain a bonus action directing an ally to attack; the ally uses a Reaction to attack and adds the Superiority Die to its damage</td>
+        <td>Commander's Strike: Can use a Superiority Die and forego an attack to gain a bonus action directing an ally to attack; the ally uses a reaction to attack and adds the Superiority Die to its damage</td>
       </tr><tr style="text-align:center">
         <td>Disarming Attack: Can add a Superiority Die to damage and cause the target to drop an item (DC 16 Strength neg)</td>
       </tr><tr style="text-align:center">
@@ -271,11 +271,11 @@ var attributes = {
       </tr><tr style="text-align:center">
         <td>Lunging Attack: Can add a Superiority Die to damage and gain +5' melee range</td>
       </tr><tr style="text-align:center">
-        <td>Maneuvering Attack: Can add a Superiority Die to damage and allow an ally to use a Reaction to move half speed with no opportunity attack from the target</td>
+        <td>Maneuvering Attack: Can add a Superiority Die to damage and allow an ally to use a reaction to move half speed with no opportunity attack from the target</td>
       </tr><tr style="text-align:center">
         <td>Menacing Attack: Can add a Superiority Die to damage and inflict frightened (DC 16 Wisdom neg) until the end of the next turn</td>
       </tr><tr style="text-align:center">
-        <td>Parry: Can use a Reaction to subtract a Superiority Die + 1 from a foe's melee damage to self</td>
+        <td>Parry: Can use a reaction to subtract a Superiority Die + 1 from a foe's melee damage to self</td>
       </tr><tr style="text-align:center">
         <td>Polearm Master: Can use a bonus action to attack with the butt of a polearm, inflicting 1d4 HP bludgeoning, and a foe entering polearm reach provokes an opportunity attack</td>
       </tr><tr style="text-align:center">
@@ -287,7 +287,7 @@ var attributes = {
       </tr><tr style="text-align:center">
         <td>Relentless: Has a minimum of 1 Superiority Die available after initiative</td>
       </tr><tr style="text-align:center">
-        <td>Riposte: After a foe melee miss, can spend a Superiority Die and use a Reaction to attack and add the Superiority Die to damage</td>
+        <td>Riposte: After a foe melee miss, can spend a Superiority Die and use a reaction to attack and add the Superiority Die to damage</td>
       </tr><tr style="text-align:center">
         <td>Savage Attacker: Can take the best of two melee damage rolls once per rd</td>
       </tr><tr style="text-align:center">
@@ -339,35 +339,41 @@ var attributes = {
     <tr style="text-align:left">
       <td>Blur (W2 Illu): Foes suffer disadvantage when using sight to attack self for concentration up to 1 min</td>
     </tr><tr style="text-align:left">
-      <td>Chill Touch (W0 Necr): R120' Ranged spell inflicts 4d8 HP necrotic and target cannot heal for 1 rd, undead also suffer Disadv on self attack for 1 rd</td>
+      <td>Chill Touch (W0 Necr): R120' Ranged spell inflicts 4d8 HP necrotic and target cannot regain hit points for 1 rd; undead also suffer disadvantage vs. self attack for 1 rd</td>
     </tr><tr style="text-align:left">
-      <td>Disguise Self (W1 Illu): Self body and clothing appear different (Investigation detects) for 1 hr</td>
+      <td>Disguise Self (W1 Illu): Changes the appearance of self body and clothing for 1 hr; physical investigates detects the illusion</td>
     </tr><tr style="text-align:left">
-      <td>Expeditious Retreat (W1 Tran): Self gains a bonus Dash 1/rd for concentration up to 10 min</td>
+      <td>Expeditious Retreat (W1 Tran): Self gains a bonus Dash once per rd for concentration up to 10 min</td>
     </tr><tr style="text-align:left">
       <td>Leomund's Tiny Hut (W3 Evoc): Creates a 10' radius dome, impassable by objects and spells, for 8 hr [R]</td>
     </tr><tr style="text-align:left">
-      <td>Levitate (W2 Tran): R60' Target floats (Constitution neg) for concentration up to 10 min</td>
+      <td>Levitate (W2 Tran): R60' Target floats (save Constitution neg) and can be moved up or down 20' each rd for concentration up to 10 min</td>
     </tr><tr style="text-align:left">
-      <td>Magic Circle (W3 Abju): R10' 10' radius prevents choice of entry or exit (Charisma allows magical transit), inflicts Disadv on attacks, and negates charm, fright, and possession by choice of celestials, fey, fiends, or undead for 1 hr [+Level extends duration +1 hr]</td>
+      <td>Magic Circle (W3 Abju): R10' 10' radius prevents a choice of physical entry or exit (save Charisma allows magical transit), inflicts disadvantage on attacks, and negates charm, fright, and possession by one or more choices of celestials, fey, fiends, or undead for 1 hr [+Level extends duration +1 hr]</td>
     </tr><tr style="text-align:left">
-      <td>Message (W0 Tran): R120' Self and target may hold a whispered conversation for 1 rd</td>
+      <td>Message (W0 Tran): R120' Self and target can hold a whispered conversation for 1 rd</td>
     </tr><tr style="text-align:left">
-      <td>Polymorph (W4 Tran): R60' Transforms target creature (Wisdom neg; shapechanger immune) for concentration up to 1 hr or until reduced to 0 HP</td>
+      <td>Polymorph (W4 Tran): R60' Transforms target creature (save Wisdom neg; shapechangers automatically succeed) for concentration up to 1 hr or until reduced to 0 HP</td>
     </tr><tr style="text-align:left">
-      <td>See Invisibility (W2 Divi): Self sees invisible and ethereal items for 1 hr</td>
+      <td>See Invisibility (W2 Divi): Reveals invisible and ethereal creatures and objects for 1 hr</td>
     </tr><tr style="text-align:left">
-      <td>Shocking Grasp (W0 Evoc): Touched suffers 4d8 HP lightning and cannot use Reaction until next turn</td>
+      <td>Shocking Grasp (W0 Evoc): Touched suffers 4d8 HP lightning and loss of reactions until its next turn</td>
     </tr><tr style="text-align:left">
-      <td>Tasha's Hideous Laughter (W1 Ench): R30' Target ROFL (Wisdom ends) for concentration up to 1 min</td>
+      <td>Tasha's Hideous Laughter (W1 Ench): R30' Inflicts ROFL (save Wisdom ends) for concentration up to 1 min</td>
     </tr><tr style="text-align:left">
       <td>Tongues (W3 Divi): Touched understands any language and is universally understood for 1 hr</td>
     </tr><tr style="text-align:left">
-      <td>Unseen Servant (W1 Conj): R60' Invisible force (AC 10; 1 HP; Strength 2) moves 15'/rd and performs simple tasks for 1 hr or until damaged [R]</td>
+      <td>Unseen Servant (W1 Conj): R60' Invisible force with AC 10, 1 hit point, and Strength 2 can move 15' per rd and performs simple tasks for 1 hr or until damaged [R]</td>
     </tr></table>
 </td>
   </tr><tr style="text-align:center">
-    <td><b>Magic Notes</b>: Arcane Charge: Can teleport 30' during Action Surge</td>
+    <td><b>Magic Notes</b>:     <table id="MagicNotes" style="width:100%">
+    <tr style="text-align:center">
+      <td>Arcane Charge: Can teleport 30' during Action Surge</td>
+    </tr><tr style="text-align:center">
+      <td>Spellcasting: Can cast spells from the wizard spell list</td>
+    </tr></table>
+</td>
   </tr></table>
 </td>
 </tr><tr style="text-align:center">

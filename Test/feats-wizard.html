@@ -80,7 +80,7 @@ var attributes = {
       <tr style="text-align:center">
         <td><b>Feats</b>: Elemental Adept (Acid); Elemental Adept (Cold); Elemental Adept (Fire); Elemental Adept (Lightning); Elemental Adept (Thunder); Ritual Caster; Spell Sniper; War Caster</td>
         <td><b>Human Features</b>: Human Ability Adjustment; Language (Common; Choose 1 from any)</td>
-        <td><b>Wizard Features</b>: Arcane Recovery; Arcane Tradition; Divination Savant; Portent; Ritual Casting; Save Proficiency (Intelligence; Wisdom); School Of Divination; Skill Proficiency (Choose 2 from Arcana, History, Insight, Investigation, Medicine, Religion); Spellcasting; Weapon Proficiency (Dagger; Dart; Light Crossbow; Quarterstaff; Sling)</td>
+        <td><b>Wizard Features</b>: Arcane Recovery; Arcane Tradition; Divination Savant; Portent; Save Proficiency (Intelligence; Wisdom); School Of Divination; Skill Proficiency (Choose 2 from Arcana, History, Insight, Investigation, Medicine, Religion); Spellcasting; Weapon Proficiency (Dagger; Dart; Light Crossbow; Quarterstaff; Sling)</td>
         <td><b>Soldier Features</b>: Military Rank; Skill Proficiency (Athletics; Intimidation); Tool Proficiency (Vehicles (Land); Choose 1 from any Gaming)</td>
       </tr></table>
 </td>
@@ -207,29 +207,29 @@ var attributes = {
     <tr style="text-align:left">
       <td>Arcane Lock (W2 Abju): Touched barrier opens only for designated creatures or a specified password; <i>Knock</i> suppresses the effects for 10 min</td>
     </tr><tr style="text-align:left">
-      <td>Chill Touch (W0 Necr): R120' Ranged spell inflicts 2d8 HP necrotic and target cannot heal for 1 rd, undead also suffer Disadv on self attack for 1 rd</td>
+      <td>Chill Touch (W0 Necr): R120' Ranged spell inflicts 2d8 HP necrotic and target cannot regain hit points for 1 rd; undead also suffer disadvantage vs. self attack for 1 rd</td>
     </tr><tr style="text-align:left">
-      <td>Disguise Self (W1 Illu): Self body and clothing appear different (Investigation detects) for 1 hr</td>
+      <td>Disguise Self (W1 Illu): Changes the appearance of self body and clothing for 1 hr; physical investigates detects the illusion</td>
     </tr><tr style="text-align:left">
-      <td>Glyph Of Warding (W3 Abju): 20' radius inflicts 5d8 HP choice of acid, cold, fire, lightning, or thunder (Dexterity half) or spell up to level 3 when triggered [+Level inflicts +1d8 HP or triggers +1 spell level]</td>
+      <td>Glyph Of Warding (W3 Abju): 20' radius inflicts 5d8 HP of a choice of acid, cold, fire, lightning, or thunder (save Dexterity half) or a spell of up to level 3 when triggered [+Level inflicts +1d8 HP or increases the level of the triggered spell by 1]</td>
     </tr><tr style="text-align:left">
-      <td>Light (W0 Evoc): Touched object lights a 20' radius (Dexterity neg) for 1 hr</td>
+      <td>Light (W0 Evoc): Touched object lights a 20' radius (save Dexterity neg) for 1 hr</td>
     </tr><tr style="text-align:left">
-      <td>Message (W0 Tran): R120' Self and target may hold a whispered conversation for 1 rd</td>
+      <td>Message (W0 Tran): R120' Self and target can hold a whispered conversation for 1 rd</td>
     </tr><tr style="text-align:left">
-      <td>Prestidigitation (W0 Tran): R10' Self may perform minor magic effects for 1 hr</td>
+      <td>Prestidigitation (W0 Tran): R10' Creates minor magic effects for 1 hr</td>
     </tr><tr style="text-align:left">
-      <td>Ray Of Sickness (W1 Necr): R60' Ranged spell inflicts 2d8 HP poison and poisoned 1 rd (Constitution HP only) [+Level inflicts +1d8 HP]</td>
+      <td>Ray Of Sickness (W1 Necr): R60' Ranged spell inflicts 2d8 HP poison and poisoned for 1 rd (save Constitution HP only) [+Level inflicts +1d8 HP]</td>
     </tr><tr style="text-align:left">
-      <td>Shatter (W2 Evoc): R60' 10' radius inflicts 3d8 HP thunder (Constitution half) [+Level inflicts +1d8 HP]</td>
+      <td>Shatter (W2 Evoc): R60' 10' radius inflicts 3d8 HP thunder (save Constitution half; inorganic creatures have disadvantage) [+Level inflicts +1d8 HP]</td>
     </tr><tr style="text-align:left">
-      <td>Thunderwave (W1 Evoc): 15' cube inflicts 2d8 HP thunder and pushes 10' (Constitution half HP only) [+Level inflicts +1d8 HP]</td>
+      <td>Thunderwave (W1 Evoc): 15' cube inflicts 2d8 HP thunder and pushes 10' (save Constitution half HP only) [+Level inflicts +1d8 HP]</td>
     </tr><tr style="text-align:left">
       <td>Tongues (W3 Divi): Touched understands any language and is universally understood for 1 hr</td>
     </tr><tr style="text-align:left">
-      <td>Unseen Servant (W1 Conj): R60' Invisible force (AC 10; 1 HP; Strength 2) moves 15'/rd and performs simple tasks for 1 hr or until damaged [R]</td>
+      <td>Unseen Servant (W1 Conj): R60' Invisible force with AC 10, 1 hit point, and Strength 2 can move 15' per rd and performs simple tasks for 1 hr or until damaged [R]</td>
     </tr><tr style="text-align:left">
-      <td>Web (W2 Conj): R60' 20' cube restrains creatures (Dexterity neg, Strength frees) for concentration up to 1 hr; burning inflicts 2d4 HP fire</td>
+      <td>Web (W2 Conj): R60' 20' cube restrains creatures (save Dexterity neg and Strength frees) for concentration up to 1 hr; burning the web inflicts 2d4 HP fire</td>
     </tr></table>
 </td>
   </tr><tr style="text-align:center">
@@ -253,9 +253,9 @@ var attributes = {
     </tr><tr style="text-align:center">
       <td>Ritual Caster: Can cast spells of up to level 3 from a ritual book</td>
     </tr><tr style="text-align:center">
-      <td>Ritual Casting: Can cast spells marked with [R] using a ritual</td>
-    </tr><tr style="text-align:center">
       <td>Spell Sniper: Can cast attack spells at double normal range/Spells ignore 3/4 cover/Knows an additional attack cantrip</td>
+    </tr><tr style="text-align:center">
+      <td>Spellcasting: Can cast spells from the wizard spell list and cast spells marked with [R] using a ritual</td>
     </tr><tr style="text-align:center">
       <td>War Caster: Has advantage on concentration saves to maintain a spell/Can cast when holding a shield or a weapon/Can use a reaction to cast as an opportunity attack in response to movement</td>
     </tr></table>
