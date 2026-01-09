@@ -725,7 +725,7 @@ PHB5E.FEATURES_ADDED = {
     'Section=magic Note="+%{wisdomModifier} Cleric cantrip damage"',
   'Read Thoughts':
     'Section=magic ' +
-    'Note="R60\' Can use Channel Divinity to read the target\'s thoughts (Wisdom negates and blocks additional uses until a long rest) for 1 min; success allows casting <i>Suggestion</i> on the target with no save" ' +
+    'Note="R60\' Can use Channel Divinity to read the target\'s thoughts (save Wisdom negates and blocks additional uses until a long rest) for 1 min; success allows casting <i>Suggestion</i> on the target with no save" ' +
     'Spells=Suggestion',
   'Visions Of The Past':
     'Section=magic ' +
@@ -749,7 +749,7 @@ PHB5E.FEATURES_ADDED = {
   // Potent Spellcasting as above
   'Radiance Of The Dawn':
     'Section=magic ' +
-    'Note="R30\' Can use Channel Divinity to dispel magical darkness and to inflict 2d10+%{levels.Cleric} HP radiant (Constitution half) on foes"',
+    'Note="R30\' Can use Channel Divinity to dispel magical darkness and to inflict 2d10+%{levels.Cleric} HP radiant (save Constitution half) on foes"',
   'Warding Flare':
     'Section=magic ' +
     'Note="R30\' Can use a reaction to inflict disadvantage on a foe attack %{wisdomModifier>1?wisdomModifier+\' times\':\'once\'} per long rest"',
@@ -763,7 +763,7 @@ PHB5E.FEATURES_ADDED = {
     'Section=combat Note="Armor Proficiency (Heavy)"',
   'Charm Animals And Plants':
     'Section=magic ' +
-    'Note="R30\' Can use Channel Divinity to charm beasts and plants (Wisdom negates) for 1 min"',
+    'Note="R30\' Can use Channel Divinity to charm beasts and plants (save Wisdom negates) for 1 min"',
   // Divine Strike as SRD35
   'Master Of Nature':
     'Section=magic Note="Can command charmed animals and plants"',
@@ -795,7 +795,7 @@ PHB5E.FEATURES_ADDED = {
     'Note="Can cause lightning damage to also push away Large and smaller creatures 10\'"',
   'Wrath Of The Storm':
     'Section=combat ' +
-    'Note="Can use a reaction to inflict 2d8 HP lightning or thunder (Dexterity half) on a successful attacker %{wisdomModifier>1?wisdomModifier+\' times\':\'once\'} per long rest"',
+    'Note="Can use a reaction to inflict 2d8 HP lightning or thunder (save Dexterity half) on a successful attacker %{wisdomModifier>1?wisdomModifier+\' times\':\'once\'} per long rest"',
   // Trickery Domain
   'Blessing Of The Trickster':
     'Section=magic ' +
