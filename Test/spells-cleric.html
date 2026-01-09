@@ -258,11 +258,11 @@ var attributes = {
     </tr><tr style="text-align:left">
       <td>Bane (C1 Ench): R30' 3 targets suffer -1d4 on attacks and saving throws (save Charisma neg) for concentration up to 1 min [+Level affects +1 target]</td>
     </tr><tr style="text-align:left">
-      <td>Banishment (C4 Abju): R60' Banishes target to its home plane or a demiplane (save Charisma neg) for concentration up to 1 min [+Level affects +1 target]</td>
+      <td>Banishment (C4 Abju): R60' Banishes the target to its home plane or a demiplane (save Charisma neg) for concentration up to 1 min [+Level affects +1 target]</td>
     </tr><tr style="text-align:left">
       <td>Beacon Of Hope (C3 Abju): R30' Targets gain advantage on Wisdom and death saves and regain maximum hit points from healing for concentration up to 1 min</td>
     </tr><tr style="text-align:left">
-      <td>Bestow Curse (C3 Necr): Touched suffers a choice of disadvantage on specified ability rolls, disadvantage on attacks on self, requiring a successful Wisdom save to take any action, or +1d8 HP necrotic from self attacks (save Wisdom neg) for concentration up to 1 min [+Level extends the duration to concentration up to 10 min, 8 hr, 24 hr, or permanently at level 4, 5, 7, or 9]</td>
+      <td>Bestow Curse (C3 Necr): Touched suffers a choice of disadvantage on specified ability rolls, disadvantage on attacks on self, requiring a successful Wisdom save to take any action, or +1d8 HP necrotic from self attacks (save Wisdom neg) for concentration up to 1 min [+Level extends the maximum duration to 10 min, 8 hr, 24 hr, or permanently at level 4, 5, 7, or 9]</td>
     </tr><tr style="text-align:left">
       <td>Blade Barrier (C6 Evoc): R90' Creates a 100'x20'x5' blade wall or a 60'x20'x5' blade ring that provides 3/4 cover and inflicts 6d10 HP slashing (save Dexterity half) for concentration up to 10 min</td>
     </tr><tr style="text-align:left">
@@ -310,7 +310,7 @@ var attributes = {
     </tr><tr style="text-align:left">
       <td>Detect Poison And Disease (C1 Divi): R30' Reveals poison, poisonous creatures, and diseases for concentration up to 10 min [R]</td>
     </tr><tr style="text-align:left">
-      <td>Dispel Evil And Good (C5 Abju): Celestials, elementals, fey, fiends, and undead suffer disadvantage on attacks vs. self for concentration up to 1 min, a successful spell attack returns them to their home plane (save Charisma neg), and a touch also ends an enchantment, fright, or possession by them</td>
+      <td>Dispel Evil And Good (C5 Abju): Celestials, elementals, fey, fiends, and undead suffer disadvantage on attacks vs. self for concentration up to 1 min; a successful spell attack returns them to their home plane (save Charisma neg), and touch also ends their enchantment, fright, or possession on the creature touched</td>
     </tr><tr style="text-align:left">
       <td>Dispel Magic (C3 Abju): R120' Ends the effects on the target of a spell up to level 3, and successful DC 10 + spell level checks end each higher-level spell [+Level ends any spell of equal or lesser level]</td>
     </tr><tr style="text-align:left">
@@ -352,13 +352,13 @@ var attributes = {
     </tr><tr style="text-align:left">
       <td>Gentle Repose (C2 Necr): Touched corpse becomes immune to decay and animation for 10 days [R]</td>
     </tr><tr style="text-align:left">
-      <td>Glyph Of Warding (C3 Abju): 20' radius inflicts 5d8 HP of a choice of acid, cold, fire, lightning, or thunder (save Dexterity half) or a spell of up to level 3 when triggered [+Level inflicts +1d8 HP or increases the level of the triggered spell by 1]</td>
+      <td>Glyph Of Warding (C3 Abju): 20' radius inflicts 5d8 HP of a choice of acid, cold, fire, lightning, or thunder (save Dexterity half), or a spell of up to level 3, when triggered [+Level inflicts +1d8 HP or increases the level of the triggered spell by 1]</td>
     </tr><tr style="text-align:left">
       <td>Greater Restoration (C5 Abju): Touched recovers from exhausted, charmed, petrified, cursed, or ability damage or regains hit point maximum</td>
     </tr><tr style="text-align:left">
-      <td>Guardian Of Faith (C4 Conj): R30' 10' radius inflicts 20 HP radiant to hostile creatures (save Dexterity half) for 8 hr or 60 HP inflicted</td>
+      <td>Guardian Of Faith (C4 Conj): R30' 10' radius inflicts 20 HP radiant to hostile creatures (save Dexterity half) for 8 hr or until 60 HP inflicted</td>
     </tr><tr style="text-align:left">
-      <td>Guardian Of Faith (C4 [Light Domain] Conj): R30' 10' radius inflicts 20 HP radiant to hostile creatures (save Dexterity half) for 8 hr or 60 HP inflicted</td>
+      <td>Guardian Of Faith (C4 [Light Domain] Conj): R30' 10' radius inflicts 20 HP radiant to hostile creatures (save Dexterity half) for 8 hr or until 60 HP inflicted</td>
     </tr><tr style="text-align:left">
       <td>Guidance (C0 Divi): Touched gains +1d4 on 1 ability check within concentration up to 1 min</td>
     </tr><tr style="text-align:left">
@@ -394,7 +394,7 @@ var attributes = {
     </tr><tr style="text-align:left">
       <td>Locate Object (C2 Divi): Reveals the location of a specified object or type within 1000' for concentration up to 10 min; lead blocks</td>
     </tr><tr style="text-align:left">
-      <td>Magic Circle (C3 Abju): R10' 10' radius prevents a choice of physical entry or exit (save Charisma allows magical transit), inflicts disadvantage on attacks, and negates charm, fright, and possession by one or more choices of celestials, fey, fiends, or undead for 1 hr [+Level extends duration +1 hr]</td>
+      <td>Magic Circle (C3 Abju): R10' 10' radius prevents a choice of physical entry or exit (save Charisma allows magical transit), inflicts disadvantage on attacks, and negates charm, fright, and possession by one or more choices of celestials, fey, fiends, or undead, for 1 hr [+Level extends duration +1 hr]</td>
     </tr><tr style="text-align:left">
       <td>Mass Cure Wounds (C5 Evoc): R60' 6 targets in a 30' radius regain 3d8+1 HP [+Level restores +1d8 HP]</td>
     </tr><tr style="text-align:left">
@@ -426,7 +426,7 @@ var attributes = {
     </tr><tr style="text-align:left">
       <td>Regenerate (C7 Tran): Touched regains 4d8+15 HP, plus 1 HP per rd for 1 hr, and reattaches or regrows severed parts after 2 min</td>
     </tr><tr style="text-align:left">
-      <td>Remove Curse (C3 Abju): Frees touched creature from all curses or breaks the attunement to a touched cursed object</td>
+      <td>Remove Curse (C3 Abju): Frees a touched creature from all curses or breaks the attunement to a touched cursed object</td>
     </tr><tr style="text-align:left">
       <td>Resistance (C0 Abju): Touched gains +1d4 on 1 save within concentration up to 1 min</td>
     </tr><tr style="text-align:left">

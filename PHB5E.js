@@ -1556,7 +1556,7 @@ PHB5E.SPELLS_ADDED = {
     'Level=K1 ' +
     'AtHigherLevels="inflicts +1d6 HP" ' +
     'Description=' +
-      '"10\' radius inflicts 2d6 HP necrotic and loss of reactions for 1 rd (save Strength inflicts half HP only)"',
+      '"10\' radius inflicts 2d6 HP necrotic and loss of reactions (save Strength inflicts half HP only) for 1 rd"',
   'Aura Of Life':
     'School=Abjuration ' +
     'Level=P4 ' +
@@ -1624,7 +1624,7 @@ PHB5E.SPELLS_ADDED = {
     'School=Conjuration ' +
     'Level=R5 ' +
     'Description=' +
-      '"R150\' 40\' radius inflicts 8d8 HP weapon type (save Dexterity half)"',
+      '"R150\' 40\' radius inflicts 8d8 HP weapon type damage (save Dexterity half)"',
   'Cordon Of Arrows':
     'School=Transmutation ' +
     'Level=R2 ' +
@@ -1646,7 +1646,7 @@ PHB5E.SPELLS_ADDED = {
     'School=Evocation ' +
     'Level=P5 ' +
     'Description=' +
-      '"30\' radius inflicts 5d6 HP thunder, knocked prone, and a choice of 5d6 HP radiant or necrotic (save Constitution half HP only) on chosen targets"',
+      '"30\' radius inflicts 5d6 HP thunder, knocked prone, and 5d6 HP of a choice of radiant or necrotic (save Constitution half HP only) on chosen targets"',
   'Dissonant Whispers':
     'School=Enchantment ' +
     'Level=B1,"K1 [The Great Old One]" ' +
