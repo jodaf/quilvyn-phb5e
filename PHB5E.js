@@ -874,7 +874,7 @@ PHB5E.FEATURES_ADDED = {
     'Note="Can use a Superiority Die and forego an attack to gain a bonus action directing an ally to attack; the ally uses a reaction to attack and adds the Superiority Die to its damage"',
   'Disarming Attack':
     'Section=combat ' +
-    'Note="Can add a Superiority Die to damage and cause the target to drop an item (DC %{maneuverSaveDC} Strength negates)"',
+    'Note="Can add a Superiority Die to damage and cause the target to drop an item (save DC %{maneuverSaveDC} Strength negates)"',
   'Distracting Strike':
     'Section=combat ' +
     'Note="Can add a Superiority Die to damage and give advantage to the next ally attack against the same foe in the same rd"',
@@ -886,7 +886,7 @@ PHB5E.FEATURES_ADDED = {
     'Note="Can add a Superiority Die to damage and use a bonus action to gain advantage on the attack"',
   'Goading Attack':
     'Section=combat ' +
-    'Note="Can add a Superiority Die to damage and inflict disadvantage on foe attacks on others (DC %{maneuverSaveDC} Wisdom negates) until the end of the next turn"',
+    'Note="Can add a Superiority Die to damage and inflict disadvantage on foe attacks on others (save DC %{maneuverSaveDC} Wisdom negates) until the end of the next turn"',
   'Improved Combat Superiority':
     'Section=combat Note="Superiority Dice increase to d%V"',
   'Know Your Enemy':
@@ -899,7 +899,7 @@ PHB5E.FEATURES_ADDED = {
     'Note="Can add a Superiority Die to damage and allow an ally to use a reaction to move half speed with no opportunity attack from the target"',
   'Menacing Attack':
     'Section=combat ' +
-    'Note="Can add a Superiority Die to damage and inflict frightened (DC %{maneuverSaveDC} Wisdom negates) until the end of the next turn"',
+    'Note="Can add a Superiority Die to damage and inflict frightened (save DC %{maneuverSaveDC} Wisdom negates) until the end of the next turn"',
   'Parry':
     'Section=combat ' +
     'Note="Can use a reaction to subtract a Superiority Die + %{dexterityModifier} from a foe\'s melee damage to self"',
@@ -907,7 +907,7 @@ PHB5E.FEATURES_ADDED = {
     'Section=combat Note="Can add a Superiority Die to an attack"',
   'Pushing Attack':
     'Section=combat ' +
-    'Note="Can add Superiority Die to damage and push the Large or smaller target 15\' (DC %{maneuverSaveDC} Strength negates)"',
+    'Note="Can add Superiority Die to damage and push the Large or smaller target 15\' (save DC %{maneuverSaveDC} Strength negates)"',
   'Rally':
     'Section=combat ' +
     'Note="Gives the target a Superiority Die + %{charismaModifier} temporary hit points"',
@@ -924,7 +924,7 @@ PHB5E.FEATURES_ADDED = {
     'Note="After a successful melee attack, can inflict a Superiority Die HP on a second adjacent foe"',
   'Trip Attack':
     'Section=combat ' +
-    'Note="After a successful attack, can knock the Large or smaller target prone (DC %V Strength negates) and add a Superiority Die to damage"',
+    'Note="After a successful attack, can knock the Large or smaller target prone (save DC %V Strength negates) and add a Superiority Die to damage"',
   // Eldritch Knight
   'Arcane Charge':'Section=magic Note="Can teleport 30\' during Action Surge"',
   'Eldritch Strike':
@@ -982,7 +982,7 @@ PHB5E.FEATURES_ADDED = {
     'Spells=Thunderwave',
   'Fist Of Unbroken Air':
     'Section=magic ' +
-    'Note="R30\' Can spend 2+ Ki Points to inflict 3d10+ HP, push 20\', and knock prone (DC %{kiSaveDC} Strength half HP only)"',
+    'Note="R30\' Can spend 2+ Ki Points to inflict 3d10+ HP, push 20\', and knock prone (save DC %{kiSaveDC} Strength half HP only)"',
   'Flames Of The Phoenix':
     'Section=magic ' +
     'Note="Can spend 4 Ki Points to cast <i>Fireball</i>" ' +
@@ -1016,7 +1016,7 @@ PHB5E.FEATURES_ADDED = {
     'Spells="Burning Hands"',
   'Water Whip':
     'Section=magic ' +
-    'Note="R30\' Can spend 2+ Ki Points to inflict 3d10+ HP bludgeoning and pull 25\' or knock prone (DC %{kiSaveDC} Strength half HP only)"',
+    'Note="R30\' Can spend 2+ Ki Points to inflict 3d10+ HP bludgeoning and pull 25\' or knock prone (save DC %{kiSaveDC} Strength half HP only)"',
   'Wave Of Rolling Earth':
     'Section=magic ' +
     'Note="Can spend 6 Ki Points to cast <i>Wall Of Stone</i>" ' +
@@ -1032,7 +1032,7 @@ PHB5E.FEATURES_ADDED = {
     'Note="Can regain 10 hit points per rd, cast paladin spells as a bonus action, and inflict disadvantage on saves vs. self spells on foes within 10\' for 1 min once per long rest"',
   "Nature's Wrath":
     'Section=magic ' +
-    'Note="R10\' Can use Channel Divinity to create spectral vines that restrain a target (DC %{spellDifficultyClass.P} Dexterity or Strength negates)"',
+    'Note="R10\' Can use Channel Divinity to create spectral vines that restrain a target (save DC %{spellDifficultyClass.P} Dexterity or Strength negates)"',
   'Oath Of The Ancients':
     'Spells=' +
       '"3:Ensnaring Strike","3:Speak With Animals",' +
@@ -1042,7 +1042,7 @@ PHB5E.FEATURES_ADDED = {
       '"17:Commune With Nature","17:Tree Stride"',
   'Turn The Faithless':
     'Section=combat ' +
-    'Note="R30\' Can use Channel Divinity to make fiends and fey flee (DC %{spellDifficultyClass.P} Wisdom negates) for 1 min"',
+    'Note="R30\' Can use Channel Divinity to make fiends and fey flee (save DC %{spellDifficultyClass.P} Wisdom negates) for 1 min"',
   'Undying Sentinel':
     'Section=combat,feature,save ' +
     'Note=' +
@@ -1052,12 +1052,12 @@ PHB5E.FEATURES_ADDED = {
   // Oath Of Vengeance
   'Abjure Enemy':
     'Section=magic ' +
-    'Note="R60\' Can use Channel Divinity to halt a target (DC %{spellDifficultyClass.P} Wisdom inflicts half speed) for 1 min"',
+    'Note="R60\' Can use Channel Divinity to halt a target (save DC %{spellDifficultyClass.P} Wisdom inflicts half speed) for 1 min"',
   'Avenging Angel':
     'Section=ability,combat ' +
     'Note=' +
       '"Gives a 60\' fly speed for 1 hr once per long rest",' +
-      '"R30\' Aura frightens foes (DC %{spellDifficultyClass.P} Wisdom negates; damage ends), giving advantage on ally attacks, for 1 hr once per long rest"',
+      '"R30\' Aura frightens foes (save DC %{spellDifficultyClass.P} Wisdom negates; damage ends), giving advantage on ally attacks, for 1 hr once per long rest"',
   'Oath Of Vengeance':
     'Spells=' +
       '"3:Bane","3:Hunter\'s Mark",' +
@@ -1098,7 +1098,7 @@ PHB5E.FEATURES_ADDED = {
     'Section=feature Note="Tool Proficiency (Disguise Kit; Poisoner\'s Kit)"',
   'Death Strike':
     'Section=combat ' +
-    'Note="Inflicts double damage on a successful surprise attack (DC %{8+dexterityModifier+proficiencyBonus} Constitution negates)"',
+    'Note="Inflicts double damage on a successful surprise attack (save DC %{8+dexterityModifier+proficiencyBonus} Constitution negates)"',
   'Impostor':
     'Section=feature ' +
     'Note="Can use unerring mimicry and has advantage on Deception to overcome suspicion"',
@@ -1115,7 +1115,7 @@ PHB5E.FEATURES_ADDED = {
     'Note="Casting a spell from hiding inflicts disadvantage on the target\'s initial save"',
   'Spell Thief':
     'Section=magic ' +
-    'Note="Can negate the effects of a spell cast on self and use spell slots to cast the same spell for 8 hr (DC %{8+intelligenceModifier+proficiencyBonus} negates) once per long rest"',
+    'Note="Can negate the effects of a spell cast on self and use spell slots to cast the same spell for 8 hr (save DC %{8+intelligenceModifier+proficiencyBonus} negates) once per long rest"',
   // Spellcasting as above
   'Versatile Trickster':
     'Section=magic ' +
@@ -1142,13 +1142,13 @@ PHB5E.FEATURES_ADDED = {
   // The Archfey
   'Beguiling Defenses':
     'Section=save ' +
-    'Note="Has immunity to charm and can reflect charm spells onto the caster (DC %{spellDifficultyClass.K} Wisdom negates) for 1 min or until the caster takes damage"',
+    'Note="Has immunity to charm and can reflect charm spells onto the caster (save DC %{spellDifficultyClass.K} Wisdom negates) for 1 min or until the caster takes damage"',
   'Dark Delirium':
     'Section=magic ' +
-    'Note="R60\' Inflicts charmed or frightened and unaware of surroundings (DC %{spellDifficultyClass.K} Wisdom negates) for concentration up to 1 min once per short rest"',
+    'Note="R60\' Inflicts charmed or frightened and unaware of surroundings (save DC %{spellDifficultyClass.K} Wisdom negates) for concentration up to 1 min once per short rest"',
   'Fey Presence':
     'Section=magic ' +
-    'Note="Can inflict a choice of charmed or frightened (DC %{spellDifficultyClass.K} Wisdom negates) for 1 rd on all creatures in a 10\' cube once per short rest"',
+    'Note="Can inflict a choice of charmed or frightened (save DC %{spellDifficultyClass.K} Wisdom negates) for 1 rd on all creatures in a 10\' cube once per short rest"',
   'Misty Escape':
     'Section=magic ' +
     'Note="Can use a reaction upon taking damage to teleport 60\' and become invisible for 1 rd once per short rest; attacking or casting ends"',
@@ -1212,16 +1212,16 @@ PHB5E.FEATURES_ADDED = {
   // School Of Enchantment
   'Alter Memories':
     'Section=magic ' +
-    'Note="Chosen target becomes unaware of self charm; can also inflict forgetfulness of the preceding %{charismaModifier+1>?1} hr (DC %{spellDifficultyClass.W} Intelligence negates)"',
+    'Note="Chosen target becomes unaware of self charm; can also inflict forgetfulness of the preceding %{charismaModifier+1>?1} hr (save DC %{spellDifficultyClass.W} Intelligence negates)"',
   'Enchantment Savant':
     'Section=magic ' +
     'Note="Can copy enchantment spells into spellbook for half cost"',
   'Hypnotic Gaze':
     'Section=magic ' +
-    'Note="Can daze an adjacent creature (DC %{spellDifficultyClass.W} Wisdom negates) while maintained once per target per long rest"',
+    'Note="Can daze an adjacent creature (save DC %{spellDifficultyClass.W} Wisdom negates) while maintained once per target per long rest"',
   'Instinctive Charm':
     'Section=magic ' +
-    'Note="R30\' Can use a reaction to redirect an attack on self to another (DC %{spellDifficultyClass.W} Wisdom negates until a long rest)"',
+    'Note="R30\' Can use a reaction to redirect an attack on self to another (save DC %{spellDifficultyClass.W} Wisdom negates until a long rest)"',
   'Split Enchantment':
     'Section=magic Note="Can add a second target to an enchantment spell"',
   // School Of Illusion
@@ -1243,7 +1243,7 @@ PHB5E.FEATURES_ADDED = {
   // School Of Necromancy
   'Command Undead':
     'Section=magic ' +
-    'Note="R60\' Can use an action to control an undead target (DC %{spellDifficultyClass.W} Charisma negates permanently; targets with Intelligence of at least 8 have advantage on the save, and targets with Intelligence of at least 12 repeat the save every hr)"',
+    'Note="R60\' Can use an action to control an undead target (save DC %{spellDifficultyClass.W} Charisma negates permanently; targets with Intelligence of at least 8 have advantage on the save, and targets with Intelligence of at least 12 repeat the save every hr)"',
   'Grim Harvest':
     'Section=magic ' +
     'Note="Regains hit points equal to twice the spell level, or 3x for necromantic spells, when a self spell kills"',
