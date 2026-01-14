@@ -1407,22 +1407,22 @@ PHB5E.FEATURES_ADDED = {
       '"Has advantage on saves vs. spells cast by adjacent foes"',
   'Magic Initiate (Bard)':
     'Section=Magic ' +
-    'Note="Knows 2 bard cantrips/Can cast a chosen B1 spell once per long rest"',
+    'Note="Knows 2 bard cantrips and can cast a chosen B1 spell once per long rest"',
   'Magic Initiate (Cleric)':
     'Section=Magic ' +
-    'Note="Knows 2 cleric cantrips/Can cast a chosen C1 spell once per long rest"',
+    'Note="Knows 2 cleric cantrips and can cast a chosen C1 spell once per long rest"',
   'Magic Initiate (Druid)':
     'Section=Magic ' +
-    'Note="Knows 2 druid cantrips/Can cast a chosen D1 spell once per long rest"',
+    'Note="Knows 2 druid cantrips and can cast a chosen D1 spell once per long rest"',
   'Magic Initiate (Sorcerer)':
     'Section=Magic ' +
-    'Note="Knows 2 sorcerer cantrips/Can cast a chosen S1 spell once per long rest"',
+    'Note="Knows 2 sorcerer cantrips and can cast a chosen S1 spell once per long rest"',
   'Magic Initiate (Warlock)':
     'Section=Magic ' +
-    'Note="Knows 2 warlock cantrips/Can cast a chosen K1 spell once per long rest"',
+    'Note="Knows 2 warlock cantrips and can cast a chosen K1 spell once per long rest"',
   'Magic Initiate (Wizard)':
     'Section=Magic ' +
-    'Note="Knows 2 wizard cantrips/Can cast a chosen W1 spell once per long rest"',
+    'Note="Knows 2 wizard cantrips and can cast a chosen W1 spell once per long rest"',
   'Martial Adept':
     'Section=combat ' +
     'Note="Has the Combat Superiority feature with 2 maneuvers and 1 die"',
@@ -1556,7 +1556,7 @@ PHB5E.SPELLS_ADDED = {
     'Level=K1 ' +
     'AtHigherLevels="inflicts +1d6 HP" ' +
     'Description=' +
-      '"10\' radius inflicts 2d6 HP necrotic and loss of reactions (save Strength inflicts half HP only) for 1 rd"',
+      '"10\' radius inflicts 2d6 HP necrotic and loss of reactions (save Strength half HP only) for 1 rd"',
   'Aura Of Life':
     'School=Abjuration ' +
     'Level=P4 ' +
@@ -1677,7 +1677,7 @@ PHB5E.SPELLS_ADDED = {
     'School=Enchantment ' +
     'Level=B0,K0,S0,W0 ' +
     'Description=' +
-      '"Self gains on advantage on Charisma checks with a non-hostile target for concentration up to 1 min; the target becomes hostile afterward"',
+      '"Self gains advantage on Charisma checks with a non-hostile target for concentration up to 1 min; the target becomes hostile afterward"',
 
   'Grasping Vine':
     'School=Conjuration ' +
