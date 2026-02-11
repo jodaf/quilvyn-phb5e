@@ -722,7 +722,7 @@ PHB5E.FEATURES_ADDED = {
     'Section=skill ' +
     'Note="Can use Channel Divinity to gain proficiency in a chosen skill or tool for 10 min"',
   'Potent Spellcasting':
-    'Section=magic Note="+%{wisdomModifier} Cleric cantrip damage"',
+    'Section=magic Note="+%{wisdomModifier} HP Cleric cantrip damage"',
   'Read Thoughts':
     'Section=magic ' +
     'Note="R60\' Can use Channel Divinity to read the target\'s thoughts (save Wisdom negates and blocks additional uses until a long rest) for 1 min; success allows casting <i>Suggestion</i> on the target with no save" ' +
@@ -932,7 +932,7 @@ PHB5E.FEATURES_ADDED = {
     'Note="Successful attack inflicts disadvantage on the first save vs. a self spell before the end of the next turn"',
   'Improved War Magic':'Section=combat Note="Has increased War Magic effects"',
   // Spellcasting as above
-  'War Magic':
+  'War Magic': // See Xanathar.js re: a wizard tradition also named War Magic
     'Section=combat ' +
     'Note="Can use a bonus action to make a weapon attack after casting %{combatNotes.improvedWarMagic?\'any spell\':\'a cantrip\'}"',
   'Weapon Bond':
@@ -949,7 +949,7 @@ PHB5E.FEATURES_ADDED = {
     'Note="Can use a reaction to attack an adjacent foe damaged by another creature"',
   'Shadow Arts':
     'Section=magic ' +
-    'Note="Knows the <i>Minor Illusion</i> cantrip and can spend 2 Ki Points to cast <i>Darkness</i>, <i>Darkvision</i>, <i>Pass Without Trace</i>, or <i>Silence</i>" ' +
+    'Note="Knows the <i>Minor Illusion</i> cantrip and can spend 2 ki points to cast <i>Darkness</i>, <i>Darkvision</i>, <i>Pass Without Trace</i>, or <i>Silence</i>" ' +
     'Spells="Minor Illusion",Darkness,Darkvision,"Pass Without Trace",Silence',
   'Shadow Step':
     'Section=magic ' +
@@ -957,11 +957,11 @@ PHB5E.FEATURES_ADDED = {
   // Way Of The Four Elements
   'Breath Of Winter':
     'Section=magic ' +
-    'Note="Can spend 6 Ki Points to cast <i>Cone Of Cold</i>" ' +
+    'Note="Can spend 6 ki points to cast <i>Cone Of Cold</i>" ' +
     'Spells="Cone Of Cold"',
   'Clench Of The North Wind':
     'Section=magic ' +
-    'Note="Can spend 3 Ki Points to cast <i>Hold Person</i>" ' +
+    'Note="Can spend 3 ki points to cast <i>Hold Person</i>" ' +
     'Spells="Hold Person"',
   'Disciple Of The Elements':
     'Section=magic Note="Can select %V elemental disciplines"',
@@ -971,55 +971,55 @@ PHB5E.FEATURES_ADDED = {
     'Note="R30\' Can create a harmless instantaneous elemental effect, light or snuff a small flame, chill or warm a 1 lb object for 1 hr, or shape a 1\' cube of earth, fire, water, or mist for 1 min"',
   'Eternal Mountain Defense':
     'Section=magic ' +
-    'Note="Can spend 5 Ki Points to cast <i>Stoneskin</i> on self" ' +
+    'Note="Can spend 5 ki points to cast <i>Stoneskin</i> on self" ' +
     'Spells=Stoneskin',
   'Fangs Of The Fire Snake':
     'Section=magic ' +
-    'Note="Can spend 1 Ki Point to make a +10\' unarmed attack, inflicting fire damage, and 1 additional Ki Point to inflict +1d10 HP fire"',
+    'Note="Can spend 1 ki point to make a +10\' unarmed attack, inflicting fire damage, and 1 additional ki point to inflict +1d10 HP fire"',
   'Fist Of Four Thunders':
     'Section=magic ' +
-    'Note="Can spend 2 Ki Points to cast <i>Thunderwave</i>" ' +
+    'Note="Can spend 2 ki points to cast <i>Thunderwave</i>" ' +
     'Spells=Thunderwave',
   'Fist Of Unbroken Air':
     'Section=magic ' +
-    'Note="R30\' Can spend 2+ Ki Points to inflict 3d10+ HP, push 20\', and knock prone (save DC %{kiSaveDC} Strength half HP only)"',
+    'Note="R30\' Can spend 2+ ki points to inflict 3d10+ HP, push 20\', and knock prone (save DC %{kiSaveDC} Strength half HP only)"',
   'Flames Of The Phoenix':
     'Section=magic ' +
-    'Note="Can spend 4 Ki Points to cast <i>Fireball</i>" ' +
+    'Note="Can spend 4 ki points to cast <i>Fireball</i>" ' +
     'Spells=Fireball',
   'Gong Of The Summit':
     'Section=magic ' +
-    'Note="Can spend 3 Ki Points to cast <i>Shatter</i>" ' +
+    'Note="Can spend 3 ki points to cast <i>Shatter</i>" ' +
     'Spells=Shatter',
   'Mist Stance':
     'Section=magic ' +
-    'Note="Can spend 4 Ki Points to cast <i>Gaseous Form</i> on self" ' +
+    'Note="Can spend 4 ki points to cast <i>Gaseous Form</i> on self" ' +
     'Spells="Gaseous Form"',
   'Ride The Wind':
     'Section=magic ' +
-    'Note="Can spend 4 Ki Points to cast <i>Fly</i> on self" ' +
+    'Note="Can spend 4 ki points to cast <i>Fly</i> on self" ' +
     'Spells=Fly',
   'River Of Hungry Flame':
     'Section=magic ' +
-    'Note="Can spend 5 Ki Points to cast <i>Wall Of Fire</i>" ' +
+    'Note="Can spend 5 ki points to cast <i>Wall Of Fire</i>" ' +
     'Spells="Wall Of Fire"',
   'Rush Of The Gale Spirits':
     'Section=magic ' +
-    'Note="Can spend 2 Ki Points to cast <i>Gust Of Wind</i>" ' +
+    'Note="Can spend 2 ki points to cast <i>Gust Of Wind</i>" ' +
     'Spells="Gust Of Wind"',
   'Shape The Flowing River':
     'Section=magic ' +
-    'Note="R120\' Can spend 1 Ki Point to freeze, thaw, and shape a 30\' cube of water"',
+    'Note="R120\' Can spend 1 ki point to freeze, thaw, and shape a 30\' cube of water"',
   'Sweeping Cinder Strike':
     'Section=magic ' +
-    'Note="Can spend 2 Ki Points to cast <i>Burning Hands</i>" ' +
+    'Note="Can spend 2 ki points to cast <i>Burning Hands</i>" ' +
     'Spells="Burning Hands"',
   'Water Whip':
     'Section=magic ' +
-    'Note="R30\' Can spend 2+ Ki Points to inflict 3d10+ HP bludgeoning and pull 25\' or knock prone (save DC %{kiSaveDC} Strength half HP only)"',
+    'Note="R30\' Can spend 2+ ki points to inflict 3d10+ HP bludgeoning and pull 25\' or knock prone (save DC %{kiSaveDC} Strength half HP only)"',
   'Wave Of Rolling Earth':
     'Section=magic ' +
-    'Note="Can spend 6 Ki Points to cast <i>Wall Of Stone</i>" ' +
+    'Note="Can spend 6 ki points to cast <i>Wall Of Stone</i>" ' +
     'Spells="Wall Of Stone"',
 
   // Paladin
@@ -1127,7 +1127,7 @@ PHB5E.FEATURES_ADDED = {
     'Section=magic ' +
     'Note="Can spend 2 Sorcery Points to add or subtract 1d4 from a target attack, ability check, or save"',
   'Controlled Chaos':
-    'Section=magic Note="Can choose from 2 Wild Magic Surge effects"',
+    'Section=magic Note="Can choose from 2 effects when triggering Wild Magic"',
   'Spell Bombardment':
     'Section=magic ' +
     'Note="Can add another die after rolling the maximum on a spell damage die once per turn"',
@@ -1366,7 +1366,7 @@ PHB5E.FEATURES_ADDED = {
     'Section=combat ' +
     'Note="Can use a bonus action to attack after scoring a critical hit or reducing a foe to 0 hit points with a melee weapon/Can make a -5 attack with a heavy weapon to inflict +10 damage"',
   'Healer':
-    'Section=feature ' +
+    'Section=skill ' +
     'Note="Using a healer\'s kit to stabilize also restores 1 hit point/Can use a healer\'s kit to restore 1d6+4 + target HD hit points once per creature per short rest"',
   'Heavily Armored':
     'Section=ability,combat ' +
@@ -1447,11 +1447,10 @@ PHB5E.FEATURES_ADDED = {
       '"Has advantage on melee attacks on an unmounted foe smaller than mount and can redirect attacks on mount to self",' +
       '"Mount suffers no damage on a successful Dexterity save and half on failure"',
   'Observant':
-    'Section=ability,feature,skill ' +
+    'Section=ability,skill ' +
     'Note=' +
       '"Ability Boost (Choose 1 from Intelligence, Wisdom)",' +
-      '"Can read lips",' +
-      '"+5 passive Investigation and passive Perception"',
+      '"Can read lips/+5 passive Investigation and passive Perception"',
   'Polearm Master':
     'Section=combat ' +
     'Note="Can use a bonus action to attack with the butt of a polearm, inflicting 1d4 HP bludgeoning, and a foe entering polearm reach provokes an opportunity attack"',

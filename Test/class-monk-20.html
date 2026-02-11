@@ -117,15 +117,11 @@ var attributes = {
       </tr><tr style="text-align:center">
         <td>Keen Mind: Always knows the direction of north and hours until sunrise or sunset/Can recall anything seen or heard during the past month</td>
       </tr><tr style="text-align:center">
-        <td>Ki: Can use 20 Ki Points per short rest</td>
-      </tr><tr style="text-align:center">
-        <td>Observant: Can read lips</td>
+        <td>Ki: Can use 20 ki points per short rest</td>
       </tr><tr style="text-align:center">
         <td>Shelter Of The Faithful: Can receive aid from temples of NH-Rillifane Rallathil and fellow believers</td>
       </tr><tr style="text-align:center">
         <td>Timeless Body (Monk): Suffers no debility from aging and needs no food or water</td>
-      </tr><tr style="text-align:center">
-        <td>Tongue Of The Sun And Moon: Can communicate in any language</td>
       </tr><tr style="text-align:center">
         <td>Wholeness Of Body: Can use an action to regain 60 hit points once per long rest</td>
       </tr></table>
@@ -170,7 +166,13 @@ var attributes = {
   </tr><tr style="text-align:center">
     <td><b>Languages</b>: Common; Draconic; Giant; Halfling</td>
   </tr><tr style="text-align:center">
-    <td><b>Skill Notes</b>: Observant: +5 passive Investigation and passive Perception</td>
+    <td><b>Skill Notes</b>:     <table id="SkillNotes" style="width:100%">
+    <tr style="text-align:center">
+      <td>Observant: Can read lips/+5 passive Investigation and passive Perception</td>
+    </tr><tr style="text-align:center">
+      <td>Tongue Of The Sun And Moon: Can communicate in any language</td>
+    </tr></table>
+</td>
   </tr></table>
 </td>
 </tr><tr style="text-align:center">
@@ -197,7 +199,7 @@ var attributes = {
       <tr style="text-align:center">
         <td><b>Armor</b>: None</td>
         <td><b>Shield</b>: None</td>
-        <td><b>Weapons</b>: Club (+8 1d4+2); Greatclub (+6 1d8); Unarmed (+8 1d10+2)</td>
+        <td><b>Weapons</b>: Club (+8 1d10+2); Greatclub (+6 1d8); Unarmed (+8 1d10+2)</td>
       </tr></table>
 </td>
     </tr><tr style="text-align:center">
@@ -213,13 +215,13 @@ var attributes = {
       </tr><tr style="text-align:center">
         <td><i>Extra Attack: +1 Attacks Per Round</i></td>
       </tr><tr style="text-align:center">
-        <td><i>Martial Arts: When unarmored, gains +2 attack and damage with monk weapons and raises damage die to 1d10</i></td>
+        <td><i>Martial Arts: When unarmored, gains +2 attack and damage with monk weapons and raises their damage dice to 1d10</i></td>
       </tr><tr style="text-align:center">
         <td><i>Unarmored Defense (Monk): +2 Armor Class in no armor</i></td>
       </tr><tr style="text-align:center">
-        <td>Deflect Missiles: Can use a reaction to reduce missile damage by 1d10+22 HP; reducing it to 0 hit points allows spending 1 Ki Point to make an immediate attack</td>
+        <td>Deflect Missiles: Can use a reaction to reduce missile damage by 1d10+22 HP; reducing it to 0 hit points allows spending 1 ki point to make an immediate attack</td>
       </tr><tr style="text-align:center">
-        <td>Flurry Of Blows: Can spend 1 Ki Point to make 2 unarmed strikes as a bonus action</td>
+        <td>Flurry Of Blows: Can spend 1 ki point to make 2 unarmed strikes as a bonus action</td>
       </tr><tr style="text-align:center">
         <td>Ki-Empowered Strikes: Unarmed attacks count as magical</td>
       </tr><tr style="text-align:center">
@@ -233,15 +235,15 @@ var attributes = {
       </tr><tr style="text-align:center">
         <td>Opportunist: Can use a reaction to attack an adjacent foe damaged by another creature</td>
       </tr><tr style="text-align:center">
-        <td>Patient Defense: Can spend 1 Ki Point to Dodge as a bonus action</td>
+        <td>Patient Defense: Can spend 1 ki point to Dodge as a bonus action</td>
       </tr><tr style="text-align:center">
-        <td>Perfect Self: Has a minimum of 4 Ki Points available after initiative</td>
+        <td>Perfect Self: Has a minimum of 4 ki points available after initiative</td>
       </tr><tr style="text-align:center">
-        <td>Quivering Palm: Can spend 3 Ki Points after a successful unarmed attack to reduce a foe to 0 hit points at any time within 20 days (save DC 16 Constitution inflicts 10d10 HP necrotic)</td>
+        <td>Quivering Palm: Can spend 3 ki points after a successful unarmed attack to reduce a foe to 0 hit points at any time within 20 days (save DC 16 Constitution inflicts 10d10 HP necrotic)</td>
       </tr><tr style="text-align:center">
-        <td>Step Of The Wind: Can spend 1 Ki Point to double jump distance and to Disengage or Dash as a bonus action</td>
+        <td>Step Of The Wind: Can spend 1 ki point to double jump distance and to Disengage or Dash as a bonus action</td>
       </tr><tr style="text-align:center">
-        <td>Stunning Strike: Can spend 1 Ki Point after a successful attack to stun the target (save DC 16 Constitution negates) for 1 rd</td>
+        <td>Stunning Strike: Can spend 1 ki point after a successful attack to stun the target (save DC 16 Constitution negates) for 1 rd</td>
       </tr></table>
 </td>
     </tr></table>
@@ -259,7 +261,7 @@ var attributes = {
       </tr><tr style="text-align:center">
         <td><i>Resilient: Save Proficiency (Choose 1 from any)</i></td>
       </tr><tr style="text-align:center">
-        <td>Diamond Soul: Can spend 1 Ki Point to reroll a save</td>
+        <td>Diamond Soul: Can spend 1 ki point to reroll a save</td>
       </tr><tr style="text-align:center">
         <td>Evasion: Successful Dexterity saves yield no damage instead of half, and failures yield half damage</td>
       </tr><tr style="text-align:center">
@@ -334,49 +336,49 @@ var attributes = {
     <tr style="text-align:center">
       <td><i>Disciple Of The Elements: Can select 4 elemental disciplines</i></td>
     </tr><tr style="text-align:center">
-      <td>Breath Of Winter: Can spend 6 Ki Points to cast <i>Cone Of Cold</i></td>
+      <td>Breath Of Winter: Can spend 6 ki points to cast <i>Cone Of Cold</i></td>
     </tr><tr style="text-align:center">
-      <td>Clench Of The North Wind: Can spend 3 Ki Points to cast <i>Hold Person</i></td>
+      <td>Clench Of The North Wind: Can spend 3 ki points to cast <i>Hold Person</i></td>
     </tr><tr style="text-align:center">
       <td>Cloak Of Shadows (Way Of Shadow): Can use an action to become invisible in dim and dark areas; attacking or casting ends</td>
     </tr><tr style="text-align:center">
       <td>Elemental Attunement: R30' Can create a harmless instantaneous elemental effect, light or snuff a small flame, chill or warm a 1 lb object for 1 hr, or shape a 1' cube of earth, fire, water, or mist for 1 min</td>
     </tr><tr style="text-align:center">
-      <td>Empty Body: Can spend 4 Ki Points to become invisible and gain resistance to all damage other than force for 1 min/Can spend 8 Ki Points to cast <i>Astral Projection</i> on self</td>
+      <td>Empty Body: Can spend 4 ki points to become invisible and gain resistance to all damage other than force for 1 min/Can spend 8 ki points to cast <i>Astral Projection</i> on self</td>
     </tr><tr style="text-align:center">
-      <td>Eternal Mountain Defense: Can spend 5 Ki Points to cast <i>Stoneskin</i> on self</td>
+      <td>Eternal Mountain Defense: Can spend 5 ki points to cast <i>Stoneskin</i> on self</td>
     </tr><tr style="text-align:center">
-      <td>Fangs Of The Fire Snake: Can spend 1 Ki Point to make a +10' unarmed attack, inflicting fire damage, and 1 additional Ki Point to inflict +1d10 HP fire</td>
+      <td>Fangs Of The Fire Snake: Can spend 1 ki point to make a +10' unarmed attack, inflicting fire damage, and 1 additional ki point to inflict +1d10 HP fire</td>
     </tr><tr style="text-align:center">
-      <td>Fist Of Four Thunders: Can spend 2 Ki Points to cast <i>Thunderwave</i></td>
+      <td>Fist Of Four Thunders: Can spend 2 ki points to cast <i>Thunderwave</i></td>
     </tr><tr style="text-align:center">
-      <td>Fist Of Unbroken Air: R30' Can spend 2+ Ki Points to inflict 3d10+ HP, push 20', and knock prone (save DC 16 Strength half HP only)</td>
+      <td>Fist Of Unbroken Air: R30' Can spend 2+ ki points to inflict 3d10+ HP, push 20', and knock prone (save DC 16 Strength half HP only)</td>
     </tr><tr style="text-align:center">
-      <td>Flames Of The Phoenix: Can spend 4 Ki Points to cast <i>Fireball</i></td>
+      <td>Flames Of The Phoenix: Can spend 4 ki points to cast <i>Fireball</i></td>
     </tr><tr style="text-align:center">
-      <td>Gong Of The Summit: Can spend 3 Ki Points to cast <i>Shatter</i></td>
+      <td>Gong Of The Summit: Can spend 3 ki points to cast <i>Shatter</i></td>
     </tr><tr style="text-align:center">
-      <td>Mist Stance: Can spend 4 Ki Points to cast <i>Gaseous Form</i> on self</td>
+      <td>Mist Stance: Can spend 4 ki points to cast <i>Gaseous Form</i> on self</td>
     </tr><tr style="text-align:center">
-      <td>Ride The Wind: Can spend 4 Ki Points to cast <i>Fly</i> on self</td>
+      <td>Ride The Wind: Can spend 4 ki points to cast <i>Fly</i> on self</td>
     </tr><tr style="text-align:center">
-      <td>River Of Hungry Flame: Can spend 5 Ki Points to cast <i>Wall Of Fire</i></td>
+      <td>River Of Hungry Flame: Can spend 5 ki points to cast <i>Wall Of Fire</i></td>
     </tr><tr style="text-align:center">
-      <td>Rush Of The Gale Spirits: Can spend 2 Ki Points to cast <i>Gust Of Wind</i></td>
+      <td>Rush Of The Gale Spirits: Can spend 2 ki points to cast <i>Gust Of Wind</i></td>
     </tr><tr style="text-align:center">
-      <td>Shadow Arts: Knows the <i>Minor Illusion</i> cantrip and can spend 2 Ki Points to cast <i>Darkness</i>, <i>Darkvision</i>, <i>Pass Without Trace</i>, or <i>Silence</i></td>
+      <td>Shadow Arts: Knows the <i>Minor Illusion</i> cantrip and can spend 2 ki points to cast <i>Darkness</i>, <i>Darkvision</i>, <i>Pass Without Trace</i>, or <i>Silence</i></td>
     </tr><tr style="text-align:center">
       <td>Shadow Step: Can use a bonus action to teleport 60' between dim or dark areas and gain advantage on the first melee attack during that turn</td>
     </tr><tr style="text-align:center">
-      <td>Shape The Flowing River: R120' Can spend 1 Ki Point to freeze, thaw, and shape a 30' cube of water</td>
+      <td>Shape The Flowing River: R120' Can spend 1 ki point to freeze, thaw, and shape a 30' cube of water</td>
     </tr><tr style="text-align:center">
-      <td>Sweeping Cinder Strike: Can spend 2 Ki Points to cast <i>Burning Hands</i></td>
+      <td>Sweeping Cinder Strike: Can spend 2 ki points to cast <i>Burning Hands</i></td>
     </tr><tr style="text-align:center">
       <td>Tranquility: Can gain <i>Sanctuary</i> effects between long rests (save DC 16 Wisdom negates)</td>
     </tr><tr style="text-align:center">
-      <td>Water Whip: R30' Can spend 2+ Ki Points to inflict 3d10+ HP bludgeoning and pull 25' or knock prone (save DC 16 Strength half HP only)</td>
+      <td>Water Whip: R30' Can spend 2+ ki points to inflict 3d10+ HP bludgeoning and pull 25' or knock prone (save DC 16 Strength half HP only)</td>
     </tr><tr style="text-align:center">
-      <td>Wave Of Rolling Earth: Can spend 6 Ki Points to cast <i>Wall Of Stone</i></td>
+      <td>Wave Of Rolling Earth: Can spend 6 ki points to cast <i>Wall Of Stone</i></td>
     </tr></table>
 </td>
   </tr></table>
