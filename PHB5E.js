@@ -61,7 +61,7 @@ function PHB5E() {
     'background:Background,select-one,backgrounds',
     'race:Race,select-one,races', 'levels:Class Levels,bag,levels');
 
-  SRD5E.abilityRules(rules);
+  SRD5E.abilityRules(rules, SRD5E.ABILITIES);
   SRD5E.combatRules(rules, PHB5E.ARMORS, PHB5E.SHIELDS, PHB5E.WEAPONS);
   SRD5E.magicRules(rules, PHB5E.SCHOOLS, PHB5E.SPELLS);
   SRD5E.identityRules(
@@ -698,7 +698,7 @@ PHB5E.FEATURES_ADDED = {
     'Note="Armor Proficiency (Medium; Shield)/Weapon Proficiency (Martial Weapons)"',
   'Combat Inspiration':
     'Section=combat ' +
-    'Note="Allies can use a Bardic Inspiration die to boost weapon damage or Armor Class"',
+    'Note="Allies can use a Bardic Inspiration die to boost weapon damage or as a reaction to an attack to boost Armor Class"',
   // Extra Attack as above
 
   // Cleric
@@ -709,7 +709,7 @@ PHB5E.FEATURES_ADDED = {
       '"Skill Proficiency (Choose 2 from Arcana, History, Nature, Religion)/Language (Choose 2 from any)",' +
       '"+%{proficiencyBonus} on chosen Blessings of Knowledge skills"',
   'Dampen Elements':
-    'Section=magic ' +
+    'Section=combat ' +
     'Note="R30\' Can use a reaction to grant resistance to immediate acid, cold, fire, lightning, or thunder damage"',
   'Knowledge Domain':
     'Spells=' +
@@ -722,14 +722,14 @@ PHB5E.FEATURES_ADDED = {
     'Section=skill ' +
     'Note="Can use Channel Divinity to gain proficiency in a chosen skill or tool for 10 min"',
   'Potent Spellcasting':
-    'Section=magic Note="+%{wisdomModifier} HP Cleric cantrip damage"',
+    'Section=magic Note="Cleric cantrips inflict +%{wisdomModifier} HP"',
   'Read Thoughts':
     'Section=magic ' +
-    'Note="R60\' Can use Channel Divinity to read the target\'s thoughts (save Wisdom negates and blocks additional uses until a long rest) for 1 min; success allows casting <i>Suggestion</i> on the target with no save" ' +
+    'Note="R60\' Can use Channel Divinity to read the target\'s thoughts (save Wisdom negates and blocks additional attempts on the target until a long rest) for 1 min; success allows casting <i>Suggestion</i> on the target with no save" ' +
     'Spells=Suggestion',
   'Visions Of The Past':
     'Section=magic ' +
-    'Note="Can gain visions about surroundings or a held object via 1 min meditation once per short rest"',
+    'Note="Can gain visions about surroundings or a held object via %{wisdomModifier>?1} min meditation once per short rest"',
   // Light Domain
   'Bonus Cantrip (Light Domain)':
     'Section=magic Note="Knows the <i>Light</i> cantrip" Spells=Light',
@@ -737,7 +737,7 @@ PHB5E.FEATURES_ADDED = {
     'Section=magic ' +
     'Note="Can use an action to emit a 60\' bright light that inflicts foe disadvantage on saves vs. fire and radiant spells for 1 min"',
   'Improved Flare':
-    'Section=magic ' +
+    'Section=combat ' +
     'Note="R30\' Can use Warding Flare to protect another creature"',
   'Light Domain':
     'Spells=' +
@@ -751,7 +751,7 @@ PHB5E.FEATURES_ADDED = {
     'Section=magic ' +
     'Note="R30\' Can use Channel Divinity to dispel magical darkness and to inflict 2d10+%{levels.Cleric} HP radiant (save Constitution half) on foes"',
   'Warding Flare':
-    'Section=magic ' +
+    'Section=combat ' +
     'Note="R30\' Can use a reaction to inflict disadvantage on a foe attack %{wisdomModifier>1?wisdomModifier+\' times\':\'once\'} per long rest"',
   // Nature Domain
   'Acolyte Of Nature':
@@ -763,7 +763,7 @@ PHB5E.FEATURES_ADDED = {
     'Section=combat Note="Armor Proficiency (Heavy)"',
   'Charm Animals And Plants':
     'Section=magic ' +
-    'Note="R30\' Can use Channel Divinity to charm beasts and plants (save Wisdom negates) for 1 min"',
+    'Note="R30\' Can use Channel Divinity to charm beasts and plants (save Wisdom negates; taking damage ends) for 1 min"',
   // Divine Strike as SRD35
   'Master Of Nature':
     'Section=magic Note="Can command charmed animals and plants"',
@@ -805,10 +805,10 @@ PHB5E.FEATURES_ADDED = {
     'Note="Can use Channel Divinity to make self invisible until the end of the next turn; attacking or casting ends"',
   // Divine Strike as above
   'Improved Duplicity':
-    'Section=magic Note="Invoke Duplicity creates 4 duplicates"',
+    'Section=combat Note="Invoke Duplicity creates 4 duplicates"',
   'Invoke Duplicity':
-    'Section=magic ' +
-    'Note="R30\' Can use Channel Divinity to create %{magicNotes.improvedDuplicity?\'4 illusionary duplicates\':\'1 illusionary duplicate\'}, moving %{magicNotes.improvedDuplicity?\'each\':\'it\'} up to 30\' each rd to a maximum of 120\' away, gaining advantage on attacks when self and duplicate are each within 5\' of the target, and allowing remote spellcasting for concentration up to 1 min"',
+    'Section=combat ' +
+    'Note="R30\' Can use Channel Divinity to create %{combatNotes.improvedDuplicity?\'4 illusionary duplicates\':\'1 illusionary duplicate\'}, moving %{combatNotes.improvedDuplicity?\'each\':\'it\'} up to 30\' each rd to a maximum of 120\' away, gaining advantage on attacks when self and duplicate are each within 5\' of the target and allowing remote spellcasting for concentration up to 1 min"',
   'Trickery Domain':
     'Spells=' +
       '"1:Charm Person","1:Disguise Self",' +
@@ -819,7 +819,7 @@ PHB5E.FEATURES_ADDED = {
   // War Domain
   'Avatar Of Battle':
     'Section=save ' +
-    'Note="Has resistance to nonmagical bludgeoning, piercing, and slashing damage"',
+    'Note="Has resistance to bludgeoning, piercing, and slashing damage from nonmagical weapons"',
   'Bonus Proficiencies (War Domain)':
     'Section=combat ' +
     'Note="Armor Proficiency (Heavy)/Weapon Proficiency (Martial Weapons)"',
@@ -834,7 +834,7 @@ PHB5E.FEATURES_ADDED = {
       '"7:Freedom Of Movement","7:Stoneskin",' +
       '"9:Flame Strike","9:Hold Monster"',
   "War God's Blessing":
-    'Section=magic ' +
+    'Section=combat ' +
     'Note="R30\' Can use a reaction and Channel Divinity to give an ally +10 attack"',
   'War Priest':
     'Section=combat ' +
@@ -851,10 +851,9 @@ PHB5E.FEATURES_ADDED = {
   // Circle Of The Moon
   'Circle Forms':'Section=magic Note="Can Wild Shape into a CR %V creature"',
   'Combat Wild Shape':
-    'Section=combat,magic ' +
+    'Section=magic ' +
     'Note=' +
-      '"Can use Wild Shape as a bonus action",' +
-      '"While using Wild Shape, can spend a spell slot and use a bonus action to regain 1d8 hit points per slot level"',
+      '"Can use Wild Shape as a bonus action/While using Wild Shape, can use a bonus action and spend a spell slot to regain 1d8 hit points per slot level"',
   'Elemental Wild Shape':
     'Section=magic Note="Can expend 2 Wild Shape uses to become an elemental"',
   'Primal Strike':
@@ -877,16 +876,16 @@ PHB5E.FEATURES_ADDED = {
     'Note="Can add a Superiority Die to damage and cause the target to drop an item (save DC %{maneuverSaveDC} Strength negates)"',
   'Distracting Strike':
     'Section=combat ' +
-    'Note="Can add a Superiority Die to damage and give advantage to the next ally attack against the same foe in the same rd"',
+    'Note="Can add a Superiority Die to damage and give advantage to the next ally attack against the same foe before the start of the next turn"',
   'Evasive Footwork':
     'Section=combat ' +
     'Note="Can add a Superiority Die to Armor Class during a move"',
   'Feinting Attack':
     'Section=combat ' +
-    'Note="Can add a Superiority Die to damage and use a bonus action to gain advantage on the attack"',
+    'Note="Can use a bonus action to gain advantage on an attack and add a Superiority Die to its damage"',
   'Goading Attack':
     'Section=combat ' +
-    'Note="Can add a Superiority Die to damage and inflict disadvantage on foe attacks on others (save DC %{maneuverSaveDC} Wisdom negates) until the end of the next turn"',
+    'Note="Can add a Superiority Die to damage and inflict disadvantage on the target\'s attacks on others (save DC %{maneuverSaveDC} Wisdom negates) until the end of the next turn"',
   'Improved Combat Superiority':
     'Section=combat Note="Superiority Dice increase to d%V"',
   'Know Your Enemy':
@@ -896,7 +895,7 @@ PHB5E.FEATURES_ADDED = {
     'Note="Can add a Superiority Die to damage and gain +5\' melee range"',
   'Maneuvering Attack':
     'Section=combat ' +
-    'Note="Can add a Superiority Die to damage and allow an ally to use a reaction to move half speed with no opportunity attack from the target"',
+    'Note="Can add a Superiority Die to damage and allow an ally to use a reaction to move half its Speed without provoking an opportunity attack from the target"',
   'Menacing Attack':
     'Section=combat ' +
     'Note="Can add a Superiority Die to damage and inflict frightened (save DC %{maneuverSaveDC} Wisdom negates) until the end of the next turn"',
@@ -907,24 +906,24 @@ PHB5E.FEATURES_ADDED = {
     'Section=combat Note="Can add a Superiority Die to an attack"',
   'Pushing Attack':
     'Section=combat ' +
-    'Note="Can add Superiority Die to damage and push the Large or smaller target 15\' (save DC %{maneuverSaveDC} Strength negates)"',
+    'Note="Can add a Superiority Die to damage and push the Large or smaller target 15\' (save DC %{maneuverSaveDC} Strength negates)"',
   'Rally':
     'Section=combat ' +
     'Note="Gives the target a Superiority Die + %{charismaModifier} temporary hit points"',
   'Riposte':
     'Section=combat ' +
-    'Note="After a foe melee miss, can spend a Superiority Die and use a reaction to attack and add the Superiority Die to damage"',
+    'Note="After a foe melee miss, can spend a Superiority Die and use a reaction to attack and add the Superiority Die to its damage"',
   'Relentless':
     'Section=combat ' +
     'Note="Has a minimum of 1 Superiority Die available after initiative"',
   'Student Of War':
-    'Section=feature Note="Tool Proficiency (Choose 1 from any Artisan)"',
+    'Section=skill Note="Tool Proficiency (Choose 1 from any Artisan)"',
   'Sweeping Attack':
     'Section=combat ' +
     'Note="After a successful melee attack, can inflict a Superiority Die HP on a second adjacent foe"',
   'Trip Attack':
     'Section=combat ' +
-    'Note="After a successful attack, can knock the Large or smaller target prone (save DC %V Strength negates) and add a Superiority Die to damage"',
+    'Note="Can add a Superiority Die to damage and knock the Large or smaller target prone (save DC %V Strength negates)"',
   // Eldritch Knight
   'Arcane Charge':'Section=magic Note="Can teleport 30\' during Action Surge"',
   'Eldritch Strike':
@@ -934,7 +933,7 @@ PHB5E.FEATURES_ADDED = {
   // Spellcasting as above
   'War Magic': // See Xanathar.js re: a wizard tradition also named War Magic
     'Section=combat ' +
-    'Note="Can use a bonus action to make a weapon attack after casting %{combatNotes.improvedWarMagic?\'any spell\':\'a cantrip\'}"',
+    'Note="Can use a bonus action to make a weapon attack after casting a %{combatNotes.improvedWarMagic?\'spell\':\'cantrip\'}"',
   'Weapon Bond':
     'Section=combat ' +
     'Note="Cannot be disarmed from a bonded weapon and can use a bonus action to summon one"',
@@ -946,7 +945,7 @@ PHB5E.FEATURES_ADDED = {
     'Note="Can use an action to become invisible in dim and dark areas; attacking or casting ends"',
   'Opportunist':
     'Section=combat ' +
-    'Note="Can use a reaction to attack an adjacent foe damaged by another creature"',
+    'Note="Can use a reaction to attack an adjacent foe when it is hit by another creature"',
   'Shadow Arts':
     'Section=magic ' +
     'Note="Knows the <i>Minor Illusion</i> cantrip and can spend 2 ki points to cast <i>Darkness</i>, <i>Darkvision</i>, <i>Pass Without Trace</i>, or <i>Silence</i>" ' +
@@ -964,7 +963,10 @@ PHB5E.FEATURES_ADDED = {
     'Note="Can spend 3 ki points to cast <i>Hold Person</i>" ' +
     'Spells="Hold Person"',
   'Disciple Of The Elements':
-    'Section=magic Note="Can select %V elemental disciplines"',
+    'Section=magic,magic ' +
+    'Note=' +
+      '"Knows the Elemental Attunement discipline and can select %V others",' +
+      '"Can spend up to %{(levels.Monk+7)//4} ki points to cast an elemental discipline spell, increasing its level by 1 for each ki point above the minimum required"',
   'Elemental Attunement':
     'Section=magic ' +
     // errata specifies 30' range
@@ -982,7 +984,7 @@ PHB5E.FEATURES_ADDED = {
     'Spells=Thunderwave',
   'Fist Of Unbroken Air':
     'Section=magic ' +
-    'Note="R30\' Can spend 2+ ki points to inflict 3d10+ HP, push 20\', and knock prone (save DC %{kiSaveDC} Strength half HP only)"',
+    'Note="R30\' Can spend 2 ki points to inflict 3d10 HP bludgeoning, a 20\' push, and knocked prone (save DC %{monkSaveDC} Strength half HP only); spending additional ki points inflicts +1d10 HP per point"',
   'Flames Of The Phoenix':
     'Section=magic ' +
     'Note="Can spend 4 ki points to cast <i>Fireball</i>" ' +
@@ -1016,7 +1018,7 @@ PHB5E.FEATURES_ADDED = {
     'Spells="Burning Hands"',
   'Water Whip':
     'Section=magic ' +
-    'Note="R30\' Can spend 2+ ki points to inflict 3d10+ HP bludgeoning and pull 25\' or knock prone (save DC %{kiSaveDC} Strength half HP only)"',
+    'Note="R30\' Can spend 2 ki points to inflict 3d10 HP bludgeoning and a 25\' pull or knocked prone (save DC %{monkSaveDC} Strength half HP only); spending additional ki points inflicts +1d10 HP per point"',
   'Wave Of Rolling Earth':
     'Section=magic ' +
     'Note="Can spend 6 ki points to cast <i>Wall Of Stone</i>" ' +
@@ -1032,7 +1034,7 @@ PHB5E.FEATURES_ADDED = {
     'Note="Can regain 10 hit points per rd, cast paladin spells as a bonus action, and inflict disadvantage on saves vs. self spells on foes within 10\' for 1 min once per long rest"',
   "Nature's Wrath":
     'Section=magic ' +
-    'Note="R10\' Can use Channel Divinity to create spectral vines that restrain a target (save DC %{spellDifficultyClass.P} Dexterity or Strength negates)"',
+    'Note="R10\' Can use Channel Divinity to create spectral vines that restrain the target (save DC %{spellDifficultyClass.P} Dexterity or Strength ends)"',
   'Oath Of The Ancients':
     'Spells=' +
       '"3:Ensnaring Strike","3:Speak With Animals",' +
@@ -1046,18 +1048,18 @@ PHB5E.FEATURES_ADDED = {
   'Undying Sentinel':
     'Section=combat,feature,save ' +
     'Note=' +
-      '"Can retain 1 HP when brought to 0 HP once per long rest",' +
+      '"Can retain 1 hit point when brought to 0 hit points once per long rest",' +
       '"Suffers no debility from aging",' +
       '"Has immunity to magical aging"',
   // Oath Of Vengeance
   'Abjure Enemy':
     'Section=magic ' +
-    'Note="R60\' Can use Channel Divinity to halt a target (save DC %{spellDifficultyClass.P} Wisdom inflicts half speed) for 1 min"',
+    'Note="R60\' Can use Channel Divinity to halt a target (save DC %{spellDifficultyClass.P} Wisdom inflicts half speed; fiends and undead have disadvantage on the save) for 1 min"',
   'Avenging Angel':
     'Section=ability,combat ' +
     'Note=' +
-      '"Gives a 60\' fly speed for 1 hr once per long rest",' +
-      '"R30\' Aura frightens foes (save DC %{spellDifficultyClass.P} Wisdom negates; damage ends), giving advantage on ally attacks, for 1 hr once per long rest"',
+      '"Can gain a 60\' fly speed for 1 hr once per long rest",' +
+      '"Can gain a 30\' aura that frightens foes (save DC %{spellDifficultyClass.P} Wisdom negates; damage ends), giving advantage on ally attacks, for 1 hr once per long rest"',
   'Oath Of Vengeance':
     'Spells=' +
       '"3:Bane","3:Hunter\'s Mark",' +
@@ -1067,7 +1069,7 @@ PHB5E.FEATURES_ADDED = {
       '"17:Hold Monster",17:Scrying',
   'Relentless Avenger':
     'Section=combat ' +
-    'Note="Can move %{speed//2}\' after a successful opportunity attack"',
+    'Note="Can move %{speed//2}\' after a successful opportunity attack without provoking opportunity attacks"',
   'Soul Of Vengeance':
     'Section=combat ' +
     'Note="Can use a reaction when a Vow Of Enmity target attacks to make a melee attack on the target"',
@@ -1278,17 +1280,20 @@ PHB5E.FEATURES_ADDED = {
 
   // Backgrounds
   'By Popular Demand':
-    'Section=feature ' +
+    'Section=skill ' +
     'Note="Can receive welcome and lodging in exchange for performing"',
   'City Secrets':
-    'Section=feature Note="Can travel through a city at twice normal speed"',
+    'Section=ability ' +
+    'Note="Can travel and lead others through a city at twice normal speed"',
   'Criminal Contact':
     'Section=feature ' +
     'Note="Knows how to contact a liaison to criminal networks"',
   'Discovery':'Section=feature Note="Knows a unique and powerful truth"',
   'False Identity':
-    'Section=feature ' +
-    'Note="Has a documented second identity and forgery skills"',
+    'Section=feature,skill ' +
+    'Note=' +
+      '"Has a documented second identity",' +
+      '"Can forge familiar documents"',
   'Guild Membership':
     'Section=feature ' +
     'Note="Can receive assistance from fellow guild members/Must pay a 5 gp monthly guild fee"',
@@ -1298,14 +1303,14 @@ PHB5E.FEATURES_ADDED = {
   'Position Of Privilege':
     'Section=feature ' +
     'Note="Receives welcome from the upper class and deference from commoners"',
-  'Researcher':'Section=feature Note="Knows where and whom to ask about lore"',
+  'Researcher':'Section=skill Note="Knows where and whom to ask about lore"',
   'Rustic Hospitality':
     'Section=feature Note="Can receive shelter from common folk"',
   "Ship's Passage":
     'Section=feature ' +
     'Note="Can receive water passage for self and companions in exchange for labor"',
   'Wanderer':
-    'Section=feature ' +
+    'Section=skill ' +
     'Note="Has an excellent geographic memory and can forage for 6 people"',
 
   // Feats
@@ -1392,11 +1397,11 @@ PHB5E.FEATURES_ADDED = {
       '"Ability Boost (Choose 1 from Dexterity, Strength)",' +
       '"Armor Proficiency (Light)"',
   'Linguist':
-    'Section=ability,feature,skill ' +
+    'Section=ability,skill,skill ' +
     'Note=' +
       '"+1 Intelligence",' +
-      '"Can create ciphers (DC %{intelligence+proficiencyBonus} Intelligence to decode)",' +
-      '"Language (Choose 3 from any)"',
+      '"Language (Choose 3 from any)",' +
+      '"Can create ciphers (DC %{intelligence+proficiencyBonus} Intelligence to decode)"',
   'Lucky':
     'Section=feature ' +
     'Note="Can gain advantage on an attack, ability, or saving throw or inflict foe disadvantage an attack on self 3 times per long rest"',
@@ -1952,6 +1957,9 @@ PHB5E.classRulesExtra = function(rules, name) {
       'monkFeatures.Way Of The Four Elements', '?', null,
       classLevel, '=', 'Math.floor( (source + 4) / 5)'
     );
+    rules.defineRule('magicNotes.discipleOfTheElements-1',
+      classLevel, '?', 'source >= 5'
+    );
     rules.defineRule('selectableFeatureCount.Monk (Elemental Discipline)',
       'magicNotes.discipleOfTheElements', '=', null
     );
@@ -1979,8 +1987,8 @@ PHB5E.classRulesExtra = function(rules, name) {
 
     rules.defineRule // Italics noop
       ('magicNotes.portent', 'magicNotes.greaterPortent', '+', 'null');
-    rules.defineRule('magicNotes.invokeDuplicity', // Italics noop
-      'magicNotes.improvedDuplicity', '+', 'null'
+    rules.defineRule('combatNotes.invokeDuplicity', // Italics noop
+      'combatNotes.improvedDuplicity', '+', 'null'
     );
 
   }

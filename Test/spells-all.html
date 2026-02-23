@@ -378,6 +378,8 @@ var attributes = {
     <tr style="text-align:center">
       <td><i>Human Ability Adjustment: +1 Charisma/+1 Constitution/+1 Dexterity/+1 Intelligence/+1 Strength/+1 Wisdom</i></td>
     </tr><tr style="text-align:center">
+      <td>City Secrets: Can travel and lead others through a city at twice normal speed</td>
+    </tr><tr style="text-align:center">
       <td>Jack Of All Trades: +1 on non-proficient ability checks</td>
     </tr></table>
 </td>
@@ -405,7 +407,7 @@ var attributes = {
         <td><b>Warlock Features</b>: Armor Of Shadows; Armor Proficiency (Light); Eldritch Invocations; Fey Presence; Otherworldly Patron; Pact Magic; Save Proficiency (Wisdom; Charisma); Skill Proficiency (Choose 2 from Arcana, Deception, History, Intimidation, Investigation, Nature, Religion); The Archfey; Thief Of Five Fates; Weapon Proficiency (Simple Weapons)</td>
         <td><b>Sorcerer Features</b>: Font Of Magic; Save Proficiency (Constitution; Charisma); Skill Proficiency (Choose 2 from Arcana, Deception, Insight, Intimidation, Persuasion, Religion); Sorcerous Origin; Spellcasting; Tides Of Chaos; Weapon Proficiency (Dagger; Dart; Sling; Quarterstaff; Light Crossbow); Wild Magic Surge; Wild Magic</td>
         <td><b>Ranger Features</b>: Armor Proficiency (Light; Medium; Shield); Favored Enemy; Fighting Style (Archery); Fighting Style; Natural Explorer; Save Proficiency (Strength; Dexterity); Skill Proficiency (Choose 3 from Animal Handling, Athletics, Insight, Investigation, Nature, Perception, Stealth, Survival); Spellcasting; Weapon Proficiency (Simple Weapons; Martial Weapons)</td>
-        <td><b>Paladin Features</b>: Abjure Enemy; Armor Proficiency (Light; Heavy; Shield); Channel Divinity; Divine Health; Divine Sense; Divine Smite; Fighting Style (Great Weapon Fighting); Fighting Style; Lay On Hands; Oath Of Vengeance; Sacred Oath; Save Proficiency (Wisdom; Charisma); Skill Proficiency (Choose 2 from Athletics, Insight, Intimidation, Medicine, Persuasion, Religion); Spellcasting; Vow Of Enmity; Weapon Proficiency (Simple Weapons; Martial Weapons)</td>
+        <td><b>Paladin Features</b>: Abjure Enemy; Armor Proficiency (Light; Medium; Heavy; Shield); Channel Divinity; Divine Health; Divine Sense; Divine Smite; Fighting Style (Great Weapon Fighting); Fighting Style; Lay On Hands; Oath Of Vengeance; Sacred Oath; Save Proficiency (Wisdom; Charisma); Skill Proficiency (Choose 2 from Athletics, Insight, Intimidation, Medicine, Persuasion, Religion); Spellcasting; Vow Of Enmity; Weapon Proficiency (Simple Weapons; Martial Weapons)</td>
         <td><b>Druid Features</b>: Armor Proficiency (Light; Medium; Shield); Circle Forms; Circle Of The Moon; Combat Wild Shape; Druid Circle; Druidic; Save Proficiency (Intelligence; Wisdom); Skill Proficiency (Choose 2 from Arcana, Animal Handling, Insight, Medicine, Nature, Perception, Religion, Survival); Spellcasting; Tool Proficiency (Herbalism Kit); Weapon Proficiency (Club; Dagger; Dart; Javelin; Mace; Quarterstaff; Scimitar; Sickle; Sling; Spear); Wild Shape</td>
         <td><b>Cleric Features</b>: Armor Proficiency (Light; Medium; Shield); Bonus Proficiencies (War Domain); Channel Divinity; Divine Domain; Guided Strike; Save Proficiency (Wisdom; Charisma); Skill Proficiency (Choose 2 from History, Insight, Medicine, Persuasion, Religion); Spellcasting; Turn Undead; War Domain; War Priest; Weapon Proficiency (Simple Weapons)</td>
         <td><b>Bard Features</b>: Armor Proficiency (Light); Bardic Inspiration; Jack Of All Trades; Save Proficiency (Dexterity; Charisma); Skill Proficiency (Choose 3 from any); Song Of Rest; Spellcasting; Tool Proficiency (Choose 3 from any Musical); Weapon Proficiency (Simple Weapons; Hand Crossbow; Longsword; Rapier; Shortsword)</td>
@@ -428,8 +430,6 @@ var attributes = {
         <td><i>Sacred Oath: 1 selection</i></td>
       </tr><tr style="text-align:center">
         <td><i>Sorcerous Origin: 1 selection</i></td>
-      </tr><tr style="text-align:center">
-        <td>City Secrets: Can travel through a city at twice normal speed</td>
       </tr><tr style="text-align:center">
         <td>Tides Of Chaos: Can gain advantage on an attack, ability, or saving throw once per long rest or Wild Magic Surge</td>
       </tr></table>
@@ -478,7 +478,7 @@ var attributes = {
     <tr style="text-align:center">
       <td>Bulky Armor: Has disadvantage on Stealth</td>
     </tr><tr style="text-align:center">
-      <td>Divine Sense: R60' Can discern the location of celestials, fiends, and undead for 1 rd 3 times per long rest</td>
+      <td>Divine Sense: R60' Can discern the location of celestials, fiends, undead, consecration, and desecration until the end of the next turn 3 times per long rest</td>
     </tr><tr style="text-align:center">
       <td>Druidic: Speaks a secret language known only by druids</td>
     </tr><tr style="text-align:center">
@@ -534,9 +534,9 @@ var attributes = {
       </tr><tr style="text-align:center">
         <td><i>Strength Damage Adjustment: +1</i></td>
       </tr><tr style="text-align:center">
-        <td>Combat Wild Shape: Can use Wild Shape as a bonus action</td>
+        <td>Bardic Inspiration: R60' Can use a bonus action to give an ally +1d6 on an ability check, attack, or save within 10 min 2 times per long rest</td>
       </tr><tr style="text-align:center">
-        <td>Divine Smite: Can spend a spell slot after a successful melee attack to inflict +(slot level + 1)d8 HP radiant (maximum 5d8 HP; +1d8 HP vs. undead and fiends)</td>
+        <td>Divine Smite: Can spend a spell slot after a successful melee attack to inflict 1d8 HP radiant plus 1d8 HP per slot level, up to a maximum of 5d8 HP; undead and fiends suffer an additional 1d8 HP</td>
       </tr><tr style="text-align:center">
         <td>Fighting Style (Great Weapon Fighting): Can reroll 1s and 2s on two-handed weapon damage</td>
       </tr><tr style="text-align:center">
@@ -2352,17 +2352,15 @@ var attributes = {
     </tr><tr style="text-align:center">
       <td><i>Eldritch Invocations: 2 selections</i></td>
     </tr><tr style="text-align:center">
-      <td>Abjure Enemy: R60' Can use Channel Divinity to halt a target (save DC 12 Wisdom inflicts half speed) for 1 min</td>
+      <td>Abjure Enemy: R60' Can use Channel Divinity to halt a target (save DC 12 Wisdom inflicts half speed; fiends and undead have disadvantage on the save) for 1 min</td>
     </tr><tr style="text-align:center">
-      <td>Arcane Recovery: Can recover 1 spell slot levels (level 6 maximum) during a short rest once per long rest</td>
+      <td>Arcane Recovery: Can recover 1 spell slot levels (level 5 maximum) at the end of a short rest once per long rest</td>
     </tr><tr style="text-align:center">
       <td>Armor Of Shadows: Can cast <i>Mage Armor</i> on self at will</td>
     </tr><tr style="text-align:center">
-      <td>Bardic Inspiration: R60' Can use a bonus action to give an ally a +1d6 bonus on an ability, attack, or saving throw within 10 min 2 times per long rest</td>
-    </tr><tr style="text-align:center">
       <td>Channel Divinity: Can use a Channel Divinity effect 2 times per short rest</td>
     </tr><tr style="text-align:center">
-      <td>Combat Wild Shape: While using Wild Shape, can spend a spell slot and use a bonus action to regain 1d8 hit points per slot level</td>
+      <td>Combat Wild Shape: Can use Wild Shape as a bonus action/While using Wild Shape, can use a bonus action and spend a spell slot to regain 1d8 hit points per slot level</td>
     </tr><tr style="text-align:center">
       <td>Elemental Adept (Thunder): Spells that inflict thunder damage ignore resistance and treat 1s as 2s on damage dice</td>
     </tr><tr style="text-align:center">
@@ -2374,7 +2372,7 @@ var attributes = {
     </tr><tr style="text-align:center">
       <td>Improved Minor Illusion: Knows the <i>Minor Illusion</i> cantrip; effects can include both a sound and an image</td>
     </tr><tr style="text-align:center">
-      <td>Lay On Hands: Can heal 20 hit points per long rest and can use 5 hit points' worth to cure disease or poison</td>
+      <td>Lay On Hands: Can heal 20 hit points per long rest and can use 5 hit points' worth to cure a disease or neutralize a poison</td>
     </tr><tr style="text-align:center">
       <td>Pact Magic: Can cast spells from the warlock spell list</td>
     </tr><tr style="text-align:center">

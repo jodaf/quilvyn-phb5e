@@ -109,7 +109,7 @@ var attributes = {
       <tr style="text-align:center">
         <td><b>Feats</b>: Ability Boost; Actor; Great Weapon Master; Linguist; Lucky; Polearm Master; Savage Attacker</td>
         <td><b>Human Features</b>: Human Ability Adjustment; Language (Common; Choose 1 from any)</td>
-        <td><b>Fighter Features</b>: Action Surge; Additional Fighting Style; Arcane Charge; Armor Proficiency (Light; Heavy; Shield); Battle Master; Champion; Combat Superiority; Commander's Strike; Disarming Attack; Distracting Strike; Eldritch Knight; Eldritch Strike; Evasive Footwork; Extra Attack; Feinting Attack; Fighting Style (Archery); Fighting Style (Defense); Fighting Style (Dueling); Fighting Style (Great Weapon Fighting); Fighting Style (Protection); Fighting Style (Two-Weapon Fighting); Fighting Style; Goading Attack; Improved Combat Superiority; Improved Critical; Improved War Magic; Indomitable; Know Your Enemy; Lunging Attack; Maneuvering Attack; Martial Archetype; Menacing Attack; Parry; Precision Attack; Pushing Attack; Rally; Relentless; Remarkable Athlete; Riposte; Save Proficiency (Strength; Constitution); Second Wind; Skill Proficiency (Choose 2 from Acrobatics, Animal Handling, Athletics, History, Insight, Intimidation, Perception, Survival); Spellcasting; Student Of War; Superior Critical; Survivor; Sweeping Attack; Trip Attack; War Magic; Weapon Bond; Weapon Proficiency (Simple Weapons; Martial Weapons)</td>
+        <td><b>Fighter Features</b>: Action Surge; Additional Fighting Style; Arcane Charge; Armor Proficiency (Light; Medium; Heavy; Shield); Battle Master; Champion; Combat Superiority; Commander's Strike; Disarming Attack; Distracting Strike; Eldritch Knight; Eldritch Strike; Evasive Footwork; Extra Attack; Feinting Attack; Fighting Style (Archery); Fighting Style (Defense); Fighting Style (Dueling); Fighting Style (Great Weapon Fighting); Fighting Style (Protection); Fighting Style (Two-Weapon Fighting); Fighting Style; Goading Attack; Improved Combat Superiority; Improved Critical; Improved War Magic; Indomitable; Know Your Enemy; Lunging Attack; Maneuvering Attack; Martial Archetype; Menacing Attack; Parry; Precision Attack; Pushing Attack; Rally; Relentless; Remarkable Athlete; Riposte; Save Proficiency (Strength; Constitution); Second Wind; Skill Proficiency (Choose 2 from Acrobatics, Animal Handling, Athletics, History, Insight, Intimidation, Perception, Survival); Spellcasting; Student Of War; Superior Critical; Survivor; Sweeping Attack; Trip Attack; War Magic; Weapon Bond; Weapon Proficiency (Simple Weapons; Martial Weapons)</td>
         <td><b>Acolyte Features</b>: Language (Choose 2 from any); Shelter Of The Faithful; Skill Proficiency (Insight; Religion)</td>
       </tr></table>
 </td>
@@ -121,10 +121,6 @@ var attributes = {
         <td><i>Fighting Style: 2 selections</i></td>
       </tr><tr style="text-align:center">
         <td><i>Martial Archetype: 1 selection</i></td>
-      </tr><tr style="text-align:center">
-        <td><i>Student Of War: Tool Proficiency (Choose 1 from any Artisan)</i></td>
-      </tr><tr style="text-align:center">
-        <td>Linguist: Can create ciphers (DC 24 Intelligence to decode)</td>
       </tr><tr style="text-align:center">
         <td>Lucky: Can gain advantage on an attack, ability, or saving throw or inflict foe disadvantage an attack on self 3 times per long rest</td>
       </tr><tr style="text-align:center">
@@ -175,9 +171,13 @@ var attributes = {
     <tr style="text-align:center">
       <td><i>Linguist: Language (Choose 3 from any)</i></td>
     </tr><tr style="text-align:center">
+      <td><i>Student Of War: Tool Proficiency (Choose 1 from any Artisan)</i></td>
+    </tr><tr style="text-align:center">
       <td>Actor: Has advantage on Deception and Performance to impersonate another person and can mimic others' speech or sounds</td>
     </tr><tr style="text-align:center">
       <td>Bulky Armor: Has disadvantage on Stealth</td>
+    </tr><tr style="text-align:center">
+      <td>Linguist: Can create ciphers (DC 24 Intelligence to decode)</td>
     </tr><tr style="text-align:center">
       <td>Remarkable Athlete: +2' running jump distance</td>
     </tr></table>
@@ -200,7 +200,7 @@ var attributes = {
     </tr><tr style="text-align:center">
       <td>      <table id="CombatProfs" style="width:100%">
       <tr style="text-align:center">
-        <td><b>Armor Proficiency</b>: Heavy; Light; Shield</td>
+        <td><b>Armor Proficiency</b>: Heavy; Light; Medium; Shield</td>
         <td><b>Weapon Proficiency</b>: Martial Weapons; Simple Weapons</td>
       </tr></table>
 </td>
@@ -237,7 +237,7 @@ var attributes = {
       </tr><tr style="text-align:center">
         <td><i>Strength Damage Adjustment: +2</i></td>
       </tr><tr style="text-align:center">
-        <td>Action Surge: Can take an extra action twice per short rest</td>
+        <td>Action Surge: Can take an extra action 2 times per short rest</td>
       </tr><tr style="text-align:center">
         <td>Combat Superiority: Can use a d12 Superiority Die to perform one of 9 chosen Maneuvers 6 times per short rest</td>
       </tr><tr style="text-align:center">
@@ -245,13 +245,13 @@ var attributes = {
       </tr><tr style="text-align:center">
         <td>Disarming Attack: Can add a Superiority Die to damage and cause the target to drop an item (save DC 16 Strength negates)</td>
       </tr><tr style="text-align:center">
-        <td>Distracting Strike: Can add a Superiority Die to damage and give advantage to the next ally attack against the same foe in the same rd</td>
+        <td>Distracting Strike: Can add a Superiority Die to damage and give advantage to the next ally attack against the same foe before the start of the next turn</td>
       </tr><tr style="text-align:center">
         <td>Eldritch Strike: Successful attack inflicts disadvantage on the first save vs. a self spell before the end of the next turn</td>
       </tr><tr style="text-align:center">
         <td>Evasive Footwork: Can add a Superiority Die to Armor Class during a move</td>
       </tr><tr style="text-align:center">
-        <td>Feinting Attack: Can add a Superiority Die to damage and use a bonus action to gain advantage on the attack</td>
+        <td>Feinting Attack: Can use a bonus action to gain advantage on an attack and add a Superiority Die to its damage</td>
       </tr><tr style="text-align:center">
         <td>Fighting Style (Dueling): +2 damage with a single, one-handed melee weapon</td>
       </tr><tr style="text-align:center">
@@ -259,9 +259,9 @@ var attributes = {
       </tr><tr style="text-align:center">
         <td>Fighting Style (Protection): Can use a reaction and a shield to inflict disadvantage on attacks targeting an adjacent creature</td>
       </tr><tr style="text-align:center">
-        <td>Fighting Style (Two-Weapon Fighting): Adds ability modifier to second attack damage</td>
+        <td>Fighting Style (Two-Weapon Fighting): Adds ability modifier to second weapon damage</td>
       </tr><tr style="text-align:center">
-        <td>Goading Attack: Can add a Superiority Die to damage and inflict disadvantage on foe attacks on others (save DC 16 Wisdom negates) until the end of the next turn</td>
+        <td>Goading Attack: Can add a Superiority Die to damage and inflict disadvantage on the target's attacks on others (save DC 16 Wisdom negates) until the end of the next turn</td>
       </tr><tr style="text-align:center">
         <td>Great Weapon Master: Can use a bonus action to attack after scoring a critical hit or reducing a foe to 0 hit points with a melee weapon/Can make a -5 attack with a heavy weapon to inflict +10 damage</td>
       </tr><tr style="text-align:center">
@@ -271,7 +271,7 @@ var attributes = {
       </tr><tr style="text-align:center">
         <td>Lunging Attack: Can add a Superiority Die to damage and gain +5' melee range</td>
       </tr><tr style="text-align:center">
-        <td>Maneuvering Attack: Can add a Superiority Die to damage and allow an ally to use a reaction to move half speed with no opportunity attack from the target</td>
+        <td>Maneuvering Attack: Can add a Superiority Die to damage and allow an ally to use a reaction to move half its Speed without provoking an opportunity attack from the target</td>
       </tr><tr style="text-align:center">
         <td>Menacing Attack: Can add a Superiority Die to damage and inflict frightened (save DC 16 Wisdom negates) until the end of the next turn</td>
       </tr><tr style="text-align:center">
@@ -281,13 +281,13 @@ var attributes = {
       </tr><tr style="text-align:center">
         <td>Precision Attack: Can add a Superiority Die to an attack</td>
       </tr><tr style="text-align:center">
-        <td>Pushing Attack: Can add Superiority Die to damage and push the Large or smaller target 15' (save DC 16 Strength negates)</td>
+        <td>Pushing Attack: Can add a Superiority Die to damage and push the Large or smaller target 15' (save DC 16 Strength negates)</td>
       </tr><tr style="text-align:center">
         <td>Rally: Gives the target a Superiority Die + 2 temporary hit points</td>
       </tr><tr style="text-align:center">
         <td>Relentless: Has a minimum of 1 Superiority Die available after initiative</td>
       </tr><tr style="text-align:center">
-        <td>Riposte: After a foe melee miss, can spend a Superiority Die and use a reaction to attack and add the Superiority Die to damage</td>
+        <td>Riposte: After a foe melee miss, can spend a Superiority Die and use a reaction to attack and add the Superiority Die to its damage</td>
       </tr><tr style="text-align:center">
         <td>Savage Attacker: Can take the best of two melee damage rolls once per rd</td>
       </tr><tr style="text-align:center">
@@ -299,9 +299,9 @@ var attributes = {
       </tr><tr style="text-align:center">
         <td>Sweeping Attack: After a successful melee attack, can inflict a Superiority Die HP on a second adjacent foe</td>
       </tr><tr style="text-align:center">
-        <td>Trip Attack: After a successful attack, can knock the Large or smaller target prone (save DC 16 Strength negates) and add a Superiority Die to damage</td>
+        <td>Trip Attack: Can add a Superiority Die to damage and knock the Large or smaller target prone (save DC 16 Strength negates)</td>
       </tr><tr style="text-align:center">
-        <td>War Magic: Can use a bonus action to make a weapon attack after casting any spell</td>
+        <td>War Magic: Can use a bonus action to make a weapon attack after casting a spell</td>
       </tr><tr style="text-align:center">
         <td>Weapon Bond: Cannot be disarmed from a bonded weapon and can use a bonus action to summon one</td>
       </tr></table>

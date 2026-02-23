@@ -76,6 +76,8 @@ var attributes = {
       <td><i>Human Ability Adjustment: +1 Charisma/+1 Constitution/+1 Dexterity/+1 Intelligence/+1 Strength/+1 Wisdom</i></td>
     </tr><tr style="text-align:center">
       <td><i>Linguist: +1 Intelligence</i></td>
+    </tr><tr style="text-align:center">
+      <td>City Secrets: Can travel and lead others through a city at twice normal speed</td>
     </tr></table>
 </td>
   </tr></table>
@@ -98,7 +100,7 @@ var attributes = {
       <tr style="text-align:center">
         <td><b>Feats</b>: Linguist; Mounted Combatant</td>
         <td><b>Human Features</b>: Human Ability Adjustment; Language (Common; Choose 1 from any)</td>
-        <td><b>Paladin Features</b>: Armor Proficiency (Light; Heavy; Shield); Aura Of Courage; Aura Of Protection; Aura Of Warding; Channel Divinity; Divine Health; Divine Sense; Divine Smite; Extra Attack; Fighting Style (Protection); Fighting Style; Lay On Hands; Nature's Wrath; Oath Of The Ancients; Sacred Oath; Save Proficiency (Wisdom; Charisma); Skill Proficiency (Choose 2 from Athletics, Insight, Intimidation, Medicine, Persuasion, Religion); Spellcasting; Turn The Faithless; Weapon Proficiency (Simple Weapons; Martial Weapons)</td>
+        <td><b>Paladin Features</b>: Armor Proficiency (Light; Medium; Heavy; Shield); Aura Of Courage; Aura Of Protection; Aura Of Warding; Channel Divinity; Divine Health; Divine Sense; Divine Smite; Extra Attack; Fighting Style (Protection); Fighting Style; Lay On Hands; Nature's Wrath; Oath Of The Ancients; Sacred Oath; Save Proficiency (Wisdom; Charisma); Skill Proficiency (Choose 2 from Athletics, Insight, Intimidation, Medicine, Persuasion, Religion); Spellcasting; Turn The Faithless; Weapon Proficiency (Simple Weapons; Martial Weapons)</td>
         <td><b>Urchin Features</b>: City Secrets; Skill Proficiency (Sleight Of Hand; Stealth); Tool Proficiency (Disguise Kit; Thieves' Tools)</td>
       </tr></table>
 </td>
@@ -108,10 +110,6 @@ var attributes = {
         <td><i>Fighting Style: 1 selection</i></td>
       </tr><tr style="text-align:center">
         <td><i>Sacred Oath: 1 selection</i></td>
-      </tr><tr style="text-align:center">
-        <td>City Secrets: Can travel through a city at twice normal speed</td>
-      </tr><tr style="text-align:center">
-        <td>Linguist: Can create ciphers (DC 20 Intelligence to decode)</td>
       </tr></table>
 </td>
     </tr></table>
@@ -160,7 +158,9 @@ var attributes = {
     </tr><tr style="text-align:center">
       <td>Bulky Armor: Has disadvantage on Stealth</td>
     </tr><tr style="text-align:center">
-      <td>Divine Sense: R60' Can discern the location of celestials, fiends, and undead for 1 rd 4 times per long rest</td>
+      <td>Divine Sense: R60' Can discern the location of celestials, fiends, undead, consecration, and desecration until the end of the next turn 4 times per long rest</td>
+    </tr><tr style="text-align:center">
+      <td>Linguist: Can create ciphers (DC 20 Intelligence to decode)</td>
     </tr></table>
 </td>
   </tr></table>
@@ -181,7 +181,7 @@ var attributes = {
     </tr><tr style="text-align:center">
       <td>      <table id="CombatProfs" style="width:100%">
       <tr style="text-align:center">
-        <td><b>Armor Proficiency</b>: Heavy; Light; Shield</td>
+        <td><b>Armor Proficiency</b>: Heavy; Light; Medium; Shield</td>
         <td><b>Weapon Proficiency</b>: Martial Weapons; Simple Weapons</td>
       </tr></table>
 </td>
@@ -208,7 +208,7 @@ var attributes = {
       </tr><tr style="text-align:center">
         <td><i>Strength Damage Adjustment: -2</i></td>
       </tr><tr style="text-align:center">
-        <td>Divine Smite: Can spend a spell slot after a successful melee attack to inflict +(slot level + 1)d8 HP radiant (maximum 5d8 HP; +1d8 HP vs. undead and fiends)</td>
+        <td>Divine Smite: Can spend a spell slot after a successful melee attack to inflict 1d8 HP radiant plus 1d8 HP per slot level, up to a maximum of 5d8 HP; undead and fiends suffer an additional 1d8 HP</td>
       </tr><tr style="text-align:center">
         <td>Fighting Style (Protection): Can use a reaction and a shield to inflict disadvantage on attacks targeting an adjacent creature</td>
       </tr><tr style="text-align:center">
@@ -370,9 +370,9 @@ var attributes = {
     <tr style="text-align:center">
       <td>Channel Divinity: Can use a Channel Divinity effect once per short rest</td>
     </tr><tr style="text-align:center">
-      <td>Lay On Hands: Can heal 50 hit points per long rest and can use 5 hit points' worth to cure disease or poison</td>
+      <td>Lay On Hands: Can heal 50 hit points per long rest and can use 5 hit points' worth to cure a disease or neutralize a poison</td>
     </tr><tr style="text-align:center">
-      <td>Nature's Wrath: R10' Can use Channel Divinity to create spectral vines that restrain a target (save DC 15 Dexterity or Strength negates)</td>
+      <td>Nature's Wrath: R10' Can use Channel Divinity to create spectral vines that restrain the target (save DC 15 Dexterity or Strength ends)</td>
     </tr><tr style="text-align:center">
       <td>Spellcasting: Can cast spells from the paladin spell list</td>
     </tr></table>

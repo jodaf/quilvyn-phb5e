@@ -205,9 +205,13 @@ var attributes = {
       </tr><tr style="text-align:center">
         <td><i>Dexterity Damage Adjustment: -2</i></td>
       </tr><tr style="text-align:center">
+        <td><i>Improved Duplicity: Invoke Duplicity creates 4 duplicates</i></td>
+      </tr><tr style="text-align:center">
         <td><i>Strength Attack Adjustment: +1</i></td>
       </tr><tr style="text-align:center">
         <td><i>Strength Damage Adjustment: +1</i></td>
+      </tr><tr style="text-align:center">
+        <td>Dampen Elements: R30' Can use a reaction to grant resistance to immediate acid, cold, fire, lightning, or thunder damage</td>
       </tr><tr style="text-align:center">
         <td>Destroy Undead: Turning destroys undead up to CR 4</td>
       </tr><tr style="text-align:center">
@@ -219,9 +223,17 @@ var attributes = {
       </tr><tr style="text-align:center">
         <td>Guided Strike: Can use Channel Divinity to give self +10 attack</td>
       </tr><tr style="text-align:center">
+        <td>Improved Flare: R30' Can use Warding Flare to protect another creature</td>
+      </tr><tr style="text-align:center">
+        <td>Invoke Duplicity: R30' Can use Channel Divinity to create 4 illusionary duplicates, moving each up to 30' each rd to a maximum of 120' away, gaining advantage on attacks when self and duplicate are each within 5' of the target and allowing remote spellcasting for concentration up to 1 min</td>
+      </tr><tr style="text-align:center">
         <td>Turn Undead: R30' Can use Channel Divinity to make undead flee (save DC 18 Wisdom negates) for 1 min</td>
       </tr><tr style="text-align:center">
+        <td>War God's Blessing: R30' Can use a reaction and Channel Divinity to give an ally +10 attack</td>
+      </tr><tr style="text-align:center">
         <td>War Priest: Can use a bonus attack to make an extra weapon attack 4 times per long rest</td>
+      </tr><tr style="text-align:center">
+        <td>Warding Flare: R30' Can use a reaction to inflict disadvantage on a foe attack 4 times per long rest</td>
       </tr><tr style="text-align:center">
         <td>Wrath Of The Storm: Can use a reaction to inflict 2d8 HP lightning or thunder (save Dexterity half) on a successful attacker 4 times per long rest</td>
       </tr></table>
@@ -235,7 +247,7 @@ var attributes = {
     </tr><tr style="text-align:center">
       <td><b>Save</b>: Charisma: 9; Constitution: 0; Dexterity: -2; Intelligence: -1; Strength: 1; Wisdom: 10</td>
     </tr><tr style="text-align:center">
-      <td><b>Save Notes</b>: Avatar Of Battle: Has resistance to nonmagical bludgeoning, piercing, and slashing damage</td>
+      <td><b>Save Notes</b>: Avatar Of Battle: Has resistance to bludgeoning, piercing, and slashing damage from nonmagical weapons</td>
     </tr></table>
 </td>
   </tr></table>
@@ -469,8 +481,6 @@ var attributes = {
     <tr style="text-align:center">
       <td><i>Acolyte Of Nature: Knows 1 druid cantrip</i></td>
     </tr><tr style="text-align:center">
-      <td><i>Improved Duplicity: Invoke Duplicity creates 4 duplicates</i></td>
-    </tr><tr style="text-align:center">
       <td><i>Magic Initiate (Druid): Knows 2 druid cantrips and can cast a chosen D1 spell once per long rest</i></td>
     </tr><tr style="text-align:center">
       <td>Blessed Healer: Casting a healing spell restores 2 + spell level hit points to self</td>
@@ -481,13 +491,11 @@ var attributes = {
     </tr><tr style="text-align:center">
       <td>Channel Divinity: Can use a Channel Divinity effect 3 times per short rest</td>
     </tr><tr style="text-align:center">
-      <td>Charm Animals And Plants: R30' Can use Channel Divinity to charm beasts and plants (save Wisdom negates) for 1 min</td>
+      <td>Charm Animals And Plants: R30' Can use Channel Divinity to charm beasts and plants (save Wisdom negates; taking damage ends) for 1 min</td>
     </tr><tr style="text-align:center">
       <td>Cloak Of Shadows (Trickery Domain): Can use Channel Divinity to make self invisible until the end of the next turn; attacking or casting ends</td>
     </tr><tr style="text-align:center">
       <td>Corona Of Light: Can use an action to emit a 60' bright light that inflicts foe disadvantage on saves vs. fire and radiant spells for 1 min</td>
-    </tr><tr style="text-align:center">
-      <td>Dampen Elements: R30' Can use a reaction to grant resistance to immediate acid, cold, fire, lightning, or thunder damage</td>
     </tr><tr style="text-align:center">
       <td>Destructive Wrath: Can use Channel Divinity to maximize lightning or thunder damage</td>
     </tr><tr style="text-align:center">
@@ -499,19 +507,15 @@ var attributes = {
     </tr><tr style="text-align:center">
       <td>Elemental Adept (Lightning): Spells that inflict lightning damage ignore resistance and treat 1s as 2s on damage dice</td>
     </tr><tr style="text-align:center">
-      <td>Improved Flare: R30' Can use Warding Flare to protect another creature</td>
-    </tr><tr style="text-align:center">
-      <td>Invoke Duplicity: R30' Can use Channel Divinity to create 4 illusionary duplicates, moving each up to 30' each rd to a maximum of 120' away, gaining advantage on attacks when self and duplicate are each within 5' of the target, and allowing remote spellcasting for concentration up to 1 min</td>
-    </tr><tr style="text-align:center">
       <td>Master Of Nature: Can command charmed animals and plants</td>
     </tr><tr style="text-align:center">
-      <td>Potent Spellcasting: +4 HP Cleric cantrip damage</td>
+      <td>Potent Spellcasting: Cleric cantrips inflict +4 HP</td>
     </tr><tr style="text-align:center">
       <td>Preserve Life: R30' Can use Channel Divinity to restore 100 hit points among targets, up to half maximum hit points each</td>
     </tr><tr style="text-align:center">
       <td>Radiance Of The Dawn: R30' Can use Channel Divinity to dispel magical darkness and to inflict 2d10+20 HP radiant (save Constitution half) on foes</td>
     </tr><tr style="text-align:center">
-      <td>Read Thoughts: R60' Can use Channel Divinity to read the target's thoughts (save Wisdom negates and blocks additional uses until a long rest) for 1 min; success allows casting <i>Suggestion</i> on the target with no save</td>
+      <td>Read Thoughts: R60' Can use Channel Divinity to read the target's thoughts (save Wisdom negates and blocks additional attempts on the target until a long rest) for 1 min; success allows casting <i>Suggestion</i> on the target with no save</td>
     </tr><tr style="text-align:center">
       <td>Spellcasting: Can cast spells from the cleric spell list and cast spells marked with [R] using a ritual</td>
     </tr><tr style="text-align:center">
@@ -519,11 +523,7 @@ var attributes = {
     </tr><tr style="text-align:center">
       <td>Thunderbolt Strike: Can cause lightning damage to also push away Large and smaller creatures 10'</td>
     </tr><tr style="text-align:center">
-      <td>Visions Of The Past: Can gain visions about surroundings or a held object via 1 min meditation once per short rest</td>
-    </tr><tr style="text-align:center">
-      <td>War God's Blessing: R30' Can use a reaction and Channel Divinity to give an ally +10 attack</td>
-    </tr><tr style="text-align:center">
-      <td>Warding Flare: R30' Can use a reaction to inflict disadvantage on a foe attack 4 times per long rest</td>
+      <td>Visions Of The Past: Can gain visions about surroundings or a held object via 4 min meditation once per short rest</td>
     </tr></table>
 </td>
   </tr></table>
