@@ -646,7 +646,7 @@ PHB5E.FEATURES_ADDED = {
     'Spells="Minor Illusion" ' +
     'SpellAbility=Intelligence',
   'Speak With Small Beasts':
-    'Section=feature Note="Can communicate simple ideas with small animals"',
+    'Section=skill Note="Can communicate simple ideas with small animals"',
 
   // Class
 
@@ -1079,14 +1079,14 @@ PHB5E.FEATURES_ADDED = {
 
   // Ranger
   // Beast Master
-  'Bestial Fury':'Section=feature Note="Companion can make 2 attacks per rd"',
+  'Bestial Fury':'Section=combat Note="Companion can make 2 attacks per rd"',
   'Exceptional Training':
-    'Section=feature ' +
+    'Section=combat ' +
     // errata removes Dodge and adds magical attacks
     'Note="Can use a bonus action to command companion to Dash, Disengage, or Help instead of Attack/Companion attacks count as magical"',
   "Ranger's Companion":
-    'Section=feature ' +
-    'Note="Companion beast of up to CR 1/4 obeys commands and gains +%{proficiencyBonus} Armor Class, attack, damage, and proficient skills and saving throws"',
+    'Section=combat ' +
+    'Note="Companion beast of up to CR 1/4, with the higher of %{levels.Ranger*4} or its maximum normal hit points, obeys commands and gains +%{proficiencyBonus} Armor Class, attack, damage, and proficient skills and saving throws"',
   'Share Spells':
     'Section=magic ' +
     'Note="R30\' Can have spells cast on self also affect companion"',
@@ -1097,15 +1097,15 @@ PHB5E.FEATURES_ADDED = {
     'Section=combat ' +
     'Note="Has advantage on attacks before the target\'s first turn/Successful surprise attacks are critical hits"',
   'Bonus Proficiencies (Assassin)':
-    'Section=feature Note="Tool Proficiency (Disguise Kit; Poisoner\'s Kit)"',
+    'Section=skill Note="Tool Proficiency (Disguise Kit; Poisoner\'s Kit)"',
   'Death Strike':
     'Section=combat ' +
     'Note="Inflicts double damage on a successful surprise attack (save DC %{8+dexterityModifier+proficiencyBonus} Constitution negates)"',
   'Impostor':
-    'Section=feature ' +
+    'Section=skill ' +
     'Note="Can use unerring mimicry and has advantage on Deception to overcome suspicion"',
   'Infiltration Expertise':
-    'Section=feature ' +
+    'Section=skill ' +
     'Note="Can use a 1-week process to create and adopt a different identity"',
   // Arcane Trickster
   'Mage Hand Legerdemain':
@@ -1129,13 +1129,14 @@ PHB5E.FEATURES_ADDED = {
     'Section=magic ' +
     'Note="Can spend 2 Sorcery Points to add or subtract 1d4 from a target attack, ability check, or save"',
   'Controlled Chaos':
-    'Section=magic Note="Can choose from 2 effects when triggering Wild Magic"',
+    'Section=magic ' +
+    'Note="Can choose from 2 effects when triggering a Wild Magic Surge"',
   'Spell Bombardment':
     'Section=magic ' +
     'Note="Can add another die after rolling the maximum on a spell damage die once per turn"',
   'Tides Of Chaos':
-    'Section=feature ' +
-    'Note="Can gain advantage on an attack, ability, or saving throw once per long rest or Wild Magic Surge"',
+    'Section=combat ' +
+    'Note="Can gain advantage on an attack, ability check, or save once per long rest or Wild Magic Surge"',
   'Wild Magic Surge':
     'Section=magic ' +
     'Note="Casting a spell has a 5% chance of unleashing a random magic effect"',
@@ -1150,12 +1151,12 @@ PHB5E.FEATURES_ADDED = {
     'Note="R60\' Inflicts charmed or frightened and unaware of surroundings (save DC %{spellDifficultyClass.K} Wisdom negates) for concentration up to 1 min once per short rest"',
   'Fey Presence':
     'Section=magic ' +
-    'Note="Can inflict a choice of charmed or frightened (save DC %{spellDifficultyClass.K} Wisdom negates) for 1 rd on all creatures in a 10\' cube once per short rest"',
+    'Note="Can inflict a choice of charmed or frightened (save DC %{spellDifficultyClass.K} Wisdom negates) until the end of the next turn on all creatures in a 10\' cube once per short rest"',
   'Misty Escape':
     'Section=magic ' +
-    'Note="Can use a reaction upon taking damage to teleport 60\' and become invisible for 1 rd once per short rest; attacking or casting ends"',
+    'Note="Can use a reaction upon taking damage to teleport 60\' and become invisible until the start of the next turn once per short rest; attacking or casting ends"',
   // The Great Old One
-  'Awakened Mind':'Section=feature Note="R30\' Can communicate telepathically"',
+  'Awakened Mind':'Section=skill Note="R30\' Can communicate telepathically"',
   'Create Thrall':
     'Section=magic ' +
     'Note="Touch charms an incapacitated humanoid and allows telepathic communication with it"',
@@ -1170,10 +1171,10 @@ PHB5E.FEATURES_ADDED = {
   // School Of Abjuration
   'Abjuration Savant':
     'Section=magic ' +
-    'Note="Can copy abjuration spells into spellbook for half cost"',
+    'Note="Requires half the normal time and cost to copy abjuration spells into spellbook"',
   'Arcane Ward':
     'Section=magic ' +
-    'Note="After a long rest, can cause an abjuration spell to create a ward around self that can absorb %{levels.Wizard*2+intelligenceModifier} hit points; if exhausted, casting another abjuration spell restores 2x the spell level hit points to the ward"',
+    'Note="After a long rest, can cause an abjuration spell to create a ward around self that can absorb %{levels.Wizard*2+intelligenceModifier} HP damage; once these are all used, casting another abjuration spell restores 2x the spell level to the ward"',
   'Improved Abjuration':
     'Section=magic Note="+%{proficiencyBonus} abjuration spell ability checks"',
   'Projected Ward':
@@ -1187,7 +1188,7 @@ PHB5E.FEATURES_ADDED = {
     'Note="R30\' Can teleport self or swap with a willing creature once per long rest or conjuration spell casting"',
   'Conjuration Savant':
     'Section=magic ' +
-    'Note="Can copy conjuration spells into spellbook for half cost"',
+    'Note="Requires half the normal time and cost to copy conjuration spells into spellbook"',
   'Durable Summons':
     'Section=magic Note="Summoned creatures gain 30 temporary HP"',
   'Focused Conjuration':
@@ -1195,11 +1196,11 @@ PHB5E.FEATURES_ADDED = {
   'Minor Conjuration':
     'Section=magic ' +
     // errata adds end upon dealing damage
-    'Note="R10\' Can create a 3\' cube inanimate object weighing up to 10 lb that emits 5\' dim light and lasts for 1 hr or until it takes or deals damage"',
+    'Note="R10\' Can create a 3\' cube inanimate object weighing up to 10 lb that emits a 5\' dim light and lasts for 1 hr or until it takes or deals damage"',
   // School Of Divination
   'Divination Savant':
     'Section=magic ' +
-    'Note="Can copy divination spells into spellbook for half cost"',
+    'Note="Requires half the normal time and cost to copy divination spells into spellbook"',
   'Expert Divination':
     'Section=magic ' +
     'Note="Casting a divination spell restores a lower-level expended slot of up to level 5"',
@@ -1207,17 +1208,17 @@ PHB5E.FEATURES_ADDED = {
     'Section=magic Note="Can use Portent 3 times per long rest"',
   'Portent':
     'Section=magic ' +
-    'Note="Can replace a visible target\'s attack, ability, or saving throw with one of two pre-rolled values %{magicNotes.greaterPortent?3:2} times per long rest"',
+    'Note="Can replace a visible target\'s attack, ability check, or save with one of two pre-rolled values %{magicNotes.greaterPortent?3:2} times per long rest"',
   'The Third Eye':
     'Section=magic ' +
-    'Note="Can use an action to gain 60\' darkvision, 60\' ethereal sight, the ability to read any language, or 10\' invisibility sight until the next rest, once each per short rest"',
+    'Note="Can use an action once per short rest to gain 60\' darkvision, 60\' ethereal sight, the ability to read any language, or 10\' invisibility sight until the next rest"',
   // School Of Enchantment
   'Alter Memories':
     'Section=magic ' +
-    'Note="Chosen target becomes unaware of self charm; can also inflict forgetfulness of the preceding %{charismaModifier+1>?1} hr (save DC %{spellDifficultyClass.W} Intelligence negates)"',
+    'Note="Chosen target becomes unaware of self charm; can also cause it to forget up to %{charismaModifier+1>?1} hr of the time spent charmed (save DC %{spellDifficultyClass.W} Intelligence negates)"',
   'Enchantment Savant':
     'Section=magic ' +
-    'Note="Can copy enchantment spells into spellbook for half cost"',
+    'Note="Requires half the normal time and cost to copy enchantment spells into spellbook"',
   'Hypnotic Gaze':
     'Section=magic ' +
     'Note="Can daze an adjacent creature (save DC %{spellDifficultyClass.W} Wisdom negates) while maintained once per target per long rest"',
@@ -1229,7 +1230,7 @@ PHB5E.FEATURES_ADDED = {
   // School Of Illusion
   'Illusion Savant':
     'Section=magic ' +
-    'Note="Can copy illusion spells into spellbook for half cost"',
+    'Note="Requires half the normal time and cost to copy illusion spells into spellbook"',
   'Illusory Reality':
     'Section=magic ' +
     'Note="Can use a bonus action to make a harmless object in a self illusion real for 1 min"',
@@ -1254,7 +1255,7 @@ PHB5E.FEATURES_ADDED = {
     'Note="Has resistance to necrotic damage and immunity to maximum hit point reduction"',
   'Necromancy Savant':
     'Section=magic ' +
-    'Note="Can copy necromancy spells into spellbook for half cost"',
+    'Note="Requires half the normal time and cost to copy necromancy spells into spellbook"',
   'Undead Thralls':
     'Section=magic ' +
     'Note="Knows the <i>Animate Dead</i> spell; casting it animates an additional corpse and gives corpses +%{levels.Wizard} hit points and +%{proficiencyBonus} HP weapon damage" ' +
@@ -1273,7 +1274,7 @@ PHB5E.FEATURES_ADDED = {
     'Spells=Polymorph',
   'Transmutation Savant':
     'Section=magic ' +
-    'Note="Can copy transmutation spells into spellbook for half cost"',
+    'Note="Requires half the normal time and cost to copy transmutation spells into spellbook"',
   "Transmuter's Stone":
     'Section=magic ' +
     'Note="Can use an 8-hr process to create a stone that gives a choice of 60\' darkvision, +10\' Speed, proficiency on Constitution saves, or resistance to a chosen energy damage, and can change the effect of a possessed stone when casting a transmutation spell"',
@@ -1290,10 +1291,8 @@ PHB5E.FEATURES_ADDED = {
     'Note="Knows how to contact a liaison to criminal networks"',
   'Discovery':'Section=feature Note="Knows a unique and powerful truth"',
   'False Identity':
-    'Section=feature,skill ' +
-    'Note=' +
-      '"Has a documented second identity",' +
-      '"Can forge familiar documents"',
+    'Section=skill ' +
+    'Note="Has a documented second identity and can forge familiar documents"',
   'Guild Membership':
     'Section=feature ' +
     'Note="Can receive assistance from fellow guild members/Must pay a 5 gp monthly guild fee"',
@@ -1384,7 +1383,7 @@ PHB5E.FEATURES_ADDED = {
       '"+1 Strength",' +
       '"Suffers -3 HP damage from nonmagical bludgeoning, piercing, and slashing weapons when wearing heavy armor"',
   'Inspiring Leader':
-    'Section=feature ' +
+    'Section=combat ' +
     'Note="R30\' 10-min speech gives 6 allies %{level+charismaModifier} temporary hit points once per target per short rest"',
   'Keen Mind':
     'Section=ability,feature ' +
@@ -1403,8 +1402,8 @@ PHB5E.FEATURES_ADDED = {
       '"Language (Choose 3 from any)",' +
       '"Can create ciphers (DC %{intelligence+proficiencyBonus} Intelligence to decode)"',
   'Lucky':
-    'Section=feature ' +
-    'Note="Can gain advantage on an attack, ability, or saving throw or inflict foe disadvantage an attack on self 3 times per long rest"',
+    'Section=combat ' +
+    'Note="Can gain advantage on an attack, ability check, or save or inflict foe disadvantage an attack on self 3 times per long rest"',
   'Mage Slayer':
     'Section=combat,save ' +
     'Note=' +
