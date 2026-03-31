@@ -263,19 +263,19 @@ var attributes = {
   </tr><tr style="text-align:center">
     <td><b>Spells</b>:     <table id="Spells" style="width:100%">
     <tr style="text-align:left">
-      <td>Animal Friendship (D1 Ench): R30' Convinces target beast that self is harmless (save Wisdom negates; Intelligence 4 or higher immune) for 1 day or until harmed [+Level affects +1 target]</td>
+      <td>Animal Friendship (D1 Ench): R30' Convinces target beast that self is harmless (save Wisdom negates; Intelligence 4 or higher immune) for 24 hr or until harmed [+Level affects +1 target]</td>
     </tr><tr style="text-align:left">
-      <td>Animal Messenger (D2 Ench): R30' Tiny beast target moves to deliver a 25-word message to a described recipient for 1 day [+Level extends the duration +2 days] [R]</td>
+      <td>Animal Messenger (D2 Ench): R30' Tiny beast target moves to deliver a 25-word message to a described recipient for 24 hr [+Level extends the duration +48 hr] [R]</td>
     </tr><tr style="text-align:left">
-      <td>Animal Shapes (D8 Tran): R30' Willing targets become CR 4, Large or smaller beasts for concentration up to 1 day or until reduced to 0 hit points</td>
+      <td>Animal Shapes (D8 Tran): R30' Willing targets become CR 4, Large or smaller beasts for concentration up to 24 hr or until reduced to 0 hit points</td>
     </tr><tr style="text-align:left">
       <td>Antilife Shell (D5 Abju): 10' radius prevents the passage of living creatures for concentration up to 1 hr</td>
     </tr><tr style="text-align:left">
-      <td>Antipathy/Sympathy (D8 Ench): R60' Target object or 200' cubic area repels or attracts specified creatures for 10 days</td>
+      <td>Antipathy/Sympathy (D8 Ench): R60' Target creature, object, or 200' cubic area repels or attracts specified creature type for 10 days</td>
     </tr><tr style="text-align:left">
       <td>Awaken (D5 Tran): Touched beast or plant gains Intelligence 10, speech, and movement and becomes charmed for 30 days or until harmed</td>
     </tr><tr style="text-align:left">
-      <td>Barkskin (D2 Tran): Willing touched gains AC 16 for concentration up to 1 hr</td>
+      <td>Barkskin (D2 Tran): Willing touched gains Armor Class 16 for concentration up to 1 hr</td>
     </tr><tr style="text-align:left">
       <td>Beast Sense (D2 Divi): Self can perceive through a touched willing beast's senses for concentration up to 1 hr [R]</td>
     </tr><tr style="text-align:left">
@@ -291,7 +291,7 @@ var attributes = {
     </tr><tr style="text-align:left">
       <td>Commune With Nature (D5 Divi): Reveals 3 facts about nature within 3 miles, or within 300' when underground [R]</td>
     </tr><tr style="text-align:left">
-      <td>Confusion (D4 Ench): R90' Creatures in a 10' radius randomly: 10% wander; 50% do nothing; 20% attack an adjacent creature; 20% act normally (save Wisdom negates) for concentration up to 1 min [+Level increases the radius by 5']</td>
+      <td>Confusion (D4 Ench): R90' Creatures in a 10' radius randomly: 10% wander; 50% do nothing; 20% attack an adjacent creature; 20% act normally (save Wisdom ends) for concentration up to 1 min [+Level increases the radius by 5']</td>
     </tr><tr style="text-align:left">
       <td>Conjure Animals (D3 Conj): R60' Summons a choice of 1, 2, 4, or 8 obedient CR 2, 1, half, or quarter fey spirits in beast form for concentration up to 1 hr [+Level doubles, triples, or quadruples the number of animals at level 5, 7, or 9]</td>
     </tr><tr style="text-align:left">
@@ -303,13 +303,13 @@ var attributes = {
     </tr><tr style="text-align:left">
       <td>Conjure Woodland Beings (D4 Conj): R60' Summons a choice of 1, 2, 4, or 8 obedient CR 2, 1, half, or quarter fey creatures for concentration up to 1 hr [+Level doubles or triples the number of creatures at level 6 or 8]</td>
     </tr><tr style="text-align:left">
-      <td>Contagion (D5 Necr): Touched suffers poisoned (save Constitution each turn; 3 successes ends, and 3 failures inflict a choice of disease for 7 days)</td>
+      <td>Contagion (D5 Necr): Touch inflicts poisoned (save Constitution each turn; 3 successes ends, and 3 failures inflict a choice of disease for 7 days)</td>
     </tr><tr style="text-align:left">
       <td>Control Water (D4 Tran): R300' Water in a 100' cube rises 20', parts, redirects, or forms a whirlpool for concentration up to 10 min</td>
     </tr><tr style="text-align:left">
-      <td>Control Weather (D8 Tran): Modifies seasonal weather in a 5 mile radius for concentration up to 8 hr</td>
+      <td>Control Weather (D8 Tran): Adjusts temperature, wind, and precipitation in a 5 mile radius for concentration up to 8 hr</td>
     </tr><tr style="text-align:left">
-      <td>Create Food And Water (D3 [Circle Of The Land (Desert)] Conj): R30' Creates 45 lb of food and 30 gallons of water</td>
+      <td>Create Food And Water (D3 [Circle Of The Land (Desert)] Conj): R30' Creates 45 lb of food that lasts for 24 hr and 30 gallons of water</td>
     </tr><tr style="text-align:left">
       <td>Create Or Destroy Water (D1 Tran): R30' Creates or destroys 10 gallons of water or fog in a 30' cube [+Level affects +10 gallons or a +5' cube]</td>
     </tr><tr style="text-align:left">
@@ -323,7 +323,7 @@ var attributes = {
     </tr><tr style="text-align:left">
       <td>Detect Poison And Disease (D1 Divi): R30' Reveals poison, poisonous creatures, and diseases for concentration up to 10 min [R]</td>
     </tr><tr style="text-align:left">
-      <td>Dispel Magic (D3 Abju): R120' Ends the effects on the target of a spell up to level 3, and successful DC 10 + spell level checks end each higher-level spell [+Level ends any spell of equal or lesser level]</td>
+      <td>Dispel Magic (D3 Abju): R120' Ends the effects on the target of spells up to level 3, and successful DC 10 + spell level checks end each higher-level spell [+Level ends any spell of equal or lesser level]</td>
     </tr><tr style="text-align:left">
       <td>Dominate Beast (D4 Ench): R60' Target beast obeys telepathic commands (save Wisdom negates; damage allows another save) for concentration up to 1 min [+Level extends the duration to 10 min, 1 hr, or 8 hr at level 5, 6, or 7]</td>
     </tr><tr style="text-align:left">
@@ -333,9 +333,9 @@ var attributes = {
     </tr><tr style="text-align:left">
       <td>Enhance Ability (D2 Tran): Touched gains advantage on chosen ability checks for concentration up to 1 hr; Constitution also gives 2d6 temporary HP, Strength doubles carrying capacity, and Dexterity negates damage from a 20' fall [+Level affects +1 target]</td>
     </tr><tr style="text-align:left">
-      <td>Entangle (D1 Conj): R90' 20' sq ensnares creatures (save Strength negates) for concentration up to 1 min</td>
+      <td>Entangle (D1 Conj): R90' 20' sq ensnares creatures (save Strength ends) for concentration up to 1 min</td>
     </tr><tr style="text-align:left">
-      <td>Faerie Fire (D1 Evoc): R60' Objects in a 20' cube glow, giving foes advantage on attacks (save Dexterity negates), for concentration up to 1 min</td>
+      <td>Faerie Fire (D1 Evoc): R60' Objects in a 20' cube glow, giving their foes advantage on attacks (save Dexterity negates), for concentration up to 1 min</td>
     </tr><tr style="text-align:left">
       <td>Feeblemind (D8 Ench): R150' Target suffers 4d6 HP psychic and reduction of Charisma and Intelligence to 1 (save Intelligence HP only; failure allows additional saves every 30 days)</td>
     </tr><tr style="text-align:left">
@@ -355,37 +355,37 @@ var attributes = {
     </tr><tr style="text-align:left">
       <td>Foresight (D9 Divi): Touched gains immunity to surprise and advantage on attack, ability, and saving throws, and foes suffer disadvantage on attacks, for 8 hr</td>
     </tr><tr style="text-align:left">
-      <td>Freedom Of Movement (D4 Abju): Touched gains immunity to movement impediments and can escape from restraints for 1 hr</td>
+      <td>Freedom Of Movement (D4 Abju): Touched gains immunity to movement impediments and can escape from nonmagical restraints for 1 hr</td>
     </tr><tr style="text-align:left">
-      <td>Geas (D5 Ench): R60' Target obeys self instructions (save Wisdom negates) for 30 days [+Level extends the duration to 1 yr or permanently at level 7 or 9]</td>
+      <td>Geas (D5 Ench): R60' Target obeys self instructions (save Wisdom negates) for 30 days [+Level extends the duration to 1 year or permanently at level 7 or 9]</td>
     </tr><tr style="text-align:left">
       <td>Giant Insect (D4 Tran): R30' 10 centipedes, 5 wasps, 3 spiders, or 1 scorpion become giant and obey commands for concentration up to 10 min</td>
     </tr><tr style="text-align:left">
-      <td>Goodberry (D1 Tran): Creates 10 berries that each heal 1 HP and provide food for 1 day</td>
+      <td>Goodberry (D1 Tran): Creates 10 berries that each heal 1 hit point and provide food for 1 day</td>
     </tr><tr style="text-align:left">
       <td>Grasping Vine (D4 Conj): R30' 30' vine pulls the target 20' each rd (save Dexterity negates) for concentration up to 1 min</td>
     </tr><tr style="text-align:left">
-      <td>Greater Restoration (D5 Abju): Touched recovers from exhausted, charmed, petrified, cursed, or ability damage or regains hit point maximum</td>
+      <td>Greater Restoration (D5 Abju): Touched recovers from exhausted, charmed, petrified, cursed, or ability reduction or regains hit point maximum</td>
     </tr><tr style="text-align:left">
       <td>Guidance (D0 Divi): Touched gains +1d4 on 1 ability check within concentration up to 1 min</td>
     </tr><tr style="text-align:left">
-      <td>Gust Of Wind (D2 Evoc): 60'x10' wind pushes 15' (save Strength negates), inflicts half movement, and has a 50% chance of extinguishing flames for concentration up to 1 min</td>
+      <td>Gust Of Wind (D2 Evoc): 60'x10' wind pushes 15' (save Strength negates), inflicts half movement, disperses gas and vapor, extinguishes flames (50% chance for protected flames) for concentration up to 1 min</td>
     </tr><tr style="text-align:left">
-      <td>Hallucinatory Terrain (D4 Illu): R300' Creates a 150' cube terrain illusion (Investigation detects) for 1 day</td>
+      <td>Hallucinatory Terrain (D4 Illu): R300' Creates a 150' cube terrain illusion (Investigation detects) for 24 hr</td>
     </tr><tr style="text-align:left">
-      <td>Hallucinatory Terrain (D4 [Circle Of The Land (Desert)] Illu): R300' Creates a 150' cube terrain illusion (Investigation detects) for 1 day</td>
+      <td>Hallucinatory Terrain (D4 [Circle Of The Land (Desert)] Illu): R300' Creates a 150' cube terrain illusion (Investigation detects) for 24 hr</td>
     </tr><tr style="text-align:left">
       <td>Heal (D6 Evoc): R60' Target regains 70 hit points and recovers from blinded, deafened, and diseased [+Level restores +10 hit points]</td>
     </tr><tr style="text-align:left">
       <td>Healing Word (D1 Evoc): R60' Target regains 1d4+2 hit points [+Level restores +1d4 hit points]</td>
     </tr><tr style="text-align:left">
-      <td>Heat Metal (D2 Tran): R60' Touching the target metal inflicts 2d8 HP fire, plus attack and ability disadvantage if the the target is worn or held (save Constitution allows dropping), for concentration up to 1 min [+Level inflicts +1d8 HP]</td>
+      <td>Heat Metal (D2 Tran): R60' Touching the target metal inflicts 2d8 HP fire, plus attack and ability disadvantage if the the target is worn or held (save Constitution negates disadvantage)), for concentration up to 1 min [+Level inflicts +1d8 HP]</td>
     </tr><tr style="text-align:left">
       <td>Heroes' Feast (D6 Conj): R30' 12 diners recover from disease and poison and gain immunity to poison and fright, advantage on Wisdom, and +2d10 hit points and maximum hit points for 24 hr</td>
     </tr><tr style="text-align:left">
-      <td>Hold Person (D2 Ench): R60' Immobilizes the target humanoid (save Wisdom ends) for concentration up to 1 min [+Level affects +1 target]</td>
+      <td>Hold Person (D2 Ench): R60' Paralyzes the target humanoid (save Wisdom ends) for concentration up to 1 min [+Level affects +1 target]</td>
     </tr><tr style="text-align:left">
-      <td>Ice Storm (D4 Evoc): R300' 20' radius inflicts 2d8 HP bludgeoning and 4d6 HP cold (save Dexterity half) and becomes difficult terrain for 1 rd [+Level inflicts +1d8 HP bludgeoning]</td>
+      <td>Ice Storm (D4 Evoc): R300' 20' radius inflicts 2d8 HP bludgeoning and 4d6 HP cold (save Dexterity half) and becomes difficult terrain until the end of the next turn [+Level inflicts +1d8 HP bludgeoning]</td>
     </tr><tr style="text-align:left">
       <td>Insect Plague (D5 Conj): R300' 20' radius inflicts 4d10 HP piercing (save Constitution half) for concentration up to 10 min [+Level inflicts +1d10 HP]</td>
     </tr><tr style="text-align:left">
@@ -397,9 +397,9 @@ var attributes = {
     </tr><tr style="text-align:left">
       <td>Locate Animals Or Plants (D2 Divi): Reveals the location within 5 miles of a specified kind of beast or plant [R]</td>
     </tr><tr style="text-align:left">
-      <td>Locate Creature (D4 Divi): Reveals the location of a specified creature or species within 1000' for concentration up to 1 hr; running water blocks</td>
+      <td>Locate Creature (D4 Divi): Reveals the location of a specified creature or species within 1000' for concentration up to 1 hr; running water blocks the spell</td>
     </tr><tr style="text-align:left">
-      <td>Locate Object (D2 Divi): Reveals the location of a specified object or type within 1000' for concentration up to 10 min; lead blocks</td>
+      <td>Locate Object (D2 Divi): Reveals the location of a specified object or type within 1000' for concentration up to 10 min; lead blocks the spell</td>
     </tr><tr style="text-align:left">
       <td>Longstrider (D1 Tran): Touched gains +10' Speed for 1 hr [+Level affects +1 target]</td>
     </tr><tr style="text-align:left">
@@ -407,7 +407,7 @@ var attributes = {
     </tr><tr style="text-align:left">
       <td>Meld Into Stone (D3 Tran): Self steps into rock, losing sight and muffling hearing but allowing casting spells on self, for up to 8 hr [R]</td>
     </tr><tr style="text-align:left">
-      <td>Mending (D0 Tran): Touch repairs a break or tear up to 1 ft</td>
+      <td>Mending (D0 Tran): Touch repairs a break or tear up to 1'</td>
     </tr><tr style="text-align:left">
       <td>Mirage Arcane (D7 Illu): Creates 1 mile sq of illusionary terrain for 10 days</td>
     </tr><tr style="text-align:left">
@@ -415,13 +415,13 @@ var attributes = {
     </tr><tr style="text-align:left">
       <td>Move Earth (D6 Tran): R120' Reshapes a 40' cube of earth each 10 minutes for concentration up to 2 hr</td>
     </tr><tr style="text-align:left">
-      <td>Pass Without Trace (D2 Abju): Targets in a 30' radius gain +10 Stealth and become trackable only by magic for concentration up to 1 hr</td>
+      <td>Pass Without Trace (D2 Abju): Targets in a 30' radius gain +10 Stealth and leave no tracks for concentration up to 1 hr</td>
     </tr><tr style="text-align:left">
-      <td>Planar Binding (D5 Abju): R60' Binds a celestial, elemental, fey, or fiend to service (save Charisma negates) for 1 day [+Level extends the duration to 10, 30, 180, or 366 days at level 6, 7, 8, or 9]</td>
+      <td>Planar Binding (D5 Abju): R60' Binds a celestial, elemental, fey, or fiend to service (save Charisma negates) for 24 hr [+Level extends the duration to 10, 30, 180, or 366 days at level 6, 7, 8, or 9]</td>
     </tr><tr style="text-align:left">
       <td>Plane Shift (D7 Conj): Target (save Charisma negates) or self and 8 willing others travel to another plane</td>
     </tr><tr style="text-align:left">
-      <td>Plant Growth (D3 Tran): R150' Causes plants in a 100' radius to overgrow or enriches a 1/2 mile radius for 1 year</td>
+      <td>Plant Growth (D3 Tran): R150' Causes plants in a 100' radius to overgrow, slowing movement to 1/4 Speed, or enriches a 1/2 mile radius for 1 year</td>
     </tr><tr style="text-align:left">
       <td>Poison Spray (D0 Conj): R10' Inflicts 2d12 HP poison (save Constitution negates)</td>
     </tr><tr style="text-align:left">
@@ -433,11 +433,11 @@ var attributes = {
     </tr><tr style="text-align:left">
       <td>Protection From Energy (D3 [Circle Of The Land (Desert)] Abju): Touched gains resistance to a choice of acid, cold, fire, lightning, or thunder damage for concentration up to 1 hr</td>
     </tr><tr style="text-align:left">
-      <td>Protection From Poison (D2 Abju): Touched recovers from 1 poison and gains advantage on saves vs. poison and resistance to poison damage for 1 hr</td>
+      <td>Protection From Poison (D2 Abju): Touched recovers from 1 poison and gains advantage on saves vs. being poisoned and resistance to poison damage for 1 hr</td>
     </tr><tr style="text-align:left">
       <td>Purify Food And Drink (D1 Tran): R10' Removes poison and disease from nonmagical food and drink in a 5' radius [R]</td>
     </tr><tr style="text-align:left">
-      <td>Regenerate (D7 Tran): Touched regains 4d8+15 HP, plus 1 HP per rd for 1 hr, and reattaches or regrows severed parts after 2 min</td>
+      <td>Regenerate (D7 Tran): Touched regains 4d8+15 hit points, plus 1 hit point per rd for 1 hr, and reattaches or regrows severed parts after 2 min</td>
     </tr><tr style="text-align:left">
       <td>Reincarnate (D5 Tran): Resurrects the willing soul of a touched corpse in a new body</td>
     </tr><tr style="text-align:left">
@@ -445,11 +445,11 @@ var attributes = {
     </tr><tr style="text-align:left">
       <td>Reverse Gravity (D7 Tran): R100' Items in a 50' radius fall upward for concentration up to 1 min</td>
     </tr><tr style="text-align:left">
-      <td>Scrying (D5 Divi): Self sees and hears a chosen target (save Wisdom, modified by degree of familiarity, negates for 24 hr) for concentration up to 10 min</td>
+      <td>Scrying (D5 Divi): Self sees and hears a chosen target (save Wisdom, modified by degree of familiarity, negates for 24 hr) or known location for concentration up to 10 min</td>
     </tr><tr style="text-align:left">
-      <td>Shapechange (D9 Tran): Polymorphs self into a familiar living creature of equal or lesser CR for concentration up to 1 hr or until reduced to 0 HP</td>
+      <td>Shapechange (D9 Tran): Allows self to polymorph repeatedly into a familiar living creature of equal or lesser CR, gaining the hit points and hit dice of that creature, for concentration up to 1 hr or until reduced to 0 HP</td>
     </tr><tr style="text-align:left">
-      <td>Shillelagh (D0 Tran): Held club inflicts +6 magical attacks and 1d8+2 HP damage for 1 min</td>
+      <td>Shillelagh (D0 Tran): Held club gains +6 magical attacks and inflicts 1d8+2 HP damage for 1 min</td>
     </tr><tr style="text-align:left">
       <td>Silence (D2 [Circle Of The Land (Desert)] Illu): R120' 20' radius blocks sound for concentration up to 10 min [R]</td>
     </tr><tr style="text-align:left">
@@ -459,7 +459,7 @@ var attributes = {
     </tr><tr style="text-align:left">
       <td>Speak With Plants (D3 Tran): Self can talk with and command plants for 10 min</td>
     </tr><tr style="text-align:left">
-      <td>Spike Growth (D2 Tran): R150' 20' radius becomes difficult terrain and inflicts 2d4 HP per 5' movement for concentration up to 10 min</td>
+      <td>Spike Growth (D2 Tran): R150' 20' radius becomes difficult terrain and inflicts 2d4 HP piercing per 5' movement for concentration up to 10 min</td>
     </tr><tr style="text-align:left">
       <td>Stone Shape (D4 Tran): Reshapes touched 5' cube of stone</td>
     </tr><tr style="text-align:left">
@@ -467,7 +467,7 @@ var attributes = {
     </tr><tr style="text-align:left">
       <td>Storm Of Vengeance (D9 Conj): 360' radius within sight inflicts 2d6 HP thunder and deafness (save Constitution negates), then 1d6 HP acid, then 10d6 HP lightning (6 targets; save Dexterity half), then 2d6 HP bludgeoning, then 1d6 cold per rd and no ranged attacks for concentration up to 1 min</td>
     </tr><tr style="text-align:left">
-      <td>Sunbeam (D6 Evoc): 60' line inflicts 6d8 HP radiant and blindness for 1 rd (save Constitution half HP only) for concentration up to 1 min</td>
+      <td>Sunbeam (D6 Evoc): 5'x60' line inflicts 6d8 HP radiant and blindness until the start of the next turn (save Constitution half HP only) each rd for concentration up to 1 min</td>
     </tr><tr style="text-align:left">
       <td>Sunburst (D8 Evoc): R150' 60' radius inflicts 12d6 HP and blindness (save Constitution half HP only; an additional save each turn ends blindness) for 1 min</td>
     </tr><tr style="text-align:left">
@@ -475,29 +475,29 @@ var attributes = {
     </tr><tr style="text-align:left">
       <td>Thunderwave (D1 Evoc): 15' cube inflicts 2d8 HP thunder and pushes 10' (save Constitution half HP only) [+Level inflicts +1d8 HP]</td>
     </tr><tr style="text-align:left">
-      <td>Transport Via Plants (D6 Conj): R10' Allows creatures to teleport from a large plant target to another for 1 rd</td>
+      <td>Transport Via Plants (D6 Conj): R10' Allows creatures to teleport from a Large plant target to another for 1 rd</td>
     </tr><tr style="text-align:left">
-      <td>Tree Stride (D5 Conj): Self may teleport 500' between like trees once per rd for concentration up to 1 min</td>
+      <td>Tree Stride (D5 Conj): Allows self to teleport 500' between like trees once per rd for concentration up to 1 min</td>
     </tr><tr style="text-align:left">
-      <td>True Resurrection (D9 Necr): Restores life and full hit points to and removes all diseases, poisons, wounds, and curses from a willing touched or named 200-year-old corpse</td>
+      <td>True Resurrection (D9 Necr): Restores life and full hit points to and removes all diseases, poisons, wounds, and curses from a willing touched corpse or named creature dead up to 200 years</td>
     </tr><tr style="text-align:left">
       <td>Tsunami (D8 Conj): 300'x300'x50' wall of water within sight inflicts 6d10 HP bludgeoning (save Strength half); it moves away 50' per rd, reducing its height by 50' and its damage by 1d10 HP each rd, for concentration up to 6 rd</td>
     </tr><tr style="text-align:left">
       <td>Wall Of Fire (D4 Evoc): R120' Creates a 60'x20'x1' wall or a 20'x20'x1' ring that inflicts 5d8 HP fire (save Dexterity half) within 10' of a chosen side for concentration up to 1 min [+Level inflicts +1d8 HP]</td>
     </tr><tr style="text-align:left">
-      <td>Wall Of Stone (D5 Evoc): R120' Creates 10 10'x10'x6" or 10'x20'x3" panels for concentration up to 10 min</td>
+      <td>Wall Of Stone (D5 Evoc): R120' Creates 10 10'x10'x6" or 10'x20'x3" stone panels, with Armor Class 15 and 30 hit points each, for concentration up to 10 min; concentrating for 10 min makes the wall permanent</td>
     </tr><tr style="text-align:left">
-      <td>Wall Of Stone (D5 [Circle Of The Land (Desert)] Evoc): R120' Creates 10 10'x10'x6" or 10'x20'x3" panels for concentration up to 10 min</td>
+      <td>Wall Of Stone (D5 [Circle Of The Land (Desert)] Evoc): R120' Creates 10 10'x10'x6" or 10'x20'x3" stone panels, with Armor Class 15 and 30 hit points each, for concentration up to 10 min; concentrating for 10 min makes the wall permanent</td>
     </tr><tr style="text-align:left">
-      <td>Wall Of Thorns (D6 Conj): R120' Creates a 60'x10'x5' wall or a 20'x20'x5' ring that inflicts 7d8 HP piercing (save Dexterity half) initially, plus half Speed and 7d8 HP slashing to creatures passing through (save Dexterity half) for concentration up to 10 min [+Level inflicts +1d8 HP]</td>
+      <td>Wall Of Thorns (D6 Conj): R120' Creates a 60'x10'x5' wall or a 20'x20'x5' ring that inflicts 7d8 HP piercing (save Dexterity half) initially, plus one-quarter Speed and 7d8 HP slashing to creatures passing through (save Dexterity half) for concentration up to 10 min [+Level inflicts +1d8 HP]</td>
     </tr><tr style="text-align:left">
       <td>Water Breathing (D3 Tran): R30' 10 targets can breathe underwater for 24 hr [R]</td>
     </tr><tr style="text-align:left">
       <td>Water Walk (D3 Tran): R30' 10 targets can traverse liquids for 1 hr [R]</td>
     </tr><tr style="text-align:left">
-      <td>Wind Walk (D6 Tran): R30' Self and 10 others can become gaseous, gaining a 300' per rd fly Speed and resistance to nonmagical weapons, at will for 8 hr; converting to or from gas requires 1 min of incapacitation</td>
+      <td>Wind Walk (D6 Tran): R30' Self and 10 others can become gaseous, gaining a 300' fly Speed and resistance to nonmagical weapons, at will for 8 hr; converting to or from gas inflicts incapacitation for 1 min</td>
     </tr><tr style="text-align:left">
-      <td>Wind Wall (D3 Evoc): R120' Creates a 50'x15'x1' area that inflicts 3d8 HP bludgeoning (save Strength half) and deflects lightweight creatures and objects for concentration up to 1 min</td>
+      <td>Wind Wall (D3 Evoc): R120' Creates a 50'x15'x1' area that inflicts 3d8 HP bludgeoning (save Strength half) and deflects lightweight creatures, objects, and projectiles for concentration up to 1 min</td>
     </tr></table>
 </td>
   </tr><tr style="text-align:center">

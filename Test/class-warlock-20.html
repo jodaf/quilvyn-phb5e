@@ -167,7 +167,7 @@ var attributes = {
     </tr><tr style="text-align:center">
       <td>Eyes Of The Rune Keeper: Can read all writing</td>
     </tr><tr style="text-align:center">
-      <td>Witch Sight: R30' Sees the true form of shapechangers and creatures concealed by illusion or transformation</td>
+      <td>Witch Sight: Has 30' Truesight</td>
     </tr></table>
 </td>
   </tr></table>
@@ -273,19 +273,19 @@ var attributes = {
   </tr><tr style="text-align:center">
     <td><b>Spells</b>:     <table id="Spells" style="width:100%">
     <tr style="text-align:left">
-      <td>Alter Self (K2 [Master Of Myriad Forms] Tran): Self becomes aquatic, changes appearance, or gains magic natural weapons with +1 attack and 1d6+ HP damage, for concentration up to 1 hr</td>
+      <td>Alter Self (K2 [Master Of Myriad Forms] Tran): Self becomes aquatic, changes appearance, or gains magic natural weapons with +8 attack and 1d6+2 HP damage, for concentration up to 1 hr</td>
     </tr><tr style="text-align:left">
       <td>Arcane Eye (K4 [Visions Of Distant Realms] Divi): R30' Self sees with darkvision through a remote invisible eye that can move 30' per rd for concentration up to 1 hr</td>
     </tr><tr style="text-align:left">
       <td>Bane (K1 [Thief Of Five Fates] Ench): R30' 3 targets suffer -1d4 on attacks and saving throws (save Charisma negates) for concentration up to 1 min [+Level affects +1 target]</td>
     </tr><tr style="text-align:left">
-      <td>Bestow Curse (K3 [Sign Of Ill Omen] Necr): Touched suffers a choice of disadvantage on specified ability rolls, disadvantage on attacks on self, requiring a successful Wisdom save to take any action, or +1d8 HP necrotic from self attacks (save Wisdom negates) for concentration up to 1 min [+Level extends the maximum duration to 10 min, 8 hr, 24 hr, or permanently at level 4, 5, 7, or 9]</td>
+      <td>Bestow Curse (K3 [Sign Of Ill Omen] Necr): Touched suffers a choice of disadvantage on specified ability rolls, disadvantage on attacks on self, requiring a successful Wisdom save to take any action, or +1d8 HP necrotic from self attacks (save Wisdom negates) for concentration up to 1 min [+Level extends the maximum duration to 10 min, 8 hr, 24 hr, or permanently at level 4, 5, 7, or 9; levels above 4 require no concentration]</td>
     </tr><tr style="text-align:left">
       <td>Chill Touch (K0 Necr): R120' Ranged spell inflicts 4d8 HP necrotic and target cannot regain hit points for 1 rd; undead also suffer disadvantage vs. self attack for 1 rd</td>
     </tr><tr style="text-align:left">
       <td>Compulsion (K4 [Bewitching Whispers] Ench): R30' Self controls target movement direction (save Wisdom ends) for concentration up to 1 min</td>
     </tr><tr style="text-align:left">
-      <td>Confusion (K4 [Dreadful Word] Ench): R90' Creatures in a 10' radius randomly: 10% wander; 50% do nothing; 20% attack an adjacent creature; 20% act normally (save Wisdom negates) for concentration up to 1 min [+Level increases the radius by 5']</td>
+      <td>Confusion (K4 [Dreadful Word] Ench): R90' Creatures in a 10' radius randomly: 10% wander; 50% do nothing; 20% attack an adjacent creature; 20% act normally (save Wisdom ends) for concentration up to 1 min [+Level increases the radius by 5']</td>
     </tr><tr style="text-align:left">
       <td>Conjure Elemental (K5 [Minions Of Chaos] Conj): R90' Summons an obedient environment-appropriate CR 5 elemental for 1 hr; loss of concentration makes it hostile [+Level increases the CR by 1]</td>
     </tr><tr style="text-align:left">
@@ -303,21 +303,21 @@ var attributes = {
     </tr><tr style="text-align:left">
       <td>False Life (K1 [Fiendish Vigor] Necr): Self gains 1d4+4 temporary hit points for 1 hr [+Level gives +5 temporary hit points]</td>
     </tr><tr style="text-align:left">
-      <td>Find Familiar (K1 [Pact Of The Chain] Conj): R10' Self gains the service of a summoned spirit in animal form that can deliver touch attacks when within 100' [R]</td>
+      <td>Find Familiar (K1 [Pact Of The Chain] Conj): R10' Self gains the service of a summoned spirit in animal form that allows telepathic communication, remote sensing, and remote touch attacks when within 100' [R]</td>
     </tr><tr style="text-align:left">
       <td>Flame Strike (K5 [The Fiend] Evoc): R60' 10' radius inflicts 4d6 HP fire and 4d6 HP radiant (save Dexterity half) [+Level inflicts +1d6 HP of a choice of fire or radiant]</td>
     </tr><tr style="text-align:left">
       <td>Friends (K0 Ench): Self gains advantage on Charisma checks with a non-hostile target for concentration up to 1 min; the target becomes hostile afterward</td>
     </tr><tr style="text-align:left">
-      <td>Hold Monster (K5 Ench): R90' Immobilizes the target creature (save Wisdom ends) for concentration up to 1 min [+Level affects +1 target]</td>
+      <td>Hold Monster (K5 Ench): R90' Paralyzes the target creature (save Wisdom ends) for concentration up to 1 min [+Level affects +1 target]</td>
     </tr><tr style="text-align:left">
-      <td>Hold Monster (K5 [Chains Of Carceri] Ench): R90' Immobilizes the target creature (save Wisdom ends) for concentration up to 1 min [+Level affects +1 target]</td>
+      <td>Hold Monster (K5 [Chains Of Carceri] Ench): R90' Paralyzes the target creature (save Wisdom ends) for concentration up to 1 min [+Level affects +1 target]</td>
     </tr><tr style="text-align:left">
       <td>Jump (K1 [Otherworldly Leap] Tran): Touched gains triple jump distance for 1 min</td>
     </tr><tr style="text-align:left">
       <td>Levitate (K2 [Ascendant Step] Tran): R60' Target floats (save Constitution negates) and can be moved up or down 20' each rd for concentration up to 10 min</td>
     </tr><tr style="text-align:left">
-      <td>Mage Armor (K1 [Armor Of Shadows] Abju): Willing, unarmored touched gains AC 13 + Dexterity modifier for 8 hr; the spell ends if the target dons armor</td>
+      <td>Mage Armor (K1 [Armor Of Shadows] Abju): Willing, unarmored touched gains Armor Class 13 + Dexterity modifier for 8 hr; the spell ends if the target dons armor</td>
     </tr><tr style="text-align:left">
       <td>Poison Spray (K0 Conj): R10' Inflicts 4d12 HP poison (save Constitution negates)</td>
     </tr><tr style="text-align:left">
@@ -327,11 +327,11 @@ var attributes = {
     </tr><tr style="text-align:left">
       <td>Silent Image (K1 [Misty Visions] Illu): R60' Creates a 15' cube movable illusion (Investigation detects) for concentration up to 10 min</td>
     </tr><tr style="text-align:left">
-      <td>Slow (K3 [Mire The Mind] Tran): R120' 6 targets in a 40' cube suffer half Speed, -2 AC and Dexterity saves, loss of reactions, and no more than 1 action per rd (save Wisdom ends) for concentration up to 1 min</td>
+      <td>Slow (K3 [Mire The Mind] Tran): R120' 6 targets in a 40' cube suffer half Speed, -2 Armor Class and Dexterity saves, loss of reactions, no more than 1 action per rd, and a 50% chance of a 1-rd delay on spell effects (save Wisdom ends) for concentration up to 1 min</td>
     </tr><tr style="text-align:left">
       <td>Speak With Animals (K1 [Beast Speech] Divi): Self can talk with animals for 10 min [R]</td>
     </tr><tr style="text-align:left">
-      <td>Speak With Dead (K3 [Whispers Of The Grave] Necr): R10' Self can ask a corpse 5 questions; the corpse is then immune for 10 days </td>
+      <td>Speak With Dead (K3 [Whispers Of The Grave] Necr): R10' Self can ask a corpse 5 questions within 10 min; the corpse is then immune for 10 days </td>
     </tr><tr style="text-align:left">
       <td>Thaumaturgy (C0 Tran): R30' Creates minor magic effects—a booming voice, modification of flames, harmless tremors, an illusory sound, movement of a door or window, or a change in eye appearance—for 1 min</td>
     </tr></table>

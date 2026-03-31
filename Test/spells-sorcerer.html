@@ -258,13 +258,13 @@ var attributes = {
     <tr style="text-align:left">
       <td>Acid Splash (S0 Conj): R60' Inflicts 2d6 HP acid (save Dexterity negates) on a single target or 2 adjacent targets</td>
     </tr><tr style="text-align:left">
-      <td>Alter Self (S2 Tran): Self becomes aquatic, changes appearance, or gains magic natural weapons with +1 attack and 1d6+ HP damage, for concentration up to 1 hr</td>
+      <td>Alter Self (S2 Tran): Self becomes aquatic, changes appearance, or gains magic natural weapons with +8 attack and 1d6+4 HP damage, for concentration up to 1 hr</td>
     </tr><tr style="text-align:left">
-      <td>Animate Objects (S5 Tran): R120' 10 small, 5 medium, 2 large, or 1 huge objects obey mental commands when within 500' for concentration up to 1 min [+Level animates +2 objects]</td>
+      <td>Animate Objects (S5 Tran): R120' 10 Tiny (20 hit points; Armor Class 15; +8 slam inflicts 1d4+4 HP bludgeoning) or Small (25 hit points; Armor Class 16; +6 slam inflicts 1d8+2 HP), 5 Medium (40 hit points; Armor Class 13; +5 slam inflicts 2d6+1 HP), 2 Large (50 hit points; Armor Class 10; +6 slam inflicts 2d10+2 HP), or 1 Huge (80 hit points; Armor Class 10; +8 slam inflicts 2d12+4 HP) objects obey mental commands when within 500' for concentration up to 1 min [+Level animates +2 objects]</td>
     </tr><tr style="text-align:left">
       <td>Arcane Gate (S6 Conj): R10' Creates a portal pair that can teleport creatures 500' for concentration up to 10 min</td>
     </tr><tr style="text-align:left">
-      <td>Banishment (S4 Abju): R60' Banishes the target to its home plane or a demiplane (save Charisma negates) for concentration up to 1 min [+Level affects +1 target]</td>
+      <td>Banishment (S4 Abju): R60' Banishes the target to its home plane or to a demiplane (save Charisma negates) for concentration up to 1 min [+Level affects +1 target]</td>
     </tr><tr style="text-align:left">
       <td>Blade Ward (S0 Abju): Self gains resistance to bludgeoning, piercing, and slashing weapon damage for 1 rd</td>
     </tr><tr style="text-align:left">
@@ -300,15 +300,15 @@ var attributes = {
     </tr><tr style="text-align:left">
       <td>Cone Of Cold (S5 Evoc): 60' cone inflicts 8d8 HP cold (save Constitution half) [+Level inflicts +1d8 HP]</td>
     </tr><tr style="text-align:left">
-      <td>Confusion (S4 Ench): R90' Creatures in a 10' radius randomly: 10% wander; 50% do nothing; 20% attack an adjacent creature; 20% act normally (save Wisdom negates) for concentration up to 1 min [+Level increases the radius by 5']</td>
+      <td>Confusion (S4 Ench): R90' Creatures in a 10' radius randomly: 10% wander; 50% do nothing; 20% attack an adjacent creature; 20% act normally (save Wisdom ends) for concentration up to 1 min [+Level increases the radius by 5']</td>
     </tr><tr style="text-align:left">
       <td>Counterspell (S3 Abju): R60' Negates foe casting up to spell level 3; successful DC 10 + spell level negates a higher-level spell [+Level negates any spell of equal or lesser level]</td>
     </tr><tr style="text-align:left">
-      <td>Creation (S5 Illu): R30' Creates a 5' cube of false matter lasting up to 1 day [+Level creates a +5' cube]</td>
+      <td>Creation (S5 Illu): R30' Creates a 5' cube of false matter lasting up to 24 hr [+Level creates a +5' cube]</td>
     </tr><tr style="text-align:left">
       <td>Crown Of Madness (S2 Ench): R120' Self can direct the target's attacks each rd (save Wisdom ends) for concentration up to 1 min</td>
     </tr><tr style="text-align:left">
-      <td>Dancing Lights (S0 Evoc): R120' 4 torch lights dimly light a 10' radius and can move 60' per rd for concentration up to 1 min</td>
+      <td>Dancing Lights (S0 Evoc): R120' 4 torch lights dimly light a 10' radius and can move 60' per rd as a bonus action for concentration up to 1 min</td>
     </tr><tr style="text-align:left">
       <td>Darkness (S2 Evoc): R60' Target centers a 15' radius lightless area for concentration up to 10 min</td>
     </tr><tr style="text-align:left">
@@ -328,7 +328,7 @@ var attributes = {
     </tr><tr style="text-align:left">
       <td>Disintegrate (S6 Tran): R60' Inflicts 10d6+40 HP force and turns the target to dust if reduced to 0 HP (save Dexterity negates), or disintegrates a Large or smaller object or magical force [+Level inflicts +3d6 HP]</td>
     </tr><tr style="text-align:left">
-      <td>Dispel Magic (S3 Abju): R120' Ends the effects on the target of a spell up to level 3, and successful DC 10 + spell level checks end each higher-level spell [+Level ends any spell of equal or lesser level]</td>
+      <td>Dispel Magic (S3 Abju): R120' Ends the effects on the target of spells up to level 3, and successful DC 10 + spell level checks end each higher-level spell [+Level ends any spell of equal or lesser level]</td>
     </tr><tr style="text-align:left">
       <td>Dominate Beast (S4 Ench): R60' Target beast obeys telepathic commands (save Wisdom negates; damage allows another save) for concentration up to 1 min [+Level extends the duration to 10 min, 1 hr, or 8 hr at level 5, 6, or 7]</td>
     </tr><tr style="text-align:left">
@@ -346,7 +346,7 @@ var attributes = {
     </tr><tr style="text-align:left">
       <td>Expeditious Retreat (S1 Tran): Self gains a bonus Dash once per rd for concentration up to 10 min</td>
     </tr><tr style="text-align:left">
-      <td>Eyebite (S6 Necr): R60' Inflicts a choice of sleep, panic, or sickened (disadvantage on attack and ability rolls) on 1 target per rd (save Wisdom negates) for concentration up to 1 min</td>
+      <td>Eyebite (S6 Necr): R60' Inflicts a choice of sleep, panic, or sickened (disadvantage on attack and ability rolls) (save Wisdom negates) on 1 target per rd for concentration up to 1 min</td>
     </tr><tr style="text-align:left">
       <td>False Life (S1 Necr): Self gains 1d4+4 temporary hit points for 1 hr [+Level gives +5 temporary hit points]</td>
     </tr><tr style="text-align:left">
@@ -368,7 +368,7 @@ var attributes = {
     </tr><tr style="text-align:left">
       <td>Friends (S0 Ench): Self gains advantage on Charisma checks with a non-hostile target for concentration up to 1 min; the target becomes hostile afterward</td>
     </tr><tr style="text-align:left">
-      <td>Gaseous Form (S3 Tran): Touched creature becomes gaseous, gaining a 10' fly Speed and advantage on Strength, Dexterity, and Constitution saves, for concentration up to 1 hr</td>
+      <td>Gaseous Form (S3 Tran): Touched willing creature becomes gaseous, gaining a 10' fly Speed, resistance to nonmagical damage, and advantage on Strength, Dexterity, and Constitution saves, for concentration up to 1 hr</td>
     </tr><tr style="text-align:left">
       <td>Gate (S9 Conj): R60' Opens a circular portal to another plane for concentration up to 1 min; can be used to bring a creature from another plane</td>
     </tr><tr style="text-align:left">
@@ -376,17 +376,17 @@ var attributes = {
     </tr><tr style="text-align:left">
       <td>Greater Invisibility (S4 Illu): Touched becomes invisible for concentration up to 1 min</td>
     </tr><tr style="text-align:left">
-      <td>Gust Of Wind (S2 Evoc): 60'x10' wind pushes 15' (save Strength negates), inflicts half movement, and has a 50% chance of extinguishing flames for concentration up to 1 min</td>
+      <td>Gust Of Wind (S2 Evoc): 60'x10' wind pushes 15' (save Strength negates), inflicts half movement, disperses gas and vapor, extinguishes flames (50% chance for protected flames) for concentration up to 1 min</td>
     </tr><tr style="text-align:left">
-      <td>Haste (S3 Tran): R30' Willing target gains double Speed, +2 AC, advantage on Dexterity, and an additional action for concentration up to 1 min and suffers 1 rd of lethargy afterward</td>
+      <td>Haste (S3 Tran): R30' Willing target gains double Speed, +2 Armor Class, advantage on Dexterity, and an additional action for concentration up to 1 min and suffers 1 rd of incapacitation afterward</td>
     </tr><tr style="text-align:left">
-      <td>Hold Monster (S5 Ench): R90' Immobilizes the target creature (save Wisdom ends) for concentration up to 1 min [+Level affects +1 target]</td>
+      <td>Hold Monster (S5 Ench): R90' Paralyzes the target creature (save Wisdom ends) for concentration up to 1 min [+Level affects +1 target]</td>
     </tr><tr style="text-align:left">
-      <td>Hold Person (S2 Ench): R60' Immobilizes the target humanoid (save Wisdom ends) for concentration up to 1 min [+Level affects +1 target]</td>
+      <td>Hold Person (S2 Ench): R60' Paralyzes the target humanoid (save Wisdom ends) for concentration up to 1 min [+Level affects +1 target]</td>
     </tr><tr style="text-align:left">
       <td>Hypnotic Pattern (S3 Illu): R120' Creatures in a 30' cube become incapacitated (save Wisdom negates) for concentration up to 1 min; taking damage ends the effects</td>
     </tr><tr style="text-align:left">
-      <td>Ice Storm (S4 Evoc): R300' 20' radius inflicts 2d8 HP bludgeoning and 4d6 HP cold (save Dexterity half) and becomes difficult terrain for 1 rd [+Level inflicts +1d8 HP bludgeoning]</td>
+      <td>Ice Storm (S4 Evoc): R300' 20' radius inflicts 2d8 HP bludgeoning and 4d6 HP cold (save Dexterity half) and becomes difficult terrain until the end of the next turn [+Level inflicts +1d8 HP bludgeoning]</td>
     </tr><tr style="text-align:left">
       <td>Incendiary Cloud (S8 Conj): R150' 20' radius inflicts 10d8 HP fire (save Dexterity half), obscures, and moves away 10' per rd for concentration up to 1 min</td>
     </tr><tr style="text-align:left">
@@ -404,17 +404,17 @@ var attributes = {
     </tr><tr style="text-align:left">
       <td>Lightning Bolt (S3 Evoc): 100'x5' line inflicts 8d6 HP lightning (save Dexterity half) and ignites unattended flammable objects [+Level inflicts +1d6 HP]</td>
     </tr><tr style="text-align:left">
-      <td>Mage Armor (S1 Abju): Willing, unarmored touched gains AC 13 + Dexterity modifier for 8 hr; the spell ends if the target dons armor</td>
+      <td>Mage Armor (S1 Abju): Willing, unarmored touched gains Armor Class 13 + Dexterity modifier for 8 hr; the spell ends if the target dons armor</td>
     </tr><tr style="text-align:left">
       <td>Mage Hand (S0 Conj): R30' Spectral hand performs minor tasks, moving up to 10 lb, for 1 min</td>
     </tr><tr style="text-align:left">
       <td>Magic Missile (S1 Evoc): R120' 3 darts inflict 1d4+1 HP force each [+Level creates +1 dart]</td>
     </tr><tr style="text-align:left">
-      <td>Major Image (S3 Illu): R120' Creates a 20' cube sight, sound, and touch illusion (Investigation detects) for concentration up to 10 min [+Level extends the duration to permanent at level 6]</td>
+      <td>Major Image (S3 Illu): R120' Creates a 20' cube sight, sound, and temperature illusion (Investigation detects) for concentration up to 10 min [+Level extends the duration to permanent at level 6]</td>
     </tr><tr style="text-align:left">
-      <td>Mass Suggestion (S6 Ench): R60' 12 targets follow a reasonable suggestion (save Wisdom negates) for 1 day [+Level extends the duration to 10, 30, or 366 days at level 7, 8, or 9]</td>
+      <td>Mass Suggestion (S6 Ench): R60' 12 targets follow a reasonable suggestion (save Wisdom negates) for 24 hr [+Level extends the duration to 10, 30, or 366 days at level 7, 8, or 9]</td>
     </tr><tr style="text-align:left">
-      <td>Mending (S0 Tran): Touch repairs a break or tear up to 1 ft</td>
+      <td>Mending (S0 Tran): Touch repairs a break or tear up to 1'</td>
     </tr><tr style="text-align:left">
       <td>Message (S0 Tran): R120' Self and target can hold a whispered conversation for 1 rd</td>
     </tr><tr style="text-align:left">
@@ -422,7 +422,7 @@ var attributes = {
     </tr><tr style="text-align:left">
       <td>Minor Illusion (S0 Illu): R30' Creates the sound of 1 creature or a 5' cube image (Investigation detects) for 1 min</td>
     </tr><tr style="text-align:left">
-      <td>Mirror Image (S2 Illu): 3 duplicates (AC 14; damage destroys) allow misdirecting attacks on self for 1 min with an 11, 8, or 6 on a d20 while 1, 2, or 3 duplicates remain</td>
+      <td>Mirror Image (S2 Illu): 3 duplicates (Armor Class 14; damage destroys) allow misdirecting attacks on self for 1 min with an 11, 8, or 6 on a d20 while 1, 2, or 3 duplicates remain</td>
     </tr><tr style="text-align:left">
       <td>Misty Step (S2 Conj): Teleports self 30'</td>
     </tr><tr style="text-align:left">
@@ -442,11 +442,11 @@ var attributes = {
     </tr><tr style="text-align:left">
       <td>Prestidigitation (S0 Tran): R10' Creates minor magic effects for 1 hr</td>
     </tr><tr style="text-align:left">
-      <td>Prismatic Spray (S7 Evoc): 60' cone randomly inflicts one of: 10d6 HP fire, acid, lightning, poison, or cold (save Dexterity half); restrained (save Dexterity negates) and petrified after 3 failed Constitution saves (3 successes negates); blinded (save Dexterity negates) and banished to another plane (save Wisdom negates)</td>
+      <td>Prismatic Spray (S7 Evoc): 60' cone randomly inflicts one of: 10d6 HP fire, acid, lightning, poison, or cold (save Dexterity half); restrained (save Dexterity negates) and petrified after 3 failed Constitution saves (3 successes negates); blinded (save Dexterity negates) and banished to another plane (save Wisdom negates); 2 of the preceding effects</td>
     </tr><tr style="text-align:left">
       <td>Protection From Energy (S3 Abju): Touched gains resistance to a choice of acid, cold, fire, lightning, or thunder damage for concentration up to 1 hr</td>
     </tr><tr style="text-align:left">
-      <td>Ray Of Frost (S0 Evoc): R60' Ranged spell inflicts 2d8 HP cold and -10' Speed for 1 rd</td>
+      <td>Ray Of Frost (S0 Evoc): R60' Ranged spell inflicts 2d8 HP cold and -10' Speed until the start of the next turn</td>
     </tr><tr style="text-align:left">
       <td>Ray Of Sickness (S1 Necr): R60' Ranged spell inflicts 2d8 HP poison and poisoned for 1 rd (save Constitution HP only) [+Level inflicts +1d8 HP]</td>
     </tr><tr style="text-align:left">
@@ -460,7 +460,7 @@ var attributes = {
     </tr><tr style="text-align:left">
       <td>Shatter (S2 Evoc): R60' 10' radius inflicts 3d8 HP thunder (save Constitution half; inorganic creatures have disadvantage) [+Level inflicts +1d8 HP]</td>
     </tr><tr style="text-align:left">
-      <td>Shield (S1 Abju): Reaction gives +5 AC and immunity to <i>Magic Missile</i> until the next turn</td>
+      <td>Shield (S1 Abju): Reaction gives self +5 Armor Class and immunity to <i>Magic Missile</i> until the start of the next turn</td>
     </tr><tr style="text-align:left">
       <td>Shocking Grasp (S0 Evoc): Touched suffers 2d8 HP lightning and loss of reactions until its next turn</td>
     </tr><tr style="text-align:left">
@@ -470,9 +470,9 @@ var attributes = {
     </tr><tr style="text-align:left">
       <td>Sleet Storm (S3 Conj): R150' 40' radius douses flames and inflicts difficult terrain and falling prone (save Dexterity negates) for concentration up to 1 min</td>
     </tr><tr style="text-align:left">
-      <td>Slow (S3 Tran): R120' 6 targets in a 40' cube suffer half Speed, -2 AC and Dexterity saves, loss of reactions, and no more than 1 action per rd (save Wisdom ends) for concentration up to 1 min</td>
+      <td>Slow (S3 Tran): R120' 6 targets in a 40' cube suffer half Speed, -2 Armor Class and Dexterity saves, loss of reactions, no more than 1 action per rd, and a 50% chance of a 1-rd delay on spell effects (save Wisdom ends) for concentration up to 1 min</td>
     </tr><tr style="text-align:left">
-      <td>Spider Climb (S2 Tran): Touched can crawl on walls and ceilings for concentration up to 1 hr</td>
+      <td>Spider Climb (S2 Tran): Willing touched can crawl on walls and ceilings for concentration up to 1 hr</td>
     </tr><tr style="text-align:left">
       <td>Stinking Cloud (S3 Conj): R90' 20' radius inflicts loss of actions (save Constitution negates) for concentration up to 1 min</td>
     </tr><tr style="text-align:left">
@@ -480,7 +480,7 @@ var attributes = {
     </tr><tr style="text-align:left">
       <td>Suggestion (S2 Ench): R30' Target follows a reasonable suggestion (save Wisdom negates) for concentration up to 8 hr</td>
     </tr><tr style="text-align:left">
-      <td>Sunbeam (S6 Evoc): 60' line inflicts 6d8 HP radiant and blindness for 1 rd (save Constitution half HP only) for concentration up to 1 min</td>
+      <td>Sunbeam (S6 Evoc): 5'x60' line inflicts 6d8 HP radiant and blindness until the start of the next turn (save Constitution half HP only) each rd for concentration up to 1 min</td>
     </tr><tr style="text-align:left">
       <td>Sunburst (S8 Evoc): R150' 60' radius inflicts 12d6 HP and blindness (save Constitution half HP only; an additional save each turn ends blindness) for 1 min</td>
     </tr><tr style="text-align:left">
@@ -488,7 +488,7 @@ var attributes = {
     </tr><tr style="text-align:left">
       <td>Teleport (S7 Conj): R10' Teleports an unattended object or self and 8 allies any distance; greater familiarity with the destination improves accuracy</td>
     </tr><tr style="text-align:left">
-      <td>Teleportation Circle (S5 Conj): R10' Creates a portal that provides a link to similar circles for 1 rd</td>
+      <td>Teleportation Circle (S5 Conj): R10' Creates a portal that provides a link to similar circles for 1 rd; casting on the same spot every day for 1 year makes it permanent</td>
     </tr><tr style="text-align:left">
       <td>Thunderwave (S1 Evoc): 15' cube inflicts 2d8 HP thunder and pushes 10' (save Constitution half HP only) [+Level inflicts +1d8 HP]</td>
     </tr><tr style="text-align:left">
@@ -502,7 +502,7 @@ var attributes = {
     </tr><tr style="text-align:left">
       <td>Wall Of Fire (S4 Evoc): R120' Creates a 60'x20'x1' wall or a 20'x20'x1' ring that inflicts 5d8 HP fire (save Dexterity half) within 10' of a chosen side for concentration up to 1 min [+Level inflicts +1d8 HP]</td>
     </tr><tr style="text-align:left">
-      <td>Wall Of Stone (S5 Evoc): R120' Creates 10 10'x10'x6" or 10'x20'x3" panels for concentration up to 10 min</td>
+      <td>Wall Of Stone (S5 Evoc): R120' Creates 10 10'x10'x6" or 10'x20'x3" stone panels, with Armor Class 15 and 30 hit points each, for concentration up to 10 min; concentrating for 10 min makes the wall permanent</td>
     </tr><tr style="text-align:left">
       <td>Water Breathing (S3 Tran): R30' 10 targets can breathe underwater for 24 hr [R]</td>
     </tr><tr style="text-align:left">
@@ -520,9 +520,9 @@ var attributes = {
     <tr style="text-align:center">
       <td>Font Of Magic: Can use 10 Sorcery Points per long rest and can use a bonus action to convert between Sorcery Points and spell slots</td>
     </tr><tr style="text-align:center">
-      <td>Heightened Spell: Can spend 3 Sorcery Points to inflict target disadvantage on the initial save vs. a self spell</td>
+      <td>Heightened Spell: Can spend 3 Sorcery Points to inflict disadvantage on a target's initial save vs. a self spell</td>
     </tr><tr style="text-align:center">
-      <td>Quickened Spell: Can spend 2 Sorcery Points to cast a 1-action spell as bonus action</td>
+      <td>Quickened Spell: Can spend 2 Sorcery Points to use a bonus action to cast a 1-action spell</td>
     </tr><tr style="text-align:center">
       <td>Spellcasting: Can cast spells from the sorcerer spell list</td>
     </tr><tr style="text-align:center">

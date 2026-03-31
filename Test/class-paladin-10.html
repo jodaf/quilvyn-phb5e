@@ -88,7 +88,7 @@ var attributes = {
       <tr style="text-align:center">
         <td><b>Feats</b>: Ability Score Improvement; Healer</td>
         <td><b>Human Features</b>: Human Ability Adjustment; Language (Common; Choose 1 from any)</td>
-        <td><b>Paladin Features</b>: Armor Proficiency (Light; Medium; Heavy; Shield); Aura Of Courage; Aura Of Devotion; Aura Of Protection; Channel Divinity; Divine Health; Divine Sense; Divine Smite; Extra Attack; Fighting Style (Protection); Fighting Style; Lay On Hands; Oath Of Devotion; Sacred Oath; Sacred Weapon; Save Proficiency (Wisdom; Charisma); Skill Proficiency (Choose 2 from Athletics, Insight, Intimidation, Medicine, Persuasion, Religion); Spellcasting; Turn The Unholy; Weapon Proficiency (Simple Weapons; Martial Weapons)</td>
+        <td><b>Paladin Features</b>: Armor Proficiency (Light; Medium; Heavy; Shield); Aura Of Courage; Aura Of Devotion; Aura Of Protection; Channel Divinity; Divine Health; Divine Sense; Divine Smite; Extra Attack; Fighting Style (Protection); Fighting Style; Lay On Hands; Oath Of Devotion Spells; Oath Of Devotion; Sacred Oath; Sacred Weapon; Save Proficiency (Wisdom; Charisma); Skill Proficiency (Choose 2 from Athletics, Insight, Intimidation, Medicine, Persuasion, Religion); Spellcasting; Turn The Unholy; Weapon Proficiency (Simple Weapons; Martial Weapons)</td>
         <td><b>Acolyte Features</b>: Language (Choose 2 from any); Shelter Of The Faithful; Skill Proficiency (Insight; Religion)</td>
       </tr></table>
 </td>
@@ -208,15 +208,17 @@ var attributes = {
     <tr style="text-align:center">
       <td><b>Save Proficiency</b>: Charisma; Wisdom</td>
     </tr><tr style="text-align:center">
-      <td><b>Save</b>: Charisma: +7; Constitution: -1; Dexterity: +3; Intelligence: +2; Strength: +0; Wisdom: +5</td>
+      <td><b>Save</b>: Charisma: +9; Constitution: +1; Dexterity: +5; Intelligence: +4; Strength: +2; Wisdom: +7</td>
     </tr><tr style="text-align:center">
       <td><b>Save Notes</b>:       <table id="SaveNotes" style="width:100%">
       <tr style="text-align:center">
-        <td>Aura Of Courage: R10' Self and allies have immunity to fright</td>
+        <td><i>Aura Of Protection: +3 on all saves</i></td>
       </tr><tr style="text-align:center">
-        <td>Aura Of Devotion: R10' Self and allies have immunity to charm</td>
+        <td>Aura Of Courage: R10' Self and allies have immunity to frightened</td>
       </tr><tr style="text-align:center">
-        <td>Aura Of Protection: R10' Self and allies +3 all saves</td>
+        <td>Aura Of Devotion: R10' Self and allies have immunity to charmed</td>
+      </tr><tr style="text-align:center">
+        <td>Aura Of Protection: R10' Gives allies +3 on all saves</td>
       </tr><tr style="text-align:center">
         <td>Divine Health: Has immunity to disease</td>
       </tr></table>
@@ -242,7 +244,7 @@ var attributes = {
   </tr><tr style="text-align:center">
     <td><b>Spells</b>:     <table id="Spells" style="width:100%">
     <tr style="text-align:left">
-      <td>Beacon Of Hope (P3 [Oath Of Devotion] Abju): R30' Targets gain advantage on Wisdom and death saves and regain maximum hit points from healing for concentration up to 1 min</td>
+      <td>Beacon Of Hope (P3 [Oath Of Devotion Spells] Abju): R30' Targets gain advantage on Wisdom and death saves and regain maximum hit points from healing for concentration up to 1 min</td>
     </tr><tr style="text-align:left">
       <td>Branding Smite (P2 Evoc): Next successful self weapon attack inflicts +2d6 HP radiant and lights the target for concentration up to 1 min [+Level inflicts +1d6 HP]</td>
     </tr><tr style="text-align:left">
@@ -250,27 +252,27 @@ var attributes = {
     </tr><tr style="text-align:left">
       <td>Detect Poison And Disease (P1 Divi): R30' Reveals poison, poisonous creatures, and diseases for concentration up to 10 min [R]</td>
     </tr><tr style="text-align:left">
-      <td>Dispel Magic (P3 [Oath Of Devotion] Abju): R120' Ends the effects on the target of a spell up to level 3, and successful DC 10 + spell level checks end each higher-level spell [+Level ends any spell of equal or lesser level]</td>
+      <td>Dispel Magic (P3 [Oath Of Devotion Spells] Abju): R120' Ends the effects on the target of spells up to level 3, and successful DC 10 + spell level checks end each higher-level spell [+Level ends any spell of equal or lesser level]</td>
     </tr><tr style="text-align:left">
       <td>Elemental Weapon (P3 Tran): Touched weapon gains +1 attack and +1d4 HP damage of a choice of acid, cold, fire, lightning, or thunder for concentration up to 1 hr [+Level gives +2 or +3 attack and +2d4 or +3d4 damage at level 5 or 7]</td>
     </tr><tr style="text-align:left">
       <td>Lesser Restoration (P2 Abju): Touched recovers from a choice of blindness, deafness, disease, paralysis, or poison</td>
     </tr><tr style="text-align:left">
-      <td>Lesser Restoration (P2 [Oath Of Devotion] Abju): Touched recovers from a choice of blindness, deafness, disease, paralysis, or poison</td>
+      <td>Lesser Restoration (P2 [Oath Of Devotion Spells] Abju): Touched recovers from a choice of blindness, deafness, disease, paralysis, or poison</td>
     </tr><tr style="text-align:left">
       <td>Magic Weapon (P2 Tran): Gives touched weapon a +1 magic bonus for concentration up to 1 hr [+Level gives a +2 or +3 bonus at level 4 or 6]</td>
     </tr><tr style="text-align:left">
       <td>Protection From Evil And Good (P1 Abju): Willing touched gains immunity to charm, fright, and possession from aberrations, celestials, elementals, fey, fiends, and undead and advantage on saves vs. existing conditions for concentration up to 10 min; those creatures also suffer disadvantage on attacks on the target</td>
     </tr><tr style="text-align:left">
-      <td>Protection From Evil And Good (P1 [Oath Of Devotion] Abju): Willing touched gains immunity to charm, fright, and possession from aberrations, celestials, elementals, fey, fiends, and undead and advantage on saves vs. existing conditions for concentration up to 10 min; those creatures also suffer disadvantage on attacks on the target</td>
+      <td>Protection From Evil And Good (P1 [Oath Of Devotion Spells] Abju): Willing touched gains immunity to charm, fright, and possession from aberrations, celestials, elementals, fey, fiends, and undead and advantage on saves vs. existing conditions for concentration up to 10 min; those creatures also suffer disadvantage on attacks on the target</td>
     </tr><tr style="text-align:left">
       <td>Revivify (P3 Necr): Restores life and 1 hit point to a touched 1-minute-old corpse</td>
     </tr><tr style="text-align:left">
-      <td>Sanctuary (P1 [Oath Of Devotion] Abju): R30' Foes of the target cannot attack it (save Wisdom negates) for 1 min; target attacking ends</td>
+      <td>Sanctuary (P1 [Oath Of Devotion Spells] Abju): R30' Foes of the target cannot attack it (save Wisdom negates) for 1 min; target attacking ends</td>
     </tr><tr style="text-align:left">
       <td>Searing Smite (P1 Evoc): Next successful self weapon attack inflicts +1d6 HP fire, plus 1d6 HP fire per rd (save Constitution ends) for concentration up to 1 min [+Level inflicts +1d6 HP initial]</td>
     </tr><tr style="text-align:left">
-      <td>Zone Of Truth (P2 [Oath Of Devotion] Ench): R60' Creatures in a 15' radius cannot lie (save Charisma negates) for 10 min</td>
+      <td>Zone Of Truth (P2 [Oath Of Devotion Spells] Ench): R60' Creatures in a 15' radius cannot lie (save Charisma negates) for 10 min</td>
     </tr></table>
 </td>
   </tr><tr style="text-align:center">
