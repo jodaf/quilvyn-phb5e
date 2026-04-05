@@ -9,10 +9,11 @@ var attributes = {
   "_path":"ztest/5.5e/spells/all", 
   "abilityBoosts.Constitution":1, "abilityBoosts.Dexterity":1, "abilityBoosts.Strength":1, 
   "alignment":"Chaotic Evil", "armor":"Chain Shirt", "background":"Soldier", "charisma":14, 
-  "constitution":13, "dexterity":17, "experience":210829, "gender":"Male", "hitPoints":64, 
-  "intelligence":15, "languagesChosen.Common Sign Language":1, "languagesChosen.Dwarvish":1, 
-  "levels.Bard":2, "levels.Cleric":2, "levels.Druid":2, "levels.Paladin":2, "levels.Ranger":2, 
-  "levels.Sorcerer":2, "levels.Warlock":2, "levels.Wizard":2, "name":"Spells-All", 
+  "constitution":13, "dexterity":17, "experience":210829, "feats.Magic Initiate (Cleric)":1, 
+  "feats.Two-Weapon Fighting":1, "gender":"Male", "hitPoints":64, "intelligence":15, 
+  "languagesChosen.Common Sign Language":1, "languagesChosen.Dwarvish":1, "levels.Bard":2, "levels.Cleric":2, 
+  "levels.Druid":2, "levels.Paladin":2, "levels.Ranger":2, "levels.Sorcerer":2, 
+  "levels.Warlock":2, "levels.Wizard":2, "name":"Spells-All", 
   "selectableFeatures.Cleric - Protector":1, "selectableFeatures.Druid - Magician":1, 
   "selectableFeatures.Paladin - Blessed Warrior":1, "selectableFeatures.Ranger - Fighting Style":1, 
   "selectableFeatures.Sorcerer - Seeking Spell":1, "selectableFeatures.Sorcerer - Subtle Spell":1, 
@@ -389,13 +390,14 @@ var attributes = {
     <tr style="text-align:center">
       <td>      <table id="FeatStats" style="width:100%">
       <tr style="text-align:center">
-        <td><b>Feat Count</b>: General: 0</td>
+        <td><b>Feat Count</b>: Fighting Style: 1; General: 0; Origin: 1</td>
         <td><b>Selectable Feature Count</b>: Cleric (Divine Order): 1; Druid (Primal Order): 1; Paladin (Paladin Fighting Style): 1; Ranger (Ranger Fighting Style): 1; Sorcerer (Metamagic): 2; Warlock (Eldritch Invocation): 3</td>
       </tr></table>
 </td>
     </tr><tr style="text-align:center">
       <td>      <table id="FeatLists" style="width:100%">
       <tr style="text-align:center">
+        <td><b>Feats</b>: Magic Initiate (Cleric); Two-Weapon Fighting</td>
         <td><b>Human Features</b>: Resourceful; Skillful; Versatile</td>
         <td><b>Wizard Features</b>: Arcane Recovery; Ritual Adept; Save Proficiency (Intelligence; Wisdom); Scholar; Skill Proficiency (Choose 2 from Arcana, History, Insight, Investigation, Medicine, Nature, Religion); Spellcasting; Weapon Proficiency (Simple Weapons)</td>
         <td><b>Warlock Features</b>: Armor Training (Light); Eldritch Invocations; Eldritch Spear; Magical Cunning; Pact Magic; Pact Of The Blade; Repelling Blast; Save Proficiency (Wisdom; Charisma); Skill Proficiency (Choose 2 from Arcana, Deception, History, Intimidation, Investigation, Nature, Religion); Weapon Proficiency (Simple Weapons)</td>
@@ -541,6 +543,8 @@ var attributes = {
         <td>Savage Attacker: Can use the better of 2 damage rolls once per turn</td>
       </tr><tr style="text-align:center">
         <td>Turn Undead: R30' Can use Channel Divinity to make undead flee (save DC 12 Wisdom negates) for 1 min or until damaged</td>
+      </tr><tr style="text-align:center">
+        <td>Two-Weapon Fighting: Adds ability modifier to second weapon damage</td>
       </tr><tr style="text-align:center">
         <td>Weapon Mastery: Can use the mastery properties of 4 chosen Simple or Martial Melee weapons</td>
       </tr></table>
@@ -2397,6 +2401,8 @@ var attributes = {
       <td>Innate Sorcery: Can use a bonus action to gain +1 spell DC and advantage on spell attacks for 1 min 2 times per long rest</td>
     </tr><tr style="text-align:center">
       <td>Lay On Hands: Can use bonus actions to heal 10 hit points per long rest and can use 5 hit points' worth to remove a poisoned condition</td>
+    </tr><tr style="text-align:center">
+      <td>Magic Initiate (Cleric): Knows 2 Cleric cantrips and can cast a chosen C1 spell once per long rest</td>
     </tr><tr style="text-align:center">
       <td>Magical Cunning: Can use a 1 min process to regain 1 Pact Magic spell slot once per long rest</td>
     </tr><tr style="text-align:center">

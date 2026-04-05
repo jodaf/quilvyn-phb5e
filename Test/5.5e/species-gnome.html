@@ -9,8 +9,8 @@ var attributes = {
   "_path":"ztest/5.5e/species/gnome", 
   "abilityBoosts.Intelligence":1, "abilityBoosts.Wisdom":2, "alignment":"Chaotic Good", "armor":"Chain Mail", 
   "background":"Acolyte", "charisma":13, "constitution":12, "dexterity":10, "experience":6864, 
-  "feats.Archery":1, "gender":"Male", "hitPoints":19, "intelligence":14, "levels.Fighter":5, 
-  "name":"Species-Gnome", "selectableFeatures.Fighter - Champion":1, 
+  "feats.Alert":1, "feats.Archery":1, "gender":"Male", "hitPoints":19, "intelligence":14, 
+  "levels.Fighter":5, "name":"Species-Gnome", "selectableFeatures.Fighter - Champion":1, 
   "selectableFeatures.Gnome - Forest Gnome":1, "selectableFeatures.Gnome - Rock Gnome":1, "shield":"Shield", 
   "skillsChosen.Acrobatics":1, "skillsChosen.Animal Handling":1, "species":"Gnome", "strength":13, 
   "weapons.Rapier":1, "weapons.Scimitar":1, "wisdom":11
@@ -71,14 +71,14 @@ var attributes = {
     <tr style="text-align:center">
       <td>      <table id="FeatStats" style="width:100%">
       <tr style="text-align:center">
-        <td><b>Feat Count</b>: General</td>
+        <td><b>Feat Count</b>: Fighting Style; General</td>
         <td><b>Selectable Feature Count</b>: Fighter (Fighter Subclass); Gnome (Gnomish Lineage)</td>
       </tr></table>
 </td>
     </tr><tr style="text-align:center">
       <td>      <table id="FeatLists" style="width:100%">
       <tr style="text-align:center">
-        <td><b>Feats</b>: Archery</td>
+        <td><b>Feats</b>: Alert; Archery</td>
         <td><b>Gnome Features</b>: Darkvision; Forest Gnome; Gnomish Cunning; Gnomish Lineage; Rock Gnome</td>
         <td><b>Fighter Features</b>: Action Surge; Armor Training (Light; Medium; Heavy; Shield); Champion; Extra Attack; Fighter Primary Ability; Fighter Subclass; Fighting Style; Improved Critical; Remarkable Athlete; Save Proficiency (Strength; Constitution); Second Wind; Skill Proficiency (Choose 2 from Acrobatics, Animal Handling, Athletics, History, Insight, Intimidation, Persuasion; Perception, Survival); Tactical Mind; Tactical Shift; Weapon Mastery; Weapon Proficiency (Simple Weapons; Martial Weapons)</td>
         <td><b>Acolyte Features</b>: Ability Boost (Choose 3 from Intelligence, Wisdom, Charisma); Magic Initiate (Cleric); Skill Proficiency (Insight; Religion); Tool Proficiency (Calligrapher's Supplies)</td>
@@ -151,7 +151,7 @@ var attributes = {
       <td>      <table id="CombatStats" style="width:100%">
       <tr style="text-align:center">
         <td><b>Hit Points</b>: 24</td>
-        <td><b>Initiative</b>: +0</td>
+        <td><b>Initiative</b>: +3</td>
         <td><b>Armor Class</b>: 18</td>
         <td><b>Attacks Per Round</b>: 2</td>
       </tr></table>
@@ -174,6 +174,8 @@ var attributes = {
     </tr><tr style="text-align:center">
       <td><b>Combat Notes</b>:       <table id="CombatNotes" style="width:100%">
       <tr style="text-align:center">
+        <td><i>Alert: +3 Initiative</i></td>
+      </tr><tr style="text-align:center">
         <td><i>Constitution Hit Points Adjustment: +5</i></td>
       </tr><tr style="text-align:center">
         <td><i>Extra Attack: +1 Attacks Per Round</i></td>
@@ -183,6 +185,8 @@ var attributes = {
         <td><i>Strength Damage Adjustment: +1</i></td>
       </tr><tr style="text-align:center">
         <td>Action Surge: Can take an extra action once per short rest</td>
+      </tr><tr style="text-align:center">
+        <td>Alert: Can swap initiatives with a willing ally</td>
       </tr><tr style="text-align:center">
         <td>Archery: +2 ranged attacks</td>
       </tr><tr style="text-align:center">

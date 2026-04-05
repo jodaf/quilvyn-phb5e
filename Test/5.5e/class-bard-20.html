@@ -8,12 +8,13 @@
 var attributes = {
   "_path":"ztest/5.5e/class/bard 20", 
   "abilityBoosts.Charisma":2, "abilityBoosts.Constitution":1, "abilityBoosts.Dexterity":1, 
-  "abilityBoosts.Wisdom":1, "alignment":"Neutral Evil", "armor":"undefined", "background":"Acolyte", 
+  "abilityBoosts.Wisdom":1, "alignment":"Neutral Evil", "armor":"Leather", "background":"Acolyte", 
   "charisma":15, "constitution":11, "deity":"Norse-Forseti", "dexterity":8, 
-  "experience":607595, "feats.Boon Of Combat Prowess":1, "feats.Boon Of Irresistible Offense":1, 
-  "feats.Boon Of Spell Recall":1, "feats.Defense":1, "feats.Skilled":1, "gender":"Male", "hitPoints":81, 
-  "intelligence":11, "levels.Bard":20, "name":"Class-Bard 20", "race":"Human", 
-  "selectableFeatures.Bard - College Of Lore":1, "shield":"None", "skillsChosen.Animal Handling":1, "skillsChosen.Arcana":1, 
+  "experience":607595, "feats.Alert":1, "feats.Boon Of Spell Recall":1, "feats.Defense":1, 
+  "feats.Grappler":1, "feats.Great Weapon Fighting":1, "feats.Skilled":1, 
+  "feats.Two-Weapon Fighting":1, "gender":"Male", "hitPoints":81, "intelligence":11, "levels.Bard":20, 
+  "name":"Class-Bard 20", "race":"Human", "selectableFeatures.Bard - College Of Lore":1, 
+  "shield":"None", "skillsChosen.Animal Handling":1, "skillsChosen.Arcana":1, 
   "skillsChosen.History":1, "skillsChosen.Intimidation":1, "skillsChosen.Investigation":1, 
   "skillsChosen.Medicine":1, "skillsChosen.Nature":1, "skillsChosen.Religion":1, 
   "skillsChosen.Stealth":1, "skillsChosen.Survival":1, "spells.Awaken(B5 Tran)":1, 
@@ -69,9 +70,9 @@ var attributes = {
   </tr><tr style="text-align:center">
     <td><b>Ability Notes</b>:     <table id="AbilityNotes" style="width:100%">
     <tr style="text-align:center">
-      <td><i>Boon Of Combat Prowess: Ability Boost (Choose 1 from any)</i></td>
-    </tr><tr style="text-align:center">
       <td><i>Boon Of Spell Recall: Ability Boost (Choose 1 from Intelligence, Wisdom, Charisma)</i></td>
+    </tr><tr style="text-align:center">
+      <td><i>Grappler: Ability Boost (Choose 1 from Strength, Dexterity)</i></td>
     </tr><tr style="text-align:center">
       <td>Ability Boosts: 5 to distribute</td>
     </tr><tr style="text-align:center">
@@ -89,14 +90,14 @@ var attributes = {
     <tr style="text-align:center">
       <td>      <table id="FeatStats" style="width:100%">
       <tr style="text-align:center">
-        <td><b>Feat Count</b>: General: 5</td>
+        <td><b>Feat Count</b>: Epic Boon: 1; General: 5; Origin: 1</td>
         <td><b>Selectable Feature Count</b>: Bard (Bard Subclass)</td>
       </tr></table>
 </td>
     </tr><tr style="text-align:center">
       <td>      <table id="FeatLists" style="width:100%">
       <tr style="text-align:center">
-        <td><b>Feats</b>: Boon Of Combat Prowess; Boon Of Irresistible Offense; Boon Of Spell Recall; Defense; Skilled</td>
+        <td><b>Feats</b>: Alert; Boon Of Spell Recall; Defense; Grappler; Great Weapon Fighting; Skilled; Two-Weapon Fighting</td>
         <td><b>Human Features</b>: Resourceful; Skillful; Versatile</td>
         <td><b>Bard Features</b>: Armor Training (Light); Bard Subclass; Bardic Inspiration; Bonus Proficiencies (College Of Lore); College Of Lore; Countercharm; Cutting Words; Epic Boon; Expertise; Font Of Inspiration; Jack Of All Trades; Magical Discoveries; Magical Secrets; Peerless Skill; Save Proficiency (Dexterity; Charisma); Skill Proficiency (Choose 3 from any); Spellcasting; Superior Inspiration; Tool Proficiency (Choose 3 from any Musical); Weapon Proficiency (Simple Weapons); Words Of Creation</td>
         <td><b>Acolyte Features</b>: Ability Boost (Choose 3 from Intelligence, Wisdom, Charisma); Magic Initiate (Cleric); Skill Proficiency (Insight; Religion); Tool Proficiency (Calligrapher's Supplies)</td>
@@ -107,7 +108,7 @@ var attributes = {
       <tr style="text-align:center">
         <td><i>Bard Subclass: 1 selection</i></td>
       </tr><tr style="text-align:center">
-        <td><i>Epic Boon: +1 General Feat</i></td>
+        <td><i>Epic Boon: +1 Epic Boon Feat</i></td>
       </tr><tr style="text-align:center">
         <td><i>Versatile: +1 Origin Feat</i></td>
       </tr><tr style="text-align:center">
@@ -175,8 +176,8 @@ var attributes = {
       <td>      <table id="CombatStats" style="width:100%">
       <tr style="text-align:center">
         <td><b>Hit Points</b>: 101</td>
-        <td><b>Initiative</b>: -1</td>
-        <td><b>Armor Class</b>: 9</td>
+        <td><b>Initiative</b>: +5</td>
+        <td><b>Armor Class</b>: 11</td>
         <td><b>Attacks Per Round</b>: 1</td>
       </tr></table>
 </td>
@@ -190,7 +191,7 @@ var attributes = {
     </tr><tr style="text-align:center">
       <td>      <table id="Gear" style="width:100%">
       <tr style="text-align:center">
-        <td><b>Armor</b>: undefined</td>
+        <td><b>Armor</b>: Leather</td>
         <td><b>Shield</b>: None</td>
         <td><b>Weapons</b>: Club (+8 1d4+2 B); Javelin (+8 1d6+2 P R30/120); Quarterstaff (+8 1d6+2 B [2h d8]); Unarmed (+8 1+2 B)</td>
       </tr></table>
@@ -198,6 +199,8 @@ var attributes = {
     </tr><tr style="text-align:center">
       <td><b>Combat Notes</b>:       <table id="CombatNotes" style="width:100%">
       <tr style="text-align:center">
+        <td><i>Alert: +6 Initiative</i></td>
+      </tr><tr style="text-align:center">
         <td><i>Constitution Hit Points Adjustment: +20</i></td>
       </tr><tr style="text-align:center">
         <td><i>Defense: +1 Armor Class in armor</i></td>
@@ -214,17 +217,23 @@ var attributes = {
       </tr><tr style="text-align:center">
         <td><i>Strength Damage Adjustment: +2</i></td>
       </tr><tr style="text-align:center">
-        <td>Bardic Inspiration: R60' Can use a bonus action to give an ally +1d12 on an ability check, attack, or save within 1 hr 3 times per short rest</td>
+        <td>Alert: Can swap initiatives with a willing ally</td>
       </tr><tr style="text-align:center">
-        <td>Boon Of Combat Prowess: Can treat an attack miss as a hit once per turn</td>
+        <td>Bardic Inspiration: R60' Can use a bonus action to give an ally +1d12 on an ability check, attack, or save within 1 hr 3 times per short rest</td>
       </tr><tr style="text-align:center">
         <td>Countercharm: R30' Can use a reaction to give a target a reroll with advantage on a save vs. charmed or frightened</td>
       </tr><tr style="text-align:center">
         <td>Cutting Words: R60' Can use a reaction to subtract a Bardic Inspiration die from a foe roll</td>
       </tr><tr style="text-align:center">
+        <td>Grappler: Can both Damage and Grapple with an unarmed strike once per turn, has advantage on attacks on a grappled foe, and can move at full speed with a grappled foe of Medium size or smaller</td>
+      </tr><tr style="text-align:center">
+        <td>Great Weapon Fighting: Can treat 1s and 2s as 3s on two-handed weapon damage</td>
+      </tr><tr style="text-align:center">
         <td>Peerless Skill: Can add a Bardic Inspiration die to a failed attack; does not expend a use on failure</td>
       </tr><tr style="text-align:center">
         <td>Superior Inspiration: Has a minimum of 2 uses of Bardic Inspiration available after initiative</td>
+      </tr><tr style="text-align:center">
+        <td>Two-Weapon Fighting: Adds ability modifier to second weapon damage</td>
       </tr></table>
 </td>
     </tr></table>

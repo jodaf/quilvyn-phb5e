@@ -10,7 +10,7 @@ var attributes = {
   "abilityBoosts.Charisma":1, "abilityBoosts.Intelligence":1, "abilityBoosts.Strength":1, 
   "abilityBoosts.Wisdom":1, "alignment":"Neutral Good", "armor":"Leather", "background":"Soldier", 
   "charisma":5, "constitution":8, "deity":"Celtic-Briantia", "dexterity":12, 
-  "experience":76864, "feats.Boon Of Combat Prowess":1, 
+  "experience":76864, "feats.Alert":1, "feats.Boon Of Combat Prowess":1, 
   "feats.Boon Of Irresistible Offense (Dexterity)":1, "gender":"Male", "hitPoints":30, "intelligence":11, "levels.Cleric":10, 
   "name":"Spells-Cleric", "selectableFeatures.Cleric - Life Domain":1, 
   "selectableFeatures.Cleric - Potent Spellcasting":1, "selectableFeatures.Cleric - Protector":1, "shield":"None", 
@@ -115,14 +115,14 @@ var attributes = {
     <tr style="text-align:center">
       <td>      <table id="FeatStats" style="width:100%">
       <tr style="text-align:center">
-        <td><b>Feat Count</b>: General: 2</td>
+        <td><b>Feat Count</b>: General: 2; Origin: 1</td>
         <td><b>Selectable Feature Count</b>: Cleric (Blessed Strikes); Cleric (Cleric Subclass); Cleric (Divine Order)</td>
       </tr></table>
 </td>
     </tr><tr style="text-align:center">
       <td>      <table id="FeatLists" style="width:100%">
       <tr style="text-align:center">
-        <td><b>Feats</b>: Boon Of Combat Prowess; Boon Of Irresistible Offense (Dexterity)</td>
+        <td><b>Feats</b>: Alert; Boon Of Combat Prowess; Boon Of Irresistible Offense (Dexterity)</td>
         <td><b>Human Features</b>: Resourceful; Skillful; Versatile</td>
         <td><b>Cleric Features</b>: Armor Training (Light; Medium; Shield); Blessed Healer; Blessed Strikes; Channel Divinity; Cleric Subclass; Disciple Of Life; Divine Intervention; Divine Order; Divine Spark; Life Domain Spells; Life Domain; Potent Spellcasting; Preserve Life; Protector; Save Proficiency (Wisdom; Charisma); Sear Undead; Skill Proficiency (Choose 2 from History, Insight, Medicine, Persuasion, Religion); Spellcasting; Turn Undead; Weapon Proficiency (Simple Weapons)</td>
         <td><b>Soldier Features</b>: Ability Boost (Choose 3 from Strength, Dexterity, Constitution); Savage Attacker; Skill Proficiency (Athletics; Intimidation); Tool Proficiency (Choose 1 from any Gaming)</td>
@@ -191,7 +191,7 @@ var attributes = {
       <td>      <table id="CombatStats" style="width:100%">
       <tr style="text-align:center">
         <td><b>Hit Points</b>: 20</td>
-        <td><b>Initiative</b>: +1</td>
+        <td><b>Initiative</b>: +5</td>
         <td><b>Armor Class</b>: 12</td>
         <td><b>Attacks Per Round</b>: 1</td>
       </tr></table>
@@ -214,6 +214,8 @@ var attributes = {
     </tr><tr style="text-align:center">
       <td><b>Combat Notes</b>:       <table id="CombatNotes" style="width:100%">
       <tr style="text-align:center">
+        <td><i>Alert: +4 Initiative</i></td>
+      </tr><tr style="text-align:center">
         <td><i>Constitution Hit Points Adjustment: -10</i></td>
       </tr><tr style="text-align:center">
         <td><i>Dexterity Armor Class Adjustment: +1</i></td>
@@ -223,6 +225,8 @@ var attributes = {
         <td><i>Dexterity Damage Adjustment: +1</i></td>
       </tr><tr style="text-align:center">
         <td><i>Protector: Armor Training (Heavy)/Weapon Proficiency (Martial Weapons)</i></td>
+      </tr><tr style="text-align:center">
+        <td>Alert: Can swap initiatives with a willing ally</td>
       </tr><tr style="text-align:center">
         <td>Boon Of Combat Prowess: Can treat an attack miss as a hit once per turn</td>
       </tr><tr style="text-align:center">

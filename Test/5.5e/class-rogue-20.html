@@ -8,17 +8,17 @@
 var attributes = {
   "_path":"ztest/5.5e/class/rogue 20", 
   "abilityBoosts.Charisma":1, "abilityBoosts.Dexterity":1, "abilityBoosts.Intelligence":2, 
-  "abilityBoosts.Strength":1, "abilityBoosts.Wisdom":1, "alignment":"Lawful Neutral", "armor":"undefined", 
+  "abilityBoosts.Strength":1, "abilityBoosts.Wisdom":1, "alignment":"Lawful Neutral", "armor":"Leather", 
   "background":"Acolyte", "charisma":12, "constitution":15, "deity":"Norse-Skadi", "dexterity":14, 
   "experience":496140, "feats.Ability Score Improvement":1, "feats.Archery":1, 
-  "feats.Boon Of The Night Spirit":1, "feats.Savage Attacker":1, "feats.Skilled":1, "feats.Two-Weapon Fighting":1, 
-  "gender":"Female", "hitPoints":64, "intelligence":13, "languagesChosen.Infernal":1, 
-  "levels.Rogue":20, "name":"Class-Rogue 20", "selectableFeatures.Rogue - Thief":1, 
-  "shield":"None", "skillsChosen.Acrobatics":1, "skillsChosen.Arcana":1, 
-  "skillsChosen.Deception":1, "skillsChosen.Insight":1, "skillsChosen.Performance":1, 
-  "skillsChosen.Religion":1, "skillsChosen.Sleight Of Hand":1, "skillsChosen.Stealth":1, 
-  "species":"Human", "strength":10, "weapons.Greatclub":1, "weapons.Light Crossbow":1, 
-  "weapons.Light Hammer":1, "wisdom":12
+  "feats.Boon Of The Night Spirit":1, "feats.Great Weapon Fighting":1, "feats.Magic Initiate (Wizard)":1, 
+  "feats.Savage Attacker":1, "feats.Skilled":1, "feats.Two-Weapon Fighting":1, "gender":"Female", 
+  "hitPoints":64, "intelligence":13, "languagesChosen.Infernal":1, "levels.Rogue":20, 
+  "name":"Class-Rogue 20", "selectableFeatures.Rogue - Thief":1, "shield":"None", 
+  "skillsChosen.Acrobatics":1, "skillsChosen.Arcana":1, "skillsChosen.Deception":1, 
+  "skillsChosen.Insight":1, "skillsChosen.Performance":1, "skillsChosen.Religion":1, 
+  "skillsChosen.Sleight Of Hand":1, "skillsChosen.Stealth":1, "species":"Human", "strength":10, 
+  "weapons.Greatclub":1, "weapons.Light Crossbow":1, "weapons.Light Hammer":1, "wisdom":12
 };
   </script>
 </head>
@@ -83,14 +83,14 @@ var attributes = {
     <tr style="text-align:center">
       <td>      <table id="FeatStats" style="width:100%">
       <tr style="text-align:center">
-        <td><b>Feat Count</b>: General: 6</td>
+        <td><b>Feat Count</b>: Epic Boon: 1; General: 6; Origin: 1</td>
         <td><b>Selectable Feature Count</b>: Rogue (Rogue Subclass)</td>
       </tr></table>
 </td>
     </tr><tr style="text-align:center">
       <td>      <table id="FeatLists" style="width:100%">
       <tr style="text-align:center">
-        <td><b>Feats</b>: Ability Score Improvement; Archery; Boon Of The Night Spirit; Savage Attacker; Skilled; Two-Weapon Fighting</td>
+        <td><b>Feats</b>: Ability Score Improvement; Archery; Boon Of The Night Spirit; Great Weapon Fighting; Magic Initiate (Wizard); Savage Attacker; Skilled; Two-Weapon Fighting</td>
         <td><b>Human Features</b>: Resourceful; Skillful; Versatile</td>
         <td><b>Rogue Features</b>: Armor Training (Light); Cunning Action; Cunning Strike; Devious Strikes; Elusive; Epic Boon; Evasion; Expertise; Fast Hands; Improved Cunning Strike; Reliable Talent; Rogue Subclass; Save Proficiency (Dexterity; Intelligence); Second-Story Work; Skill Proficiency (Choose 4 from Acrobatics, Athletics, Deception, Insight, Intimidation, Investigation, Perception, Persuasion, Sleight Of Hand, Stealth); Slippery Mind; Sneak Attack; Steady Aim; Stroke Of Luck; Supreme Sneak; Thief's Reflexes; Thief; Thieves' Cant; Tool Proficiency (Thieves' Tools); Uncanny Dodge; Use Magic Device; Weapon Mastery; Weapon Proficiency (Simple Weapons; Finesse Weapons; Light Weapons)</td>
         <td><b>Acolyte Features</b>: Ability Boost (Choose 3 from Intelligence, Wisdom, Charisma); Magic Initiate (Cleric); Skill Proficiency (Insight; Religion); Tool Proficiency (Calligrapher's Supplies)</td>
@@ -99,7 +99,7 @@ var attributes = {
     </tr><tr style="text-align:center">
       <td><b>Feature Notes</b>:       <table id="FeatureNotes" style="width:100%">
       <tr style="text-align:center">
-        <td><i>Epic Boon: +1 General Feat</i></td>
+        <td><i>Epic Boon: +1 Epic Boon Feat</i></td>
       </tr><tr style="text-align:center">
         <td><i>Rogue Subclass: 1 selection</i></td>
       </tr><tr style="text-align:center">
@@ -178,7 +178,7 @@ var attributes = {
       <tr style="text-align:center">
         <td><b>Hit Points</b>: 104</td>
         <td><b>Initiative</b>: +2</td>
-        <td><b>Armor Class</b>: 12</td>
+        <td><b>Armor Class</b>: 13</td>
         <td><b>Attacks Per Round</b>: 1</td>
       </tr></table>
 </td>
@@ -192,7 +192,7 @@ var attributes = {
     </tr><tr style="text-align:center">
       <td>      <table id="Gear" style="width:100%">
       <tr style="text-align:center">
-        <td><b>Armor</b>: undefined</td>
+        <td><b>Armor</b>: Leather</td>
         <td><b>Shield</b>: None</td>
         <td><b>Weapons</b>: Greatclub (+6 1d8 B); Light Crossbow (+8 1d8+2 P R80/320); Light Hammer (+6 1d4 B R20/60); Unarmed (+6 1 B)</td>
       </tr></table>
@@ -223,6 +223,8 @@ var attributes = {
         <td>Elusive: Attacks on self never have advantage</td>
       </tr><tr style="text-align:center">
         <td>Fast Hands: Can use a bonus action to disarm a trap, open a lock, pick a pocket, or take a Utilize action</td>
+      </tr><tr style="text-align:center">
+        <td>Great Weapon Fighting: Can treat 1s and 2s as 3s on two-handed weapon damage</td>
       </tr><tr style="text-align:center">
         <td>Savage Attacker: Can use the better of 2 damage rolls once per turn</td>
       </tr><tr style="text-align:center">
@@ -270,14 +272,20 @@ var attributes = {
     <tr style="text-align:center">
       <td>      <table id="SpellStats" style="width:100%">
       <tr style="text-align:center">
-        <td><b>Attack</b>: C: 7</td>
-        <td><b>Spell DC</b>: C: 15</td>
+        <td><b>Attack</b>: C: 7; W: 8</td>
+        <td><b>Spell DC</b>: C: 15; W: 16</td>
       </tr></table>
 </td>
     </tr></table>
 </td>
   </tr><tr style="text-align:center">
-    <td><b>Magic Notes</b>: Magic Initiate (Cleric): Knows 2 Cleric cantrips and can cast a chosen C1 spell once per long rest</td>
+    <td><b>Magic Notes</b>:     <table id="MagicNotes" style="width:100%">
+    <tr style="text-align:center">
+      <td>Magic Initiate (Cleric): Knows 2 Cleric cantrips and can cast a chosen C1 spell once per long rest</td>
+    </tr><tr style="text-align:center">
+      <td>Magic Initiate (Wizard): Knows 2 Wizard cantrips and can cast a chosen W1 spell once per long rest</td>
+    </tr></table>
+</td>
   </tr></table>
 </td>
 </tr></table>
