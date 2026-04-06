@@ -185,7 +185,6 @@ var attributes = {
         <td><b>Hit Points</b>: 161</td>
         <td><b>Initiative</b>: +6</td>
         <td><b>Armor Class</b>: 14</td>
-        <td><b>Attacks Per Round</b>: 2</td>
       </tr></table>
 </td>
     </tr><tr style="text-align:center">
@@ -216,8 +215,6 @@ var attributes = {
       </tr><tr style="text-align:center">
         <td><i>Dexterity Damage Adjustment: +1</i></td>
       </tr><tr style="text-align:center">
-        <td><i>Extra Attack: +1 Attacks Per Round</i></td>
-      </tr><tr style="text-align:center">
         <td><i>Fighting Style (Archery): +2 ranged attacks</i></td>
       </tr><tr style="text-align:center">
         <td><i>Fighting Style (Defense): +1 Armor Class in armor</i></td>
@@ -235,6 +232,8 @@ var attributes = {
         <td>Escape The Horde: Foes have disadvantage on opportunity attacks targeting self</td>
       </tr><tr style="text-align:center">
         <td>Exceptional Training: Can use a bonus action to command companion to Dash, Disengage, or Help instead of Attack/Companion attacks count as magical</td>
+      </tr><tr style="text-align:center">
+        <td>Extra Attack: Can make 2 attacks during an Attack action</td>
       </tr><tr style="text-align:center">
         <td>Feral Senses: Suffers no disadvantage when attacking an invisible foe</td>
       </tr><tr style="text-align:center">
@@ -294,7 +293,7 @@ var attributes = {
     <tr style="text-align:center">
       <td>      <table id="SpellStats" style="width:100%">
       <tr style="text-align:center">
-        <td><b>Spell Slots</b>: R1: 4; R2: 3; R3: 3; R4: 3; R5: 2; W0: 2; W1: 1</td>
+        <td><b>Spell Slots</b>: R1: 4; R2: 3; R3: 3; R4: 3; R5: 2</td>
         <td><b>Attack</b>: R: 9; W: 7</td>
         <td><b>Spell DC</b>: R: 17; W: 15</td>
       </tr></table>
@@ -320,7 +319,7 @@ var attributes = {
     </tr><tr style="text-align:left">
       <td>Cure Wounds (R1 Evoc): Touched regains 1d8+3 hit points [+Level restores +1d8 HP]</td>
     </tr><tr style="text-align:left">
-      <td>Ensnaring Strike (R1 Conj): Next successful self attack restrains the foe and inflicts 1d6 HP per rd piercing (save Strength ends) for concentration up to 1 min [+Level inflicts +1d6 HP]</td>
+      <td>Ensnaring Strike (R1 Conj): Next successful self attack restrains the foe and inflicts 1d6 HP per rd piercing (save Strength ends; Large creatures have advantage on the save) for concentration up to 1 min [+Level inflicts +1d6 HP]</td>
     </tr><tr style="text-align:left">
       <td>Friends (W0 Ench): Self gains advantage on Charisma checks with a non-hostile target for concentration up to 1 min; the target becomes hostile afterward</td>
     </tr><tr style="text-align:left">
@@ -344,7 +343,7 @@ var attributes = {
   </tr><tr style="text-align:center">
     <td><b>Magic Notes</b>:     <table id="MagicNotes" style="width:100%">
     <tr style="text-align:center">
-      <td><i>Magic Initiate (Wizard): Knows 2 wizard cantrips and can cast a chosen W1 spell once per long rest</i></td>
+      <td>Magic Initiate (Wizard): Knows 2 Wizard cantrips and can cast a chosen W1 spell once per long rest</td>
     </tr><tr style="text-align:center">
       <td>Primeval Awareness: Can spend a spell slot to sense creatures in a 1 mile radius, or in a 6 mile radius of favored terrain, for 1 min per slot level</td>
     </tr><tr style="text-align:center">
