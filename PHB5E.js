@@ -757,7 +757,7 @@ PHB5E.FEATURES_ADDED = {
   'Acolyte Of Nature':
     'Section=magic,skill ' +
     'Note=' +
-      '"Knows 1 druid cantrip",' +
+      '"Knows 1 Druid cantrip",' +
       '"Skill Proficiency (Choose 1 from Animal Handling, Nature, Survival)"',
   'Bonus Proficiency (Nature Domain)':
     'Section=combat Note="Armor Proficiency (Heavy)"',
@@ -932,7 +932,7 @@ PHB5E.FEATURES_ADDED = {
     'Note="Successful attack inflicts disadvantage on the first save vs. a self spell before the end of the next turn"',
   'Improved War Magic':'Section=combat Note="Has increased War Magic effects"',
   // Spellcasting as above
-  'War Magic': // See Xanathar.js re: a wizard tradition also named War Magic
+  'War Magic': // See Xanathar.js re: a Wizard tradition also named War Magic
     'Section=combat ' +
     'Note="Can use a bonus action to make a weapon attack after casting a %{combatNotes.improvedWarMagic?\'spell\':\'cantrip\'}"',
   'Weapon Bond':
@@ -1032,7 +1032,7 @@ PHB5E.FEATURES_ADDED = {
     'Note="R%{levels.Paladin<18?10:30}\' Self and allies have resistance to spell damage"',
   'Elder Champion':
     'Section=magic ' +
-    'Note="Can regain 10 hit points per rd, cast paladin spells as a bonus action, and inflict disadvantage on saves vs. self spells on foes within 10\' for 1 min once per long rest"',
+    'Note="Can regain 10 hit points per rd, cast Paladin spells as a bonus action, and inflict disadvantage on saves vs. self spells on foes within 10\' for 1 min once per long rest"',
   "Nature's Wrath":
     'Section=magic ' +
     'Note="R10\' Can use Channel Divinity to create spectral vines that restrain the target (save DC %{spellDifficultyClass.P} Dexterity or Strength ends)"',
@@ -1412,22 +1412,22 @@ PHB5E.FEATURES_ADDED = {
       '"Has advantage on saves vs. spells cast by adjacent foes"',
   'Magic Initiate (Bard)':
     'Section=Magic ' +
-    'Note="Knows 2 bard cantrips and can cast a chosen B1 spell once per long rest"',
+    'Note="Knows 2 Bard cantrips and can cast a chosen B1 spell once per long rest"',
   'Magic Initiate (Cleric)':
     'Section=Magic ' +
-    'Note="Knows 2 cleric cantrips and can cast a chosen C1 spell once per long rest"',
+    'Note="Knows 2 Cleric cantrips and can cast a chosen C1 spell once per long rest"',
   'Magic Initiate (Druid)':
     'Section=Magic ' +
-    'Note="Knows 2 druid cantrips and can cast a chosen D1 spell once per long rest"',
+    'Note="Knows 2 Druid cantrips and can cast a chosen D1 spell once per long rest"',
   'Magic Initiate (Sorcerer)':
     'Section=Magic ' +
-    'Note="Knows 2 sorcerer cantrips and can cast a chosen S1 spell once per long rest"',
+    'Note="Knows 2 Sorcerer cantrips and can cast a chosen S1 spell once per long rest"',
   'Magic Initiate (Warlock)':
     'Section=Magic ' +
-    'Note="Knows 2 warlock cantrips and can cast a chosen K1 spell once per long rest"',
+    'Note="Knows 2 Warlock cantrips and can cast a chosen K1 spell once per long rest"',
   'Magic Initiate (Wizard)':
     'Section=Magic ' +
-    'Note="Knows 2 wizard cantrips and can cast a chosen W1 spell once per long rest"',
+    'Note="Knows 2 Wizard cantrips and can cast a chosen W1 spell once per long rest"',
   'Martial Adept':
     'Section=combat ' +
     'Note="Has the Combat Superiority feature with 2 maneuvers and 1 die"',
@@ -1669,7 +1669,7 @@ PHB5E.SPELLS_ADDED = {
     'Level=R1 ' +
     'AtHigherLevels="inflicts +1d6 HP" ' +
     'Description=' +
-      '"Next successful self attack restrains the foe and inflicts 1d6 HP per rd piercing (save Strength ends) for concentration up to 1 min"',
+      '"Next successful self attack restrains the foe and inflicts 1d6 HP per rd piercing (save Strength ends; Large creatures have advantage on the save) for concentration up to 1 min"',
 
   'Feign Death':
     'School=Necromancy ' +
@@ -1875,7 +1875,7 @@ PHB5E.classRulesExtra = function(rules, name) {
     rules.defineRule
       ('bardHasExtraAttack', 'features.College Of Valor', '=', '1');
     rules.defineRule
-      ('combatNotes.extraAttack', 'bardFeatures.Extra Attack', '+=', '1');
+      ('combatNotes.extraAttack', 'bardFeatures.Extra Attack', '^=', '2');
 
   } else if(name == 'Cleric') {
 
@@ -1896,8 +1896,6 @@ PHB5E.classRulesExtra = function(rules, name) {
       'features.Trickery Domain', '=', '"poison"',
       'features.War Domain', '=', '"weapon damage type"'
     );
-    rules.defineRule('spellSlots.D0', 'magicNotes.acolyteOfNature', '+=', '1');
-    rules.defineRule('casterLevels.D', 'casterLevels.Nature', '=', null);
 
   } else if(name == 'Druid') {
 
@@ -1959,7 +1957,7 @@ PHB5E.classRulesExtra = function(rules, name) {
     rules.defineRule
       ('casterLevels.W', 'casterLevels.Eldritch Knight', '^=', null);
     rules.defineRule
-      ('magicNotes.spellcasting', 'features.Eldritch Knight', '=', '"wizard"');
+      ('magicNotes.spellcasting', 'features.Eldritch Knight', '=', '"Wizard"');
 
   } else if(name == 'Monk') {
 
@@ -1991,7 +1989,7 @@ PHB5E.classRulesExtra = function(rules, name) {
     rules.defineRule
       ('casterLevels.W', 'casterLevels.Arcane Trickster', '^=', null);
     rules.defineRule
-      ('magicNotes.spellcasting', 'features.Arcane Trickster', '=', '"wizard"');
+      ('magicNotes.spellcasting', 'features.Arcane Trickster', '=', '"Wizard"');
 
   } else if(name == 'Wizard') {
 
@@ -2013,17 +2011,10 @@ PHB5E.featRulesExtra = function(rules, name) {
 
   let matchInfo;
 
-  if((matchInfo = name.match(/Magic\sInitiate\s.(.*)./)) != null) {
-    let clas = matchInfo[1];
-    let spellCode = clas == 'Warlock' ? 'K' : clas.charAt(0);
-    rules.defineRule('casterLevels.' + spellCode,
-      'magicNotes.magicInitiate(' + clas + ')', '^=', '1'
-    );
-    rules.defineRule('spellSlots.' + spellCode + '0',
-      'magicNotes.magicInitiate(' + clas + ')', '+=', '2'
-    );
-    rules.defineRule('spellSlots.' + spellCode + '1',
-      'magicNotes.magicInitiate(' + clas + ')', '+=', '1'
+  if(name.match(/^Magic\sInitiate\s\(.*\)$/)) {
+    let c = name.replace('Magic Initiate (', '').replace(')', '');
+    rules.defineRule('casterLevels.' + (c == 'Warlock' ? 'K' : c.charAt(0)),
+      'features.' + name, '^=', '1'
     );
   } else if(name == 'Martial Adept') {
     rules.defineRule
