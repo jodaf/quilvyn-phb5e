@@ -501,7 +501,6 @@ var attributes = {
         <td><b>Hit Points</b>: 96</td>
         <td><b>Initiative</b>: +4</td>
         <td><b>Armor Class</b>: 15</td>
-        <td><b>Attacks Per Round</b>: 1</td>
       </tr></table>
 </td>
     </tr><tr style="text-align:center">
@@ -516,7 +515,7 @@ var attributes = {
       <tr style="text-align:center">
         <td><b>Armor</b>: Chain Shirt</td>
         <td><b>Shield</b>: None</td>
-        <td><b>Weapons</b>: Flail (+4 1d8+2 B); Halberd (+4 1d10+2 S); Pike (+4 1d10+2 P); Unarmed (+4 1+2 B)</td>
+        <td><b>Weapons</b>: Flail (+4 1d8+2 B; Sap); Halberd (+4 1d10+2 S; Cleave); Pike (+4 1d10+2 P; Push); Unarmed (+4 1+2 B)</td>
       </tr></table>
 </td>
     </tr><tr style="text-align:center">
@@ -536,7 +535,7 @@ var attributes = {
       </tr><tr style="text-align:center">
         <td><i>Strength Damage Adjustment: +2</i></td>
       </tr><tr style="text-align:center">
-        <td>Bardic Inspiration: R60' Can use a bonus action to give an ally +1d6 on an ability check, attack, or save within 1 hr 2 times per long rest</td>
+        <td>Bardic Inspiration: R60' Can use a bonus action 2 times per long rest to give an ally +1d6 on an ability check, attack, or save within 1 hr</td>
       </tr><tr style="text-align:center">
         <td>Divine Spark: R30' Can use Channel Divinity to restore 1d8 hit points or to inflict 1d8 HP of a choice of necrotic or radiant (save Constitution half)</td>
       </tr><tr style="text-align:center">
@@ -638,7 +637,7 @@ var attributes = {
     </tr><tr style="text-align:left">
       <td>Antipathy/Sympathy (W8 Ench): R60' Target creature repels or attracts specified creature type for 10 days</td>
     </tr><tr style="text-align:left">
-      <td>Arcane Eye (W4 Divi): R30' Self sees with darkvision through a remote invisible eye that can move 30' per rd for concentration up to 1 hr</td>
+      <td>Arcane Eye (W4 Divi): R30' Self sees with Darkvision through a remote invisible eye that can move 30' per rd for concentration up to 1 hr</td>
     </tr><tr style="text-align:left">
       <td>Arcane Hand (W5 Evoc): R120' Large force hand (Armor Class 20, 96 hit points, Strength 26, Dexterity 10) can move 60' per rd and can punch (inflicts 5d8 HP force), push 5' (save Strength negates), grapple (may crush, inflicting 2d6+2 HP bludgeoning), provide half cover, and inflict difficult terrain for concentration up to 1 min [+Level inflicts +2d8 HP force and +4d6 HP bludgeoning]</td>
     </tr><tr style="text-align:left">
@@ -1106,11 +1105,11 @@ var attributes = {
     </tr><tr style="text-align:left">
       <td>Eldritch Blast (K0 Evoc): R300' Ranged spell creates 3 rays that inflict 1d10 HP force each</td>
     </tr><tr style="text-align:left">
-      <td>Elementalism (D0 Tran): TODO</td>
+      <td>Elementalism (D0 Tran): R30' Moves air or dust in a 5' cube, creates smoke or mist in a 5' cube for 1 min, or scuplts a 1' cube of dirt, sand, fire, smoke, mist, or water for 1 hr</td>
     </tr><tr style="text-align:left">
-      <td>Elementalism (S0 Tran): TODO</td>
+      <td>Elementalism (S0 Tran): R30' Moves air or dust in a 5' cube, creates smoke or mist in a 5' cube for 1 min, or scuplts a 1' cube of dirt, sand, fire, smoke, mist, or water for 1 hr</td>
     </tr><tr style="text-align:left">
-      <td>Elementalism (W0 Tran): TODO</td>
+      <td>Elementalism (W0 Tran): R30' Moves air or dust in a 5' cube, creates smoke or mist in a 5' cube for 1 min, or scuplts a 1' cube of dirt, sand, fire, smoke, mist, or water for 1 hr</td>
     </tr><tr style="text-align:left">
       <td>Enhance Ability (B2 Tran): Touched gains advantage on chosen ability checks for concentration up to 1 hr [+Level affects +1 target]</td>
     </tr><tr style="text-align:left">
@@ -2434,7 +2433,13 @@ var attributes = {
   <tr style="text-align:center">
     <td>    <table id="ValidationPart" style="width:100%">
     <tr style="text-align:center">
-      <td><b>Validation Errors</b>: Skill Proficiency Allocation: 19 available vs. 18 allocated</td>
+      <td><b>Validation Errors</b>:       <table id="ValidationNotes" style="width:100%">
+      <tr style="text-align:center">
+        <td>Skill And Tool Proficiency Allocation: 23 available vs. 22 allocated</td>
+      </tr><tr style="text-align:center">
+        <td>Skill Proficiency Allocation: 19 available vs. 18 allocated</td>
+      </tr></table>
+</td>
     </tr></table>
 </td>
   </tr></table>

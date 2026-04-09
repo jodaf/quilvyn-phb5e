@@ -11,9 +11,10 @@ var attributes = {
   "alignment":"Chaotic Good", "armor":"Chain Mail", "background":"Acolyte", "charisma":13, 
   "constitution":12, "dexterity":10, "experience":6864, "feats.Archery":1, 
   "feats.Magic Initiate (Druid)":1, "gender":"Male", "hitPoints":19, "intelligence":14, "levels.Fighter":5, 
-  "name":"Species-Dwarf", "selectableFeatures.Fighter - Champion":1, "shield":"Shield", 
-  "skillsChosen.Acrobatics":1, "skillsChosen.Animal Handling":1, "species":"Dwarf", "strength":13, 
-  "weapons.Rapier":1, "weapons.Scimitar":1, "wisdom":11
+  "name":"Species-Dwarf", "selectableFeatures.Fighter - Champion":1, 
+  "selectableFeatures.Fighter - Dexterity":1, "shield":"Shield", "skillsChosen.Acrobatics":1, 
+  "skillsChosen.Animal Handling":1, "species":"Dwarf", "strength":13, "weapons.Rapier":1, "weapons.Scimitar":1, 
+  "wisdom":11
 };
   </script>
 </head>
@@ -72,7 +73,7 @@ var attributes = {
       <td>      <table id="FeatStats" style="width:100%">
       <tr style="text-align:center">
         <td><b>Feat Count</b>: Fighting Style; General</td>
-        <td><b>Selectable Feature Count</b>: Fighter (Fighter Subclass)</td>
+        <td><b>Selectable Feature Count</b>: Fighter (Fighter Primary Ability); Fighter (Fighter Subclass)</td>
       </tr></table>
 </td>
     </tr><tr style="text-align:center">
@@ -80,13 +81,15 @@ var attributes = {
       <tr style="text-align:center">
         <td><b>Feats</b>: Archery; Magic Initiate (Druid)</td>
         <td><b>Dwarf Features</b>: Darkvision; Dwarven Resilience; Dwarven Toughness; Stonecunning</td>
-        <td><b>Fighter Features</b>: Action Surge; Armor Training (Light; Medium; Heavy; Shield); Champion; Extra Attack; Fighter Primary Ability; Fighter Subclass; Fighting Style; Improved Critical; Remarkable Athlete; Save Proficiency (Strength; Constitution); Second Wind; Skill Proficiency (Choose 2 from Acrobatics, Animal Handling, Athletics, History, Insight, Intimidation, Persuasion; Perception, Survival); Tactical Mind; Tactical Shift; Weapon Mastery; Weapon Proficiency (Simple Weapons; Martial Weapons)</td>
+        <td><b>Fighter Features</b>: Action Surge; Armor Training (Light; Medium; Heavy; Shield); Champion; Dexterity; Extra Attack; Fighter Primary Ability; Fighter Subclass; Fighting Style; Improved Critical; Remarkable Athlete; Save Proficiency (Strength; Constitution); Second Wind; Skill Proficiency (Choose 2 from Acrobatics, Animal Handling, Athletics, History, Insight, Intimidation, Persuasion; Perception, Survival); Tactical Mind; Tactical Shift; Weapon Mastery; Weapon Proficiency (Simple Weapons; Martial Weapons)</td>
         <td><b>Acolyte Features</b>: Ability Boost (Choose 3 from Intelligence, Wisdom, Charisma); Magic Initiate (Cleric); Skill Proficiency (Insight; Religion); Tool Proficiency (Calligrapher's Supplies)</td>
       </tr></table>
 </td>
     </tr><tr style="text-align:center">
       <td><b>Feature Notes</b>:       <table id="FeatureNotes" style="width:100%">
       <tr style="text-align:center">
+        <td><i>Fighter Primary Ability: 1 selection</i></td>
+      </tr><tr style="text-align:center">
         <td><i>Fighter Subclass: 1 selection</i></td>
       </tr><tr style="text-align:center">
         <td><i>Fighting Style: +1 Fighting Style Feat</i></td>
@@ -153,7 +156,6 @@ var attributes = {
         <td><b>Hit Points</b>: 29</td>
         <td><b>Initiative</b>: +0</td>
         <td><b>Armor Class</b>: 18</td>
-        <td><b>Attacks Per Round</b>: 2</td>
       </tr></table>
 </td>
     </tr><tr style="text-align:center">
@@ -168,7 +170,7 @@ var attributes = {
       <tr style="text-align:center">
         <td><b>Armor</b>: Chain Mail</td>
         <td><b>Shield</b>: Shield</td>
-        <td><b>Weapons</b>: Rapier (+4 1d8+1 P); Scimitar (+4 1d6+1 S); Unarmed (+4 1+1 B)</td>
+        <td><b>Weapons</b>: Rapier (+4 1d8+1 P; Vex); Scimitar (+4 1d6+1 S; Nick); Unarmed (+4 1+1 B)</td>
       </tr></table>
 </td>
     </tr><tr style="text-align:center">
@@ -178,8 +180,6 @@ var attributes = {
       </tr><tr style="text-align:center">
         <td><i>Dwarven Toughness: +5 Hit Points</i></td>
       </tr><tr style="text-align:center">
-        <td><i>Extra Attack: +1 Attacks Per Round</i></td>
-      </tr><tr style="text-align:center">
         <td><i>Strength Attack Adjustment: +1</i></td>
       </tr><tr style="text-align:center">
         <td><i>Strength Damage Adjustment: +1</i></td>
@@ -187,6 +187,8 @@ var attributes = {
         <td>Action Surge: Can take an extra action once per short rest</td>
       </tr><tr style="text-align:center">
         <td>Archery: +2 ranged attacks</td>
+      </tr><tr style="text-align:center">
+        <td>Extra Attack: Can make 2 attacks during an Attack action</td>
       </tr><tr style="text-align:center">
         <td>Improved Critical: Scores a possible critical on a natural 19</td>
       </tr><tr style="text-align:center">

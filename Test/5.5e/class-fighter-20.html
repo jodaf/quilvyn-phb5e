@@ -15,10 +15,10 @@ var attributes = {
   "feats.Great Weapon Fighting":1, "feats.Magic Initiate (Druid)":1, "feats.Savage Attacker":1, 
   "feats.Skilled":1, "feats.Two-Weapon Fighting":1, "gender":"Female", "hitPoints":79, 
   "intelligence":13, "levels.Fighter":20, "name":"Class-Fighter 20", "race":"Human", 
-  "selectableFeatures.Fighter - Champion":1, "shield":"None", "skillsChosen.Animal Handling":1, "skillsChosen.Arcana":1, 
-  "skillsChosen.Athletics":1, "skillsChosen.History":1, "skillsChosen.Nature":1, 
-  "skillsChosen.Religion":1, "strength":11, "weapons.Greataxe":1, "weapons.Greatsword":1, 
-  "weapons.Heavy Crossbow":1, "wisdom":9
+  "selectableFeatures.Fighter - Champion":1, "selectableFeatures.Fighter - Strength":1, "shield":"None", 
+  "skillsChosen.Animal Handling":1, "skillsChosen.Arcana":1, "skillsChosen.Athletics":1, 
+  "skillsChosen.History":1, "skillsChosen.Nature":1, "skillsChosen.Religion":1, "strength":11, 
+  "weapons.Greataxe":1, "weapons.Greatsword":1, "weapons.Heavy Crossbow":1, "wisdom":9
 };
   </script>
 </head>
@@ -84,7 +84,7 @@ var attributes = {
       <td>      <table id="FeatStats" style="width:100%">
       <tr style="text-align:center">
         <td><b>Feat Count</b>: Epic Boon: 1; Fighting Style: 2; General: 7; Origin: 1</td>
-        <td><b>Selectable Feature Count</b>: Fighter (Fighter Subclass)</td>
+        <td><b>Selectable Feature Count</b>: Fighter (Fighter Primary Ability); Fighter (Fighter Subclass)</td>
       </tr></table>
 </td>
     </tr><tr style="text-align:center">
@@ -92,7 +92,7 @@ var attributes = {
       <tr style="text-align:center">
         <td><b>Feats</b>: Ability Score Improvement; Alert; Archery; Boon Of The Night Spirit; Boon Of Truesight; Defense; Great Weapon Fighting; Magic Initiate (Druid); Savage Attacker; Skilled; Two-Weapon Fighting</td>
         <td><b>Human Features</b>: Resourceful; Skillful; Versatile</td>
-        <td><b>Fighter Features</b>: Action Surge; Additional Fighting Style; Armor Training (Light; Medium; Heavy; Shield); Champion; Epic Boon; Extra Attack; Fighter Primary Ability; Fighter Subclass; Fighting Style; Heroic Warrior; Improved Critical; Indomitable; Remarkable Athlete; Save Proficiency (Strength; Constitution); Second Wind; Skill Proficiency (Choose 2 from Acrobatics, Animal Handling, Athletics, History, Insight, Intimidation, Persuasion; Perception, Survival); Studied Attacks; Superior Critical; Survivor; Tactical Master; Tactical Mind; Tactical Shift; Three Extra Attacks; Two Extra Attacks; Weapon Mastery; Weapon Proficiency (Simple Weapons; Martial Weapons)</td>
+        <td><b>Fighter Features</b>: Action Surge; Additional Fighting Style; Armor Training (Light; Medium; Heavy; Shield); Champion; Epic Boon; Extra Attack; Fighter Primary Ability; Fighter Subclass; Fighting Style; Heroic Warrior; Improved Critical; Indomitable; Remarkable Athlete; Save Proficiency (Strength; Constitution); Second Wind; Skill Proficiency (Choose 2 from Acrobatics, Animal Handling, Athletics, History, Insight, Intimidation, Persuasion; Perception, Survival); Strength; Studied Attacks; Superior Critical; Survivor; Tactical Master; Tactical Mind; Tactical Shift; Three Extra Attacks; Two Extra Attacks; Weapon Mastery; Weapon Proficiency (Simple Weapons; Martial Weapons)</td>
         <td><b>Acolyte Features</b>: Ability Boost (Choose 3 from Intelligence, Wisdom, Charisma); Magic Initiate (Cleric); Skill Proficiency (Insight; Religion); Tool Proficiency (Calligrapher's Supplies)</td>
       </tr></table>
 </td>
@@ -102,6 +102,8 @@ var attributes = {
         <td><i>Additional Fighting Style: +1 Fighting Style Feat</i></td>
       </tr><tr style="text-align:center">
         <td><i>Epic Boon: +1 Epic Boon Feat</i></td>
+      </tr><tr style="text-align:center">
+        <td><i>Fighter Primary Ability: 1 selection</i></td>
       </tr><tr style="text-align:center">
         <td><i>Fighter Subclass: 1 selection</i></td>
       </tr><tr style="text-align:center">
@@ -152,7 +154,7 @@ var attributes = {
   </tr><tr style="text-align:center">
     <td><b>Skill Notes</b>:     <table id="SkillNotes" style="width:100%">
     <tr style="text-align:center">
-      <td><i>Skilled: Skill Proficiency (Choose 3 from any)</i></td>
+      <td><i>Skilled: Skill Proficiency or Tool Proficiency (Choose 3 from any)</i></td>
     </tr><tr style="text-align:center">
       <td><i>Skillful: Skill Proficiency (Choose 1 from any)</i></td>
     </tr><tr style="text-align:center">
@@ -175,7 +177,6 @@ var attributes = {
         <td><b>Hit Points</b>: 119</td>
         <td><b>Initiative</b>: +10</td>
         <td><b>Armor Class</b>: 18</td>
-        <td><b>Attacks Per Round</b>: 4</td>
       </tr></table>
 </td>
     </tr><tr style="text-align:center">
@@ -190,7 +191,7 @@ var attributes = {
       <tr style="text-align:center">
         <td><b>Armor</b>: Splint</td>
         <td><b>Shield</b>: None</td>
-        <td><b>Weapons</b>: Greataxe (+7 1d12+1 S); Greatsword (+7 2d6+1 S); Heavy Crossbow (+10 1d10+4 P R100/400); Unarmed (+7 1+1 B)</td>
+        <td><b>Weapons</b>: Greataxe (+7 1d12+1 S; Cleave); Greatsword (+7 2d6+1 S; Graze); Heavy Crossbow (+10 1d10+4 P R100/400; Push); Unarmed (+7 1+1 B)</td>
       </tr></table>
 </td>
     </tr><tr style="text-align:center">
@@ -205,8 +206,6 @@ var attributes = {
         <td><i>Dexterity Attack Adjustment: +4</i></td>
       </tr><tr style="text-align:center">
         <td><i>Dexterity Damage Adjustment: +4</i></td>
-      </tr><tr style="text-align:center">
-        <td><i>Extra Attack: +3 Attacks Per Round</i></td>
       </tr><tr style="text-align:center">
         <td><i>Strength Attack Adjustment: +1</i></td>
       </tr><tr style="text-align:center">
@@ -225,6 +224,8 @@ var attributes = {
         <td>Archery: +2 ranged attacks</td>
       </tr><tr style="text-align:center">
         <td>Boon Of The Night Spirit: Can use a bonus action to become invisible in dim or no light; taking an action, bonus action, or reaction ends</td>
+      </tr><tr style="text-align:center">
+        <td>Extra Attack: Can make 4 attacks during an Attack action</td>
       </tr><tr style="text-align:center">
         <td>Great Weapon Fighting: Can treat 1s and 2s as 3s on two-handed weapon damage</td>
       </tr><tr style="text-align:center">

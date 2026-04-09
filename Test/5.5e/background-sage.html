@@ -11,9 +11,10 @@ var attributes = {
   "alignment":"Chaotic Good", "armor":"Scale Mail", "background":"Sage", "charisma":11, "constitution":11, 
   "dexterity":14, "experience":158, "feats.Defense":1, "feats.Magic Initiate (Druid)":1, 
   "gender":"Female", "hitPoints":6, "intelligence":16, "levels.Fighter":1, 
-  "name":"Background-Sage", "shield":"Shield", "skillsChosen.Animal Handling":1, 
-  "skillsChosen.Persuasion":1, "skillsChosen.Sleight Of Hand":1, "species":"Human", "strength":13, 
-  "weapons.Battleaxe":1, "weapons.Longsword":1, "weapons.Scimitar":1, "wisdom":11
+  "name":"Background-Sage", "selectableFeatures.Fighter - Dexterity":1, "shield":"Shield", 
+  "skillsChosen.Animal Handling":1, "skillsChosen.Persuasion":1, "skillsChosen.Sleight Of Hand":1, 
+  "species":"Human", "strength":13, "weapons.Battleaxe":1, "weapons.Longsword":1, 
+  "weapons.Scimitar":1, "wisdom":11
 };
   </script>
 </head>
@@ -66,6 +67,7 @@ var attributes = {
       <td>      <table id="FeatStats" style="width:100%">
       <tr style="text-align:center">
         <td><b>Feat Count</b>: Fighting Style: 1; General: 0; Origin: 1</td>
+        <td><b>Selectable Feature Count</b>: Fighter (Fighter Primary Ability)</td>
       </tr></table>
 </td>
     </tr><tr style="text-align:center">
@@ -73,13 +75,15 @@ var attributes = {
       <tr style="text-align:center">
         <td><b>Feats</b>: Defense; Magic Initiate (Druid)</td>
         <td><b>Human Features</b>: Resourceful; Skillful; Versatile</td>
-        <td><b>Fighter Features</b>: Armor Training (Light; Medium; Heavy; Shield); Fighter Primary Ability; Fighting Style; Save Proficiency (Strength; Constitution); Second Wind; Skill Proficiency (Choose 2 from Acrobatics, Animal Handling, Athletics, History, Insight, Intimidation, Persuasion; Perception, Survival); Weapon Mastery; Weapon Proficiency (Simple Weapons; Martial Weapons)</td>
+        <td><b>Fighter Features</b>: Armor Training (Light; Medium; Heavy; Shield); Dexterity; Fighter Primary Ability; Fighting Style; Save Proficiency (Strength; Constitution); Second Wind; Skill Proficiency (Choose 2 from Acrobatics, Animal Handling, Athletics, History, Insight, Intimidation, Persuasion; Perception, Survival); Weapon Mastery; Weapon Proficiency (Simple Weapons; Martial Weapons)</td>
         <td><b>Sage Features</b>: Ability Boost (Choose 3 from Constitution, Intelligence, Wisdom); Magic Initiate (Wizard); Skill Proficiency (Arcana; History); Tool Proficiency (Calligrapher's Supplies)</td>
       </tr></table>
 </td>
     </tr><tr style="text-align:center">
       <td><b>Feature Notes</b>:       <table id="FeatureNotes" style="width:100%">
       <tr style="text-align:center">
+        <td><i>Fighter Primary Ability: 1 selection</i></td>
+      </tr><tr style="text-align:center">
         <td><i>Fighting Style: +1 Fighting Style Feat</i></td>
       </tr><tr style="text-align:center">
         <td><i>Versatile: +1 Origin Feat</i></td>
@@ -144,7 +148,6 @@ var attributes = {
         <td><b>Hit Points</b>: 7</td>
         <td><b>Initiative</b>: +2</td>
         <td><b>Armor Class</b>: 19</td>
-        <td><b>Attacks Per Round</b>: 1</td>
       </tr></table>
 </td>
     </tr><tr style="text-align:center">
@@ -159,7 +162,7 @@ var attributes = {
       <tr style="text-align:center">
         <td><b>Armor</b>: Scale Mail</td>
         <td><b>Shield</b>: Shield</td>
-        <td><b>Weapons</b>: Battleaxe (+3 1d8+1 S [2h d10]); Longsword (+3 1d8+1 S [2h d10]); Scimitar (+4 1d6+2 S); Unarmed (+3 1+1 B)</td>
+        <td><b>Weapons</b>: Battleaxe (+3 1d8+1 S [2h d10]; Topple); Longsword (+3 1d8+1 S [2h d10]; Sap); Scimitar (+4 1d6+2 S; Nick); Unarmed (+3 1+1 B)</td>
       </tr></table>
 </td>
     </tr><tr style="text-align:center">
