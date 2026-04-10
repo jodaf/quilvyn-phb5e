@@ -9,7 +9,8 @@ var attributes = {
   "_path":"ztest/5e/class/bard 20", 
   "abilityBoosts.Strength":1, "alignment":"Chaotic Good", "armor":"Studded Leather", 
   "background":"Acolyte", "charisma":14, "constitution":8, "deity":"Celtic-Briantia", "dexterity":13, 
-  "experience":820306, "feats.Charger":1, "feats.Healer":1, "feats.Magic Initiate (Sorcerer)":1, 
+  "experience":820306, "expertise.Athletics":1, "expertise.Insight":1, "expertise.Intimidation":1, 
+  "expertise.Nature":1, "feats.Charger":1, "feats.Healer":1, "feats.Magic Initiate (Sorcerer)":1, 
   "feats.Observant":1, "feats.Savage Attacker":1, "gender":"Female", "hitPoints":74, 
   "intelligence":15, "languagesChosen.Deep Speech":1, "languagesChosen.Elvish":1, 
   "languagesChosen.Giant":1, "levels.Bard":20, "name":"Class-Bard 20", "race":"Human", 
@@ -118,29 +119,31 @@ var attributes = {
   </tr><tr style="text-align:center">
     <td><b>Skill Proficiency</b>: Athletics; History; Insight; Intimidation; Medicine; Nature; Perception; Religion</td>
   </tr><tr style="text-align:center">
+    <td><b>Expertise</b>: Athletics; Insight; Intimidation; Nature</td>
+  </tr><tr style="text-align:center">
     <td><b>Skills</b>:     <table id="Skills" style="width:100%">
     <col style="width:33%"/>
     <col style="width:33%"/>
     <col style="width:34%"/>
     <tr style="text-align:left">
       <td>Acrobatics: (dex) +2</td>
-      <td>Insight: (wis) +7</td>
+      <td>Insight: (wis) +13</td>
       <td>Performance: (cha) +2</td>
     </tr><tr style="text-align:left">
       <td>Animal Handling: (wis) +1</td>
-      <td>Intimidation: (cha) +8</td>
+      <td>Intimidation: (cha) +14</td>
       <td>Persuasion: (cha) +2</td>
     </tr><tr style="text-align:left">
       <td>Arcana: (int) +3</td>
       <td>Investigation: (int) +3</td>
       <td>Religion: (int) +9</td>
     </tr><tr style="text-align:left">
-      <td>Athletics: (str) +8</td>
+      <td>Athletics: (str) +14</td>
       <td>Medicine: (wis) +7</td>
       <td>Sleight Of Hand: (dex) +2</td>
     </tr><tr style="text-align:left">
       <td>Deception: (cha) +2</td>
-      <td>Nature: (int) +9</td>
+      <td>Nature: (int) +15</td>
       <td>Stealth: (dex) +2</td>
     </tr><tr style="text-align:left">
       <td>History: (int) +9</td>
@@ -157,9 +160,9 @@ var attributes = {
     <tr style="text-align:center">
       <td><i>Bonus Proficiencies (College Of Lore): Skill Proficiency (Choose 3 from any)</i></td>
     </tr><tr style="text-align:center">
-      <td>Countercharm: R30' Performance gives friendly listeners advantage on saves vs. charmed and frightened for 1 rd</td>
+      <td><i>Expertise: Double Proficiency Bonus on 4 chosen proficient skills</i></td>
     </tr><tr style="text-align:center">
-      <td>Expertise: +6 on 4 chosen proficient skills</td>
+      <td>Countercharm: R30' Performance gives friendly listeners advantage on saves vs. charmed and frightened for 1 rd</td>
     </tr><tr style="text-align:center">
       <td>Healer: Using a healer's kit to stabilize also restores 1 hit point/Can use a healer's kit to restore 1d6+4 + target HD hit points once per creature per short rest</td>
     </tr><tr style="text-align:center">
@@ -214,7 +217,7 @@ var attributes = {
       </tr><tr style="text-align:center">
         <td><i>Strength Damage Adjustment: +2</i></td>
       </tr><tr style="text-align:center">
-        <td>Bardic Inspiration: R60' Can use a bonus action to give an ally +1d12 on an ability check, attack, or save within 10 min 2 times per short rest</td>
+        <td>Bardic Inspiration: R60' Can use a bonus action 2 times per short rest to give an ally +1d12 on an ability check, attack, or save within 10 min</td>
       </tr><tr style="text-align:center">
         <td>Battle Magic: Can use a bonus action to make a weapon attack after casting a spell</td>
       </tr><tr style="text-align:center">
@@ -251,7 +254,7 @@ var attributes = {
       <td>      <table id="SpellStats" style="width:100%">
       <tr style="text-align:center">
         <td><b>Spell Slots</b>: B0: 4; B1: 4; B2: 3; B3: 3; B4: 3; B5: 3; B6: 2; B7: 2; B8: 1; B9: 1</td>
-        <td><b>Attack</b>: B: 8; S: 8</td>
+        <td><b>Attack</b>: B: +8; S: +8</td>
         <td><b>Spell DC</b>: B: 16; S: 16</td>
       </tr></table>
 </td>

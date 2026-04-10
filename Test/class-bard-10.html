@@ -9,20 +9,21 @@ var attributes = {
   "_path":"ztest/5e/class/bard 10", 
   "alignment":"Lawful Neutral", "armor":"Studded Leather", "background":"Acolyte", "charisma":11, 
   "constitution":13, "deity":"Norse-Surtur", "dexterity":16, "experience":68406, 
-  "feats.Elemental Adept (Fire)":1, "feats.Mobile":1, "gender":"Male", "hitPoints":42, "intelligence":10, 
-  "languagesChosen.Celestial":1, "languagesChosen.Draconic":1, "languagesChosen.Sylvan":1, "levels.Bard":10, 
-  "name":"Class-Bard 10", "race":"Human", "selectableFeatures.Bard - College Of Lore":1, 
-  "shield":"None", "skillsChosen.Insight":1, "skillsChosen.Intimidation":1, 
-  "skillsChosen.Medicine":1, "skillsChosen.Sleight Of Hand":1, "skillsChosen.Stealth":1, 
-  "skillsChosen.Survival":1, "spells.Bane(B1 Ench)":1, "spells.Blindness/Deafness(B2 Necr)":1, 
-  "spells.Charm Person(B1 Ench)":1, "spells.Cloud Of Daggers(B2 Conj)":1, "spells.Compulsion(B4 Ench)":1, 
-  "spells.Dancing Lights(B0 Evoc)":1, "spells.Freedom Of Movement(B4 Abju)":1, "spells.Friends(B0 Ench)":1, 
-  "spells.Knock(B2 Tran)":1, "spells.Light(B0 Evoc)":1, "spells.Locate Creature(B4 Divi)":1, 
-  "spells.Major Image(B3 Illu)":1, "spells.Plant Growth(B3 Tran)":1, "spells.Scrying(B5 Divi)":1, 
-  "spells.Seeming(B5 Illu)":1, "spells.Sleep(B1 Ench)":1, "spells.Tasha's Hideous Laughter(B1 Ench)":1, 
-  "spells.Tongues(B3 Divi)":1, "spells.True Strike(B0 Divi)":1, "strength":11, "toolsChosen.Bagpipes":1, 
-  "toolsChosen.Lyre":1, "toolsChosen.Shawm":1, "weapons.Handaxe":1, "weapons.Longsword":1, 
-  "weapons.Shortbow":1, "wisdom":8
+  "expertise.Insight":1, "expertise.Religion":1, "expertise.Sleight Of Hand":1, 
+  "expertise.Stealth":1, "feats.Elemental Adept (Fire)":1, "feats.Mobile":1, "gender":"Male", 
+  "hitPoints":42, "intelligence":10, "languagesChosen.Celestial":1, 
+  "languagesChosen.Draconic":1, "languagesChosen.Sylvan":1, "levels.Bard":10, "name":"Class-Bard 10", 
+  "race":"Human", "selectableFeatures.Bard - College Of Lore":1, "shield":"None", 
+  "skillsChosen.Insight":1, "skillsChosen.Intimidation":1, "skillsChosen.Medicine":1, 
+  "skillsChosen.Sleight Of Hand":1, "skillsChosen.Stealth":1, "skillsChosen.Survival":1, 
+  "spells.Bane(B1 Ench)":1, "spells.Blindness/Deafness(B2 Necr)":1, "spells.Charm Person(B1 Ench)":1, 
+  "spells.Cloud Of Daggers(B2 Conj)":1, "spells.Compulsion(B4 Ench)":1, "spells.Dancing Lights(B0 Evoc)":1, 
+  "spells.Freedom Of Movement(B4 Abju)":1, "spells.Friends(B0 Ench)":1, "spells.Knock(B2 Tran)":1, 
+  "spells.Light(B0 Evoc)":1, "spells.Locate Creature(B4 Divi)":1, "spells.Major Image(B3 Illu)":1, 
+  "spells.Plant Growth(B3 Tran)":1, "spells.Scrying(B5 Divi)":1, "spells.Seeming(B5 Illu)":1, 
+  "spells.Sleep(B1 Ench)":1, "spells.Tasha's Hideous Laughter(B1 Ench)":1, "spells.Tongues(B3 Divi)":1, 
+  "spells.True Strike(B0 Divi)":1, "strength":11, "toolsChosen.Bagpipes":1, "toolsChosen.Lyre":1, 
+  "toolsChosen.Shawm":1, "weapons.Handaxe":1, "weapons.Longsword":1, "weapons.Shortbow":1, "wisdom":8
 };
   </script>
 </head>
@@ -108,13 +109,15 @@ var attributes = {
   </tr><tr style="text-align:center">
     <td><b>Skill Proficiency</b>: Insight; Intimidation; Medicine; Religion; Sleight Of Hand; Stealth; Survival</td>
   </tr><tr style="text-align:center">
+    <td><b>Expertise</b>: Insight; Religion; Sleight Of Hand; Stealth</td>
+  </tr><tr style="text-align:center">
     <td><b>Skills</b>:     <table id="Skills" style="width:100%">
     <col style="width:33%"/>
     <col style="width:33%"/>
     <col style="width:34%"/>
     <tr style="text-align:left">
       <td>Acrobatics: (dex) +3</td>
-      <td>Insight: (wis) +3</td>
+      <td>Insight: (wis) +7</td>
       <td>Performance: (cha) +1</td>
     </tr><tr style="text-align:left">
       <td>Animal Handling: (wis) -1</td>
@@ -123,15 +126,15 @@ var attributes = {
     </tr><tr style="text-align:left">
       <td>Arcana: (int) +0</td>
       <td>Investigation: (int) +0</td>
-      <td>Religion: (int) +4</td>
+      <td>Religion: (int) +8</td>
     </tr><tr style="text-align:left">
       <td>Athletics: (str) +1</td>
       <td>Medicine: (wis) +3</td>
-      <td>Sleight Of Hand: (dex) +7</td>
+      <td>Sleight Of Hand: (dex) +11</td>
     </tr><tr style="text-align:left">
       <td>Deception: (cha) +1</td>
       <td>Nature: (int) +0</td>
-      <td>Stealth: (dex) +7</td>
+      <td>Stealth: (dex) +11</td>
     </tr><tr style="text-align:left">
       <td>History: (int) +0</td>
       <td>Perception: (wis) -1</td>
@@ -147,9 +150,9 @@ var attributes = {
     <tr style="text-align:center">
       <td><i>Bonus Proficiencies (College Of Lore): Skill Proficiency (Choose 3 from any)</i></td>
     </tr><tr style="text-align:center">
-      <td>Countercharm: R30' Performance gives friendly listeners advantage on saves vs. charmed and frightened for 1 rd</td>
+      <td><i>Expertise: Double Proficiency Bonus on 4 chosen proficient skills</i></td>
     </tr><tr style="text-align:center">
-      <td>Expertise: +4 on 4 chosen proficient skills</td>
+      <td>Countercharm: R30' Performance gives friendly listeners advantage on saves vs. charmed and frightened for 1 rd</td>
     </tr></table>
 </td>
   </tr></table>
@@ -198,7 +201,7 @@ var attributes = {
       </tr><tr style="text-align:center">
         <td><i>Strength Damage Adjustment: +1</i></td>
       </tr><tr style="text-align:center">
-        <td>Bardic Inspiration: R60' Can use a bonus action to give an ally +1d10 on an ability check, attack, or save within 10 min once per short rest</td>
+        <td>Bardic Inspiration: R60' Can use a bonus action once per short rest to give an ally +1d10 on an ability check, attack, or save within 10 min</td>
       </tr><tr style="text-align:center">
         <td>Cutting Words: R60' Can use a reaction to subtract a Bardic Inspiration die from a foe roll</td>
       </tr><tr style="text-align:center">
@@ -225,7 +228,7 @@ var attributes = {
       <td>      <table id="SpellStats" style="width:100%">
       <tr style="text-align:center">
         <td><b>Spell Slots</b>: B0: 4; B1: 4; B2: 3; B3: 3; B4: 3; B5: 2</td>
-        <td><b>Attack</b>: B: 5</td>
+        <td><b>Attack</b>: B: +5</td>
         <td><b>Spell DC</b>: B: 13</td>
       </tr></table>
 </td>
