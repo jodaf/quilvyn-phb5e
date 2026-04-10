@@ -10,7 +10,8 @@ var attributes = {
   "abilityBoosts.Charisma":1, "abilityBoosts.Dexterity":1, "abilityBoosts.Intelligence":2, 
   "abilityBoosts.Strength":1, "abilityBoosts.Wisdom":1, "alignment":"Lawful Neutral", "armor":"Leather", 
   "background":"Acolyte", "charisma":12, "constitution":15, "deity":"Norse-Skadi", "dexterity":14, 
-  "experience":496140, "feats.Ability Score Improvement":1, "feats.Archery":1, 
+  "experience":496140, "expertise.Arcana":1, "expertise.Deception":1, "expertise.Insight":1, 
+  "expertise.Stealth":1, "feats.Ability Score Improvement":1, "feats.Archery":1, 
   "feats.Boon Of The Night Spirit":1, "feats.Great Weapon Fighting":1, "feats.Magic Initiate (Wizard)":1, 
   "feats.Savage Attacker":1, "feats.Skilled":1, "feats.Two-Weapon Fighting":1, "gender":"Female", 
   "hitPoints":64, "intelligence":13, "languagesChosen.Infernal":1, "levels.Rogue":20, 
@@ -113,20 +114,22 @@ var attributes = {
   </tr><tr style="text-align:center">
     <td><b>Skill Proficiency</b>: Acrobatics; Arcana; Deception; Insight; Performance; Religion; Sleight Of Hand; Stealth</td>
   </tr><tr style="text-align:center">
+    <td><b>Expertise</b>: Arcana; Deception; Insight; Stealth</td>
+  </tr><tr style="text-align:center">
     <td><b>Skills</b>:     <table id="Skills" style="width:100%">
     <col style="width:33%"/>
     <col style="width:33%"/>
     <col style="width:34%"/>
     <tr style="text-align:left">
       <td>Acrobatics: (dex) +8</td>
-      <td>Insight: (wis) +7</td>
+      <td>Insight: (wis) +13</td>
       <td>Performance: (cha) +7</td>
     </tr><tr style="text-align:left">
       <td>Animal Handling: (wis) +1</td>
       <td>Intimidation: (cha) +1</td>
       <td>Persuasion: (cha) +1</td>
     </tr><tr style="text-align:left">
-      <td>Arcana: (int) +8</td>
+      <td>Arcana: (int) +14</td>
       <td>Investigation: (int) +2</td>
       <td>Religion: (int) +8</td>
     </tr><tr style="text-align:left">
@@ -134,9 +137,9 @@ var attributes = {
       <td>Medicine: (wis) +1</td>
       <td>Sleight Of Hand: (dex) +8</td>
     </tr><tr style="text-align:left">
-      <td>Deception: (cha) +7</td>
+      <td>Deception: (cha) +13</td>
       <td>Nature: (int) +2</td>
-      <td>Stealth: (dex) +8</td>
+      <td>Stealth: (dex) +14</td>
     </tr><tr style="text-align:left">
       <td>History: (int) +2</td>
       <td>Perception: (wis) +1</td>
@@ -150,13 +153,13 @@ var attributes = {
   </tr><tr style="text-align:center">
     <td><b>Skill Notes</b>:     <table id="SkillNotes" style="width:100%">
     <tr style="text-align:center">
+      <td><i>Expertise: +6 on 4 chosen proficient skills</i></td>
+    </tr><tr style="text-align:center">
       <td><i>Skilled: Skill Proficiency or Tool Proficiency (Choose 3 from any)</i></td>
     </tr><tr style="text-align:center">
       <td><i>Skillful: Skill Proficiency (Choose 1 from any)</i></td>
     </tr><tr style="text-align:center">
       <td><i>Thieves'Cant: Language (Choose 1 from any)</i></td>
-    </tr><tr style="text-align:center">
-      <td>Expertise: +6 on 4 chosen proficient skills</td>
     </tr><tr style="text-align:center">
       <td>Reliable Talent: Scores at least a 10 on proficient skill and tool checks</td>
     </tr><tr style="text-align:center">
@@ -271,7 +274,7 @@ var attributes = {
     <tr style="text-align:center">
       <td>      <table id="SpellStats" style="width:100%">
       <tr style="text-align:center">
-        <td><b>Attack</b>: C: 7; W: 8</td>
+        <td><b>Attack</b>: C: +7; W: +8</td>
         <td><b>Spell DC</b>: C: 15; W: 16</td>
       </tr></table>
 </td>

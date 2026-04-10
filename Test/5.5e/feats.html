@@ -10,8 +10,9 @@ var attributes = {
   "abilityBoosts.Charisma":4, "abilityBoosts.Constitution":2, "abilityBoosts.Dexterity":1, 
   "abilityBoosts.Intelligence":2, "abilityBoosts.Strength":1, "abilityBoosts.Wisdom":2, 
   "alignment":"Neutral Good", "armor":"Padded", "background":"Criminal", "charisma":12, "constitution":10, 
-  "deity":"Norse-Forseti", "dexterity":13, "experience":40185, "feats.Ability Score Improvement":1, 
-  "feats.Alert":1, "feats.Archery":1, "feats.Boon Of Combat Prowess":1, 
+  "deity":"Norse-Forseti", "dexterity":13, "experience":40185, "expertise.Animal Handling":1, 
+  "expertise.Nature":1, "expertise.Perception":1, "expertise.Sleight Of Hand":1, 
+  "feats.Ability Score Improvement":1, "feats.Alert":1, "feats.Archery":1, "feats.Boon Of Combat Prowess":1, 
   "feats.Boon Of Dimensional Travel":1, "feats.Boon Of Fate":1, "feats.Boon Of Irresistible Offense (Dexterity)":1, 
   "feats.Boon Of Irresistible Offense (Strength)":1, "feats.Boon Of Spell Recall":1, "feats.Boon Of The Night Spirit":1, 
   "feats.Boon Of Truesight":1, "feats.Defense":1, "feats.Grappler":1, "feats.Great Weapon Fighting":1, 
@@ -129,6 +130,8 @@ var attributes = {
   </tr><tr style="text-align:center">
     <td><b>Skill Proficiency</b>: Acrobatics; Animal Handling; Arcana; Insight; Medicine; Nature; Perception; Sleight Of Hand; Stealth</td>
   </tr><tr style="text-align:center">
+    <td><b>Expertise</b>: Animal Handling; Nature; Perception; Sleight Of Hand</td>
+  </tr><tr style="text-align:center">
     <td><b>Skills</b>:     <table id="Skills" style="width:100%">
     <col style="width:33%"/>
     <col style="width:33%"/>
@@ -138,7 +141,7 @@ var attributes = {
       <td>Insight: (wis) +4</td>
       <td>Performance: (cha) +3</td>
     </tr><tr style="text-align:left">
-      <td>Animal Handling: (wis) +4</td>
+      <td>Animal Handling: (wis) +7</td>
       <td>Intimidation: (cha) +3</td>
       <td>Persuasion: (cha) +3</td>
     </tr><tr style="text-align:left">
@@ -148,14 +151,14 @@ var attributes = {
     </tr><tr style="text-align:left">
       <td>Athletics: (str) +3</td>
       <td>Medicine: (wis) +4</td>
-      <td>Sleight Of Hand: (dex) +5</td>
+      <td>Sleight Of Hand: (dex) +8</td>
     </tr><tr style="text-align:left">
       <td>Deception: (cha) +3</td>
-      <td>Nature: (int) +5</td>
+      <td>Nature: (int) +8</td>
       <td>Stealth: (dex) +5</td>
     </tr><tr style="text-align:left">
       <td>History: (int) +2</td>
-      <td>Perception: (wis) +4</td>
+      <td>Perception: (wis) +7</td>
       <td>Survival: (wis) +1</td>
     </tr></table>
 </td>
@@ -166,6 +169,8 @@ var attributes = {
   </tr><tr style="text-align:center">
     <td><b>Skill Notes</b>:     <table id="SkillNotes" style="width:100%">
     <tr style="text-align:center">
+      <td><i>Expertise: +3 on 4 chosen proficient skills</i></td>
+    </tr><tr style="text-align:center">
       <td><i>Skilled: Skill Proficiency or Tool Proficiency (Choose 3 from any)</i></td>
     </tr><tr style="text-align:center">
       <td><i>Skillful: Skill Proficiency (Choose 1 from any)</i></td>
@@ -175,8 +180,6 @@ var attributes = {
       <td>Boon Of Truesight: Has 60' Truesight</td>
     </tr><tr style="text-align:center">
       <td>Bulky Armor: Has disadvantage on Stealth</td>
-    </tr><tr style="text-align:center">
-      <td>Expertise: +3 on 4 chosen proficient skills</td>
     </tr><tr style="text-align:center">
       <td>Reliable Talent: Scores at least a 10 on proficient skill and tool checks</td>
     </tr><tr style="text-align:center">
@@ -299,7 +302,7 @@ var attributes = {
     <tr style="text-align:center">
       <td>      <table id="SpellStats" style="width:100%">
       <tr style="text-align:center">
-        <td><b>Attack</b>: C: 4; D: 4; W: 5</td>
+        <td><b>Attack</b>: C: +4; D: +4; W: +5</td>
         <td><b>Spell DC</b>: C: 12; D: 12; W: 13</td>
       </tr></table>
 </td>

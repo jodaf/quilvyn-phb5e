@@ -10,9 +10,9 @@ var attributes = {
   "abilityBoosts.Constitution":1, "abilityBoosts.Intelligence":1, "abilityBoosts.Strength":1, 
   "alignment":"Chaotic Neutral", "armor":"Half Plate", "background":"Soldier", "charisma":11, 
   "constitution":11, "deity":"Norse-Njord", "dexterity":10, "experience":83171, 
-  "feats.Archery":1, "feats.Magic Initiate (Druid)":1, "feats.Skilled":1, "gender":"Female", 
-  "hitPoints":37, "intelligence":12, "languagesChosen.Dwarvish":1, 
-  "languagesChosen.Undercommon":1, "levels.Ranger":10, "name":"Spells-Ranger", 
+  "expertise.Insight":1, "expertise.Medicine":1, "feats.Archery":1, "feats.Magic Initiate (Druid)":1, 
+  "feats.Skilled":1, "gender":"Female", "hitPoints":37, "intelligence":12, 
+  "languagesChosen.Dwarvish":1, "languagesChosen.Undercommon":1, "levels.Ranger":10, "name":"Spells-Ranger", 
   "selectableFeatures.Ranger - Druidic Warrior":1, "selectableFeatures.Ranger - Hunter":1, "shield":"None", 
   "skillsChosen.Athletics":1, "skillsChosen.Insight":1, "skillsChosen.Medicine":1, 
   "skillsChosen.Perception":1, "skillsChosen.Persuasion":1, "skillsChosen.Stealth":1, 
@@ -126,13 +126,15 @@ var attributes = {
   </tr><tr style="text-align:center">
     <td><b>Skill Proficiency</b>: Athletics; Insight; Intimidation; Medicine; Perception; Persuasion; Stealth; Survival</td>
   </tr><tr style="text-align:center">
+    <td><b>Expertise</b>: Insight; Medicine</td>
+  </tr><tr style="text-align:center">
     <td><b>Skills</b>:     <table id="Skills" style="width:100%">
     <col style="width:33%"/>
     <col style="width:33%"/>
     <col style="width:34%"/>
     <tr style="text-align:left">
       <td>Acrobatics: (dex) +0</td>
-      <td>Insight: (wis) +6</td>
+      <td>Insight: (wis) +10</td>
       <td>Performance: (cha) +0</td>
     </tr><tr style="text-align:left">
       <td>Animal Handling: (wis) +2</td>
@@ -144,7 +146,7 @@ var attributes = {
       <td>Religion: (int) +1</td>
     </tr><tr style="text-align:left">
       <td>Athletics: (str) +6</td>
-      <td>Medicine: (wis) +6</td>
+      <td>Medicine: (wis) +10</td>
       <td>Sleight Of Hand: (dex) +0</td>
     </tr><tr style="text-align:left">
       <td>Deception: (cha) +0</td>
@@ -165,6 +167,8 @@ var attributes = {
     <tr style="text-align:center">
       <td><i>Deft Explorer: Language (Choose 2 from any)</i></td>
     </tr><tr style="text-align:center">
+      <td><i>Expertise: +4 on 2 chosen proficient skills</i></td>
+    </tr><tr style="text-align:center">
       <td><i>Skilled: Skill Proficiency or Tool Proficiency (Choose 3 from any)</i></td>
     </tr><tr style="text-align:center">
       <td><i>Skillful: Skill Proficiency (Choose 1 from any)</i></td>
@@ -172,8 +176,6 @@ var attributes = {
       <td>Bulky Armor: Has disadvantage on Stealth</td>
     </tr><tr style="text-align:center">
       <td>Deft Explorer: +4 on a choice of proficient skill</td>
-    </tr><tr style="text-align:center">
-      <td>Expertise: +4 on 2 chosen proficient skills</td>
     </tr></table>
 </td>
   </tr></table>
@@ -265,7 +267,7 @@ var attributes = {
       <td>      <table id="SpellStats" style="width:100%">
       <tr style="text-align:center">
         <td><b>Spell Slots</b>: D0: 2; R1: 4; R2: 3; R3: 2</td>
-        <td><b>Attack</b>: D: 6; R: 6</td>
+        <td><b>Attack</b>: D: +6; R: +6</td>
         <td><b>Spell DC</b>: D: 14; R: 14</td>
       </tr></table>
 </td>
