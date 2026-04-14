@@ -276,15 +276,15 @@ var attributes = {
   </tr><tr style="text-align:center">
     <td><b>Spells</b>:     <table id="Spells" style="width:100%">
     <tr style="text-align:left">
-      <td>Aid (R2 Abju): R30' 3 targets gain +5 hit points for 8 hr [+Level gives +5 temporary hit points]</td>
+      <td>Aid (R2 Abju): R30' 3 targets gain +5 current and maximum hit points for 8 hr [+Level gives +5 hit points]</td>
     </tr><tr style="text-align:left">
       <td>Alarm (R1 Abju): R30' Entry into a 20' cube by a non-designated Tiny or larger creature triggers an audible or mental alarm for 8 hr [R]</td>
     </tr><tr style="text-align:left">
-      <td>Animal Friendship (R1 Ench): R30' Convinces target beast that self is harmless (save Wisdom negates; Intelligence 4 or higher immune) for 24 hr or until harmed [+Level affects +1 target]</td>
+      <td>Animal Friendship (R1 Ench): R30' Charms a target beast (save Wisdom negates) for 24 hr or until harmed [+Level affects +1 target]</td>
     </tr><tr style="text-align:left">
-      <td>Animal Messenger (R2 Ench): R30' Tiny beast target moves (save Charisma negates; CR greater than 0 automatically succeeds) to deliver a 25-word message to a described recipient for 24 hr [+Level extends the duration +48 hr] [R]</td>
+      <td>Animal Messenger (R2 Ench): R30' Tiny beast target moves to deliver a 25-word message to a described recipient (save Charisma negates; CR greater than 0 automatically succeeds) for 24 hr [+Level extends the duration +48 hr] [R]</td>
     </tr><tr style="text-align:left">
-      <td>Barkskin (R2 Tran): Willing touched gains Armor Class 16 for concentration up to 1 hr</td>
+      <td>Barkskin (R2 Tran): Willing touched gains Armor Class 17 for 1 hr</td>
     </tr><tr style="text-align:left">
       <td>Commune With Nature (R5 Divi): Reveals 3 facts about nature within 3 miles, or within 300' when underground [R]</td>
     </tr><tr style="text-align:left">
@@ -292,15 +292,15 @@ var attributes = {
     </tr><tr style="text-align:left">
       <td>Conjure Woodland Beings (R4 Conj): 10' emanation inflicts 5d8 HP force (save Wisdom half) and allows self to use a bonus action to Disengage for concentration up to 10 min [+Level inflicts +1d8 HP]</td>
     </tr><tr style="text-align:left">
-      <td>Cure Wounds (R1 Abju): Touched regains 2d8+2 hit points [+Level restores +2d8 HP]</td>
+      <td>Cure Wounds (R1 Abju): Touched regains 2d8+2 hit points [+Level restores +2d8 hit points]</td>
     </tr><tr style="text-align:left">
       <td>Darkvision (R2 Tran): Willing touched sees 150' in darkness for 8 hr</td>
     </tr><tr style="text-align:left">
       <td>Daylight (R3 Evoc): R60' Target centers a 60' radius bright light for 1 hr</td>
     </tr><tr style="text-align:left">
-      <td>Detect Magic (R1 Divi): R30' Reveals magic auras and their schools for concentration up to 10 min [R]</td>
+      <td>Detect Magic (R1 Divi): R30' Reveals magic auras and their schools for concentration up to 10 min; 1' of wood, dirt, or stone, 1" of metal, or a thin sheet of lead blocks the spell [R]</td>
     </tr><tr style="text-align:left">
-      <td>Detect Poison And Disease (R1 Divi): R30' Reveals poison, poisonous creatures, and magical contagions for concentration up to 10 min [R]</td>
+      <td>Detect Poison And Disease (R1 Divi): R30' Reveals poison, poisonous creatures, and magical contagions for concentration up to 10 min; 1' of wood, dirt, or stone, 1" of metal, or a thin sheet of lead blocks the spell [R]</td>
     </tr><tr style="text-align:left">
       <td>Dispel Magic (R3 Abju): R120' Ends the effects on the target of spells up to level 3, and successful DC 10 + spell level checks end each higher-level spell [+Level ends any spell of equal or lesser level]</td>
     </tr><tr style="text-align:left">
@@ -308,29 +308,29 @@ var attributes = {
     </tr><tr style="text-align:left">
       <td>Enhance Ability (R2 Tran): Touched gains advantage on chosen ability checks for concentration up to 1 hr [+Level affects +1 target]</td>
     </tr><tr style="text-align:left">
-      <td>Ensnaring Strike (R1 Conj): Next successful self attack restrains the foe and inflicts 1d6 HP per rd piercing (save Athletics ends; Large creatures have advantage on the save) for concentration up to 1 min [+Level inflicts +1d6 HP]</td>
+      <td>Ensnaring Strike (R1 Conj): Cast as a bonus action after hitting a target, restrains the foe (save Strength negates; Large creatures have advantage on the save) and inflicts 1d6 HP per rd piercing (save Athletics each rd end) for concentration up to 1 min [+Level inflicts +1d6 HP]</td>
     </tr><tr style="text-align:left">
-      <td>Entangle (R1 Conj): R90' 20' sq ensnares creatures (save Strength negates; Athletics ends) for concentration up to 1 min</td>
+      <td>Entangle (R1 Conj): R90' 20' sq inflicts difficult terrain and restrains creatures (save Strength negates; additional Athletics saves each rd ends) for concentration up to 1 min</td>
     </tr><tr style="text-align:left">
       <td>Find Traps (R2 Divi): R120' Reveals the presence of traps</td>
     </tr><tr style="text-align:left">
       <td>Fog Cloud (R1 Conj): R120' 20' radius obscures vision for concentration up to 1 hr [+Level increases the radius by 20']</td>
     </tr><tr style="text-align:left">
-      <td>Freedom Of Movement (R4 Abju): Touched gains immunity to movement impediments and a 40 swim Speed and can escape from nonmagical restraints for 1 hr</td>
+      <td>Freedom Of Movement (R4 Abju): Touched gains immunity to movement impediments and a 40' swim Speed and can escape from nonmagical restraints for 1 hr [+Level affects +1 target]</td>
     </tr><tr style="text-align:left">
-      <td>Goodberry (R1 Conj): Creates 10 berries that each heal 1 hit point and provide food for 1 day</td>
+      <td>Goodberry (R1 Conj): Creates 10 berries that last for 24 hr; each restores 1 hit point and provides nourishment for 1 day</td>
     </tr><tr style="text-align:left">
-      <td>Greater Restoration (R5 Abju): Touched recovers from exhausted, charmed, petrified, cursed, or ability reduction or regains hit point maximum</td>
+      <td>Greater Restoration (R5 Abju): Touched recovers from an effect causing an exhaustion level, a charmed or petrified condition, a curse, an ability reduction, or a reduction of hit point maximum</td>
     </tr><tr style="text-align:left">
-      <td>Gust Of Wind (R2 Evoc): 60'x10' wind pushes 15' (save Strength negates), inflicts half movement, disperses gas and vapor, and extinguishes flames (50% chance for protected flames) for concentration up to 1 min</td>
+      <td>Gust Of Wind (R2 Evoc): 60'x10' wind pushes 15' (save Strength negates), inflicts half movement, disperses gas and vapor, and extinguishes flames (50% chance for protected flames) for concentration up to 1 min; can use a bonus action each rd to redirect the wind</td>
     </tr><tr style="text-align:left">
-      <td>Hunter's Mark (R1 Divi): R90' Self inflicts +1d6 HP force on the target and gains advantage on Perception and Wisdom to locate it for concentration up to 1 hr [+Level extends the duration to 8 or 24 hr at level 3 or 5]</td>
+      <td>Hunter's Mark (R1 Divi): R90' Self inflicts +1d6 HP force on the target and gains advantage on Perception and Survival to locate it for concentration up to 1 hr; can use a bonus action to move to a different target when the current target drops to 0 hit points [+Level extends the duration to 8 or 24 hr at level 3 or 5]</td>
     </tr><tr style="text-align:left">
-      <td>Hunter's Mark (R1 [Favored Enemy] Divi): R90' Self inflicts +1d6 HP force on the target and gains advantage on Perception and Wisdom to locate it for concentration up to 1 hr [+Level extends the duration to 8 or 24 hr at level 3 or 5]</td>
+      <td>Hunter's Mark (R1 [Favored Enemy] Divi): R90' Self inflicts +1d6 HP force on the target and gains advantage on Perception and Survival to locate it for concentration up to 1 hr; can use a bonus action to move to a different target when the current target drops to 0 hit points [+Level extends the duration to 8 or 24 hr at level 3 or 5]</td>
     </tr><tr style="text-align:left">
-      <td>Jump (R1 Tran): Touched gains 30' jump after a 10' move for 1 min</td>
+      <td>Jump (R1 Tran): Touched can jump 30' after a 10' move for 1 min</td>
     </tr><tr style="text-align:left">
-      <td>Lesser Restoration (R2 Abju): Touched recovers from a choice of blindness, deafness, paralysis, or poison</td>
+      <td>Lesser Restoration (R2 Abju): Touched recovers from a choice of blinded, deafened, paralyzed, or poisoned</td>
     </tr><tr style="text-align:left">
       <td>Locate Animals Or Plants (R2 Divi): Reveals the location within 5 miles of a specified kind of beast or plant [R]</td>
     </tr><tr style="text-align:left">

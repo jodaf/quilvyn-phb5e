@@ -257,21 +257,21 @@ var attributes = {
   </tr><tr style="text-align:center">
     <td><b>Spells</b>:     <table id="Spells" style="width:100%">
     <tr style="text-align:left">
-      <td>Aid (C2 [Life Domain Spells] Abju): R30' 3 targets gain +5 hit points for 8 hr [+Level gives +5 temporary hit points]</td>
+      <td>Aid (C2 [Life Domain Spells] Abju): R30' 3 targets gain +5 current and maximum hit points for 8 hr [+Level gives +5 hit points]</td>
     </tr><tr style="text-align:left">
       <td>Antimagic Field (C8 Abju): 10' radius suppresses magic for concentration up to 1 hr</td>
     </tr><tr style="text-align:left">
       <td>Aura Of Life (C4 [Life Domain Spells] Abju): 30' radius gives allies resistance to necrotic damage and immunity to maximum hit point reduction, and raises those with 0 hit points to 1 hit point, for concentration up to 10 min</td>
     </tr><tr style="text-align:left">
-      <td>Banishment (C4 Abju): R30' Banishes the target to its home plane or to a demiplane (save Charisma negates) for concentration up to 1 min [+Level affects +1 target]</td>
+      <td>Banishment (C4 Abju): R30' Banishes the target to its home plane or to a demiplane (save Charisma negates) for concentration up to 1 min; extraplanar creatures don't return if the spell is maintained for a full min [+Level affects +1 target]</td>
     </tr><tr style="text-align:left">
-      <td>Bless (C1 [Life Domain Spells] Ench): R30' 3 targets gain +1d4 on attacks and saving throws for concentration up to 1 min [+Level affects +1 target]</td>
+      <td>Bless (C1 [Life Domain Spells] Ench): R30' 3 targets gain +1d4 on attacks and saves for concentration up to 1 min [+Level affects +1 target]</td>
     </tr><tr style="text-align:left">
       <td>Blindness/Deafness (C2 Necr): 1</td>
     </tr><tr style="text-align:left">
-      <td>Contagion (C5 Necr): Touch inflicts 11d8 HP necrotic, poisoned, and disadvantage on chosen ability saves (save Constitution negates; subsequent saves each turn either ends after three saves or extends to 7 days after 3 failures; other effects that would end poisoned require a successful Constitution save to succeed)</td>
+      <td>Contagion (C5 Necr): Touch inflicts 11d8 HP necrotic, poisoned, and disadvantage on chosen ability saves (save Constitution negates; subsequent saves each turn either end after three successes or extend to 7 days after 3 failures; other effects that would end poisoned require a successful Constitution save to succeed)</td>
     </tr><tr style="text-align:left">
-      <td>Cure Wounds (C1 [Life Domain Spells] Abju): Touched regains 2d8+4 hit points [+Level restores +2d8 HP]</td>
+      <td>Cure Wounds (C1 [Life Domain Spells] Abju): Touched regains 2d8+4 hit points [+Level restores +2d8 hit points]</td>
     </tr><tr style="text-align:left">
       <td>Death Ward (C4 Abju): Touched retains 1 HP when next reduced to 0 HP or survives the next death effect within 8 hrs</td>
     </tr><tr style="text-align:left">
@@ -281,7 +281,7 @@ var attributes = {
     </tr><tr style="text-align:left">
       <td>Divination (C4 Divi): Answers a question about an event up to 7 days in the future; additional uses before a long rest add a 25% chance of failure [R]</td>
     </tr><tr style="text-align:left">
-      <td>Divine Word (C7 Evoc): R30' Inflicts death on targets with up to 20 HP, stunned on those with up to 30 HP, blinded on those with up to 40 HP, and deafened on those with up to 50 HP, and forces them to return to their home planes (save Charisma negates)</td>
+      <td>Divine Word (C7 Evoc): R30' Inflicts death on targets with up to 20 HP, blinded, deafened, and stunned for 1 hr on those with up to 30 HP, blinded and deafened for 10 min on those with up to 40 HP, and deafened for 1 min on those with up to 50 HP, and forces celestials, elementals, fey, and fiends to return to their home planes (save Charisma negates) for 24 hr</td>
     </tr><tr style="text-align:left">
       <td>Enhance Ability (C2 Tran): Touched gains advantage on chosen ability checks for concentration up to 1 hr [+Level affects +1 target]</td>
     </tr><tr style="text-align:left">
@@ -291,19 +291,19 @@ var attributes = {
     </tr><tr style="text-align:left">
       <td>Guidance (C0 Divi): Touched gains +1d4 on a choice of skill for concentration up to 1 min</td>
     </tr><tr style="text-align:left">
-      <td>Guiding Bolt (C1 Evoc): R120' Ranged spell inflicts 4d6 HP radiant and gives advantage on the next attack on the target within 1 rd [+Level inflicts +1d6 HP]</td>
+      <td>Guiding Bolt (C1 Evoc): R120' Ranged spell inflicts 4d6 HP radiant and gives advantage on the next attack on the target before the end of the next turn [+Level inflicts +1d6 HP]</td>
     </tr><tr style="text-align:left">
-      <td>Hallow (C5 Evoc): 60' radius becomes warded against aberrations, celestials, elementals, fey, fiends, and undead and their effects and evokes a boon or bane effect (save Charisma negates)</td>
+      <td>Hallow (C5 Evoc): 60' radius becomes warded against aberrations, celestials, elementals, fey, fiends, and undead and their effects and evokes a boon or bane effect</td>
     </tr><tr style="text-align:left">
-      <td>Heroes' Feast (C6 Conj): R30' 12 diners gain resistance to poison, immunity to becoming poisoned and frightened, and +2d10 hit points and maximum hit points for 24 hr</td>
+      <td>Heroes' Feast (C6 Conj): 12 diners who consume a 1-hr meal gain resistance to poison, immunity to becoming poisoned and frightened, and +2d10 hit points and maximum hit points for 24 hr</td>
     </tr><tr style="text-align:left">
-      <td>Hold Person (C2 Ench): R60' Paralyzes the target humanoid (save Wisdom ends) for concentration up to 1 min [+Level affects +1 target]</td>
+      <td>Hold Person (C2 Ench): R60' Inflicts paralyzed (save Wisdom negates; additional saves each rd end) for concentration up to 1 min [+Level affects +1 target]</td>
     </tr><tr style="text-align:left">
       <td>Inflict Wounds (C1 Necr): Touch inflicts 2d10 HP necrotic (save Constitution half) [+Level inflicts +1d10 HP]</td>
     </tr><tr style="text-align:left">
       <td>Insect Plague (C5 Conj): R300' 20' radius inflicts 4d10 HP piercing (save Constitution half) for concentration up to 10 min [+Level inflicts +1d10 HP]</td>
     </tr><tr style="text-align:left">
-      <td>Lesser Restoration (C2 [Life Domain Spells] Abju): Touched recovers from a choice of blindness, deafness, paralysis, or poison</td>
+      <td>Lesser Restoration (C2 [Life Domain Spells] Abju): Touched recovers from a choice of blinded, deafened, paralyzed, or poisoned</td>
     </tr><tr style="text-align:left">
       <td>Mass Cure Wounds (C5 [Life Domain Spells] Abju): R60' 6 targets in a 30' radius regain 5d8+4 HP [+Level restores +1d8 HP]</td>
     </tr><tr style="text-align:left">
