@@ -1723,7 +1723,7 @@ PHB5E.SPELLS_ADDED = {
     'School=Evocation ' +
     'Level=B9 ' +
     'Description=' +
-      '"Touched regains all hit points, recovers from charm, fright, paralysis, and stunning, and can use a reaction to stand from prone"',
+      '"Touched regains all hit points, recovers from charmed, frightened, paralyzed, and stunned, and can use a reaction to stand from prone"',
 
   'Ray Of Sickness':
     'School=Necromancy ' +
@@ -1737,7 +1737,7 @@ PHB5E.SPELLS_ADDED = {
     'Level=P1 ' +
     'AtHigherLevels="inflicts +1d6 HP initial" ' +
     'Description=' +
-      '"Next successful self weapon attack inflicts +1d6 HP fire, plus 1d6 HP fire per rd (save Constitution ends) for concentration up to 1 min"',
+      '"Next successful self melee weapon attack inflicts +1d6 HP fire, plus 1d6 HP fire per rd (save Constitution ends) for concentration up to 1 min"',
   'Staggering Smite':
     'School=Evocation ' +
     'Level=P4 ' +
