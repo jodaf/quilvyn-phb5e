@@ -83,6 +83,101 @@ PHB5E2024.VERSION = '2.4.1.0';
 PHB5E2024.ALIGNMENTS = Object.assign({}, SRD5E.ALIGNMENTS);
 PHB5E2024.ARMORS = Object.assign({}, SRD5E.ARMORS);
 PHB5E2024.BACKGROUNDS_ADDED = {
+  'Artisan':
+    'Equipment=' +
+      '"Artisan\'s Tools","2 Pouches","Traveler\'s Clothes","32 GP" ' +
+    'Features=' +
+      '"1:Ability Boost (Choose 3 from Strength, Dexterity, Intelligence)",' +
+      '"1:Skill Proficiency (Investigation; Persuasion)",' +
+      '"1:Tool Proficiency (Choose 1 from any Artisan\'s Tools)",' +
+      '"1:Crafter"',
+  'Charlatan':
+    'Equipment=' +
+      '"Forgery Kit","Costume","Fine Clothes","15 GP" ' +
+    'Features=' +
+      '"1:Ability Boost (Choose 3 from Dexterity, Constitution, Charisma)",' +
+      '"1:Skill Proficiency (Deception; Sleight Of Hand)",' +
+      '"1:Tool Proficiency (Forgery Kit)",' +
+      '"1:Skilled"',
+  'Entertainer':
+    'Equipment=' +
+      '"Musical Instrument","2 Costumes","Mirror","Perfume",' +
+      '"Traveler\'s Clothes","11 GP" ' +
+    'Features=' +
+      '"1:Ability Boost (Choose 3 from Strength, Dexterity, Charisma)",' +
+      '"1:Skill Proficiency (Acrobatics; Performance)",' +
+      '"1:Tool Proficiency (Choose 1 from any Musical Instrument)",' +
+      '"1:Musician"',
+  'Farmer':
+    'Equipment=' +
+      '"Sickle","Carpenter\'s Tools","Healer\'s Kit","Iron Pot","Shovel",' +
+      '"Traveler\'s Clothes","30 GP" ' +
+    'Features=' +
+      '"1:Ability Boost (Choose 3 from Strength, Constitution, Wisdom)",' +
+      '"1:Skill Proficiency (Animal Handling; Nature)",' +
+      '"1:Tool Proficiency (Carpenter\'s Tools)",' +
+      '"1:Tough"',
+  'Guard':
+    'Equipment=' +
+      '"Spear","Light Crossbow","20 Bolts","Gaming Set","Hooded Lantern",' +
+      '"Manacles","Quiver","Traveler\'s Clothes","12 GP" ' +
+    'Features=' +
+      '"1:Ability Boost (Choose 3 from Strength, Intelligence, Wisdom)",' +
+      '"1:Skill Proficiency (Athletics; Perception)",' +
+      '"1:Tool Proficiency (Choose 1 from any Gaming Set)",' +
+      '"1:Alert"',
+  'Guide':
+    'Equipment=' +
+      '"Shortbow","20 Arrows","Cartographer\'s Tools","Bedroll","Quiver",' +
+      '"Tent","Traveler\'s Clothes","3 GP" ' +
+    'Features=' +
+      '"1:Ability Boost (Choose 3 from Dexterity, Constitution, Charisma)",' +
+      '"1:Skill Proficiency (Stealth; Survival)",' +
+      '"1:Tool Proficiency (Cartographer\'s Tools)",' +
+      '"1:Magic Initiate (Druid)"',
+  'Hermit':
+    'Equipment=' +
+      '"Quarterstaff","Herbalism Kit","Bedroll","Book (Philosophy)","Lamp",' +
+      '"Oil (3 Flasks)","Traveler\'s Clothes","16 GP" ' +
+    'Features=' +
+      '"1:Ability Boost (Choose 3 from Constitution, Wisdom, Charisma)",' +
+      '"1:Skill Proficiency (Medicine; Religion)",' +
+      '"1:Tool Proficiency (Herbalism Kit)",' +
+      '"1:Healer"',
+  'Merchant':
+    'Equipment=' +
+      '"Gaming Set","Fine Clothes","Perfume","29 GP" ' +
+    'Features=' +
+      '"1:Ability Boost (Choose 3 from Strength, Intelligence, Charisma)",' +
+      '"1:Skill Proficiency (History; Persuasion)",' +
+      '"1:Tool Proficiency (Choose 1 from any Gaming Set)",' +
+      '"1:Skilled"',
+  'Sailor':
+    'Equipment=' +
+      '"Dagger","Navigator\'s Tools","Rope","Traveler\'s Clothes","20 GP" ' +
+    'Features=' +
+      '"1:Ability Boost (Choose 3 from Strength, Dexterity, Wisdom)",' +
+      '"1:Skill Proficiency (Acrobatics; Perception)",' +
+      '"1:Tool Proficiency (Navigator\'s Tools)",' +
+      '"1:Tavern Brawler"',
+  'Scribe':
+    'Equipment=' +
+      '"Calligrapher\'s Supplies","Fine Clothes","Lamp","Oil (3 Flasks)",' +
+      '"Parchment (12 Sheets)","23 GP" ' +
+    'Features=' +
+      '"1:Ability Boost (Choose 3 from Dexterity, Intelligence, Wisdom)",' +
+      '"1:Skill Proficiency (Investigation; Perception)",' +
+      '"1:Tool Proficiency (Calligrapher\'s Supplies)",' +
+      '"1:Skilled"',
+  'Wayfarer':
+    'Equipment=' +
+      '"2 Daggers","Thieves\' Tools","Gaming Set","Bedroll","2 Pouches",' +
+      '"Traveler\'s Clothes","16 GP" ' +
+    'Features=' +
+      '"1:Ability Boost (Choose 3 from Dexterity, Wisdom, Charisma)",' +
+      '"1:Skill Proficiency (Insight; Stealth)",' +
+      '"1:Tool Proficiency (Thieves\' Tools)",' +
+      '"1:Lucky"'
 };
 PHB5E2024.BACKGROUNDS =
   Object.assign({}, SRD5E.BACKGROUNDS, PHB5E2024.BACKGROUNDS_ADDED);
@@ -342,106 +437,120 @@ for(let c in PHB5E2024.CLASSES_SELECTABLES_ADDED)
     PHB5E2024.CLASSES[c].replace('Selectables=', 'Selectables=' + PHB5E2024.CLASSES_SELECTABLES_ADDED[c] + ',');
 PHB5E2024.DEITIES = Object.assign({}, SRD5E.DEITIES);
 PHB5E2024.FEATS_ADDED = {
-  'Alert':
-    '',
-  'Athlete':
-    '',
-  'Actor':
-    '',
-  'Charger':
-    '',
-  'Crossbow Expert':
-    'Imply="weapons.Hand Crossbow || weapons.Heavy Crossbow || weapons.Light Crossbow"',
-  'Defensive Duelist':
-    'Require="dexterity >= 13"',
-  'Dual Wielder':
-    '',
-  'Dungeon Delver':
-    '',
-  'Durable':
-    '',
-  'Elemental Adept (Acid)':
-    'Require="casterLevel >= 1"',
-  'Elemental Adept (Cold)':
-    'Require="casterLevel >= 1"',
-  'Elemental Adept (Fire)':
-    'Require="casterLevel >= 1"',
-  'Elemental Adept (Lightning)':
-    'Require="casterLevel >= 1"',
-  'Elemental Adept (Thunder)':
-    'Require="casterLevel >= 1"',
-  'Great Weapon Master':
-    '',
-  'Healer':
-    '',
-  'Heavily Armored':
-    'Require="armorProficiency.Medium"',
-  'Heavy Armor Master':
-    'Require="armorProficiency.Heavy"',
-  'Inspiring Leader':
-    'Require="charisma >= 13"',
-  'Keen Mind':
-    '',
-  'Lightly Armored':
-    '',
-  'Linguist':
-    '',
-  'Lucky':
-    '',
-  'Mage Slayer':
-    '',
-  'Magic Initiate (Bard)':
-    '',
-  'Magic Initiate (Cleric)':
-    '',
-  'Magic Initiate (Druid)':
-    '',
-  'Magic Initiate (Sorcerer)':
-    '',
-  'Magic Initiate (Warlock)':
-    '',
-  'Magic Initiate (Wizard)':
-    '',
-  'Martial Adept':
-    '',
-  'Medium Armor Master':
-    'Require="armorProficiency.Medium || armorProficiency.Heavy"',
-  'Mobile':
-    '',
-  'Moderately Armored':
-    'Require="armorProficiency.Light"',
-  'Mounted Combatant':
-    '',
-  'Observant':
-    '',
-  'Polearm Master':
-    '',
-  'Resilient':
-    '',
-  'Ritual Caster':
-    'Require="intelligence >= 13 || wisdom >= 13"',
-  'Savage Attacker':
-    '',
-  'Sentinel':
-    '',
-  'Sharpshooter':
-    '',
-  'Shield Master':
-    'Imply="shield != \'None\'"',
-  'Skilled':
-    '',
-  'Skulker':
-    'Require="dexterity >= 13"',
-  'Spell Sniper':
-    'Require="casterLevel >= 1"',
-  'Tavern Brawler':
-    '',
-  'Tough':
-    '',
-  'War Caster':
-    'Require="casterLevel >= 1"',
-  'Weapon Master':
-    ''
+
+  'Crafter':'Category=Origin',
+  'Healer':PHB5E.FEATS.Healer + ' Category=Origin',
+  'Lucky':PHB5E.FEATS.Lucky + ' Category=Origin',
+  'Musician':'Category=Origin',
+  'Tavern Brawler':PHB5E.FEATS['Tavern Brawler'] + ' Category=Origin',
+  'Tough':PHB5E.FEATS.Tough + ' Category=Origin',
+
+  'Actor':PHB5E.FEATS.Actor + ' ' +
+    'Category=General Require="level >= 4","charisma >= 13"',
+  'Athlete':PHB5E.FEATS.Athlete + ' ' +
+    'Category=General Require="level >= 4","strength >= 13 || dexterity >= 13"',
+  'Charger':PHB5E.FEATS.Charger + ' ' +
+    'Category=General Require="level >= 4","strength >= 13 || dexterity >= 13"',
+  'Chef':'Category=General Require="level >= 4"',
+  'Crossbow Expert':PHB5E.FEATS['Crossbow Expert'] + ' ' +
+    'Category=General Require="level >= 4","dexterity >= 13"',
+  'Crusher':'Category=General Require="level >= 4"',
+  'Defensive Duelist':PHB5E.FEATS['Defensive Duelist'] + ' ' +
+    'Category=General Require="level >= 4","dexterity >= 13"',
+  'Dual Wielder':PHB5E.FEATS['Dual Wielder'] + ' ' +
+    'Category=General Require="level >= 4","strength >= 13 || dexterity >= 13"',
+  'Durable':PHB5E.FEATS.Durable + ' Category=General Require="level >= 4"',
+  'Elemental Adept (Acid)':PHB5E.FEATS['Elemental Adept (Acid)'] + ' ' +
+    'Category=General ' +
+    'Require="level >= 4","features.Spellcasting || features.Pact Magic"',
+  'Elemental Adept (Cold)':PHB5E.FEATS['Elemental Adept (Cold)'] + ' ' +
+    'Category=General ' +
+    'Require="level >= 4","features.Spellcasting || features.Pact Magic"',
+  'Elemental Adept (Fire)':PHB5E.FEATS['Elemental Adept (Fire)'] + ' ' +
+    'Category=General ' +
+    'Require="level >= 4","features.Spellcasting || features.Pact Magic"',
+  'Elemental Adept (Lightning)':PHB5E.FEATS['Elemental Adept (Lightning)'] + ' ' +
+    'Category=General ' +
+    'Require="level >= 4","features.Spellcasting || features.Pact Magic"',
+  'Elemental Adept (Thunder)':PHB5E.FEATS['Elemental Adept (Thunder)'] + ' ' +
+    'Category=General ' +
+    'Require="level >= 4","features.Spellcasting || features.Pact Magic"',
+  'Fey-Touched':'Category=General Require="level >= 4"',
+  'Great Weapon Master':PHB5E.FEATS['Great Weapon Master'] + ' ' +
+    'Category=General Require="level >= 4","strength >= 13"',
+  'Heavily Armored':PHB5E.FEATS['Heavily Armored'] + ' ' +
+    'Category=General Require="level >= 4","armorProficiency.Medium"',
+  'Heavy Armor Master':PHB5E.FEATS['Heavy Armor Master'] + ' ' +
+    'Category=General Require="level >= 4","armorProficiency.Heavy"',
+  'Inspiring Leader':PHB5E.FEATS['Inspiring Leader'] + ' ' +
+    'Category=General Require="level >= 4","wisdom > 13 || charisma >= 13"',
+  'Keen Mind':PHB5E.FEATS['Keen Mind'] + ' ' +
+    'Category=General Require="level >= 4","intelligence >= 13"',
+  'Lightly Armored':PHB5E.FEATS['Lightly Armored'] + ' ' +
+    'Category=General Require="level >= 4"',
+  'Mage Slayer':PHB5E.FEATS['Mage Slayer'] + ' ' +
+    'Category=General Require="level >= 4"',
+  'Martial Weapon Training':'Category=General Require="level >= 4"',
+  'Medium Armor Master':PHB5E.FEATS['Medium Armor Master'] + ' ' +
+    'Category=General Require="level >= 4","armorProficiency.Medium"',
+  'Moderately Armored':PHB5E.FEATS['Moderately Armored'] + ' ' +
+    'Category=General Require="level >= 4","armorProficiency.Light"',
+  'Mounted Combatant':PHB5E.FEATS['Mounted Combatant'] + ' ' +
+    'Category=General Require="level >= 4"',
+  'Observant':PHB5E.FEATS.Observant + ' ' +
+    'Category=General ' +
+    'Require="level >= 4","intelligence >= 13 || wisdom >= 13"',
+  'Piercer':'Category=General Require="level >= 4"',
+  'Poisoner':'Category=General Require="level >= 4"',
+  'Polearm Master':PHB5E.FEATS['Polearm Master'] + ' ' +
+    'Category=General Require="level >= 4","strength > 13 || dexterity >= 13"',
+  'Resilient':PHB5E.FEATS.Resilient + 'Category=General Require="level >= 4"',
+  'Ritual Caster':PHB5E.FEATS['Ritual Caster'] + ' ' +
+    'Category=General ' +
+    'Require=' +
+      '"level >= 4",' +
+      '"intelligence > 13 || wisdom >= 13 || charisma >= 13"',
+  'Sentinel':PHB5E.FEATS.Sentinel + ' ' +
+    'Category=General Require="level >= 4","strength > 13 || dexterity >= 13"',
+  'Shadow-Touched':'Category=General Require="level >= 4"',
+  'Sharpshooter':PHB5E.FEATS.Sharpshooter + ' ' +
+    'Category=General Require="level >= 4","dexterity >= 13"',
+  'Shield Master':PHB5E.FEATS['Shield Master'] + ' ' +
+    'Category=General Require="level >= 4","armorProficiency.Shield"',
+  'Skill Expert':'Category=General Require="level >= 4"',
+  'Skulker':PHB5E.FEATS.Skulker + ' ' +
+    'Category=General Require="level >= 4","dexterity >= 13"',
+  'Slasher':'Category=General Require="level >= 4"',
+  'Speedy':
+    'Category=General ' +
+    'Require="level >= 4","dexerity > 13 || constitution >= 13"',
+  'Spell Sniper':PHB5E.FEATS['Spell Sniper'] + ' ' +
+    'Category=General ' +
+    'Require="level >= 4","features.Spellcasting || features.Pact Magic"',
+  'Telekinetic':'Category=General Require="level >= 4"',
+  'Telepathic':'Category=General Require="level >= 4"',
+  'War Caster':PHB5E.FEATS['War Caster'] + ' ' +
+    'Category=General ' +
+    'Require="level >= 4","features.Spellcasting || features.Pact Magic"',
+  'Weapon Master':PHB5E.FEATS['Weapon Master'] + ' ' +
+    'Category=General Require="level >= 4"',
+
+  'Blind Fighting':
+    'Category="Fighting Style" Require="features.Fighting Style"',
+  'Dueling':'Category="Fighting Style" Require="features.Fighting Style"',
+  'Interception':'Category="Fighting Style" Require="features.Fighting Style"',
+  'Protection':'Category="Fighting Style" Require="features.Fighting Style"',
+  'Thrown Weapon Fighting':
+    'Category="Fighting Style" Require="features.Fighting Style"',
+  'Unarmed Fighting':
+    'Category="Fighting Style" Require="features.Fighting Style"',
+
+  'Boon Of Energy Resistance':'Category="Epic Boon" Require="level >= 19"',
+  'Boon Of Fortitude':'Category="Epic Boon" Require="level >= 19"',
+  'Boon Of Recovery':'Category="Epic Boon" Require="level >= 19"',
+  'Boon Of Skill':'Category="Epic Boon" Require="level >= 19"',
+  'Boon Of Speed':'Category="Epic Boon" Require="level >= 19"'
+
 };
 PHB5E2024.FEATS = Object.assign({}, SRD5E.FEATS, PHB5E2024.FEATS_ADDED);
 PHB5E2024.FEATURES_ADDED = {
@@ -449,358 +558,163 @@ PHB5E2024.FEATURES_ADDED = {
   // Species
 
   // Aasimar
+  'Celestial Resistance': // ref Volo
+    'Section=save Note="Has resistance to necrotic and radiant damage"',
+  'Celestial Revelation':
+    'Section=feature ' +
+    'Note="Can use the Heavenly Wings, Inner Radiance, or Necrotic Shroud feature for 1 min once per long rest"',
+  // Darkvision as SRD5E2024
+  'Heavenly Wings': // ref Volo (as Radiant Soul)
+    'Section=ability,combat ' +
+    'Note=' +
+      '"Gives a 30\' fly Speed",' +
+      '"Can inflict +%{proficiencyBonus} HP radiant once per rd"',
+  'Healing Hands': // ref Volo
+    'Section=magic ' +
+    'Note="Touch heals %{proficiencyBonus}d4 hit points once per long rest"',
+  'Inner Radiance': // ref Volo (as Radiant Consumption)
+    'Section=combat ' +
+    'Note="Emits a bright light in a 10\' radius that inflicts %{proficiencyBonus} HP radiant"',
+  'Light Bearer': // ref Volo
+    'Section=magic ' +
+    'Note="Knows the <i>Light</i> cantrip" ' +
+    'SpellAbility=Charisma ' +
+    'Spells=Light',
+  'Necrotic Shroud': // ref Volo
+    'Section=combat ' +
+    'Note="R10\' Inflicts frightened (save DC %{8+charismaModifier+proficiencyBonus} negates) until the end of the next turn"',
+
   // TODO
 
   // Class
 
   // Barbarian
-  // Totem Warrior
-  'Aspect Of The Beast (Bear)':
-    'Section=ability,ability ' +
-    'Note=' +
-      '"x2 Carry/x2 Lift",' +
-      '"Has advantage on Strength to push, pull, lift, or break"',
-  'Aspect Of The Beast (Eagle)':
-    'Section=skill ' +
-    'Note="Sees 1 mile clearly and suffers no disadvantage on Perception from dim light"',
-  'Aspect Of The Beast (Wolf)':
-    'Section=skill ' +
-    'Note="Can track at a fast pace and Stealth at a normal pace"',
-  'Spirit Walker':
-    'Section=magic ' +
-    'Note="Can cast ritual <i>Commune With Nature</i>" ' +
-    'Spells="Commune With Nature"',
-  'Totemic Attunement (Bear)':
-    'Section=combat ' +
-    'Note="During rage, adjacent foes suffer disadvantage on attacks on others"',
-  'Totemic Attunement (Eagle)':
-    'Section=ability Note="Can fly %{speed}\' each rd during rage"',
-  'Totemic Attunement (Wolf)':
-    'Section=combat ' +
-    'Note="During rage, can use a bonus action after a successful melee attack to knock prone a Large or smaller foe"',
-  'Totem Spirit (Bear)':
-    'Section=save Note="Has resistance to non-psychic damage during rage"',
-  'Totem Spirit (Eagle)':
-    'Section=combat ' +
-    'Note="During rage, can use a bonus action to Dash, and foes suffer disadvantage on opportunity attacks; heavy armor negates"',
-  'Totem Spirit (Wolf)':
-    'Section=combat ' +
-    'Note="Allies gain advantage on attacks vs. foes adjacent to self during rage"',
+  // Path Of The Wild Heart
+  'Animal Speaker':'Section=feature Note="TODO"',
+  'Aspect Of The Wilds':'Section=feature Note="TODO"',
+  'Nature Speaker':'Section=feature Note="TODO"',
+  'Power Of The Wilds':'Section=feature Note="TODO"',
+  'Rage Of The Wilds':'Section=feature Note="TODO"',
+  // Path Of The World Tree
+  'Battering Roots':'Section=feature Note="TODO"',
+  'Branches Of The Tree':'Section=feature Note="TODO"',
+  'Travel Along The Tree':'Section=feature Note="TODO"',
+  'Vitality Of The Tree':'Section=feature Note="TODO"',
+  // Path Of The Zealot
+  'Divine Fury':'Section=feature Note="TODO"',
+  'Fanatical Focus':'Section=feature Note="TODO"',
+  'Rage Of The Gods':'Section=feature Note="TODO"',
+  'Warrior Of The Gods':'Section=feature Note="TODO"',
+  'Zealous Presence':'Section=feature Note="TODO"',
 
   // Bard
+  // College Of Dance
+  'Dazzling Footwork':'Section=feature Note="TODO"',
+  'Inspiring Movement':'Section=feature Note="TODO"',
+  'Leading Evasion':'Section=feature Note="TODO"',
+  'Tandem Footwork':'Section=feature Note="TODO"',
+  // College Of Glamour
+  'Beguiling Magic':Xanathar.FEATURES['Enthralling Performance'],
+  'Mantle Of Inspiration':Xanathar.FEATURES['Mantle Of Inspiration'],
+  'Mantle Of Majesty':Xanathar.FEATURES['Mantle Of Majesty'],
+  'Unbreakable Majesty':Xanathar.FEATURES['Unbreakable Majesty'],
   // College Of Valor
-  'Battle Magic':
-    'Section=combat ' +
-    'Note="Can use a bonus action to make a weapon attack after casting a spell"',
-  'Bonus Proficiencies (College Of Valor)':
-    'Section=combat ' +
-    'Note="Armor Proficiency (Medium; Shield)/Weapon Proficiency (Martial Weapons)"',
-  'Combat Inspiration':
-    'Section=combat ' +
-    'Note="Allies can use a Bardic Inspiration die to boost weapon damage or as a reaction to an attack to boost Armor Class"',
-  // Extra Attack as above
+  'Combat inspiration':PHB5E.FEATURES['Combat Inspiration'],
+  'Martial Training':'Section=feature Note="TODO"',
+  // Extra Attack as SRD5E2024
+  'Battle Magic':PHB5E.FEATURES['Battle Magic'],
 
   // Cleric
-  // Knowledge Domain
-  'Blessings Of Knowledge':
-    'Section=skill,skill ' +
-    'Note=' +
-      '"Skill Proficiency (Choose 2 from Arcana, History, Nature, Religion)/Language (Choose 2 from any)",' +
-      '"+%{proficiencyBonus} on chosen Blessings of Knowledge skills"',
-  'Dampen Elements':
-    'Section=combat ' +
-    'Note="R30\' Can use a reaction to grant resistance to immediate acid, cold, fire, lightning, or thunder damage"',
-  'Knowledge Domain':
-    'Spells=' +
-      '"1:Command","1:Identify",' +
-      '"3:Augury","3:Suggestion",' +
-      '"5:Nondetection","5:Speak With Dead",' +
-      '"7:Arcane Eye","7:Confusion",' +
-      '"9:Legend Lore","9:Scrying"',
-  'Knowledge Of The Ages':
-    'Section=skill ' +
-    'Note="Can use Channel Divinity to gain proficiency in a chosen skill or tool for 10 min"',
-  'Potent Spellcasting':
-    'Section=magic Note="Cleric cantrips inflict +%{wisdomModifier} HP"',
-  'Read Thoughts':
-    'Section=magic ' +
-    'Note="R60\' Can use Channel Divinity to read the target\'s thoughts (save Wisdom negates and blocks additional attempts on the target until a long rest) for 1 min; success allows casting <i>Suggestion</i> on the target with no save" ' +
-    'Spells=Suggestion',
-  'Visions Of The Past':
-    'Section=magic ' +
-    'Note="Can gain visions about surroundings or a held object via %{wisdomModifier>?1} min meditation once per short rest"',
-  // Light Domain
-  'Corona Of Light':
-    'Section=magic ' +
-    'Note="Can use an action to emit a 60\' bright light that inflicts foe disadvantage on saves vs. fire and radiant spells for 1 min"',
-  'Improved Flare':
-    'Section=combat ' +
-    'Note="R30\' Can use Warding Flare to protect another creature"',
-  'Light Domain':
-    'Spells=' +
-      '"1:Burning Hands","1:Faerie Fire",' +
-      '"3:Flaming Sphere","3:Scorching Ray",' +
-      '"5:Daylight","5:Fireball",' +
-      '"7:Guardian Of Faith","7:Wall Of Fire",' +
-      '"9:Flame Strike","9:Scrying"',
-  // Potent Spellcasting as above
-  'Radiance Of The Dawn':
-    'Section=magic ' +
-    'Note="R30\' Can use Channel Divinity to dispel magical darkness and to inflict 2d10+%{levels.Cleric} HP radiant (save Constitution half) on foes"',
-  'Warding Flare':
-    'Section=combat ' +
-    'Note="R30\' Can use a reaction to inflict disadvantage on a foe attack %{wisdomModifier>1?wisdomModifier+\' times\':\'once\'} per long rest"',
-  // Nature Domain
-  'Acolyte Of Nature':
-    'Section=magic,skill ' +
-    'Note=' +
-      '"Knows 1 Druid cantrip",' +
-      '"Skill Proficiency (Choose 1 from Animal Handling, Nature, Survival)"',
-  'Bonus Proficiency (Nature Domain)':
-    'Section=combat Note="Armor Proficiency (Heavy)"',
-  'Charm Animals And Plants':
-    'Section=magic ' +
-    'Note="R30\' Can use Channel Divinity to charm beasts and plants (save Wisdom negates; taking damage ends) for 1 min"',
-  // Divine Strike as SRD35
-  'Master Of Nature':
-    'Section=magic Note="Can command charmed animals and plants"',
-  // Tempest Domain
-  'Bonus Proficiencies (Tempest Domain)':
-    'Section=combat ' +
-    'Note="Armor Proficiency (Heavy)/Weapon Proficiency (Martial Weapons)"',
-  'Destructive Wrath':
-    'Section=magic ' +
-    'Note="Can use Channel Divinity to maximize lightning or thunder damage"',
-  // Divine Strike as above
-  'Stormborn':'Section=ability Note="Has a %{speed}\' fly speed outdoors"',
-  'Thunderbolt Strike':
-    'Section=magic ' +
-    'Note="Can cause lightning damage to also push away Large and smaller creatures 10\'"',
-  'Wrath Of The Storm':
-    'Section=combat ' +
-    'Note="Can use a reaction to inflict 2d8 HP lightning or thunder (save Dexterity half) on a successful attacker %{wisdomModifier>1?wisdomModifier+\' times\':\'once\'} per long rest"',
+  'Corona Of Light':PHB5E.FEATURES['Corona Of Light'],
+  'Improved Warding Flare':PHB5E.FEATURES['Improved Flare'],
+  'Light Domain Spells':PHB5E.FEATURES['Light Domain']
+    .replace('1:', '3:')
+    .replace('Guardian Of Faith', 'Arcane Eye'),
+  'Radiance Of The Dawn':PHB5E.FEATURES['Radiance Of The Dawn'],
+  'Warding Flare':PHB5E.FEATURES['Warding Flare'],
   // Trickery Domain
-  'Blessing Of The Trickster':
-    'Section=magic ' +
-    'Note="Touch gives advantage on Stealth for 1 hr or until given to another target"',
-  'Cloak Of Shadows (Trickery Domain)':
-    'Section=magic ' +
-    'Note="Can use Channel Divinity to make self invisible until the end of the next turn; attacking or casting ends"',
-  // Divine Strike as above
-  'Improved Duplicity':
-    'Section=combat Note="Invoke Duplicity creates 4 duplicates"',
-  'Invoke Duplicity':
-    'Section=combat ' +
-    'Note="R30\' Can use Channel Divinity to create %{combatNotes.improvedDuplicity?\'4 illusionary duplicates\':\'1 illusionary duplicate\'}, moving %{combatNotes.improvedDuplicity?\'each\':\'it\'} up to 30\' each rd to a maximum of 120\' away, gaining advantage on attacks when self and duplicate are each within 5\' of the target and allowing remote spellcasting for concentration up to 1 min"',
-  'Trickery Domain':
-    'Spells=' +
-      '"1:Charm Person","1:Disguise Self",' +
-      '"3:Mirror Image","3:Pass Without Trace",' +
-      '"5:Blink","5:Dispel Magic",' +
-      '"7:Dimension Door","7:Polymorph",' +
-      '"9:Dominate Person","9:Modify Memory"',
+  'Blessing Of The Trickster':PHB5E.FEATURES['Blessing Of The Trickster'],
+  'Improved Duplicity':PHB5E.FEATURES['Improved Duplicity'],
+  'Invoke Duplicity':PHB5E.FEATURES['Invoke Duplicity'],
+  'Trickery Domain Spells':PHB5E.FEATURES['Trickery Domain']
+    .replace('1:', '3:')
+    .replace('Invisibility', 'Pass Without Trace')
+    .replace('Blink', 'Hypnotic Pattern')
+    .replace('Nondetection', 'Dispel Magic')
+    .replace('Polymorph', 'Confusion'),
+  "Trickster's Transformation":'Section=feature Note="TODO"',
   // War Domain
-  'Avatar Of Battle':
-    'Section=save ' +
-    'Note="Has resistance to bludgeoning, piercing, and slashing damage from nonmagical weapons"',
-  'Bonus Proficiencies (War Domain)':
-    'Section=combat ' +
-    'Note="Armor Proficiency (Heavy)/Weapon Proficiency (Martial Weapons)"',
-  // Divine Strike as above
-  'Guided Strike':
-    'Section=combat Note="Can use Channel Divinity to give self +10 attack"',
-  'War Domain':
-    'Spells=' +
-      '"1:Divine Favor","1:Shield Of Faith",' +
-      '"3:Magic Weapon","3:Spiritual Weapon",' +
-      '"5:Crusader\'s Mantle","5:Spirit Guardians",' +
-      '"7:Freedom Of Movement","7:Stoneskin",' +
-      '"9:Flame Strike","9:Hold Monster"',
-  "War God's Blessing":
-    'Section=combat ' +
-    'Note="R30\' Can use a reaction and Channel Divinity to give an ally +10 attack"',
-  'War Priest':
-    'Section=combat ' +
-    'Note="Can use a bonus attack to make an extra weapon attack %{wisdomModifier>1?wisdomModifier+\' times\':\'once\'} per long rest"',
+  'Avatar Of Battle':PHB5E.FEATURES['Avatar Of Battle'],
+  'Guided Strike':PHB5E.FEATURES['Guided Strike'],
+  'War Domain Spells':PHB5E.FEATURES['War Domain']
+    .replace('1:', '3:')
+    .replace('Divine Favor', 'Guiding Bolt')
+    .replace('Stoneskin', 'Fire Shield')
+    .replace('Flame Strike', 'Steel Wind Strike'),
+  'War Priest':PHB5E.FEATURES['War Priest'],
+  "War God's Blessing":PHB5E.FEATURES["War God's Blessing"],
 
   // Druid
-  // Circle Of The Land
   // Circle Of The Moon
-  'Circle Forms':'Section=magic Note="Can Wild Shape into a CR %V creature"',
-  'Combat Wild Shape':
-    'Section=magic ' +
-    'Note=' +
-      '"Can use Wild Shape as a bonus action/While using Wild Shape, can use a bonus action and spend a spell slot to regain 1d8 hit points per slot level"',
-  'Elemental Wild Shape':
-    'Section=magic Note="Can expend 2 Wild Shape uses to become an elemental"',
-  'Primal Strike':
-    'Section=combat Note="Attacks while using Wild Shape count as magical"',
-  'Thousand Forms':
-    'Section=magic ' +
-    'Note="Can cast <i>Alter Self</i> at will" ' +
-    'Spells="Alter Self"',
+  'Circle Forms':PHB5E.FEATURES['Circle Forms'],
+  'Circle Of The Moon Spells':'Section=feature Note="TODO"',
+  'Improved Circle Forms':'Section=feature Note="TODO"',
+  'Lunar Form':'Section=feature Note="TODO"',
+  'Moonlight Step':'Section=feature Note="TODO"',
+  // Circle Of The Sea
+  'Aquatic Afiinity':'Section=feature Note="TODO"',
+  'Circle Of The Sea Spells':'Section=feature Note="TODO"',
+  'Oceanic Gifts':'Section=feature Note="TODO"',
+  'Stormborn':'Section=feature Note="TODO"',
+  'Wrath Of The Sea':'Section=feature Note="TODO"',
+  // Circle Of The Stars
+  'Cosmic Omen':Tasha.FEATURES['Cosmic Omen'],
+  'Full Of Stars':Tasha.FEATURES['Full Of Stars'],
+  'Star Map':Tasha.FEATURES['Star Map'],
+  'Starry Form':Tasha.FEATURES['Starry Form'],
+  'Twinkling Constellations':Tasha.FEATURES['Twinkling Constellations'],
 
   // Fighter
   // Battle Master
-  'Combat Superiority':
-    'Section=combat ' +
-    'Note="Can use a d%1 Superiority Die to perform one of %2 chosen Maneuvers %V time%{combatNotes.combatSuperiority>1?\'s\':\'\'} per short rest"',
-  "Commander's Strike":
-    'Section=combat ' +
-    'Note="Can use a Superiority Die and forego an attack to gain a bonus action directing an ally to attack; the ally uses a reaction to attack and adds the Superiority Die to its damage"',
-  'Disarming Attack':
-    'Section=combat ' +
-    'Note="Can add a Superiority Die to damage and cause the target to drop an item (save DC %{maneuverSaveDC} Strength negates)"',
-  'Distracting Strike':
-    'Section=combat ' +
-    'Note="Can add a Superiority Die to damage and give advantage to the next ally attack against the same foe before the start of the next turn"',
-  'Evasive Footwork':
-    'Section=combat ' +
-    'Note="Can add a Superiority Die to Armor Class during a move"',
-  'Feinting Attack':
-    'Section=combat ' +
-    'Note="Can use a bonus action to gain advantage on an attack and add a Superiority Die to its damage"',
-  'Goading Attack':
-    'Section=combat ' +
-    'Note="Can add a Superiority Die to damage and inflict disadvantage on the target\'s attacks on others (save DC %{maneuverSaveDC} Wisdom negates) until the end of the next turn"',
-  'Improved Combat Superiority':
-    'Section=combat Note="Superiority Dice increase to d%V"',
-  'Know Your Enemy':
-    'Section=combat Note="Knows how foe compares to self after 1 min study"',
-  'Lunging Attack':
-    'Section=combat ' +
-    'Note="Can add a Superiority Die to damage and gain +5\' melee range"',
-  'Maneuvering Attack':
-    'Section=combat ' +
-    'Note="Can add a Superiority Die to damage and allow an ally to use a reaction to move half its Speed without provoking an opportunity attack from the target"',
-  'Menacing Attack':
-    'Section=combat ' +
-    'Note="Can add a Superiority Die to damage and inflict frightened (save DC %{maneuverSaveDC} Wisdom negates) until the end of the next turn"',
-  'Parry':
-    'Section=combat ' +
-    'Note="Can use a reaction to subtract a Superiority Die + %{dexterityModifier} from a foe\'s melee damage to self"',
-  'Precision Attack':
-    'Section=combat Note="Can add a Superiority Die to an attack"',
-  'Pushing Attack':
-    'Section=combat ' +
-    'Note="Can add a Superiority Die to damage and push the Large or smaller target 15\' (save DC %{maneuverSaveDC} Strength negates)"',
-  'Rally':
-    'Section=combat ' +
-    'Note="Gives the target a Superiority Die + %{charismaModifier} temporary hit points"',
-  'Riposte':
-    'Section=combat ' +
-    'Note="After a foe melee miss, can spend a Superiority Die and use a reaction to attack and add the Superiority Die to its damage"',
-  'Relentless':
-    'Section=combat ' +
-    'Note="Has a minimum of 1 Superiority Die available after initiative"',
-  'Student Of War':
-    'Section=skill ' +
-    'Note="Tool Proficiency (Choose 1 from any Artisan\'s Tools)"',
-  'Sweeping Attack':
-    'Section=combat ' +
-    'Note="After a successful melee attack, can inflict a Superiority Die HP on a second adjacent foe"',
-  'Trip Attack':
-    'Section=combat ' +
-    'Note="Can add a Superiority Die to damage and knock the Large or smaller target prone (save DC %V Strength negates)"',
+  'Combat Superiority':PHB5E.FEATURES['Combat Superiority'],
+  'Improved Combat Superiority':PHB5E.FEATURES['Improved Combat Superiority'],
+  'Know Your Enemy':PHB5E.FEATURES['Know Your Enemy'],
+  'Relentless':PHB5E.FEATURES.Relentless,
+  'Student Of War':PHB5E.FEATURES['Student Of War'],
+  'Ultimate Combat Superiority':'Section=feature Note="TODO"',
   // Eldritch Knight
-  'Arcane Charge':'Section=magic Note="Can teleport 30\' during Action Surge"',
-  'Eldritch Strike':
-    'Section=combat ' +
-    'Note="Successful attack inflicts disadvantage on the first save vs. a self spell before the end of the next turn"',
-  'Improved War Magic':'Section=combat Note="Has increased War Magic effects"',
-  // Spellcasting as above
-  'War Magic': // See Xanathar.js re: a Wizard tradition also named War Magic
-    'Section=combat ' +
-    'Note="Can use a bonus action to make a weapon attack after casting a %{combatNotes.improvedWarMagic?\'spell\':\'cantrip\'}"',
-  'Weapon Bond':
-    'Section=combat ' +
-    'Note="Cannot be disarmed from a bonded weapon and can use a bonus action to summon one"',
+  'Arcane Charge':PHB5E.FEATURES['Arcane Charge'],
+  'Eldritch Strike':PHB5E.FEATURES['Eldritch Strike'],
+  'Improved War Magic':PHB5E.FEATURES['Improved War Magic'],
+  'War Bond':PHB5E.FEATURES['Weapon Bond'],
+  'War Magic':PHB5E.FEATURES['War Magic'],
+  // Spellcasting as SRD5E2024
+  // Psi Warrior
+  'Bulwark Of Force':Tasha.FEATURES['Bulwark Of Force'],
+  'Guarded Mind':Tasha.FEATURES['Guarded Mind'],
+  'Psionic Power':Tasha.FEATURES['Psionic Power'],
+  'Telekinetic Adept':Tasha.FEATURES['Telekinetic Adept'],
+  'Telekinetic Master':Tasha.FEATURES['Telekinetic Master'],
 
   // Monk
+  // Way Of Mercy
+  'Flurry Of Healing And Harm':Tasha.FEATURES['Flurry Of Healing And Harm'],
+  'Hand Of Harm':Tasha.FEATURES['Hand Of Harm'],
+  'Hand Of Healing':Tasha.FEATURES['Hand Of Healing'],
+  'Hand Of Ultimate Mercy':Tasha.FEATURES['Hand Of Ultimate Mercy'],
+  'Implements Of Mercy':Tasha.FEATURES['Implements Of Mercy'],
+  "Physician's Touch":Tasha.FEATURES["Physician's Touch"],
   // Way Of Shadow
-  'Cloak Of Shadows (Way Of Shadow)':
-    'Section=magic ' +
-    'Note="Can use an action to become invisible in dim and dark areas; attacking or casting ends"',
-  'Opportunist':
-    'Section=combat ' +
-    'Note="Can use a reaction to attack an adjacent foe when it is hit by another creature"',
-  'Shadow Arts':
-    'Section=magic ' +
-    'Note="Knows the <i>Minor Illusion</i> cantrip and can spend 2 ki points to cast <i>Darkness</i>, <i>Darkvision</i>, <i>Pass Without Trace</i>, or <i>Silence</i>" ' +
-    'Spells="Minor Illusion",Darkness,Darkvision,"Pass Without Trace",Silence',
-  'Shadow Step':
-    'Section=magic ' +
-    'Note="Can use a bonus action to teleport 60\' between dim or dark areas and gain advantage on the first melee attack during that turn"',
-  // Way Of The Four Elements
-  'Breath Of Winter':
-    'Section=magic ' +
-    'Note="Can spend 6 ki points to cast <i>Cone Of Cold</i>" ' +
-    'Spells="Cone Of Cold"',
-  'Clench Of The North Wind':
-    'Section=magic ' +
-    'Note="Can spend 3 ki points to cast <i>Hold Person</i>" ' +
-    'Spells="Hold Person"',
-  'Disciple Of The Elements':
-    'Section=magic,magic ' +
-    'Note=' +
-      '"Knows the Elemental Attunement discipline and can select %V others",' +
-      '"Can spend up to %{(levels.Monk+7)//4} ki points to cast an elemental discipline spell, increasing its level by 1 for each ki point above the minimum required"',
-  'Elemental Attunement':
-    'Section=magic ' +
-    // errata specifies 30' range
-    'Note="R30\' Can create a harmless instantaneous elemental effect, light or snuff a small flame, chill or warm a 1 lb object for 1 hr, or shape a 1\' cube of earth, fire, water, or mist for 1 min"',
-  'Eternal Mountain Defense':
-    'Section=magic ' +
-    'Note="Can spend 5 ki points to cast <i>Stoneskin</i> on self" ' +
-    'Spells=Stoneskin',
-  'Fangs Of The Fire Snake':
-    'Section=magic ' +
-    'Note="Can spend 1 ki point to make a +10\' unarmed attack, inflicting fire damage, and 1 additional ki point to inflict +1d10 HP fire"',
-  'Fist Of Four Thunders':
-    'Section=magic ' +
-    'Note="Can spend 2 ki points to cast <i>Thunderwave</i>" ' +
-    'Spells=Thunderwave',
-  'Fist Of Unbroken Air':
-    'Section=magic ' +
-    'Note="R30\' Can spend 2 ki points to inflict 3d10 HP bludgeoning, a 20\' push, and knocked prone (save DC %{monkSaveDC} Strength half HP only); spending additional ki points inflicts +1d10 HP per point"',
-  'Flames Of The Phoenix':
-    'Section=magic ' +
-    'Note="Can spend 4 ki points to cast <i>Fireball</i>" ' +
-    'Spells=Fireball',
-  'Gong Of The Summit':
-    'Section=magic ' +
-    'Note="Can spend 3 ki points to cast <i>Shatter</i>" ' +
-    'Spells=Shatter',
-  'Mist Stance':
-    'Section=magic ' +
-    'Note="Can spend 4 ki points to cast <i>Gaseous Form</i> on self" ' +
-    'Spells="Gaseous Form"',
-  'Ride The Wind':
-    'Section=magic ' +
-    'Note="Can spend 4 ki points to cast <i>Fly</i> on self" ' +
-    'Spells=Fly',
-  'River Of Hungry Flame':
-    'Section=magic ' +
-    'Note="Can spend 5 ki points to cast <i>Wall Of Fire</i>" ' +
-    'Spells="Wall Of Fire"',
-  'Rush Of The Gale Spirits':
-    'Section=magic ' +
-    'Note="Can spend 2 ki points to cast <i>Gust Of Wind</i>" ' +
-    'Spells="Gust Of Wind"',
-  'Shape The Flowing River':
-    'Section=magic ' +
-    'Note="R120\' Can spend 1 ki point to freeze, thaw, and shape a 30\' cube of water"',
-  'Sweeping Cinder Strike':
-    'Section=magic ' +
-    'Note="Can spend 2 ki points to cast <i>Burning Hands</i>" ' +
-    'Spells="Burning Hands"',
-  'Water Whip':
-    'Section=magic ' +
-    'Note="R30\' Can spend 2 ki points to inflict 3d10 HP bludgeoning and a 25\' pull or knocked prone (save DC %{monkSaveDC} Strength half HP only); spending additional ki points inflicts +1d10 HP per point"',
-  'Wave Of Rolling Earth':
-    'Section=magic ' +
-    'Note="Can spend 6 ki points to cast <i>Wall Of Stone</i>" ' +
-    'Spells="Wall Of Stone"',
+  'Cloak Of Shadows':PHB5E.FEATURES['Cloak Of Shadows (Way Of Shadow)'],
+  'Improved Shadow Step':'Section=feature Note="TODO"',
+  'Shadow Arts':PHB5E.FEATURES['Shadow Arts'],
+  'Shadow Step':PHB5E.FEATURES['Shadow Step'],
+  // Way Of The Elements
+  'Elemental Attunement':PHB5E.FEATURES['Elemental Attunement'],
+  'Elemental Burst':'Section=feature Note="TODO"',
+  'Elemental Epitome':'Section=feature Note="TODO"',
+  'Manipulate Elements':'Section=feature Note="TODO"',
+  'Stride Of The Elements':'Section=feature Note="TODO"',
 
   // Paladin
   // Oath Of The Ancients
@@ -1287,7 +1201,7 @@ PHB5E2024.SPECIES_ADDED = {
     'Speed=30 ' +
     'Features=' +
       '"1:Celestial Resistance","1:Darkvision","1:Healing Hands",' +
-      '"1:Light Bearer","1:Celestial Revelation"'
+      '"1:Light Bearer","5:Celestial Revelation"'
 };
 PHB5E2024.SPECIES = Object.assign({}, SRD5E.SPECIES, PHB5E2024.SPECIES_ADDED);
 PHB5E2024.SCHOOLS = Object.assign({}, SRD5E.SCHOOLS);
@@ -1296,7 +1210,8 @@ PHB5E2024.SKILLS = Object.assign({}, SRD5E.SKILLS);
 PHB5E2024.SPELLS_ADDED = {
   // TODO
   "Crusader's Mantle":PHB5E.SPELLS_ADDED["Crusader's Mantle"],
-  'Ensnaring Strike':PHB5E.SPELLS_ADDED['Ensnaring Strike']
+  'Ensnaring Strike':PHB5E.SPELLS_ADDED['Ensnaring Strike'],
+  'Steel Wind Strike':Xanathar.SPELLS['Steel Wind Strike']
 };
 PHB5E2024.SPELLS_LEVELS_ADDED = {
   // TODO
