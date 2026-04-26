@@ -17,7 +17,7 @@ Place, Suite 330, Boston, MA 02111-1307 USA.
 
 /* jshint esversion: 6 */
 /* jshint forin: false */
-/* globals Quilvyn, QuilvynRules, QuilvynUtils, SRD5E, Tasha, Volo, Xanathar */
+/* globals Quilvyn, QuilvynRules, PHB5E, SRD5E2024, Tasha, Xanathar */
 "use strict";
 
 /*
@@ -31,8 +31,8 @@ Place, Suite 330, Boston, MA 02111-1307 USA.
  */
 function PHB5E2024() {
 
-  if(window.SRD5E == null) {
-    alert('The PHB5E2024 module requires use of the SRD5E module');
+  if(window.PHB5E == null || window.SRD5E2024 == null || window.Tasha == null || window.Xanathar == null) {
+    alert('The PHB5E2024 module requires use of the SRD5E2024, PHB5E, Tasha, and Xanathar modules');
     return;
   }
 
@@ -40,20 +40,20 @@ function PHB5E2024() {
   PHB5E2024.rules = rules;
   rules.plugin = PHB5E2024;
 
-  rules.defineChoice('choices', SRD5E.CHOICES);
-  rules.choiceEditorElements = SRD5E.choiceEditorElements;
+  rules.defineChoice('choices', SRD5E2024.CHOICES);
+  rules.choiceEditorElements = SRD5E2024.choiceEditorElements;
   rules.choiceRules = PHB5E2024.choiceRules;
-  rules.removeChoice = SRD5E.removeChoice;
-  rules.editorElements = SRD5E.initialEditorElements();
-  rules.getFormats = SRD5E.getFormats;
+  rules.removeChoice = SRD5E2024.removeChoice;
+  rules.editorElements = SRD5E2024.initialEditorElements();
+  rules.getFormats = SRD5E2024.getFormats;
   rules.getPlugins = PHB5E2024.getPlugins;
-  rules.makeValid = SRD5E.makeValid;
-  rules.randomizeOneAttribute = SRD5E.randomizeOneAttribute;
-  rules.defineChoice('random', SRD5E.RANDOMIZABLE_ATTRIBUTES);
-  rules.getChoices = SRD5E.getChoices;
+  rules.makeValid = SRD5E2024.makeValid;
+  rules.randomizeOneAttribute = SRD5E2024.randomizeOneAttribute;
+  rules.defineChoice('random', SRD5E2024.RANDOMIZABLE_ATTRIBUTES);
+  rules.getChoices = SRD5E2024.getChoices;
   rules.ruleNotes = PHB5E2024.ruleNotes;
 
-  SRD5E.createViewers(rules, SRD5E.VIEWERS);
+  SRD5E2024.createViewers(rules, SRD5E2024.VIEWERS);
   rules.defineChoice('extras',
     'feats', 'featCount', 'sanityNotes', 'selectableFeatureCount',
     'validationNotes'
@@ -62,15 +62,15 @@ function PHB5E2024() {
     'background:Background,select-one,backgrounds',
     'species:Species,select-one,species', 'levels:Class Levels,bag,levels');
 
-  SRD5E.abilityRules(rules, SRD5E.ABILITIES);
-  SRD5E.combatRules
+  SRD5E2024.abilityRules(rules, SRD5E2024.ABILITIES);
+  SRD5E2024.combatRules
     (rules, PHB5E2024.ARMORS, PHB5E2024.SHIELDS, PHB5E2024.WEAPONS);
-  SRD5E.magicRules(rules, PHB5E2024.SCHOOLS, PHB5E2024.SPELLS);
-  SRD5E.identityRules(
+  SRD5E2024.magicRules(rules, PHB5E2024.SCHOOLS, PHB5E2024.SPELLS);
+  SRD5E2024.identityRules(
     rules, PHB5E2024.ALIGNMENTS, PHB5E2024.BACKGROUNDS, PHB5E2024.CLASSES,
     PHB5E2024.DEITIES, PHB5E2024.PATHS, PHB5E2024.SPECIES
   );
-  SRD5E.talentRules
+  SRD5E2024.talentRules
     (rules, PHB5E2024.FEATS, PHB5E2024.FEATURES, PHB5E2024.GOODIES,
      PHB5E2024.LANGUAGES, PHB5E2024.SKILLS, PHB5E2024.TOOLS);
 
@@ -80,8 +80,8 @@ function PHB5E2024() {
 
 PHB5E2024.VERSION = '2.4.1.0';
 
-PHB5E2024.ALIGNMENTS = Object.assign({}, SRD5E.ALIGNMENTS);
-PHB5E2024.ARMORS = Object.assign({}, SRD5E.ARMORS);
+PHB5E2024.ALIGNMENTS = Object.assign({}, SRD5E2024.ALIGNMENTS);
+PHB5E2024.ARMORS = Object.assign({}, SRD5E2024.ARMORS);
 PHB5E2024.BACKGROUNDS_ADDED = {
   'Artisan':
     'Equipment=' +
@@ -180,7 +180,7 @@ PHB5E2024.BACKGROUNDS_ADDED = {
       '"1:Lucky"'
 };
 PHB5E2024.BACKGROUNDS =
-  Object.assign({}, SRD5E.BACKGROUNDS, PHB5E2024.BACKGROUNDS_ADDED);
+  Object.assign({}, SRD5E2024.BACKGROUNDS, PHB5E2024.BACKGROUNDS_ADDED);
 PHB5E2024.CLASSES_FEATURES_ADDED = {
   'Barbarian':
     '"features.Path Of The Wild Heart ? 3:Animal Speaker",' +
@@ -344,7 +344,7 @@ PHB5E2024.CLASSES_FEATURES_ADDED = {
     '"features.Wild Magic ? 14:Controlled Chaos",' +
     '"features.Wild Magic ? 18:Tamed Surge"',
   'Warlock':
-    '"features.Archfey Patron ? 3:Achefey Spells",' +
+    '"features.Archfey Patron ? 3:Archfey Spells",' +
     '"features.Archfey Patron ? 3:Steps Of The Fey",' +
     '"features.Archfey Patron ? 6:Misty Escape",' +
     '"features.Archfey Patron ? 10:Beguiling Defenses",' +
@@ -428,14 +428,14 @@ PHB5E2024.CLASSES_SELECTABLES_ADDED = {
     '"3:Diviner:Wizard Subclass",' +
     '"3:Illusionist:Wizard Subclass"'
 };
-PHB5E2024.CLASSES = Object.assign({}, SRD5E.CLASSES);
+PHB5E2024.CLASSES = Object.assign({}, SRD5E2024.CLASSES);
 for(let c in PHB5E2024.CLASSES_FEATURES_ADDED)
   PHB5E2024.CLASSES[c] =
     PHB5E2024.CLASSES[c].replace('Features=', 'Features=' + PHB5E2024.CLASSES_FEATURES_ADDED[c] + ',');
 for(let c in PHB5E2024.CLASSES_SELECTABLES_ADDED)
   PHB5E2024.CLASSES[c] =
     PHB5E2024.CLASSES[c].replace('Selectables=', 'Selectables=' + PHB5E2024.CLASSES_SELECTABLES_ADDED[c] + ',');
-PHB5E2024.DEITIES = Object.assign({}, SRD5E.DEITIES);
+PHB5E2024.DEITIES = Object.assign({}, SRD5E2024.DEITIES);
 PHB5E2024.FEATS_ADDED = {
 
   'Crafter':'Category=Origin',
@@ -523,7 +523,7 @@ PHB5E2024.FEATS_ADDED = {
   'Slasher':'Category=General Require="level >= 4"',
   'Speedy':
     'Category=General ' +
-    'Require="level >= 4","dexerity > 13 || constitution >= 13"',
+    'Require="level >= 4","dexterity > 13 || constitution >= 13"',
   'Spell Sniper':PHB5E.FEATS['Spell Sniper'] + ' ' +
     'Category=General ' +
     'Require="level >= 4","features.Spellcasting || features.Pact Magic"',
@@ -552,7 +552,7 @@ PHB5E2024.FEATS_ADDED = {
   'Boon Of Speed':'Category="Epic Boon" Require="level >= 19"'
 
 };
-PHB5E2024.FEATS = Object.assign({}, SRD5E.FEATS, PHB5E2024.FEATS_ADDED);
+PHB5E2024.FEATS = Object.assign({}, SRD5E2024.FEATS, PHB5E2024.FEATS_ADDED);
 PHB5E2024.FEATURES_ADDED = {
 
   // Species
@@ -662,7 +662,7 @@ PHB5E2024.FEATURES_ADDED = {
   'Lunar Form':'Section=feature Note="TODO"',
   'Moonlight Step':'Section=feature Note="TODO"',
   // Circle Of The Sea
-  'Aquatic Afiinity':'Section=feature Note="TODO"',
+  'Aquatic Affinity':'Section=feature Note="TODO"',
   'Circle Of The Sea Spells':'Section=feature Note="TODO"',
   'Oceanic Gifts':'Section=feature Note="TODO"',
   'Stormborn':'Section=feature Note="TODO"',
@@ -717,286 +717,129 @@ PHB5E2024.FEATURES_ADDED = {
   'Stride Of The Elements':'Section=feature Note="TODO"',
 
   // Paladin
+  // Oath Of Glory
+  'Aura Of Alacrity':Tasha.FEATURES['Aura Of Alacrity'],
+  'Glorious Defense':Tasha.FEATURES['Glorious Defense'],
+  'Inspiring Smite':Tasha.FEATURES['Inspiring Smite'],
+  'Living Legend':Tasha.FEATURES['Living Legend'],
+  'Oath Of Glory Spells':Tasha.FEATURES['Oath Of Glory'],
+  'Peerless Athlete':Tasha.FEATURES['Peerless Athlete'],
   // Oath Of The Ancients
-  'Aura Of Warding':
-    'Section=save ' +
-    'Note="R%{levels.Paladin<18?10:30}\' Self and allies have resistance to spell damage"',
-  'Elder Champion':
-    'Section=magic ' +
-    'Note="Can regain 10 hit points per rd, cast Paladin spells as a bonus action, and inflict disadvantage on saves vs. self spells on foes within 10\' for 1 min once per long rest"',
-  "Nature's Wrath":
-    'Section=magic ' +
-    'Note="R10\' Can use Channel Divinity to create spectral vines that restrain the target (save DC %{spellDifficultyClass.P} Dexterity or Strength ends)"',
-  'Oath Of The Ancients Spells':PHB5E.FEATURES_ADDED['Oath Of The Ancients'],
-  'Turn The Faithless':
-    'Section=combat ' +
-    'Note="R30\' Can use Channel Divinity to make fiends and fey flee (save DC %{spellDifficultyClass.P} Wisdom negates) for 1 min"',
-  'Undying Sentinel':
-    'Section=combat,feature,save ' +
-    'Note=' +
-      '"Can retain 1 hit point when brought to 0 hit points once per long rest",' +
-      '"Suffers no debility from aging",' +
-      '"Has immunity to magical aging"',
+  'Aura Of Warding':PHB5E.FEATURES['Aura Of Warding'],
+  'Elder Champion':PHB5E.FEATURES['Elder Champion'],
+  "Nature's Wrath":PHB5E.FEATURES["Nature's Wrath"],
+  'Oath Of The Ancients Spells':PHB5E.FEATURES['Oath Of The Ancients'],
+  'Undying Sentinel':PHB5E.FEATURES['Undying Sentinel'],
   // Oath Of Vengeance
-  'Abjure Enemy':
-    'Section=magic ' +
-    'Note="R60\' Can use Channel Divinity to halt a target (save DC %{spellDifficultyClass.P} Wisdom inflicts half speed; fiends and undead have disadvantage on the save) for 1 min"',
-  'Avenging Angel':
-    'Section=ability,combat ' +
-    'Note=' +
-      '"Can gain a 60\' fly speed for 1 hr once per long rest",' +
-      '"Can gain a 30\' aura that frightens foes (save DC %{spellDifficultyClass.P} Wisdom negates; damage ends), giving advantage on ally attacks, for 1 hr once per long rest"',
-  'Oath Of Vengeance':
-    'Spells=' +
-      '"3:Bane","3:Hunter\'s Mark",' +
-      '"5:Hold Person","5:Misty Step",' +
-      '"9:Haste","9:Protection From Energy",' +
-      '"13:Banishment","13:Dimension Door",' +
-      '"17:Hold Monster",17:Scrying',
-  'Relentless Avenger':
-    'Section=combat ' +
-    'Note="Can move %{speed//2}\' after a successful opportunity attack without provoking opportunity attacks"',
-  'Soul Of Vengeance':
-    'Section=combat ' +
-    'Note="Can use a reaction when a Vow Of Enmity target attacks to make a melee attack on the target"',
-  'Vow Of Enmity':
-    'Section=combat ' +
-    'Note="R10\' Can use Channel Divinity and a bonus action to give self advantage on attacks against a target for 1 min"',
+  'Avenging Angel':PHB5E.FEATURES['Avenging Angel'],
+  'Oath Of Vengeance Spells':PHB5E.FEATURES['Oath Of Vengeance'],
+  'Relentless Avenger':PHB5E.FEATURES['Relentless Avenger'],
+  'Soul Of Vengeance':PHB5E.FEATURES['Soul Of Vengeance'],
+  'Vow Of Enmity':PHB5E.FEATURES['Vow Of Enmity'],
 
   // Ranger
   // Beast Master
-  'Bestial Fury':'Section=combat Note="Companion can make 2 attacks per rd"',
-  'Exceptional Training':
-    'Section=combat ' +
-    // errata removes Dodge and adds magical attacks
-    'Note="Can use a bonus action to command companion to Dash, Disengage, or Help instead of Attack/Companion attacks count as magical"',
-  "Ranger's Companion":
-    'Section=combat ' +
-    'Note="Companion beast of up to CR 1/4, with the higher of %{levels.Ranger*4} or its maximum normal hit points, obeys commands and gains +%{proficiencyBonus} Armor Class, attack, damage, and proficient skills and saving throws"',
-  'Share Spells':
-    'Section=magic ' +
-    'Note="R30\' Can have spells cast on self also affect companion"',
+  'Bestial Fury':PHB5E.FEATURES['Bestial Fury'],
+  'Exceptional Training':PHB5E.FEATURES['Exceptional Training'],
+  'Primal Companion':PHB5E.FEATURES["Ranger's Companion"],
+  'Share Spells':PHB5E.FEATURES['Share Spells'],
+  // Fey Wanderer
+  'Beguiling Twist':Tasha.FEATURES['Beguiling Twist'],
+  'Dreadful Strikes':Tasha.FEATURES['Dreadful Strikes'],
+  'Fey Reinforcements':Tasha.FEATURES['Fey Reinforcements'],
+  'Fey Wanderer Spells':Tasha.FEATURES['Fey Wanderer Magic'],
+  'Misty Wanderer':Tasha.FEATURES['Misty Wanderer'],
+  'Otherworldly Glamour':Tasha.FEATURES['Otherworldly Glamour'],
+  // Gloom Stalker
+  'Dread Ambusher':Xanathar.FEATURES['Dread Ambusher'],
+  'Gloom Stalker Spells':Xanathar.FEATURES['Gloom Stalker Magic'],
+  'Iron Mind':Xanathar.FEATURES['Iron Mind'],
+  'Shadowy Dodge':Xanathar.FEATURES['Shadowy Dodge'],
+  "Stalker's Flurry":Xanathar.FEATURES["Stalker's Flurry"],
+  'Umbral Sight':Xanathar.FEATURES['Umbral Sight'],
 
   // Rogue
-  // Assassin
-  'Assassinate':
-    'Section=combat ' +
-    'Note="Has advantage on attacks before the target\'s first turn/Successful surprise attacks are critical hits"',
-  'Bonus Proficiencies (Assassin)':
-    'Section=skill Note="Tool Proficiency (Disguise Kit; Poisoner\'s Kit)"',
-  'Death Strike':
-    'Section=combat ' +
-    'Note="Inflicts double damage on a successful surprise attack (save DC %{8+dexterityModifier+proficiencyBonus} Constitution negates)"',
-  'Impostor':
-    'Section=skill ' +
-    'Note="Can use unerring mimicry and has advantage on Deception to overcome suspicion"',
-  'Infiltration Expertise':
-    'Section=skill ' +
-    'Note="Can use a 1-week process to create and adopt a different identity"',
   // Arcane Trickster
-  'Mage Hand Legerdemain':
-    'Section=magic ' +
-    'Note="Can use an invisible <i>Mage Hand</i> to stow and retrieve objects, pick locks, and disarm traps" ' +
-    'Spells="Mage Hand"',
-  'Magical Ambush':
-    'Section=magic ' +
-    'Note="Casting a spell from hiding inflicts disadvantage on the target\'s initial save"',
-  'Spell Thief':
-    'Section=magic ' +
-    'Note="Can negate the effects of a spell cast on self and use spell slots to cast the same spell for 8 hr (save DC %{8+intelligenceModifier+proficiencyBonus} negates) once per long rest"',
-  // Spellcasting as above
-  'Versatile Trickster':
-    'Section=magic ' +
-    'Note="Can use a bonus action to direct <i>Mage Hand</i> to distract a target within 5\', gaining advantage on attacks vs. it until the end of the turn"',
+  'Mage Hand Legerdemain':PHB5E.FEATURES['Mage Hand Legerdemain'],
+  'Magical Ambush':PHB5E.FEATURES['Magical Ambush'],
+  'Spell Thief':PHB5E.FEATURES['Spell Thief'],
+  // Spellcasting as PHB5E2024
+  'Versatile Trickster':PHB5E.FEATURES['Versatile Trickster'],
+  // Assassin
+  "Assassin's Tools":'Section=feature Note="TODO"',
+  'Assassinate':PHB5E.FEATURES.Assassinate,
+  'Death Strike':PHB5E.FEATURES['Death Strike'],
+  'Envenom Weapons':'Section=feature Note="TODO"',
+  'Infiltration Expertise':PHB5E.FEATURES['Infiltration Expertise'],
+  // Soulknife
+  // Psionic Power as above
+  'Psychic Blades':Tasha.FEATURES['Psychic Blades'],
+  'Psychic Veil':Tasha.FEATURES['Psychic Veil'],
+  'Rend Mind':Tasha.FEATURES['Rend Mind'],
+  'Soul Blades':Tasha.FEATURES['Soul Blades'],
 
   // Sorcerer
+  // Aberrant Sorcery
+  'Psychic Defenses':Tasha.FEATURES['Psychic Defenses'],
+  'Psionic Sorcery':Tasha.FEATURES['Psionic Sorcery'],
+  'Psionic Spells':Tasha.FEATURES['Psionic Spells'],
+  'Revelation In Flesh':Tasha.FEATURES['Revelation In Flesh'],
+  'Telepathic Speech':Tasha.FEATURES['Telepathic Speech'],
+  'Warping Implosion':Tasha.FEATURES['Warping Implosion'],
+  // Clockwork Sorcery
+  'Bastion Of Law':Tasha.FEATURES['Bastion Of Law'],
+  'Clockwork Cavalcade':Tasha.FEATURES['Clockwork Cavalcade'],
+  'Clockwork Spells':Tasha.FEATURES['Clockwork Magic'],
+  'Restore Balance':Tasha.FEATURES['Restore Balance'],
+  'Trance Of Order':Tasha.FEATURES['Trance Of Order'],
   // Wild Magic
-  'Bend Luck':
-    'Section=magic ' +
-    'Note="Can spend 2 Sorcery Points to add or subtract 1d4 from a target attack, ability check, or save"',
-  'Controlled Chaos':
-    'Section=magic ' +
-    'Note="Can choose from 2 effects when triggering a Wild Magic Surge"',
-  'Spell Bombardment':
-    'Section=magic ' +
-    'Note="Can add another die after rolling the maximum on a spell damage die once per turn"',
-  'Tides Of Chaos':
-    'Section=combat ' +
-    'Note="Can gain advantage on an attack, ability check, or save once per long rest or Wild Magic Surge"',
-  'Wild Magic Surge':
-    'Section=magic ' +
-    'Note="Casting a spell has a 5% chance of unleashing a random magic effect"',
+  'Bend Luck':PHB5E.FEATURES['Bend Luck'],
+  'Controlled Chaos':PHB5E.FEATURES['Controlled Chaos'],
+  'Tamed Surge':'Section=feature Note="TODO"',
+  'Tides Of Chaos':PHB5E.FEATURES['Tides Of Chaos'],
+  'Wild Magic Surge':PHB5E.FEATURES['Wild Magic Surge'],
 
   // Warlock
-  // The Archfey
-  'Beguiling Defenses':
-    'Section=save ' +
-    'Note="Has immunity to charm and can reflect charm spells onto the caster (save DC %{spellDifficultyClass.K} Wisdom negates) for 1 min or until the caster takes damage"',
-  'Dark Delirium':
-    'Section=magic ' +
-    'Note="R60\' Inflicts charmed or frightened and unaware of surroundings (save DC %{spellDifficultyClass.K} Wisdom negates) for concentration up to 1 min once per short rest"',
-  'Fey Presence':
-    'Section=magic ' +
-    'Note="Can inflict a choice of charmed or frightened (save DC %{spellDifficultyClass.K} Wisdom negates) until the end of the next turn on all creatures in a 10\' cube once per short rest"',
-  'Misty Escape':
-    'Section=magic ' +
-    'Note="Can use a reaction upon taking damage to teleport 60\' and become invisible until the start of the next turn once per short rest; attacking or casting ends"',
-  // The Great Old One
-  'Awakened Mind':'Section=skill Note="R30\' Can communicate telepathically"',
-  'Create Thrall':
-    'Section=magic ' +
-    'Note="Touch charms an incapacitated humanoid and allows telepathic communication with it"',
-  'Entropic Ward':
-    'Section=combat ' +
-    'Note="Can use a reaction to inflict disadvantage on an attacker once per short rest; a miss gives self advantage on the first attack on that foe until the end of the next turn"',
-  'Thought Shield':
-    'Section=save ' +
-    'Note="Has immunity to telepathy and resistance to psychic damage, and taking psychic damage inflicts equal damage on the attacker"',
+  // Archfey Patron
+  'Archfey Spells':'Section=feature Note="TODO"',
+  'Bewitching Magic':'Section=feature Note="TODO"',
+  'Beguiling Defenses':PHB5E.FEATURES['Beguiling Defenses'],
+  'Misty Escape':PHB5E.FEATURES['Misty Escape'],
+  'Steps Of The Fey':'Section=feature Note="TODO"',
+  // Celestial Patron
+  'Celestial Resilience':Xanathar.FEATURES['Celestial Resilience'],
+  'Celestial Spells':'Section=feature Note="TODO"',
+  'Healing Light':Xanathar.FEATURES['Healing Light'],
+  'Radiant Soul':Xanathar.FEATURES['Radiant Soul'],
+  'Searing Vengeance':Xanathar.FEATURES['Searing Vengeance'],
+  // Great Old One Patron
+  'Awakened Mind':PHB5E.FEATURES['Awakened Mind'],
+  'Clairvoyant Combatant':'Section=feature Note="TODO"',
+  'Create Thrall':PHB5E.FEATURES['Create Thrall'],
+  'Eldritch Hex':'Section=feature Note="TODO"',
+  'Great Old One Spells':'Section=feature Note="TODO"',
+  'Psychic Spells':'Section=feature Note="TODO"',
+  'Thought Shield':PHB5E.FEATURES['Thought Shield'],
 
   // Wizard
-  // School Of Abjuration
-  'Abjuration Savant':
-    'Section=magic ' +
-    'Note="Requires half the normal time and cost to copy abjuration spells into spellbook"',
-  'Arcane Ward':
-    'Section=magic ' +
-    'Note="After a long rest, can cause an abjuration spell to create a ward around self that can absorb %{levels.Wizard*2+intelligenceModifier} HP damage; once these are all used, casting another abjuration spell restores 2x the spell level to the ward"',
-  'Improved Abjuration':
-    'Section=magic Note="+%{proficiencyBonus} abjuration spell ability checks"',
-  'Projected Ward':
-    'Section=magic Note="R30\' Can use Arcane Ward to absorb damage to others"',
-  'Spell Resistance':
-    'Section=save ' +
-    'Note="Has advantage vs. spells and resistance to spell damage"',
-  // School Of Conjuration
-  'Benign Transposition':
-    'Section=magic ' +
-    'Note="R30\' Can teleport self or swap with a willing creature once per long rest or conjuration spell casting"',
-  'Conjuration Savant':
-    'Section=magic ' +
-    'Note="Requires half the normal time and cost to copy conjuration spells into spellbook"',
-  'Durable Summons':
-    'Section=magic Note="Summoned creatures gain 30 temporary HP"',
-  'Focused Conjuration':
-    'Section=magic Note="Damage cannot break conjuration concentration"',
-  'Minor Conjuration':
-    'Section=magic ' +
-    // errata adds end upon dealing damage
-    'Note="R10\' Can create a 3\' cube inanimate object weighing up to 10 lb that emits a 5\' dim light and lasts for 1 hr or until it takes or deals damage"',
-  // School Of Divination
-  'Divination Savant':
-    'Section=magic ' +
-    'Note="Requires half the normal time and cost to copy divination spells into spellbook"',
-  'Expert Divination':
-    'Section=magic ' +
-    'Note="Casting a divination spell restores a lower-level expended slot of up to level 5"',
-  'Greater Portent':
-    'Section=magic Note="Can use Portent 3 times per long rest"',
-  'Portent':
-    'Section=magic ' +
-    'Note="Can replace a visible target\'s attack, ability check, or save with one of two pre-rolled values %{magicNotes.greaterPortent?3:2} times per long rest"',
-  'The Third Eye':
-    'Section=magic ' +
-    'Note="Can use an action once per short rest to gain 60\' darkvision, 60\' ethereal sight, the ability to read any language, or 10\' invisibility sight until the next rest"',
-  // School Of Enchantment
-  'Alter Memories':
-    'Section=magic ' +
-    'Note="Chosen target becomes unaware of self charm; can also cause it to forget up to %{charismaModifier+1>?1} hr of the time spent charmed (save DC %{spellDifficultyClass.W} Intelligence negates)"',
-  'Enchantment Savant':
-    'Section=magic ' +
-    'Note="Requires half the normal time and cost to copy enchantment spells into spellbook"',
-  'Hypnotic Gaze':
-    'Section=magic ' +
-    'Note="Can daze an adjacent creature (save DC %{spellDifficultyClass.W} Wisdom negates) while maintained once per target per long rest"',
-  'Instinctive Charm':
-    'Section=magic ' +
-    'Note="R30\' Can use a reaction to redirect an attack on self to another (save DC %{spellDifficultyClass.W} Wisdom negates until a long rest)"',
-  'Split Enchantment':
-    'Section=magic Note="Can add a second target to an enchantment spell"',
-  // School Of Illusion
-  'Illusion Savant':
-    'Section=magic ' +
-    'Note="Requires half the normal time and cost to copy illusion spells into spellbook"',
-  'Illusory Reality':
-    'Section=magic ' +
-    'Note="Can use a bonus action to make a harmless object in a self illusion real for 1 min"',
-  'Illusory Self':
-    'Section=magic ' +
-    'Note="Can use a reaction to cause an attack on self to miss once per short rest"',
-  'Improved Minor Illusion':
-    'Section=magic ' +
-    'Note="Knows the <i>Minor Illusion</i> cantrip; effects can include both a sound and an image" ' +
-    'Spells="Minor Illusion"',
-  'Malleable Illusions':
-    'Section=magic Note="Can modify self illusions throughout their durations"',
-  // School Of Necromancy
-  'Command Undead':
-    'Section=magic ' +
-    'Note="R60\' Can use an action to control an undead target (save DC %{spellDifficultyClass.W} Charisma negates permanently; targets with Intelligence of at least 8 have advantage on the save, and targets with Intelligence of at least 12 repeat the save every hr)"',
-  'Grim Harvest':
-    'Section=magic ' +
-    'Note="Regains hit points equal to twice the spell level, or 3x for necromantic spells, when a self spell kills"',
-  'Inured To Undeath':
-    'Section=save ' +
-    'Note="Has resistance to necrotic damage and immunity to maximum hit point reduction"',
-  'Necromancy Savant':
-    'Section=magic ' +
-    'Note="Requires half the normal time and cost to copy necromancy spells into spellbook"',
-  'Undead Thralls':
-    'Section=magic ' +
-    'Note="Knows the <i>Animate Dead</i> spell; casting it animates an additional corpse and gives corpses +%{levels.Wizard} hit points and +%{proficiencyBonus} HP weapon damage" ' +
-    'Spells="Animate Dead"',
-  // School Of Transmutation
-  'Master Transmuter':
-    'Section=magic ' +
-    'Note="Can destroy a transmuter\'s stone to transmute a 5\' cube, remove curses, diseases, and poisons, cast <i>Raise Dead</i>, or restore youth" ' +
-    'Spells="Raise Dead"',
-  'Minor Alchemy':
-    'Section=magic ' +
-    'Note="Can change the substance of 1 cubic foot of matter per 10 min effort for concentration up to 1 hr"',
-  'Shapechanger':
-    'Section=magic ' +
-    'Note="Knows the <i>Polymorph</i> spell; can transform self into a CR 1 creature once per short rest" ' +
-    'Spells=Polymorph',
-  'Transmutation Savant':
-    'Section=magic ' +
-    'Note="Requires half the normal time and cost to copy transmutation spells into spellbook"',
-  "Transmuter's Stone":
-    'Section=magic ' +
-    'Note="Can use an 8-hr process to create a stone that gives a choice of 60\' darkvision, +10\' Speed, proficiency on Constitution saves, or resistance to a chosen energy damage, and can change the effect of a possessed stone when casting a transmutation spell"',
-
-  // Backgrounds
-  'By Popular Demand':
-    'Section=skill ' +
-    'Note="Can receive welcome and lodging in exchange for performing"',
-  'City Secrets':
-    'Section=ability ' +
-    'Note="Can travel and lead others through a city at twice normal speed"',
-  'Criminal Contact':
-    'Section=feature ' +
-    'Note="Knows how to contact a liaison to criminal networks"',
-  'Discovery':'Section=feature Note="Knows a unique and powerful truth"',
-  'False Identity':
-    'Section=skill ' +
-    'Note="Has a documented second identity and can forge familiar documents"',
-  'Guild Membership':
-    'Section=feature ' +
-    'Note="Can receive assistance from fellow guild members/Must pay a 5 gp monthly guild fee"',
-  'Military Rank':
-    'Section=feature ' +
-    'Note="Receives respect, deference, and the loan of resources from fellow soldiers"',
-  'Position Of Privilege':
-    'Section=feature ' +
-    'Note="Receives welcome from the upper class and deference from commoners"',
-  'Researcher':'Section=skill Note="Knows where and whom to ask about lore"',
-  'Rustic Hospitality':
-    'Section=feature Note="Can receive shelter from common folk"',
-  "Ship's Passage":
-    'Section=feature ' +
-    'Note="Can receive water passage for self and companions in exchange for labor"',
-  'Wanderer':
-    'Section=skill ' +
-    'Note="Has an excellent geographic memory and can forage for 6 people"',
+  // Abjurer
+  'Abjuration Savant':PHB5E.FEATURES['Abjuration Savant'],
+  'Arcane Ward':PHB5E.FEATURES['Arcane Ward'],
+  'Projected Ward':PHB5E.FEATURES['Projected Ward'],
+  'Spell Breaker':'Section=feature Note="TODO"',
+  'Spell Resistance':PHB5E.FEATURES['Spell Resistance'],
+  // Diviner
+  'Divination Savant':PHB5E.FEATURES['Divination Savant'],
+  'Expert Divination':PHB5E.FEATURES['Expert Divination'],
+  'Greater Portent':PHB5E.FEATURES['Greater Portent'],
+  'Portent':PHB5E.FEATURES.Portent,
+  'The Third Eye':PHB5E.FEATURES['The Third Eye'],
+  // Illusionist
+  'Illusion Savant':PHB5E.FEATURES['Illusion Savant'],
+  'Illusory Reality':PHB5E.FEATURES['Illusory Reality'],
+  'Illusory Self':PHB5E.FEATURES['Illusory Self'],
+  'Improved Illusions':PHB5E.FEATURES['Improved Minor Illusion'],
+  'Phantasmal Creatures':'Section=feature Note="TODO"',
 
   // Feats
   'Actor':
@@ -1192,9 +1035,9 @@ PHB5E2024.FEATURES_ADDED = {
       '"Weapon Proficiency (Choose 4 from any Simple Weapon, any Martial Weapon)"'
 
 };
-PHB5E2024.FEATURES = Object.assign({}, SRD5E.FEATURES, PHB5E2024.FEATURES_ADDED);
-PHB5E2024.GOODIES = Object.assign({}, SRD5E.GOODIES);
-PHB5E2024.LANGUAGES = Object.assign({}, SRD5E.LANGUAGES);
+PHB5E2024.FEATURES = Object.assign({}, SRD5E2024.FEATURES, PHB5E2024.FEATURES_ADDED);
+PHB5E2024.GOODIES = Object.assign({}, SRD5E2024.GOODIES);
+PHB5E2024.LANGUAGES = Object.assign({}, SRD5E2024.LANGUAGES);
 PHB5E2024.SPECIES_ADDED = {
   'Aasimar':
     'Size=Medium ' +
@@ -1203,23 +1046,32 @@ PHB5E2024.SPECIES_ADDED = {
       '"1:Celestial Resistance","1:Darkvision","1:Healing Hands",' +
       '"1:Light Bearer","5:Celestial Revelation"'
 };
-PHB5E2024.SPECIES = Object.assign({}, SRD5E.SPECIES, PHB5E2024.SPECIES_ADDED);
-PHB5E2024.SCHOOLS = Object.assign({}, SRD5E.SCHOOLS);
-PHB5E2024.SHIELDS = Object.assign({}, SRD5E.SHIELDS);
-PHB5E2024.SKILLS = Object.assign({}, SRD5E.SKILLS);
+PHB5E2024.SPECIES = Object.assign({}, SRD5E2024.SPECIES, PHB5E2024.SPECIES_ADDED);
+PHB5E2024.SCHOOLS = Object.assign({}, SRD5E2024.SCHOOLS);
+PHB5E2024.SHIELDS = Object.assign({}, SRD5E2024.SHIELDS);
+PHB5E2024.SKILLS = Object.assign({}, SRD5E2024.SKILLS);
 PHB5E2024.SPELLS_ADDED = {
   // TODO
+  'Arms Of Hadar':PHB5E.SPELLS_ADDED['Arms Of Hadar'],
   "Crusader's Mantle":PHB5E.SPELLS_ADDED["Crusader's Mantle"],
+  'Dissonant Whispers':PHB5E.SPELLS_ADDED['Dissonant Whispers'],
   'Ensnaring Strike':PHB5E.SPELLS_ADDED['Ensnaring Strike'],
-  'Steel Wind Strike':Xanathar.SPELLS['Steel Wind Strike']
+  'Hunger Of Hadar':PHB5E.SPELLS_ADDED['Hunger Of Hadar'],
+  'Mind Sliver':Tasha.SPELLS['Mind Sliver'],
+  'Steel Wind Strike':Xanathar.SPELLS['Steel Wind Strike'],
+  'Summon Aberration':Tasha.SPELLS['Summon Aberration'],
+  'Summon Construct':Tasha.SPELLS['Summon Construct'],
+  'Summon Fey':Tasha.SPELLS['Summon Fey']
 };
 PHB5E2024.SPELLS_LEVELS_ADDED = {
   // TODO
 };
 PHB5E2024.SPELLS_RENAMED = {
+  'Black Tentacles':"Evard's Black Tentacles",
+  'Telepathic Bond':"Rary's Telepathic Bond"
   // TODO
 };
-PHB5E2024.SPELLS = Object.assign({}, SRD5E.SPELLS, PHB5E2024.SPELLS_ADDED);
+PHB5E2024.SPELLS = Object.assign({}, SRD5E2024.SPELLS, PHB5E2024.SPELLS_ADDED);
 for(let s in PHB5E2024.SPELLS_LEVELS_ADDED)
   PHB5E2024.SPELLS[s] =
     PHB5E2024.SPELLS[s].replace('Level=', 'Level=' + PHB5E2024.SPELLS_LEVELS_ADDED[s] + ',');
@@ -1227,15 +1079,15 @@ for(let s in PHB5E2024.SPELLS_RENAMED) {
   PHB5E2024.SPELLS[PHB5E2024.SPELLS_RENAMED[s]] = PHB5E2024.SPELLS[s];
   delete PHB5E2024.SPELLS[s];
 }
-PHB5E2024.TOOLS = Object.assign({}, SRD5E.TOOLS);
-PHB5E2024.WEAPONS = Object.assign({}, SRD5E.WEAPONS);
+PHB5E2024.TOOLS = Object.assign({}, SRD5E2024.TOOLS);
+PHB5E2024.WEAPONS = Object.assign({}, SRD5E2024.WEAPONS);
 
 /*
  * Adds #name# as a possible user #type# choice and parses #attrs# to add rules
  * related to selecting that choice.
  */
 PHB5E2024.choiceRules = function(rules, type, name, attrs) {
-  SRD5E.choiceRules(rules, type, name, attrs);
+  SRD5E2024.choiceRules(rules, type, name, attrs);
   if(type == 'Class')
     PHB5E2024.classRulesExtra(rules, name);
   else if(type == 'Feat')
@@ -1398,8 +1250,6 @@ PHB5E2024.classRulesExtra = function(rules, name) {
  * derived directly from the attributes passed to featRules.
  */
 PHB5E2024.featRulesExtra = function(rules, name) {
-
-  let matchInfo;
 
   if(name.match(/^Magic\sInitiate\s\(.*\)$/)) {
     let c = name.replace('Magic Initiate (', '').replace(')', '');
