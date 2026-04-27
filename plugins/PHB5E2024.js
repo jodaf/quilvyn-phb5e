@@ -584,8 +584,6 @@ PHB5E2024.FEATURES_ADDED = {
     'Section=combat ' +
     'Note="R10\' Inflicts frightened (save DC %{8+charismaModifier+proficiencyBonus} negates) until the end of the next turn"',
 
-  // TODO
-
   // Class
 
   // Barbarian
@@ -842,197 +840,72 @@ PHB5E2024.FEATURES_ADDED = {
   'Phantasmal Creatures':'Section=feature Note="TODO"',
 
   // Feats
-  'Actor':
-    'Section=ability,skill ' +
-    'Note=' +
-      '"+1 Charisma",' +
-      '"Has advantage on Deception and Performance to impersonate another person and can mimic others\' speech or sounds"',
-  'Alert':
-    'Section=combat,combat ' +
-    'Note=' +
-      '"+5 Initiative",' +
-      '"Cannot be surprised, and unseen foes gain no advantage on attacks on self"',
-  'Athlete':
-    'Section=ability,ability ' +
-    'Note=' +
-      '"Ability Boost (Choose 1 from Dexterity, Strength)",' +
-      '"Standing, running long jump, and running high jump each use only 5\' of movement/Can climb at full speed"',
-  'Charger':
-    'Section=combat ' +
-    'Note="Can use a bonus action after a 10\' Dash to attack (+5 damage) or to push 10\'"',
-  'Crossbow Expert':
-    'Section=combat ' +
-    'Note="Ignores the loading quality of proficient crossbows/Suffers no disadvantage on ranged attacks within 5\'/Can use a bonus action to make a hand crossbow attack after a one-handed attack"',
-  'Defensive Duelist':
-    'Section=combat ' +
-    'Note="Can use a reaction to gain +%{proficiencyBonus} Armor Class when wielding a proficient finesse weapon"',
-  'Dual Wielder':
-    'Section=combat ' +
-    'Note="+1 Armor Class when wielding two melee weapons/Can use two-weapon fighting with any one-handed weapons/Can draw or stow two weapons simultaneously"',
-  'Dungeon Delver':
-    'Section=save,skill ' +
-    'Note=' +
-      '"Has advantage to avoid or resist traps and resistance to trap damage",' +
-      // errata changes the second effect
-      '"Has advantage on Perception and Investigation (secret door detection)/Suffers no Perception penalty when traveling at a fast pace"',
-  'Durable':
-    'Section=ability,combat ' +
-    'Note=' +
-      '"+1 Constitution",' +
-      '"Regains a minimum of %{constitutionModifier*2>?2} hit points from a Hit Die roll"',
-  'Elemental Adept (Acid)':
-    'Section=magic ' +
-    'Note="Spells that inflict acid damage ignore resistance and treat 1s as 2s on damage dice"',
-  'Elemental Adept (Cold)':
-    'Section=magic ' +
-    'Note="Spells that inflict cold damage ignore resistance and treat 1s as 2s on damage dice"',
-  'Elemental Adept (Fire)':
-    'Section=magic ' +
-    'Note="Spells that inflict fire damage ignore resistance and treat 1s as 2s on damage dice"',
-  'Elemental Adept (Lightning)':
-    'Section=magic ' +
-    'Note="Spells that inflict lightning damage ignore resistance and treat 1s as 2s on damage dice"',
-  'Elemental Adept (Thunder)':
-    'Section=magic ' +
-    'Note="Spells that inflict thunder damage ignore resistance and treat 1s as 2s on damage dice"',
-  'Great Weapon Master':
-    'Section=combat ' +
-    'Note="Can use a bonus action to attack after scoring a critical hit or reducing a foe to 0 hit points with a melee weapon/Can make a -5 attack with a heavy weapon to inflict +10 damage"',
-  'Healer':
-    'Section=skill ' +
-    'Note="Using a healer\'s kit to stabilize also restores 1 hit point/Can use a healer\'s kit to restore 1d6+4 + target HD hit points once per creature per short rest"',
-  'Heavily Armored':
-    'Section=ability,combat ' +
-    'Note=' +
-      '"+1 Strength",' +
-      '"Armor Proficiency (Heavy)"',
-  'Heavy Armor Master':
-    'Section=ability,combat ' +
-    'Note=' +
-      '"+1 Strength",' +
-      '"Suffers -3 HP damage from nonmagical bludgeoning, piercing, and slashing weapons when wearing heavy armor"',
-  'Inspiring Leader':
-    'Section=combat ' +
-    'Note="R30\' 10-min speech gives 6 allies %{level+charismaModifier} temporary hit points once per target per short rest"',
-  'Keen Mind':
-    'Section=ability,feature ' +
-    'Note=' +
-      '"+1 Intelligence",' +
-      '"Always knows the direction of north and hours until sunrise or sunset/Can recall anything seen or heard during the past month"',
-  'Lightly Armored':
-    'Section=ability,combat ' +
-    'Note=' +
-      '"Ability Boost (Choose 1 from Dexterity, Strength)",' +
-      '"Armor Proficiency (Light)"',
-  'Linguist':
-    'Section=ability,skill,skill ' +
-    'Note=' +
-      '"+1 Intelligence",' +
-      '"Language (Choose 3 from any)",' +
-      '"Can create ciphers (DC %{intelligence+proficiencyBonus} Intelligence to decode)"',
-  'Lucky':
-    'Section=combat ' +
-    'Note="Can gain advantage on an attack, ability check, or save or inflict foe disadvantage an attack on self 3 times per long rest"',
-  'Mage Slayer':
-    'Section=combat,save ' +
-    'Note=' +
-      '"Can use a reaction to attack an adjacent caster/Foe suffers disadvantage on concentration to maintain a spell in response to a self attack",' +
-      '"Has advantage on saves vs. spells cast by adjacent foes"',
-  'Magic Initiate (Bard)':
-    'Section=Magic ' +
-    'Note="Knows 2 Bard cantrips and can cast a chosen B1 spell once per long rest"',
-  'Magic Initiate (Cleric)':
-    'Section=Magic ' +
-    'Note="Knows 2 Cleric cantrips and can cast a chosen C1 spell once per long rest"',
-  'Magic Initiate (Druid)':
-    'Section=Magic ' +
-    'Note="Knows 2 Druid cantrips and can cast a chosen D1 spell once per long rest"',
-  'Magic Initiate (Sorcerer)':
-    'Section=Magic ' +
-    'Note="Knows 2 Sorcerer cantrips and can cast a chosen S1 spell once per long rest"',
-  'Magic Initiate (Warlock)':
-    'Section=Magic ' +
-    'Note="Knows 2 Warlock cantrips and can cast a chosen K1 spell once per long rest"',
-  'Magic Initiate (Wizard)':
-    'Section=Magic ' +
-    'Note="Knows 2 Wizard cantrips and can cast a chosen W1 spell once per long rest"',
-  'Martial Adept':
-    'Section=combat ' +
-    'Note="Has the Combat Superiority feature with 2 maneuvers and 1 die"',
-  'Medium Armor Master':
-    'Section=combat,skill ' +
-    'Note=' +
-      '"+1 Armor Class in medium armor if Dexterity is at least 16",' +
-      '"Suffers no Stealth disadvantage from wearing medium armor"',
-  'Mobile':
-    'Section=ability,combat ' +
-    'Note=' +
-      '"+10 Speed",' +
-      '"Can Dash at full speed in difficult terrain/Attacking a target does not provoke an opportunity attack"',
-  'Moderately Armored':
-    'Section=ability,combat ' +
-    'Note=' +
-      '"Ability Boost (Choose 1 from Dexterity, Strength)",' +
-      '"Armor Proficiency (Medium/Shield)"',
-  'Mounted Combatant':
-    'Section=combat,save ' +
-    'Note=' +
-      '"Has advantage on melee attacks on an unmounted foe smaller than mount and can redirect attacks on mount to self",' +
-      '"Mount suffers no damage on a successful Dexterity save and half on failure"',
-  'Observant':
-    'Section=ability,skill ' +
-    'Note=' +
-      '"Ability Boost (Choose 1 from Intelligence, Wisdom)",' +
-      '"Can read lips/+5 passive Investigation and passive Perception"',
-  'Polearm Master':
-    'Section=combat ' +
-    'Note="Can use a bonus action to attack with the butt of a polearm, inflicting 1d4 HP bludgeoning, and a foe entering polearm reach provokes an opportunity attack"',
-  'Resilient':
-    'Section=ability,save ' +
-    'Note=' +
-      '"Ability Boost (Choose 1 from any)",' +
-      '"Save Proficiency (Choose 1 from any)"',
-  'Ritual Caster':
-    'Section=magic ' +
-    'Note="Can cast spells of up to level %{(level+1)//2} from a ritual book"',
-  'Savage Attacker':
-    'Section=combat ' +
-    'Note="Can take the best of two melee damage rolls once per rd"',
-  'Sentinel':
-    'Section=combat ' +
-    'Note="Successful opportunity attacks halt the target/Can take an opportunity attack when a foe uses Disengage/Can use a reaction to attack when an adjacent foe attacks another"',
-  'Sharpshooter':
-    'Section=combat ' +
-    'Note="Suffers no disadvantage on attacks at long range/Ranged attacks ignore 3/4 cover/Can make a -5 attack with a ranged weapon to inflict +10 damage"',
-  'Shield Master':
-    'Section=combat,save ' +
-    'Note=' +
-      '"Can use a bonus action to shove the target 5\' after an attack",' +
-      '"+%{shieldACBonus} Dexterity vs. targeted spells and effects, and can use a reaction to suffer no damage instead of half on a successful Dexterity save"',
-  // TODO or Tools
-  'Skilled':'Section=skill Note="Skill Proficiency (Choose 3 from any)"',
-  'Skulker':
-    'Section=skill ' +
-    'Note="Can hide when lightly obscured/Ranged miss does not reveal position/Suffers no disadvantage on Perception from dim light"',
-  'Spell Sniper':
-    'Section=magic ' +
-    'Note="Can cast attack spells at double normal range/Spells ignore 3/4 cover/Knows an additional attack cantrip"',
-  'Tavern Brawler':
-    'Section=Ability,Combat,Combat ' +
-    'Note=' +
-      '"Ability Boost (Choose 1 from Constitution, Strength)",' +
-      // errata removes Unarmed Strike proficiency
-      '"Weapon Proficiency (Improvised)/Unarmed attacks inflict 1d4 HP",' +
-      '"Can use a bonus action to grapple after a successful unarmed or improvised attack"',
-  'Tough':'Section=combat Note="+%{level*2} Hit Points"',
-  'War Caster':
-    'Section=magic ' +
-    'Note="Has advantage on concentration saves to maintain a spell/Can cast when holding a shield or a weapon/Can use a reaction to cast as an opportunity attack in response to movement"',
-  'Weapon Master':
-    'Section=ability,combat ' +
-    'Note=' +
-      '"Ability Boost (Choose 1 from Dexterity, Strength)",' +
-      '"Weapon Proficiency (Choose 4 from any Simple Weapon, any Martial Weapon)"'
+
+  'Crafter':'Section=feature Note="TODO"',
+  'Healer':PHB5E.FEATURES.Healer,
+  'Lucky':PHB5E.FEATURES.Lucky,
+  'Musician':'Section=feature Note="TODO"',
+  'Tavern Brawler':PHB5E.FEATURES['Tavern Brawler'],
+  'Tough':PHB5E.FEATURES.Tough,
+
+  'Actor':PHB5E.FEATURES.Actor,
+  'Athlete':PHB5E.FEATURES.Athlete,
+  'Charger':PHB5E.FEATURES.Charger,
+  'Chef':'Section=feature Note="TODO"',
+  'Crossbow Expert':PHB5E.FEATURES['Crossbow Expert'],
+  'Crusher':'Section=feature Note="TODO"',
+  'Defensive Duelist':PHB5E.FEATURES['Defensive Duelist'],
+  'Dual Wielder':PHB5E.FEATURES['Dual Wielder'],
+  'Durable':PHB5E.FEATURES.Durable,
+  'Elemental Adept (Acid)':PHB5E.FEATURES['Elemental Adept (Acid)'],
+  'Elemental Adept (Cold)':PHB5E.FEATURES['Elemental Adept (Cold)'],
+  'Elemental Adept (Fire)':PHB5E.FEATURES['Elemental Adept (Fire)'],
+  'Elemental Adept (Lightning)':PHB5E.FEATURES['Elemental Adept (Lightning)'],
+  'Elemental Adept (Thunder)':PHB5E.FEATURES['Elemental Adept (Thunder)'],
+  'Fey-Touched':'Section=feature Note="TODO"',
+  'Great Weapon Master':PHB5E.FEATURES['Great Weapon Master'],
+  'Heavily Armored':PHB5E.FEATURES['Heavily Armored'],
+  'Heavy Armor Master':PHB5E.FEATURES['Heavy Armor Master'],
+  'Inspiring Leader':PHB5E.FEATURES['Inspiring Leader'],
+  'Keen Mind':PHB5E.FEATURES['Keen Mind'],
+  'Lightly Armored':PHB5E.FEATURES['Lightly Armored'],
+  'Mage Slayer':PHB5E.FEATURES['Mage Slayer'],
+  'Martial Weapon Training':'Section=feature Note="TODO"',
+  'Medium Armor Master':PHB5E.FEATURES['Medium Armor Master'],
+  'Moderately Armored':PHB5E.FEATURES['Moderately Armored'],
+  'Mounted Combatant':PHB5E.FEATURES['Mounted Combatant'],
+  'Observant':PHB5E.FEATURES.Observant,
+  'Piercer':'Section=feature Note="TODO"',
+  'Poisoner':'Section=feature Note="TODO"',
+  'Polearm Master':PHB5E.FEATURES['Polearm Master'],
+  'Resilient':PHB5E.FEATURES.Resilient,
+  'Ritual Caster':PHB5E.FEATURES['Ritual Caster'],
+  'Sentinel':PHB5E.FEATURES.Sentinel,
+  'Shadow-Touched':'Section=feature Note="TODO"',
+  'Sharpshooter':PHB5E.FEATURES.Sharpshooter,
+  'Shield Master':PHB5E.FEATURES['Shield Master'],
+  'Skill Expert':'Section=feature Note="TODO"',
+  'Skulker':PHB5E.FEATURES.Skulker,
+  'Slasher':'Section=feature Note="TODO"',
+  'Speedy':'Section=feature Note="TODO"',
+  'Spell Sniper':PHB5E.FEATURES['Spell Sniper'],
+  'Telekinetic':'Section=feature Note="TODO"',
+  'Telepathic':'Section=feature Note="TODO"',
+  'War Caster':PHB5E.FEATURES['War Caster'],
+  'Weapon Master':PHB5E.FEATURES['Weapon Master'],
+
+  'Blind Fighting':'Section=feature Note="TODO"',
+  'Dueling':'Section=feature Note="TODO"',
+  'Interception':'Section=feature Note="TODO"',
+  'Protection':'Section=feature Note="TODO"',
+  'Thrown Weapon Fighting':'Section=feature Note="TODO"',
+  'Unarmed Fighting':'Section=feature Note="TODO"',
+
+  'Boon Of Energy Resistance':'Section=feature Note="TODO"',
+  'Boon Of Fortitude':'Section=feature Note="TODO"',
+  'Boon Of Recovery':'Section=feature Note="TODO"',
+  'Boon Of Skill':'Section=feature Note="TODO"',
+  'Boon Of Speed':'Section=feature Note="TODO"'
 
 };
 PHB5E2024.FEATURES = Object.assign({}, SRD5E2024.FEATURES, PHB5E2024.FEATURES_ADDED);
@@ -1102,42 +975,10 @@ PHB5E2024.classRulesExtra = function(rules, name) {
 
   let classLevel = 'levels.' + name;
 
-  if(name == 'Barbarian') {
+  if(name == 'Bard') {
 
-    rules.defineRule('carry', 'abilityNotes.aspectOfTheBeast(Bear)', '*', '2');
-    rules.defineRule('lift', 'abilityNotes.aspectOfTheBeast(Bear)', '*', '2');
-    rules.defineRule('features.Path Of The Totem Warrior',
-      'features.Path Of The Totem Warrior (Bear)', '=', '1',
-      'features.Path Of The Totem Warrior (Eagle)', '=', '1',
-      'features.Path Of The Totem Warrior (Wolf)', '=', '1'
-    );
-
-  } else if(name == 'Bard') {
-
-    rules.defineRule
-      ('bardHasExtraAttack', 'features.College Of Valor', '=', '1');
     rules.defineRule
       ('combatNotes.extraAttack', 'bardFeatures.Extra Attack', '^=', '2');
-
-  } else if(name == 'Cleric') {
-
-    rules.defineRule('clericHasDivineStrike',
-      'features.Nature Domain', '=', '1',
-      'features.Tempest Domain', '=', '1',
-      'features.Trickery Domain', '=', '1',
-      'features.War Domain', '=', '1'
-    );
-    rules.defineRule('clericHasPotentSpellcasting',
-      'features.Knowledge Domain', '=', '1',
-      'features.Light Domain', '=', '1'
-    );
-    rules.defineRule('divineStrikeDamageType',
-      'features.Divine Strike', '?', null,
-      'features.Nature Domain', '=', '"cold, fire, or lightning"',
-      'features.Tempest Domain', '=', '"thunder"',
-      'features.Trickery Domain', '=', '"poison"',
-      'features.War Domain', '=', '"weapon damage type"'
-    );
 
   } else if(name == 'Druid') {
 
@@ -1251,31 +1092,7 @@ PHB5E2024.classRulesExtra = function(rules, name) {
  */
 PHB5E2024.featRulesExtra = function(rules, name) {
 
-  if(name.match(/^Magic\sInitiate\s\(.*\)$/)) {
-    let c = name.replace('Magic Initiate (', '').replace(')', '');
-    rules.defineRule('casterLevels.' + (c == 'Warlock' ? 'K' : c.charAt(0)),
-      'features.' + name, '^=', '1'
-    );
-  } else if(name == 'Martial Adept') {
-    rules.defineRule
-      ('combatNotes.combatSuperiority', 'combatNotes.martialAdept', '+=', '1');
-    rules.defineRule('combatNotes.combatSuperiority.1',
-      'combatNotes.martialAdept', '^=', '6'
-    );
-    rules.defineRule('combatNotes.combatSuperiority.2',
-      'combatNotes.martialAdept', '+=', '2'
-    );
-    rules.defineRule
-      ('features.Combat Superiority', 'combatNotes.martialAdept', '=', '1');
-    let selectables = rules.getChoices('selectableFeatures');
-    for(let s in selectables) {
-      if(selectables[s].includes('Maneuver'))
-        rules.defineRule(
-          'validationNotes.fighter-' + s.replaceAll(' ', '') + 'SelectableFeature',
-          'combatNotes.martialAdept', '^', '0'
-        );
-    }
-  } else if(name == 'Medium Armor Master') {
+  if(name == 'Medium Armor Master') {
     rules.defineRule('armorClass',
       'combatNotes.mediumArmorMaster', '+', '0',
       'combatNotes.mediumArmorMaster.1', '+', null
