@@ -68,7 +68,7 @@ function PHB5E2024() {
   SRD5E2024.magicRules(rules, PHB5E2024.SCHOOLS, PHB5E2024.SPELLS);
   SRD5E2024.identityRules(
     rules, PHB5E2024.ALIGNMENTS, PHB5E2024.BACKGROUNDS, PHB5E2024.CLASSES,
-    PHB5E2024.DEITIES, PHB5E2024.PATHS, PHB5E2024.SPECIES
+    PHB5E2024.DEITIES, PHB5E2024.SPECIES
   );
   SRD5E2024.talentRules
     (rules, PHB5E2024.FEATS, PHB5E2024.FEATURES, PHB5E2024.GOODIES,
@@ -561,13 +561,15 @@ PHB5E2024.FEATURES_ADDED = {
   'Celestial Resistance': // ref Volo
     'Section=save Note="Has resistance to necrotic and radiant damage"',
   'Celestial Revelation':
-    'Section=feature ' +
-    'Note="Can use the Heavenly Wings, Inner Radiance, or Necrotic Shroud feature for 1 min once per long rest"',
+    'Section=combat,combat ' +
+    'Note=' +
+      '"Has the Heavenly Wings, Inner Radiance, and Necrotic Shroud features",' +
+      '"Can use Heavenly Wings, Inner Radiance, or Necrotic Shroud for 1 min once per long rest"',
   // Darkvision as SRD5E2024
   'Heavenly Wings': // ref Volo (as Radiant Soul)
     'Section=ability,combat ' +
     'Note=' +
-      '"Gives a 30\' fly Speed",' +
+      '"Gains a 30\' fly Speed",' +
       '"Can inflict +%{proficiencyBonus} HP radiant once per rd"',
   'Healing Hands': // ref Volo
     'Section=magic ' +
