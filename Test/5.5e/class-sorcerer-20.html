@@ -9,9 +9,9 @@ var attributes = {
   "_path":"ztest/5.5e/class/sorcerer 20", 
   "abilityBoosts.Constitution":3, "abilityBoosts.Dexterity":1, "abilityBoosts.Strength":1, 
   "alignment":"Chaotic Neutral", "armor":"None", "background":"Acolyte", "charisma":14, "constitution":12, 
-  "deity":"None", "dexterity":9, "experience":840177, "feats.Boon Of Truesight":1, 
-  "feats.Grappler":1, "feats.Magic Initiate (Druid)":1, "feats.Magic Initiate (Wizard)":1, 
-  "feats.Savage Attacker":1, "feats.Skilled":1, "feats.Two-Weapon Fighting":1, "gender":"Male", 
+  "deity":"None", "dexterity":9, "experience":840177, "feats.Alert":1, 
+  "feats.Boon Of Truesight":1, "feats.Grappler":1, "feats.Magic Initiate (Druid)":1, 
+  "feats.Magic Initiate (Wizard)":1, "feats.Savage Attacker":1, "feats.Skilled":1, "gender":"Male", 
   "hitPoints":77, "intelligence":10, "levels.Sorcerer":20, "name":"Class-Sorcerer 20", 
   "selectableFeatures.Sorcerer - Careful Spell":1, "selectableFeatures.Sorcerer - Distant Spell":1, 
   "selectableFeatures.Sorcerer - Draconic Sorcery":1, "selectableFeatures.Sorcerer - Empowered Spell":1, 
@@ -100,7 +100,7 @@ var attributes = {
     </tr><tr style="text-align:center">
       <td>      <table id="FeatLists" style="width:100%">
       <tr style="text-align:center">
-        <td><b>Feats</b>: Boon Of Truesight; Grappler; Magic Initiate (Druid); Magic Initiate (Wizard); Savage Attacker; Skilled; Two-Weapon Fighting</td>
+        <td><b>Feats</b>: Alert; Boon Of Truesight; Grappler; Magic Initiate (Druid); Magic Initiate (Wizard); Savage Attacker; Skilled</td>
         <td><b>Human Features</b>: Resourceful; Skillful; Versatile</td>
         <td><b>Sorcerer Features</b>: Arcane Apotheosis; Careful Spell; Distant Spell; Draconic Resilience; Draconic Sorcery; Draconic Spells; Dragon Companion; Dragon Wings; Elemental Affinity; Empowered Spell; Epic Boon; Extended Spell; Font Of Magic; Heightened Spell; Innate Sorcery; Metamagic; Quickened Spell; Save Proficiency (Constitution; Charisma); Seeking Spell; Skill Proficiency (Choose 2 from Arcana, Deception, Insight, Intimidation, Persuasion, Religion); Sorcerer Subclass; Sorcerous Restoration; Sorcery Incarnate; Spellcasting; Subtle Spell; Transmuted Spell; Twinned Spell; Weapon Proficiency (Simple Weapons)</td>
         <td><b>Acolyte Features</b>: Ability Boost (Choose 3 from Intelligence, Wisdom, Charisma); Magic Initiate (Cleric); Skill Proficiency (Insight; Religion); Tool Proficiency (Calligrapher's Supplies)</td>
@@ -177,7 +177,7 @@ var attributes = {
       <td>      <table id="CombatStats" style="width:100%">
       <tr style="text-align:center">
         <td><b>Hit Points</b>: 137</td>
-        <td><b>Initiative</b>: +0</td>
+        <td><b>Initiative</b>: +6</td>
         <td><b>Armor Class</b>: 12</td>
       </tr></table>
 </td>
@@ -198,6 +198,8 @@ var attributes = {
     </tr><tr style="text-align:center">
       <td><b>Combat Notes</b>:       <table id="CombatNotes" style="width:100%">
       <tr style="text-align:center">
+        <td><i>Alert: +6 Initiative</i></td>
+      </tr><tr style="text-align:center">
         <td><i>Constitution Hit Points Adjustment: +40</i></td>
       </tr><tr style="text-align:center">
         <td><i>Draconic Resilience: +20 Hit Points/+2 Armor Class in no armor</i></td>
@@ -206,11 +208,11 @@ var attributes = {
       </tr><tr style="text-align:center">
         <td><i>Strength Damage Adjustment: +3</i></td>
       </tr><tr style="text-align:center">
+        <td>Alert: Can swap initiatives with a willing ally</td>
+      </tr><tr style="text-align:center">
         <td>Grappler: Can both Damage and Grapple with an unarmed strike once per turn, has advantage on attacks on a grappled foe, and can move at full speed with a grappled foe of Medium size or smaller</td>
       </tr><tr style="text-align:center">
         <td>Savage Attacker: Can use the better of 2 damage rolls once per turn</td>
-      </tr><tr style="text-align:center">
-        <td>Two-Weapon Fighting: Adds ability modifier to second weapon damage</td>
       </tr></table>
 </td>
     </tr></table>
@@ -371,13 +373,7 @@ var attributes = {
   <tr style="text-align:center">
     <td>    <table id="ValidationPart" style="width:100%">
     <tr style="text-align:center">
-      <td><b>Validation Errors</b>:       <table id="ValidationNotes" style="width:100%">
-      <tr style="text-align:center">
-        <td>Selectable Feature Allocation: 5 available vs. 11 allocated</td>
-      </tr><tr style="text-align:center">
-        <td>Two-Weapon Fighting Feat: Requires fighting style feature</td>
-      </tr></table>
-</td>
+      <td><b>Validation Errors</b>: Selectable Feature Allocation: 5 available vs. 11 allocated</td>
     </tr></table>
 </td>
   </tr></table>

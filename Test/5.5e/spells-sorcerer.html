@@ -9,7 +9,7 @@ var attributes = {
   "_path":"ztest/5.5e/spells/sorcerer", 
   "abilityBoosts.Intelligence":2, "abilityBoosts.Strength":1, "alignment":"Chaotic Evil", "armor":"None", 
   "background":"Sage", "charisma":15, "constitution":11, "deity":"None", "dexterity":13, 
-  "experience":83291, "feats.Archery":1, "feats.Magic Initiate (Druid)":1, 
+  "experience":83291, "feats.Alert":1, "feats.Magic Initiate (Druid)":1, 
   "feats.Savage Attacker":1, "gender":"Female", "hitPoints":43, "intelligence":17, "levels.Sorcerer":10, 
   "name":"Spells-Sorcerer", "selectableFeatures.Sorcerer - Distant Spell":1, 
   "selectableFeatures.Sorcerer - Draconic Sorcery":1, "selectableFeatures.Sorcerer - Heightened Spell":1, 
@@ -122,7 +122,7 @@ var attributes = {
     </tr><tr style="text-align:center">
       <td>      <table id="FeatLists" style="width:100%">
       <tr style="text-align:center">
-        <td><b>Feats</b>: Archery; Magic Initiate (Druid); Savage Attacker</td>
+        <td><b>Feats</b>: Alert; Magic Initiate (Druid); Savage Attacker</td>
         <td><b>Human Features</b>: Resourceful; Skillful; Versatile</td>
         <td><b>Sorcerer Features</b>: Distant Spell; Draconic Resilience; Draconic Sorcery; Draconic Spells; Elemental Affinity; Font Of Magic; Heightened Spell; Innate Sorcery; Metamagic; Save Proficiency (Constitution; Charisma); Seeking Spell; Skill Proficiency (Choose 2 from Arcana, Deception, Insight, Intimidation, Persuasion, Religion); Sorcerer Subclass; Sorcerous Restoration; Sorcery Incarnate; Spellcasting; Weapon Proficiency (Simple Weapons)</td>
         <td><b>Sage Features</b>: Ability Boost (Choose 3 from Constitution, Intelligence, Wisdom); Magic Initiate (Wizard); Skill Proficiency (Arcana; History); Tool Proficiency (Calligrapher's Supplies)</td>
@@ -189,7 +189,7 @@ var attributes = {
       <td>      <table id="CombatStats" style="width:100%">
       <tr style="text-align:center">
         <td><b>Hit Points</b>: 53</td>
-        <td><b>Initiative</b>: +1</td>
+        <td><b>Initiative</b>: +5</td>
         <td><b>Armor Class</b>: 13</td>
       </tr></table>
 </td>
@@ -210,6 +210,8 @@ var attributes = {
     </tr><tr style="text-align:center">
       <td><b>Combat Notes</b>:       <table id="CombatNotes" style="width:100%">
       <tr style="text-align:center">
+        <td><i>Alert: +4 Initiative</i></td>
+      </tr><tr style="text-align:center">
         <td><i>Dexterity Armor Class Adjustment: +1</i></td>
       </tr><tr style="text-align:center">
         <td><i>Dexterity Attack Adjustment: +1</i></td>
@@ -222,7 +224,7 @@ var attributes = {
       </tr><tr style="text-align:center">
         <td><i>Strength Damage Adjustment: +3</i></td>
       </tr><tr style="text-align:center">
-        <td>Archery: +2 ranged attacks</td>
+        <td>Alert: Can swap initiatives with a willing ally</td>
       </tr><tr style="text-align:center">
         <td>Savage Attacker: Can use the better of 2 damage rolls once per turn</td>
       </tr></table>
@@ -584,16 +586,6 @@ var attributes = {
       <td>Sorcery Incarnate: Can spend 2 Sorcery Points for additional uses of Innate Sorcery, and can use 2 Metamagic options on each spell</td>
     </tr><tr style="text-align:center">
       <td>Spellcasting: Can cast spells from the sorcerer spell list and cast spells marked with [R] using a ritual</td>
-    </tr></table>
-</td>
-  </tr></table>
-</td>
-</tr><tr style="text-align:center">
-  <td style="border:1px solid black"><b>Notes</b><br/>  <table id="NotesArea" style="width:100%">
-  <tr style="text-align:center">
-    <td>    <table id="ValidationPart" style="width:100%">
-    <tr style="text-align:center">
-      <td><b>Validation Errors</b>: Archery Feat: Requires fighting style feature</td>
     </tr></table>
 </td>
   </tr></table>

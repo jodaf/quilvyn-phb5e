@@ -7,11 +7,11 @@
   <script>
 var attributes = {
   "_path":"ztest/5.5e/class/druid 20", 
-  "abilityBoosts.Charisma":2, "abilityBoosts.Constitution":1, "abilityBoosts.Intelligence":3, 
-  "alignment":"Chaotic Evil", "armor":"None", "background":"Acolyte", "charisma":16, "constitution":8, 
-  "deity":"None", "dexterity":15, "experience":936730, "feats.Ability Score Improvement":1, 
-  "feats.Boon Of Spell Recall":1, "feats.Defense":1, "feats.Great Weapon Fighting":1, 
-  "feats.Magic Initiate (Wizard)":1, "feats.Skilled":1, "feats.Two-Weapon Fighting":1, "gender":"Female", 
+  "abilityBoosts.Charisma":2, "abilityBoosts.Constitution":1, "abilityBoosts.Intelligence":2, 
+  "abilityBoosts.Strength":2, "alignment":"Chaotic Evil", "armor":"None", "background":"Acolyte", 
+  "charisma":16, "constitution":8, "deity":"None", "dexterity":15, "experience":936730, 
+  "feats.Ability Score Improvement":1, "feats.Alert":1, "feats.Boon Of Truesight":1, "feats.Grappler":1, 
+  "feats.Magic Initiate (Wizard)":1, "feats.Savage Attacker":1, "feats.Skilled":1, "gender":"Female", 
   "hitPoints":67, "intelligence":16, "levels.Druid":20, "name":"Class-Druid 20", 
   "race":"Human", "selectableFeatures.Druid - Circle Of The Land":1, 
   "selectableFeatures.Druid - Magician":1, "selectableFeatures.Druid - Potent Spellcasting":1, 
@@ -41,10 +41,10 @@ var attributes = {
   <tr style="text-align:center">
     <td>    <table id="Abilities" style="width:100%">
     <tr style="text-align:center">
-      <td><b>Strength</b>: 11 (+0)</td>
+      <td><b>Strength</b>: 13 (+1)</td>
       <td><b>Dexterity</b>: 15 (+2)</td>
       <td><b>Constitution</b>: 9 (-1)</td>
-      <td><b>Intelligence</b>: 19 (+4)</td>
+      <td><b>Intelligence</b>: 18 (+4)</td>
       <td><b>Wisdom</b>: 16 (+3)</td>
       <td><b>Charisma</b>: 18 (+4)</td>
     </tr></table>
@@ -60,12 +60,12 @@ var attributes = {
   </tr><tr style="text-align:center">
     <td>    <table id="AbilityStats" style="width:100%">
     <tr style="text-align:center">
-      <td><b>Ability Boosts</b>: Charisma: 2; Constitution: 1; Intelligence: 3</td>
+      <td><b>Ability Boosts</b>: Charisma: 2; Constitution: 1; Intelligence: 2; Strength: 2</td>
       <td><b>Experience</b>: 936730/1000000</td>
       <td><b>Level</b>: 20</td>
       <td><b>Size</b>: Medium</td>
       <td><b>Speed</b>: 30</td>
-      <td><b>Carry/Lift:</b> 165/330</td>
+      <td><b>Carry/Lift:</b> 195/390</td>
     </tr></table>
 </td>
   </tr><tr style="text-align:center">
@@ -73,9 +73,11 @@ var attributes = {
     <tr style="text-align:center">
       <td><i>Ability Score Improvement: Ability Boost (Choose 2 from any)</i></td>
     </tr><tr style="text-align:center">
-      <td><i>Boon Of Spell Recall: Ability Boost (Choose 1 from Intelligence, Wisdom, Charisma)</i></td>
+      <td><i>Boon Of Truesight: Ability Boost (Choose 1 from any)</i></td>
     </tr><tr style="text-align:center">
-      <td>Ability Boosts: 6 to distribute</td>
+      <td><i>Grappler: Ability Boost (Choose 1 from Strength, Dexterity)</i></td>
+    </tr><tr style="text-align:center">
+      <td>Ability Boosts: 7 to distribute</td>
     </tr></table>
 </td>
   </tr></table>
@@ -96,7 +98,7 @@ var attributes = {
     </tr><tr style="text-align:center">
       <td>      <table id="FeatLists" style="width:100%">
       <tr style="text-align:center">
-        <td><b>Feats</b>: Ability Score Improvement; Boon Of Spell Recall; Defense; Great Weapon Fighting; Magic Initiate (Wizard); Skilled; Two-Weapon Fighting</td>
+        <td><b>Feats</b>: Ability Score Improvement; Alert; Boon Of Truesight; Grappler; Magic Initiate (Wizard); Savage Attacker; Skilled</td>
         <td><b>Human Features</b>: Resourceful; Skillful; Versatile</td>
         <td><b>Druid Features</b>: Archdruid; Armor Training (Light; Shield); Beast Spells; Circle Of The Land Spells; Circle Of The Land; Druid Subclass; Druidic; Elemental Fury; Epic Boon; Improved Elemental Fury; Land's Aid; Magician; Natural Recovery; Nature's Sanctuary; Nature's Ward; Potent Spellcasting; Primal Order; Primal Strike; Save Proficiency (Intelligence; Wisdom); Skill Proficiency (Choose 2 from Animal Handling, Arcana, Insight, Medicine, Nature, Perception, Religion, Survival); Spellcasting; Tool Proficiency (Herbalism Kit); Warden; Weapon Proficiency (Simple Weapons); Wild Companion; Wild Resurgence; Wild Shape</td>
         <td><b>Acolyte Features</b>: Ability Boost (Choose 3 from Intelligence, Wisdom, Charisma); Magic Initiate (Cleric); Skill Proficiency (Insight; Religion); Tool Proficiency (Calligrapher's Supplies)</td>
@@ -144,7 +146,7 @@ var attributes = {
       <td>Investigation: (int) +4</td>
       <td>Religion: (int) +10</td>
     </tr><tr style="text-align:left">
-      <td>Athletics: (str) +6</td>
+      <td>Athletics: (str) +7</td>
       <td>Medicine: (wis) +3</td>
       <td>Sleight Of Hand: (dex) +8</td>
     </tr><tr style="text-align:left">
@@ -168,6 +170,8 @@ var attributes = {
     </tr><tr style="text-align:center">
       <td><i>Skillful: Skill Proficiency (Choose 1 from any)</i></td>
     </tr><tr style="text-align:center">
+      <td>Boon Of Truesight: Has 60' Truesight</td>
+    </tr><tr style="text-align:center">
       <td>Druidic: Speaks a secret language known only by druids</td>
     </tr></table>
 </td>
@@ -181,7 +185,7 @@ var attributes = {
       <td>      <table id="CombatStats" style="width:100%">
       <tr style="text-align:center">
         <td><b>Hit Points</b>: 47</td>
-        <td><b>Initiative</b>: +2</td>
+        <td><b>Initiative</b>: +8</td>
         <td><b>Armor Class</b>: 12</td>
       </tr></table>
 </td>
@@ -197,15 +201,15 @@ var attributes = {
       <tr style="text-align:center">
         <td><b>Armor</b>: None</td>
         <td><b>Shield</b>: None</td>
-        <td><b>Weapons</b>: Dart (+8 1d4+2 P R20/60; Vex); Mace (+6 1d6 B; Sap); Sling (+8 1d4+2 B R30/120; Slow); Unarmed (+6 1 B)</td>
+        <td><b>Weapons</b>: Dart (+8 1d4+2 P R20/60; Vex); Mace (+7 1d6+1 B; Sap); Sling (+8 1d4+2 B R30/120; Slow); Unarmed (+7 1+1 B)</td>
       </tr></table>
 </td>
     </tr><tr style="text-align:center">
       <td><b>Combat Notes</b>:       <table id="CombatNotes" style="width:100%">
       <tr style="text-align:center">
-        <td><i>Constitution Hit Points Adjustment: -20</i></td>
+        <td><i>Alert: +6 Initiative</i></td>
       </tr><tr style="text-align:center">
-        <td><i>Defense: +1 Armor Class in armor</i></td>
+        <td><i>Constitution Hit Points Adjustment: -20</i></td>
       </tr><tr style="text-align:center">
         <td><i>Dexterity Armor Class Adjustment: +2</i></td>
       </tr><tr style="text-align:center">
@@ -215,15 +219,21 @@ var attributes = {
       </tr><tr style="text-align:center">
         <td><i>Improved Elemental Fury: Has increased Primal Strike effects</i></td>
       </tr><tr style="text-align:center">
+        <td><i>Strength Attack Adjustment: +1</i></td>
+      </tr><tr style="text-align:center">
+        <td><i>Strength Damage Adjustment: +1</i></td>
+      </tr><tr style="text-align:center">
         <td><i>Warden: Armor Training (Medium)/Weapon Proficiency (Martial Weapons)</i></td>
+      </tr><tr style="text-align:center">
+        <td>Alert: Can swap initiatives with a willing ally</td>
       </tr><tr style="text-align:center">
         <td>Evergreen Wild Shape: Has at least 1 use of Wild Shape available after initiative</td>
       </tr><tr style="text-align:center">
-        <td>Great Weapon Fighting: Can treat 1s and 2s as 3s on two-handed weapon damage</td>
+        <td>Grappler: Can both Damage and Grapple with an unarmed strike once per turn, has advantage on attacks on a grappled foe, and can move at full speed with a grappled foe of Medium size or smaller</td>
       </tr><tr style="text-align:center">
         <td>Primal Strike: Weapon or natural attacks inflict +2d8 HP of a choice of cold, fire, lightning, or thunder once per turn</td>
       </tr><tr style="text-align:center">
-        <td>Two-Weapon Fighting: Adds ability modifier to second weapon damage</td>
+        <td>Savage Attacker: Can use the better of 2 damage rolls once per turn</td>
       </tr></table>
 </td>
     </tr></table>
@@ -233,7 +243,7 @@ var attributes = {
     <tr style="text-align:center">
       <td><b>Save Proficiency</b>: Intelligence; Wisdom</td>
     </tr><tr style="text-align:center">
-      <td><b>Save</b>: Charisma: +4; Constitution: -1; Dexterity: +2; Intelligence: +10; Strength: +0; Wisdom: +9</td>
+      <td><b>Save</b>: Charisma: +4; Constitution: -1; Dexterity: +2; Intelligence: +10; Strength: +1; Wisdom: +9</td>
     </tr><tr style="text-align:center">
       <td><b>Save Notes</b>: Nature's Ward: Has immunity to poisoned and resistance to fire, cold, lightning, or poison depending on whether Circle Spells are currently taken from Arid, Polar, Temperate, or Tropical Land</td>
     </tr></table>
@@ -372,8 +382,6 @@ var attributes = {
     </tr><tr style="text-align:center">
       <td>Beast Spells: Can cast spells during Wild Shape</td>
     </tr><tr style="text-align:center">
-      <td>Boon Of Spell Recall: Casting a level 1-4 spell does not use a spell slot if a d4 roll equals the spell level</td>
-    </tr><tr style="text-align:center">
       <td>Circle Of The Land Spells: Can choose spells from 1 type of land to have prepared after a long rest</td>
     </tr><tr style="text-align:center">
       <td>Druidic: Knows the <i>Speak With Animals</i> spell</td>
@@ -410,17 +418,7 @@ var attributes = {
   <tr style="text-align:center">
     <td>    <table id="ValidationPart" style="width:100%">
     <tr style="text-align:center">
-      <td><b>Validation Errors</b>:       <table id="ValidationNotes" style="width:100%">
-      <tr style="text-align:center">
-        <td>Defense Feat: Requires fighting style feature</td>
-      </tr><tr style="text-align:center">
-        <td>Great Weapon Fighting Feat: Requires fighting style feature</td>
-      </tr><tr style="text-align:center">
-        <td>Selectable Feature Allocation: 3 available vs. 5 allocated</td>
-      </tr><tr style="text-align:center">
-        <td>Two-Weapon Fighting Feat: Requires fighting style feature</td>
-      </tr></table>
-</td>
+      <td><b>Validation Errors</b>: Selectable Feature Allocation: 3 available vs. 5 allocated</td>
     </tr></table>
 </td>
   </tr></table>
