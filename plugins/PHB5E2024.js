@@ -622,21 +622,13 @@ PHB5E2024.FEATURES_ADDED = {
     'Section=combat ' +
     'Note="Entering rage gives self %{levels.Barbarian} temporary hit points and, each rd, allows giving a creature within 10\' %{levels.Barbarian<9?2:levels.Barbarian<16?3:4}d6 temporary hit points until the end of the rage"',
   // Path Of The Zealot
-  'Divine Fury':
-    'Section=combat ' +
-    'Note="Inflicts +1d6+{levels.Barbarian//2} HP of a choice of necrotic or radiant on the first foe hit each turn during rage"',
-  'Fanatical Focus':
-    'Section=save ' +
-    'Note="Can reroll a failed save with a +%{levels.Barbarian<9?2:levels.Barbarian<16?3:4} bonus once per rage"',
+  'Divine Fury':Xanathar.FEATURES['Divine Fury'],
+  'Fanatical Focus':Xanathar.FEATURES['Fanatical Focus'],
   'Rage Of The Gods':
     'Section=combat ' +
     'Note="When entering rage, can gain a %{speed}\' fly Speed, resistance to necrotic, psychich, and radiant damage, and use of a reaction to give %{levels.Barbarian} hit points to a creature within 30\' when it is taken to 0 hit points"',
-  'Warrior Of The Gods':
-    'Section=combat ' +
-    'Note="Can use a bonus action to regain hit points from a pool of %{levels.Barbarian<6?4:levels.Barbarian<12?5:levels.Barbarian<17?6:7}d12; the pool refills after a long rest"',
-  'Zealous Presence':
-    'Section=combat ' +
-    'Note="R60\' Can use a bonus action to give targets advanting on attacks and saves until the start of the next turn once per long rest; can expend rage uses for additional uses"',
+  'Warrior Of The Gods':Xanathar.FEATURES['Warrior Of The Gods'],
+  'Zealous Presence':Xanathar.FEATURES['Zealous Presence'],
 
   // Bard
   // College Of Dance
@@ -762,11 +754,15 @@ PHB5E2024.FEATURES_ADDED = {
   // Fighter
   // Battle Master
   'Combat Superiority':PHB5E.FEATURES['Combat Superiority'],
-  'Improved Combat Superiority':PHB5E.FEATURES['Improved Combat Superiority'],
+  'Improved Combat Superiority':
+    PHB5E.FEATURES['Improved Combat Superiority']
+    .replace('%V', '10'),
   'Know Your Enemy':PHB5E.FEATURES['Know Your Enemy'],
   'Relentless':PHB5E.FEATURES.Relentless,
   'Student Of War':PHB5E.FEATURES['Student Of War'],
-  'Ultimate Combat Superiority':'Section=feature Note="TODO"',
+  'Ultimate Combat Superiority':
+    PHB5E.FEATURES['Improved Combat Superiority']
+    .replace('%V', '12'),
   // Eldritch Knight
   'Arcane Charge':PHB5E.FEATURES['Arcane Charge'],
   'Eldritch Strike':PHB5E.FEATURES['Eldritch Strike'],
@@ -1098,14 +1094,12 @@ PHB5E2024.classRulesExtra = function(rules, name) {
     rules.defineRule('combatNotes.combatSuperiority.1',
       'features.Combat Superiority', '?', null,
       'battleMasterLevel', '=', '8',
-      'combatNotes.improvedCombatSuperiority', '=', null
+      'combatNotes.improvedCombatSuperiority', '=', '10',
+      'combatNotes.ultimateCombatSuperiority', '=', '12'
     );
     rules.defineRule('combatNotes.combatSuperiority.2',
       'features.Combat Superiority', '?', null,
       'battleMasterLevel', '=', 'source<7 ? 3 : source<10 ? 5 : source<15 ? 7 : 9'
-    );
-    rules.defineRule('combatNotes.improvedCombatSuperiority',
-      classLevel, '=', 'source<18 ? 10 : 12'
     );
     rules.defineRule('combatNotes.tripAttack', 'maneuverSaveDC', '=', null);
     rules.defineRule // Italics noop
