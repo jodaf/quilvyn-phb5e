@@ -787,15 +787,29 @@ PHB5E2024.FEATURES_ADDED = {
   "Physician's Touch":Tasha.FEATURES["Physician's Touch"],
   // Way Of Shadow
   'Cloak Of Shadows':PHB5E.FEATURES['Cloak Of Shadows (Way Of Shadow)'],
-  'Improved Shadow Step':'Section=feature Note="TODO"',
+  'Improved Shadow Step':
+    'Section=combat ' +
+    'Note="Can expend 1 focus point to Shadow Step between lighted areas and make an Unarmed Strike after teleporting"',
   'Shadow Arts':PHB5E.FEATURES['Shadow Arts'],
   'Shadow Step':PHB5E.FEATURES['Shadow Step'],
   // Way Of The Elements
   'Elemental Attunement':PHB5E.FEATURES['Elemental Attunement'],
-  'Elemental Burst':'Section=feature Note="TODO"',
-  'Elemental Epitome':'Section=feature Note="TODO"',
-  'Manipulate Elements':'Section=feature Note="TODO"',
-  'Stride Of The Elements':'Section=feature Note="TODO"',
+  'Elemental Burst':
+    'Section=combat ' +
+    'Note="R120\' Expending 2 focus points causes a 20\' radius to inflict 3d%{combatNotes.martialArts} HP of a choice of acid, cold, fire, lightning, or thunder (save Dexterity half)"',
+  'Elemental Epitome':
+    'Section=combat,save ' +
+      'Note=' +
+        '"Step Of The Wind gives +20 Speed until the end of the turn and inflicts 1d%{combatNotes.martialArts} HP of a choice of acid, cold, fire, lightning, or thunder to targets passed within 5\'/Unarmed Strike inflicts +1d%{combatNotes.martialArts} HP once per turn while using Elemental Attunement",' +
+        '"Elemental Attunement also gives resistance to a choice of acid, cold, fire, lightning, or thunder"',
+  'Manipulate Elements':
+    'Section=magic ' +
+    'Note="Knows the <i>Elementalism</i> spell" ' +
+    'SpellAbility=Wisdom ' +
+    'Spells=Elementalism',
+  'Stride Of The Elements':
+    'Section=ability ' +
+    'Note="Has ${speed}\' fly and swim speed while using Elemental Attunement"',
 
   // Paladin
   // Oath Of Glory
@@ -847,10 +861,13 @@ PHB5E2024.FEATURES_ADDED = {
   // Spellcasting as PHB5E2024
   'Versatile Trickster':PHB5E.FEATURES['Versatile Trickster'],
   // Assassin
-  "Assassin's Tools":'Section=feature Note="TODO"',
+  "Assassin's Tools":
+    'Section=skill Note="Tool Proficiency(Disguise Kit; Poisoner\'s Kit)"',
   'Assassinate':PHB5E.FEATURES.Assassinate,
   'Death Strike':PHB5E.FEATURES['Death Strike'],
-  'Envenom Weapons':'Section=feature Note="TODO"',
+  'Envenom Weapons':
+    'Section=combat ' +
+    'Note="Poisoned Cunning Strike influcs 2d6 HP poison on a failed save, ignoring resistance"',
   'Infiltration Expertise':PHB5E.FEATURES['Infiltration Expertise'],
   // Soulknife
   // Psionic Power as above
@@ -876,30 +893,56 @@ PHB5E2024.FEATURES_ADDED = {
   // Wild Magic
   'Bend Luck':PHB5E.FEATURES['Bend Luck'],
   'Controlled Chaos':PHB5E.FEATURES['Controlled Chaos'],
-  'Tamed Surge':'Section=feature Note="TODO"',
+  'Tamed Surge':
+    'Section=magic ' +
+    'Note="Can add a chosen Wild Magic effect when casting a spell once per long rest"',
   'Tides Of Chaos':PHB5E.FEATURES['Tides Of Chaos'],
   'Wild Magic Surge':PHB5E.FEATURES['Wild Magic Surge'],
 
   // Warlock
   // Archfey Patron
-  'Archfey Spells':'Section=feature Note="TODO"',
-  'Bewitching Magic':'Section=feature Note="TODO"',
+  'Archfey Spells':
+    'Spells=' +
+      '"3:Calm Emotions","3:Faerie Fire","3:Misty Step","3:Phantasmal Force","3:Sleep",' +
+      '"5:Blink","5:Plant Growth",' +
+      '"7:Dominate Beast","7:Greater Invisibility",' +
+      '"9:Dominate Person","9:Seeming"',
+  'Bewitching Magic':
+    'Section=magic Note="Can cast <i>Misty Step</i> without expeding a spell slot as part of casting an enchantment or illusion spell"',
   'Beguiling Defenses':PHB5E.FEATURES['Beguiling Defenses'],
   'Misty Escape':PHB5E.FEATURES['Misty Escape'],
-  'Steps Of The Fey':'Section=feature Note="TODO"',
+  'Steps Of The Fey':
+    'Section=magic ' +
+    'Note="Can cast <i>Misty Step</i> without expending a spell slot %{charismaModifier>1?charismaModifier+\' times\':\'once\'} per long rest; doing so can either give 1d10 temporary hit points to a creature within 10\' of the ending point or inflict disadvantage on attacks vs. creatures other than self until the start of the next turn on creatures within 5\' of the starting point"',
   // Celestial Patron
   'Celestial Resilience':Xanathar.FEATURES['Celestial Resilience'],
-  'Celestial Spells':'Section=feature Note="TODO"',
+  'Celestial Spells':
+    'Spells=' +
+      '"3:Aid","3:Cure Wounds","3:Guiding Bolt","3:Lesser Restoration","3:Light","3:Sacred Flame",' +
+      '"5:Daylight","5:Revivify",' +
+      '"7:Guardian Of Faith","7:Wall Of Fire",' +
+      '"9:Greater Restoration","9:Summon Celestial"',
   'Healing Light':Xanathar.FEATURES['Healing Light'],
   'Radiant Soul':Xanathar.FEATURES['Radiant Soul'],
   'Searing Vengeance':Xanathar.FEATURES['Searing Vengeance'],
   // Great Old One Patron
   'Awakened Mind':PHB5E.FEATURES['Awakened Mind'],
-  'Clairvoyant Combatant':'Section=feature Note="TODO"',
+  'Clairvoyant Combatant':
+    'Section=combat Note="Awakened Mind inflicts disadvantage on the target on attacks vs. self and gives self advantage on attacks vs. the target (save Wisdom negates) once per short rest; can expend spell slots for additional uses"',
   'Create Thrall':PHB5E.FEATURES['Create Thrall'],
-  'Eldritch Hex':'Section=feature Note="TODO"',
-  'Great Old One Spells':'Section=feature Note="TODO"',
-  'Psychic Spells':'Section=feature Note="TODO"',
+  'Eldritch Hex':
+    'Section=magic ' +
+    'Note="Knows the <i>Hex</i> spell; targeting an ability also inflicts disadvantage on saves that use that ability" ' +
+    'Spells=Hex',
+  'Great Old One Spells':
+    'Spells=' +
+      '"3:Detect Thoughts","3:Dissonant Whispers","3:Phantasmal Force","3:Tasha\'s Hideous Laughter",' +
+      '"5:Clairvoyance","5:Hunger Of Hadar",' +
+      '"7:Confusion","7:Summon Aberration",' +
+      '"9:Modify Memory","9:Telekinesis"',
+  'Psychic Spells':
+    'Section=combat ' +
+    'Note="Can inflict psychic damage instead of normal spell damage, and can cast enchantment and illusion spells without verbal or somatic components"',
   'Thought Shield':PHB5E.FEATURES['Thought Shield'],
 
   // Wizard
@@ -907,7 +950,10 @@ PHB5E2024.FEATURES_ADDED = {
   'Abjuration Savant':PHB5E.FEATURES['Abjuration Savant'],
   'Arcane Ward':PHB5E.FEATURES['Arcane Ward'],
   'Projected Ward':PHB5E.FEATURES['Projected Ward'],
-  'Spell Breaker':'Section=feature Note="TODO"',
+  'Spell Breaker':
+    'Section=magic ' +
+    'Note="Knows the <i>Counterspell</i> and <i>Dispel Magic</i> spells, can cast <i>Dispel Magic</i> as a bonus action and add %{proficiencyBonus} to the check, and failure with either spell does not expend a spell slot" ' +
+    'Spells=Counterspell,"Dispel Magic"',
   'Spell Resistance':PHB5E.FEATURES['Spell Resistance'],
   // Diviner
   'Divination Savant':PHB5E.FEATURES['Divination Savant'],
@@ -920,7 +966,10 @@ PHB5E2024.FEATURES_ADDED = {
   'Illusory Reality':PHB5E.FEATURES['Illusory Reality'],
   'Illusory Self':PHB5E.FEATURES['Illusory Self'],
   'Improved Illusions':PHB5E.FEATURES['Improved Minor Illusion'],
-  'Phantasmal Creatures':'Section=feature Note="TODO"',
+  'Phantasmal Creatures':
+    'Section=magic ' +
+    'Note="Knows the <i>Summon Beast</i> and <i>Summon Fey</i> spells, can cast either as an illusion spell, and can cast each illusion version without expending a spell slot, creating a creature with half hit points, once per long rest" ' +
+    'Spells="Summon Beast","Summon Fey"',
 
   // Feats
 
@@ -1022,6 +1071,8 @@ PHB5E2024.SPELLS_ADDED = {
   'Mind Sliver':Tasha.SPELLS['Mind Sliver'],
   'Steel Wind Strike':Xanathar.SPELLS['Steel Wind Strike'],
   'Summon Aberration':Tasha.SPELLS['Summon Aberration'],
+  'Summon Beast':Tasha.SPELLS['Summon Beast'],
+  'Summon Celestial':Tasha.SPELLS['Summon Celestial'],
   'Summon Construct':Tasha.SPELLS['Summon Construct'],
   'Summon Fey':Tasha.SPELLS['Summon Fey']
 };
