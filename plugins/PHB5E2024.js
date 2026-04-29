@@ -219,7 +219,7 @@ PHB5E2024.CLASSES_FEATURES_ADDED = {
     '"features.Trickery Domain ? 3:Blessing Of The Trickster",' +
     '"features.Trickery Domain ? 3:Invoke Duplicity",' +
     '"features.Trickery Domain ? 3:Trickery Domain Spells",' +
-    '"features.Trickery Domain ? 6:Trickster\'s Transformation",' +
+    '"features.Trickery Domain ? 6:Trickster\'s Transposition",' +
     '"features.Trickery Domain ? 17:Improved Duplicity",' +
     '"features.War Domain ? 3:Guided Strike",' +
     '"features.War Domain ? 3:War Domain Spells",' +
@@ -671,6 +671,7 @@ PHB5E2024.FEATURES_ADDED = {
   'Battle Magic':PHB5E.FEATURES['Battle Magic'],
 
   // Cleric
+  // Light Domain
   'Corona Of Light':PHB5E.FEATURES['Corona Of Light'],
   'Improved Warding Flare':PHB5E.FEATURES['Improved Flare'],
   'Light Domain Spells':PHB5E.FEATURES['Light Domain']
@@ -688,7 +689,9 @@ PHB5E2024.FEATURES_ADDED = {
     .replace('Blink', 'Hypnotic Pattern')
     .replace('Nondetection', 'Dispel Magic')
     .replace('Polymorph', 'Confusion'),
-  "Trickster's Transformation":'Section=feature Note="TODO"',
+  "Trickster's Transposition":
+    'Section=combat ' +
+    'Note="Can swap places with a duplicate when creating or moving it"',
   // War Domain
   'Avatar Of Battle':PHB5E.FEATURES['Avatar Of Battle'],
   'Guided Strike':PHB5E.FEATURES['Guided Strike'],
@@ -702,17 +705,53 @@ PHB5E2024.FEATURES_ADDED = {
 
   // Druid
   // Circle Of The Moon
-  'Circle Forms':PHB5E.FEATURES['Circle Forms'],
-  'Circle Of The Moon Spells':'Section=feature Note="TODO"',
-  'Improved Circle Forms':'Section=feature Note="TODO"',
-  'Lunar Form':'Section=feature Note="TODO"',
-  'Moonlight Step':'Section=feature Note="TODO"',
+  'Circle Forms':
+    PHB5E.FEATURES['Circle Forms']
+    .replace('creature', 'creature with Armor Class %{13+wisdomModifier} and %{levels.Druid*3} temporary hit points'),
+  'Circle Of The Moon Spells':
+    'Section=magic ' +
+    'Note="Can cast Circle Of The Moon Spells while using Wild Shape", ' +
+    'Spells=' +
+      '"3:Cure Wounds","3:Moonbeam","3:Starry Wisp",' +
+      '"5:Conjure Animals",' +
+      '"7:Fount Of Moonlight",' +
+      '"9:Mass Cure Wounds"',
+  'Improved Circle Forms':
+    'Section=combat,save ' +
+    'Note=' +
+      '"Can inflict radiant damage instead of normal attack damage when in Wild Shape",' +
+      '"+%{wisdomModifier} Constitution saves when in Wild Shape"',
+  'Lunar Form':
+    'Section=combat,combat ' +
+    'Note=' +
+      '"Has increased Moonlight Step effects",' +
+      '"Can inflict +2d10 HP radiant on an attack once per turn while in Wild Shape"',
+  'Moonlight Step':
+    'Section=combat ' +
+    'Note="Can use a bonus action to teleport 30\'%{combatNotes.lunarForm?\\", optionally taking along a willing creature within 30\',\\":\'\'} and gain advantage on the next attack before the end of the turn %{wisdomModifier>1?wisdomModifier+\' times\':\'once\'} per long rest; can expend level 2+ spell slots for additional uses"',
   // Circle Of The Sea
-  'Aquatic Affinity':'Section=feature Note="TODO"',
-  'Circle Of The Sea Spells':'Section=feature Note="TODO"',
-  'Oceanic Gifts':'Section=feature Note="TODO"',
-  'Stormborn':'Section=feature Note="TODO"',
-  'Wrath Of The Sea':'Section=feature Note="TODO"',
+  'Aquatic Affinity':
+    'Section=ability,combat ' +
+    'Note=' +
+      '"Has a %{speed}\' swim Speed",' +
+      '"Has increased Wrath Of The Sea effects"',
+  'Circle Of The Sea Spells':
+    'Spells=' +
+      '"3:Fog Cloud","3:Gust Of Wind","3:Ray Of Frost","3:Shatter","3:Thunderwave",' +
+      '"5:Lightning Bolt","5:Water Breathing",' +
+      '"7:Control Water","7:Ice Storm",' +
+      '"9:Conjure Elemental","9:Hold Monster"',
+  'Oceanic Gifts':
+    'Section=combat ' +
+    'Note="Can manifest Wrath Of The Sea around a willing creature within 60\' or expend 2 uses of Wild Shape to manifest it around both a willing creature and self"',
+  'Stormborn':
+    'Section=ability,save ' +
+    'Note=' +
+      '"Has a %{speed}\' fly Speed while using Wrath Of The Sea",' +
+      '"Has resistance to cold, lightning, and thunder while using Wrath Of The Sea"',
+  'Wrath Of The Sea':
+    'Section=combat ' +
+    'Note="Can use a bonus action and expend a use of Wild Shape to create a %{combatNotes.aquaticAffinity?10:5}\' emanation for 10 min; can be used when created and as a bonus action each rd to inflict %{wisdomModifier>?1}d6 HP cold and a 15\' push (save Constitution negates; Huge and larger creatures are not pushed)"', 
   // Circle Of The Stars
   'Cosmic Omen':Tasha.FEATURES['Cosmic Omen'],
   'Full Of Stars':Tasha.FEATURES['Full Of Stars'],
@@ -978,6 +1017,11 @@ PHB5E2024.SPELLS_ADDED = {
   "Crusader's Mantle":PHB5E.SPELLS_ADDED["Crusader's Mantle"],
   'Dissonant Whispers':PHB5E.SPELLS_ADDED['Dissonant Whispers'],
   'Ensnaring Strike':PHB5E.SPELLS_ADDED['Ensnaring Strike'],
+  'Fount Of Moonlight':
+    'School=Evocation ' +
+    'Level=B4,D4 ' +
+    'Description=' +
+      '"Self emits a 20\' radius bright light, gains resistance to radiant, inflicts +2d6 HP radiant, and can use a reaction to inflict blindess on successful attackers until the end of the next turn (save Constitution negates) for concentration up to 10 min"',
   'Hunger Of Hadar':PHB5E.SPELLS_ADDED['Hunger Of Hadar'],
   'Mind Sliver':Tasha.SPELLS['Mind Sliver'],
   'Steel Wind Strike':Xanathar.SPELLS['Steel Wind Strike'],
@@ -988,11 +1032,7 @@ PHB5E2024.SPELLS_ADDED = {
 PHB5E2024.SPELLS_LEVELS_ADDED = {
   // TODO
 };
-PHB5E2024.SPELLS_RENAMED = {
-  'Black Tentacles':"Evard's Black Tentacles",
-  'Telepathic Bond':"Rary's Telepathic Bond"
-  // TODO
-};
+PHB5E2024.SPELLS_RENAMED = Object.assign({}, PHB5E.SPELLS_RENAMED);
 PHB5E2024.SPELLS = Object.assign({}, SRD5E2024.SPELLS, PHB5E2024.SPELLS_ADDED);
 for(let s in PHB5E2024.SPELLS_LEVELS_ADDED)
   PHB5E2024.SPELLS[s] =
