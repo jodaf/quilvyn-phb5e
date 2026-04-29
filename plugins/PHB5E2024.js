@@ -590,29 +590,71 @@ PHB5E2024.FEATURES_ADDED = {
 
   // Barbarian
   // Path Of The Wild Heart
-  'Animal Speaker':'Section=feature Note="TODO"',
-  'Aspect Of The Wilds':'Section=feature Note="TODO"',
-  'Nature Speaker':'Section=feature Note="TODO"',
-  'Power Of The Wilds':'Section=feature Note="TODO"',
-  'Rage Of The Wilds':'Section=feature Note="TODO"',
+  'Animal Speaker':
+    'Section=magic ' +
+    'Note="Can cast <i>Beast Sense</i> and <i>Speak With Animals</i> as rituals" ' +
+    'SpellAbility=Wisdom ' +
+    'Spells="Beast Sense","Speak With Animals"',
+  'Aspect Of The Wilds':
+    'Section=feature ' +
+    'Note="At the end of a long rest, gains a choice of %{features.Darkvision?\'+\':\'\'}60\' Darkvision or a %{speed}\' climb or swim Speed"',
+  'Nature Speaker':
+    'Section=magic ' +
+    'Note="Can cast <i>Commune With Nature</i> as rituals" ' +
+    'SpellAbility=Wisdom ' +
+    'Spells="Commune With Nature"',
+  'Power Of The Wilds':
+    'Section=combat ' +
+    'Note="Rage gives a choice of: a %{speed}\' fly Speed when unarmored; adjacent foe disadvantage when attacking anyone but self; melee hits inflict prone on a Large or smaller foe"',
+  'Rage Of The Wilds':
+    'Section=combat ' +
+    'Note="Rage gives a choice of: resistence to damage other than force, necrotic, psychic, and radiant; a Disengage and a Dash when entering rage and as a bonus action each rd during rage; ally advantage on attacks vs. foes within 5\' of self"',
   // Path Of The World Tree
-  'Battering Roots':'Section=feature Note="TODO"',
-  'Branches Of The Tree':'Section=feature Note="TODO"',
-  'Travel Along The Tree':'Section=feature Note="TODO"',
-  'Vitality Of The Tree':'Section=feature Note="TODO"',
+  'Battering Roots':
+    'Section=combat ' +
+    'Note="Has a +10\' reach with Heavy and Versatile melee weapons and can use the Push and Topple mastery properties with them along with the weapon-specific mastery property"',
+  'Branches Of The Tree':
+    'Section=combat ' +
+    'Note="R30\' While raging, can use a reaction at the start of a creature\'s turn to teleport it to a spot adjacent to self and to reduce its speed to 0 until the end of its turn (save DC %{8+strengthModifier+proficiencyBonus} Strength negates)"',
+  'Travel Along The Tree':
+    'Section=combat Note="Can teleport 60\' when entering rage and as a bonus action each rd during rage; can instead teleport 150\' along with 6 willing targets within 10\' once per rage"',
+  'Vitality Of The Tree':
+    'Section=combat ' +
+    'Note="Entering rage gives self %{levels.Barbarian} temporary hit points and, each rd, allows giving a creature within 10\' %{levels.Barbarian<9?2:levels.Barbarian<16?3:4}d6 temporary hit points until the end of the rage"',
   // Path Of The Zealot
-  'Divine Fury':'Section=feature Note="TODO"',
-  'Fanatical Focus':'Section=feature Note="TODO"',
-  'Rage Of The Gods':'Section=feature Note="TODO"',
-  'Warrior Of The Gods':'Section=feature Note="TODO"',
-  'Zealous Presence':'Section=feature Note="TODO"',
+  'Divine Fury':
+    'Section=combat ' +
+    'Note="Inflicts +1d6+{levels.Barbarian//2} HP of a choice of necrotic or radiant on the first foe hit each turn during rage"',
+  'Fanatical Focus':
+    'Section=save ' +
+    'Note="Can reroll a failed save with a +%{levels.Barbarian<9?2:levels.Barbarian<16?3:4} bonus once per rage"',
+  'Rage Of The Gods':
+    'Section=combat ' +
+    'Note="When entering rage, can gain a %{speed}\' fly Speed, resistance to necrotic, psychich, and radiant damage, and use of a reaction to give %{levels.Barbarian} hit points to a creature within 30\' when it is taken to 0 hit points"',
+  'Warrior Of The Gods':
+    'Section=combat ' +
+    'Note="Can use a bonus action to regain hit points from a pool of %{levels.Barbarian<6?4:levels.Barbarian<12?5:levels.Barbarian<17?6:7}d12; the pool refills after a long rest"',
+  'Zealous Presence':
+    'Section=combat ' +
+    'Note="R60\' Can use a bonus action to give targets advanting on attacks and saves until the start of the next turn once per long rest; can expend rage uses for additional uses"',
 
   // Bard
   // College Of Dance
-  'Dazzling Footwork':'Section=feature Note="TODO"',
-  'Inspiring Movement':'Section=feature Note="TODO"',
-  'Leading Evasion':'Section=feature Note="TODO"',
-  'Tandem Footwork':'Section=feature Note="TODO"',
+  'Dazzling Footwork':
+    'Section=combat,combat,skill ' +
+    'Note=' +
+      '"+%{charismaModifier} Armor Class with no armor or shield/Can use Dexterity for Unarmed Strikes",' +
+      '"Can make an Unarmed Strike as part of using a Bardic Inspiration for an action or reaction/Can inflict 1d%{bardicInspirationDie}+%{dexterityModifier} HP bludgeoning with Unarmed Strikes",' +
+      '"Has advantage on Performance that involves dancing"',
+  'Inspiring Movement':
+    'Section=combat ' +
+    'Note="Can use a reaction when a foe ends it turn within 5\' and expend a use of Bardic Inspiration to allow self and an ally within 30\' to move half Speed with out provoing oppotunity attacks"',
+  'Leading Evasion':
+    'Section=save ' +
+    'Note="Successful Dexterity saves yield no damage instead of half, and failures yield half damage; also applies to allies within 5\'"',
+  'Tandem Footwork':
+    'Section=combat ' +
+    'Note="Can expend a use of Bardic Inspiration to give self and allies within 30\' +1d%{bardicInspirationDie} initiative"',
   // College Of Glamour
   'Beguiling Magic':Xanathar.FEATURES['Enthralling Performance'],
   'Mantle Of Inspiration':Xanathar.FEATURES['Mantle Of Inspiration'],
@@ -620,7 +662,11 @@ PHB5E2024.FEATURES_ADDED = {
   'Unbreakable Majesty':Xanathar.FEATURES['Unbreakable Majesty'],
   // College Of Valor
   'Combat inspiration':PHB5E.FEATURES['Combat Inspiration'],
-  'Martial Training':'Section=feature Note="TODO"',
+  'Martial Training':
+    'Section=combat,magic ' +
+    'Note=' +
+      '"Weapon Proficiency (Martial Weapons)/Armor Training (Medium/Shield)",' +
+      '"Can use a simple or martial weapon as a spellcasting focus"',
   // Extra Attack as SRD5E2024
   'Battle Magic':PHB5E.FEATURES['Battle Magic'],
 
@@ -928,6 +974,7 @@ PHB5E2024.SKILLS = Object.assign({}, SRD5E2024.SKILLS);
 PHB5E2024.SPELLS_ADDED = {
   // TODO
   'Arms Of Hadar':PHB5E.SPELLS_ADDED['Arms Of Hadar'],
+  'Beast Sense':PHB5E.SPELLS_ADDED['Dissonant Whispers'],
   "Crusader's Mantle":PHB5E.SPELLS_ADDED["Crusader's Mantle"],
   'Dissonant Whispers':PHB5E.SPELLS_ADDED['Dissonant Whispers'],
   'Ensnaring Strike':PHB5E.SPELLS_ADDED['Ensnaring Strike'],
