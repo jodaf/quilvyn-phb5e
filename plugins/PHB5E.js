@@ -692,7 +692,7 @@ PHB5E.FEATURES_ADDED = {
   // College Of Valor
   'Battle Magic':
     'Section=combat ' +
-    'Note="Can use a bonus action to make a weapon attack after casting a spell"',
+    'Note="Can use a bonus action to make a weapon attack after casting a 1-action bard spell"',
   'Bonus Proficiencies (College Of Valor)':
     'Section=combat ' +
     'Note="Armor Proficiency (Medium; Shield)/Weapon Proficiency (Martial Weapons)"',

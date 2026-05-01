@@ -600,7 +600,7 @@ PHB5E2024.FEATURES_ADDED = {
     'Note="At the end of a long rest, gains a choice of %{features.Darkvision?\'+\':\'\'}60\' Darkvision or a %{speed}\' climb or swim Speed"',
   'Nature Speaker':
     'Section=magic ' +
-    'Note="Can cast <i>Commune With Nature</i> as rituals" ' +
+    'Note="Can cast <i>Commune With Nature</i> as a ritual" ' +
     'SpellAbility=Wisdom ' +
     'Spells="Commune With Nature"',
   'Power Of The Wilds':
@@ -608,11 +608,11 @@ PHB5E2024.FEATURES_ADDED = {
     'Note="Rage gives a choice of: a %{speed}\' fly Speed when unarmored; adjacent foe disadvantage when attacking anyone but self; melee hits inflict prone on a Large or smaller foe"',
   'Rage Of The Wilds':
     'Section=combat ' +
-    'Note="Rage gives a choice of: resistence to damage other than force, necrotic, psychic, and radiant; a Disengage and a Dash when entering rage and as a bonus action each rd during rage; ally advantage on attacks vs. foes within 5\' of self"',
+    'Note="Rage gives a choice of: resistence to damage other than force, necrotic, psychic, and radiant; a Disengage and a Dash when entering rage and as a bonus action each rd during rage; ally advantage on attacks vs. foes adjacent to self"',
   // Path Of The World Tree
   'Battering Roots':
     'Section=combat ' +
-    'Note="Has a +10\' reach with Heavy and Versatile melee weapons and can use the Push and Topple mastery properties with them along with the weapon-specific mastery property"',
+    'Note="Has a +10\' reach with Heavy and Versatile melee weapons and can use the Push and Topple mastery properties with them in addition to their usual mastery properties"',
   'Branches Of The Tree':
     'Section=combat ' +
     'Note="R30\' While raging, can use a reaction at the start of a creature\'s turn to teleport it to a spot adjacent to self and to reduce its speed to 0 until the end of its turn (save DC %{8+strengthModifier+proficiencyBonus} Strength negates)"',
@@ -620,45 +620,64 @@ PHB5E2024.FEATURES_ADDED = {
     'Section=combat Note="Can teleport 60\' when entering rage and as a bonus action each rd during rage; can instead teleport 150\' along with 6 willing targets within 10\' once per rage"',
   'Vitality Of The Tree':
     'Section=combat ' +
-    'Note="Entering rage gives self %{levels.Barbarian} temporary hit points and, each rd, allows giving a creature within 10\' %{levels.Barbarian<9?2:levels.Barbarian<16?3:4}d6 temporary hit points until the end of the rage"',
+    'Note="Entering rage gives self %{levels.Barbarian} temporary hit points and, each turn, allows giving a creature within 10\' %{levels.Barbarian<9?2:levels.Barbarian<16?3:4}d6 temporary hit points until the end of the rage"',
   // Path Of The Zealot
   'Divine Fury':Xanathar.FEATURES['Divine Fury'],
-  'Fanatical Focus':Xanathar.FEATURES['Fanatical Focus'],
+  'Fanatical Focus':
+    Xanathar.FEATURES['Fanatical Focus']
+    .replace('failed save', 'failed save with a +%{levels.Barbarian<9?2:levels.Barbarian<16?3:4} bonus'),
   'Rage Of The Gods':
     'Section=combat ' +
-    'Note="When entering rage, can gain a %{speed}\' fly Speed, resistance to necrotic, psychich, and radiant damage, and use of a reaction to give %{levels.Barbarian} hit points to a creature within 30\' when it is taken to 0 hit points"',
-  'Warrior Of The Gods':Xanathar.FEATURES['Warrior Of The Gods'],
-  'Zealous Presence':Xanathar.FEATURES['Zealous Presence'],
+    'Note="When entering rage, can gain a %{speed}\' fly Speed, resistance to necrotic, psychic, and radiant damage, and use of reactions to expend a use of Rage and give %{levels.Barbarian} hit points to a creature within 30\' when it is taken to 0 hit points, for 1 min once per long rest"',
+  'Warrior Of The Gods':
+    'Section=combat ' +
+    // changed effects
+    'Note="Can use a bonus action to regain hit points from a pool of %{levels.Barbarian<6?4:levels.Barbarian<12?5:levels.Barbarian<17?6:7}d12 that refills after a long rest"',
+  'Zealous Presence':
+    Xanathar.FEATURES['Zealous Presence']
+    .replace('long rest', 'long rest; can expend uses of Rage for additional uses'),
 
   // Bard
   // College Of Dance
   'Dazzling Footwork':
     'Section=combat,combat,skill ' +
     'Note=' +
-      '"+%{charismaModifier} Armor Class with no armor or shield/Can use Dexterity for Unarmed Strikes",' +
-      '"Can make an Unarmed Strike as part of using a Bardic Inspiration for an action or reaction/Can inflict 1d%{bardicInspirationDie}+%{dexterityModifier} HP bludgeoning with Unarmed Strikes",' +
-      '"Has advantage on Performance that involves dancing"',
+      '"When unarmored and not using a shield, gains +%{charismaModifier} Armor Class and can use Dexterity for unarmed strikes that inflict increased damage",' +
+      '"When unarmored and not using a shield, can make an unarmed strike as part of using Bardic Inspiration for an action or reaction",' +
+      '"When unarmored and not using a shield, has advantage on Performance checks that involve dancing"',
   'Inspiring Movement':
     'Section=combat ' +
-    'Note="Can use a reaction when a foe ends it turn within 5\' and expend a use of Bardic Inspiration to allow self and an ally within 30\' to move half Speed with out provoing oppotunity attacks"',
+    'Note="When a foe ends its turn within 5\', can use a reaction and expend a use of Bardic Inspiration to allow self and an ally within 30\' to move half Speed with out provoking opportunity attacks"',
   'Leading Evasion':
     'Section=save ' +
-    'Note="Successful Dexterity saves yield no damage instead of half, and failures yield half damage; also applies to allies within 5\'"',
+    'Note="Successful Dexterity saves yield no damage instead of half, and failures yield half damage; can share this benefit with adjacent allies"',
   'Tandem Footwork':
     'Section=combat ' +
     'Note="Can expend a use of Bardic Inspiration to give self and allies within 30\' +1d%{bardicInspirationDie} initiative"',
   // College Of Glamour
-  'Beguiling Magic':Xanathar.FEATURES['Enthralling Performance'],
-  'Mantle Of Inspiration':Xanathar.FEATURES['Mantle Of Inspiration'],
-  'Mantle Of Majesty':Xanathar.FEATURES['Mantle Of Majesty'],
-  'Unbreakable Majesty':Xanathar.FEATURES['Unbreakable Majesty'],
+  'Beguiling Magic':
+    'Section=magic,magic ' +
+    'Note=' +
+      '"Knows the <i>Charm Person</i> and <i>Mirror Image</i> spells",' +
+      '"Casting an enchantment or illusion spell allows inflicting a choice of charmed or frightened on a target within 60\' (save Wisdom negates) once per long rest; can expend uses of Bardic Inspiration for additional uses" ' +
+      'Spells="Charm Person","Mirror Image"',
+  'Mantle Of Inspiration':
+    Xanathar.FEATURES['Mantle Of Inspiration']
+    .replace(/%{[^}]*. temporary/, '1d%{bardicInspirationDie} * 2 temporary'),
+  'Mantle Of Majesty':
+    Xanathar.FEATURES['Mantle Of Majesty']
+    .replace('long rest', 'long rest; can expend level 3+ spell slots for additional uses'),
+  'Unbreakable Majesty':
+    'Section=combat ' +
+    // changed effects
+    'Note="Can use a bonus action to cause foes attacking self to miss with their first attack each rd (save DC %{spellDifficultyClass.B} Charisma negates) for 1 min once per short rest"',
   // College Of Valor
-  'Combat inspiration':PHB5E.FEATURES['Combat Inspiration'],
+  'Combat Inspiration':PHB5E.FEATURES['Combat Inspiration'],
   'Martial Training':
     'Section=combat,magic ' +
     'Note=' +
-      '"Weapon Proficiency (Martial Weapons)/Armor Training (Medium/Shield)",' +
-      '"Can use a simple or martial weapon as a spellcasting focus"',
+      '"Weapon Proficiency (Martial Weapons)/Armor Training (Medium; Shield)",' +
+      '"Can use a simple or martial weapon as a bard spellcasting focus"',
   // Extra Attack as SRD5E2024
   'Battle Magic':PHB5E.FEATURES['Battle Magic'],
 
@@ -789,7 +808,7 @@ PHB5E2024.FEATURES_ADDED = {
   'Cloak Of Shadows':PHB5E.FEATURES['Cloak Of Shadows (Way Of Shadow)'],
   'Improved Shadow Step':
     'Section=combat ' +
-    'Note="Can expend 1 focus point to Shadow Step between lighted areas and make an Unarmed Strike after teleporting"',
+    'Note="Can expend 1 focus point to Shadow Step between lighted areas and make an unarmed strike after teleporting"',
   'Shadow Arts':PHB5E.FEATURES['Shadow Arts'],
   'Shadow Step':PHB5E.FEATURES['Shadow Step'],
   // Way Of The Elements
@@ -800,7 +819,7 @@ PHB5E2024.FEATURES_ADDED = {
   'Elemental Epitome':
     'Section=combat,save ' +
       'Note=' +
-        '"Step Of The Wind gives +20 Speed until the end of the turn and inflicts 1d%{combatNotes.martialArts} HP of a choice of acid, cold, fire, lightning, or thunder to targets passed within 5\'/Unarmed Strike inflicts +1d%{combatNotes.martialArts} HP once per turn while using Elemental Attunement",' +
+        '"Step Of The Wind gives +20 Speed until the end of the turn and inflicts 1d%{combatNotes.martialArts} HP of a choice of acid, cold, fire, lightning, or thunder to targets passed within 5\'/Unarmed strike inflicts +1d%{combatNotes.martialArts} HP once per turn while using Elemental Attunement",' +
         '"Elemental Attunement also gives resistance to a choice of acid, cold, fire, lightning, or thunder"',
   'Manipulate Elements':
     'Section=magic ' +
@@ -1113,8 +1132,41 @@ PHB5E2024.classRulesExtra = function(rules, name) {
 
   if(name == 'Bard') {
 
+    rules.defineRule('armorClass', 'combatNotes.dazzlingFootwork.1', '+', null);
+    rules.defineRule('attackBonus.Unarmed Strike',
+      'combatNotes.dazzlingFootwork.2', '+', null
+    );
+    rules.defineRule('damageBonus.Unarmed Strike',
+      'combatNotes.dazzlingFootwork.2', '+', null
+    );
     rules.defineRule
       ('combatNotes.extraAttack', 'bardFeatures.Extra Attack', '^=', '2');
+    rules.defineRule('combatNotes.dazzlingFootwork.1',
+      'combatNotes.dazzlingFootwork', '?', null,
+      'armor', '?', 'source=="None"',
+      'shield', '?', 'source=="None"',
+      'charismaModifier', '=', null
+    );
+    rules.defineRule('combatNotes.dazzlingFootwork.2',
+      'combatNotes.dazzlingFootwork', '?', null,
+      'armor', '?', 'source=="None"',
+      'shield', '?', 'source=="None"',
+      'dexterityModifier', '=', null,
+      'strengthModifier', '+', '-source',
+      '', '^', '0'
+    );
+    rules.defineRule('combatNotes.dazzlingFootwork.3',
+      'combatNotes.dazzlingFootwork', '?', null,
+      'armor', '?', 'source=="None"',
+      'shield', '?', 'source=="None"',
+      'bardicInspirationDie', '=', '"1d" + source'
+    );
+    rules.defineRule('spells.Charm Person',
+      'magicNotes.beguilingMagic', '=', 'null' // italics
+    );
+    // TODO multiclass bard/monk? both increase unarmed strike damage
+    rules.defineRule
+      ('weapons.Unarmed Strike.2', 'combatNotes.dazzlingFootwork.3', '=', null);
 
   } else if(name == 'Druid') {
 
