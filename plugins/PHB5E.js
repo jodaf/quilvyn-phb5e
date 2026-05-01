@@ -736,9 +736,7 @@ PHB5E.FEATURES_ADDED = {
   'Corona Of Light':
     'Section=magic ' +
     'Note="Can use an action to emit a 60\' bright light that inflicts foe disadvantage on saves vs. fire and radiant spells for 1 min"',
-  'Improved Flare':
-    'Section=combat ' +
-    'Note="R30\' Can use Warding Flare to protect another creature"',
+  'Improved Flare':'Section=combat Note="Has increased Warding Flare effects"',
   'Light Domain':
     'Spells=' +
       '"1:Burning Hands","1:Faerie Fire",' +
@@ -749,10 +747,10 @@ PHB5E.FEATURES_ADDED = {
   // Potent Spellcasting as above
   'Radiance Of The Dawn':
     'Section=magic ' +
-    'Note="R30\' Can use Channel Divinity to dispel magical darkness and to inflict 2d10+%{levels.Cleric} HP radiant (save Constitution half) on foes"',
+    'Note="R30\' Can use Channel Divinity to dispel magical darkness and to inflict 2d10+%{levels.Cleric} HP radiant (save Constitution half) on targets"',
   'Warding Flare':
     'Section=combat ' +
-    'Note="R30\' Can use a reaction to inflict disadvantage on a foe attack %{wisdomModifier>1?wisdomModifier+\' times\':\'once\'} per long rest"',
+    'Note="R30\' Can use a reaction to inflict disadvantage on a foe attack%{combatNotes.improvedFlare?\'\':\' vs. self\'} %{wisdomModifier>1?wisdomModifier+\' times\':\'once\'} per long rest"',
   // Nature Domain
   'Acolyte Of Nature':
     'Section=magic,skill ' +
@@ -799,16 +797,16 @@ PHB5E.FEATURES_ADDED = {
   // Trickery Domain
   'Blessing Of The Trickster':
     'Section=magic ' +
-    'Note="Touch gives advantage on Stealth for 1 hr or until given to another target"',
+    'Note="Touched gains advantage on Stealth for 1 hr or until given to another target"',
   'Cloak Of Shadows (Trickery Domain)':
     'Section=magic ' +
     'Note="Can use Channel Divinity to make self invisible until the end of the next turn; attacking or casting ends"',
   // Divine Strike as above
   'Improved Duplicity':
-    'Section=combat Note="Invoke Duplicity creates 4 duplicates"',
+    'Section=combat Note="Has increased Invoke Duplicity effects"',
   'Invoke Duplicity':
     'Section=combat ' +
-    'Note="R30\' Can use Channel Divinity to create %{combatNotes.improvedDuplicity?\'4 illusionary duplicates\':\'1 illusionary duplicate\'}, moving %{combatNotes.improvedDuplicity?\'each\':\'it\'} up to 30\' each rd to a maximum of 120\' away, gaining advantage on attacks when self and duplicate are each within 5\' of the target and allowing remote spellcasting for concentration up to 1 min"',
+    'Note="R30\' Can use Channel Divinity to create %{combatNotes.improvedDuplicity?\'4 illusionary duplicates\':\'an illusionary duplicate\'} for concentration up to 1 min, gaining the ability to use %{combatNotes.improvedDuplicity?\'them\':\'it\'} for remote spellcasting and advantage on attacks when self and %{combatNotes.improvedDuplicity?\'a\':\'the\'} duplicate are each adjacent to the target; can use a bonus action each rd to move %{combatNotes.improvedDuplicity?\'each\':\'the\'} duplicate up to 30\', to a maximum of 120\' away"',
   'Trickery Domain':
     'Spells=' +
       '"1:Charm Person","1:Disguise Self",' +
@@ -1828,7 +1826,7 @@ for(let s in PHB5E.SPELLS_RENAMED) {
   delete PHB5E.SPELLS[s];
 }
 PHB5E.TOOLS_ADDED = {
-  'Forgery Kit':
+  'Disguise Kit':
     SRD5E.TOOLS['Disguise Kit']
     .replace("Artisan's Tools", 'General'),
   'Forgery Kit':
@@ -1995,9 +1993,6 @@ PHB5E.classRulesExtra = function(rules, name) {
 
     rules.defineRule // Italics noop
       ('magicNotes.portent', 'magicNotes.greaterPortent', '+', 'null');
-    rules.defineRule('combatNotes.invokeDuplicity', // Italics noop
-      'combatNotes.improvedDuplicity', '+', 'null'
-    );
 
   }
 
@@ -2008,8 +2003,6 @@ PHB5E.classRulesExtra = function(rules, name) {
  * derived directly from the attributes passed to featRules.
  */
 PHB5E.featRulesExtra = function(rules, name) {
-
-  let matchInfo;
 
   if(name.match(/^Magic\sInitiate\s\(.*\)$/)) {
     let c = name.replace('Magic Initiate (', '').replace(')', '');
@@ -2047,7 +2040,7 @@ PHB5E.featRulesExtra = function(rules, name) {
     );
   } else if(name == 'Tavern Brawler') {
     rules.defineRule
-      ('weapons.Unarmed.2', 'combatNotes.tavernBrawler', '^=', '"1d4"');
+      ('weapons.Unarmed Strike.2', 'combatNotes.tavernBrawler', '^=', '"1d4"');
   } else if(name == 'Weapon Master') {
     rules.defineRule
       ('weaponChoiceCount', 'combatNotes.weaponMaster', '+=', '4');
