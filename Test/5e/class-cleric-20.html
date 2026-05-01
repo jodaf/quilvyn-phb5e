@@ -112,8 +112,6 @@ var attributes = {
     </tr></table>
 </td>
   </tr><tr style="text-align:center">
-    <td><b>Skill Proficiency</b>: History; Insight; Medicine; Persuasion; Religion; Sleight Of Hand</td>
-  </tr><tr style="text-align:center">
     <td><b>Skills</b>:     <table id="Skills" style="width:100%">
     <col style="width:33%"/>
     <col style="width:33%"/>
@@ -144,6 +142,8 @@ var attributes = {
       <td>Survival: (wis) +4</td>
     </tr></table>
 </td>
+  </tr><tr style="text-align:center">
+    <td><b>Skill Proficiency</b>: History; Insight; Medicine; Persuasion; Religion; Sleight Of Hand</td>
   </tr><tr style="text-align:center">
     <td><b>Languages</b>: Common; Draconic; Dwarvish; Gnomish; Orc; Sylvan</td>
   </tr><tr style="text-align:center">
@@ -184,7 +184,7 @@ var attributes = {
       <tr style="text-align:center">
         <td><b>Armor</b>: Studded Leather</td>
         <td><b>Shield</b>: None</td>
-        <td><b>Weapons</b>: Handaxe (+7 1d6+1 S R20/60); Light Crossbow (+4 1d8-2 P R80/320); Mace (+7 1d6+1 B); Unarmed (+7 1+1 B)</td>
+        <td><b>Weapons</b>: Handaxe (+7 1d6+1 S R20/60); Light Crossbow (+4 1d8-2 P R80/320); Mace (+7 1d6+1 B); Unarmed Strike (+7 1+1 B)</td>
       </tr></table>
 </td>
     </tr><tr style="text-align:center">
@@ -204,7 +204,9 @@ var attributes = {
       </tr><tr style="text-align:center">
         <td><i>Dexterity Damage Adjustment: -2</i></td>
       </tr><tr style="text-align:center">
-        <td><i>Improved Duplicity: Invoke Duplicity creates 4 duplicates</i></td>
+        <td><i>Improved Duplicity: Has increased Invoke Duplicity effects</i></td>
+      </tr><tr style="text-align:center">
+        <td><i>Improved Flare: Has increased Warding Flare effects</i></td>
       </tr><tr style="text-align:center">
         <td><i>Strength Attack Adjustment: +1</i></td>
       </tr><tr style="text-align:center">
@@ -222,9 +224,7 @@ var attributes = {
       </tr><tr style="text-align:center">
         <td>Guided Strike: Can use Channel Divinity to give self +10 attack</td>
       </tr><tr style="text-align:center">
-        <td>Improved Flare: R30' Can use Warding Flare to protect another creature</td>
-      </tr><tr style="text-align:center">
-        <td>Invoke Duplicity: R30' Can use Channel Divinity to create 4 illusionary duplicates, moving each up to 30' each rd to a maximum of 120' away, gaining advantage on attacks when self and duplicate are each within 5' of the target and allowing remote spellcasting for concentration up to 1 min</td>
+        <td>Invoke Duplicity: R30' Can use Channel Divinity to create 4 illusionary duplicates for concentration up to 1 min, gaining the ability to use them for remote spellcasting and advantage on attacks when self and a duplicate are each adjacent to the target; can use a bonus action each rd to move each duplicate up to 30', to a maximum of 120' away</td>
       </tr><tr style="text-align:center">
         <td>Turn Undead: R30' Can use Channel Divinity to make undead flee (save DC 18 Wisdom negates) for 1 min or until damaged</td>
       </tr><tr style="text-align:center">
@@ -483,7 +483,7 @@ var attributes = {
     </tr><tr style="text-align:center">
       <td>Blessed Healer: Casting a healing spell restores 2 + spell level hit points to self</td>
     </tr><tr style="text-align:center">
-      <td>Blessing Of The Trickster: Touch gives advantage on Stealth for 1 hr or until given to another target</td>
+      <td>Blessing Of The Trickster: Touched gains advantage on Stealth for 1 hr or until given to another target</td>
     </tr><tr style="text-align:center">
       <td>Bonus Cantrip (Light Domain): Knows the <i>Light</i> cantrip</td>
     </tr><tr style="text-align:center">
@@ -511,9 +511,9 @@ var attributes = {
     </tr><tr style="text-align:center">
       <td>Potent Spellcasting: Cleric cantrips inflict +4 HP</td>
     </tr><tr style="text-align:center">
-      <td>Preserve Life: R30' Can use Channel Divinity to restore 100 hit points among targets, raising each to up to half its maximum hit points</td>
+      <td>Preserve Life: R30' Can use Channel Divinity to restore 100 hit points among targets, raising each to up to half its hit point maximum</td>
     </tr><tr style="text-align:center">
-      <td>Radiance Of The Dawn: R30' Can use Channel Divinity to dispel magical darkness and to inflict 2d10+20 HP radiant (save Constitution half) on foes</td>
+      <td>Radiance Of The Dawn: R30' Can use Channel Divinity to dispel magical darkness and to inflict 2d10+20 HP radiant (save Constitution half) on targets</td>
     </tr><tr style="text-align:center">
       <td>Read Thoughts: R60' Can use Channel Divinity to read the target's thoughts (save Wisdom negates and blocks additional attempts on the target until a long rest) for 1 min; success allows casting <i>Suggestion</i> on the target with no save</td>
     </tr><tr style="text-align:center">
