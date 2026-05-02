@@ -779,9 +779,9 @@ PHB5E2024.FEATURES_ADDED = {
       '"5:Lightning Bolt","5:Water Breathing",' +
       '"7:Control Water","7:Ice Storm",' +
       '"9:Conjure Elemental","9:Hold Monster"',
-  'Oceanic Gifts':
+  'Oceanic Gift':
     'Section=combat ' +
-    'Note="Can manifest Wrath Of The Sea around a willing creature within 60\' or expend 2 uses of Wild Shape to manifest it around both a willing creature and self"',
+    'Note="Can manifest Wrath Of The Sea around and give its benefits to a willing creature within 60\' or expend 2 uses of Wild Shape to manifest it around both a willing creature and self"',
   'Stormborn':
     'Section=ability,save ' +
     'Note=' +
@@ -789,11 +789,15 @@ PHB5E2024.FEATURES_ADDED = {
       '"Has resistance to cold, lightning, and thunder while using Wrath Of The Sea"',
   'Wrath Of The Sea':
     'Section=combat ' +
-    'Note="Can use a bonus action and expend a use of Wild Shape to create a %{combatNotes.aquaticAffinity?10:5}\' emanation for 10 min; can be used when created and as a bonus action each rd to inflict %{wisdomModifier>?1}d6 HP cold and a 15\' push (save Constitution negates; Huge and larger creatures are not pushed)"', 
+    'Note="Can use a bonus action and expend a use of Wild Shape to create a %{combatNotes.aquaticAffinity?10:5}\' emanation for 10 min; can be used when created and as a bonus action each rd to inflict on a target %{wisdomModifier>?1}d6 HP cold and a 15\' push (save Constitution negates; Huge and larger creatures are not pushed)"', 
   // Circle Of The Stars
-  'Cosmic Omen':Tasha.FEATURES['Cosmic Omen'],
+  'Cosmic Omen':
+    Tasha.FEATURES['Cosmic Omen']
+    .replace('%{proficiencyBonus} times', "%{wisdomModifier>1?wisdomModifier+' times':'once'}"),
   'Full Of Stars':Tasha.FEATURES['Full Of Stars'],
-  'Star Map':Tasha.FEATURES['Star Map'],
+  'Star Map':
+    Tasha.FEATURES['Star Map']
+    .replace('%{proficiencyBonus} times', "%{wisdomModifier>1?wisdomModifier+' times':'once'}"),
   'Starry Form':Tasha.FEATURES['Starry Form'],
   'Twinkling Constellations':Tasha.FEATURES['Twinkling Constellations'],
 
