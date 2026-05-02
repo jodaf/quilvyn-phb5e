@@ -817,7 +817,7 @@ PHB5E.FEATURES_ADDED = {
   // War Domain
   'Avatar Of Battle':
     'Section=save ' +
-    'Note="Has resistance to bludgeoning, piercing, and slashing damage from nonmagical weapons"',
+    'Note="Has resistance to bludgeoning, piercing, and slashing from nonmagical attacks"',
   'Bonus Proficiencies (War Domain)':
     'Section=combat ' +
     'Note="Armor Proficiency (Heavy)/Weapon Proficiency (Martial Weapons)"',
@@ -836,7 +836,7 @@ PHB5E.FEATURES_ADDED = {
     'Note="R30\' Can use a reaction and Channel Divinity to give an ally +10 attack"',
   'War Priest':
     'Section=combat ' +
-    'Note="Can use a bonus attack to make an extra weapon attack %{wisdomModifier>1?wisdomModifier+\' times\':\'once\'} per long rest"',
+    'Note="Can use a bonus action to make an extra weapon attack %{wisdomModifier>1?wisdomModifier+\' times\':\'once\'} per long rest"',
 
   // Druid
   // Circle Of The Land
@@ -847,7 +847,7 @@ PHB5E.FEATURES_ADDED = {
       '"7:Greater Invisibility","7:Stone Shape",' +
       '"9:Cloudkill","9:Insect Plague"',
   // Circle Of The Moon
-  'Circle Forms':'Section=magic Note="Can Wild Shape into a CR %V creature"',
+  'Circle Forms':'Section=magic Note="Has increased Wild Shape effects"',
   'Combat Wild Shape':
     'Section=magic ' +
     'Note=' +
@@ -1897,11 +1897,12 @@ PHB5E.classRulesExtra = function(rules, name) {
 
   } else if(name == 'Druid') {
 
-    rules.defineRule
-      ('magicNotes.wildShape', 'magicNotes.circleForms', '=', null);
-    rules.defineRule('magicNotes.circleForms',
+    rules.defineRule('magicNotes.circleForms.1',
+      'features.Circle Forms', '?', null,
       classLevel, '=', 'source < 6 ? 1 : Math.floor(source / 3)'
     );
+    rules.defineRule
+      ('magicNotes.wildShape', 'magicNotes.circleForms.1', '=', null);
 
   } else if(name == 'Fighter') {
 
@@ -1934,8 +1935,6 @@ PHB5E.classRulesExtra = function(rules, name) {
       classLevel, '=', 'source<18 ? 10 : 12'
     );
     rules.defineRule('combatNotes.tripAttack', 'maneuverSaveDC', '=', null);
-    rules.defineRule // Italics noop
-      ('combatNotes.warMagic', 'combatNotes.improvedWarMagic', '+', 'null');
     rules.defineRule('selectableFeatureCount.Fighter (Maneuver)',
       'combatNotes.combatSuperiority.2', '=', null
     );
@@ -1988,11 +1987,6 @@ PHB5E.classRulesExtra = function(rules, name) {
       ('casterLevels.W', 'casterLevels.Arcane Trickster', '^=', null);
     rules.defineRule
       ('magicNotes.spellcasting', 'features.Arcane Trickster', '=', '"Wizard"');
-
-  } else if(name == 'Wizard') {
-
-    rules.defineRule // Italics noop
-      ('magicNotes.portent', 'magicNotes.greaterPortent', '+', 'null');
 
   }
 

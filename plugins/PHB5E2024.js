@@ -612,7 +612,7 @@ PHB5E2024.FEATURES_ADDED = {
   // Path Of The World Tree
   'Battering Roots':
     'Section=combat ' +
-    'Note="Has a +10\' reach with Heavy and Versatile melee weapons and can use the Push and Topple mastery properties with them in addition to their usual mastery properties"',
+    'Note="Has a +10\' reach with heavy and versatile melee weapons and can use the Push and Topple mastery properties with them in addition to their usual mastery properties"',
   'Branches Of The Tree':
     'Section=combat ' +
     'Note="R30\' While raging, can use a reaction at the start of a creature\'s turn to teleport it to a spot adjacent to self and to reduce its speed to 0 until the end of its turn (save DC %{8+strengthModifier+proficiencyBonus} Strength negates)"',
@@ -628,7 +628,7 @@ PHB5E2024.FEATURES_ADDED = {
     .replace('failed save', 'failed save with a +%{levels.Barbarian<9?2:levels.Barbarian<16?3:4} bonus'),
   'Rage Of The Gods':
     'Section=combat ' +
-    'Note="When entering rage, can gain a %{speed}\' fly Speed, resistance to necrotic, psychic, and radiant damage, and use of reactions to expend a use of Rage and give %{levels.Barbarian} hit points to a creature within 30\' when it is taken to 0 hit points, for 1 min once per long rest"',
+    'Note="When entering rage, can gain a %{speed}\' fly Speed, resistance to necrotic, psychic, and radiant damage, and reactions that expend a use of Rage to restore %{levels.Barbarian} hit points to a creature within 30\' when it is taken to 0 hit points, for 1 min once per long rest"',
   'Warrior Of The Gods':
     'Section=combat ' +
     // changed effects
@@ -647,7 +647,7 @@ PHB5E2024.FEATURES_ADDED = {
       '"When unarmored and not using a shield, has advantage on Performance checks that involve dancing"',
   'Inspiring Movement':
     'Section=combat ' +
-    'Note="When a foe ends its turn within 5\', can use a reaction and expend a use of Bardic Inspiration to allow self and an ally within 30\' to move half Speed with out provoking opportunity attacks"',
+    'Note="When a foe ends its turn within 5\', can use a reaction and expend a use of Bardic Inspiration to allow self and an ally within 30\' to move half Speed without provoking opportunity attacks"',
   'Leading Evasion':
     'Section=save ' +
     'Note="Successful Dexterity saves yield no damage instead of half, and failures yield half damage; can share this benefit with adjacent allies"',
@@ -656,10 +656,8 @@ PHB5E2024.FEATURES_ADDED = {
     'Note="Can expend a use of Bardic Inspiration to give self and allies within 30\' +1d%{bardicInspirationDie} initiative"',
   // College Of Glamour
   'Beguiling Magic':
-    'Section=magic,magic ' +
-    'Note=' +
-      '"Knows the <i>Charm Person</i> and <i>Mirror Image</i> spells",' +
-      '"Casting an enchantment or illusion spell allows inflicting a choice of charmed or frightened on a target within 60\' (save Wisdom negates) once per long rest; can expend uses of Bardic Inspiration for additional uses" ' +
+    'Section=magic ' +
+    'Note="Casting an enchantment or illusion spell allows inflicting a choice of charmed or frightened on a target within 60\' (save Wisdom negates) once per long rest; can expend uses of Bardic Inspiration for additional uses" ' +
       'Spells="Charm Person","Mirror Image"',
   'Mantle Of Inspiration':
     Xanathar.FEATURES['Mantle Of Inspiration']
@@ -683,42 +681,71 @@ PHB5E2024.FEATURES_ADDED = {
 
   // Cleric
   // Light Domain
-  'Corona Of Light':PHB5E.FEATURES['Corona Of Light'],
+  'Corona Of Light':
+    PHB5E.FEATURES['Corona Of Light']
+    .replace('fire', 'Radiance Of The Dawn and fire')
+    .replace('1 min', "1 min %{wisdomModifier>1?wisdomModifier+' times':'once'} per long rest"),
   'Improved Warding Flare':PHB5E.FEATURES['Improved Flare'],
   'Light Domain Spells':PHB5E.FEATURES['Light Domain']
-    .replace('1:', '3:')
+    .replaceAll('1:', '3:')
+    .replace('Flaming Sphere', 'See Invisibility')
     .replace('Guardian Of Faith', 'Arcane Eye'),
   'Radiance Of The Dawn':PHB5E.FEATURES['Radiance Of The Dawn'],
-  'Warding Flare':PHB5E.FEATURES['Warding Flare'],
+  'Warding Flare':
+    'Section=combat ' +
+    // changed effects
+    'Note="R30\' Can use a reaction to inflict disadvantage on a foe attack%{combatNotes.improvedWardingFlare?\' and give the attack target 2d6+\'+wisdomModifier+\' temporary hit points\':\'\'} %{wisdomModifier>1?wisdomModifier+\' times\':\'once\'} per %{combatNotes.improvedWardingFlare?\'short\':\'long\'} rest"',
   // Trickery Domain
-  'Blessing Of The Trickster':PHB5E.FEATURES['Blessing Of The Trickster'],
-  'Improved Duplicity':PHB5E.FEATURES['Improved Duplicity'],
-  'Invoke Duplicity':PHB5E.FEATURES['Invoke Duplicity'],
+  'Blessing Of The Trickster':
+    PHB5E.FEATURES['Blessing Of The Trickster']
+    .replace('Touched', "R30' Target")
+    .replace('for 1 hr', 'until next long rest'),
+  'Improved Duplicity':
+    'Section=combat ' +
+    // changed effects
+    'Note="Self and allies have advantage on attacks vs. a foe within 5\' of the Invoke Duplicity duplicate, and a target adjacent to the duplicate regains %{levels.Cleric} hit points when the effect ends"',
+  'Invoke Duplicity':
+    PHB5E.FEATURES['Invoke Duplicity']
+    .replaceAll('improvedDuplicity', 'null'), // supress Improved effects
   'Trickery Domain Spells':PHB5E.FEATURES['Trickery Domain']
-    .replace('1:', '3:')
-    .replace('Invisibility', 'Pass Without Trace')
+    .replaceAll('1:', '3:')
+    .replace('Mirror Image', 'Invisibility')
     .replace('Blink', 'Hypnotic Pattern')
-    .replace('Nondetection', 'Dispel Magic')
+    .replace('Dispel Magic', 'Nondetection')
     .replace('Polymorph', 'Confusion'),
   "Trickster's Transposition":
     'Section=combat ' +
-    'Note="Can swap places with a duplicate when creating or moving it"',
+    'Note="Can swap places with an Invoke Duplicity duplicate when creating or moving it"',
   // War Domain
-  'Avatar Of Battle':PHB5E.FEATURES['Avatar Of Battle'],
-  'Guided Strike':PHB5E.FEATURES['Guided Strike'],
+  'Avatar Of Battle':
+    PHB5E.FEATURES['Avatar Of Battle']
+    .replace(' from nonmagical attacks', ''),
+  'Guided Strike':
+    'Section=combat ' +
+    // changed effects
+    'Note="Can use Channel Divinity after a failed attack to add +10 to the roll, or as a reaction to add +10 to a failed attack roll of an ally within 30\'"',
   'War Domain Spells':PHB5E.FEATURES['War Domain']
     .replace('1:', '3:')
     .replace('Divine Favor', 'Guiding Bolt')
     .replace('Stoneskin', 'Fire Shield')
     .replace('Flame Strike', 'Steel Wind Strike'),
-  'War Priest':PHB5E.FEATURES['War Priest'],
-  "War God's Blessing":PHB5E.FEATURES["War God's Blessing"],
+  'War Priest':
+    PHB5E.FEATURES['War Priest']
+    .replace('weapon attack', 'weapon attack or unarmed strike')
+    .replace('long rest', 'short rest'),
+  "War God's Blessing":
+    // changed effects
+    'Section=magic ' +
+    'Note="Can use Channel Divinity to cast <i>Shield Of Faith</i> or <i>Spiritual Weapon</i>, lasting 1 min, without expending a spell slot"',
 
   // Druid
   // Circle Of The Moon
   'Circle Forms':
-    PHB5E.FEATURES['Circle Forms']
-    .replace('creature', 'creature with Armor Class %{13+wisdomModifier} and %{levels.Druid*3} temporary hit points'),
+    'Section=magic,magic ' +
+    // changed effects
+    'Note=' +
+      '"Has increaased Wild Shape effects",' +
+      '"Wild Shape form has an Armor Class of at least %{13+wisdomModifier}"',
   'Circle Of The Moon Spells':
     'Section=magic ' +
     'Note="Can cast Circle Of The Moon Spells while using Wild Shape", ' +
@@ -739,7 +766,7 @@ PHB5E2024.FEATURES_ADDED = {
       '"Can inflict +2d10 HP radiant on an attack once per turn while in Wild Shape"',
   'Moonlight Step':
     'Section=combat ' +
-    'Note="Can use a bonus action to teleport 30\'%{combatNotes.lunarForm?\\", optionally taking along a willing creature within 30\',\\":\'\'} and gain advantage on the next attack before the end of the turn %{wisdomModifier>1?wisdomModifier+\' times\':\'once\'} per long rest; can expend level 2+ spell slots for additional uses"',
+    'Note="Can use a bonus action to teleport 30\'%{combatNotes.lunarForm?\\", optionally taking along a willing creature within 10\',\\":\'\'} and gain advantage on the next attack before the end of the turn %{wisdomModifier>1?wisdomModifier+\' times\':\'once\'} per long rest; can expend level 2+ spell slots for additional uses"',
   // Circle Of The Sea
   'Aquatic Affinity':
     'Section=ability,combat ' +
@@ -1077,7 +1104,7 @@ PHB5E2024.SKILLS = Object.assign({}, SRD5E2024.SKILLS);
 PHB5E2024.SPELLS_ADDED = {
   // TODO
   'Arms Of Hadar':PHB5E.SPELLS_ADDED['Arms Of Hadar'],
-  'Beast Sense':PHB5E.SPELLS_ADDED['Dissonant Whispers'],
+  'Beast Sense':PHB5E.SPELLS_ADDED['Beast Sense'],
   "Crusader's Mantle":PHB5E.SPELLS_ADDED["Crusader's Mantle"],
   'Dissonant Whispers':PHB5E.SPELLS_ADDED['Dissonant Whispers'],
   'Ensnaring Strike':PHB5E.SPELLS_ADDED['Ensnaring Strike'],
@@ -1161,20 +1188,20 @@ PHB5E2024.classRulesExtra = function(rules, name) {
       'shield', '?', 'source=="None"',
       'bardicInspirationDie', '=', '"1d" + source'
     );
-    rules.defineRule('spells.Charm Person',
-      'magicNotes.beguilingMagic', '=', 'null' // italics
-    );
     // TODO multiclass bard/monk? both increase unarmed strike damage
     rules.defineRule
       ('weapons.Unarmed Strike.2', 'combatNotes.dazzlingFootwork.3', '=', null);
 
   } else if(name == 'Druid') {
 
-    rules.defineRule
-      ('magicNotes.wildShape', 'magicNotes.circleForms', '=', null);
-    rules.defineRule('magicNotes.circleForms',
+    rules.defineRule('magicNotes.circleForms.1',
+      'features.Circle Forms', '?', null,
       classLevel, '=', 'source < 6 ? 1 : Math.floor(source / 3)'
     );
+    rules.defineRule
+      ('magicNotes.wildShape', 'magicNotes.circleForms.1', '=', null);
+    rules.defineRule
+      ('magicNotes.wildShape.1', 'magicNotes.circleForms', '*', '3');
 
   } else if(name == 'Fighter') {
 
@@ -1205,8 +1232,6 @@ PHB5E2024.classRulesExtra = function(rules, name) {
       'battleMasterLevel', '=', 'source<7 ? 3 : source<10 ? 5 : source<15 ? 7 : 9'
     );
     rules.defineRule('combatNotes.tripAttack', 'maneuverSaveDC', '=', null);
-    rules.defineRule // Italics noop
-      ('combatNotes.warMagic', 'combatNotes.improvedWarMagic', '+', 'null');
     rules.defineRule('selectableFeatureCount.Fighter (Maneuver)',
       'combatNotes.combatSuperiority.2', '=', null
     );
@@ -1259,14 +1284,6 @@ PHB5E2024.classRulesExtra = function(rules, name) {
       ('casterLevels.W', 'casterLevels.Arcane Trickster', '^=', null);
     rules.defineRule
       ('magicNotes.spellcasting', 'features.Arcane Trickster', '=', '"Wizard"');
-
-  } else if(name == 'Wizard') {
-
-    rules.defineRule // Italics noop
-      ('magicNotes.portent', 'magicNotes.greaterPortent', '+', 'null');
-    rules.defineRule('combatNotes.invokeDuplicity', // Italics noop
-      'combatNotes.improvedDuplicity', '+', 'null'
-    );
 
   }
 
