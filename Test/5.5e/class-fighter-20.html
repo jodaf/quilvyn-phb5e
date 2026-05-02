@@ -13,13 +13,14 @@ var attributes = {
   "feats.Ability Score Improvement":1, "feats.Alert":1, "feats.Archery":1, "feats.Boon Of The Night Spirit":1, 
   "feats.Boon Of Truesight":1, "feats.Defense":1, "feats.Great Weapon Fighting":1, 
   "feats.Magic Initiate (Druid)":1, "feats.Savage Attacker":1, "feats.Skilled":1, "feats.Two-Weapon Fighting":1, 
-  "gender":"Female", "hitPoints":79, "intelligence":13, "levels.Fighter":20, 
-  "name":"Class-Fighter 20", "race":"Human", "selectableFeatures.Fighter - Battle Master":1, 
-  "selectableFeatures.Fighter - Champion":1, "selectableFeatures.Fighter - Eldritch Knight":1, 
-  "selectableFeatures.Fighter - Psi Warrior":1, "selectableFeatures.Fighter - Strength":1, "shield":"None", 
-  "skillsChosen.Animal Handling":1, "skillsChosen.Arcana":1, "skillsChosen.Athletics":1, 
-  "skillsChosen.History":1, "skillsChosen.Nature":1, "skillsChosen.Religion":1, "strength":11, 
-  "weapons.Greataxe":1, "weapons.Greatsword":1, "weapons.Heavy Crossbow":1, "wisdom":9
+  "gender":"Female", "hitPoints":79, "intelligence":13, "languagesChosen.Deep Speech":1, 
+  "languagesChosen.Draconic":1, "levels.Fighter":20, "name":"Class-Fighter 20", "race":"Human", 
+  "selectableFeatures.Fighter - Battle Master":1, "selectableFeatures.Fighter - Champion":1, 
+  "selectableFeatures.Fighter - Eldritch Knight":1, "selectableFeatures.Fighter - Psi Warrior":1, 
+  "selectableFeatures.Fighter - Strength":1, "shield":"None", "skillsChosen.Animal Handling":1, "skillsChosen.Arcana":1, 
+  "skillsChosen.Athletics":1, "skillsChosen.History":1, "skillsChosen.Nature":1, 
+  "skillsChosen.Religion":1, "strength":11, "toolsChosen.Tinker's Tools":1, "weapons.Greataxe":1, 
+  "weapons.Greatsword":1, "weapons.Heavy Crossbow":1, "wisdom":9
 };
   </script>
 </head>
@@ -153,7 +154,9 @@ var attributes = {
   </tr><tr style="text-align:center">
     <td><b>Skill Proficiency</b>: Animal Handling; Arcana; Athletics; History; Insight; Nature; Perception, Survival; Religion</td>
   </tr><tr style="text-align:center">
-    <td><b>Tool Proficiency</b>: Calligrapher's Supplies:  (dex)</td>
+    <td><b>Tool Proficiency</b>: Calligrapher's Supplies:  (dex); Tinker's Tools:  (dex)</td>
+  </tr><tr style="text-align:center">
+    <td><b>Languages</b>: Common; Deep Speech; Draconic</td>
   </tr><tr style="text-align:center">
     <td><b>Skill Notes</b>:     <table id="SkillNotes" style="width:100%">
     <tr style="text-align:center">
@@ -330,7 +333,7 @@ var attributes = {
     </tr><tr style="text-align:center">
       <td>Magic Initiate (Druid): Knows 2 Druid cantrips and can cast a chosen D1 spell once per long rest</td>
     </tr><tr style="text-align:center">
-      <td>Spellcasting: Can cast spells from the Wizard spell list</td>
+      <td>Spellcasting: Can cast spells from the Wizard spell list and cast spells marked with [R] using a ritual</td>
     </tr><tr style="text-align:center">
       <td>Telekinetic Master: Can cast <i>Telekinesis</i> and use bonus actions while concentrating to make a weapon attack each rd once per long rest; can spend Psionic Energy dice for additional uses</td>
     </tr></table>
@@ -342,15 +345,7 @@ var attributes = {
   <tr style="text-align:center">
     <td>    <table id="ValidationPart" style="width:100%">
     <tr style="text-align:center">
-      <td><b>Validation Errors</b>:       <table id="ValidationNotes" style="width:100%">
-      <tr style="text-align:center">
-        <td>Selectable Feature Allocation: 11 available vs. 5 allocated</td>
-      </tr><tr style="text-align:center">
-        <td>Skill And Tool Proficiency Allocation: 7 available vs. 6 allocated</td>
-      </tr><tr style="text-align:center">
-        <td>Tool Proficiency Allocation: 1 available vs. 0 allocated</td>
-      </tr></table>
-</td>
+      <td><b>Validation Errors</b>: Selectable Feature Allocation: 11 available vs. 5 allocated</td>
     </tr></table>
 </td>
   </tr></table>

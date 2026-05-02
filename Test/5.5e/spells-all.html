@@ -12,20 +12,20 @@ var attributes = {
   "constitution":13, "deity":"None", "dexterity":17, "experience":210829, 
   "expertise.Sleight Of Hand":1, "expertise.Survival":1, "feats.Magic Initiate (Cleric)":1, 
   "feats.Two-Weapon Fighting":1, "gender":"Male", "hitPoints":64, "intelligence":15, 
-  "languagesChosen.Common Sign Language":1, "languagesChosen.Dwarvish":1, "levels.Bard":2, "levels.Cleric":2, 
-  "levels.Druid":2, "levels.Paladin":2, "levels.Ranger":2, "levels.Sorcerer":2, 
-  "levels.Warlock":2, "levels.Wizard":2, "name":"Spells-All", 
-  "selectableFeatures.Cleric - Protector":1, "selectableFeatures.Druid - Magician":1, 
-  "selectableFeatures.Paladin - Blessed Warrior":1, "selectableFeatures.Ranger - Fighting Style":1, 
-  "selectableFeatures.Sorcerer - Seeking Spell":1, "selectableFeatures.Sorcerer - Subtle Spell":1, 
-  "selectableFeatures.Warlock - Eldritch Spear":1, "selectableFeatures.Warlock - Pact Of The Blade":1, 
-  "selectableFeatures.Warlock - Repelling Blast":1, "shield":"None", "skillsChosen.Acrobatics":1, 
-  "skillsChosen.Animal Handling":1, "skillsChosen.Arcana":1, "skillsChosen.Athletics":1, 
-  "skillsChosen.Deception":1, "skillsChosen.History":1, "skillsChosen.Insight":1, 
-  "skillsChosen.Intimidation":1, "skillsChosen.Investigation":1, "skillsChosen.Medicine":1, 
-  "skillsChosen.Nature":1, "skillsChosen.Perception":1, "skillsChosen.Performance":1, 
-  "skillsChosen.Persuasion":1, "skillsChosen.Religion":1, "skillsChosen.Sleight Of Hand":1, 
-  "skillsChosen.Stealth":1, "skillsChosen.Survival":1, "species":"Human", 
+  "languagesChosen.Celestial":1, "languagesChosen.Common":1, "languagesChosen.Deep Speech":1, 
+  "languagesChosen.Primordial":1, "levels.Bard":2, "levels.Cleric":2, "levels.Druid":2, "levels.Paladin":2, 
+  "levels.Ranger":2, "levels.Sorcerer":2, "levels.Warlock":2, "levels.Wizard":2, 
+  "name":"Spells-All", "selectableFeatures.Cleric - Protector":1, 
+  "selectableFeatures.Druid - Magician":1, "selectableFeatures.Paladin - Blessed Warrior":1, 
+  "selectableFeatures.Ranger - Fighting Style":1, "selectableFeatures.Sorcerer - Seeking Spell":1, 
+  "selectableFeatures.Sorcerer - Subtle Spell":1, "selectableFeatures.Warlock - Eldritch Spear":1, 
+  "selectableFeatures.Warlock - Pact Of The Blade":1, "selectableFeatures.Warlock - Repelling Blast":1, "shield":"None", 
+  "skillsChosen.Acrobatics":1, "skillsChosen.Animal Handling":1, "skillsChosen.Arcana":1, 
+  "skillsChosen.Athletics":1, "skillsChosen.Deception":1, "skillsChosen.History":1, 
+  "skillsChosen.Insight":1, "skillsChosen.Intimidation":1, "skillsChosen.Investigation":1, 
+  "skillsChosen.Medicine":1, "skillsChosen.Nature":1, "skillsChosen.Perception":1, 
+  "skillsChosen.Performance":1, "skillsChosen.Persuasion":1, "skillsChosen.Religion":1, 
+  "skillsChosen.Sleight Of Hand":1, "skillsChosen.Stealth":1, "skillsChosen.Survival":1, "species":"Human", 
   "spells.Acid Arrow(W2 Evoc)":1, "spells.Acid Splash(S0 Evoc)":1, "spells.Acid Splash(W0 Evoc)":1, 
   "spells.Aid(B2 Abju)":1, "spells.Aid(C2 Abju)":1, "spells.Aid(D2 Abju)":1, "spells.Aid(P2 Abju)":1, 
   "spells.Aid(R2 Abju)":1, "spells.Alarm(R1 Abju)":1, "spells.Alarm(W1 Abju)":1, 
@@ -470,11 +470,13 @@ var attributes = {
   </tr><tr style="text-align:center">
     <td><b>Tool Proficiency</b>: Herbalism Kit:  (int); Lute:  (cha); Lyre:  (cha); Three-Dragon Ante Set:  (wis); Viol:  (cha)</td>
   </tr><tr style="text-align:center">
-    <td><b>Languages</b>: Common Sign Language; Dwarvish</td>
+    <td><b>Languages</b>: Celestial; Common; Deep Speech; Druidic; Primordial</td>
   </tr><tr style="text-align:center">
     <td><b>Skill Notes</b>:     <table id="SkillNotes" style="width:100%">
     <tr style="text-align:center">
       <td><i>Deft Explorer: Language (Choose 2 from any)</i></td>
+    </tr><tr style="text-align:center">
+      <td><i>Druidic: Language (Druidic)</i></td>
     </tr><tr style="text-align:center">
       <td><i>Expertise: +2 on 2 chosen proficient skills</i></td>
     </tr><tr style="text-align:center">
@@ -485,8 +487,6 @@ var attributes = {
       <td><i>Skillful: Skill Proficiency (Choose 1 from any)</i></td>
     </tr><tr style="text-align:center">
       <td>Deft Explorer: +2 on a choice of proficient skill</td>
-    </tr><tr style="text-align:center">
-      <td>Druidic: Speaks a secret language known only by druids</td>
     </tr><tr style="text-align:center">
       <td>Scholar: +2 in a choice of proficient Arcana, History, Investigation, Medicine, Nature, or Religion</td>
     </tr></table>
@@ -2382,8 +2382,6 @@ var attributes = {
     </tr><tr style="text-align:center">
       <td>Channel Divinity: Can use a Channel Divinity effect 2 times per long rest; regains 1 use after a short rest</td>
     </tr><tr style="text-align:center">
-      <td>Druidic: Knows the <i>Speak With Animals</i> spell</td>
-    </tr><tr style="text-align:center">
       <td>Eldritch Spear: Increases the range of a chosen ranged Warlock cantrip by 60'</td>
     </tr><tr style="text-align:center">
       <td>Favored Enemy: Can cast <i>Hunter's Mark</i> 2 times per long rest</td>
@@ -2416,7 +2414,7 @@ var attributes = {
     </tr><tr style="text-align:center">
       <td>Wild Companion: Can expend a spell slot or a use of Wild Shape to summon a Fey familiar using <i>Find Familiar</i>; the familiar remains present until the next long rest</td>
     </tr><tr style="text-align:center">
-      <td>Wild Shape: Can transform into a CR 1/4 (non-flying) creature with 2 temporary hit points for 1 hr 2 times per long rest; a short rest restores 1 use</td>
+      <td>Wild Shape: Can use a bonus action to transform into a CR 1/4 (non-flying) creature with 2 temporary hit points for 1 hr 2 times per long rest; a short rest restores 1 use</td>
     </tr></table>
 </td>
   </tr></table>
