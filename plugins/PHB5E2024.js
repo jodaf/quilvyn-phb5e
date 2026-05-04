@@ -264,16 +264,16 @@ PHB5E2024.CLASSES_FEATURES_ADDED = {
     '"features.Psi Warrior ? 15:Bulwark Of Force",' +
     '"features.Psi Warrior ? 18:Telekinetic Master"',
   'Monk':
-    '"features.Way Of Mercy ? 3:Hand Of Harm",' +
-    '"features.Way Of Mercy ? 3:Hand Of Healing",' +
-    '"features.Way Of Mercy ? 3:Implements Of Mercy",' +
-    '"features.Way Of Mercy ? 6:Physician\'s Touch",' +
-    '"features.Way Of Mercy ? 11:Flurry Of Healing And Harm",' +
-    '"features.Way Of Mercy ? 17:Hand Of Ultimate Mercy",' +
-    '"features.Way Of Shadow ? 3:Shadow Arts",' +
-    '"features.Way Of Shadow ? 6:Shadow Step",' +
-    '"features.Way Of Shadow ? 11:Improved Shadow Step",' +
-    '"features.Way Of Shadow ? 17:Cloak Of Shadows",' +
+    '"features.Warrior Of Mercy ? 3:Hand Of Harm",' +
+    '"features.Warrior Of Mercy ? 3:Hand Of Healing",' +
+    '"features.Warrior Of Mercy ? 3:Implements Of Mercy",' +
+    '"features.Warrior Of Mercy ? 6:Physician\'s Touch",' +
+    '"features.Warrior Of Mercy ? 11:Flurry Of Healing And Harm",' +
+    '"features.Warrior Of Mercy ? 17:Hand Of Ultimate Mercy",' +
+    '"features.Warrior Of Shadow ? 3:Shadow Arts",' +
+    '"features.Warrior Of Shadow ? 6:Shadow Step",' +
+    '"features.Warrior Of Shadow ? 11:Improved Shadow Step",' +
+    '"features.Warrior Of Shadow ? 17:Cloak Of Shadows",' +
     '"features.Warrior Of The Elements ? 3:Elemental Attunement",' +
     '"features.Warrior Of The Elements ? 3:Manipulate Elements",' +
     '"features.Warrior Of The Elements ? 6:Elemental Burst",' +
@@ -413,8 +413,8 @@ PHB5E2024.CLASSES_SELECTABLES_ADDED = {
     '"3:Sweeping Attack:Maneuver","3:Tactical Assessment:Maneuver",' +
     '"3:Trip Attack:Maneuver"',
   'Monk':
-    '"3:Way Of Mercy:Monk Subclass",' +
-    '"3:Way Of Shadow:Monk Subclass",' +
+    '"3:Warrior Of Mercy:Monk Subclass",' +
+    '"3:Warrior Of Shadow:Monk Subclass",' +
     '"3:Warrior Of The Elements:Monk Subclass"',
   'Paladin':
     '"3:Oath Of Glory:Paladin Subclass",' +
@@ -888,38 +888,62 @@ PHB5E2024.FEATURES_ADDED = {
   'Telekinetic Thrust':Tasha.FEATURES['Telekinetic Thrust'],
 
   // Monk
-  // Way Of Mercy
-  'Flurry Of Healing And Harm':Tasha.FEATURES['Flurry Of Healing And Harm'],
-  'Hand Of Harm':Tasha.FEATURES['Hand Of Harm'],
-  'Hand Of Healing':Tasha.FEATURES['Hand Of Healing'],
-  'Hand Of Ultimate Mercy':Tasha.FEATURES['Hand Of Ultimate Mercy'],
-  'Implements Of Mercy':Tasha.FEATURES['Implements Of Mercy'],
+  // Warrior Of Mercy
+  'Flurry Of Healing And Harm':
+    Tasha.FEATURES['Flurry Of Healing And Harm']
+    .replace('ki point', 'focus point'),
+  'Hand Of Harm':
+    Tasha.FEATURES['Hand Of Harm']
+    .replace('ki point', 'focus point'),
+  'Hand Of Healing':
+    Tasha.FEATURES['Hand Of Healing']
+    .replaceAll('ki point', 'focus point')
+    .replace('disease or ', ''),
+  'Hand Of Ultimate Mercy':
+    Tasha.FEATURES['Hand Of Ultimate Mercy']
+    .replace('ki point', 'focus point'),
+  'Implements Of Mercy':
+    Tasha.FEATURES['Implements Of Mercy']
+    // remove mask ownership note
+    .replace('feature,', '')
+    .replace(/Note="[^"]*",/, 'Note='),
   "Physician's Touch":Tasha.FEATURES["Physician's Touch"],
-  // Way Of Shadow
-  'Cloak Of Shadows':PHB5E.FEATURES['Cloak Of Shadows (Way Of Shadow)'],
+  // Warrior Of Shadow
+  'Cloak Of Shadows':
+    'Section=magic ' +
+    // changed effects
+    'Note="Can expend 5 focus points in dim light or darkness to become invisible, move through occupied spaces as difficult terrain, and use Flurry Of Blows without expending addition focus points, for 1 min or until ending a turn in bright light"',
   'Improved Shadow Step':
     'Section=combat ' +
-    'Note="Can expend 1 focus point to Shadow Step between lighted areas and make an unarmed strike after teleporting"',
-  'Shadow Arts':PHB5E.FEATURES['Shadow Arts'],
+    'Note="Can expend 1 focus point to Shadow Step between lighted areas and to make an unarmed strike after teleporting"',
+  'Shadow Arts':
+    'Section=feature,magic ' +
+    // changed effects
+    'Note=' +
+      '"Has %{features.Darkvision?\'+\':\'\'}60\' Darkvision",' +
+      '"Can spend 1 focus point to cast <i>Darkness</i> without components and can move its effect within 60\' of self each rd" ' +
+    'SpellAbility=Wisdom ' +
+    'Spells="Minor Illusion","Darkness"',
   'Shadow Step':PHB5E.FEATURES['Shadow Step'],
   // Way Of The Elements
-  'Elemental Attunement':PHB5E.FEATURES['Elemental Attunement'],
-  'Elemental Burst':
+  'Elemental Attunement':
     'Section=combat ' +
-    'Note="R120\' Expending 2 focus points causes a 20\' radius to inflict 3d%{combatNotes.martialArts} HP of a choice of acid, cold, fire, lightning, or thunder (save Dexterity half)"',
+    // changed effects
+    'Note="Can expend 1 focus point to gain +10\' reach with unarmed strikes that can inflict a choice of acid, cold, fire, lightning, or thunder and an optional 10\' push (save DC %{8+wisdomModifier+proficiencyBonus} Strength negates) instead of normal damage, for 10 min"',
+  'Elemental Burst':
+    'Section=magic ' +
+    'Note="R120\' Expending 2 focus points causes a 20\' radius to inflict 3d%{combatNotes.martialArts} HP of a choice of acid, cold, fire, lightning, or thunder (save DC %{8+wisdomModifier+proficiencyBonus} Dexterity half)"',
   'Elemental Epitome':
     'Section=combat,save ' +
       'Note=' +
         '"Step Of The Wind gives +20 Speed until the end of the turn and inflicts 1d%{combatNotes.martialArts} HP of a choice of acid, cold, fire, lightning, or thunder to targets passed within 5\'/Unarmed strike inflicts +1d%{combatNotes.martialArts} HP once per turn while using Elemental Attunement",' +
-        '"Elemental Attunement also gives resistance to a choice of acid, cold, fire, lightning, or thunder"',
+        '"Has resistance to a choice of acid, cold, fire, lightning, or thunder each rd while using Elemental Attunement"',
   'Manipulate Elements':
-    'Section=magic ' +
-    'Note="Knows the <i>Elementalism</i> spell" ' +
     'SpellAbility=Wisdom ' +
     'Spells=Elementalism',
   'Stride Of The Elements':
     'Section=ability ' +
-    'Note="Has ${speed}\' fly and swim speed while using Elemental Attunement"',
+    'Note="Has %{speed}\' fly and swim Speeds while using Elemental Attunement"',
 
   // Paladin
   // Oath Of Glory
@@ -1317,7 +1341,8 @@ PHB5E2024.classRulesExtra = function(rules, name) {
       'features.Eldritch Knight', '?', null,
       'levels.Fighter','=', null
     );
-    SRD5E.spellsAvailableRules(rules, 'casterLevels.Eldritch Knight', known);
+    SRD5E2024.spellsAvailableRules
+      (rules, 'casterLevels.Eldritch Knight', known);
     QuilvynRules.spellSlotRules(rules, 'casterLevels.Eldritch Knight', slots);
     rules.defineRule
       ('casterLevels.W', 'casterLevels.Eldritch Knight', '^=', null);
@@ -1339,8 +1364,11 @@ PHB5E2024.classRulesExtra = function(rules, name) {
 
   } else if(name == 'Rogue') {
 
+    let known = [
+      'W0:2@3;3@10',
+      'W:3@3;4@4;5@7;6@8;7@10;8@11;9@13;10@14;11@16;12@19;13@20'
+    ];
     let slots = [
-      'W0:3@3;4@10',
       'W1:2@3;3@4;4@7',
       'W2:2@7;3@10',
       'W3:2@13;3@16',
@@ -1350,6 +1378,8 @@ PHB5E2024.classRulesExtra = function(rules, name) {
       'features.Arcane Trickster', '?', null,
       'levels.Rogue','=', null
     );
+    SRD5E2024.spellsAvailableRules
+      (rules, 'casterLevels.Arcane Trickster', known);
     QuilvynRules.spellSlotRules(rules, 'casterLevels.Arcane Trickster', slots);
     rules.defineRule
       ('casterLevels.W', 'casterLevels.Arcane Trickster', '^=', null);
