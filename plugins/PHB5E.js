@@ -924,7 +924,7 @@ PHB5E.FEATURES_ADDED = {
     'Section=combat ' +
     'Note="Can add a superiority die to damage and knock the Large or smaller target prone (save DC %V Strength negates)"',
   // Eldritch Knight
-  'Arcane Charge':'Section=magic Note="Can teleport 30\' during Action Surge"',
+  'Arcane Charge':'Section=combat Note="Can teleport 30\' during Action Surge"',
   'Eldritch Strike':
     'Section=combat ' +
     'Note="Successful attack inflicts disadvantage on the first save vs. a self spell before the end of the next turn"',
@@ -935,7 +935,7 @@ PHB5E.FEATURES_ADDED = {
     'Note="Can use a bonus action to make a weapon attack after casting a %{combatNotes.improvedWarMagic?\'spell\':\'cantrip\'}"',
   'Weapon Bond':
     'Section=combat ' +
-    'Note="Cannot be disarmed from a bonded weapon and can use a bonus action to summon one"',
+    'Note="Can use 1-hr rituals to create bonds with 1 or 2 weapons; cannot be disarmed from a bonded weapon and can use a bonus action to summon one"',
 
   // Monk
   // Way Of Shadow

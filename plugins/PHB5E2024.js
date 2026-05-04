@@ -256,6 +256,9 @@ PHB5E2024.CLASSES_FEATURES_ADDED = {
     '"features.Eldritch Knight ? 15:Arcane Charge",' +
     '"features.Eldritch Knight ? 18:Improved War Magic",' +
     '"features.Psi Warrior ? 3:Psionic Power",' +
+    '"features.Psi Warrior ? 3:Protective Field",' +
+    '"features.Psi Warrior ? 3:Psionic Strike",' +
+    '"features.Psi Warrior ? 3:Telekinetic Movement",' +
     '"features.Psi Warrior ? 7:Telekinetic Adept",' +
     '"features.Psi Warrior ? 10:Guarded Mind",' +
     '"features.Psi Warrior ? 15:Bulwark Of Force",' +
@@ -819,7 +822,7 @@ PHB5E2024.FEATURES_ADDED = {
     .replace('%V', '10'),
   'Know Your Enemy':
     PHB5E.FEATURES['Know Your Enemy']
-    .replace('study', 'study once per long rest; can expend a superiority die for additional uses'),
+    .replace('study', 'study once per long rest; can expend superiority dice for additional uses'),
   'Relentless':
     'Section=combat ' +
     // changed effects
@@ -867,14 +870,22 @@ PHB5E2024.FEATURES_ADDED = {
   'Eldritch Strike':PHB5E.FEATURES['Eldritch Strike'],
   'Improved War Magic':PHB5E.FEATURES['Improved War Magic'],
   'War Bond':PHB5E.FEATURES['Weapon Bond'],
-  'War Magic':PHB5E.FEATURES['War Magic'],
+  'War Magic':
+    'Section=combat ' +
+    // changed effects
+    'Note="During an Attack action, can cast %{combatNotes.improvedWarMagic?\'2 1-action level 1 or level 2 spells\':\'a 1-action cantrip\'} in place of %{combatNotes.improvedWarMagic?\'2 attacks\':\'1 attack\'}"',
   // Spellcasting as SRD5E2024
   // Psi Warrior
   'Bulwark Of Force':Tasha.FEATURES['Bulwark Of Force'],
   'Guarded Mind':Tasha.FEATURES['Guarded Mind'],
+  'Psi-Powered Leap':Tasha.FEATURES['Psi-Powered Leap'],
   'Psionic Power':Tasha.FEATURES['Psionic Power'],
+  'Protective Field':Tasha.FEATURES['Protective Field'],
+  'Psionic Strike':Tasha.FEATURES['Psionic Strike'],
+  'Telekinetic Movement':Tasha.FEATURES['Telekinetic Movement'],
   'Telekinetic Adept':Tasha.FEATURES['Telekinetic Adept'],
   'Telekinetic Master':Tasha.FEATURES['Telekinetic Master'],
+  'Telekinetic Thrust':Tasha.FEATURES['Telekinetic Thrust'],
 
   // Monk
   // Way Of Mercy
@@ -1283,6 +1294,9 @@ PHB5E2024.classRulesExtra = function(rules, name) {
     rules.defineRule('combatNotes.combatSuperiority.2',
       'features.Combat Superiority', '?', null,
       'battleMasterLevel', '=', 'source<7 ? 3 : source<10 ? 5 : source<15 ? 7 : 9'
+    );
+    rules.defineRule('combatNotes.psionicPower',
+      classLevel, '=', 'source<5 ? 6 : source<11 ? 8 : source<17 ? 10 : 12'
     );
     rules.defineRule('combatNotes.tripAttack', 'maneuverSaveDC', '=', null);
     rules.defineRule('selectableFeatureCount.Fighter (Maneuver)',
