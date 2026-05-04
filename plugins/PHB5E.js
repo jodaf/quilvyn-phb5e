@@ -947,10 +947,10 @@ PHB5E.FEATURES_ADDED = {
     'Note="Can use a reaction to attack an adjacent foe when it is hit by another creature"',
   'Shadow Arts':
     'Section=magic ' +
-    'Note="Knows the <i>Minor Illusion</i> cantrip and can spend 2 ki points to cast <i>Darkness</i>, <i>Darkvision</i>, <i>Pass Without Trace</i>, or <i>Silence</i>" ' +
+    'Note="Can spend 2 ki points to cast <i>Darkness</i>, <i>Darkvision</i>, <i>Pass Without Trace</i>, or <i>Silence</i>" ' +
     'Spells="Minor Illusion",Darkness,Darkvision,"Pass Without Trace",Silence',
   'Shadow Step':
-    'Section=magic ' +
+    'Section=combat ' +
     'Note="Can use a bonus action to teleport 60\' between dim or dark areas and gain advantage on the first melee attack during that turn"',
   // Way Of The Four Elements
   'Breath Of Winter':
@@ -2008,9 +2008,13 @@ PHB5E.featRulesExtra = function(rules, name) {
 
   if(name.match(/^Magic\sInitiate\s\(.*\)$/)) {
     let c = name.replace('Magic Initiate (', '').replace(')', '');
-    rules.defineRule('casterLevels.' + (c == 'Warlock' ? 'K' : c.charAt(0)),
-      'features.' + name, '^=', '1'
-    );
+    let spellChar = c == 'Warlock' ? 'K' : c.charAt(0);
+    rules.defineRule
+      ('casterLevels.' + spellChar, 'features.' + name, '^=', '1');
+    rules.defineRule
+      ('spellsAvailable.' + spellChar + '0', 'features.' + name, '+=', '2');
+    rules.defineRule
+      ('spellsAvailable.' + spellChar, 'features.' + name, '+=', '1');
   } else if(name == 'Martial Adept') {
     rules.defineRule
       ('combatNotes.combatSuperiority', 'combatNotes.martialAdept', '+=', '1');
