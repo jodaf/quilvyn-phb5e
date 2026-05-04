@@ -398,7 +398,17 @@ PHB5E2024.CLASSES_SELECTABLES_ADDED = {
   'Fighter':
     '"3:Battle Master:Fighter Subclass",' +
     '"3:Eldritch Knight:Fighter Subclass",' +
-    '"3:Psi Warrior:Fighter Subclass"',
+    '"3:Psi Warrior:Fighter Subclass",' +
+    '"3:Ambush:Maneuver","3:Bait And Switch:Maneuver",' +
+    '"3:Commander\'s Strike:Maneuver","3:Commanding Presence:Maneuver",' +
+    '"3:Disarming Attack:Maneuver","3:Distracting Strike:Maneuver",' +
+    '"3:Evasive Footwork:Maneuver","3:Feinting Attack:Maneuver",' +
+    '"3:Goading Attack:Maneuver","3:Lunging Attack:Maneuver",' +
+    '"3:Maneuvering Attack:Maneuver","3:Menacing Attack:Maneuver",' +
+    '"3:Parry:Maneuver","3:Precision Attack:Maneuver",' +
+    '"3:Pushing Attack:Maneuver","3:Rally:Maneuver","3:Riposte:Maneuver",' +
+    '"3:Sweeping Attack:Maneuver","3:Tactical Assessment:Maneuver",' +
+    '"3:Trip Attack:Maneuver"',
   'Monk':
     '"3:Way Of Mercy:Monk Subclass",' +
     '"3:Way Of Shadow:Monk Subclass",' +
@@ -807,12 +817,51 @@ PHB5E2024.FEATURES_ADDED = {
   'Improved Combat Superiority':
     PHB5E.FEATURES['Improved Combat Superiority']
     .replace('%V', '10'),
-  'Know Your Enemy':PHB5E.FEATURES['Know Your Enemy'],
-  'Relentless':PHB5E.FEATURES.Relentless,
-  'Student Of War':PHB5E.FEATURES['Student Of War'],
+  'Know Your Enemy':
+    PHB5E.FEATURES['Know Your Enemy']
+    .replace('study', 'study once per long rest; can expend a superiority die for additional uses'),
+  'Relentless':
+    'Section=combat ' +
+    // changed effects
+    'Note="Can use a d8 instead of a superiority die for a maneuver once per turn"',
+  'Student Of War':
+    PHB5E.FEATURES['Student Of War']
+    .replace(')', ')/Skill Proficiency (Choose 1 from Acrobatics, Animal Handling, Athletics, History, Insight, Intimidation, Persuasion, Perception, Survival)'),
   'Ultimate Combat Superiority':
     PHB5E.FEATURES['Improved Combat Superiority']
     .replace('%V', '12'),
+  // Maneuvers
+  'Ambush':Tasha.FEATURES.Ambush,
+  'Bait And Switch':Tasha.FEATURES['Bait And Switch'],
+  "Commander's Strike":
+    PHB5E.FEATURES["Commander's Strike"]
+    .replace('gain a bonus action directing', 'direct'),
+  'Commanding Presence':Tasha.FEATURES['Commanding Presence'],
+  'Disarming Attack':PHB5E.FEATURES['Disarming Attack'],
+  'Distracting Strike':PHB5E.FEATURES['Distracting Strike'],
+  'Evasive Footwork':
+    'Section=combat ' +
+    // changed effects
+    'Note="Can use bonus action and spend a superiority die to Disengage, adding a the roll to Armor Class until the start of the next turn"',
+  'Feinting Attack':PHB5E.FEATURES['Feinting Attack'],
+  'Goading Attack':PHB5E.FEATURES['Goading Attack'],
+  'Lunging Attack':
+    'Section=combat ' +
+    // changed effects
+    'Note="Can use a bonus action and spend a superiority die to Dash and add the roll to the damage from a subsequent attack during the same turn"',
+  'Maneuvering Attack':PHB5E.FEATURES['Maneuvering Attack'],
+  'Menacing Attack':PHB5E.FEATURES['Menacing Attack'],
+  'Parry':PHB5E.FEATURES.Parry
+    .replace('dexterityModifier', 'dexterityModifier>?strengthModifier'),
+  'Precision Attack':PHB5E.FEATURES['Precision Attack'],
+  'Pushing Attack':PHB5E.FEATURES['Pushing Attack'],
+  'Rally':PHB5E.FEATURES.Rally
+    .replace('Can', "R30' Can")
+    .replace('charismaModifier', 'levels.Fighter//2'),
+  'Riposte':PHB5E.FEATURES.Riposte,
+  'Sweeping Attack':PHB5E.FEATURES['Sweeping Attack'],
+  'Tactical Assessment':Tasha.FEATURES['Tactical Assessment'],
+  'Trip Attack':PHB5E.FEATURES['Trip Attack'],
   // Eldritch Knight
   'Arcane Charge':PHB5E.FEATURES['Arcane Charge'],
   'Eldritch Strike':PHB5E.FEATURES['Eldritch Strike'],
@@ -1241,16 +1290,20 @@ PHB5E2024.classRulesExtra = function(rules, name) {
     );
 
     let slots = [
-      'W0:2@3;3@10',
       'W1:2@3;3@4;4@7',
       'W2:2@7;3@10',
       'W3:2@13;3@16',
       'W4:1@19'
     ];
+    let known = [
+      'W0:2@3;3@10',
+      'W:3@3;4@4;5@7;6@8;7@10;8@11;9@13;10@14;11@16;12@19;13@20'
+    ];
     rules.defineRule('casterLevels.Eldritch Knight',
       'features.Eldritch Knight', '?', null,
       'levels.Fighter','=', null
     );
+    SRD5E.spellsAvailableRules(rules, 'casterLevels.Eldritch Knight', known);
     QuilvynRules.spellSlotRules(rules, 'casterLevels.Eldritch Knight', slots);
     rules.defineRule
       ('casterLevels.W', 'casterLevels.Eldritch Knight', '^=', null);

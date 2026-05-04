@@ -865,64 +865,64 @@ PHB5E.FEATURES_ADDED = {
   // Battle Master
   'Combat Superiority':
     'Section=combat ' +
-    'Note="Can use a d%1 Superiority Die to perform one of %2 chosen Maneuvers %V time%{combatNotes.combatSuperiority>1?\'s\':\'\'} per short rest"',
+    'Note="Can use a d%1 superiority die to perform one of %2 chosen maneuvers %V time%{combatNotes.combatSuperiority>1?\'s\':\'\'} per short rest"',
   "Commander's Strike":
     'Section=combat ' +
-    'Note="Can use a Superiority Die and forego an attack to gain a bonus action directing an ally to attack; the ally uses a reaction to attack and adds the Superiority Die to its damage"',
+    'Note="Can use a superiority die and forego an attack to gain a bonus action directing an ally to attack; the ally uses a reaction to attack and adds the superiority die to its damage"',
   'Disarming Attack':
     'Section=combat ' +
-    'Note="Can add a Superiority Die to damage and cause the target to drop an item (save DC %{maneuverSaveDC} Strength negates)"',
+    'Note="Can add a superiority die to damage and cause the target to drop an item (save DC %{maneuverSaveDC} Strength negates)"',
   'Distracting Strike':
     'Section=combat ' +
-    'Note="Can add a Superiority Die to damage and give advantage to the next ally attack against the same foe before the start of the next turn"',
+    'Note="Can add a superiority die to damage and give advantage to the next ally attack against the same foe before the start of the next turn"',
   'Evasive Footwork':
     'Section=combat ' +
-    'Note="Can add a Superiority Die to Armor Class during a move"',
+    'Note="Can add a superiority die to Armor Class during a move"',
   'Feinting Attack':
     'Section=combat ' +
-    'Note="Can use a bonus action to gain advantage on an attack and add a Superiority Die to its damage"',
+    'Note="Can use a bonus action and expend a superiority die to gain advantage on an attack and add the roll to its damage"',
   'Goading Attack':
     'Section=combat ' +
-    'Note="Can add a Superiority Die to damage and inflict disadvantage on the target\'s attacks on others (save DC %{maneuverSaveDC} Wisdom negates) until the end of the next turn"',
+    'Note="Can add a superiority die to damage and inflict disadvantage on the target\'s attacks on others (save DC %{maneuverSaveDC} Wisdom negates) until the end of the next turn"',
   'Improved Combat Superiority':
-    'Section=combat Note="Superiority Dice increase to d%V"',
+    'Section=combat Note="Superiority dice increase to d%V"',
   'Know Your Enemy':
     'Section=combat Note="Knows how foe compares to self after 1 min study"',
   'Lunging Attack':
     'Section=combat ' +
-    'Note="Can add a Superiority Die to damage and gain +5\' melee range"',
+    'Note="Can add a superiority die to damage and gain +5\' melee range"',
   'Maneuvering Attack':
     'Section=combat ' +
-    'Note="Can add a Superiority Die to damage and allow an ally to use a reaction to move half its Speed without provoking an opportunity attack from the target"',
+    'Note="Can add a superiority die to damage and allow an ally to use a reaction to move half its Speed without provoking an opportunity attack from the target"',
   'Menacing Attack':
     'Section=combat ' +
-    'Note="Can add a Superiority Die to damage and inflict frightened (save DC %{maneuverSaveDC} Wisdom negates) until the end of the next turn"',
+    'Note="Can add a superiority die to damage and inflict frightened (save DC %{maneuverSaveDC} Wisdom negates) until the end of the next turn"',
   'Parry':
     'Section=combat ' +
-    'Note="Can use a reaction to subtract a Superiority Die + %{dexterityModifier} from a foe\'s melee damage to self"',
+    'Note="Can use a reaction and expend a superiority die to subtract the roll + %{dexterityModifier} from a foe\'s melee damage to self"',
   'Precision Attack':
-    'Section=combat Note="Can add a Superiority Die to an attack"',
+    'Section=combat Note="Can add a superiority die to an attack"',
   'Pushing Attack':
     'Section=combat ' +
-    'Note="Can add a Superiority Die to damage and push the Large or smaller target 15\' (save DC %{maneuverSaveDC} Strength negates)"',
+    'Note="Can add a superiority die to damage and push the Large or smaller target 15\' (save DC %{maneuverSaveDC} Strength negates)"',
   'Rally':
     'Section=combat ' +
-    'Note="Gives the target a Superiority Die + %{charismaModifier} temporary hit points"',
+    'Note="Can expend a superiority die to give a target the roll + %{charismaModifier} temporary hit points"',
   'Riposte':
     'Section=combat ' +
-    'Note="After a foe melee miss, can spend a Superiority Die and use a reaction to attack and add the Superiority Die to its damage"',
+    'Note="After a foe melee miss, can use a reaction and spend a superiority die to attack and add the roll to its damage"',
   'Relentless':
     'Section=combat ' +
-    'Note="Has a minimum of 1 Superiority Die available after initiative"',
+    'Note="Has a minimum of 1 superiority die available after initiative"',
   'Student Of War':
     'Section=skill ' +
     'Note="Tool Proficiency (Choose 1 from any Artisan\'s Tools)"',
   'Sweeping Attack':
     'Section=combat ' +
-    'Note="After a successful melee attack, can inflict a Superiority Die HP on a second adjacent foe"',
+    'Note="After a successful melee attack, can expend a superiority die to inflict the roll HP on a second adjacent foe"',
   'Trip Attack':
     'Section=combat ' +
-    'Note="Can add a Superiority Die to damage and knock the Large or smaller target prone (save DC %V Strength negates)"',
+    'Note="Can add a superiority die to damage and knock the Large or smaller target prone (save DC %V Strength negates)"',
   // Eldritch Knight
   'Arcane Charge':'Section=magic Note="Can teleport 30\' during Action Surge"',
   'Eldritch Strike':
@@ -1939,8 +1939,11 @@ PHB5E.classRulesExtra = function(rules, name) {
       'combatNotes.combatSuperiority.2', '=', null
     );
 
-    let slots = [
+    let known = [
       'W0:2@3;3@10',
+      'W:3@3;4@4;5@7;6@8;7@10;8@11;9@13;10@14;11@16;12@19;13@20'
+    ];
+    let slots = [
       'W1:2@3;3@4;4@7',
       'W2:2@7;3@10',
       'W3:2@13;3@16',
@@ -1950,6 +1953,7 @@ PHB5E.classRulesExtra = function(rules, name) {
       'features.Eldritch Knight', '?', null,
       'levels.Fighter','=', null
     );
+    SRD5E.spellsAvailableRules(rules, 'casterLevels.Eldritch Knight', known);
     QuilvynRules.spellSlotRules(rules, 'casterLevels.Eldritch Knight', slots);
     rules.defineRule
       ('casterLevels.W', 'casterLevels.Eldritch Knight', '^=', null);
@@ -1971,8 +1975,11 @@ PHB5E.classRulesExtra = function(rules, name) {
 
   } else if(name == 'Rogue') {
 
+    let known = [
+      'W0:2@3;3@10',
+      'W:3@3;4@4;5@7;6@8;7@10;8@11;9@13;10@14;11@16;12@19;13@20'
+    ];
     let slots = [
-      'W0:3@3;4@10',
       'W1:2@3;3@4;4@7',
       'W2:2@7;3@10',
       'W3:2@13;3@16',
@@ -1982,6 +1989,7 @@ PHB5E.classRulesExtra = function(rules, name) {
       'features.Arcane Trickster', '?', null,
       'levels.Rogue','=', null
     );
+    SRD5E.spellsAvailableRules(rules, 'casterLevels.Arcane Trickster', known);
     QuilvynRules.spellSlotRules(rules, 'casterLevels.Arcane Trickster', slots);
     rules.defineRule
       ('casterLevels.W', 'casterLevels.Arcane Trickster', '^=', null);
