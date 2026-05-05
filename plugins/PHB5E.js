@@ -1030,10 +1030,10 @@ PHB5E.FEATURES_ADDED = {
     'Note="R%{levels.Paladin<18?10:30}\' Self and allies have resistance to spell damage"',
   'Elder Champion':
     'Section=magic ' +
-    'Note="Can regain 10 hit points per rd, cast Paladin spells as a bonus action, and inflict disadvantage on saves vs. self spells on foes within 10\' for 1 min once per long rest"',
+    'Note="Can regain 10 hit points each turn, cast 1-action Paladin spells as a bonus action, and inflict disadvantage on saves vs. self spells and Channel Divinity effects on foes within 10\' for 1 min once per long rest"',
   "Nature's Wrath":
     'Section=magic ' +
-    'Note="R10\' Can use Channel Divinity to create spectral vines that restrain the target (save DC %{spellDifficultyClass.P} Dexterity or Strength ends)"',
+    'Note="R10\' Can use Channel Divinity to restrain the target (save DC %{spellDifficultyClass.P} Dexterity or Strength negates; additional saves each rd end)"',
   'Oath Of The Ancients':
     'Spells=' +
       '"3:Ensnaring Strike","3:Speak With Animals",' +
@@ -1058,7 +1058,7 @@ PHB5E.FEATURES_ADDED = {
     'Section=ability,combat ' +
     'Note=' +
       '"Can gain a 60\' fly speed for 1 hr once per long rest",' +
-      '"Can gain a 30\' aura that frightens foes (save DC %{spellDifficultyClass.P} Wisdom negates; damage ends), giving advantage on ally attacks, for 1 hr once per long rest"',
+      '"R30\' Can frighten foes (save DC %{spellDifficultyClass.P} Wisdom negates) for 1 min or until damaged, giving advantage on ally attacks, for 1 hr once per long rest"',
   'Oath Of Vengeance':
     'Spells=' +
       '"3:Bane","3:Hunter\'s Mark",' +
@@ -1068,13 +1068,13 @@ PHB5E.FEATURES_ADDED = {
       '"17:Hold Monster",17:Scrying',
   'Relentless Avenger':
     'Section=combat ' +
-    'Note="Can move %{speed//2}\' after a successful opportunity attack without provoking opportunity attacks"',
+    'Note="After a successful opportunity attack, can move %{speed//2}\' without provoking opportunity attacks"',
   'Soul Of Vengeance':
     'Section=combat ' +
     'Note="Can use a reaction when a Vow Of Enmity target attacks to make a melee attack on the target"',
   'Vow Of Enmity':
     'Section=combat ' +
-    'Note="R10\' Can use Channel Divinity and a bonus action to give self advantage on attacks against a target for 1 min"',
+    'Note="R10\' Can use a bonus action and Channel Divinity to give self advantage on attacks against a target for 1 min"',
 
   // Ranger
   // Beast Master

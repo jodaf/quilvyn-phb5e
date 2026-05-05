@@ -947,24 +947,55 @@ PHB5E2024.FEATURES_ADDED = {
 
   // Paladin
   // Oath Of Glory
-  'Aura Of Alacrity':Tasha.FEATURES['Aura Of Alacrity'],
+  'Aura Of Alacrity':
+    Tasha.FEATURES['Aura Of Alacrity']
+    .replace('5:10', '10:30'),
   'Glorious Defense':Tasha.FEATURES['Glorious Defense'],
   'Inspiring Smite':Tasha.FEATURES['Inspiring Smite'],
-  'Living Legend':Tasha.FEATURES['Living Legend'],
-  'Oath Of Glory Spells':Tasha.FEATURES['Oath Of Glory'],
-  'Peerless Athlete':Tasha.FEATURES['Peerless Athlete'],
+  'Living Legend':
+    Tasha.FEATURES['Living Legend']
+    .replaceAll('1 min', '10 min'),
+  'Oath Of Glory Spells':Tasha.FEATURES['Oath Of Glory']
+    .replace('Commune', 'Legend Lore')
+    .replace('Flame Strike', "Yolanda's Regal Presence"),
+  'Peerless Athlete':
+    Tasha.FEATURES['Peerless Athlete']
+    .replace('ability,', '')
+    .replace(/Note="[^"]*",/, 'Note='),
   // Oath Of The Ancients
-  'Aura Of Warding':PHB5E.FEATURES['Aura Of Warding'],
-  'Elder Champion':PHB5E.FEATURES['Elder Champion'],
-  "Nature's Wrath":PHB5E.FEATURES["Nature's Wrath"],
+  'Aura Of Warding':
+    PHB5E.FEATURES['Aura Of Warding']
+    .replace('spell damage', 'necrotic, psychic, and radiant'),
+  'Elder Champion':
+    PHB5E.FEATURES['Elder Champion']
+    .replace("10'", "%{levels.Paladin<18?10:30}'")
+    .replace('long rest', 'long rest; can expend level 5 spell slots for additional uses'),
+  "Nature's Wrath":
+    PHB5E.FEATURES["Nature's Wrath"]
+    .replace("10'", "15'")
+    .replace('the target', 'targets')
+    .replace('Dexterity or ', '')
+    .replace('end)', 'end) for 1 min'),
   'Oath Of The Ancients Spells':PHB5E.FEATURES['Oath Of The Ancients'],
-  'Undying Sentinel':PHB5E.FEATURES['Undying Sentinel'],
+  'Undying Sentinel':
+     PHB5E.FEATURES['Undying Sentinel']
+     .replace('retain 1 hit point', 'regain %{levels.Paladin*3} hit points')
+     .replace('Suffers no debility from aging', 'Does not age visibly'),
   // Oath Of Vengeance
-  'Avenging Angel':PHB5E.FEATURES['Avenging Angel'],
+  'Avenging Angel':
+    PHB5E.FEATURES['Avenging Angel']
+    .replaceAll('1 hr', '10 min')
+    .replaceAll('long rest', 'long rest; can expend level 5 spell slots for additional uses'),
   'Oath Of Vengeance Spells':PHB5E.FEATURES['Oath Of Vengeance'],
-  'Relentless Avenger':PHB5E.FEATURES['Relentless Avenger'],
+  'Relentless Avenger':
+    PHB5E.FEATURES['Relentless Avenger']
+    .replace('move', "reduce the target's Speed to 0 until the end of the current turn and move"),
   'Soul Of Vengeance':PHB5E.FEATURES['Soul Of Vengeance'],
-  'Vow Of Enmity':PHB5E.FEATURES['Vow Of Enmity'],
+  'Vow Of Enmity':
+    PHB5E.FEATURES['Vow Of Enmity']
+    .replace("10'", "30'")
+    .replace('a bonus action and ', '')
+    .replace('1 min', '1 min; can transfer to another target if the current target drops to 0 hit points'),
 
   // Ranger
   // Beast Master
@@ -1208,7 +1239,11 @@ PHB5E2024.SPELLS_ADDED = {
   'Summon Beast':Tasha.SPELLS['Summon Beast'],
   'Summon Celestial':Tasha.SPELLS['Summon Celestial'],
   'Summon Construct':Tasha.SPELLS['Summon Construct'],
-  'Summon Fey':Tasha.SPELLS['Summon Fey']
+  'Summon Fey':Tasha.SPELLS['Summon Fey'],
+  "Yolanda's Regal Presence":
+    'School=Enchantment ' +
+    'Level=B5,W5 ' +
+    'Description="10\' radius inflicts 4d6 HP psychic, knocked prone, and a 10\' push (save Wisdom half HP only) on targets for concentration up to 1 min"'
 };
 PHB5E2024.SPELLS_LEVELS_ADDED = {
   // TODO
