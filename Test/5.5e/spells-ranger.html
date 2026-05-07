@@ -168,17 +168,15 @@ var attributes = {
   </tr><tr style="text-align:center">
     <td><b>Skill Notes</b>:     <table id="SkillNotes" style="width:100%">
     <tr style="text-align:center">
-      <td><i>Deft Explorer: Language (Choose 2 from any)</i></td>
+      <td><i>Deft Explorer: Language (Choose 2 from any)/Has expertise with 1 chosen proficient skill</i></td>
     </tr><tr style="text-align:center">
-      <td><i>Expertise: +4 on 2 chosen proficient skills</i></td>
+      <td><i>Expertise: Has expertise with 2 chosen proficient skills</i></td>
     </tr><tr style="text-align:center">
       <td><i>Skilled: Skill Proficiency or Tool Proficiency (Choose 3 from any)</i></td>
     </tr><tr style="text-align:center">
       <td><i>Skillful: Skill Proficiency (Choose 1 from any)</i></td>
     </tr><tr style="text-align:center">
       <td>Bulky Armor: Has disadvantage on Stealth</td>
-    </tr><tr style="text-align:center">
-      <td>Deft Explorer: +4 on a choice of proficient skill</td>
     </tr></table>
 </td>
   </tr></table>
@@ -233,7 +231,7 @@ var attributes = {
       </tr><tr style="text-align:center">
         <td>Grappler: Can both Damage and Grapple with an unarmed strike once per turn, has advantage on attacks on a grappled foe, and can move at full speed with a grappled foe of Medium size or smaller</td>
       </tr><tr style="text-align:center">
-        <td>Horde Breaker: Can make a second weapon attack on a different adjacent foe once per turn</td>
+        <td>Horde Breaker: Can make a second weapon attack on a foe adjacent to the first target once per turn</td>
       </tr><tr style="text-align:center">
         <td>Hunter's Lore: Knows any immunities, resistances, or vulnerabilities of a <i>Hunter's Mark</i> target</td>
       </tr><tr style="text-align:center">
@@ -245,7 +243,7 @@ var attributes = {
       </tr><tr style="text-align:center">
         <td>Tireless: Can use an action to gain 1d8+2 temporary hit points 2 times per long rest</td>
       </tr><tr style="text-align:center">
-        <td>Weapon Mastery: Can use the mastery properties of 2 chosen kinds of simple or martial melee weapons</td>
+        <td>Weapon Mastery: Can use the mastery properties of 2 chosen kinds of proficient weapons</td>
       </tr></table>
 </td>
     </tr></table>
@@ -269,8 +267,8 @@ var attributes = {
     <tr style="text-align:center">
       <td>      <table id="SpellStats" style="width:100%">
       <tr style="text-align:center">
-        <td><b>Spells Known/Prepared</b>: R: 9</td>
-        <td><b>Spell Slots</b>: D0: 2; R1: 4; R2: 3; R3: 2</td>
+        <td><b>Spells Known/Prepared</b>: D0: 4; D: 1; R: 9</td>
+        <td><b>Spell Slots</b>: R1: 4; R2: 3; R3: 2</td>
         <td><b>Attack</b>: D: +6; R: +6</td>
         <td><b>Spell DC</b>: D: 14; R: 14</td>
       </tr></table>
@@ -388,11 +386,21 @@ var attributes = {
     <tr style="text-align:center">
       <td><i>Druidic Warrior: Knows 2 Druid cantrips; can replace 1 of them when gaining a Ranger level</i></td>
     </tr><tr style="text-align:center">
-      <td>Favored Enemy: Can cast <i>Hunter's Mark</i> 4 times per long rest</td>
+      <td>Favored Enemy: Can cast <i>Hunter's Mark</i> without expending a spell slot 4 times per long rest</td>
     </tr><tr style="text-align:center">
       <td>Magic Initiate (Druid): Knows 2 Druid cantrips and can cast a chosen D1 spell once per long rest</td>
     </tr><tr style="text-align:center">
       <td>Spellcasting: Can cast spells from the ranger spell list and cast spells marked with [R] using a ritual</td>
+    </tr></table>
+</td>
+  </tr></table>
+</td>
+</tr><tr style="text-align:center">
+  <td style="border:1px solid black"><b>Notes</b><br/>  <table id="NotesArea" style="width:100%">
+  <tr style="text-align:center">
+    <td>    <table id="ValidationPart" style="width:100%">
+    <tr style="text-align:center">
+      <td><b>Validation Errors</b>: Expertise Allocation: 3 available vs. 2 allocated</td>
     </tr></table>
 </td>
   </tr></table>

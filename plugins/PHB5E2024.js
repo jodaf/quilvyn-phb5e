@@ -255,7 +255,7 @@ PHB5E2024.CLASSES_FEATURES_ADDED = {
     '"features.Eldritch Knight ? 10:Eldritch Strike",' +
     '"features.Eldritch Knight ? 15:Arcane Charge",' +
     '"features.Eldritch Knight ? 18:Improved War Magic",' +
-    '"features.Psi Warrior ? 3:Psionic Power",' +
+    '"features.Psi Warrior ? 3:Psionic Power (Psi Warrior)",' +
     '"features.Psi Warrior ? 3:Protective Field",' +
     '"features.Psi Warrior ? 3:Psionic Strike",' +
     '"features.Psi Warrior ? 3:Telekinetic Movement",' +
@@ -324,7 +324,9 @@ PHB5E2024.CLASSES_FEATURES_ADDED = {
     '"features.Assassin ? 9:Infiltration Expertise",' +
     '"features.Assassin ? 13:Envenom Weapons",' +
     '"features.Assassin ? 17:Death Strike",' +
-    '"features.Soulknife ? 3:Psionic Power",' +
+    '"features.Soulknife ? 3:Psionic Power (Soulknife)",' +
+    '"features.Soulknife ? 3:Psi-Bolstered Knack",' +
+    '"features.Soulknife ? 3:Psychic Whispers",' +
     '"features.Soulknife ? 3:Psychic Blades",' +
     '"features.Soulknife ? 9:Soul Blades",' +
     '"features.Soulknife ? 13:Psychic Veil",' +
@@ -879,7 +881,9 @@ PHB5E2024.FEATURES_ADDED = {
   'Bulwark Of Force':Tasha.FEATURES['Bulwark Of Force'],
   'Guarded Mind':Tasha.FEATURES['Guarded Mind'],
   'Psi-Powered Leap':Tasha.FEATURES['Psi-Powered Leap'],
-  'Psionic Power':Tasha.FEATURES['Psionic Power'],
+  'Psionic Power (Psi Warrior)':
+    Tasha.FEATURES['Psionic Power (Psi Warrior)']
+    .replace('can use a bonus action to regain', 'regains'),
   'Protective Field':Tasha.FEATURES['Protective Field'],
   'Psionic Strike':Tasha.FEATURES['Psionic Strike'],
   'Telekinetic Movement':Tasha.FEATURES['Telekinetic Movement'],
@@ -999,45 +1003,92 @@ PHB5E2024.FEATURES_ADDED = {
 
   // Ranger
   // Beast Master
-  'Bestial Fury':PHB5E.FEATURES['Bestial Fury'],
-  'Exceptional Training':PHB5E.FEATURES['Exceptional Training'],
-  'Primal Companion':PHB5E.FEATURES["Ranger's Companion"],
+  'Bestial Fury':
+    PHB5E.FEATURES['Bestial Fury']
+    .replace('action', "action, and the first companion hit each turn on a <i>Hunter's Mark</i> target inflicts +1d%{magicNotes.foeSlayer?10:6} HP force"),
+  'Exceptional Training':
+    'Section=combat ' +
+    // changed effects
+    'Note="Can use a bonus action to command companion to Dash, Disengage, Dodge or Help instead of Attack, and companion attacks can inflict force damage"',
+  'Primal Companion':
+    'Section=combat ' +
+    // changed effects
+    'Note="Primal beast companion (armor class %{13+wisdomModifier}; +%{proficiencyBonus} ability checks and saves; +%{spellAttackModifier.R} Beast\'s Strike) attacks when commanded as a bonus action or by foregoing a self attack; can choose after each long rest to summon a Beast of the Land (%{levels.Ranger*5+5} hit points; 40\' Speed and climb Speed; 60\' Darkvision; Beast\'s Strike inflicts 1d8+%{2+wisdomModifier} HP of a choice of bludgeoning, piercing, or slashing, and a hit after a 20\' charge inflicts +1d6 HP and knocked prone (Huge and larger creatures HP only)), Beast of the Sea (%{levels.Ranger*5+5} hit points; 5\' Speed and 60\' swim Speed; 90\' Darkvision; can breathe water; Beast\'s Strike inflicts 1d6+%{2+wisdomModifier} HP of a choice of bludgeoning or piercing and grappled (save DC %{spellDifficultyClass.R} Athletic or Acrobatics escapes), or Beast of the Sky (%{levels.Ranger*4+4} hit points; 10\' Speed and 60\' fly Speed; 60\' Darkvision; flying away provokes no opportunity attacks; Beast\'s Strike inflicts 1d4+%{3+wisdomModifier} HP slashing)"',
   'Share Spells':PHB5E.FEATURES['Share Spells'],
   // Fey Wanderer
   'Beguiling Twist':Tasha.FEATURES['Beguiling Twist'],
   'Dreadful Strikes':Tasha.FEATURES['Dreadful Strikes'],
   'Fey Reinforcements':Tasha.FEATURES['Fey Reinforcements'],
-  'Fey Wanderer Spells':Tasha.FEATURES['Fey Wanderer Magic'],
+  'Fey Wanderer Spells':
+    Tasha.FEATURES['Fey Wanderer Magic']
+    .replace('Dispel Magic', 'Summon Fey'),
   'Misty Wanderer':Tasha.FEATURES['Misty Wanderer'],
   'Otherworldly Glamour':Tasha.FEATURES['Otherworldly Glamour'],
   // Gloom Stalker
-  'Dread Ambusher':Xanathar.FEATURES['Dread Ambusher'],
+  'Dread Ambusher':
+    'Section=combat,combat ' +
+    // changed effects
+    'Note=' +
+      '"+%V Initiative",' +
+      '"Gains +10 Speed during the first rd of combat/Weapon attacks can inflict +2d%{$\\"combatNotes.stalker\'sFlurry\\"?8:6} HP psychic %{wisdomModifier>1?wisdomModifier+\' times\':\'once\'} per long rest"',
   'Gloom Stalker Spells':Xanathar.FEATURES['Gloom Stalker Magic'],
   'Iron Mind':Xanathar.FEATURES['Iron Mind'],
-  'Shadowy Dodge':Xanathar.FEATURES['Shadowy Dodge'],
-  "Stalker's Flurry":Xanathar.FEATURES["Stalker's Flurry"],
-  'Umbral Sight':Xanathar.FEATURES['Umbral Sight'],
+  'Shadowy Dodge':
+    Xanathar.FEATURES['Shadowy Dodge']
+    .replace(' advantage', " advantage and to teleport 30'"),
+  "Stalker's Flurry":
+    'Section=combat,combat ' +
+    // changed effects
+    'Note=' +
+      '"Has increased Dread Ambusher effects",' +
+      '"After a successful Dread Ambusher attack, can make another attack against a foe adjacent to the target or inflict frightened (save DC %{spellDifficultyClass.R} Wisdom negates) on creatures within 10\' of the target"',
+  'Umbral Sight':
+    Xanathar.FEATURES['Umbral Sight']
+    .replace('30', '60'),
 
   // Rogue
   // Arcane Trickster
-  'Mage Hand Legerdemain':PHB5E.FEATURES['Mage Hand Legerdemain'],
-  'Magical Ambush':PHB5E.FEATURES['Magical Ambush'],
+  'Mage Hand Legerdemain':
+    PHB5E.FEATURES['Mage Hand Legerdemain']
+    .replace(/stow.*traps/, 'make Sleight Of Hand checks'),
+  'Magical Ambush':
+    PHB5E.FEATURES['Magical Ambush']
+    .replace('hidden', 'invisible'),
   'Spell Thief':PHB5E.FEATURES['Spell Thief'],
   // Spellcasting as PHB5E2024
-  'Versatile Trickster':PHB5E.FEATURES['Versatile Trickster'],
+  'Versatile Trickster':
+    'Section=combat ' +
+    // changed effects
+    'Note="Can extend the trip action of Cunning Strike to affect another creature within 5\' of a <i>Mage Hand</i>"',
   // Assassin
   "Assassin's Tools":
-    'Section=skill Note="Tool Proficiency(Disguise Kit; Poisoner\'s Kit)"',
-  'Assassinate':PHB5E.FEATURES.Assassinate,
-  'Death Strike':PHB5E.FEATURES['Death Strike'],
+    'Section=skill Note="Tool Proficiency (Disguise Kit; Poisoner\'s Kit)"',
+  'Assassinate':
+    'Section=combat ' +
+    // changed effects
+    'Note="Has advantage on initiative and on attacks before the target\'s first turn, and a successful Sneak Attack during the first rd inflicts +%{levels.Rogue} HP"',
+  'Death Strike':
+    PHB5E.FEATURES['Death Strike']
+    .replace('surprise attacks inflict', 'Sneak Attack during the first rd inflicts'),
   'Envenom Weapons':
     'Section=combat ' +
-    'Note="Poisoned Cunning Strike influcs 2d6 HP poison on a failed save, ignoring resistance"',
-  'Infiltration Expertise':PHB5E.FEATURES['Infiltration Expertise'],
+    'Note="Cunning Strikes that inflict poisoned also inflict 2d6 HP poison, ignoring resistance, on a failed save"',
+  'Infiltration Expertise':
+    'Section=combat,skill ' +
+    // changed effects
+    'Note=' +
+      '"Has increased Steady Aim effects",' +
+      '"Can mimic another\'s speech and handwriting after an hour\'s study"',
   // Soulknife
-  // Psionic Power as above
+  'Homing Strikes':Tasha.FEATURES['Homing Strikes'],
+  'Psi-Bolstered Knack':Tasha.FEATURES['Psi-Bolstered Knack'],
+  'Psionic Power (Soulknife)':
+    Tasha.FEATURES['Psionic Power (Soulknife)']
+    .replace('can use a bonus action to regain', 'regains'),
   'Psychic Blades':Tasha.FEATURES['Psychic Blades'],
+  'Psychic Teleportation':Tasha.FEATURES['Psychic Teleportation'],
   'Psychic Veil':Tasha.FEATURES['Psychic Veil'],
+  'Psychic Whispers':Tasha.FEATURES['Psychic Whispers'],
   'Rend Mind':Tasha.FEATURES['Rend Mind'],
   'Soul Blades':Tasha.FEATURES['Soul Blades'],
 
@@ -1354,7 +1405,7 @@ PHB5E2024.classRulesExtra = function(rules, name) {
       'features.Combat Superiority', '?', null,
       'battleMasterLevel', '=', 'source<7 ? 3 : source<10 ? 5 : source<15 ? 7 : 9'
     );
-    rules.defineRule('combatNotes.psionicPower',
+    rules.defineRule('combatNotes.psionicPower(PsiWarrior)',
       classLevel, '=', 'source<5 ? 6 : source<11 ? 8 : source<17 ? 10 : 12'
     );
     rules.defineRule('combatNotes.tripAttack', 'maneuverSaveDC', '=', null);
@@ -1397,6 +1448,10 @@ PHB5E2024.classRulesExtra = function(rules, name) {
       'magicNotes.discipleOfTheElements', '=', null
     );
 
+  } else if(name == 'Ranger') {
+
+    rules.defineRule('combatNotes.dreadAmbusher', 'wisdomModifier', '=', null);
+
   } else if(name == 'Rogue') {
 
     let known = [
@@ -1418,6 +1473,9 @@ PHB5E2024.classRulesExtra = function(rules, name) {
     QuilvynRules.spellSlotRules(rules, 'casterLevels.Arcane Trickster', slots);
     rules.defineRule
       ('casterLevels.W', 'casterLevels.Arcane Trickster', '^=', null);
+    rules.defineRule('combatNotes.psionicPower(Soulknife)',
+      classLevel, '=', 'source<5 ? 6 : source<11 ? 8 : source<17 ? 10 : 12'
+    );
     rules.defineRule
       ('magicNotes.spellcasting', 'features.Arcane Trickster', '=', '"Wizard"');
 

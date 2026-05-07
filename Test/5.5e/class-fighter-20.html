@@ -82,7 +82,7 @@ var attributes = {
     </tr><tr style="text-align:center">
       <td>Ability Boosts: 7 to distribute</td>
     </tr><tr style="text-align:center">
-      <td>Psi-Powered Leap: Can use a bonus action to gain a 60' fly Speed until the end of the current turn once per short rest; can spend psionic energy dice for additional uses</td>
+      <td>Psi-Powered Leap: Can use a bonus action to gain a 60' fly Speed until the end of the current turn once per short rest; can expend psionic energy dice for additional uses</td>
     </tr><tr style="text-align:center">
       <td>Tactical Mind: Can add 1d10 to a failed ability check, expending a use of Second Wind if the result is a success</td>
     </tr></table>
@@ -107,7 +107,7 @@ var attributes = {
       <tr style="text-align:center">
         <td><b>Feats</b>: Ability Score Improvement; Alert; Archery; Boon Of The Night Spirit; Boon Of Truesight; Defense; Great Weapon Fighting; Magic Initiate (Druid); Savage Attacker; Skilled; Two-Weapon Fighting</td>
         <td><b>Human Features</b>: Resourceful; Skillful; Versatile</td>
-        <td><b>Fighter Features</b>: Action Surge; Additional Fighting Style; Ambush; Arcane Charge; Armor Training (Light; Medium; Heavy; Shield); Bait And Switch; Battle Master; Bulwark Of Force; Champion; Combat Superiority; Commander's Strike; Commanding Presence; Disarming Attack; Distracting Strike; Eldritch Knight; Eldritch Strike; Epic Boon; Evasive Footwork; Extra Attack; Feinting Attack; Fighter Primary Ability; Fighter Subclass; Fighting Style; Goading Attack; Guarded Mind; Heroic Warrior; Improved Combat Superiority; Improved Critical; Improved War Magic; Indomitable; Know Your Enemy; Lunging Attack; Maneuvering Attack; Menacing Attack; Parry; Precision Attack; Protective Field; Psi Warrior; Psionic Power; Psionic Strike; Pushing Attack; Rally; Relentless; Remarkable Athlete; Riposte; Save Proficiency (Strength; Constitution); Second Wind; Skill Proficiency (Choose 2 from Acrobatics, Animal Handling, Athletics, History, Insight, Intimidation, Persuasion; Perception, Survival); Spellcasting; Strength; Student Of War; Studied Attacks; Superior Critical; Survivor; Sweeping Attack; Tactical Assessment; Tactical Master; Tactical Mind; Tactical Shift; Telekinetic Adept; Telekinetic Master; Telekinetic Movement; Three Extra Attacks; Trip Attack; Two Extra Attacks; Ultimate Combat Superiority; War Bond; War Magic; Weapon Mastery; Weapon Proficiency (Simple Weapons; Martial Weapons)</td>
+        <td><b>Fighter Features</b>: Action Surge; Additional Fighting Style; Ambush; Arcane Charge; Armor Training (Light; Medium; Heavy; Shield); Bait And Switch; Battle Master; Bulwark Of Force; Champion; Combat Superiority; Commander's Strike; Commanding Presence; Disarming Attack; Distracting Strike; Eldritch Knight; Eldritch Strike; Epic Boon; Evasive Footwork; Extra Attack; Feinting Attack; Fighter Primary Ability; Fighter Subclass; Fighting Style; Goading Attack; Guarded Mind; Heroic Warrior; Improved Combat Superiority; Improved Critical; Improved War Magic; Indomitable; Know Your Enemy; Lunging Attack; Maneuvering Attack; Menacing Attack; Parry; Precision Attack; Protective Field; Psi Warrior; Psionic Power (Psi Warrior); Psionic Strike; Pushing Attack; Rally; Relentless; Remarkable Athlete; Riposte; Save Proficiency (Strength; Constitution); Second Wind; Skill Proficiency (Choose 2 from Acrobatics, Animal Handling, Athletics, History, Insight, Intimidation, Persuasion; Perception, Survival); Spellcasting; Strength; Student Of War; Studied Attacks; Superior Critical; Survivor; Sweeping Attack; Tactical Assessment; Tactical Master; Tactical Mind; Tactical Shift; Telekinetic Adept; Telekinetic Master; Telekinetic Movement; Three Extra Attacks; Trip Attack; Two Extra Attacks; Ultimate Combat Superiority; War Bond; War Magic; Weapon Mastery; Weapon Proficiency (Simple Weapons; Martial Weapons)</td>
         <td><b>Acolyte Features</b>: Ability Boost (Choose 3 from Intelligence, Wisdom, Charisma); Magic Initiate (Cleric); Skill Proficiency (Insight; Religion); Tool Proficiency (Calligrapher's Supplies)</td>
       </tr></table>
 </td>
@@ -264,7 +264,7 @@ var attributes = {
       </tr><tr style="text-align:center">
         <td>Boon Of The Night Spirit: Can use a bonus action to become invisible in dim or no light; taking an action, bonus action, or reaction ends</td>
       </tr><tr style="text-align:center">
-        <td>Bulwark Of Force: R30' Can use a bonus action to give 1 target half cover for 1 min once per long rest; can spend psionic energy dice for additional uses</td>
+        <td>Bulwark Of Force: R30' Can use a bonus action to give 1 target half cover for 1 min once per long rest; can expend psionic energy dice for additional uses</td>
       </tr><tr style="text-align:center">
         <td>Combat Superiority: Can use a d12 superiority die to perform one of 9 chosen maneuvers 6 times per short rest</td>
       </tr><tr style="text-align:center">
@@ -306,7 +306,7 @@ var attributes = {
       </tr><tr style="text-align:center">
         <td>Protective Field: R30' Can spend 1 psionic energy die and use a reaction to negate 1d12+1 HP damage</td>
       </tr><tr style="text-align:center">
-        <td>Psionic Power: Can use 12 d12 psionic energy dice per long rest and can use a bonus action to regain 1 die once per short rest</td>
+        <td>Psionic Power (Psi Warrior): Can use 12 d12 psionic energy dice per long rest; regains 1 die after a short rest</td>
       </tr><tr style="text-align:center">
         <td>Psionic Strike: R30' Can spend 1 psionic energy die after a hit to inflict +1d12+1 HP force</td>
       </tr><tr style="text-align:center">
@@ -344,7 +344,7 @@ var attributes = {
       </tr><tr style="text-align:center">
         <td>War Magic: During an Attack action, can cast 2 1-action level 1 or level 2 spells in place of 2 attacks</td>
       </tr><tr style="text-align:center">
-        <td>Weapon Mastery: Can use the mastery properties of 6 chosen kinds of simple or martial melee weapons</td>
+        <td>Weapon Mastery: Can use the mastery properties of 6 chosen kinds of proficient weapons</td>
       </tr></table>
 </td>
     </tr></table>
@@ -378,7 +378,7 @@ var attributes = {
     <tr style="text-align:center">
       <td>      <table id="SpellStats" style="width:100%">
       <tr style="text-align:center">
-        <td><b>Spells Known/Prepared</b>: W0: 3; W: 13</td>
+        <td><b>Spells Known/Prepared</b>: C0: 2; C: 1; D0: 2; D: 1; W0: 3; W: 13</td>
         <td><b>Spell Slots</b>: W1: 4; W2: 3; W3: 3; W4: 1</td>
         <td><b>Attack</b>: C: +6; D: +6; Fighter: +7; W: +7</td>
         <td><b>Spell DC</b>: C: 14; D: 14; Fighter: 15; W: 15</td>
@@ -397,9 +397,9 @@ var attributes = {
     </tr><tr style="text-align:center">
       <td>Spellcasting: Can cast spells from the Wizard spell list and cast spells marked with [R] using a ritual</td>
     </tr><tr style="text-align:center">
-      <td>Telekinetic Master: Can cast <i>Telekinesis</i> and use bonus actions while concentrating to make a weapon attack each rd once per long rest; can spend psionic energy dice for additional uses</td>
+      <td>Telekinetic Master: Can cast <i>Telekinesis</i> and use bonus actions while concentrating to make a weapon attack each rd once per long rest; can expend psionic energy dice for additional uses</td>
     </tr><tr style="text-align:center">
-      <td>Telekinetic Movement: R30' Can move a Large object or willing creature 30', or a Tiny object to or from self hand, once per short rest; can spend psionic energy dice for additional uses</td>
+      <td>Telekinetic Movement: R30' Can move a Large object or willing creature 30', or a Tiny object to or from self hand, once per short rest; can expend psionic energy dice for additional uses</td>
     </tr></table>
 </td>
   </tr></table>

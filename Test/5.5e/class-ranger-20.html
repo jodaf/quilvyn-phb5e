@@ -10,23 +10,25 @@ var attributes = {
   "abilityBoosts.Charisma":3, "abilityBoosts.Intelligence":1, "abilityBoosts.Strength":1, 
   "abilityBoosts.Wisdom":1, "alignment":"Neutral", "armor":"Leather", "background":"Acolyte", 
   "charisma":13, "constitution":11, "deity":"None", "dexterity":18, "experience":817147, 
-  "expertise.Intimidation":1, "expertise.Nature":1, "feats.Ability Score Improvement":1, "feats.Alert":1, 
-  "feats.Archery":1, "feats.Boon Of Spell Recall":1, "feats.Great Weapon Fighting":1, 
-  "feats.Savage Attacker":1, "feats.Skilled":1, "feats.Two-Weapon Fighting":1, "gender":"Female", 
-  "hitPoints":68, "intelligence":12, "languagesChosen.Celestial":1, 
+  "expertise.Intimidation":1, "expertise.Nature":1, "expertise.Survival":1, 
+  "feats.Ability Score Improvement":1, "feats.Alert":1, "feats.Archery":1, "feats.Boon Of Spell Recall":1, 
+  "feats.Great Weapon Fighting":1, "feats.Savage Attacker":1, "feats.Skilled":1, "feats.Two-Weapon Fighting":1, 
+  "gender":"Female", "hitPoints":68, "intelligence":12, "languagesChosen.Celestial":1, 
   "languagesChosen.Dwarvish":1, "languagesChosen.Infernal":1, "languagesChosen.Orc":1, "levels.Ranger":20, 
-  "name":"Class-Ranger 20", "selectableFeatures.Ranger - Druidic Warrior":1, 
-  "selectableFeatures.Ranger - Fighting Style":1, "selectableFeatures.Ranger - Hunter":1, "shield":"None", 
-  "skillsChosen.Acrobatics":1, "skillsChosen.Arcana":1, "skillsChosen.Athletics":1, 
-  "skillsChosen.Insight":1, "skillsChosen.Intimidation":1, "skillsChosen.Nature":1, 
-  "skillsChosen.Survival":1, "species":"Human", "spells.Barkskin(R2 Tran)":1, 
-  "spells.Commune With Nature(R5 Divi)":1, "spells.Conjure Woodland Beings(R4 Conj)":1, 
-  "spells.Cure Wounds(R1 Evoc)":1, "spells.Daylight(R3 Evoc)":1, "spells.Freedom Of Movement(R4 Abju)":1, 
+  "name":"Class-Ranger 20", "selectableFeatures.Ranger - Beast Master":1, 
+  "selectableFeatures.Ranger - Druidic Warrior":1, "selectableFeatures.Ranger - Fey Wanderer":1, 
+  "selectableFeatures.Ranger - Fighting Style":1, "selectableFeatures.Ranger - Gloom Stalker":1, 
+  "selectableFeatures.Ranger - Hunter":1, "shield":"None", "skillsChosen.Acrobatics":1, "skillsChosen.Arcana":1, 
+  "skillsChosen.Athletics":1, "skillsChosen.Insight":1, "skillsChosen.Intimidation":1, 
+  "skillsChosen.Nature":1, "skillsChosen.Persuasion":1, "skillsChosen.Survival":1, "species":"Human", 
+  "spells.Barkskin(R2 Tran)":1, "spells.Commune With Nature(R5 Divi)":1, 
+  "spells.Conjure Woodland Beings(R4 Conj)":1, "spells.Cure Wounds(R1 Abju)":1, "spells.Daylight(R3 Evoc)":1, 
+  "spells.Freedom Of Movement(R4 Abju)":1, "spells.Guidance(C0 Divi)":1, "spells.Guiding Bolt(C1 Evoc)":1, 
   "spells.Jump(R1 Tran)":1, "spells.Locate Creature(R4 Divi)":1, "spells.Longstrider(R1 Tran)":1, 
-  "spells.Nondetection(R3 Abju)":1, "spells.Pass Without Trace(R2 Abju)":1, 
-  "spells.Protection From Energy(R3 Abju)":1, "spells.Protection From Poison(R2 Abju)":1, 
-  "spells.Speak With Animals(R1 Divi)":1, "spells.Tree Stride(R5 Conj)":1, "strength":10, "weapons.Longbow":1, 
-  "weapons.Sickle":1, "weapons.Whip":1, "wisdom":9
+  "spells.Message(D0 Tran)":1, "spells.Nondetection(R3 Abju)":1, "spells.Pass Without Trace(R2 Abju)":1, 
+  "spells.Protection From Energy(R3 Abju)":1, "spells.Protection From Poison(R2 Abju)":1, "spells.Resistance(C0 Abju)":1, 
+  "spells.Resistance(D0 Abju)":1, "spells.Speak With Animals(R1 Divi)":1, "spells.Tree Stride(R5 Conj)":1, 
+  "strength":10, "weapons.Longbow":1, "weapons.Sickle":1, "weapons.Whip":1, "wisdom":13
 };
   </script>
 </head>
@@ -43,7 +45,7 @@ var attributes = {
       <td><b>Dexterity</b>: 18 (+4)</td>
       <td><b>Constitution</b>: 11 (+0)</td>
       <td><b>Intelligence</b>: 13 (+1)</td>
-      <td><b>Wisdom</b>: 10 (+0)</td>
+      <td><b>Wisdom</b>: 14 (+2)</td>
       <td><b>Charisma</b>: 16 (+3)</td>
     </tr></table>
 </td>
@@ -77,6 +79,8 @@ var attributes = {
     </tr><tr style="text-align:center">
       <td>Ability Boosts: 6 to distribute</td>
     </tr><tr style="text-align:center">
+      <td>Otherworldly Glamour: +2 Charisma checks</td>
+    </tr><tr style="text-align:center">
       <td>Roving: Has 40' climb and swim Speeds</td>
     </tr></table>
 </td>
@@ -100,7 +104,7 @@ var attributes = {
       <tr style="text-align:center">
         <td><b>Feats</b>: Ability Score Improvement; Alert; Archery; Boon Of Spell Recall; Great Weapon Fighting; Savage Attacker; Skilled; Two-Weapon Fighting</td>
         <td><b>Human Features</b>: Resourceful; Skillful; Versatile</td>
-        <td><b>Ranger Features</b>: Armor Training (Light; Medium; Shield); Defensive Tactics; Deft Explorer; Druidic Warrior; Epic Boon; Expertise; Extra Attack; Favored Enemy; Feral Senses; Fighting Style; Foe Slayer; Hunter's Lore; Hunter's Prey; Hunter; Nature's Veil; Precise Hunter; Ranger Fighting Style; Ranger Subclass; Relentless Hunter; Roving; Save Proficiency (Strength; Dexterity); Skill Proficiency (Choose 3 from Animal Handling, Athletics, Insight, Investigation, Nature, Perception, Stealth, Survival); Spellcasting; Superior Hunter's Defense; Superior Hunter's Prey; Tireless; Weapon Mastery; Weapon Proficiency (Simple Weapons; Martial Weapons)</td>
+        <td><b>Ranger Features</b>: Armor Training (Light; Medium; Shield); Beast Master; Beguiling Twist; Bestial Fury; Defensive Tactics; Deft Explorer; Dread Ambusher; Dreadful Strikes; Druidic Warrior; Epic Boon; Exceptional Training; Expertise; Extra Attack; Favored Enemy; Feral Senses; Fey Reinforcements; Fey Wanderer Spells; Fey Wanderer; Fighting Style; Foe Slayer; Gloom Stalker Spells; Gloom Stalker; Hunter's Lore; Hunter's Prey; Hunter; Iron Mind; Misty Wanderer; Nature's Veil; Otherworldly Glamour; Precise Hunter; Primal Companion; Ranger Fighting Style; Ranger Subclass; Relentless Hunter; Roving; Save Proficiency (Strength; Dexterity); Shadowy Dodge; Share Spells; Skill Proficiency (Choose 3 from Animal Handling, Athletics, Insight, Investigation, Nature, Perception, Stealth, Survival); Spellcasting; Stalker's Flurry; Superior Hunter's Defense; Superior Hunter's Prey; Tireless; Umbral Sight; Weapon Mastery; Weapon Proficiency (Simple Weapons; Martial Weapons)</td>
         <td><b>Acolyte Features</b>: Ability Boost (Choose 3 from Intelligence, Wisdom, Charisma); Magic Initiate (Cleric); Skill Proficiency (Insight; Religion); Tool Proficiency (Calligrapher's Supplies)</td>
       </tr></table>
 </td>
@@ -117,7 +121,11 @@ var attributes = {
       </tr><tr style="text-align:center">
         <td><i>Versatile: +1 Origin Feat</i></td>
       </tr><tr style="text-align:center">
+        <td>Fey Wanderer Spells: Fey association shows a minor physical effect</td>
+      </tr><tr style="text-align:center">
         <td>Resourceful: Gains Heroic Inspiration at the end of a long rest</td>
+      </tr><tr style="text-align:center">
+        <td>Umbral Sight: Has 60' Darkvision and is invisible to darkvision</td>
       </tr></table>
 </td>
     </tr></table>
@@ -129,19 +137,19 @@ var attributes = {
     <col style="width:34%"/>
     <tr style="text-align:left">
       <td>Acrobatics: (dex) +10</td>
-      <td>Insight: (wis) +6</td>
+      <td>Insight: (wis) +8</td>
       <td>Performance: (cha) +3</td>
     </tr><tr style="text-align:left">
-      <td>Animal Handling: (wis) +0</td>
+      <td>Animal Handling: (wis) +2</td>
       <td>Intimidation: (cha) +15</td>
-      <td>Persuasion: (cha) +3</td>
+      <td>Persuasion: (cha) +9</td>
     </tr><tr style="text-align:left">
       <td>Arcana: (int) +7</td>
       <td>Investigation: (int) +1</td>
       <td>Religion: (int) +7</td>
     </tr><tr style="text-align:left">
       <td>Athletics: (str) +6</td>
-      <td>Medicine: (wis) +0</td>
+      <td>Medicine: (wis) +2</td>
       <td>Sleight Of Hand: (dex) +4</td>
     </tr><tr style="text-align:left">
       <td>Deception: (cha) +3</td>
@@ -149,14 +157,14 @@ var attributes = {
       <td>Stealth: (dex) +4</td>
     </tr><tr style="text-align:left">
       <td>History: (int) +1</td>
-      <td>Perception: (wis) +0</td>
-      <td>Survival: (wis) +6</td>
+      <td>Perception: (wis) +2</td>
+      <td>Survival: (wis) +14</td>
     </tr></table>
 </td>
   </tr><tr style="text-align:center">
-    <td><b>Skill Proficiency</b>: Acrobatics; Arcana; Athletics; Insight; Intimidation; Nature; Religion; Survival</td>
+    <td><b>Skill Proficiency</b>: Acrobatics; Arcana; Athletics; Insight; Intimidation; Nature; Persuasion; Religion; Survival</td>
   </tr><tr style="text-align:center">
-    <td><b>Expertise</b>: Intimidation; Nature</td>
+    <td><b>Expertise</b>: Intimidation; Nature; Survival</td>
   </tr><tr style="text-align:center">
     <td><b>Tool Proficiency</b>: Calligrapher's Supplies:  (dex)</td>
   </tr><tr style="text-align:center">
@@ -164,15 +172,15 @@ var attributes = {
   </tr><tr style="text-align:center">
     <td><b>Skill Notes</b>:     <table id="SkillNotes" style="width:100%">
     <tr style="text-align:center">
-      <td><i>Deft Explorer: Language (Choose 2 from any)</i></td>
+      <td><i>Deft Explorer: Language (Choose 2 from any)/Has expertise with 1 chosen proficient skill</i></td>
     </tr><tr style="text-align:center">
-      <td><i>Expertise: +6 on 2 chosen proficient skills</i></td>
+      <td><i>Expertise: Has expertise with 2 chosen proficient skills</i></td>
+    </tr><tr style="text-align:center">
+      <td><i>Otherworldly Glamour: Skill Proficiency (Choose 1 from Deception, Performance, Persuasion)</i></td>
     </tr><tr style="text-align:center">
       <td><i>Skilled: Skill Proficiency or Tool Proficiency (Choose 3 from any)</i></td>
     </tr><tr style="text-align:center">
       <td><i>Skillful: Skill Proficiency (Choose 1 from any)</i></td>
-    </tr><tr style="text-align:center">
-      <td>Deft Explorer: +6 on a choice of proficient skill</td>
     </tr><tr style="text-align:center">
       <td>Feral Senses: Has 30' Blindsight</td>
     </tr></table>
@@ -187,7 +195,7 @@ var attributes = {
       <td>      <table id="CombatStats" style="width:100%">
       <tr style="text-align:center">
         <td><b>Hit Points</b>: 68</td>
-        <td><b>Initiative</b>: +10</td>
+        <td><b>Initiative</b>: +12</td>
         <td><b>Armor Class</b>: 15</td>
       </tr></table>
 </td>
@@ -219,23 +227,37 @@ var attributes = {
       </tr><tr style="text-align:center">
         <td><i>Dexterity Damage Adjustment: +4</i></td>
       </tr><tr style="text-align:center">
+        <td><i>Dread Ambusher: +2 Initiative</i></td>
+      </tr><tr style="text-align:center">
         <td><i>Hunter's Prey: Has the Colossus Slayer and Horde Breaker features</i></td>
+      </tr><tr style="text-align:center">
+        <td><i>Stalker's Flurry: Has increased Dread Ambusher effects</i></td>
       </tr><tr style="text-align:center">
         <td>Alert: Can swap initiatives with a willing ally</td>
       </tr><tr style="text-align:center">
         <td>Archery: +2 ranged attacks</td>
       </tr><tr style="text-align:center">
+        <td>Beguiling Twist: R120' Can use a reaction in response to a successful save vs. charmed or frightened to inflict a choice of charmed or frightened on a different target for 1 min (save DC 16 Wisdom negates; additional saves each rd end)</td>
+      </tr><tr style="text-align:center">
+        <td>Bestial Fury: Companion can make 2 attacks in an Attack action, and the first companion hit each turn on a <i>Hunter's Mark</i> target inflicts +1d10 HP force</td>
+      </tr><tr style="text-align:center">
         <td>Colossus Slayer: Can inflict +1d8 HP with a weapon vs. an already-injured foe once per turn</td>
       </tr><tr style="text-align:center">
         <td>Defensive Tactics: Can choose Escape The Horde or Multiattack Defense to be active after each rest</td>
       </tr><tr style="text-align:center">
+        <td>Dread Ambusher: Gains +10 Speed during the first rd of combat/Weapon attacks can inflict +2d8 HP psychic 2 times per long rest</td>
+      </tr><tr style="text-align:center">
+        <td>Dreadful Strikes: Can inflict +1d6 HP psychic with a weapon once per turn</td>
+      </tr><tr style="text-align:center">
         <td>Escape The Horde: Foes have disadvantage on opportunity attacks targeting self</td>
+      </tr><tr style="text-align:center">
+        <td>Exceptional Training: Can use a bonus action to command companion to Dash, Disengage, Dodge or Help instead of Attack, and companion attacks can inflict force damage</td>
       </tr><tr style="text-align:center">
         <td>Extra Attack: Can make 2 attacks during an Attack action</td>
       </tr><tr style="text-align:center">
         <td>Great Weapon Fighting: Can treat 1s and 2s as 3s on two-handed weapon damage</td>
       </tr><tr style="text-align:center">
-        <td>Horde Breaker: Can make a second weapon attack on a different adjacent foe once per turn</td>
+        <td>Horde Breaker: Can make a second weapon attack on a foe adjacent to the first target once per turn</td>
       </tr><tr style="text-align:center">
         <td>Hunter's Lore: Knows any immunities, resistances, or vulnerabilities of a <i>Hunter's Mark</i> target</td>
       </tr><tr style="text-align:center">
@@ -243,17 +265,25 @@ var attributes = {
       </tr><tr style="text-align:center">
         <td>Multiattack Defense: Successful attackers suffer disadvantage on additional attacks on self in the same turn</td>
       </tr><tr style="text-align:center">
-        <td>Nature's Veil: Can use a bonus action to become invisible until the end of the next turn once per long rest</td>
+        <td>Nature's Veil: Can use a bonus action to become invisible until the end of the next turn 2 times per long rest</td>
       </tr><tr style="text-align:center">
         <td>Precise Hunter: Has advantage on attacks vs. <i>Hunter's Mark</i> target</td>
       </tr><tr style="text-align:center">
+        <td>Primal Companion: Primal beast companion (armor class 15; +6 ability checks and saves; +8 Beast's Strike) attacks when commanded as a bonus action or by foregoing a self attack; can choose after each long rest to summon a Beast of the Land (105 hit points; 40' Speed and climb Speed; 60' Darkvision; Beast's Strike inflicts 1d8+4 HP of a choice of bludgeoning, piercing, or slashing, and a hit after a 20' charge inflicts +1d6 HP and knocked prone (Huge and larger creatures HP only)), Beast of the Sea (105 hit points; 5' Speed and 60' swim Speed; 90' Darkvision; can breathe water; Beast's Strike inflicts 1d6+4 HP of a choice of bludgeoning or piercing and grappled (save DC 16 Athletic or Acrobatics escapes), or Beast of the Sky (84 hit points; 10' Speed and 60' fly Speed; 60' Darkvision; flying away provokes no opportunity attacks; Beast's Strike inflicts 1d4+5 HP slashing)</td>
+      </tr><tr style="text-align:center">
         <td>Savage Attacker: Can use the better of 2 damage rolls once per turn</td>
       </tr><tr style="text-align:center">
-        <td>Tireless: Can use an action to gain 1d8+1 temporary hit points once per long rest</td>
+        <td>Shadowy Dodge: Can use a reaction to inflict disadvantage on an attacker who does not have advantage and to teleport 30'</td>
+      </tr><tr style="text-align:center">
+        <td>Stalker's Flurry: After a successful Dread Ambusher attack, can make another attack against a foe adjacent to the target or inflict frightened (save DC 16 Wisdom negates) on creatures within 10' of the target</td>
+      </tr><tr style="text-align:center">
+        <td>Superior Hunter's Prey: Can inflict <i>Hunter's Mark</i> damage to a second creature within 30' of the target once per turn</td>
+      </tr><tr style="text-align:center">
+        <td>Tireless: Can use an action to gain 1d8+2 temporary hit points 2 times per long rest</td>
       </tr><tr style="text-align:center">
         <td>Two-Weapon Fighting: Adds ability modifier to second weapon damage</td>
       </tr><tr style="text-align:center">
-        <td>Weapon Mastery: Can use the mastery properties of 2 chosen kinds of simple or martial melee weapons</td>
+        <td>Weapon Mastery: Can use the mastery properties of 2 chosen kinds of proficient weapons</td>
       </tr></table>
 </td>
     </tr></table>
@@ -261,12 +291,16 @@ var attributes = {
   </tr><tr style="text-align:center">
     <td>    <table id="SavePart" style="width:100%">
     <tr style="text-align:center">
-      <td><b>Save Proficiency</b>: Dexterity; Strength</td>
+      <td><b>Save Proficiency</b>: Dexterity; Strength; Wisdom</td>
     </tr><tr style="text-align:center">
-      <td><b>Save</b>: Charisma: +3; Constitution: +0; Dexterity: +10; Intelligence: +1; Strength: +6; Wisdom: +0</td>
+      <td><b>Save</b>: Charisma: +3; Constitution: +0; Dexterity: +10; Intelligence: +1; Strength: +6; Wisdom: +8</td>
     </tr><tr style="text-align:center">
       <td><b>Save Notes</b>:       <table id="SaveNotes" style="width:100%">
       <tr style="text-align:center">
+        <td><i>Iron Mind: Save Proficiency (Wisdom)</i></td>
+      </tr><tr style="text-align:center">
+        <td>Beguiling Twist: Has advantage vs. charmed and frightened</td>
+      </tr><tr style="text-align:center">
         <td>Superior Hunter's Defense: Can use a reaction upon taking damage to gain resistance to that type of damage until the end of the current turn</td>
       </tr><tr style="text-align:center">
         <td>Tireless: Exhaustion level decreases by 1 after a short rest</td>
@@ -283,10 +317,10 @@ var attributes = {
     <tr style="text-align:center">
       <td>      <table id="SpellStats" style="width:100%">
       <tr style="text-align:center">
-        <td><b>Spells Known/Prepared</b>: R: 15</td>
-        <td><b>Spell Slots</b>: D0: 2; R1: 4; R2: 3; R3: 3; R4: 3; R5: 2</td>
-        <td><b>Attack</b>: C: +6; R: +6</td>
-        <td><b>Spell DC</b>: C: 14; R: 14</td>
+        <td><b>Spells Known/Prepared</b>: C0: 2; C: 1; D0: 2; R: 15</td>
+        <td><b>Spell Slots</b>: R1: 4; R2: 3; R3: 3; R4: 3; R5: 2</td>
+        <td><b>Attack</b>: C: +8; R: +8</td>
+        <td><b>Spell DC</b>: C: 16; R: 16</td>
       </tr></table>
 </td>
     </tr></table>
@@ -296,15 +330,29 @@ var attributes = {
     <tr style="text-align:left">
       <td>Barkskin (R2 Tran): Willing touched gains Armor Class 17 for 1 hr</td>
     </tr><tr style="text-align:left">
+      <td>Charm Person (R1 [Fey Wanderer Spells] Ench): R30' Target humanoid becomes charmed by self (save Wisdom negates) for 1 hr or until harmed [+Level affects +1 target]</td>
+    </tr><tr style="text-align:left">
       <td>Commune With Nature (R5 Divi): Reveals 3 facts about nature within 3 miles, or within 300' when underground [R]</td>
     </tr><tr style="text-align:left">
       <td>Conjure Woodland Beings (R4 Conj): 10' emanation inflicts 5d8 HP force (save Wisdom half) and allows self to use a bonus action to Disengage for concentration up to 10 min [+Level inflicts +1d8 HP]</td>
     </tr><tr style="text-align:left">
-      <td>Cure Wounds (R1 Evoc): 1</td>
+      <td>Cure Wounds (R1 Abju): Touched regains 2d8+2 hit points [+Level restores +2d8 hit points]</td>
     </tr><tr style="text-align:left">
       <td>Daylight (R3 Evoc): R60' Target centers a 60' radius bright light for 1 hr</td>
     </tr><tr style="text-align:left">
+      <td>Dimension Door (R4 [Fey Wanderer Spells] Conj): Teleports self and 1 adjacent willing creature up to 500'</td>
+    </tr><tr style="text-align:left">
+      <td>Disguise Self (R1 [Gloom Stalker Spells] Illu): Changes the appearance of self body and clothing for 1 hr; physical investigation detects the illusion</td>
+    </tr><tr style="text-align:left">
+      <td>Fear (R3 [Gloom Stalker Spells] Illu): Creatures in a 30' cone drop held objects and flee (save Wisdom negates; additional saves each rd end) for concentration up to 1 min</td>
+    </tr><tr style="text-align:left">
       <td>Freedom Of Movement (R4 Abju): Touched gains immunity to movement impediments and a 40' swim Speed and can escape from nonmagical restraints for 1 hr [+Level affects +1 target]</td>
+    </tr><tr style="text-align:left">
+      <td>Greater Invisibility (R4 [Gloom Stalker Spells] Illu): Touched becomes invisible for concentration up to 1 min</td>
+    </tr><tr style="text-align:left">
+      <td>Guidance (C0 Divi): Touched gains +1d4 on a choice of skill for concentration up to 1 min</td>
+    </tr><tr style="text-align:left">
+      <td>Guiding Bolt (C1 Evoc): R120' Ranged spell inflicts 4d6 HP radiant and gives advantage on the next attack on the target before the end of the next turn [+Level inflicts +1d6 HP]</td>
     </tr><tr style="text-align:left">
       <td>Hunter's Mark (R1 [Favored Enemy] Divi): R90' Self inflicts +1d10 HP force on the target and gains advantage on Perception and Survival to locate it for concentration up to 1 hr; can use a bonus action to move to a different target when the current target drops to 0 hit points [+Level extends the duration to 8 or 24 hr at level 3 or 5]</td>
     </tr><tr style="text-align:left">
@@ -314,6 +362,14 @@ var attributes = {
     </tr><tr style="text-align:left">
       <td>Longstrider (R1 Tran): Touched gains +10' Speed for 1 hr [+Level affects +1 target]</td>
     </tr><tr style="text-align:left">
+      <td>Message (D0 Tran): R120' Self and target can hold a whispered conversation for 1 rd; can be cast through objects, but 1' of wood, stone, or metal or a thin sheet of lead blocks the spell</td>
+    </tr><tr style="text-align:left">
+      <td>Mislead (R5 [Fey Wanderer Spells] Illu): Makes self invisible and creates an illusory duplicate that can move 80' and share senses for concentration up to 1 hr; attacking, inflicting damage, or casting ends the invisibility</td>
+    </tr><tr style="text-align:left">
+      <td>Misty Step (R2 [Fey Wanderer Spells] Conj): Teleports self 30'</td>
+    </tr><tr style="text-align:left">
+      <td>Misty Step (R2 [Misty Wanderer] Conj): Teleports self 30'</td>
+    </tr><tr style="text-align:left">
       <td>Nondetection (R3 Abju): Willing touched or touched 10'-long object gains immunity to divination for 8 hr</td>
     </tr><tr style="text-align:left">
       <td>Pass Without Trace (R2 Abju): Targets in a 30' radius gain +10 Stealth and leave no tracks for concentration up to 1 hr</td>
@@ -322,7 +378,19 @@ var attributes = {
     </tr><tr style="text-align:left">
       <td>Protection From Poison (R2 Abju): Touched recovers from the poisoned condition and gains advantage on saves vs. being poisoned and resistance to poison for 1 hr</td>
     </tr><tr style="text-align:left">
+      <td>Resistance (C0 Abju): Touched reduces by 1d4 HP any damage taken from a choice of acid, bludgeoning, cold, fire, lightning, necrotic, piercing, poison, radiant, slashing, or thunder for concentration up to 1 min</td>
+    </tr><tr style="text-align:left">
+      <td>Resistance (D0 Abju): Touched reduces by 1d4 HP any damage taken from a choice of acid, bludgeoning, cold, fire, lightning, necrotic, piercing, poison, radiant, slashing, or thunder for concentration up to 1 min</td>
+    </tr><tr style="text-align:left">
+      <td>Rope Trick (R2 [Gloom Stalker Spells] Tran): Touched rope leads to an extradimensional space with room for 8 creatures for 1 hr</td>
+    </tr><tr style="text-align:left">
+      <td>Seeming (R5 [Gloom Stalker Spells] Illu): R30' Changes the appearance of targets (save Charisma negates; Investigation detects) for 8 hr</td>
+    </tr><tr style="text-align:left">
       <td>Speak With Animals (R1 Divi): Self can talk with beasts for 10 min [R]</td>
+    </tr><tr style="text-align:left">
+      <td>Summon Fey (R3 [Fey Reinforcements] Conj): R90' Summons an obedient fey spirit (Armor Class 15; 30 hit points; move 40' and can teleport 30'; multiattack equal to half the spell level; short sword inflicts 1d6+6 HP piercing plus 1d6 force), of type fuming (has advantage on the next attack in the same turn after teleporting), mirthful (can charm 1 creature (save Wisdom negates) within 10' after teleporting), or tricksy (can create darkness in a 5' cube for 1 rd after teleporting) for concentration up to 1 hr [+Level increases the Armor Class by 1, hit points by 10, and piercing damage by 1]</td>
+    </tr><tr style="text-align:left">
+      <td>Summon Fey (R3 [Fey Wanderer Spells] Conj): R90' Summons an obedient fey spirit (Armor Class 15; 30 hit points; move 40' and can teleport 30'; multiattack equal to half the spell level; short sword inflicts 1d6+6 HP piercing plus 1d6 force), of type fuming (has advantage on the next attack in the same turn after teleporting), mirthful (can charm 1 creature (save Wisdom negates) within 10' after teleporting), or tricksy (can create darkness in a 5' cube for 1 rd after teleporting) for concentration up to 1 hr [+Level increases the Armor Class by 1, hit points by 10, and piercing damage by 1]</td>
     </tr><tr style="text-align:left">
       <td>Tree Stride (R5 Conj): Allows self to use 10' of movement to teleport 500' between like trees once per rd for concentration up to 1 min</td>
     </tr></table>
@@ -336,15 +404,19 @@ var attributes = {
     </tr><tr style="text-align:center">
       <td>Boon Of Spell Recall: Casting a level 1-4 spell does not use a spell slot if a d4 roll equals the spell level</td>
     </tr><tr style="text-align:center">
-      <td>Favored Enemy: Can cast <i>Hunter's Mark</i> 6 times per long rest</td>
+      <td>Favored Enemy: Can cast <i>Hunter's Mark</i> without expending a spell slot 6 times per long rest</td>
+    </tr><tr style="text-align:center">
+      <td>Fey Reinforcements: Can cast <i>Summon Fey</i> without expending a spell slot, optionally for 1 min instead of for concentration, once per long rest</td>
     </tr><tr style="text-align:center">
       <td>Magic Initiate (Cleric): Knows 2 Cleric cantrips and can cast a chosen C1 spell once per long rest</td>
     </tr><tr style="text-align:center">
+      <td>Misty Wanderer: Can cast <i>Misty Step</i> without expending a spell slot 2 times per long rest, and <i>Misty Step</i> can take along a willing adjacent creature</td>
+    </tr><tr style="text-align:center">
       <td>Relentless Hunter: Damage does not break concentration on <i>Hunter's Mark</i></td>
     </tr><tr style="text-align:center">
-      <td>Spellcasting: Can cast spells from the ranger spell list and cast spells marked with [R] using a ritual</td>
+      <td>Share Spells: R30' Can cast spells on self that also affect companion</td>
     </tr><tr style="text-align:center">
-      <td>Superior Hunter's Prey: Can inflict <i>Hunter's Mark</i> damage to a second creature within 30' of the target once per turn</td>
+      <td>Spellcasting: Can cast spells from the ranger spell list and cast spells marked with [R] using a ritual</td>
     </tr></table>
 </td>
   </tr></table>
@@ -354,7 +426,7 @@ var attributes = {
   <tr style="text-align:center">
     <td>    <table id="ValidationPart" style="width:100%">
     <tr style="text-align:center">
-      <td><b>Validation Errors</b>: Selectable Feature Allocation: 2 available vs. 3 allocated</td>
+      <td><b>Validation Errors</b>: Selectable Feature Allocation: 2 available vs. 6 allocated</td>
     </tr></table>
 </td>
   </tr></table>

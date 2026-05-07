@@ -474,19 +474,17 @@ var attributes = {
   </tr><tr style="text-align:center">
     <td><b>Skill Notes</b>:     <table id="SkillNotes" style="width:100%">
     <tr style="text-align:center">
-      <td><i>Deft Explorer: Language (Choose 2 from any)</i></td>
+      <td><i>Deft Explorer: Language (Choose 2 from any)/Has expertise with 1 chosen proficient skill</i></td>
     </tr><tr style="text-align:center">
       <td><i>Druidic: Language (Druidic)</i></td>
     </tr><tr style="text-align:center">
-      <td><i>Expertise: +2 on 2 chosen proficient skills</i></td>
+      <td><i>Expertise: Has expertise with 2 chosen proficient skills</i></td>
     </tr><tr style="text-align:center">
       <td><i>Jack Of All Trades: +1 on non-proficient skill checks</i></td>
     </tr><tr style="text-align:center">
       <td><i>Magician: +2 Arcana/+2 Nature</i></td>
     </tr><tr style="text-align:center">
       <td><i>Skillful: Skill Proficiency (Choose 1 from any)</i></td>
-    </tr><tr style="text-align:center">
-      <td>Deft Explorer: +2 on a choice of proficient skill</td>
     </tr><tr style="text-align:center">
       <td>Scholar: +2 in a choice of proficient Arcana, History, Investigation, Medicine, Nature, or Religion</td>
     </tr></table>
@@ -547,7 +545,7 @@ var attributes = {
       </tr><tr style="text-align:center">
         <td>Two-Weapon Fighting: Adds ability modifier to second weapon damage</td>
       </tr><tr style="text-align:center">
-        <td>Weapon Mastery: Can use the mastery properties of 4 chosen kinds of simple or martial melee weapons</td>
+        <td>Weapon Mastery: Can use the mastery properties of 4 chosen kinds of proficient weapons</td>
       </tr></table>
 </td>
     </tr></table>
@@ -569,8 +567,8 @@ var attributes = {
     <tr style="text-align:center">
       <td>      <table id="SpellStats" style="width:100%">
       <tr style="text-align:center">
-        <td><b>Spells Known/Prepared</b>: B0: 2; B: 5; C0: 3; C: 5; D0: 2; D: 5; K0: 2; K: 3; P: 3; R: 3; S0: 4; S: 4; W0: 3; W: 5</td>
-        <td><b>Spell Slots</b>: B1: 3; C0: 2; C1: 3; D1: 3; K1: 2; P1: 2; R1: 2; S1: 3; W1: 3</td>
+        <td><b>Spells Known/Prepared</b>: B0: 2; B: 5; C0: 7; C: 6; D0: 3; D: 5; K0: 2; K: 3; P: 3; R: 3; S0: 4; S: 4; W0: 3; W: 5</td>
+        <td><b>Spell Slots</b>: B1: 3; C1: 3; D1: 3; K1: 2; P1: 2; R1: 2; S1: 3; W1: 3</td>
         <td><b>Attack</b>: B: +4; C: +4; D: +4; K: +4; P: +4; R: +4; S: +4; W: +4</td>
         <td><b>Spell DC</b>: B: 12; C: 12; D: 12; K: 12; P: 12; R: 12; S: 12; W: 12</td>
       </tr></table>
@@ -2384,7 +2382,7 @@ var attributes = {
     </tr><tr style="text-align:center">
       <td>Eldritch Spear: Increases the range of a chosen ranged Warlock cantrip by 60'</td>
     </tr><tr style="text-align:center">
-      <td>Favored Enemy: Can cast <i>Hunter's Mark</i> 2 times per long rest</td>
+      <td>Favored Enemy: Can cast <i>Hunter's Mark</i> without expending a spell slot 2 times per long rest</td>
     </tr><tr style="text-align:center">
       <td>Font Of Magic: Can use 2 Sorcery Points per long rest, convert spell slots to Sorcery Points, and use a bonus action to convert Sorcery Points to a spell slot</td>
     </tr><tr style="text-align:center">
@@ -2400,7 +2398,7 @@ var attributes = {
     </tr><tr style="text-align:center">
       <td>Pact Of The Blade: Can use a bonus action to create a bonded simple or martial pact weapon or to bond with a touched magic weapon and gain proficiency with it; it can be used as a spellcasting focus, and its Charisma-based attacks inflict a choice of necrotic, psychic, radiant, or normal weapon damage; moving 5' away from the weapon for 1 min ends the bond</td>
     </tr><tr style="text-align:center">
-      <td>Paladin's Smite: Can cast <i>Divine Smite</i> once per long rest</td>
+      <td>Paladin's Smite: Can cast <i>Divine Smite</i> without expending a spell slot once per long rest</td>
     </tr><tr style="text-align:center">
       <td>Repelling Blast: Can inflict a 10' push on a Large or smaller target with a successful attack using a chosen Warlock cantrip</td>
     </tr><tr style="text-align:center">
@@ -2426,6 +2424,8 @@ var attributes = {
     <tr style="text-align:center">
       <td><b>Validation Errors</b>:       <table id="ValidationNotes" style="width:100%">
       <tr style="text-align:center">
+        <td>Expertise Allocation: 3 available vs. 2 allocated</td>
+      </tr><tr style="text-align:center">
         <td>Skill And Tool Proficiency Allocation: 23 available vs. 22 allocated</td>
       </tr><tr style="text-align:center">
         <td>Skill Proficiency Allocation: 19 available vs. 18 allocated</td>

@@ -16,11 +16,12 @@ var attributes = {
   "feats.Magic Initiate (Wizard)":1, "feats.Savage Attacker":1, "feats.Skilled":1, "gender":"Female", 
   "hitPoints":64, "intelligence":13, "languagesChosen.Celestial":1, 
   "languagesChosen.Deep Speech":1, "languagesChosen.Infernal":1, "levels.Rogue":20, "name":"Class-Rogue 20", 
-  "selectableFeatures.Rogue - Thief":1, "shield":"None", "skillsChosen.Acrobatics":1, "skillsChosen.Arcana":1, 
-  "skillsChosen.Deception":1, "skillsChosen.Insight":1, "skillsChosen.Performance":1, 
-  "skillsChosen.Religion":1, "skillsChosen.Sleight Of Hand":1, "skillsChosen.Stealth":1, 
-  "species":"Human", "strength":10, "weapons.Greatclub":1, "weapons.Light Crossbow":1, 
-  "weapons.Light Hammer":1, "wisdom":12
+  "selectableFeatures.Rogue - Arcane Trickster":1, "selectableFeatures.Rogue - Assassin":1, 
+  "selectableFeatures.Rogue - Soulknife":1, "selectableFeatures.Rogue - Thief":1, "shield":"None", 
+  "skillsChosen.Acrobatics":1, "skillsChosen.Arcana":1, "skillsChosen.Deception":1, 
+  "skillsChosen.Insight":1, "skillsChosen.Performance":1, "skillsChosen.Religion":1, 
+  "skillsChosen.Sleight Of Hand":1, "skillsChosen.Stealth":1, "species":"Human", "strength":10, 
+  "weapons.Greatclub":1, "weapons.Light Crossbow":1, "weapons.Light Hammer":1, "wisdom":12
 };
   </script>
 </head>
@@ -73,7 +74,7 @@ var attributes = {
     </tr><tr style="text-align:center">
       <td>Second-Story Work: Has a 30' climb Speed</td>
     </tr><tr style="text-align:center">
-      <td>Stroke Of Luck: Can take an automatic 20 on an ability check once per short rest</td>
+      <td>Stroke Of Luck: Can change a failed ability check roll to a 20 once per short rest</td>
     </tr></table>
 </td>
   </tr></table>
@@ -96,7 +97,7 @@ var attributes = {
       <tr style="text-align:center">
         <td><b>Feats</b>: Ability Score Improvement; Alert; Boon Of Dimensional Travel; Grappler; Magic Initiate (Druid); Magic Initiate (Wizard); Savage Attacker; Skilled</td>
         <td><b>Human Features</b>: Resourceful; Skillful; Versatile</td>
-        <td><b>Rogue Features</b>: Armor Training (Light); Cunning Action; Cunning Strike; Devious Strikes; Elusive; Epic Boon; Evasion; Expertise; Fast Hands; Improved Cunning Strike; Reliable Talent; Rogue Subclass; Save Proficiency (Dexterity; Intelligence); Second-Story Work; Skill Proficiency (Choose 4 from Acrobatics, Athletics, Deception, Insight, Intimidation, Investigation, Perception, Persuasion, Sleight Of Hand, Stealth); Slippery Mind; Sneak Attack; Steady Aim; Stroke Of Luck; Supreme Sneak; Thief's Reflexes; Thief; Thieves' Cant; Tool Proficiency (Thieves' Tools); Uncanny Dodge; Use Magic Device; Weapon Mastery; Weapon Proficiency (Simple Weapons; Finesse Weapons; Light Weapons)</td>
+        <td><b>Rogue Features</b>: Arcane Trickster; Armor Training (Light); Assassin's Tools; Assassin; Assassinate; Cunning Action; Cunning Strike; Death Strike; Devious Strikes; Elusive; Envenom Weapons; Epic Boon; Evasion; Expertise; Fast Hands; Improved Cunning Strike; Infiltration Expertise; Mage Hand Legerdemain; Magical Ambush; Psi-Bolstered Knack; Psionic Power (Soulknife); Psychic Blades; Psychic Veil; Psychic Whispers; Reliable Talent; Rend Mind; Rogue Subclass; Save Proficiency (Dexterity; Intelligence); Second-Story Work; Skill Proficiency (Choose 4 from Acrobatics, Athletics, Deception, Insight, Intimidation, Investigation, Perception, Persuasion, Sleight Of Hand, Stealth); Slippery Mind; Sneak Attack; Soul Blades; Soulknife; Spell Thief; Spellcasting; Steady Aim; Stroke Of Luck; Supreme Sneak; Thief's Reflexes; Thief; Thieves' Cant; Tool Proficiency (Thieves' Tools); Uncanny Dodge; Use Magic Device; Versatile Trickster; Weapon Mastery; Weapon Proficiency (Simple Weapons; Finesse Weapons; Light Weapons)</td>
         <td><b>Acolyte Features</b>: Ability Boost (Choose 3 from Intelligence, Wisdom, Charisma); Magic Initiate (Cleric); Skill Proficiency (Insight; Religion); Tool Proficiency (Calligrapher's Supplies)</td>
       </tr></table>
 </td>
@@ -106,6 +107,8 @@ var attributes = {
         <td><i>Epic Boon: +1 Epic Boon Feat</i></td>
       </tr><tr style="text-align:center">
         <td><i>Rogue Subclass: 1 selection</i></td>
+      </tr><tr style="text-align:center">
+        <td><i>Soul Blades: Has the Homing Strikes and Psychic Teleportation features</i></td>
       </tr><tr style="text-align:center">
         <td><i>Versatile: +1 Origin Feat</i></td>
       </tr><tr style="text-align:center">
@@ -150,13 +153,15 @@ var attributes = {
   </tr><tr style="text-align:center">
     <td><b>Expertise</b>: Arcana; Deception; Insight; Stealth</td>
   </tr><tr style="text-align:center">
-    <td><b>Tool Proficiency</b>: Calligrapher's Supplies:  (dex); Thieves' Tools:  (dex)</td>
+    <td><b>Tool Proficiency</b>: Calligrapher's Supplies:  (dex); Disguise Kit:  (cha); Poisoner's Kit:  (int); Thieves' Tools:  (dex)</td>
   </tr><tr style="text-align:center">
     <td><b>Languages</b>: Celestial; Common; Deep Speech; Infernal; Thieves' Cant</td>
   </tr><tr style="text-align:center">
     <td><b>Skill Notes</b>:     <table id="SkillNotes" style="width:100%">
     <tr style="text-align:center">
-      <td><i>Expertise: +6 on 4 chosen proficient skills</i></td>
+      <td><i>Assassin's Tools: Tool Proficiency (Disguise Kit; Poisoner's Kit)</i></td>
+    </tr><tr style="text-align:center">
+      <td><i>Expertise: Has expertise with 4 chosen proficient skills</i></td>
     </tr><tr style="text-align:center">
       <td><i>Skilled: Skill Proficiency or Tool Proficiency (Choose 3 from any)</i></td>
     </tr><tr style="text-align:center">
@@ -164,11 +169,17 @@ var attributes = {
     </tr><tr style="text-align:center">
       <td><i>Thieves'Cant: Language (Thieves' Cant; Choose 1 from any)</i></td>
     </tr><tr style="text-align:center">
-      <td>Reliable Talent: Scores at least a 10 on proficient skill and tool checks</td>
+      <td>Infiltration Expertise: Can mimic another's speech and handwriting after an hour's study</td>
     </tr><tr style="text-align:center">
-      <td>Second-Story Work: +1' running jump distance</td>
+      <td>Psi-Bolstered Knack: Can add a psionic energy die roll to a failed proficient skill or tool check, spending the die only if the modified check succeeds</td>
     </tr><tr style="text-align:center">
-      <td>Use Magic Device: Has a 1 in 6 chance of using a magic item without expending a charge and can attune 4 magic items, use cantrip and level 1 spell scrolls reliably, and use higher-level spell scrolls with a successful DC 10 + spell level Arcana check</td>
+      <td>Psychic Whispers: Can establish telepathic communication within 1 mile with 6 visible creatures for 1d12 hr once per long rest; can expend psionic energy dice for additional uses</td>
+    </tr><tr style="text-align:center">
+      <td>Reliable Talent: Scores at least a 10 on proficient skill and tool check rolls</td>
+    </tr><tr style="text-align:center">
+      <td>Second-Story Work: +2' running jump distance</td>
+    </tr><tr style="text-align:center">
+      <td>Use Magic Device: Has a 1 in 6 chance of using a magic item without expending a charge and can attune 4 magic items, use cantrip and level 1 spell scrolls reliably, and use a higher-level spell scroll with a successful DC 10 + spell level Arcana check</td>
     </tr></table>
 </td>
   </tr></table>
@@ -217,37 +228,57 @@ var attributes = {
       </tr><tr style="text-align:center">
         <td><i>Improved Cunning Strike: Has increased Cunning Strike effects</i></td>
       </tr><tr style="text-align:center">
+        <td><i>Infiltration Expertise: Has increased Steady Aim effects</i></td>
+      </tr><tr style="text-align:center">
         <td><i>Strength Attack Adjustment: +1</i></td>
       </tr><tr style="text-align:center">
         <td><i>Strength Damage Adjustment: +1</i></td>
       </tr><tr style="text-align:center">
         <td>Alert: Can swap initiatives with a willing ally</td>
       </tr><tr style="text-align:center">
+        <td>Assassinate: Has advantage on initiative and on attacks before the target's first turn, and a successful Sneak Attack during the first rd inflicts +20 HP</td>
+      </tr><tr style="text-align:center">
         <td>Boon Of Dimensional Travel: Can teleport 30' after attacking or casting</td>
       </tr><tr style="text-align:center">
         <td>Cunning Action: Can use a bonus action to Dash, Disengage, or Hide</td>
       </tr><tr style="text-align:center">
-        <td>Cunning Strike: Can reduce Sneak Attack damage to inflict 2 choices of: limitation to 1 action or move on the target's next turn (save Constitution negates) (reduces damage by 2d6 HP), unconsciousness (save Constitution negates; additional saves each rd end) for 1 min (reduces damage by 6d6 HP), blindness until the end of its next turn (save Dexterity negates) (reduces damage by 3d6), poisoned (save Constitution negates; additional saves each rd end) for 1 min (reduces damage by 1d6 HP), prone (save Dexterity negates) (reduces damage by 1d6 HP), or to move 15' after attacking without provoking opportunity attacks (reduces damage by 1d6 HP)</td>
+        <td>Cunning Strike: Can reduce Sneak Attack damage to inflict 2 choices of: limitation to 1 action or move on the target's next turn (save Constitution negates) (reduces damage by 2d6 HP), unconsciousness (save Constitution negates; additional saves each rd end) for 1 min (reduces damage by 6d6 HP), blindness until the end of the target's next turn (save Dexterity negates) (reduces damage by 3d6), poisoned (save Constitution negates; additional saves each rd end) for 1 min (reduces damage by 1d6 HP), prone (save Dexterity negates; Huge and larger targets are unaffected) (reduces damage by 1d6 HP), or to move 15' after attacking without provoking opportunity attacks (reduces damage by 1d6 HP)</td>
+      </tr><tr style="text-align:center">
+        <td>Death Strike: Successful Sneak Attack during the first rd inflicts double damage (save DC 16 Constitution negates)</td>
       </tr><tr style="text-align:center">
         <td>Elusive: Attacks on self never have advantage</td>
+      </tr><tr style="text-align:center">
+        <td>Envenom Weapons: Cunning Strikes that inflict poisoned also inflict 2d6 HP poison, ignoring resistance, on a failed save</td>
       </tr><tr style="text-align:center">
         <td>Fast Hands: Can use a bonus action to disarm a trap, open a lock, pick a pocket, or take a Utilize action</td>
       </tr><tr style="text-align:center">
         <td>Grappler: Can both Damage and Grapple with an unarmed strike once per turn, has advantage on attacks on a grappled foe, and can move at full speed with a grappled foe of Medium size or smaller</td>
       </tr><tr style="text-align:center">
+        <td>Homing Strikes: Can add 1d12 to a failed Psychic Blade attack, spending a psionic energy die if the sum is enough to hit</td>
+      </tr><tr style="text-align:center">
+        <td>Psionic Power (Soulknife): Can use 12 d12 psionic energy dice per long rest; regains 1 die after a short rest</td>
+      </tr><tr style="text-align:center">
+        <td>Psychic Blades: Can use a free hand to attack with a R60' magic psychic blade, inflicting 1d6+2 HP psychic; if both hands are free, can use a bonus action for a second blade attack that inflicts 1d4+2</td>
+      </tr><tr style="text-align:center">
+        <td>Psychic Teleportation: Can spend 1 psionic energy die and use a bonus action to teleport 1d12x10'</td>
+      </tr><tr style="text-align:center">
+        <td>Rend Mind: Can inflict stunned (save DC 16 Wisdom negates; additional saves each rd end) for 1 min with a Psychic Blade Sneak Attack once per long rest; can expend 3 psionic energy dice per additional use</td>
+      </tr><tr style="text-align:center">
         <td>Savage Attacker: Can use the better of 2 damage rolls once per turn</td>
       </tr><tr style="text-align:center">
-        <td>Sneak Attack: Inflicts +10d6 HP on attacks with advantage or on a foe threatened by another adjacent creature once per turn</td>
+        <td>Sneak Attack: Once per turn, inflicts +10d6 HP on an attack using a finesse or ranged weapon with advantage or on a foe threatened by another adjacent creature</td>
       </tr><tr style="text-align:center">
-        <td>Steady Aim: Can use a bonus action and forego moving to gain advantage on the next attack in the same turn</td>
+        <td>Steady Aim: Can use a bonus action to gain advantage on the next attack in the same turn</td>
       </tr><tr style="text-align:center">
         <td>Supreme Sneak: Can use Cunning Strike to attack while invisible from hiding without becoming visible; reduces the damage by 1d6 HP</td>
       </tr><tr style="text-align:center">
-        <td>Thief's Reflexes: Can take an second turn during the first combat round at initiative - 10</td>
+        <td>Thief's Reflexes: Can take an second turn during the first combat rd at initiative - 10</td>
       </tr><tr style="text-align:center">
-        <td>Uncanny Dodge: Can use a reaction to reduce the damage from a seen attacker by half</td>
+        <td>Uncanny Dodge: Can use a reaction to reduce the damage taken from a seen attacker by half</td>
       </tr><tr style="text-align:center">
-        <td>Weapon Mastery: Can use the mastery properties of 2 chosen kinds of simple or martial melee weapons</td>
+        <td>Versatile Trickster: Can extend the trip action of Cunning Strike to affect another creature within 5' of a <i>Mage Hand</i></td>
+      </tr><tr style="text-align:center">
+        <td>Weapon Mastery: Can use the mastery properties of 2 chosen kinds of proficient weapons</td>
       </tr></table>
 </td>
     </tr></table>
@@ -277,20 +308,44 @@ var attributes = {
     <tr style="text-align:center">
       <td>      <table id="SpellStats" style="width:100%">
       <tr style="text-align:center">
-        <td><b>Attack</b>: C: +7; D: +7; W: +8</td>
-        <td><b>Spell DC</b>: C: 15; D: 15; W: 16</td>
+        <td><b>Spells Known/Prepared</b>: C0: 2; C: 1; D0: 2; D: 1; W0: 5; W: 14</td>
+        <td><b>Spell Slots</b>: W1: 4; W2: 3; W3: 3; W4: 1</td>
+        <td><b>Attack</b>: C: +7; D: +7; Rogue: +8; W: +8</td>
+        <td><b>Spell DC</b>: C: 15; D: 15; Rogue: 16; W: 16</td>
       </tr></table>
 </td>
     </tr></table>
 </td>
   </tr><tr style="text-align:center">
+    <td><b>Spells</b>: Mage Hand (Rogue0 [Mage Hand Legerdemain] Conj): R30' Spectral hand performs minor tasks, moving up to 10 lb, for 1 min</td>
+  </tr><tr style="text-align:center">
     <td><b>Magic Notes</b>:     <table id="MagicNotes" style="width:100%">
     <tr style="text-align:center">
+      <td>Mage Hand Legerdemain: Can use a bonus action with an invisible <i>Mage Hand</i> to make Sleight Of Hand checks</td>
+    </tr><tr style="text-align:center">
       <td>Magic Initiate (Cleric): Knows 2 Cleric cantrips and can cast a chosen C1 spell once per long rest</td>
     </tr><tr style="text-align:center">
       <td>Magic Initiate (Druid): Knows 2 Druid cantrips and can cast a chosen D1 spell once per long rest</td>
     </tr><tr style="text-align:center">
       <td>Magic Initiate (Wizard): Knows 2 Wizard cantrips and can cast a chosen W1 spell once per long rest</td>
+    </tr><tr style="text-align:center">
+      <td>Magical Ambush: Casting a spell while invisible inflicts disadvantage on the target's initial save</td>
+    </tr><tr style="text-align:center">
+      <td>Psychic Veil: Can become invisible for 1 hr once per long rest; inflicting damage or forcing a saving throw ends; can expend psionic energy dice for additional uses</td>
+    </tr><tr style="text-align:center">
+      <td>Spell Thief: Can negate the effects of a spell cast on self, prevent the original caster from using that spell for 8 hr, and use spell slots to cast it during that time (save DC 16 negates) once per long rest</td>
+    </tr><tr style="text-align:center">
+      <td>Spellcasting: Can cast spells from the Wizard spell list and cast spells marked with [R] using a ritual</td>
+    </tr></table>
+</td>
+  </tr></table>
+</td>
+</tr><tr style="text-align:center">
+  <td style="border:1px solid black"><b>Notes</b><br/>  <table id="NotesArea" style="width:100%">
+  <tr style="text-align:center">
+    <td>    <table id="ValidationPart" style="width:100%">
+    <tr style="text-align:center">
+      <td><b>Validation Errors</b>: Selectable Feature Allocation: 1 available vs. 4 allocated</td>
     </tr></table>
 </td>
   </tr></table>

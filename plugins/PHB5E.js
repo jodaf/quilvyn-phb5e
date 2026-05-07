@@ -1033,7 +1033,7 @@ PHB5E.FEATURES_ADDED = {
     'Note="Can regain 10 hit points each turn, cast 1-action Paladin spells as a bonus action, and inflict disadvantage on saves vs. self spells and Channel Divinity effects on foes within 10\' for 1 min once per long rest"',
   "Nature's Wrath":
     'Section=magic ' +
-    'Note="R10\' Can use Channel Divinity to restrain the target (save DC %{spellDifficultyClass.P} Dexterity or Strength negates; additional saves each rd end)"',
+    'Note="R10\' Can use Channel Divinity to restrain a target (save DC %{spellDifficultyClass.P} Dexterity or Strength negates; additional saves each rd end)"',
   'Oath Of The Ancients':
     'Spells=' +
       '"3:Ensnaring Strike","3:Speak With Animals",' +
@@ -1078,7 +1078,8 @@ PHB5E.FEATURES_ADDED = {
 
   // Ranger
   // Beast Master
-  'Bestial Fury':'Section=combat Note="Companion can make 2 attacks per rd"',
+  'Bestial Fury':
+    'Section=combat Note="Companion can make 2 attacks in an Attack action"',
   'Exceptional Training':
     'Section=combat ' +
     // errata removes Dodge and adds magical attacks
@@ -1088,7 +1089,7 @@ PHB5E.FEATURES_ADDED = {
     'Note="Companion beast of up to CR 1/4, with the higher of %{levels.Ranger*4} or its maximum normal hit points, obeys commands and gains +%{proficiencyBonus} Armor Class, attack, damage, and proficient skills and saving throws"',
   'Share Spells':
     'Section=magic ' +
-    'Note="R30\' Can have spells cast on self also affect companion"',
+    'Note="R30\' Can cast spells on self that also affect companion"',
 
   // Rogue
   // Assassin
@@ -1099,7 +1100,7 @@ PHB5E.FEATURES_ADDED = {
     'Section=skill Note="Tool Proficiency (Disguise Kit; Poisoner\'s Kit)"',
   'Death Strike':
     'Section=combat ' +
-    'Note="Inflicts double damage on a successful surprise attack (save DC %{8+dexterityModifier+proficiencyBonus} Constitution negates)"',
+    'Note="Successful surprise attacks inflict double damage (save DC %{8+dexterityModifier+proficiencyBonus} Constitution negates)"',
   'Impostor':
     'Section=skill ' +
     'Note="Can use unerring mimicry and has advantage on Deception to overcome suspicion"',
@@ -1109,14 +1110,14 @@ PHB5E.FEATURES_ADDED = {
   // Arcane Trickster
   'Mage Hand Legerdemain':
     'Section=magic ' +
-    'Note="Can use an invisible <i>Mage Hand</i> to stow and retrieve objects, pick locks, and disarm traps" ' +
+    'Note="Can use a bonus action with an invisible <i>Mage Hand</i> to stow and retrieve objects, pick locks, and disarm traps" ' +
     'Spells="Mage Hand"',
   'Magical Ambush':
     'Section=magic ' +
-    'Note="Casting a spell from hiding inflicts disadvantage on the target\'s initial save"',
+    'Note="Casting a spell while hidden inflicts disadvantage on the target\'s initial save"',
   'Spell Thief':
     'Section=magic ' +
-    'Note="Can negate the effects of a spell cast on self and use spell slots to cast the same spell for 8 hr (save DC %{8+intelligenceModifier+proficiencyBonus} negates) once per long rest"',
+    'Note="Can negate the effects of a spell cast on self, prevent the original caster from using that spell for 8 hr, and use spell slots to cast it during that time (save DC %{8+intelligenceModifier+proficiencyBonus} negates) once per long rest"',
   // Spellcasting as above
   'Versatile Trickster':
     'Section=magic ' +

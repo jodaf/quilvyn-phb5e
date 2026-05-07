@@ -16,12 +16,14 @@ var attributes = {
   "hitPoints":79, "intelligence":11, "languagesChosen.Halfling":1, 
   "languagesChosen.Primordial":1, "levels.Paladin":20, "name":"Class-Paladin 20", 
   "selectableFeatures.Paladin - Blessed Warrior":1, "selectableFeatures.Paladin - Fighting Style":1, 
-  "selectableFeatures.Paladin - Oath Of Devotion":1, "shield":"None", "skillsChosen.Athletics":1, "skillsChosen.Insight":1, 
-  "skillsChosen.Medicine":1, "species":"Human", "spells.Aid(P2 Abju)":1, 
-  "spells.Aura Of Life(P4 Abju)":1, "spells.Banishment(P4 Abju)":1, "spells.Command(P1 Ench)":1, 
-  "spells.Create Food And Water(P3 Conj)":1, "spells.Daylight(P3 Evoc)":1, "spells.Detect Evil And Good(P1 Divi)":1, 
-  "spells.Detect Poison And Disease(P1 Divi)":1, "spells.Dispel Evil And Good(P5 Abju)":1, "spells.Geas(P5 Ench)":1, 
-  "spells.Heroism(P1 Ench)":1, "spells.Locate Creature(P4 Divi)":1, "spells.Magic Circle(P3 Abju)":1, 
+  "selectableFeatures.Paladin - Oath Of Devotion":1, "selectableFeatures.Paladin - Oath Of Glory":1, 
+  "selectableFeatures.Paladin - Oath Of The Ancients":1, "selectableFeatures.Paladin - Oath Of Vengeance":1, "shield":"None", 
+  "skillsChosen.Athletics":1, "skillsChosen.Insight":1, "skillsChosen.Medicine":1, "species":"Human", 
+  "spells.Aid(P2 Abju)":1, "spells.Aura Of Life(P4 Abju)":1, "spells.Banishment(P4 Abju)":1, 
+  "spells.Command(P1 Ench)":1, "spells.Create Food And Water(P3 Conj)":1, "spells.Daylight(P3 Evoc)":1, 
+  "spells.Detect Evil And Good(P1 Divi)":1, "spells.Detect Poison And Disease(P1 Divi)":1, 
+  "spells.Dispel Evil And Good(P5 Abju)":1, "spells.Geas(P5 Ench)":1, "spells.Heroism(P1 Ench)":1, 
+  "spells.Locate Creature(P4 Divi)":1, "spells.Magic Circle(P3 Abju)":1, 
   "spells.Protection From Poison(P2 Abju)":1, "spells.Zone Of Truth(P2 Ench)":1, "strength":16, "weapons.Greataxe":1, 
   "weapons.Maul":1, "weapons.Shortbow":1, "wisdom":10
 };
@@ -59,7 +61,7 @@ var attributes = {
       <td><b>Experience</b>: 830269/1000000</td>
       <td><b>Level</b>: 20</td>
       <td><b>Size</b>: Medium</td>
-      <td><b>Speed</b>: 30</td>
+      <td><b>Speed</b>: 40</td>
       <td><b>Carry/Lift:</b> 255/510</td>
     </tr></table>
 </td>
@@ -68,11 +70,17 @@ var attributes = {
     <tr style="text-align:center">
       <td><i>Ability Score Improvement: Ability Boost (Choose 2 from any)</i></td>
     </tr><tr style="text-align:center">
+      <td><i>Aura Of Alacrity: +10 Speed</i></td>
+    </tr><tr style="text-align:center">
       <td><i>Boon Of Truesight: Ability Boost (Choose 1 from any)</i></td>
     </tr><tr style="text-align:center">
       <td><i>Grappler: Ability Boost (Choose 1 from Strength, Dexterity)</i></td>
     </tr><tr style="text-align:center">
       <td>Ability Boosts: 7 to distribute</td>
+    </tr><tr style="text-align:center">
+      <td>Avenging Angel: Can gain a 60' fly speed for 10 min once per long rest; can expend level 5 spell slots for additional uses</td>
+    </tr><tr style="text-align:center">
+      <td>Living Legend: Can gain advantage on Charisma for 10 min once per long rest; can expend level 5 spell slots for additional uses</td>
     </tr></table>
 </td>
   </tr></table>
@@ -95,7 +103,7 @@ var attributes = {
       <tr style="text-align:center">
         <td><b>Feats</b>: Ability Score Improvement; Alert; Boon Of Truesight; Grappler; Magic Initiate (Druid); Magic Initiate (Wizard); Savage Attacker; Two-Weapon Fighting</td>
         <td><b>Human Features</b>: Resourceful; Skillful; Versatile</td>
-        <td><b>Paladin Features</b>: Abjure Foes; Armor Training (Light; Medium; Heavy; Shield); Aura Expansion; Aura Of Courage; Aura Of Devotion; Aura Of Protection; Blessed Warrior; Channel Divinity; Divine Sense; Epic Boon; Extra Attack; Faithful Steed; Fighting Style; Holy Nimbus; Lay On Hands; Oath Of Devotion Spells; Oath Of Devotion; Paladin Fighting Style; Paladin Subclass; Paladin's Smite; Radiant Strikes; Restoring Touch; Sacred Weapon; Save Proficiency (Wisdom; Charisma); Skill Proficiency (Choose 2 from Athletics, Insight, Intimidation, Medicine, Persuasion, Religion); Smite Of Protection; Spellcasting; Weapon Mastery; Weapon Proficiency (Simple Weapons; Martial Weapons)</td>
+        <td><b>Paladin Features</b>: Abjure Foes; Armor Training (Light; Medium; Heavy; Shield); Aura Expansion; Aura Of Alacrity; Aura Of Courage; Aura Of Devotion; Aura Of Protection; Aura Of Warding; Avenging Angel; Blessed Warrior; Channel Divinity; Divine Sense; Elder Champion; Epic Boon; Extra Attack; Faithful Steed; Fighting Style; Glorious Defense; Holy Nimbus; Inspiring Smite; Lay On Hands; Living Legend; Nature's Wrath; Oath Of Devotion Spells; Oath Of Devotion; Oath Of Glory Spells; Oath Of Glory; Oath Of The Ancients Spells; Oath Of The Ancients; Oath Of Vengeance Spells; Oath Of Vengeance; Paladin Fighting Style; Paladin Subclass; Paladin's Smite; Peerless Athlete; Radiant Strikes; Relentless Avenger; Restoring Touch; Sacred Weapon; Save Proficiency (Wisdom; Charisma); Skill Proficiency (Choose 2 from Athletics, Insight, Intimidation, Medicine, Persuasion, Religion); Smite Of Protection; Soul Of Vengeance; Spellcasting; Undying Sentinel; Vow Of Enmity; Weapon Mastery; Weapon Proficiency (Simple Weapons; Martial Weapons)</td>
         <td><b>Acolyte Features</b>: Ability Boost (Choose 3 from Intelligence, Wisdom, Charisma); Magic Initiate (Cleric); Skill Proficiency (Insight; Religion); Tool Proficiency (Calligrapher's Supplies)</td>
       </tr></table>
 </td>
@@ -113,6 +121,8 @@ var attributes = {
         <td><i>Versatile: +1 Origin Feat</i></td>
       </tr><tr style="text-align:center">
         <td>Resourceful: Gains Heroic Inspiration at the end of a long rest</td>
+      </tr><tr style="text-align:center">
+        <td>Undying Sentinel: Does not age visibly</td>
       </tr></table>
 </td>
     </tr></table>
@@ -164,6 +174,8 @@ var attributes = {
       <td>Bulky Armor: Has disadvantage on Stealth</td>
     </tr><tr style="text-align:center">
       <td>Divine Sense: R60' Can use Channel Divinity to sense the location and type of celestials, fiends, undead, consecration, and desecration for 10 min</td>
+    </tr><tr style="text-align:center">
+      <td>Peerless Athlete: Can use a bonus action and Channel Divinity to gain advantage on Athletics and Acrobatics and +10' high and long jumps for 10 min</td>
     </tr></table>
 </td>
   </tr></table>
@@ -212,13 +224,25 @@ var attributes = {
       </tr><tr style="text-align:center">
         <td>Alert: Can swap initiatives with a willing ally</td>
       </tr><tr style="text-align:center">
+        <td>Aura Of Alacrity: Allies who begin a turn within 30' gain +10' Speed until the end of their turns</td>
+      </tr><tr style="text-align:center">
+        <td>Avenging Angel: R30' Can frighten foes (save DC 16 Wisdom negates) for 1 min or until damaged, giving advantage on ally attacks, for 10 min once per long rest; can expend level 5 spell slots for additional uses</td>
+      </tr><tr style="text-align:center">
         <td>Extra Attack: Can make 2 attacks during an Attack action</td>
+      </tr><tr style="text-align:center">
+        <td>Glorious Defense: R10' Can use a reaction to give a successful attack target +2 Armor Class and, if this causes the attacker to miss, to attack the attacker, 2 times per long rest</td>
       </tr><tr style="text-align:center">
         <td>Grappler: Can both Damage and Grapple with an unarmed strike once per turn, has advantage on attacks on a grappled foe, and can move at full speed with a grappled foe of Medium size or smaller</td>
       </tr><tr style="text-align:center">
-        <td>Holy Nimbus: Can use a bonus action to emit a 30' bright light that inflicts 8 HP radiant on foes and gives self advantage on saves vs. fiends and undead for 10 min once per long rest; can spend level 5 spell slots for additional uses</td>
+        <td>Holy Nimbus: Can use a bonus action to emit a 30' bright sunlight that inflicts 8 HP radiant on foes and gives self advantage on saves vs. fiends and undead for 10 min once per long rest; can expend level 5 spell slots for additional uses</td>
+      </tr><tr style="text-align:center">
+        <td>Inspiring Smite: R30' Can use a bonus action and Channel Divinity after a Divine Smite to distribute 2d8+20 temporary hit points</td>
+      </tr><tr style="text-align:center">
+        <td>Living Legend: Can change a miss into a hit once per turn for 10 min once per long rest; can expend level 5 spell slots for additional uses</td>
       </tr><tr style="text-align:center">
         <td>Radiant Strikes: Melee attacks inflict +1d8 HP radiant</td>
+      </tr><tr style="text-align:center">
+        <td>Relentless Avenger: After a successful opportunity attack, can reduce the target's Speed to 0 until the end of the current turn and move 20' without provoking opportunity attacks</td>
       </tr><tr style="text-align:center">
         <td>Sacred Weapon: Can use Channel Divinity to give a weapon wielded by self +2 attack, normal or radiant damage, and a 20' bright light for 10 min</td>
       </tr><tr style="text-align:center">
@@ -226,9 +250,15 @@ var attributes = {
       </tr><tr style="text-align:center">
         <td>Smite Of Protection: R30' Divine Smite gives self and allies 1/2 cover until the start of the next turn</td>
       </tr><tr style="text-align:center">
+        <td>Soul Of Vengeance: Can use a reaction when a Vow Of Enmity target attacks to make a melee attack on the target</td>
+      </tr><tr style="text-align:center">
         <td>Two-Weapon Fighting: Adds ability modifier to second weapon damage</td>
       </tr><tr style="text-align:center">
-        <td>Weapon Mastery: Can use the mastery properties of 2 chosen kinds of simple or martial melee weapons</td>
+        <td>Undying Sentinel: Can regain 60 hit points when brought to 0 hit points once per long rest</td>
+      </tr><tr style="text-align:center">
+        <td>Vow Of Enmity: R30' Can use Channel Divinity to give self advantage on attacks against a target for 1 min; can transfer to another target if the current target drops to 0 hit points</td>
+      </tr><tr style="text-align:center">
+        <td>Weapon Mastery: Can use the mastery properties of 2 chosen kinds of proficient weapons</td>
       </tr></table>
 </td>
     </tr></table>
@@ -250,7 +280,13 @@ var attributes = {
       </tr><tr style="text-align:center">
         <td>Aura Of Devotion: R30' Self and allies have immunity to charmed</td>
       </tr><tr style="text-align:center">
-        <td>Aura Of Protection: R30' Gives allies +2 on all saves</td>
+        <td>Aura Of Protection: R30' Allies have +2 on all saves</td>
+      </tr><tr style="text-align:center">
+        <td>Aura Of Warding: R30' Self and allies have resistance to necrotic, psychic, and radiant</td>
+      </tr><tr style="text-align:center">
+        <td>Living Legend: Can use a reaction to reroll failed saves for 10 min once per long rest; can expend level 5 spell slots for additional uses</td>
+      </tr><tr style="text-align:center">
+        <td>Undying Sentinel: Has immunity to magical aging</td>
       </tr></table>
 </td>
     </tr></table>
@@ -264,8 +300,8 @@ var attributes = {
     <tr style="text-align:center">
       <td>      <table id="SpellStats" style="width:100%">
       <tr style="text-align:center">
-        <td><b>Spells Known/Prepared</b>: P: 15</td>
-        <td><b>Spell Slots</b>: C0: 2; P1: 4; P2: 3; P3: 3; P4: 3; P5: 2</td>
+        <td><b>Spells Known/Prepared</b>: C0: 4; C: 1; D0: 2; D: 1; P: 15; W0: 2; W: 1</td>
+        <td><b>Spell Slots</b>: P1: 4; P2: 3; P3: 3; P4: 3; P5: 2</td>
         <td><b>Attack</b>: C: +7; D: +7; P: +8; W: +7</td>
         <td><b>Spell DC</b>: C: 15; D: 15; P: 16; W: 15</td>
       </tr></table>
@@ -281,13 +317,21 @@ var attributes = {
     </tr><tr style="text-align:left">
       <td>Aura Of Life (P4 Abju): 30' radius gives allies resistance to necrotic damage and immunity to maximum hit point reduction, and raises those with 0 hit points to 1 hit point, for concentration up to 10 min</td>
     </tr><tr style="text-align:left">
+      <td>Bane (P1 [Oath Of Vengeance Spells] Ench): R30' 3 targets suffer -1d4 on attacks and saves (save Charisma negates) for concentration up to 1 min [+Level affects +1 target]</td>
+    </tr><tr style="text-align:left">
       <td>Banishment (P4 Abju): R30' Banishes the target to its home plane or to a demiplane (save Charisma negates) for concentration up to 1 min; extraplanar creatures don't return if the spell is maintained for a full min [+Level affects +1 target]</td>
+    </tr><tr style="text-align:left">
+      <td>Banishment (P4 [Oath Of Vengeance Spells] Abju): R30' Banishes the target to its home plane or to a demiplane (save Charisma negates) for concentration up to 1 min; extraplanar creatures don't return if the spell is maintained for a full min [+Level affects +1 target]</td>
     </tr><tr style="text-align:left">
       <td>Beacon Of Hope (P3 [Oath Of Devotion Spells] Abju): R30' Targets gain advantage on Wisdom and death saves and regain maximum hit points from healing for concentration up to 1 min</td>
     </tr><tr style="text-align:left">
       <td>Command (P1 Ench): R60' Target obeys a one-word command from self (save Wisdom negates) for 1 rd [+Level affects +1 target]</td>
     </tr><tr style="text-align:left">
       <td>Commune (P5 [Oath Of Devotion Spells] Divi): Deity answers 3 yes/no questions asked within 1 min; additional uses before a long rest inflict a cumulative 25% chance of failure [R]</td>
+    </tr><tr style="text-align:left">
+      <td>Commune With Nature (P5 [Oath Of The Ancients Spells] Divi): Reveals 3 facts about nature within 3 miles, or within 300' when underground [R]</td>
+    </tr><tr style="text-align:left">
+      <td>Compulsion (P4 [Oath Of Glory Spells] Ench): R30' Self controls targets' movement direction (save Wisdom negates; additional saves each rd end) for concentration up to 1 min</td>
     </tr><tr style="text-align:left">
       <td>Create Food And Water (P3 Conj): R30' Creates 45 lb of food that lasts for 24 hr and 30 gallons of water</td>
     </tr><tr style="text-align:left">
@@ -297,33 +341,85 @@ var attributes = {
     </tr><tr style="text-align:left">
       <td>Detect Poison And Disease (P1 Divi): R30' Reveals poison, poisonous creatures, and magical contagions for concentration up to 10 min; 1' of wood, dirt, or stone, 1" of metal, or a thin sheet of lead blocks the spell [R]</td>
     </tr><tr style="text-align:left">
+      <td>Dimension Door (P4 [Oath Of Vengeance Spells] Conj): Teleports self and 1 adjacent willing creature up to 500'</td>
+    </tr><tr style="text-align:left">
       <td>Dispel Evil And Good (P5 Abju): Celestials, elementals, fey, fiends, and undead suffer disadvantage on attacks vs. self for concentration up to 1 min; ending the spell early allows a successful spell attack on one of these creatures to return it to its home plane (save Charisma negates), or to end with a touch an enchanted, frightened, or possessed condition inflicted by one of them</td>
     </tr><tr style="text-align:left">
       <td>Dispel Magic (P3 [Oath Of Devotion Spells] Abju): R120' Ends the effects on the target of spells up to level 3, and successful DC 10 + spell level checks end each higher-level spell [+Level ends any spell of equal or lesser level]</td>
     </tr><tr style="text-align:left">
       <td>Divine Smite (P1 [Paladin's Smite] Evoc): Cast as a bonus action after hitting a target, causes the attack inflict +2d8 HP radiant, or +3d8 HP radiant on a fiend or undead [+Level inflicts +1d8 HP]</td>
     </tr><tr style="text-align:left">
+      <td>Enhance Ability (P2 [Oath Of Glory Spells] Tran): Touched gains advantage on chosen ability checks for concentration up to 1 hr [+Level affects +1 target]</td>
+    </tr><tr style="text-align:left">
+      <td>Ensnaring Strike (P1 [Oath Of The Ancients Spells] Conj): Next successful self attack restrains the foe and inflicts 1d6 HP per rd piercing (save Strength ends; Large creatures have advantage on the save) for concentration up to 1 min [+Level inflicts +1d6 HP]</td>
+    </tr><tr style="text-align:left">
       <td>Find Steed (P2 [Faithful Steed] Conj): R10' Self gains the service of a summoned spirit in steed form; it has an Intelligence of at least 6, Armor Class 12, 25 hit points, and 60' Speed, regains an equal number of hit points from magical healing applied to self when within 5', makes a +2 attack that inflicts 1d8+2 HP of radiant, psychic, or necrotic, depending on spirit type, can use a bonus action to frighten within 60', teleport 60', or heal 2d8+2 hit points within 5', depending on spirit type, and can communicate telepathically with self for 1 mile [+Level increases the Armor Class by 1, hit points by 10, damage by 1, and healing by 1; level 4 also gives a 60' fly Speed]</td>
     </tr><tr style="text-align:left">
       <td>Flame Strike (P5 [Oath Of Devotion Spells] Evoc): R60' 10' radius inflicts 5d6 HP fire and 5d6 HP radiant (save Dexterity half) [+Level inflicts +1d6 HP fire and radiant]</td>
     </tr><tr style="text-align:left">
-      <td>Freedom Of Movement (P4 [Oath Of Devotion Spells] Abju): Touched gains immunity to movement impediments and a 30' swim Speed and can escape from nonmagical restraints for 1 hr [+Level affects +1 target]</td>
+      <td>Freedom Of Movement (P4 [Oath Of Devotion Spells] Abju): Touched gains immunity to movement impediments and a 40' swim Speed and can escape from nonmagical restraints for 1 hr [+Level affects +1 target]</td>
+    </tr><tr style="text-align:left">
+      <td>Freedom Of Movement (P4 [Oath Of Glory Spells] Abju): Touched gains immunity to movement impediments and a 40' swim Speed and can escape from nonmagical restraints for 1 hr [+Level affects +1 target]</td>
     </tr><tr style="text-align:left">
       <td>Geas (P5 Ench): R60' Target obeys self instructions or suffers 5d10 HP psychic each day (save Wisdom negates) for 30 days [+Level extends the duration to 365 days or permanently at level 7 or 9]</td>
     </tr><tr style="text-align:left">
       <td>Guardian Of Faith (P4 [Oath Of Devotion Spells] Conj): R30' 10' radius inflicts 20 HP radiant on foes (save Dexterity half) for 8 hr or until 60 HP inflicted</td>
     </tr><tr style="text-align:left">
+      <td>Guiding Bolt (P1 [Oath Of Glory Spells] Evoc): R120' Ranged spell inflicts 4d6 HP radiant and gives advantage on the next attack on the target before the end of the next turn [+Level inflicts +1d6 HP]</td>
+    </tr><tr style="text-align:left">
+      <td>Haste (P3 [Oath Of Glory Spells] Tran): R30' Willing target gains double Speed, +2 Armor Class, advantage on Dexterity, and an additional action each turn for concentration up to 1 min and suffers 1 rd of incapacitation afterward</td>
+    </tr><tr style="text-align:left">
+      <td>Haste (P3 [Oath Of Vengeance Spells] Tran): R30' Willing target gains double Speed, +2 Armor Class, advantage on Dexterity, and an additional action each turn for concentration up to 1 min and suffers 1 rd of incapacitation afterward</td>
+    </tr><tr style="text-align:left">
       <td>Heroism (P1 Ench): Touched gains immunity to becoming frightened and +2 temporary hit points each rd for concentration up to 1 min [+Level affects +1 target]</td>
+    </tr><tr style="text-align:left">
+      <td>Heroism (P1 [Oath Of Glory Spells] Ench): Touched gains immunity to becoming frightened and +2 temporary hit points each rd for concentration up to 1 min [+Level affects +1 target]</td>
+    </tr><tr style="text-align:left">
+      <td>Hold Monster (P5 [Oath Of Vengeance Spells] Ench): R90' Inflicts paralyzed (save Wisdom negates; additional saves each rd end) for concentration up to 1 min [+Level affects +1 target]</td>
+    </tr><tr style="text-align:left">
+      <td>Hold Person (P2 [Oath Of Vengeance Spells] Ench): R60' Inflicts paralyzed (save Wisdom negates; additional saves each rd end) for concentration up to 1 min [+Level affects +1 target]</td>
+    </tr><tr style="text-align:left">
+      <td>Hunter's Mark (P1 [Oath Of Vengeance Spells] Divi): R90' Self inflicts +1d6 HP force on the target and gains advantage on Perception and Survival to locate it for concentration up to 1 hr; can use a bonus action to move to a different target when the current target drops to 0 hit points [+Level extends the duration to 8 or 24 hr at level 3 or 5]</td>
+    </tr><tr style="text-align:left">
+      <td>Ice Storm (P4 [Oath Of The Ancients Spells] Evoc): R300' 20' radius inflicts 2d10 HP bludgeoning and 4d6 HP cold (save Dexterity half) and becomes difficult terrain until the end of the next turn [+Level inflicts +1d10 HP bludgeoning]</td>
+    </tr><tr style="text-align:left">
+      <td>Legend Lore (P5 [Oath Of Glory Spells] Divi): Reveals info about a specified famous person, place, or object</td>
     </tr><tr style="text-align:left">
       <td>Locate Creature (P4 Divi): Reveals the location of a specified creature or species within 1000' for concentration up to 1 hr; lead blocks the spell</td>
     </tr><tr style="text-align:left">
       <td>Magic Circle (P3 Abju): R10' 10' radius prevents a choice of physical entry or exit (save Charisma allows magical transit), inflicts disadvantage on attacks, and negates charm, fright, and possession by one or more choices of celestials, elementals, fey, fiends, and undead, for 1 hr [+Level extends the duration +1 hr]</td>
     </tr><tr style="text-align:left">
+      <td>Magic Weapon (P2 [Oath Of Glory Spells] Tran): Touched weapon gains a +1 magic bonus for 1 hr [+Level gives a +2 or +3 bonus at level 3 or 6]</td>
+    </tr><tr style="text-align:left">
+      <td>Misty Step (P2 [Oath Of The Ancients Spells] Conj): Teleports self 30'</td>
+    </tr><tr style="text-align:left">
+      <td>Misty Step (P2 [Oath Of Vengeance Spells] Conj): Teleports self 30'</td>
+    </tr><tr style="text-align:left">
+      <td>Moonbeam (P2 [Oath Of The Ancients Spells] Evoc): R120' 5' radius inflicts 2d10 HP radiant (save Constitution half; shapechangers revert form on failure) and can move 60' per rd for concentration up to 1 min [+Level inflicts +1d10 HP]</td>
+    </tr><tr style="text-align:left">
+      <td>Plant Growth (P3 [Oath Of The Ancients Spells] Tran): R150' Causes plants in a 100' radius to overgrow, slowing movement to 1/4 Speed, or enriches a half-mile radius for 365 days</td>
+    </tr><tr style="text-align:left">
+      <td>Protection From Energy (P3 [Oath Of Glory Spells] Abju): Touched gains resistance to a choice of acid, cold, fire, lightning, or thunder for concentration up to 1 hr</td>
+    </tr><tr style="text-align:left">
+      <td>Protection From Energy (P3 [Oath Of The Ancients Spells] Abju): Touched gains resistance to a choice of acid, cold, fire, lightning, or thunder for concentration up to 1 hr</td>
+    </tr><tr style="text-align:left">
+      <td>Protection From Energy (P3 [Oath Of Vengeance Spells] Abju): Touched gains resistance to a choice of acid, cold, fire, lightning, or thunder for concentration up to 1 hr</td>
+    </tr><tr style="text-align:left">
       <td>Protection From Evil And Good (P1 [Oath Of Devotion Spells] Abju): Willing touched gains immunity to charmed, frightened, and possession from aberrations, celestials, elementals, fey, fiends, and undead and advantage on saves vs. existing conditions for concentration up to 10 min; those creatures also suffer disadvantage on attacks on the target</td>
     </tr><tr style="text-align:left">
       <td>Protection From Poison (P2 Abju): Touched recovers from the poisoned condition and gains advantage on saves vs. being poisoned and resistance to poison for 1 hr</td>
     </tr><tr style="text-align:left">
+      <td>Scrying (P5 [Oath Of Vengeance Spells] Divi): Self sees and hears a chosen target (save Wisdom, modified by degree of familiarity, negates for 24 hr) or known location for concentration up to 10 min</td>
+    </tr><tr style="text-align:left">
       <td>Shield Of Faith (P1 [Oath Of Devotion Spells] Abju): R60' Target gains +2 Armor Class for concentration up to 10 min</td>
+    </tr><tr style="text-align:left">
+      <td>Speak With Animals (P1 [Oath Of The Ancients Spells] Divi): Self can talk with beasts for 10 min [R]</td>
+    </tr><tr style="text-align:left">
+      <td>Stoneskin (P4 [Oath Of The Ancients Spells] Tran): Touched gains resistance to bludgeoning, piercing, and slashing for concentration up to 1 hr</td>
+    </tr><tr style="text-align:left">
+      <td>Tree Stride (P5 [Oath Of The Ancients Spells] Conj): Allows self to use 10' of movement to teleport 500' between like trees once per rd for concentration up to 1 min</td>
+    </tr><tr style="text-align:left">
+      <td>Yolanda's Regal Presence (P5 [Oath Of Glory Spells] Ench): 10' radius inflicts 4d6 HP psychic, knocked prone, and a 10' push (save Wisdom half HP only) on targets for concentration up to 1 min</td>
     </tr><tr style="text-align:left">
       <td>Zone Of Truth (P2 Ench): R60' Creatures in a 15' radius cannot lie (save Charisma negates) for 10 min</td>
     </tr><tr style="text-align:left">
@@ -337,7 +433,9 @@ var attributes = {
     </tr><tr style="text-align:center">
       <td>Channel Divinity: Can use a Channel Divinity effect 3 times per long rest; regains 1 use after a short rest</td>
     </tr><tr style="text-align:center">
-      <td>Faithful Steed: Can cast <i>Find Steed</i> once per long rest</td>
+      <td>Elder Champion: Can regain 10 hit points each turn, cast 1-action Paladin spells as a bonus action, and inflict disadvantage on saves vs. self spells and Channel Divinity effects on foes within 30' for 1 min once per long rest; can expend level 5 spell slots for additional uses</td>
+    </tr><tr style="text-align:center">
+      <td>Faithful Steed: Can cast <i>Find Steed</i> without expending a spell slot once per long rest</td>
     </tr><tr style="text-align:center">
       <td>Lay On Hands: Can use bonus actions to heal 100 hit points per long rest and can use 5 hit points' worth to remove a poisoned condition</td>
     </tr><tr style="text-align:center">
@@ -347,7 +445,9 @@ var attributes = {
     </tr><tr style="text-align:center">
       <td>Magic Initiate (Wizard): Knows 2 Wizard cantrips and can cast a chosen W1 spell once per long rest</td>
     </tr><tr style="text-align:center">
-      <td>Paladin's Smite: Can cast <i>Divine Smite</i> once per long rest</td>
+      <td>Nature's Wrath: R15' Can use Channel Divinity to restrain targets (save DC 16 Strength negates; additional saves each rd end) for 1 min</td>
+    </tr><tr style="text-align:center">
+      <td>Paladin's Smite: Can cast <i>Divine Smite</i> without expending a spell slot once per long rest</td>
     </tr><tr style="text-align:center">
       <td>Restoring Touch: Can use 5 hit points' worth of Lay On Hands to remove a blinded, charmed, deafened, frightened, paralyzed, or stunned condition</td>
     </tr><tr style="text-align:center">
@@ -361,7 +461,7 @@ var attributes = {
   <tr style="text-align:center">
     <td>    <table id="ValidationPart" style="width:100%">
     <tr style="text-align:center">
-      <td><b>Validation Errors</b>: Selectable Feature Allocation: 2 available vs. 3 allocated</td>
+      <td><b>Validation Errors</b>: Selectable Feature Allocation: 2 available vs. 6 allocated</td>
     </tr></table>
 </td>
   </tr></table>
