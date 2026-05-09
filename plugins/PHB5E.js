@@ -1126,8 +1126,8 @@ PHB5E.FEATURES_ADDED = {
   // Sorcerer
   // Wild Magic
   'Bend Luck':
-    'Section=magic ' +
-    'Note="Can spend 2 Sorcery Points to add or subtract 1d4 from a target attack, ability check, or save"',
+    'Section=combat ' +
+    'Note="Can spend 2 sorcery points to add or subtract 1d4 from a target attack, ability check, or save"',
   'Controlled Chaos':
     'Section=magic ' +
     'Note="Can choose from 2 effects when triggering a Wild Magic Surge"',

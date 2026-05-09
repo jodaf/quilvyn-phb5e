@@ -343,11 +343,11 @@ PHB5E2024.CLASSES_FEATURES_ADDED = {
     '"features.Clockwork Sorcery ? 6:Bastion Of Law",' +
     '"features.Clockwork Sorcery ? 14:Trance Of Order",' +
     '"features.Clockwork Sorcery ? 18:Clockwork Cavalcade",' +
-    '"features.Wild Magic ? 3:Wild Magic Surge",' +
-    '"features.Wild Magic ? 3:Tides Of Chaos",' +
-    '"features.Wild Magic ? 6:Bend Luck",' +
-    '"features.Wild Magic ? 14:Controlled Chaos",' +
-    '"features.Wild Magic ? 18:Tamed Surge"',
+    '"features.Wild Magic Sorcery ? 3:Wild Magic Surge",' +
+    '"features.Wild Magic Sorcery ? 3:Tides Of Chaos",' +
+    '"features.Wild Magic Sorcery ? 6:Bend Luck",' +
+    '"features.Wild Magic Sorcery ? 14:Controlled Chaos",' +
+    '"features.Wild Magic Sorcery ? 18:Tamed Surge"',
   'Warlock':
     '"features.Archfey Patron ? 3:Archfey Spells",' +
     '"features.Archfey Patron ? 3:Steps Of The Fey",' +
@@ -433,7 +433,7 @@ PHB5E2024.CLASSES_SELECTABLES_ADDED = {
   'Sorcerer':
     '"3:Aberrant Sorcery:Sorcerer Subclass",' +
     '"3:Clockwork Sorcery:Sorcerer Subclass",' +
-    '"3:Wild Magic:Sorcerer Subclass"',
+    '"3:Wild Magic Sorcery:Sorcerer Subclass"',
   'Warlock':
     '"3:Archfey Patron:Warlock Subclass",' +
     '"3:Celestial Patron:Warlock Subclass",' +
@@ -1104,15 +1104,22 @@ PHB5E2024.FEATURES_ADDED = {
   'Bastion Of Law':Tasha.FEATURES['Bastion Of Law'],
   'Clockwork Cavalcade':Tasha.FEATURES['Clockwork Cavalcade'],
   'Clockwork Spells':Tasha.FEATURES['Clockwork Magic'],
-  'Restore Balance':Tasha.FEATURES['Restore Balance'],
+  'Restore Balance':
+    Tasha.FEATURES['Restore Balance']
+    .replace('%{proficiencyBonus} times', "%{charismaModifier>1?charismaModifier+' times':'once'}"),
   'Trance Of Order':Tasha.FEATURES['Trance Of Order'],
   // Wild Magic
-  'Bend Luck':PHB5E.FEATURES['Bend Luck'],
+  'Bend Luck':
+    PHB5E.FEATURES['Bend Luck']
+    .replace('2 sorcery points', '1 sorcery point'),
   'Controlled Chaos':PHB5E.FEATURES['Controlled Chaos'],
   'Tamed Surge':
     'Section=magic ' +
     'Note="Can add a chosen Wild Magic effect when casting a spell once per long rest"',
-  'Tides Of Chaos':PHB5E.FEATURES['Tides Of Chaos'],
+  'Tides Of Chaos':
+    'Section=combat ' +
+    // changed effects
+    'Note="Can gain advantage on an attack, ability check, or save once per long rest; subsequently using a spell slot to cast a Sorcerer spell before a long rest automtically causes a Wild Magic Surge and allows an additional use"',
   'Wild Magic Surge':PHB5E.FEATURES['Wild Magic Surge'],
 
   // Warlock
