@@ -10,9 +10,9 @@ var attributes = {
   "abilityBoosts.Constitution":2, "abilityBoosts.Dexterity":2, "abilityBoosts.Intelligence":1, 
   "abilityBoosts.Wisdom":2, "alignment":"Lawful Neutral", "armor":"None", "background":"Acolyte", 
   "charisma":12, "constitution":15, "deity":"None", "dexterity":13, "experience":907986, 
-  "feats.Ability Score Improvement":1, "feats.Alert":1, "feats.Boon Of Combat Prowess":1, "feats.Grappler":1, 
-  "feats.Magic Initiate (Druid)":1, "feats.Magic Initiate (Wizard)":1, "feats.Savage Attacker":1, 
-  "gender":"Male", "hitPoints":82, "intelligence":14, "languagesChosen.Common Sign Language":1, 
+  "feats.Ability Score Improvement":1, "feats.Alert":1, "feats.Boon Of Combat Prowess":1, "feats.Durable":1, 
+  "feats.Grappler":1, "feats.Mage Slayer":1, "feats.Savage Attacker":1, "gender":"Male", 
+  "hitPoints":82, "intelligence":14, "languagesChosen.Common Sign Language":1, 
   "languagesChosen.Giant":1, "levels.Monk":20, "name":"Class-Monk 20", "race":"Human", 
   "selectableFeatures.Monk - Warrior Of Mercy":1, "selectableFeatures.Monk - Warrior Of Shadow":1, 
   "selectableFeatures.Monk - Warrior Of The Elements":1, "selectableFeatures.Monk - Warrior Of The Open Hand":1, "shield":"None", 
@@ -33,7 +33,7 @@ var attributes = {
     <tr style="text-align:center">
       <td><b>Strength</b>: 13 (+1)</td>
       <td><b>Dexterity</b>: 19 (+4)</td>
-      <td><b>Constitution</b>: 17 (+3)</td>
+      <td><b>Constitution</b>: 18 (+4)</td>
       <td><b>Intelligence</b>: 15 (+2)</td>
       <td><b>Wisdom</b>: 18 (+4)</td>
       <td><b>Charisma</b>: 12 (+1)</td>
@@ -67,6 +67,8 @@ var attributes = {
     </tr><tr style="text-align:center">
       <td><i>Boon Of Combat Prowess: Ability Boost (Choose 1 from any)</i></td>
     </tr><tr style="text-align:center">
+      <td><i>Durable: +1 Constitution</i></td>
+    </tr><tr style="text-align:center">
       <td><i>Grappler: Ability Boost (Choose 1 from Strength, Dexterity)</i></td>
     </tr><tr style="text-align:center">
       <td><i>Unarmored Movement: +30 Speed in no armor</i></td>
@@ -96,7 +98,7 @@ var attributes = {
     </tr><tr style="text-align:center">
       <td>      <table id="FeatLists" style="width:100%">
       <tr style="text-align:center">
-        <td><b>Feats</b>: Ability Score Improvement; Alert; Boon Of Combat Prowess; Grappler; Magic Initiate (Druid); Magic Initiate (Wizard); Savage Attacker</td>
+        <td><b>Feats</b>: Ability Score Improvement; Alert; Boon Of Combat Prowess; Durable; Grappler; Mage Slayer; Savage Attacker</td>
         <td><b>Human Features</b>: Resourceful; Skillful; Versatile</td>
         <td><b>Monk Features</b>: Acrobatic Movement; Body And Mind; Cloak Of Shadows; Deflect Attacks; Deflect Energy; Disciplined Survivor; Elemental Attunement; Elemental Burst; Elemental Epitome; Empowered Strikes; Epic Boon; Evasion; Extra Attack; Fleet Step; Flurry Of Healing And Harm; Hand Of Harm; Hand Of Healing; Hand Of Ultimate Mercy; Heightened Focus; Implements Of Mercy; Improved Shadow Step; Manipulate Elements; Martial Arts; Monk Subclass; Monk's Focus; Open Hand Technique; Perfect Focus; Physician's Touch; Quivering Palm; Save Proficiency (Strength; Dexterity); Self-Restoration; Shadow Arts; Shadow Step; Skill Proficiency (Choose 2 from Acrobatics, Athletics, History, Insight, Religion, Stealth); Slow Fall; Stillness Of Mind; Stride Of The Elements; Stunning Strike; Superior Defense; Tool Proficiency (Choose 1 from any Artisan's Tools, any Musical Instrument); Unarmored Defense; Unarmored Movement; Uncanny Metabolism; Warrior Of Mercy; Warrior Of Shadow; Warrior Of The Elements; Warrior Of The Open Hand; Weapon Proficiency (Simple Weapons; Light Weapons); Wholeness Of Body</td>
         <td><b>Acolyte Features</b>: Ability Boost (Choose 3 from Intelligence, Wisdom, Charisma); Magic Initiate (Cleric); Skill Proficiency (Insight; Religion); Tool Proficiency (Calligrapher's Supplies)</td>
@@ -172,7 +174,7 @@ var attributes = {
     <tr style="text-align:center">
       <td>      <table id="CombatStats" style="width:100%">
       <tr style="text-align:center">
-        <td><b>Hit Points</b>: 142</td>
+        <td><b>Hit Points</b>: 162</td>
         <td><b>Initiative</b>: +10</td>
         <td><b>Armor Class</b>: 18</td>
       </tr></table>
@@ -196,7 +198,7 @@ var attributes = {
       <tr style="text-align:center">
         <td><i>Alert: +6 Initiative</i></td>
       </tr><tr style="text-align:center">
-        <td><i>Constitution Hit Points Adjustment: +60</i></td>
+        <td><i>Constitution Hit Points Adjustment: +80</i></td>
       </tr><tr style="text-align:center">
         <td><i>Deflect Energy: Has increased Deflect Attacks effects</i></td>
       </tr><tr style="text-align:center">
@@ -228,6 +230,8 @@ var attributes = {
       </tr><tr style="text-align:center">
         <td>Deflect Attacks: Can use a reaction to reduce suffered damage by 1d10+24 HP; reducing it to 0 HP allows expending 1 focus point to redirect 2d12+4 HP (save DC 18 Dexterity negates) to an adjacent creature, or to a creature within 60' if the damage came from a ranged attack</td>
       </tr><tr style="text-align:center">
+        <td>Durable: Regains a minimum of 8 hit points from a Hit Die roll</td>
+      </tr><tr style="text-align:center">
         <td>Elemental Attunement: Can expend 1 focus point to gain +10' reach with unarmed strikes that can inflict a choice of acid, cold, fire, lightning, or thunder and an optional 10' push (save DC 18 Strength negates) instead of normal damage, for 10 min</td>
       </tr><tr style="text-align:center">
         <td>Elemental Epitome: Step Of The Wind gives +20 Speed until the end of the turn and inflicts 1d12 HP of a choice of acid, cold, fire, lightning, or thunder to targets passed within 5'/Unarmed strike inflicts +1d12 HP once per turn while using Elemental Attunement</td>
@@ -245,6 +249,8 @@ var attributes = {
         <td>Hand Of Harm: Can inflict +1d12+4 HP necrotic and poisoned until the end of the next turn with an unarmed strike once per turn</td>
       </tr><tr style="text-align:center">
         <td>Improved Shadow Step: Can expend 1 focus point to Shadow Step between lighted areas and to make an unarmed strike after teleporting</td>
+      </tr><tr style="text-align:center">
+        <td>Mage Slayer: Can use a reaction to attack an adjacent caster/Foe suffers disadvantage on concentration to maintain a spell in response to a self attack</td>
       </tr><tr style="text-align:center">
         <td>Martial Arts: Can use a bonus action to make an unarmed strike  and can use Dexterity instead of Strength to Grapple and Shove</td>
       </tr><tr style="text-align:center">
@@ -278,7 +284,7 @@ var attributes = {
     <tr style="text-align:center">
       <td><b>Save Proficiency</b>: Charisma; Constitution; Dexterity; Intelligence; Strength; Wisdom</td>
     </tr><tr style="text-align:center">
-      <td><b>Save</b>: Charisma: +7; Constitution: +9; Dexterity: +10; Intelligence: +8; Strength: +7; Wisdom: +10</td>
+      <td><b>Save</b>: Charisma: +7; Constitution: +10; Dexterity: +10; Intelligence: +8; Strength: +7; Wisdom: +10</td>
     </tr><tr style="text-align:center">
       <td><b>Save Notes</b>:       <table id="SaveNotes" style="width:100%">
       <tr style="text-align:center">
@@ -289,6 +295,8 @@ var attributes = {
         <td>Elemental Epitome: Has resistance to a choice of acid, cold, fire, lightning, or thunder each rd while using Elemental Attunement</td>
       </tr><tr style="text-align:center">
         <td>Evasion: Successful Dexterity saves yield no damage instead of half, and failures yield half damage</td>
+      </tr><tr style="text-align:center">
+        <td>Mage Slayer: Has advantage on saves vs. spells cast by adjacent foes</td>
       </tr><tr style="text-align:center">
         <td>Self-Restoration: Can end a charmed, frightened, or poisoned condition affecting self at the end of each turn, and does not suffer exhaustion from lack of food or drink</td>
       </tr><tr style="text-align:center">
@@ -310,9 +318,9 @@ var attributes = {
     <tr style="text-align:center">
       <td>      <table id="SpellStats" style="width:100%">
       <tr style="text-align:center">
-        <td><b>Spells Known/Prepared</b>: C0: 2; C: 1; D0: 2; D: 1; W0: 2; W: 1</td>
-        <td><b>Attack</b>: C: +10; D: +10; Monk: +10; W: +8</td>
-        <td><b>Spell DC</b>: C: 18; D: 18; Monk: 18; W: 16</td>
+        <td><b>Spells Known/Prepared</b>: C0: 2; C: 1</td>
+        <td><b>Attack</b>: C: +10; Monk: +10</td>
+        <td><b>Spell DC</b>: C: 18; Monk: 18</td>
       </tr></table>
 </td>
     </tr></table>
@@ -342,11 +350,7 @@ var attributes = {
     </tr><tr style="text-align:center">
       <td>Hand Of Ultimate Mercy: Can spend 5 focus points to revive a corpse dead up to 24 hr, restoring 4d10+4 hit points and removing conditions, once per long rest</td>
     </tr><tr style="text-align:center">
-      <td>Magic Initiate (Cleric): Knows 2 Cleric cantrips and can cast a chosen C1 spell once per long rest</td>
-    </tr><tr style="text-align:center">
-      <td>Magic Initiate (Druid): Knows 2 Druid cantrips and can cast a chosen D1 spell once per long rest</td>
-    </tr><tr style="text-align:center">
-      <td>Magic Initiate (Wizard): Knows 2 Wizard cantrips and can cast a chosen W1 spell once per long rest</td>
+      <td>Magic Initiate (Cleric): Knows 2 Cleric cantrips and can cast a chosen C1 spell without expending a spell slot once per long rest</td>
     </tr><tr style="text-align:center">
       <td>Shadow Arts: Can spend 1 focus point to cast <i>Darkness</i> without components and can move its effect within 60' of self each rd</td>
     </tr></table>
@@ -358,7 +362,7 @@ var attributes = {
   <tr style="text-align:center">
     <td>    <table id="ValidationPart" style="width:100%">
     <tr style="text-align:center">
-      <td><b>Validation Warnings</b>: <i>Nonproficient Weapon Penalty.Flail: -6 attack</i></td>
+      <td><b>Validation Warnings</b>: <i>Unproficient Weapon Penalty.Flail: -6 attack</i></td>
     </tr><tr style="text-align:center">
       <td><b>Validation Errors</b>: Selectable Feature Allocation: 1 available vs. 4 allocated</td>
     </tr></table>

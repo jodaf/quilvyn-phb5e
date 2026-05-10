@@ -215,9 +215,9 @@ var attributes = {
   </tr><tr style="text-align:center">
     <td><b>Skill Notes</b>:     <table id="SkillNotes" style="width:100%">
     <tr style="text-align:center">
-      <td><i>Skillful: Skill Proficiency (Choose 1 from any)</i></td>
+      <td><i>Scholar: Has expertise in a choice of proficient Arcana, History, Investigation, Medicine, Nature, or Religion</i></td>
     </tr><tr style="text-align:center">
-      <td>Scholar: +4 in a choice of proficient Arcana, History, Investigation, Medicine, Nature, or Religion</td>
+      <td><i>Skillful: Skill Proficiency (Choose 1 from any)</i></td>
     </tr></table>
 </td>
   </tr></table>
@@ -744,19 +744,29 @@ var attributes = {
     </tr><tr style="text-align:center">
       <td>Empowered Evocation: Evocation spells inflict +1 HP</td>
     </tr><tr style="text-align:center">
-      <td>Evocation Savant: Can copy 5 evocation spells into spellbook for free</td>
+      <td>Evocation Savant: Spellbook contains 1 additional evocation spell per available spell slot level</td>
     </tr><tr style="text-align:center">
-      <td>Magic Initiate (Wizard): Knows 2 Wizard cantrips and can cast a chosen W1 spell once per long rest</td>
+      <td>Magic Initiate (Wizard): Knows 2 Wizard cantrips and can cast a chosen W1 spell without expending a spell slot once per long rest</td>
     </tr><tr style="text-align:center">
       <td>Memorize Spell: Can replace a prepared spell at the end of a short rest</td>
     </tr><tr style="text-align:center">
       <td>Potent Cantrip: Cantrips inflict half HP on a miss or successful save</td>
     </tr><tr style="text-align:center">
-      <td>Ritual Adept: Can cast spells marked with [R] as rituals without preparation</td>
+      <td>Ritual Adept: Can cast spells marked with [R] as rituals directly from spellbook</td>
     </tr><tr style="text-align:center">
-      <td>Sculpt Spells: On a self evocation spell, can give spell level + 1 creatures a successful save and no damage instead of half</td>
+      <td>Sculpt Spells: When casting an evocation spell, can give spell level + 1 creatures a successful save and no damage instead of half</td>
     </tr><tr style="text-align:center">
-      <td>Spellcasting: Can cast spells from the wizard spell list and cast spells marked with [R] using a ritual</td>
+      <td>Spellcasting: Can cast spells from the wizard spell list and cast spells marked with [R] using a ritual; regains expended spell slots after a long rest</td>
+    </tr></table>
+</td>
+  </tr></table>
+</td>
+</tr><tr style="text-align:center">
+  <td style="border:1px solid black"><b>Notes</b><br/>  <table id="NotesArea" style="width:100%">
+  <tr style="text-align:center">
+    <td>    <table id="ValidationPart" style="width:100%">
+    <tr style="text-align:center">
+      <td><b>Validation Errors</b>: Expertise Allocation: 1 available vs. 0 allocated</td>
     </tr></table>
 </td>
   </tr></table>

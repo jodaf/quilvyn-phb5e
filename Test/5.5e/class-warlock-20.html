@@ -11,17 +11,18 @@ var attributes = {
   "abilityBoosts.Intelligence":1, "abilityBoosts.Strength":1, "abilityBoosts.Wisdom":1, 
   "alignment":"Neutral Good", "armor":"None", "background":"Acolyte", "charisma":14, "constitution":10, 
   "deity":"None", "dexterity":14, "experience":484258, "feats.Ability Score Improvement":1, 
-  "feats.Alert":1, "feats.Boon Of The Night Spirit":1, "feats.Grappler":1, 
-  "feats.Magic Initiate (Druid)":1, "feats.Magic Initiate (Wizard)":1, "feats.Savage Attacker":1, 
-  "feats.Skilled":1, "gender":"Male", "hitPoints":55, "intelligence":12, 
-  "languagesChosen.Abyssal":1, "languagesChosen.Infernal":1, "levels.Warlock":20, 
-  "name":"Class-Warlock 20", "selectableFeatures.Warlock - Agonizing Blast":1, 
+  "feats.Alert":1, "feats.Boon Of The Night Spirit":1, "feats.Durable":1, "feats.Grappler":1, 
+  "feats.Musician":1, "feats.Savage Attacker":1, "feats.Skilled":1, "gender":"Male", 
+  "hitPoints":55, "intelligence":12, "languagesChosen.Abyssal":1, 
+  "languagesChosen.Infernal":1, "levels.Warlock":20, "name":"Class-Warlock 20", 
+  "selectableFeatures.Warlock - Agonizing Blast":1, "selectableFeatures.Warlock - Archfey Patron":1, 
   "selectableFeatures.Warlock - Armor Of Shadows":1, "selectableFeatures.Warlock - Ascendant Step":1, 
-  "selectableFeatures.Warlock - Devil's Sight":1, "selectableFeatures.Warlock - Devouring Blade":1, 
-  "selectableFeatures.Warlock - Eldritch Mind":1, "selectableFeatures.Warlock - Eldritch Smite":1, 
-  "selectableFeatures.Warlock - Eldritch Spear":1, "selectableFeatures.Warlock - Fiend Patron":1, 
-  "selectableFeatures.Warlock - Fiendish Vigor":1, "selectableFeatures.Warlock - Gaze Of Two Minds":1, 
-  "selectableFeatures.Warlock - Gift Of The Depths":1, "selectableFeatures.Warlock - Gift Of The Protectors":1, 
+  "selectableFeatures.Warlock - Celestial Patron":1, "selectableFeatures.Warlock - Devil's Sight":1, 
+  "selectableFeatures.Warlock - Devouring Blade":1, "selectableFeatures.Warlock - Eldritch Mind":1, 
+  "selectableFeatures.Warlock - Eldritch Smite":1, "selectableFeatures.Warlock - Eldritch Spear":1, 
+  "selectableFeatures.Warlock - Fiend Patron":1, "selectableFeatures.Warlock - Fiendish Vigor":1, 
+  "selectableFeatures.Warlock - Gaze Of Two Minds":1, "selectableFeatures.Warlock - Gift Of The Depths":1, 
+  "selectableFeatures.Warlock - Gift Of The Protectors":1, "selectableFeatures.Warlock - Great Old One Patron":1, 
   "selectableFeatures.Warlock - Investment Of The Chain Master":1, "selectableFeatures.Warlock - Lessons Of The First Ones":1, 
   "selectableFeatures.Warlock - Lifedrinker":1, "selectableFeatures.Warlock - Mask Of Many Faces":1, 
   "selectableFeatures.Warlock - Master Of Myriad Forms":1, "selectableFeatures.Warlock - Misty Visions":1, 
@@ -50,7 +51,7 @@ var attributes = {
     <tr style="text-align:center">
       <td><b>Strength</b>: 13 (+1)</td>
       <td><b>Dexterity</b>: 15 (+2)</td>
-      <td><b>Constitution</b>: 11 (+0)</td>
+      <td><b>Constitution</b>: 12 (+1)</td>
       <td><b>Intelligence</b>: 13 (+1)</td>
       <td><b>Wisdom</b>: 8 (-1)</td>
       <td><b>Charisma</b>: 16 (+3)</td>
@@ -82,6 +83,8 @@ var attributes = {
     </tr><tr style="text-align:center">
       <td><i>Boon Of The Night Spirit: Ability Boost (Choose 1 from any)</i></td>
     </tr><tr style="text-align:center">
+      <td><i>Durable: +1 Constitution</i></td>
+    </tr><tr style="text-align:center">
       <td><i>Grappler: Ability Boost (Choose 1 from Strength, Dexterity)</i></td>
     </tr><tr style="text-align:center">
       <td>Ability Boosts: 7 to distribute</td>
@@ -107,9 +110,9 @@ var attributes = {
     </tr><tr style="text-align:center">
       <td>      <table id="FeatLists" style="width:100%">
       <tr style="text-align:center">
-        <td><b>Feats</b>: Ability Score Improvement; Alert; Boon Of The Night Spirit; Grappler; Magic Initiate (Druid); Magic Initiate (Wizard); Savage Attacker; Skilled</td>
+        <td><b>Feats</b>: Ability Score Improvement; Alert; Boon Of The Night Spirit; Durable; Grappler; Musician; Savage Attacker; Skilled</td>
         <td><b>Human Features</b>: Resourceful; Skillful; Versatile</td>
-        <td><b>Warlock Features</b>: Agonizing Blast; Armor Of Shadows; Armor Training (Light); Ascendant Step; Contact Patron; Dark One's Blessing; Dark One's Own Luck; Devil's Sight; Devouring Blade; Eldritch Invocations; Eldritch Master; Eldritch Mind; Eldritch Smite; Eldritch Spear; Epic Boon; Fiend Patron; Fiend Spells; Fiendish Resilience; Fiendish Vigor; Gaze Of Two Minds; Gift Of The Depths; Gift Of The Protectors; Hurl Through Hell; Investment Of The Chain Master; Lessons Of The First Ones; Lifedrinker; Magical Cunning; Mask Of Many Faces; Master Of Myriad Forms; Misty Visions; Mystic Arcanum; One With Shadows; Otherworldly Leap; Pact Magic; Pact Of The Blade; Pact Of The Chain; Pact Of The Tome; Repelling Blast; Save Proficiency (Wisdom; Charisma); Skill Proficiency (Choose 2 from Arcana, Deception, History, Intimidation, Investigation, Nature, Religion); Thirsting Blade; Visions Of Distant Realms; Warlock Subclass; Weapon Proficiency (Simple Weapons); Whispers Of The Grave; Witch Sight</td>
+        <td><b>Warlock Features</b>: Agonizing Blast; Archfey Patron; Archfey Spells; Armor Of Shadows; Armor Training (Light); Ascendant Step; Awakened Mind; Beguiling Defenses; Bewitching Magic; Celestial Patron; Celestial Resilience; Celestial Spells; Clairvoyant Combatant; Contact Patron; Create Thrall; Dark One's Blessing; Dark One's Own Luck; Devil's Sight; Devouring Blade; Eldritch Hex; Eldritch Invocations; Eldritch Master; Eldritch Mind; Eldritch Smite; Eldritch Spear; Epic Boon; Fiend Patron; Fiend Spells; Fiendish Resilience; Fiendish Vigor; Gaze Of Two Minds; Gift Of The Depths; Gift Of The Protectors; Great Old One Patron; Great Old One Spells; Healing Light; Hurl Through Hell; Investment Of The Chain Master; Lessons Of The First Ones; Lifedrinker; Magical Cunning; Mask Of Many Faces; Master Of Myriad Forms; Misty Escape; Misty Visions; Mystic Arcanum; One With Shadows; Otherworldly Leap; Pact Magic; Pact Of The Blade; Pact Of The Chain; Pact Of The Tome; Psychic Spells; Radiant Soul; Repelling Blast; Save Proficiency (Wisdom; Charisma); Searing Vengeance; Skill Proficiency (Choose 2 from Arcana, Deception, History, Intimidation, Investigation, Nature, Religion); Steps Of The Fey; Thirsting Blade; Thought Shield; Visions Of Distant Realms; Warlock Subclass; Weapon Proficiency (Simple Weapons); Whispers Of The Grave; Witch Sight</td>
         <td><b>Acolyte Features</b>: Ability Boost (Choose 3 from Intelligence, Wisdom, Charisma); Magic Initiate (Cleric); Skill Proficiency (Insight; Religion); Tool Proficiency (Calligrapher's Supplies)</td>
       </tr></table>
 </td>
@@ -127,6 +130,8 @@ var attributes = {
         <td>Dark One's Own Luck: Can add 1d10 to an ability check or save 3 times per long rest</td>
       </tr><tr style="text-align:center">
         <td>Devil's Sight: R120' Sees normally in darkness</td>
+      </tr><tr style="text-align:center">
+        <td>Musician: TODO</td>
       </tr><tr style="text-align:center">
         <td>Resourceful: Gains Heroic Inspiration at the end of a long rest</td>
       </tr></table>
@@ -177,6 +182,8 @@ var attributes = {
     </tr><tr style="text-align:center">
       <td><i>Skillful: Skill Proficiency (Choose 1 from any)</i></td>
     </tr><tr style="text-align:center">
+      <td>Awakened Mind: R30' Can use a bonus action to establish telepathic communication in a shared language with the target while within 3 miles for 20 minutes</td>
+    </tr><tr style="text-align:center">
       <td>Witch Sight: Has 30' Truesight</td>
     </tr></table>
 </td>
@@ -189,7 +196,7 @@ var attributes = {
     <tr style="text-align:center">
       <td>      <table id="CombatStats" style="width:100%">
       <tr style="text-align:center">
-        <td><b>Hit Points</b>: 55</td>
+        <td><b>Hit Points</b>: 75</td>
         <td><b>Initiative</b>: +8</td>
         <td><b>Armor Class</b>: 12</td>
       </tr></table>
@@ -214,6 +221,8 @@ var attributes = {
       <tr style="text-align:center">
         <td><i>Alert: +6 Initiative</i></td>
       </tr><tr style="text-align:center">
+        <td><i>Constitution Hit Points Adjustment: +20</i></td>
+      </tr><tr style="text-align:center">
         <td><i>Devouring Blade: Has increased Thirsting Blade effects</i></td>
       </tr><tr style="text-align:center">
         <td><i>Dexterity Armor Class Adjustment: +2</i></td>
@@ -228,11 +237,17 @@ var attributes = {
       </tr><tr style="text-align:center">
         <td>Alert: Can swap initiatives with a willing ally</td>
       </tr><tr style="text-align:center">
+        <td>Beguiling Defenses: Can use a reaction in response to taking damage to reduce the damage taken by half and to inflict psychic damage on the attacker equal to the remaining amount (save Wisdom negates) once per long rest; can expend spell slots for additional uses</td>
+      </tr><tr style="text-align:center">
         <td>Boon Of The Night Spirit: Can use a bonus action to become invisible in dim or no light; taking an action, bonus action, or reaction ends</td>
       </tr><tr style="text-align:center">
-        <td>Dark One's Blessing: Reducing a foe to 0 hit points gives self 23 temporary hit points; others reducing a foe within 10' to 0 hit points gives the same benefit</td>
+        <td>Clairvoyant Combatant: Can use Awakened Mind to inflict disadvantage on the target on attacks vs. self and to give self advantage on attacks vs. the target (save Wisdom negates) once per short rest; can expend spell slots for additional uses</td>
       </tr><tr style="text-align:center">
-        <td>Eldritch Smite: Can spend a spell slot upon a pact weapon hit to inflict +1d8 HP force plus +1d8 HP force per spell level and to inflict prone on a Huge or smaller target</td>
+        <td>Dark One's Blessing: Reducing a foe to 0 hit points gives self 23 temporary hit points; others reducing a foe within 10' to 0 hit points gives self the same benefit</td>
+      </tr><tr style="text-align:center">
+        <td>Durable: Regains a minimum of 2 hit points from a Hit Die roll</td>
+      </tr><tr style="text-align:center">
+        <td>Eldritch Smite: Can expend a spell slot upon a pact weapon hit to inflict +1d8 HP force plus +1d8 HP force per slot level and to inflict prone on a Huge or smaller target</td>
       </tr><tr style="text-align:center">
         <td>Grappler: Can both Damage and Grapple with an unarmed strike once per turn, has advantage on attacks on a grappled foe, and can move at full speed with a grappled foe of Medium size or smaller</td>
       </tr><tr style="text-align:center">
@@ -240,9 +255,15 @@ var attributes = {
       </tr><tr style="text-align:center">
         <td>Lifedrinker: Can inflict +1d6 HP of a choice of necrotic, psychic, or radiant with a pact weapon, plus expend a Hit Point Die to regain hit points, once per turn</td>
       </tr><tr style="text-align:center">
+        <td>Misty Escape: Can use a reaction in response to taking damage to cast <i>Misty Step</i></td>
+      </tr><tr style="text-align:center">
         <td>Pact Of The Chain: Can forego one attack to allow familiar to attack as a reaction</td>
       </tr><tr style="text-align:center">
+        <td>Psychic Spells: Can inflict psychic damage instead of normal spell damage, and can cast enchantment and illusion spells without verbal or somatic components</td>
+      </tr><tr style="text-align:center">
         <td>Savage Attacker: Can use the better of 2 damage rolls once per turn</td>
+      </tr><tr style="text-align:center">
+        <td>Searing Vengeance: R60' Can cancel a creature's death saving throw, restore half its maximum hit points, allow it to stand, and inflict 2d8+3 HP radiant and blindness for 1 rd on chosen targets within 30' of it once per long rest</td>
       </tr><tr style="text-align:center">
         <td>Thirsting Blade: Attack action with a pact blade allows 3 attacks</td>
       </tr></table>
@@ -254,15 +275,21 @@ var attributes = {
     <tr style="text-align:center">
       <td><b>Save Proficiency</b>: Charisma; Wisdom</td>
     </tr><tr style="text-align:center">
-      <td><b>Save</b>: Charisma: +9; Constitution: +0; Dexterity: +2; Intelligence: +1; Strength: +1; Wisdom: +5</td>
+      <td><b>Save</b>: Charisma: +9; Constitution: +1; Dexterity: +2; Intelligence: +1; Strength: +1; Wisdom: +5</td>
     </tr><tr style="text-align:center">
       <td><b>Save Notes</b>:       <table id="SaveNotes" style="width:100%">
       <tr style="text-align:center">
+        <td>Beguiling Defenses: Has immunity to charmed</td>
+      </tr><tr style="text-align:center">
         <td>Boon Of The Night Spirit: In dim or no light, has resistance to all damage other than psychic and radiant</td>
       </tr><tr style="text-align:center">
         <td>Eldritch Mind: Has advantage on Constitution saves to maintain concentration</td>
       </tr><tr style="text-align:center">
         <td>Fiendish Resilience: At the end of a rest, can gain resistance to a chosen non-force damage type</td>
+      </tr><tr style="text-align:center">
+        <td>Radiant Soul: Has resistance to radiant</td>
+      </tr><tr style="text-align:center">
+        <td>Thought Shield: Has immunity to telepathy and resistance to psychic damage, and taking psychic damage inflicts equal damage on the attacker</td>
       </tr></table>
 </td>
     </tr></table>
@@ -276,10 +303,10 @@ var attributes = {
     <tr style="text-align:center">
       <td>      <table id="SpellStats" style="width:100%">
       <tr style="text-align:center">
-        <td><b>Spells Known/Prepared</b>: C0: 2; C: 1; D0: 2; D: 1; K0: 4; K: 15; W0: 2; W: 1</td>
+        <td><b>Spells Known/Prepared</b>: C0: 2; C: 1; K0: 4; K: 15</td>
         <td><b>Spell Slots</b>: K5: 4</td>
-        <td><b>Attack</b>: C: +5; D: +5; K: +9; W: +7</td>
-        <td><b>Spell DC</b>: C: 13; D: 13; K: 17; W: 15</td>
+        <td><b>Attack</b>: C: +5; K: +9</td>
+        <td><b>Spell DC</b>: C: 13; K: 17</td>
       </tr></table>
 </td>
     </tr></table>
@@ -287,23 +314,47 @@ var attributes = {
   </tr><tr style="text-align:center">
     <td><b>Spells</b>:     <table id="Spells" style="width:100%">
     <tr style="text-align:left">
+      <td>Aid (K2 [Celestial Spells] Abju): R30' 3 targets gain +5 current and maximum hit points for 8 hr [+Level gives +5 hit points]</td>
+    </tr><tr style="text-align:left">
       <td>Alter Self (K2 [Master Of Myriad Forms] Tran): Self becomes aquatic, changes appearance, or gains natural weapons with +9 attack and 1d6+3 HP damage, for concentration up to 1 hr</td>
     </tr><tr style="text-align:left">
       <td>Arcane Eye (K4 [Visions Of Distant Realms] Divi): R30' Self sees with Darkvision through a remote invisible eye that can move 30' per rd for concentration up to 1 hr</td>
     </tr><tr style="text-align:left">
+      <td>Blink (K3 [Archfey Spells] Tran): Self has a 50% chance of becoming ethereal at the end each turn, returning to a choice of spot within 10' at the start of the next turn, for 1 min</td>
+    </tr><tr style="text-align:left">
       <td>Burning Hands (K1 [Fiend Spells] Evoc): 15' cone inflicts 3d6 HP fire (save Dexterity half) [+Level inflicts +1d6 HP]</td>
     </tr><tr style="text-align:left">
+      <td>Calm Emotions (K2 [Archfey Spells] Ench): R60' 20' radius suppresses a choice of charmed and frightened or hostility (save Charisma negates) for concentration up to 1 min</td>
+    </tr><tr style="text-align:left">
+      <td>Clairvoyance (K3 [Great Old One Spells] Divi): R1 mile Self can choose each rd to see or hear via an invisible sensor for concentration up to 10 min</td>
+    </tr><tr style="text-align:left">
       <td>Command (K1 [Fiend Spells] Ench): R60' Target obeys a one-word command from self (save Wisdom negates) for 1 rd [+Level affects +1 target]</td>
+    </tr><tr style="text-align:left">
+      <td>Confusion (K4 [Great Old One Spells] Ench): R90' Creatures in a 10' radius lose reactions and bonus actions and randomly: 10% wander; 50% do nothing; 20% attack an adjacent creature; 20% act normally (save Wisdom negates; additional saves each rd end) for concentration up to 1 min [+Level increases the radius by 5']</td>
     </tr><tr style="text-align:left">
       <td>Contact Other Plane (K5 Divi): Contact with an extraplanar being inflicts 6d6 HP psychic and incapacitated on self until a long rest (save DC 15 Intelligence negates and gives one-word answers to 5 questions) [R]</td>
     </tr><tr style="text-align:left">
       <td>Contact Other Plane (K5 [Contact Patron] Divi): Contact with an extraplanar being inflicts 6d6 HP psychic and incapacitated on self until a long rest (save DC 15 Intelligence negates and gives one-word answers to 5 questions) [R]</td>
     </tr><tr style="text-align:left">
+      <td>Cure Wounds (K1 [Celestial Spells] Abju): Touched regains 2d8+3 hit points [+Level restores +2d8 hit points]</td>
+    </tr><tr style="text-align:left">
+      <td>Daylight (K3 [Celestial Spells] Evoc): R60' Target centers a 60' radius bright light for 1 hr</td>
+    </tr><tr style="text-align:left">
+      <td>Detect Thoughts (K2 [Great Old One Spells] Divi): R30' Reveals targets' surface thoughts and allows probing deeper (save Wisdom ends; additional Arcana checks each rd end) for concentration up to 1 min; 1' of stone, dirt, or wood, 1" of metal, or a thin sheet of lead blocks the spell</td>
+    </tr><tr style="text-align:left">
       <td>Disguise Self (K1 [Mask Of Many Faces] Illu): Changes the appearance of self body and clothing for 1 hr; physical investigation detects the illusion</td>
+    </tr><tr style="text-align:left">
+      <td>Dissonant Whispers (K1 [Great Old One Spells] Ench): R60' Inflicts 3d6 HP psychic and forces the target to use its reaction to flee (save Wisdom half HP only) [+Level inflicts +1d6 HP]</td>
+    </tr><tr style="text-align:left">
+      <td>Dominate Beast (K4 [Archfey Spells] Ench): R60' Target beast obeys telepathic commands (save Wisdom negates; damage allows another save) for concentration up to 1 min [+Level extends the duration to 10 min, 1 hr, or 8 hr at level 5, 6, or 7]</td>
+    </tr><tr style="text-align:left">
+      <td>Dominate Person (K5 [Archfey Spells] Ench): R60' Target humanoid obeys telepathic commands (save Wisdom negates; damage allows another save) for concentration up to 1 min [+Level extends the duration to 10 min, 1 hr, or 8 hr at level 6, 7, or 8]</td>
     </tr><tr style="text-align:left">
       <td>Dream (K5 Illu): Touched controls the dreams of a known target for 8 hr and can inflict 3d6 HP psychic (save Wisdom negates)</td>
     </tr><tr style="text-align:left">
       <td>Eldritch Blast (K0 Evoc): R120' Ranged spell creates 4 rays that inflict 1d10 HP force each</td>
+    </tr><tr style="text-align:left">
+      <td>Faerie Fire (K1 [Archfey Spells] Evoc): R60' Objects and creatures in a 20' cube glow (save Dexterity negates), giving their foes advantage on attacks, for concentration up to 1 min</td>
     </tr><tr style="text-align:left">
       <td>False Life (K1 [Fiendish Vigor] Necr): Self gains 2d4+4 temporary hit points [+Level gives +5 temporary hit points]</td>
     </tr><tr style="text-align:left">
@@ -315,7 +366,19 @@ var attributes = {
     </tr><tr style="text-align:left">
       <td>Geas (K5 [Fiend Spells] Ench): R60' Target obeys self instructions or suffers 5d10 HP psychic each day (save Wisdom negates) for 30 days [+Level extends the duration to 365 days or permanently at level 7 or 9]</td>
     </tr><tr style="text-align:left">
+      <td>Greater Invisibility (K4 [Archfey Spells] Illu): Touched becomes invisible for concentration up to 1 min</td>
+    </tr><tr style="text-align:left">
+      <td>Greater Restoration (K5 [Celestial Spells] Abju): Touched recovers from an effect causing an exhaustion level, a charmed or petrified condition, a curse, an ability reduction, or a reduction of hit point maximum</td>
+    </tr><tr style="text-align:left">
+      <td>Guardian Of Faith (K4 [Celestial Spells] Conj): R30' 10' radius inflicts 20 HP radiant on foes (save Dexterity half) for 8 hr or until 60 HP inflicted</td>
+    </tr><tr style="text-align:left">
+      <td>Guiding Bolt (K1 [Celestial Spells] Evoc): R120' Ranged spell inflicts 4d6 HP radiant and gives advantage on the next attack on the target before the end of the next turn [+Level inflicts +1d6 HP]</td>
+    </tr><tr style="text-align:left">
+      <td>Hex (K1 [Eldritch Hex] Ench): R90' Self attacks on the target inflict +1d6 HP necrotic, and the target has disadvantage on a chosen ability, for concentration up to 1 hr [+Level extends the duration to 4, 8, or 24 hr at level 2, 3 or 5]</td>
+    </tr><tr style="text-align:left">
       <td>Hold Monster (K5 Ench): R90' Inflicts paralyzed (save Wisdom negates; additional saves each rd end) for concentration up to 1 min [+Level affects +1 target]</td>
+    </tr><tr style="text-align:left">
+      <td>Hunger Of Hadar (K3 [Great Old One Spells] Conj): R150' Creatures in a 20' radius suffer 2d6 HP cold at the start of their turns (no save) and 2d6 HP acid at the end of their turns (save Dexterity negates) for concentration up to 1 min</td>
     </tr><tr style="text-align:left">
       <td>Insect Plague (K5 [Fiend Spells] Conj): R300' 20' radius inflicts 4d10 HP piercing (save Constitution half) for concentration up to 10 min [+Level inflicts +1d10 HP]</td>
     </tr><tr style="text-align:left">
@@ -323,19 +386,41 @@ var attributes = {
     </tr><tr style="text-align:left">
       <td>Jump (K1 [Otherworldly Leap] Tran): Touched can jump 30' after a 10' move for 1 min</td>
     </tr><tr style="text-align:left">
+      <td>Lesser Restoration (K2 [Celestial Spells] Abju): Touched recovers from a choice of blinded, deafened, paralyzed, or poisoned</td>
+    </tr><tr style="text-align:left">
       <td>Levitate (K2 [Ascendant Step] Tran): R60' Target 500 lb object or creature rises 20' (save Constitution negates) and can be moved up or down 20' each rd for concentration up to 10 min</td>
+    </tr><tr style="text-align:left">
+      <td>Light (K0 [Celestial Spells] Evoc): Touched unattended object emits a 20' bright light for 1 hr</td>
     </tr><tr style="text-align:left">
       <td>Mage Armor (K1 [Armor Of Shadows] Abju): Willing, unarmored touched gains Armor Class 13 + Dexterity modifier for 8 hr; the spell ends if the target dons armor</td>
     </tr><tr style="text-align:left">
       <td>Mage Hand (K0 Conj): R30' Spectral hand performs minor tasks, moving up to 10 lb, for 1 min</td>
     </tr><tr style="text-align:left">
+      <td>Misty Step (K2 [Archfey Spells] Conj): Teleports self 30'</td>
+    </tr><tr style="text-align:left">
+      <td>Modify Memory (K5 [Great Old One Spells] Ench): R30' Incapacitates the target for concentration up to 1 min and allows changing the target's memory of a 10-min event from the past 24 hr (save Wisdom negates; a target in battle has advantage); damaging or additional casting on the target ends the spell [+Level changes the memory of an event from the past 7, 30, 365, or unlimited days at level 6, 7, 8, or 9]</td>
+    </tr><tr style="text-align:left">
+      <td>Phantasmal Force (K2 [Archfey Spells] Illu): R60' Target perceives an illusion (save Intelligence negates; Investigation ends) that can inflict 2d8 HP psychic per rd for concentration up to 1 min</td>
+    </tr><tr style="text-align:left">
+      <td>Phantasmal Force (K2 [Great Old One Spells] Illu): R60' Target perceives an illusion (save Intelligence negates; Investigation ends) that can inflict 2d8 HP psychic per rd for concentration up to 1 min</td>
+    </tr><tr style="text-align:left">
+      <td>Plant Growth (K3 [Archfey Spells] Tran): R150' Causes plants in a 100' radius to overgrow, slowing movement to 1/4 Speed, or enriches a half-mile radius for 365 days</td>
+    </tr><tr style="text-align:left">
       <td>Poison Spray (K0 Conj): 1</td>
+    </tr><tr style="text-align:left">
+      <td>Revivify (K3 [Celestial Spells] Necr): Restores life and 1 hit point to a touched 1-minute-old corpse</td>
+    </tr><tr style="text-align:left">
+      <td>Sacred Flame (K0 [Celestial Spells] Evoc): R60' Inflicts 4d8 HP radiant (save Dexterity negates), ignoring 1/2 and 3/4 cover</td>
     </tr><tr style="text-align:left">
       <td>Scorching Ray (K2 [Fiend Spells] Evoc): R120' 3 ranged attacks each inflict 2d6 HP fire [+Level gives +1 ranged attack]</td>
     </tr><tr style="text-align:left">
       <td>Scrying (K5 Divi): Self sees and hears a chosen target (save Wisdom, modified by degree of familiarity, negates for 24 hr) or known location for concentration up to 10 min</td>
     </tr><tr style="text-align:left">
+      <td>Seeming (K5 [Archfey Spells] Illu): R30' Changes the appearance of targets (save Charisma negates; Investigation detects) for 8 hr</td>
+    </tr><tr style="text-align:left">
       <td>Silent Image (K1 [Misty Visions] Illu): R60' Creates a 15' cube movable illusion (Investigation detects) for concentration up to 10 min</td>
+    </tr><tr style="text-align:left">
+      <td>Sleep (K1 [Archfey Spells] Ench): R60' Each target in a 5' radius becomes incapacitated (save Wisdom negates) until the end of its next turn, then unconscious (save Wisdom negates) for concentration up to 1 min (damage or shaking awakens)</td>
     </tr><tr style="text-align:left">
       <td>Speak With Dead (K3 [Whispers Of The Grave] Necr): R10' Self can ask a corpse 5 questions within 10 min; the corpse is then immune for 10 days </td>
     </tr><tr style="text-align:left">
@@ -343,7 +428,17 @@ var attributes = {
     </tr><tr style="text-align:left">
       <td>Suggestion (K2 [Fiend Spells] Ench): R30' Target follows a reasonable suggestion (save Wisdom negates) for concentration up to 8 hr; damage from self or an ally ends the effects</td>
     </tr><tr style="text-align:left">
+      <td>Summon Aberration (K4 [Great Old One Spells] Conj): R90' Summons an obedient aberrant spirit (Armor Class 15; 40 hit points; move 30'; multiattack equal to half the spell level) of type beholderkin (R150' inflicts 1d8+7 HP psychic; fly 30'), slaad (inflicts 1d10+7 HP slashing and negates healing for 1 rd; regenerates 5 hit points per rd), or star spawn (inflicts 1d8+7 HP psychic, plus 2d6 HP psychic (save Wisdom negates) in a 5' radius) for concentration up to 1 hr [+Level increases the Armor Class by 1, hit points by 10, and attack damage by 1]</td>
+    </tr><tr style="text-align:left">
+      <td>Summon Celestial (K5 [Celestial Spells] Conj): R90' Summons an obedient celestial spirit (40 hit points; move 30' and fly 40'; multiattack equal to half the spell level; touch restores 2d8+5 hit points once per day) of type avenger (Armor Class 16; R150' inflicts 2d6+7 HP radiant) or defender (Armor Class 18; inflicts 1d10+8 HP radiant and gives 1d10 temporary hit points to a creature within 10') for concentration up to 1 hr [+Level increases the Armor Class by 1, hit points by 10, attack damage by 1, and healing by 1]</td>
+    </tr><tr style="text-align:left">
+      <td>Tasha's Hideous Laughter (K1 [Great Old One Spells] Ench): R30' Inflicts ROFL (save Wisdom negates; additional saves each rd and in response to damage end, with damage giving advantage on the save) for concentration up to 1 min [+Level affects +1 target]</td>
+    </tr><tr style="text-align:left">
+      <td>Telekinesis (K5 [Great Old One Spells] Tran): R60' Self can mentally restrain and move 1 Huge creature or object 30' (save Strength negates) each rd for concentration up to 10 min</td>
+    </tr><tr style="text-align:left">
       <td>True Strike (K0 Divi): Proficient weapon attack made simultaneously with casting has a +9 attack bonus and inflicts +3d6 HP of a choice of radiant or normal weapon damage</td>
+    </tr><tr style="text-align:left">
+      <td>Wall Of Fire (K4 [Celestial Spells] Evoc): R120' Creates a 60'x20'x1' wall or a 20'x20'x1' ring that inflicts 5d8 HP fire (save Dexterity half) within 10' of a chosen side for concentration up to 1 min [+Level inflicts +1d8 HP]</td>
     </tr><tr style="text-align:left">
       <td>Wall Of Fire (K4 [Fiend Spells] Evoc): R120' Creates a 60'x20'x1' wall or a 20'x20'x1' ring that inflicts 5d8 HP fire (save Dexterity half) within 10' of a chosen side for concentration up to 1 min [+Level inflicts +1d8 HP]</td>
     </tr><tr style="text-align:left">
@@ -357,59 +452,71 @@ var attributes = {
     </tr><tr style="text-align:center">
       <td><i>Eldritch Master: Has increased Magical Cunning effects</i></td>
     </tr><tr style="text-align:center">
+      <td><i>Misty Escape: Has increased Steps Of The Fey effects</i></td>
+    </tr><tr style="text-align:center">
       <td>Agonizing Blast: Chosen Warlock cantrip inflicts +3 HP</td>
     </tr><tr style="text-align:center">
-      <td>Armor Of Shadows: Can cast <i>Mage Armor</i> on self at will</td>
+      <td>Armor Of Shadows: Can cast <i>Mage Armor</i> on self without expending a spell slot</td>
     </tr><tr style="text-align:center">
-      <td>Ascendant Step: Can cast <i>Levitate</i> on self at will</td>
+      <td>Ascendant Step: Can cast <i>Levitate</i> on self without expending a spell slot</td>
     </tr><tr style="text-align:center">
-      <td>Contact Patron: Can use <i>Contact Other Plane</i> to contact patron once per long rest</td>
+      <td>Bewitching Magic: Can cast <i>Misty Step</i> without expending a spell slot as part of casting an enchantment or illusion spell</td>
     </tr><tr style="text-align:center">
-      <td>Eldritch Spear: Increases the range of a chosen ranged Warlock cantrip by 600'</td>
+      <td>Celestial Resilience: Gains 23 temporary hit points, and can give 5 others 13 temporary hit points, at the end of a rest and after using Magical Cunning</td>
     </tr><tr style="text-align:center">
-      <td>Fiendish Vigor: Can cast <i>False Life</i> on self at will, gaining the maximum possible temporary hit points</td>
+      <td>Contact Patron: Can cast <i>Contact Other Plane</i> without expending a spell slot to contact patron once per long rest</td>
     </tr><tr style="text-align:center">
-      <td>Gaze Of Two Minds: Touch allows self to perceive through the senses of a willing humanoid, and cast spells through it when within 60', while maintained</td>
+      <td>Create Thrall: Can cast <i>Summon Aberration</i> to last 1 min instead of concentration, and doing so gives the summoned creature 23 temporary hit points; once each turn, summoned aberrations inflict additional psychic damage to <i>Hex</i> targets equal to the damage from that spell</td>
     </tr><tr style="text-align:center">
-      <td>Gift Of The Depths: Can cast <i>Water Breathing</i> once per long rest</td>
+      <td>Eldritch Hex: Casting <i>Hex</i> inflicts disadvantage on saves that use the chosen ability</td>
+    </tr><tr style="text-align:center">
+      <td>Eldritch Spear: Increases the range of a chosen damaging Warlock cantrip by 600'</td>
+    </tr><tr style="text-align:center">
+      <td>Fiendish Vigor: Can cast <i>False Life</i> on self without expending a spell slot, gaining the maximum possible temporary hit points</td>
+    </tr><tr style="text-align:center">
+      <td>Gaze Of Two Minds: Touch allows self to perceive through the senses of a willing humanoid, and cast spells through it when within 60', while extended using bonus actions</td>
+    </tr><tr style="text-align:center">
+      <td>Gift Of The Depths: Can cast <i>Water Breathing</i> without expending a spell slot once per long rest</td>
     </tr><tr style="text-align:center">
       <td>Gift Of The Protectors: A creature who has written its name in the Book Of Shadows retains 1 hit point when reduced to 0 hit points once per long rest</td>
     </tr><tr style="text-align:center">
-      <td>Investment Of The Chain Master: Familiar gains a 40' fly or swim Speed, can inflict a choice of necrotic or radiant damage, and inflicts DC 17 saves; self can use a bonus action to command it to attack and a reaction to give it resistance to damage</td>
+      <td>Healing Light: R60' Can use bonus actions to restore 21d6 HP per long rest, with a maximum of 3d6 per healing</td>
     </tr><tr style="text-align:center">
-      <td>Magic Initiate (Cleric): Knows 2 Cleric cantrips and can cast a chosen C1 spell once per long rest</td>
+      <td>Investment Of The Chain Master: Familiar gains a 40' fly or swim Speed, can inflict a choice of necrotic or radiant damage, and inflicts DC 17 saves, and self can use a bonus action to command it to attack and a reaction to give it resistance to damage</td>
     </tr><tr style="text-align:center">
-      <td>Magic Initiate (Druid): Knows 2 Druid cantrips and can cast a chosen D1 spell once per long rest</td>
-    </tr><tr style="text-align:center">
-      <td>Magic Initiate (Wizard): Knows 2 Wizard cantrips and can cast a chosen W1 spell once per long rest</td>
+      <td>Magic Initiate (Cleric): Knows 2 Cleric cantrips and can cast a chosen C1 spell without expending a spell slot once per long rest</td>
     </tr><tr style="text-align:center">
       <td>Magical Cunning: Can use a 1 min process to regain all Pact Magic spell slots once per long rest</td>
     </tr><tr style="text-align:center">
-      <td>Mask Of Many Faces: Can cast <i>Disguise Self</i> at will</td>
+      <td>Mask Of Many Faces: Can cast <i>Disguise Self</i> without expending a spell slot</td>
     </tr><tr style="text-align:center">
-      <td>Master Of Myriad Forms: Can cast <i>Alter Self</i> at will</td>
+      <td>Master Of Myriad Forms: Can cast <i>Alter Self</i> without expending a spell slot</td>
     </tr><tr style="text-align:center">
-      <td>Misty Visions: Can cast <i>Silent Image</i> at will</td>
+      <td>Misty Visions: Can cast <i>Silent Image</i> without expending a spell slot</td>
     </tr><tr style="text-align:center">
-      <td>Mystic Arcanum: Can cast chosen K6, K7, K8, and K9 spells without using a spell slot once per long rest</td>
+      <td>Mystic Arcanum: Can cast chosen K6, K7, K8, and K9 spells without expending a spell slot once per long rest</td>
     </tr><tr style="text-align:center">
-      <td>One With Shadows: Can cast <i>Invisibility</i> on self in dim light at will</td>
+      <td>One With Shadows: Can cast <i>Invisibility</i> on self in dim light or darkness without expending a spell slot</td>
     </tr><tr style="text-align:center">
-      <td>Otherworldly Leap: Can cast <i>Jump</i> on self at will</td>
+      <td>Otherworldly Leap: Can cast <i>Jump</i> on self without expending a spell slot</td>
     </tr><tr style="text-align:center">
       <td>Pact Magic: Can cast spells from the Warlock spell list and cast spells marked with [R] using a ritual</td>
     </tr><tr style="text-align:center">
-      <td>Pact Of The Blade: Can use a bonus action to create a bonded simple or martial pact weapon or to bond with a touched magic weapon and gain proficiency with it; it can be used as a spellcasting focus, and its Charisma-based attacks inflict a choice of necrotic, psychic, radiant, or normal weapon damage; moving 5' away from the weapon for 1 min ends the bond</td>
+      <td>Pact Of The Blade: Can use a bonus action to conjure a bonded simple or martial pact weapon or to bond with a touched magic weapon and gain proficiency with it; it can be used as a spellcasting focus, and its Charisma-based attacks inflict a choice of necrotic, psychic, radiant, or normal weapon damage; moving 5' away from the weapon for 1 min ends the bond</td>
     </tr><tr style="text-align:center">
       <td>Pact Of The Chain: Can cast <i>Find Familiar</i> without expending a spell slot</td>
     </tr><tr style="text-align:center">
       <td>Pact Of The Tome: Has a <i>Book Of Shadows</i> containing 3 chosen cantrips and 2 chosen level 1 rituals from any spell lists</td>
     </tr><tr style="text-align:center">
+      <td>Radiant Soul: Can inflict +3 HP radiant or fire spell damage on one target once per turn</td>
+    </tr><tr style="text-align:center">
       <td>Repelling Blast: Can inflict a 10' push on a Large or smaller target with a successful attack using a chosen Warlock cantrip</td>
     </tr><tr style="text-align:center">
-      <td>Visions Of Distant Realms: Can cast <i>Arcane Eye</i> at will</td>
+      <td>Steps Of The Fey: Can cast <i>Misty Step</i> without expending a spell slot 3 times per long rest, and casting <i>Misty Step</i> can make self invisible until the end of the next turn (attacking, causing damage, or spellcasting ends), inflict 2d10 HP psychic (save Wisdom negates) on creatures within 5' of the starting or ending point, give 1d10 temporary hit points to a creature within 10' of the ending point, or inflict disadvantage on attacks vs. creatures other than self (save Wisdom negates) on creatures within 5' of the starting point until the start of the next turn</td>
     </tr><tr style="text-align:center">
-      <td>Whispers Of The Grave: Can cast <i>Speak With Dead</i> at will</td>
+      <td>Visions Of Distant Realms: Can cast <i>Arcane Eye</i> without expending a spell slot</td>
+    </tr><tr style="text-align:center">
+      <td>Whispers Of The Grave: Can cast <i>Speak With Dead</i> without expending a spell slot</td>
     </tr></table>
 </td>
   </tr></table>
@@ -419,7 +526,7 @@ var attributes = {
   <tr style="text-align:center">
     <td>    <table id="ValidationPart" style="width:100%">
     <tr style="text-align:center">
-      <td><b>Validation Errors</b>: Selectable Feature Allocation: 11 available vs. 29 allocated</td>
+      <td><b>Validation Errors</b>: Selectable Feature Allocation: 11 available vs. 32 allocated</td>
     </tr></table>
 </td>
   </tr></table>

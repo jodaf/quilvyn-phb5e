@@ -11,9 +11,9 @@ var attributes = {
   "abilityBoosts.Wisdom":2, "alignment":"Neutral Evil", "armor":"Splint", "background":"Acolyte", 
   "charisma":13, "constitution":14, "deity":"None", "dexterity":17, "experience":408966, 
   "feats.Ability Score Improvement":1, "feats.Alert":1, "feats.Archery":1, "feats.Boon Of The Night Spirit":1, 
-  "feats.Boon Of Truesight":1, "feats.Defense":1, "feats.Great Weapon Fighting":1, 
-  "feats.Magic Initiate (Druid)":1, "feats.Savage Attacker":1, "feats.Skilled":1, "feats.Two-Weapon Fighting":1, 
-  "gender":"Female", "hitPoints":79, "intelligence":13, "languagesChosen.Deep Speech":1, 
+  "feats.Boon Of Truesight":1, "feats.Defense":1, "feats.Durable":1, "feats.Great Weapon Fighting":1, 
+  "feats.Savage Attacker":1, "feats.Skilled":1, "feats.Two-Weapon Fighting":1, "gender":"Female", 
+  "hitPoints":79, "intelligence":13, "languagesChosen.Deep Speech":1, 
   "languagesChosen.Draconic":1, "levels.Fighter":20, "name":"Class-Fighter 20", "race":"Human", 
   "selectableFeatures.Fighter - Ambush":1, "selectableFeatures.Fighter - Bait And Switch":1, 
   "selectableFeatures.Fighter - Battle Master":1, "selectableFeatures.Fighter - Champion":1, 
@@ -46,7 +46,7 @@ var attributes = {
     <tr style="text-align:center">
       <td><b>Strength</b>: 12 (+1)</td>
       <td><b>Dexterity</b>: 18 (+4)</td>
-      <td><b>Constitution</b>: 14 (+2)</td>
+      <td><b>Constitution</b>: 15 (+2)</td>
       <td><b>Intelligence</b>: 13 (+1)</td>
       <td><b>Wisdom</b>: 11 (+0)</td>
       <td><b>Charisma</b>: 16 (+3)</td>
@@ -80,6 +80,8 @@ var attributes = {
     </tr><tr style="text-align:center">
       <td><i>Boon Of Truesight: Ability Boost (Choose 1 from any)</i></td>
     </tr><tr style="text-align:center">
+      <td><i>Durable: +1 Constitution</i></td>
+    </tr><tr style="text-align:center">
       <td>Ability Boosts: 7 to distribute</td>
     </tr><tr style="text-align:center">
       <td>Psi-Powered Leap: Can use a bonus action to gain a 60' fly Speed until the end of the current turn once per short rest; can expend psionic energy dice for additional uses</td>
@@ -105,7 +107,7 @@ var attributes = {
     </tr><tr style="text-align:center">
       <td>      <table id="FeatLists" style="width:100%">
       <tr style="text-align:center">
-        <td><b>Feats</b>: Ability Score Improvement; Alert; Archery; Boon Of The Night Spirit; Boon Of Truesight; Defense; Great Weapon Fighting; Magic Initiate (Druid); Savage Attacker; Skilled; Two-Weapon Fighting</td>
+        <td><b>Feats</b>: Ability Score Improvement; Alert; Archery; Boon Of The Night Spirit; Boon Of Truesight; Defense; Durable; Great Weapon Fighting; Savage Attacker; Skilled; Two-Weapon Fighting</td>
         <td><b>Human Features</b>: Resourceful; Skillful; Versatile</td>
         <td><b>Fighter Features</b>: Action Surge; Additional Fighting Style; Ambush; Arcane Charge; Armor Training (Light; Medium; Heavy; Shield); Bait And Switch; Battle Master; Bulwark Of Force; Champion; Combat Superiority; Commander's Strike; Commanding Presence; Disarming Attack; Distracting Strike; Eldritch Knight; Eldritch Strike; Epic Boon; Evasive Footwork; Extra Attack; Feinting Attack; Fighter Primary Ability; Fighter Subclass; Fighting Style; Goading Attack; Guarded Mind; Heroic Warrior; Improved Combat Superiority; Improved Critical; Improved War Magic; Indomitable; Know Your Enemy; Lunging Attack; Maneuvering Attack; Menacing Attack; Parry; Precision Attack; Protective Field; Psi Warrior; Psionic Power (Psi Warrior); Psionic Strike; Pushing Attack; Rally; Relentless; Remarkable Athlete; Riposte; Save Proficiency (Strength; Constitution); Second Wind; Skill Proficiency (Choose 2 from Acrobatics, Animal Handling, Athletics, History, Insight, Intimidation, Persuasion; Perception, Survival); Spellcasting; Strength; Student Of War; Studied Attacks; Superior Critical; Survivor; Sweeping Attack; Tactical Assessment; Tactical Master; Tactical Mind; Tactical Shift; Telekinetic Adept; Telekinetic Master; Telekinetic Movement; Three Extra Attacks; Trip Attack; Two Extra Attacks; Ultimate Combat Superiority; War Bond; War Magic; Weapon Mastery; Weapon Proficiency (Simple Weapons; Martial Weapons)</td>
         <td><b>Acolyte Features</b>: Ability Boost (Choose 3 from Intelligence, Wisdom, Charisma); Magic Initiate (Cleric); Skill Proficiency (Insight; Religion); Tool Proficiency (Calligrapher's Supplies)</td>
@@ -274,6 +276,8 @@ var attributes = {
       </tr><tr style="text-align:center">
         <td>Distracting Strike: Can add a superiority die to damage and give advantage to the next ally attack against the same foe before the start of the next turn</td>
       </tr><tr style="text-align:center">
+        <td>Durable: Regains a minimum of 4 hit points from a Hit Die roll</td>
+      </tr><tr style="text-align:center">
         <td>Eldritch Strike: Successful attack inflicts disadvantage on the first save vs. a self spell before the end of the next turn</td>
       </tr><tr style="text-align:center">
         <td>Evasive Footwork: Can use bonus action and spend a superiority die to Disengage, adding a the roll to Armor Class until the start of the next turn</td>
@@ -378,10 +382,10 @@ var attributes = {
     <tr style="text-align:center">
       <td>      <table id="SpellStats" style="width:100%">
       <tr style="text-align:center">
-        <td><b>Spells Known/Prepared</b>: C0: 2; C: 1; D0: 2; D: 1; W0: 3; W: 13</td>
+        <td><b>Spells Known/Prepared</b>: C0: 2; C: 1; W0: 3; W: 13</td>
         <td><b>Spell Slots</b>: W1: 4; W2: 3; W3: 3; W4: 1</td>
-        <td><b>Attack</b>: C: +6; D: +6; Fighter: +7; W: +7</td>
-        <td><b>Spell DC</b>: C: 14; D: 14; Fighter: 15; W: 15</td>
+        <td><b>Attack</b>: C: +6; Fighter: +7; W: +7</td>
+        <td><b>Spell DC</b>: C: 14; Fighter: 15; W: 15</td>
       </tr></table>
 </td>
     </tr></table>
@@ -391,11 +395,9 @@ var attributes = {
   </tr><tr style="text-align:center">
     <td><b>Magic Notes</b>:     <table id="MagicNotes" style="width:100%">
     <tr style="text-align:center">
-      <td>Magic Initiate (Cleric): Knows 2 Cleric cantrips and can cast a chosen C1 spell once per long rest</td>
+      <td>Magic Initiate (Cleric): Knows 2 Cleric cantrips and can cast a chosen C1 spell without expending a spell slot once per long rest</td>
     </tr><tr style="text-align:center">
-      <td>Magic Initiate (Druid): Knows 2 Druid cantrips and can cast a chosen D1 spell once per long rest</td>
-    </tr><tr style="text-align:center">
-      <td>Spellcasting: Can cast spells from the Wizard spell list and cast spells marked with [R] using a ritual</td>
+      <td>Spellcasting: Can cast spells from the Wizard spell list and cast spells marked with [R] using a ritual; regains expended spell slots after a long rest</td>
     </tr><tr style="text-align:center">
       <td>Telekinetic Master: Can cast <i>Telekinesis</i> and use bonus actions while concentrating to make a weapon attack each rd once per long rest; can expend psionic energy dice for additional uses</td>
     </tr><tr style="text-align:center">

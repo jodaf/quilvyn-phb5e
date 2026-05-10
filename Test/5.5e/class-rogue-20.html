@@ -12,16 +12,16 @@ var attributes = {
   "background":"Acolyte", "charisma":12, "constitution":15, "deity":"None", "dexterity":14, 
   "experience":496140, "expertise.Arcana":1, "expertise.Deception":1, "expertise.Insight":1, 
   "expertise.Stealth":1, "feats.Ability Score Improvement":1, "feats.Alert":1, 
-  "feats.Boon Of Dimensional Travel":1, "feats.Grappler":1, "feats.Magic Initiate (Druid)":1, 
-  "feats.Magic Initiate (Wizard)":1, "feats.Savage Attacker":1, "feats.Skilled":1, "gender":"Female", 
-  "hitPoints":64, "intelligence":13, "languagesChosen.Celestial":1, 
-  "languagesChosen.Deep Speech":1, "languagesChosen.Infernal":1, "levels.Rogue":20, "name":"Class-Rogue 20", 
-  "selectableFeatures.Rogue - Arcane Trickster":1, "selectableFeatures.Rogue - Assassin":1, 
-  "selectableFeatures.Rogue - Soulknife":1, "selectableFeatures.Rogue - Thief":1, "shield":"None", 
-  "skillsChosen.Acrobatics":1, "skillsChosen.Arcana":1, "skillsChosen.Deception":1, 
-  "skillsChosen.Insight":1, "skillsChosen.Performance":1, "skillsChosen.Religion":1, 
-  "skillsChosen.Sleight Of Hand":1, "skillsChosen.Stealth":1, "species":"Human", "strength":10, 
-  "weapons.Greatclub":1, "weapons.Light Crossbow":1, "weapons.Light Hammer":1, "wisdom":12
+  "feats.Boon Of Dimensional Travel":1, "feats.Durable":1, "feats.Grappler":1, "feats.Mage Slayer":1, 
+  "feats.Savage Attacker":1, "feats.Skilled":1, "gender":"Female", "hitPoints":64, "intelligence":13, 
+  "languagesChosen.Celestial":1, "languagesChosen.Deep Speech":1, "languagesChosen.Infernal":1, 
+  "levels.Rogue":20, "name":"Class-Rogue 20", "selectableFeatures.Rogue - Arcane Trickster":1, 
+  "selectableFeatures.Rogue - Assassin":1, "selectableFeatures.Rogue - Soulknife":1, 
+  "selectableFeatures.Rogue - Thief":1, "shield":"None", "skillsChosen.Acrobatics":1, "skillsChosen.Arcana":1, 
+  "skillsChosen.Deception":1, "skillsChosen.Insight":1, "skillsChosen.Performance":1, 
+  "skillsChosen.Religion":1, "skillsChosen.Sleight Of Hand":1, "skillsChosen.Stealth":1, 
+  "species":"Human", "strength":10, "weapons.Greatclub":1, "weapons.Light Crossbow":1, 
+  "weapons.Light Hammer":1, "wisdom":12
 };
   </script>
 </head>
@@ -36,7 +36,7 @@ var attributes = {
     <tr style="text-align:center">
       <td><b>Strength</b>: 13 (+1)</td>
       <td><b>Dexterity</b>: 15 (+2)</td>
-      <td><b>Constitution</b>: 15 (+2)</td>
+      <td><b>Constitution</b>: 16 (+3)</td>
       <td><b>Intelligence</b>: 14 (+2)</td>
       <td><b>Wisdom</b>: 13 (+1)</td>
       <td><b>Charisma</b>: 13 (+1)</td>
@@ -68,6 +68,8 @@ var attributes = {
     </tr><tr style="text-align:center">
       <td><i>Boon Of Dimensional Travel: Ability Boost (Choose 1 from any)</i></td>
     </tr><tr style="text-align:center">
+      <td><i>Durable: +1 Constitution</i></td>
+    </tr><tr style="text-align:center">
       <td><i>Grappler: Ability Boost (Choose 1 from Strength, Dexterity)</i></td>
     </tr><tr style="text-align:center">
       <td>Ability Boosts: 7 to distribute</td>
@@ -95,7 +97,7 @@ var attributes = {
     </tr><tr style="text-align:center">
       <td>      <table id="FeatLists" style="width:100%">
       <tr style="text-align:center">
-        <td><b>Feats</b>: Ability Score Improvement; Alert; Boon Of Dimensional Travel; Grappler; Magic Initiate (Druid); Magic Initiate (Wizard); Savage Attacker; Skilled</td>
+        <td><b>Feats</b>: Ability Score Improvement; Alert; Boon Of Dimensional Travel; Durable; Grappler; Mage Slayer; Savage Attacker; Skilled</td>
         <td><b>Human Features</b>: Resourceful; Skillful; Versatile</td>
         <td><b>Rogue Features</b>: Arcane Trickster; Armor Training (Light); Assassin's Tools; Assassin; Assassinate; Cunning Action; Cunning Strike; Death Strike; Devious Strikes; Elusive; Envenom Weapons; Epic Boon; Evasion; Expertise; Fast Hands; Improved Cunning Strike; Infiltration Expertise; Mage Hand Legerdemain; Magical Ambush; Psi-Bolstered Knack; Psionic Power (Soulknife); Psychic Blades; Psychic Veil; Psychic Whispers; Reliable Talent; Rend Mind; Rogue Subclass; Save Proficiency (Dexterity; Intelligence); Second-Story Work; Skill Proficiency (Choose 4 from Acrobatics, Athletics, Deception, Insight, Intimidation, Investigation, Perception, Persuasion, Sleight Of Hand, Stealth); Slippery Mind; Sneak Attack; Soul Blades; Soulknife; Spell Thief; Spellcasting; Steady Aim; Stroke Of Luck; Supreme Sneak; Thief's Reflexes; Thief; Thieves' Cant; Tool Proficiency (Thieves' Tools); Uncanny Dodge; Use Magic Device; Versatile Trickster; Weapon Mastery; Weapon Proficiency (Simple Weapons; Finesse Weapons; Light Weapons)</td>
         <td><b>Acolyte Features</b>: Ability Boost (Choose 3 from Intelligence, Wisdom, Charisma); Magic Initiate (Cleric); Skill Proficiency (Insight; Religion); Tool Proficiency (Calligrapher's Supplies)</td>
@@ -161,7 +163,7 @@ var attributes = {
     <tr style="text-align:center">
       <td><i>Assassin's Tools: Tool Proficiency (Disguise Kit; Poisoner's Kit)</i></td>
     </tr><tr style="text-align:center">
-      <td><i>Expertise: Has expertise with 4 chosen proficient skills</i></td>
+      <td><i>Expertise: Has expertise in 4 chosen proficient skills</i></td>
     </tr><tr style="text-align:center">
       <td><i>Skilled: Skill Proficiency or Tool Proficiency (Choose 3 from any)</i></td>
     </tr><tr style="text-align:center">
@@ -191,7 +193,7 @@ var attributes = {
     <tr style="text-align:center">
       <td>      <table id="CombatStats" style="width:100%">
       <tr style="text-align:center">
-        <td><b>Hit Points</b>: 104</td>
+        <td><b>Hit Points</b>: 124</td>
         <td><b>Initiative</b>: +8</td>
         <td><b>Armor Class</b>: 13</td>
       </tr></table>
@@ -216,7 +218,7 @@ var attributes = {
       <tr style="text-align:center">
         <td><i>Alert: +6 Initiative</i></td>
       </tr><tr style="text-align:center">
-        <td><i>Constitution Hit Points Adjustment: +40</i></td>
+        <td><i>Constitution Hit Points Adjustment: +60</i></td>
       </tr><tr style="text-align:center">
         <td><i>Devious Strikes: Has increased Cunning Strike effects</i></td>
       </tr><tr style="text-align:center">
@@ -246,6 +248,8 @@ var attributes = {
       </tr><tr style="text-align:center">
         <td>Death Strike: Successful Sneak Attack during the first rd inflicts double damage (save DC 16 Constitution negates)</td>
       </tr><tr style="text-align:center">
+        <td>Durable: Regains a minimum of 6 hit points from a Hit Die roll</td>
+      </tr><tr style="text-align:center">
         <td>Elusive: Attacks on self never have advantage</td>
       </tr><tr style="text-align:center">
         <td>Envenom Weapons: Cunning Strikes that inflict poisoned also inflict 2d6 HP poison, ignoring resistance, on a failed save</td>
@@ -255,6 +259,8 @@ var attributes = {
         <td>Grappler: Can both Damage and Grapple with an unarmed strike once per turn, has advantage on attacks on a grappled foe, and can move at full speed with a grappled foe of Medium size or smaller</td>
       </tr><tr style="text-align:center">
         <td>Homing Strikes: Can add 1d12 to a failed Psychic Blade attack, spending a psionic energy die if the sum is enough to hit</td>
+      </tr><tr style="text-align:center">
+        <td>Mage Slayer: Can use a reaction to attack an adjacent caster/Foe suffers disadvantage on concentration to maintain a spell in response to a self attack</td>
       </tr><tr style="text-align:center">
         <td>Psionic Power (Soulknife): Can use 12 d12 psionic energy dice per long rest; regains 1 die after a short rest</td>
       </tr><tr style="text-align:center">
@@ -288,13 +294,15 @@ var attributes = {
     <tr style="text-align:center">
       <td><b>Save Proficiency</b>: Charisma; Dexterity; Intelligence; Wisdom</td>
     </tr><tr style="text-align:center">
-      <td><b>Save</b>: Charisma: +7; Constitution: +2; Dexterity: +8; Intelligence: +8; Strength: +1; Wisdom: +7</td>
+      <td><b>Save</b>: Charisma: +7; Constitution: +3; Dexterity: +8; Intelligence: +8; Strength: +1; Wisdom: +7</td>
     </tr><tr style="text-align:center">
       <td><b>Save Notes</b>:       <table id="SaveNotes" style="width:100%">
       <tr style="text-align:center">
         <td><i>Slippery Mind: Save Proficiency (Charisma; Wisdom)</i></td>
       </tr><tr style="text-align:center">
         <td>Evasion: Successful Dexterity saves yield no damage instead of half, and failures yield half damage</td>
+      </tr><tr style="text-align:center">
+        <td>Mage Slayer: Has advantage on saves vs. spells cast by adjacent foes</td>
       </tr></table>
 </td>
     </tr></table>
@@ -308,10 +316,10 @@ var attributes = {
     <tr style="text-align:center">
       <td>      <table id="SpellStats" style="width:100%">
       <tr style="text-align:center">
-        <td><b>Spells Known/Prepared</b>: C0: 2; C: 1; D0: 2; D: 1; W0: 5; W: 14</td>
+        <td><b>Spells Known/Prepared</b>: C0: 2; C: 1; W0: 3; W: 13</td>
         <td><b>Spell Slots</b>: W1: 4; W2: 3; W3: 3; W4: 1</td>
-        <td><b>Attack</b>: C: +7; D: +7; Rogue: +8; W: +8</td>
-        <td><b>Spell DC</b>: C: 15; D: 15; Rogue: 16; W: 16</td>
+        <td><b>Attack</b>: C: +7; Rogue: +8; W: +8</td>
+        <td><b>Spell DC</b>: C: 15; Rogue: 16; W: 16</td>
       </tr></table>
 </td>
     </tr></table>
@@ -323,11 +331,7 @@ var attributes = {
     <tr style="text-align:center">
       <td>Mage Hand Legerdemain: Can use a bonus action with an invisible <i>Mage Hand</i> to make Sleight Of Hand checks</td>
     </tr><tr style="text-align:center">
-      <td>Magic Initiate (Cleric): Knows 2 Cleric cantrips and can cast a chosen C1 spell once per long rest</td>
-    </tr><tr style="text-align:center">
-      <td>Magic Initiate (Druid): Knows 2 Druid cantrips and can cast a chosen D1 spell once per long rest</td>
-    </tr><tr style="text-align:center">
-      <td>Magic Initiate (Wizard): Knows 2 Wizard cantrips and can cast a chosen W1 spell once per long rest</td>
+      <td>Magic Initiate (Cleric): Knows 2 Cleric cantrips and can cast a chosen C1 spell without expending a spell slot once per long rest</td>
     </tr><tr style="text-align:center">
       <td>Magical Ambush: Casting a spell while invisible inflicts disadvantage on the target's initial save</td>
     </tr><tr style="text-align:center">
@@ -335,7 +339,7 @@ var attributes = {
     </tr><tr style="text-align:center">
       <td>Spell Thief: Can negate the effects of a spell cast on self, prevent the original caster from using that spell for 8 hr, and use spell slots to cast it during that time (save DC 16 negates) once per long rest</td>
     </tr><tr style="text-align:center">
-      <td>Spellcasting: Can cast spells from the Wizard spell list and cast spells marked with [R] using a ritual</td>
+      <td>Spellcasting: Can cast spells from the Wizard spell list and cast spells marked with [R] using a ritual; regains expended spell slots after a long rest</td>
     </tr></table>
 </td>
   </tr></table>

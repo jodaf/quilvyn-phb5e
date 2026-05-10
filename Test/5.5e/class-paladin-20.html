@@ -11,19 +11,18 @@ var attributes = {
   "abilityBoosts.Strength":1, "abilityBoosts.Wisdom":2, "alignment":"Chaotic Neutral", "armor":"Splint", 
   "background":"Acolyte", "charisma":15, "constitution":8, "deity":"None", "dexterity":13, 
   "experience":830269, "feats.Ability Score Improvement":1, "feats.Alert":1, 
-  "feats.Boon Of Truesight":1, "feats.Grappler":1, "feats.Magic Initiate (Druid)":1, 
-  "feats.Magic Initiate (Wizard)":1, "feats.Savage Attacker":1, "feats.Two-Weapon Fighting":1, "gender":"Female", 
-  "hitPoints":79, "intelligence":11, "languagesChosen.Halfling":1, 
-  "languagesChosen.Primordial":1, "levels.Paladin":20, "name":"Class-Paladin 20", 
-  "selectableFeatures.Paladin - Blessed Warrior":1, "selectableFeatures.Paladin - Fighting Style":1, 
-  "selectableFeatures.Paladin - Oath Of Devotion":1, "selectableFeatures.Paladin - Oath Of Glory":1, 
-  "selectableFeatures.Paladin - Oath Of The Ancients":1, "selectableFeatures.Paladin - Oath Of Vengeance":1, "shield":"None", 
-  "skillsChosen.Athletics":1, "skillsChosen.Insight":1, "skillsChosen.Medicine":1, "species":"Human", 
-  "spells.Aid(P2 Abju)":1, "spells.Aura Of Life(P4 Abju)":1, "spells.Banishment(P4 Abju)":1, 
-  "spells.Command(P1 Ench)":1, "spells.Create Food And Water(P3 Conj)":1, "spells.Daylight(P3 Evoc)":1, 
-  "spells.Detect Evil And Good(P1 Divi)":1, "spells.Detect Poison And Disease(P1 Divi)":1, 
-  "spells.Dispel Evil And Good(P5 Abju)":1, "spells.Geas(P5 Ench)":1, "spells.Heroism(P1 Ench)":1, 
-  "spells.Locate Creature(P4 Divi)":1, "spells.Magic Circle(P3 Abju)":1, 
+  "feats.Boon Of Truesight":1, "feats.Durable":1, "feats.Grappler":1, "feats.Mage Slayer":1, 
+  "feats.Savage Attacker":1, "feats.Two-Weapon Fighting":1, "gender":"Female", "hitPoints":79, 
+  "intelligence":11, "languagesChosen.Halfling":1, "languagesChosen.Primordial":1, 
+  "levels.Paladin":20, "name":"Class-Paladin 20", "selectableFeatures.Paladin - Blessed Warrior":1, 
+  "selectableFeatures.Paladin - Fighting Style":1, "selectableFeatures.Paladin - Oath Of Devotion":1, 
+  "selectableFeatures.Paladin - Oath Of Glory":1, "selectableFeatures.Paladin - Oath Of The Ancients":1, 
+  "selectableFeatures.Paladin - Oath Of Vengeance":1, "shield":"None", "skillsChosen.Athletics":1, "skillsChosen.Insight":1, 
+  "skillsChosen.Medicine":1, "species":"Human", "spells.Aid(P2 Abju)":1, 
+  "spells.Aura Of Life(P4 Abju)":1, "spells.Banishment(P4 Abju)":1, "spells.Command(P1 Ench)":1, 
+  "spells.Create Food And Water(P3 Conj)":1, "spells.Daylight(P3 Evoc)":1, "spells.Detect Evil And Good(P1 Divi)":1, 
+  "spells.Detect Poison And Disease(P1 Divi)":1, "spells.Dispel Evil And Good(P5 Abju)":1, "spells.Geas(P5 Ench)":1, 
+  "spells.Heroism(P1 Ench)":1, "spells.Locate Creature(P4 Divi)":1, "spells.Magic Circle(P3 Abju)":1, 
   "spells.Protection From Poison(P2 Abju)":1, "spells.Zone Of Truth(P2 Ench)":1, "strength":16, "weapons.Greataxe":1, 
   "weapons.Maul":1, "weapons.Shortbow":1, "wisdom":10
 };
@@ -40,7 +39,7 @@ var attributes = {
     <tr style="text-align:center">
       <td><b>Strength</b>: 17 (+3)</td>
       <td><b>Dexterity</b>: 14 (+2)</td>
-      <td><b>Constitution</b>: 10 (+0)</td>
+      <td><b>Constitution</b>: 11 (+0)</td>
       <td><b>Intelligence</b>: 12 (+1)</td>
       <td><b>Wisdom</b>: 12 (+1)</td>
       <td><b>Charisma</b>: 15 (+2)</td>
@@ -74,6 +73,8 @@ var attributes = {
     </tr><tr style="text-align:center">
       <td><i>Boon Of Truesight: Ability Boost (Choose 1 from any)</i></td>
     </tr><tr style="text-align:center">
+      <td><i>Durable: +1 Constitution</i></td>
+    </tr><tr style="text-align:center">
       <td><i>Grappler: Ability Boost (Choose 1 from Strength, Dexterity)</i></td>
     </tr><tr style="text-align:center">
       <td>Ability Boosts: 7 to distribute</td>
@@ -101,7 +102,7 @@ var attributes = {
     </tr><tr style="text-align:center">
       <td>      <table id="FeatLists" style="width:100%">
       <tr style="text-align:center">
-        <td><b>Feats</b>: Ability Score Improvement; Alert; Boon Of Truesight; Grappler; Magic Initiate (Druid); Magic Initiate (Wizard); Savage Attacker; Two-Weapon Fighting</td>
+        <td><b>Feats</b>: Ability Score Improvement; Alert; Boon Of Truesight; Durable; Grappler; Mage Slayer; Savage Attacker; Two-Weapon Fighting</td>
         <td><b>Human Features</b>: Resourceful; Skillful; Versatile</td>
         <td><b>Paladin Features</b>: Abjure Foes; Armor Training (Light; Medium; Heavy; Shield); Aura Expansion; Aura Of Alacrity; Aura Of Courage; Aura Of Devotion; Aura Of Protection; Aura Of Warding; Avenging Angel; Blessed Warrior; Channel Divinity; Divine Sense; Elder Champion; Epic Boon; Extra Attack; Faithful Steed; Fighting Style; Glorious Defense; Holy Nimbus; Inspiring Smite; Lay On Hands; Living Legend; Nature's Wrath; Oath Of Devotion Spells; Oath Of Devotion; Oath Of Glory Spells; Oath Of Glory; Oath Of The Ancients Spells; Oath Of The Ancients; Oath Of Vengeance Spells; Oath Of Vengeance; Paladin Fighting Style; Paladin Subclass; Paladin's Smite; Peerless Athlete; Radiant Strikes; Relentless Avenger; Restoring Touch; Sacred Weapon; Save Proficiency (Wisdom; Charisma); Skill Proficiency (Choose 2 from Athletics, Insight, Intimidation, Medicine, Persuasion, Religion); Smite Of Protection; Soul Of Vengeance; Spellcasting; Undying Sentinel; Vow Of Enmity; Weapon Mastery; Weapon Proficiency (Simple Weapons; Martial Weapons)</td>
         <td><b>Acolyte Features</b>: Ability Boost (Choose 3 from Intelligence, Wisdom, Charisma); Magic Initiate (Cleric); Skill Proficiency (Insight; Religion); Tool Proficiency (Calligrapher's Supplies)</td>
@@ -228,6 +229,8 @@ var attributes = {
       </tr><tr style="text-align:center">
         <td>Avenging Angel: R30' Can frighten foes (save DC 16 Wisdom negates) for 1 min or until damaged, giving advantage on ally attacks, for 10 min once per long rest; can expend level 5 spell slots for additional uses</td>
       </tr><tr style="text-align:center">
+        <td>Durable: Regains a minimum of 2 hit points from a Hit Die roll</td>
+      </tr><tr style="text-align:center">
         <td>Extra Attack: Can make 2 attacks during an Attack action</td>
       </tr><tr style="text-align:center">
         <td>Glorious Defense: R10' Can use a reaction to give a successful attack target +2 Armor Class and, if this causes the attacker to miss, to attack the attacker, 2 times per long rest</td>
@@ -239,6 +242,8 @@ var attributes = {
         <td>Inspiring Smite: R30' Can use a bonus action and Channel Divinity after a Divine Smite to distribute 2d8+20 temporary hit points</td>
       </tr><tr style="text-align:center">
         <td>Living Legend: Can change a miss into a hit once per turn for 10 min once per long rest; can expend level 5 spell slots for additional uses</td>
+      </tr><tr style="text-align:center">
+        <td>Mage Slayer: Can use a reaction to attack an adjacent caster/Foe suffers disadvantage on concentration to maintain a spell in response to a self attack</td>
       </tr><tr style="text-align:center">
         <td>Radiant Strikes: Melee attacks inflict +1d8 HP radiant</td>
       </tr><tr style="text-align:center">
@@ -286,6 +291,8 @@ var attributes = {
       </tr><tr style="text-align:center">
         <td>Living Legend: Can use a reaction to reroll failed saves for 10 min once per long rest; can expend level 5 spell slots for additional uses</td>
       </tr><tr style="text-align:center">
+        <td>Mage Slayer: Has advantage on saves vs. spells cast by adjacent foes</td>
+      </tr><tr style="text-align:center">
         <td>Undying Sentinel: Has immunity to magical aging</td>
       </tr></table>
 </td>
@@ -300,10 +307,10 @@ var attributes = {
     <tr style="text-align:center">
       <td>      <table id="SpellStats" style="width:100%">
       <tr style="text-align:center">
-        <td><b>Spells Known/Prepared</b>: C0: 4; C: 1; D0: 2; D: 1; P: 15; W0: 2; W: 1</td>
+        <td><b>Spells Known/Prepared</b>: C0: 4; C: 1; P: 15</td>
         <td><b>Spell Slots</b>: P1: 4; P2: 3; P3: 3; P4: 3; P5: 2</td>
-        <td><b>Attack</b>: C: +7; D: +7; P: +8; W: +7</td>
-        <td><b>Spell DC</b>: C: 15; D: 15; P: 16; W: 15</td>
+        <td><b>Attack</b>: C: +7; P: +8</td>
+        <td><b>Spell DC</b>: C: 15; P: 16</td>
       </tr></table>
 </td>
     </tr></table>
@@ -315,7 +322,7 @@ var attributes = {
     </tr><tr style="text-align:left">
       <td>Aid (P2 [Oath Of Devotion Spells] Abju): R30' 3 targets gain +5 current and maximum hit points for 8 hr [+Level gives +5 hit points]</td>
     </tr><tr style="text-align:left">
-      <td>Aura Of Life (P4 Abju): 30' radius gives allies resistance to necrotic damage and immunity to maximum hit point reduction, and raises those with 0 hit points to 1 hit point, for concentration up to 10 min</td>
+      <td>Aura Of Life (P4 Abju): 30' radius gives nonhostile creatures resistance to necrotic damage and immunity to maximum hit point reduction, and raises those with 0 hit points to 1 hit point, for concentration up to 10 min</td>
     </tr><tr style="text-align:left">
       <td>Bane (P1 [Oath Of Vengeance Spells] Ench): R30' 3 targets suffer -1d4 on attacks and saves (save Charisma negates) for concentration up to 1 min [+Level affects +1 target]</td>
     </tr><tr style="text-align:left">
@@ -439,19 +446,15 @@ var attributes = {
     </tr><tr style="text-align:center">
       <td>Lay On Hands: Can use bonus actions to heal 100 hit points per long rest and can use 5 hit points' worth to remove a poisoned condition</td>
     </tr><tr style="text-align:center">
-      <td>Magic Initiate (Cleric): Knows 2 Cleric cantrips and can cast a chosen C1 spell once per long rest</td>
+      <td>Magic Initiate (Cleric): Knows 2 Cleric cantrips and can cast a chosen C1 spell without expending a spell slot once per long rest</td>
     </tr><tr style="text-align:center">
-      <td>Magic Initiate (Druid): Knows 2 Druid cantrips and can cast a chosen D1 spell once per long rest</td>
-    </tr><tr style="text-align:center">
-      <td>Magic Initiate (Wizard): Knows 2 Wizard cantrips and can cast a chosen W1 spell once per long rest</td>
-    </tr><tr style="text-align:center">
-      <td>Nature's Wrath: R15' Can use Channel Divinity to restrain targets (save DC 16 Strength negates; additional saves each rd end) for 1 min</td>
+      <td>Nature's Wrath: R15' Can use Channel Divinity to restrain a target (save DC 16 Strength negates; additional saves each rd end) for 1 min</td>
     </tr><tr style="text-align:center">
       <td>Paladin's Smite: Can cast <i>Divine Smite</i> without expending a spell slot once per long rest</td>
     </tr><tr style="text-align:center">
       <td>Restoring Touch: Can use 5 hit points' worth of Lay On Hands to remove a blinded, charmed, deafened, frightened, paralyzed, or stunned condition</td>
     </tr><tr style="text-align:center">
-      <td>Spellcasting: Can cast spells from the paladin spell list and cast spells marked with [R] using a ritual</td>
+      <td>Spellcasting: Can cast spells from the paladin spell list and cast spells marked with [R] using a ritual; regains expended spell slots after a long rest</td>
     </tr></table>
 </td>
   </tr></table>

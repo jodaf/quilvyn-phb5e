@@ -10,23 +10,25 @@ var attributes = {
   "abilityBoosts.Constitution":2, "abilityBoosts.Dexterity":1, "abilityBoosts.Intelligence":2, 
   "abilityBoosts.Strength":2, "alignment":"Lawful Evil", "armor":"None", "background":"Acolyte", 
   "charisma":12, "constitution":10, "deity":"None", "dexterity":13, "experience":608554, 
-  "feats.Ability Score Improvement":1, "feats.Boon Of The Night Spirit":1, "feats.Grappler":1, 
-  "feats.Magic Initiate (Druid)":1, "feats.Magic Initiate (Wizard)":1, "feats.Savage Attacker":1, 
+  "expertise.Nature":1, "feats.Ability Score Improvement":1, "feats.Boon Of The Night Spirit":1, 
+  "feats.Durable":1, "feats.Grappler":1, "feats.Musician":1, "feats.Savage Attacker":1, 
   "feats.Skilled":1, "gender":"Female", "hitPoints":67, "intelligence":15, 
   "languagesChosen.Abyssal":1, "languagesChosen.Celestial":1, "levels.Wizard":20, "name":"Class-Wizard 20", 
-  "selectableFeatures.Wizard - Evoker":1, "shield":"None", "skillsChosen.Acrobatics":1, 
-  "skillsChosen.Investigation":1, "skillsChosen.Nature":1, "species":"Human", "spells.Acid Splash(W0 Evoc)":1, 
-  "spells.Antimagic Field(W8 Abju)":1, "spells.Arcane Eye(W4 Divi)":1, "spells.Arcane Sword(W7 Evoc)":1, 
-  "spells.Conjure Minor Elementals(W4 Conj)":1, "spells.Dispel Magic(W3 Abju)":1, "spells.Dragon's Breath(W2 Tran)":1, 
-  "spells.Faithful Hound(W4 Conj)":1, "spells.Flesh To Stone(W6 Tran)":1, "spells.Grease(W1 Conj)":1, 
-  "spells.Instant Summons(W6 Conj)":1, "spells.Jump(W1 Tran)":1, "spells.Levitate(W2 Tran)":1, 
-  "spells.Mage Hand(W0 Conj)":1, "spells.Magic Missile(W1 Evoc)":1, "spells.Major Image(W3 Illu)":1, 
-  "spells.Meteor Swarm(W9 Evoc)":1, "spells.Modify Memory(W5 Ench)":1, "spells.Plane Shift(W7 Conj)":1, 
-  "spells.Poison Spray(W0 Conj)":1, "spells.Protection From Energy(W3 Abju)":1, 
-  "spells.Ray Of Frost(W0 Evoc)":1, "spells.Rope Trick(W2 Tran)":1, "spells.Scrying(W5 Divi)":1, 
-  "spells.Teleportation Circle(W5 Conj)":1, "spells.True Strike(W0 Divi)":1, "spells.Unseen Servant(W1 Conj)":1, 
-  "strength":11, "toolsChosen.Herbalism Kit":1, "toolsChosen.Painter's Supplies":1, 
-  "toolsChosen.Three-Dragon Ante Set":1, "weapons.Mace":1, "weapons.Shortbow":1, "weapons.Sling":1, "wisdom":9
+  "selectableFeatures.Wizard - Abjurer":1, "selectableFeatures.Wizard - Diviner":1, 
+  "selectableFeatures.Wizard - Evoker":1, "selectableFeatures.Wizard - Illusionist":1, "shield":"None", 
+  "skillsChosen.Acrobatics":1, "skillsChosen.Investigation":1, "skillsChosen.Nature":1, "species":"Human", 
+  "spells.Acid Splash(W0 Evoc)":1, "spells.Antimagic Field(W8 Abju)":1, "spells.Arcane Eye(W4 Divi)":1, 
+  "spells.Arcane Sword(W7 Evoc)":1, "spells.Conjure Minor Elementals(W4 Conj)":1, 
+  "spells.Dispel Magic(W3 Abju)":1, "spells.Dragon's Breath(W2 Tran)":1, "spells.Faithful Hound(W4 Conj)":1, 
+  "spells.Flesh To Stone(W6 Tran)":1, "spells.Grease(W1 Conj)":1, "spells.Instant Summons(W6 Conj)":1, 
+  "spells.Jump(W1 Tran)":1, "spells.Levitate(W2 Tran)":1, "spells.Mage Hand(W0 Conj)":1, 
+  "spells.Magic Missile(W1 Evoc)":1, "spells.Major Image(W3 Illu)":1, "spells.Meteor Swarm(W9 Evoc)":1, 
+  "spells.Modify Memory(W5 Ench)":1, "spells.Plane Shift(W7 Conj)":1, "spells.Poison Spray(W0 Conj)":1, 
+  "spells.Protection From Energy(W3 Abju)":1, "spells.Ray Of Frost(W0 Evoc)":1, "spells.Rope Trick(W2 Tran)":1, 
+  "spells.Scrying(W5 Divi)":1, "spells.Teleportation Circle(W5 Conj)":1, "spells.True Strike(W0 Divi)":1, 
+  "spells.Unseen Servant(W1 Conj)":1, "strength":11, "toolsChosen.Herbalism Kit":1, 
+  "toolsChosen.Painter's Supplies":1, "toolsChosen.Three-Dragon Ante Set":1, "weapons.Mace":1, 
+  "weapons.Shortbow":1, "weapons.Sling":1, "wisdom":9
 };
   </script>
 </head>
@@ -41,7 +43,7 @@ var attributes = {
     <tr style="text-align:center">
       <td><b>Strength</b>: 13 (+1)</td>
       <td><b>Dexterity</b>: 14 (+2)</td>
-      <td><b>Constitution</b>: 12 (+1)</td>
+      <td><b>Constitution</b>: 13 (+1)</td>
       <td><b>Intelligence</b>: 17 (+3)</td>
       <td><b>Wisdom</b>: 9 (-1)</td>
       <td><b>Charisma</b>: 12 (+1)</td>
@@ -73,6 +75,8 @@ var attributes = {
     </tr><tr style="text-align:center">
       <td><i>Boon Of The Night Spirit: Ability Boost (Choose 1 from any)</i></td>
     </tr><tr style="text-align:center">
+      <td><i>Durable: +1 Constitution</i></td>
+    </tr><tr style="text-align:center">
       <td><i>Grappler: Ability Boost (Choose 1 from Strength, Dexterity)</i></td>
     </tr><tr style="text-align:center">
       <td>Ability Boosts: 7 to distribute</td>
@@ -96,9 +100,9 @@ var attributes = {
     </tr><tr style="text-align:center">
       <td>      <table id="FeatLists" style="width:100%">
       <tr style="text-align:center">
-        <td><b>Feats</b>: Ability Score Improvement; Boon Of The Night Spirit; Grappler; Magic Initiate (Druid); Magic Initiate (Wizard); Savage Attacker; Skilled</td>
+        <td><b>Feats</b>: Ability Score Improvement; Boon Of The Night Spirit; Durable; Grappler; Musician; Savage Attacker; Skilled</td>
         <td><b>Human Features</b>: Resourceful; Skillful; Versatile</td>
-        <td><b>Wizard Features</b>: Arcane Recovery; Empowered Evocation; Epic Boon; Evocation Savant; Evoker; Memorize Spell; Overchannel; Potent Cantrip; Ritual Adept; Save Proficiency (Intelligence; Wisdom); Scholar; Sculpt Spells; Signature Spells; Skill Proficiency (Choose 2 from Arcana, History, Insight, Investigation, Medicine, Nature, Religion); Spell Mastery; Spellcasting; Weapon Proficiency (Simple Weapons); Wizard Subclass</td>
+        <td><b>Wizard Features</b>: Abjuration Savant; Abjurer; Arcane Recovery; Arcane Ward; Divination Savant; Diviner; Empowered Evocation; Epic Boon; Evocation Savant; Evoker; Expert Divination; Greater Portent; Illusion Savant; Illusionist; Illusory Reality; Illusory Self; Improved Illusions; Memorize Spell; Overchannel; Phantasmal Creatures; Portent; Potent Cantrip; Projected Ward; Ritual Adept; Save Proficiency (Intelligence; Wisdom); Scholar; Sculpt Spells; Signature Spells; Skill Proficiency (Choose 2 from Arcana, History, Insight, Investigation, Medicine, Nature, Religion); Spell Breaker; Spell Mastery; Spell Resistance; Spellcasting; The Third Eye; Weapon Proficiency (Simple Weapons); Wizard Subclass</td>
         <td><b>Acolyte Features</b>: Ability Boost (Choose 3 from Intelligence, Wisdom, Charisma); Magic Initiate (Cleric); Skill Proficiency (Insight; Religion); Tool Proficiency (Calligrapher's Supplies)</td>
       </tr></table>
 </td>
@@ -110,6 +114,8 @@ var attributes = {
         <td><i>Versatile: +1 Origin Feat</i></td>
       </tr><tr style="text-align:center">
         <td><i>Wizard Subclass: 1 selection</i></td>
+      </tr><tr style="text-align:center">
+        <td>Musician: TODO</td>
       </tr><tr style="text-align:center">
         <td>Resourceful: Gains Heroic Inspiration at the end of a long rest</td>
       </tr></table>
@@ -139,7 +145,7 @@ var attributes = {
       <td>Sleight Of Hand: (dex) +2</td>
     </tr><tr style="text-align:left">
       <td>Deception: (cha) +1</td>
-      <td>Nature: (int) +9</td>
+      <td>Nature: (int) +15</td>
       <td>Stealth: (dex) +2</td>
     </tr><tr style="text-align:left">
       <td>History: (int) +3</td>
@@ -150,17 +156,19 @@ var attributes = {
   </tr><tr style="text-align:center">
     <td><b>Skill Proficiency</b>: Acrobatics; Insight; Investigation; Nature; Religion</td>
   </tr><tr style="text-align:center">
+    <td><b>Expertise</b>: Nature</td>
+  </tr><tr style="text-align:center">
     <td><b>Tool Proficiency</b>: Calligrapher's Supplies:  (dex); Herbalism Kit:  (int); Painter's Supplies:  (wis); Three-Dragon Ante Set:  (wis)</td>
   </tr><tr style="text-align:center">
     <td><b>Languages</b>: Abyssal; Celestial; Common</td>
   </tr><tr style="text-align:center">
     <td><b>Skill Notes</b>:     <table id="SkillNotes" style="width:100%">
     <tr style="text-align:center">
+      <td><i>Scholar: Has expertise in a choice of proficient Arcana, History, Investigation, Medicine, Nature, or Religion</i></td>
+    </tr><tr style="text-align:center">
       <td><i>Skilled: Skill Proficiency or Tool Proficiency (Choose 3 from any)</i></td>
     </tr><tr style="text-align:center">
       <td><i>Skillful: Skill Proficiency (Choose 1 from any)</i></td>
-    </tr><tr style="text-align:center">
-      <td>Scholar: +6 in a choice of proficient Arcana, History, Investigation, Medicine, Nature, or Religion</td>
     </tr></table>
 </td>
   </tr></table>
@@ -208,6 +216,8 @@ var attributes = {
       </tr><tr style="text-align:center">
         <td>Boon Of The Night Spirit: Can use a bonus action to become invisible in dim or no light; taking an action, bonus action, or reaction ends</td>
       </tr><tr style="text-align:center">
+        <td>Durable: Regains a minimum of 2 hit points from a Hit Die roll</td>
+      </tr><tr style="text-align:center">
         <td>Grappler: Can both Damage and Grapple with an unarmed strike once per turn, has advantage on attacks on a grappled foe, and can move at full speed with a grappled foe of Medium size or smaller</td>
       </tr><tr style="text-align:center">
         <td>Savage Attacker: Can use the better of 2 damage rolls once per turn</td>
@@ -222,7 +232,13 @@ var attributes = {
     </tr><tr style="text-align:center">
       <td><b>Save</b>: Charisma: +1; Constitution: +1; Dexterity: +2; Intelligence: +9; Strength: +1; Wisdom: +5</td>
     </tr><tr style="text-align:center">
-      <td><b>Save Notes</b>: Boon Of The Night Spirit: In dim or no light, has resistance to all damage other than psychic and radiant</td>
+      <td><b>Save Notes</b>:       <table id="SaveNotes" style="width:100%">
+      <tr style="text-align:center">
+        <td>Boon Of The Night Spirit: In dim or no light, has resistance to all damage other than psychic and radiant</td>
+      </tr><tr style="text-align:center">
+        <td>Spell Resistance: Has advantage vs. spells and resistance to spell damage</td>
+      </tr></table>
+</td>
     </tr></table>
 </td>
   </tr></table>
@@ -234,10 +250,10 @@ var attributes = {
     <tr style="text-align:center">
       <td>      <table id="SpellStats" style="width:100%">
       <tr style="text-align:center">
-        <td><b>Spells Known/Prepared</b>: C0: 2; C: 1; D0: 2; D: 1; W0: 7; W: 26</td>
+        <td><b>Spells Known/Prepared</b>: C0: 2; C: 1; W0: 5; W: 25</td>
         <td><b>Spell Slots</b>: W1: 4; W2: 3; W3: 3; W4: 3; W5: 3; W6: 2; W7: 2; W8: 1; W9: 1</td>
-        <td><b>Attack</b>: C: +5; D: +5; W: +9</td>
-        <td><b>Spell DC</b>: C: 13; D: 13; W: 17</td>
+        <td><b>Attack</b>: C: +5; W: +9</td>
+        <td><b>Spell DC</b>: C: 13; W: 17</td>
       </tr></table>
 </td>
     </tr></table>
@@ -255,7 +271,11 @@ var attributes = {
     </tr><tr style="text-align:left">
       <td>Conjure Minor Elementals (W4 Conj): Self attacks within 15' inflict +2d8 HP of a choice of acid, cold, fire, or lightning for concentration up to 10 min [+Level inflicts +1d8 HP]</td>
     </tr><tr style="text-align:left">
+      <td>Counterspell (W3 [Spell Breaker] Abju): R60' Negates foe casting (save Constitution negates)</td>
+    </tr><tr style="text-align:left">
       <td>Dispel Magic (W3 Abju): R120' Ends the effects on the target of spells up to level 3, and successful DC 10 + spell level checks end each higher-level spell [+Level ends any spell of equal or lesser level]</td>
+    </tr><tr style="text-align:left">
+      <td>Dispel Magic (W3 [Spell Breaker] Abju): R120' Ends the effects on the target of spells up to level 3, and successful DC 10 + spell level checks end each higher-level spell [+Level ends any spell of equal or lesser level]</td>
     </tr><tr style="text-align:left">
       <td>Dragon's Breath (W2 Tran): Touched can use a Magic action to inflict 3d6 HP of a choice of acid, cold, fire, lightning, or poison (save Dexterity half) in a 15' cone for concentration up to 1 min [+Level inflicts +1d6 HP]</td>
     </tr><tr style="text-align:left">
@@ -266,6 +286,8 @@ var attributes = {
       <td>Grease (W1 Conj): R60' 10' sq becomes difficult terrain and causes creatures to fall prone (save Dexterity negates) for 1 min</td>
     </tr><tr style="text-align:left">
       <td>Instant Summons (W6 Conj): 1</td>
+    </tr><tr style="text-align:left">
+      <td>Invisibility (W2 [The Third Eye] Illu): Touched becomes invisible for concentration up to 1 hr; target attacking, inflicting damage, or casting ends [+Level affects +1 target]</td>
     </tr><tr style="text-align:left">
       <td>Jump (W1 Tran): Touched can jump 30' after a 10' move for 1 min</td>
     </tr><tr style="text-align:left">
@@ -278,6 +300,8 @@ var attributes = {
       <td>Major Image (W3 Illu): R120' Creates a 20' cube sight, sound, smell, and temperature illusion (Investigation detects) for concentration up to 10 min [+Level extends the duration to permanent at level 4]</td>
     </tr><tr style="text-align:left">
       <td>Meteor Swarm (W9 Evoc): R1 mile 4 40' radius areas each inflict 20d6 HP fire and 20d6 HP bludgeoning (save Dexterity half) and ignite unattended flammable objects</td>
+    </tr><tr style="text-align:left">
+      <td>Minor Illusion (W0 [Improved Illusions] Illu): R30' Creates the sound of 1 creature or a 5' cube image (Investigation detects) for 1 min</td>
     </tr><tr style="text-align:left">
       <td>Modify Memory (W5 Ench): R30' Incapacitates the target for concentration up to 1 min and allows changing the target's memory of a 10-min event from the past 24 hr (save Wisdom negates; a target in battle has advantage); damaging or additional casting on the target ends the spell [+Level changes the memory of an event from the past 7, 30, 365, or unlimited days at level 6, 7, 8, or 9]</td>
     </tr><tr style="text-align:left">
@@ -293,6 +317,10 @@ var attributes = {
     </tr><tr style="text-align:left">
       <td>Scrying (W5 Divi): Self sees and hears a chosen target (save Wisdom, modified by degree of familiarity, negates for 24 hr) or known location for concentration up to 10 min</td>
     </tr><tr style="text-align:left">
+      <td>Summon Beast (W2 [Phantasmal Creatures] Conj): R90' Summons an obedient bestial spirit (Armor Class 13; multiattack equal to half the spell level; inflicts 1d8+6 piercing) of air (20 hit points; fly 60'; does not provoke opportunity attacks when flying out of reach), land (30 hit points; move and climb 30'; has advantage on attacks when within 5' of an ally), or water (30 hit points; swim 30'; water-breathing; has advantage on attacks when within 5' of an ally) for concentration up to 1 hr [+Level increases the Armor Class by 1, hit points by 5, and attack damage by 1]</td>
+    </tr><tr style="text-align:left">
+      <td>Summon Fey (W3 [Phantasmal Creatures] Conj): R90' Summons an obedient fey spirit (Armor Class 15; 30 hit points; move 40' and can teleport 30'; multiattack equal to half the spell level; short sword inflicts 1d6+6 HP piercing plus 1d6 force), of type fuming (has advantage on the next attack in the same turn after teleporting), mirthful (can charm 1 creature (save Wisdom negates) within 10' after teleporting), or tricksy (can create darkness in a 5' cube for 1 rd after teleporting) for concentration up to 1 hr [+Level increases the Armor Class by 1, hit points by 10, and piercing damage by 1]</td>
+    </tr><tr style="text-align:left">
       <td>Teleportation Circle (W5 Conj): R10' Creates a portal that provides a link to similar circles for 1 rd; casting on the same spot every day for 365 days makes it permanent</td>
     </tr><tr style="text-align:left">
       <td>True Strike (W0 Divi): Proficient weapon attack made simultaneously with casting has a +9 attack bonus and inflicts +3d6 HP of a choice of radiant or normal weapon damage</td>
@@ -303,33 +331,67 @@ var attributes = {
   </tr><tr style="text-align:center">
     <td><b>Magic Notes</b>:     <table id="MagicNotes" style="width:100%">
     <tr style="text-align:center">
+      <td><i>Greater Portent: Has increased Portent effects</i></td>
+    </tr><tr style="text-align:center">
+      <td>Abjuration Savant: Spellbook contains 1 additional abjuration spell per available spell slot level</td>
+    </tr><tr style="text-align:center">
       <td>Arcane Recovery: Can recover 10 spell slot levels (level 5 maximum) at the end of a short rest once per long rest</td>
+    </tr><tr style="text-align:center">
+      <td>Arcane Ward: After a long rest, can cause an abjuration spell to create a ward around self that can absorb 43 HP damage; once these are all used, casting another abjuration spell restores 2x the spell level to the ward</td>
+    </tr><tr style="text-align:center">
+      <td>Divination Savant: Spellbook contains 1 additional divination spell per available spell slot level</td>
     </tr><tr style="text-align:center">
       <td>Empowered Evocation: Evocation spells inflict +3 HP</td>
     </tr><tr style="text-align:center">
-      <td>Evocation Savant: Can copy 9 evocation spells into spellbook for free</td>
+      <td>Evocation Savant: Spellbook contains 1 additional evocation spell per available spell slot level</td>
     </tr><tr style="text-align:center">
-      <td>Magic Initiate (Cleric): Knows 2 Cleric cantrips and can cast a chosen C1 spell once per long rest</td>
+      <td>Expert Divination: Casting a divination spell restores a lower-level expended slot of up to level 5</td>
     </tr><tr style="text-align:center">
-      <td>Magic Initiate (Druid): Knows 2 Druid cantrips and can cast a chosen D1 spell once per long rest</td>
+      <td>Illusion Savant: Spellbook contains 1 additional illusion spell per available spell slot level</td>
     </tr><tr style="text-align:center">
-      <td>Magic Initiate (Wizard): Knows 2 Wizard cantrips and can cast a chosen W1 spell once per long rest</td>
+      <td>Illusory Reality: Can use a bonus action to make a harmless object in a self illusion real for 1 min</td>
+    </tr><tr style="text-align:center">
+      <td>Illusory Self: Can use a reaction to cause an attack on self to miss once per short rest; can expend level 2+ spell slots for additional uses</td>
+    </tr><tr style="text-align:center">
+      <td>Improved Illusions: Can cast illusions without verbal components, cast 10'+ ranged illusions at +60' range, and  cast <i>Minor Illusion</i> to include both a sound and an image</td>
+    </tr><tr style="text-align:center">
+      <td>Magic Initiate (Cleric): Knows 2 Cleric cantrips and can cast a chosen C1 spell without expending a spell slot once per long rest</td>
     </tr><tr style="text-align:center">
       <td>Memorize Spell: Can replace a prepared spell at the end of a short rest</td>
     </tr><tr style="text-align:center">
-      <td>Overchannel: Can inflict maximum damage from evocation spells up to level 5; additional uses before a long rest also inflict damage on self, starting at 2d12 HP necrotic and increasing by 1d12 HP on each successive use</td>
+      <td>Overchannel: Can inflict maximum damage when casting an evocation spell of up to level 5; additional uses before a long rest also inflict damage on self, starting at 2d12 HP necrotic and increasing by 1d12 HP on each successive use</td>
+    </tr><tr style="text-align:center">
+      <td>Phantasmal Creatures: Can cast illusion versions of <i>Summon Beast</i> and <i>Summon Fey</i> and can cast either of them without expending a spell slot, creating a creature with half hit points, once per long rest</td>
+    </tr><tr style="text-align:center">
+      <td>Portent: Can replace a visible target's attack, ability check, or save with a pre-rolled value 3 times per long rest</td>
     </tr><tr style="text-align:center">
       <td>Potent Cantrip: Cantrips inflict half HP on a miss or successful save</td>
     </tr><tr style="text-align:center">
-      <td>Ritual Adept: Can cast spells marked with [R] as rituals without preparation</td>
+      <td>Projected Ward: R30' Can use Arcane Ward to absorb damage to others</td>
     </tr><tr style="text-align:center">
-      <td>Sculpt Spells: On a self evocation spell, can give spell level + 1 creatures a successful save and no damage instead of half</td>
+      <td>Ritual Adept: Can cast spells marked with [R] as rituals directly from spellbook</td>
+    </tr><tr style="text-align:center">
+      <td>Sculpt Spells: When casting an evocation spell, can give spell level + 1 creatures a successful save and no damage instead of half</td>
     </tr><tr style="text-align:center">
       <td>Signature Spells: Can cast 2 chosen W3 spells without expending a spell slot once per short rest</td>
     </tr><tr style="text-align:center">
-      <td>Spell Mastery: Can cast a chosen 1-action W1 spell and a chosen 1-action W2 spell at will and change one choice after 8 hr of study</td>
+      <td>Spell Breaker: Can cast <i>Dispel Magic</i> as a bonus action and add 6 to the check, and a casting of <i>Counterspell</i> or <i>Dispel Magic</i> that fails to negate a spell does not expend a spell slot</td>
     </tr><tr style="text-align:center">
-      <td>Spellcasting: Can cast spells from the wizard spell list and cast spells marked with [R] using a ritual</td>
+      <td>Spell Mastery: Can cast a chosen 1-action W1 spell and a chosen 1-action W2 spell without expending a spell slot and change a choice after a long rest</td>
+    </tr><tr style="text-align:center">
+      <td>Spellcasting: Can cast spells from the wizard spell list and cast spells marked with [R] using a ritual; regains expended spell slots after a long rest</td>
+    </tr><tr style="text-align:center">
+      <td>The Third Eye: Can use an bonus action once per short rest to gain 60' darkvision, the ability to read any language, or the ability to cast <i>Invisibility</i> without expending a spell slot until the next rest</td>
+    </tr></table>
+</td>
+  </tr></table>
+</td>
+</tr><tr style="text-align:center">
+  <td style="border:1px solid black"><b>Notes</b><br/>  <table id="NotesArea" style="width:100%">
+  <tr style="text-align:center">
+    <td>    <table id="ValidationPart" style="width:100%">
+    <tr style="text-align:center">
+      <td><b>Validation Errors</b>: Selectable Feature Allocation: 1 available vs. 4 allocated</td>
     </tr></table>
 </td>
   </tr></table>
