@@ -623,7 +623,7 @@ PHB5E2024.FEATURES_ADDED = {
     'Note="Rage gives a choice of: a %{speed}\' fly Speed when unarmored; adjacent foe disadvantage when attacking anyone but self; melee hits inflict prone on a Large or smaller foe"',
   'Rage Of The Wilds':
     'Section=combat ' +
-    'Note="Rage gives a choice of: resistence to damage other than force, necrotic, psychic, and radiant; a Disengage and a Dash when entering rage and as a bonus action each rd during rage; ally advantage on attacks vs. foes adjacent to self"',
+    'Note="Rage gives a choice of: resistance to damage other than force, necrotic, psychic, and radiant; a Disengage and a Dash when entering rage and as a bonus action each rd during rage; ally advantage on attacks vs. foes adjacent to self"',
   // Path Of The World Tree
   'Battering Roots':
     'Section=combat ' +
@@ -721,7 +721,7 @@ PHB5E2024.FEATURES_ADDED = {
     'Note="Self and allies have advantage on attacks vs. a foe within 5\' of the Invoke Duplicity duplicate, and a target adjacent to the duplicate regains %{levels.Cleric} hit points when the effect ends"',
   'Invoke Duplicity':
     PHB5E.FEATURES['Invoke Duplicity']
-    .replaceAll('improvedDuplicity', 'null'), // supress Improved effects
+    .replaceAll('improvedDuplicity', 'null'), // suppress Improved effects
   'Trickery Domain Spells':PHB5E.FEATURES['Trickery Domain']
     .replaceAll('1:', '3:')
     .replace('Mirror Image', 'Invisibility')
@@ -759,7 +759,7 @@ PHB5E2024.FEATURES_ADDED = {
     'Section=magic,magic ' +
     // changed effects
     'Note=' +
-      '"Has increaased Wild Shape effects",' +
+      '"Has increased Wild Shape effects",' +
       '"Wild Shape form has an Armor Class of at least %{13+wisdomModifier}"',
   'Circle Of The Moon Spells':
     'Section=magic ' +
@@ -1119,7 +1119,7 @@ PHB5E2024.FEATURES_ADDED = {
   'Tides Of Chaos':
     'Section=combat ' +
     // changed effects
-    'Note="Can gain advantage on an attack, ability check, or save once per long rest; subsequently using a spell slot to cast a Sorcerer spell before a long rest automtically causes a Wild Magic Surge and allows an additional use"',
+    'Note="Can gain advantage on an attack, ability check, or save once per long rest; subsequently using a spell slot to cast a Sorcerer spell before a long rest automatically causes a Wild Magic Surge and allows an additional use"',
   'Wild Magic Surge':PHB5E.FEATURES['Wild Magic Surge'],
 
   // Warlock
@@ -1131,14 +1131,26 @@ PHB5E2024.FEATURES_ADDED = {
       '"7:Dominate Beast","7:Greater Invisibility",' +
       '"9:Dominate Person","9:Seeming"',
   'Bewitching Magic':
-    'Section=magic Note="Can cast <i>Misty Step</i> without expeding a spell slot as part of casting an enchantment or illusion spell"',
-  'Beguiling Defenses':PHB5E.FEATURES['Beguiling Defenses'],
-  'Misty Escape':PHB5E.FEATURES['Misty Escape'],
+    'Section=magic Note="Can cast <i>Misty Step</i> without expending a spell slot as part of casting an enchantment or illusion spell"',
+  'Beguiling Defenses':
+    'Section=combat,save ' +
+    // changed effects
+    'Note=' +
+      '"Can use a reaction in response to taking damage to reduce the damage taken by half and to inflict psychic damage on the attacker equal to the remaining amount (save Wisdom negates) once per long rest; can expend spell slots for additional uses",' +
+      '"Has immunity to charmed"',
+  'Misty Escape':
+    'Section=combat,magic ' +
+    // changed effects
+    'Note=' +
+      '"Can use a reaction in response to taking damage to cast <i>Misty Step</i>",' +
+      '"Has increased Steps Of The Fey effects"',
   'Steps Of The Fey':
     'Section=magic ' +
-    'Note="Can cast <i>Misty Step</i> without expending a spell slot %{charismaModifier>1?charismaModifier+\' times\':\'once\'} per long rest; doing so can either give 1d10 temporary hit points to a creature within 10\' of the ending point or inflict disadvantage on attacks vs. creatures other than self until the start of the next turn on creatures within 5\' of the starting point"',
+    'Note="Can cast <i>Misty Step</i> without expending a spell slot %{charismaModifier>1?charismaModifier+\' times\':\'once\'} per long rest, and casting <i>Misty Step</i> can %{magicNotes.mistyEscape?\\"make self invisible until the end of the next turn (attacking, causing damage, or spellcasting ends), inflict 2d10 HP psychic (save Wisdom negates) on creatures within 5\' of the starting or ending point, \\":\'\'}give 1d10 temporary hit points to a creature within 10\' of the ending point%{magicNotes.mistyEscape?\',\':\'\'} or inflict disadvantage on attacks vs. creatures other than self (save Wisdom negates) on creatures within 5\' of the starting point until the start of the next turn"',
   // Celestial Patron
-  'Celestial Resilience':Xanathar.FEATURES['Celestial Resilience'],
+  'Celestial Resilience':
+    Xanathar.FEATURES['Celestial Resilience']
+    .replace('rest', 'rest and after using Magical Cunning'),
   'Celestial Spells':
     'Spells=' +
       '"3:Aid","3:Cure Wounds","3:Guiding Bolt","3:Lesser Restoration","3:Light","3:Sacred Flame",' +
@@ -1146,16 +1158,28 @@ PHB5E2024.FEATURES_ADDED = {
       '"7:Guardian Of Faith","7:Wall Of Fire",' +
       '"9:Greater Restoration","9:Summon Celestial"',
   'Healing Light':Xanathar.FEATURES['Healing Light'],
-  'Radiant Soul':Xanathar.FEATURES['Radiant Soul'],
-  'Searing Vengeance':Xanathar.FEATURES['Searing Vengeance'],
+  'Radiant Soul':
+    Xanathar.FEATURES['Radiant Soul']
+    .replace('target', 'target once per turn'),
+  'Searing Vengeance':
+    'Section=combat ' +
+    // changed effects
+    'Note="R60\' Can cancel a creature\'s death saving throw, restore half its maximum hit points, allow it to stand, and inflict 2d8+%{charismaModifier} HP radiant and blindness for 1 rd on chosen targets within 30\' of it once per long rest"',
   // Great Old One Patron
-  'Awakened Mind':PHB5E.FEATURES['Awakened Mind'],
+  'Awakened Mind':
+    'Section=skill ' +
+    // changed effects
+    'Note="R30\' Can use a bonus action to establish telepathic communication in a shared language with the target while within %{charismaModifier>1?charismaModifier+\' miles\':\'1 mile\'} for %{levels.Warlock} minutes"',
   'Clairvoyant Combatant':
-    'Section=combat Note="Awakened Mind inflicts disadvantage on the target on attacks vs. self and gives self advantage on attacks vs. the target (save Wisdom negates) once per short rest; can expend spell slots for additional uses"',
-  'Create Thrall':PHB5E.FEATURES['Create Thrall'],
+    'Section=combat ' +
+    'Note="Can use Awakened Mind to inflict disadvantage on the target on attacks vs. self and to give self advantage on attacks vs. the target (save Wisdom negates) once per short rest; can expend spell slots for additional uses"',
+  'Create Thrall':
+    'Section=magic ' +
+    // changed effects
+    'Note="Can cast <i>Summon Aberration</i> to last 1 min instead of concentration, and doing so gives the summoned creature %{levels.Warlock+charismaModifier} temporary hit points; once each turn, summoned aberrations inflict additional psychic damage to <i>Hex</i> targets equal to the damage from that spell"',
   'Eldritch Hex':
     'Section=magic ' +
-    'Note="Knows the <i>Hex</i> spell; targeting an ability also inflicts disadvantage on saves that use that ability" ' +
+    'Note="Casting <i>Hex</i> inflicts disadvantage on saves that use the chosen ability" ' +
     'Spells=Hex',
   'Great Old One Spells':
     'Spells=' +
@@ -1170,28 +1194,43 @@ PHB5E2024.FEATURES_ADDED = {
 
   // Wizard
   // Abjurer
-  'Abjuration Savant':PHB5E.FEATURES['Abjuration Savant'],
+  'Abjuration Savant':
+    SRD5E2024.FEATURES['Evocation Savant']
+    .replace('evocation', 'abjuration'),
   'Arcane Ward':PHB5E.FEATURES['Arcane Ward'],
   'Projected Ward':PHB5E.FEATURES['Projected Ward'],
   'Spell Breaker':
     'Section=magic ' +
-    'Note="Knows the <i>Counterspell</i> and <i>Dispel Magic</i> spells, can cast <i>Dispel Magic</i> as a bonus action and add %{proficiencyBonus} to the check, and failure with either spell does not expend a spell slot" ' +
+    'Note="Can cast <i>Dispel Magic</i> as a bonus action and add %{proficiencyBonus} to the check, and a casting of <i>Counterspell</i> or <i>Dispel Magic</i> that fails to negate a spell does not expend a spell slot" ' +
     'Spells=Counterspell,"Dispel Magic"',
   'Spell Resistance':PHB5E.FEATURES['Spell Resistance'],
   // Diviner
-  'Divination Savant':PHB5E.FEATURES['Divination Savant'],
+  'Divination Savant':
+    SRD5E2024.FEATURES['Evocation Savant']
+    .replace('evocation', 'divination'),
   'Expert Divination':PHB5E.FEATURES['Expert Divination'],
   'Greater Portent':PHB5E.FEATURES['Greater Portent'],
   'Portent':PHB5E.FEATURES.Portent,
-  'The Third Eye':PHB5E.FEATURES['The Third Eye'],
+  'The Third Eye':
+    PHB5E.FEATURES['The Third Eye']
+    .replace('action', 'bonus action')
+    .replace(", 60' ethereal sight", '')
+    .replace("10' invisibility sight", 'the ability to cast <i>Invisibility</i> without expending a spell slot') + ' ' +
+    'Spells=Invisibility',
   // Illusionist
-  'Illusion Savant':PHB5E.FEATURES['Illusion Savant'],
+  'Illusion Savant':
+    SRD5E2024.FEATURES['Evocation Savant']
+    .replace('evocation', 'illusion'),
   'Illusory Reality':PHB5E.FEATURES['Illusory Reality'],
-  'Illusory Self':PHB5E.FEATURES['Illusory Self'],
-  'Improved Illusions':PHB5E.FEATURES['Improved Minor Illusion'],
+  'Illusory Self':
+    PHB5E.FEATURES['Illusory Self']
+    .replace('rest', 'rest; can expend level 2+ spell slots for additional uses'),
+  'Improved Illusions':
+    PHB5E.FEATURES['Improved Minor Illusion']
+    .replace('Can', "Can cast illusions without verbal components, cast 10'+ ranged illusions at +60' range, and "),
   'Phantasmal Creatures':
     'Section=magic ' +
-    'Note="Knows the <i>Summon Beast</i> and <i>Summon Fey</i> spells, can cast either as an illusion spell, and can cast each illusion version without expending a spell slot, creating a creature with half hit points, once per long rest" ' +
+    'Note="Can cast illusion versions of <i>Summon Beast</i> and <i>Summon Fey</i> and can cast either of them without expending a spell slot, creating a creature with half hit points, once per long rest" ' +
     'Spells="Summon Beast","Summon Fey"',
 
   // Feats
@@ -1279,29 +1318,99 @@ PHB5E2024.SCHOOLS = Object.assign({}, SRD5E2024.SCHOOLS);
 PHB5E2024.SHIELDS = Object.assign({}, SRD5E2024.SHIELDS);
 PHB5E2024.SKILLS = Object.assign({}, SRD5E2024.SKILLS);
 PHB5E2024.SPELLS_ADDED = {
-  // TODO
+
+  'Arcane Gate':PHB5E.SPELLS_ADDED['Arcane Gate'],
+  'Arcane Vigor':
+    'School=Abjuration ' +
+    'Level=S2,W2 ' +
+    'Description=' +
+      '"TODO"',
+  'Armor Of Agathys':PHB5E.SPELLS_ADDED['Armor Of Agathys'],
   'Arms Of Hadar':PHB5E.SPELLS_ADDED['Arms Of Hadar'],
+  'Aura Of Life':PHB5E.SPELLS_ADDED['Aura Of Life'],
+  'Aura Of Purity':PHB5E.SPELLS_ADDED['Aura Of Purity'],
+  'Aura Of Vitality':PHB5E.SPELLS_ADDED['Aura Of Vitality'],
+
+  'Banishing Smite':PHB5E.SPELLS_ADDED['Banishing Smite'],
   'Beast Sense':PHB5E.SPELLS_ADDED['Beast Sense'],
+  'Blade Ward':PHB5E.SPELLS_ADDED['Blade Ward'],
+  'Blinding Smite':PHB5E.SPELLS_ADDED['Blinding Smite'],
+
+  'Circle Of Power':PHB5E.SPELLS_ADDED['Circle Of Power'],
+  'Cloud Of Daggers':PHB5E.SPELLS_ADDED['Cloud Of Daggers'],
+  'Compelled Duel':PHB5E.SPELLS_ADDED['Compelled Duel'],
+  'Conjure Barrage':PHB5E.SPELLS_ADDED['Conjure Barrage'],
+  'Conjure Volley':PHB5E.SPELLS_ADDED['Conjure Volley'],
+  'Cordon Of Arrows':PHB5E.SPELLS_ADDED['Cordon Of Arrows'],
+  'Crown Of Madness':PHB5E.SPELLS_ADDED['Crown Of Madness'],
   "Crusader's Mantle":PHB5E.SPELLS_ADDED["Crusader's Mantle"],
-  'Dissonant Whispers':PHB5E.SPELLS_ADDED['Dissonant Whispers'],
+
+  'Destructive Wave':PHB5E.SPELLS_ADDED['Destructive Wave'],
+
+  'Elemental Weapon':PHB5E.SPELLS_ADDED['Elemental Weapon'],
   'Ensnaring Strike':PHB5E.SPELLS_ADDED['Ensnaring Strike'],
+
+  'Feign Death':PHB5E.SPELLS_ADDED['Feign Death'],
   'Fount Of Moonlight':
     'School=Evocation ' +
     'Level=B4,D4 ' +
     'Description=' +
-      '"Self emits a 20\' radius bright light, gains resistance to radiant, inflicts +2d6 HP radiant, and can use a reaction to inflict blindess on successful attackers until the end of the next turn (save Constitution negates) for concentration up to 10 min"',
+      '"Self emits a 20\' radius bright light, gains resistance to radiant, inflicts +2d6 HP radiant, and can use a reaction to inflict blindness on successful attackers until the end of the next turn (save Constitution negates) for concentration up to 10 min"',
+  'Friends':PHB5E.SPELLS_ADDED.Friends,
+
+  'Grasping Vine':PHB5E.SPELLS_ADDED['Grasping Vine'],
+
+  'Hail Of Thorns':PHB5E.SPELLS_ADDED['Hail Of Thorns'],
   'Hunger Of Hadar':PHB5E.SPELLS_ADDED['Hunger Of Hadar'],
+
+  "Jallarzi's Storm Of Radiance":
+    'School=Evocation ' +
+    'Level=K5,W5 ' +
+    'Description=' +
+      '"TODO"',
+
+  'Lightning Arrow':PHB5E.SPELLS_ADDED['Lightning Arrow'],
+
   'Mind Sliver':Tasha.SPELLS['Mind Sliver'],
+
+  'Power Word Fortify':
+    'School=Enchantment ' +
+    'Level=B7,C7 ' +
+    'Description=' +
+      '"TODO"',
+
+  'Staggering Smite':PHB5E.SPELLS['Staggering Smite'],
   'Steel Wind Strike':Xanathar.SPELLS['Steel Wind Strike'],
   'Summon Aberration':Tasha.SPELLS['Summon Aberration'],
   'Summon Beast':Tasha.SPELLS['Summon Beast'],
   'Summon Celestial':Tasha.SPELLS['Summon Celestial'],
   'Summon Construct':Tasha.SPELLS['Summon Construct'],
+  'Summon Elemental':Tasha.SPELLS['Summon Construct'],
   'Summon Fey':Tasha.SPELLS['Summon Fey'],
+  'Summon Fiend':Tasha.SPELLS['Summon Fiend'],
+  'Summon Undead':Tasha.SPELLS['Summon Undead'],
+  'Swift Quiver':PHB5E.SPELLS['Swift Quiver'],
+  'Synaptic Static':Xanathar.SPELLS['Synaptic Static'],
+
+  "Tasha's Bubbling Cauldron":
+    'School=Conjuration ' +
+    'Level=K6,W6 ' +
+    'Description=' +
+      '"TODO"',
+  'Telepathy':PHB5E.SPELLS.Telepathy,
+  'Thorn Whip':PHB5E.SPELLS['Thorn Whip'],
+  'Thunderclap':Xanathar.SPELLS.Thunderclap,
+  'Thunderous Smite':PHB5E.SPELLS['Thunderous Smite'],
+  'Toll The Dead':Xanathar.SPELLS['Toll The Dead'],
+
+  'Witch Bolt':PHB5E.SPELLS['Witch Bolt'],
+  'Word Of Radiance':Xanathar.SPELLS['Word Of Radiance'],
+  'Wrathful Smite':PHB5E.SPELLS['Wrathful Smite'],
   "Yolanda's Regal Presence":
     'School=Enchantment ' +
     'Level=B5,W5 ' +
     'Description="10\' radius inflicts 4d6 HP psychic, knocked prone, and a 10\' push (save Wisdom half HP only) on targets for concentration up to 1 min"'
+
 };
 PHB5E2024.SPELLS_LEVELS_ADDED = {
   // TODO

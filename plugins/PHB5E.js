@@ -620,7 +620,7 @@ PHB5E.FEATURES_ADDED = {
   'Drow Magic':
     'Section=magic ' +
     // errata replaces once per day with once per long rest
-    'Note="Knows the <i>Dancing Lights</i> cantrip%{level<3?\'\':level<5?\' and can cast <i>Faerie Fire</i> once per long rest\':\' and can cast <i>Faerie Fire</i> and <i>Darkness</i> once per long rest\'}" ' +
+    'Note="Knows the <i>Dancing Lights</i> cantrip%{level<3?\'\':level<5?\' and can cast <i>Faerie Fire</i> without expending a spell slot once per long rest\':\' and can cast <i>Faerie Fire</i> and <i>Darkness</i> without expending a spell slot once per long rest\'}" ' +
     'Spells="Dancing Lights","3:Faerie Fire",5:Darkness ' +
     'SpellAbility=Charisma',
   'Drow Weapon Training':
@@ -851,7 +851,7 @@ PHB5E.FEATURES_ADDED = {
   'Combat Wild Shape':
     'Section=magic ' +
     'Note=' +
-      '"Can use Wild Shape as a bonus action/While using Wild Shape, can use a bonus action and spend a spell slot to regain 1d8 hit points per slot level"',
+      '"Can use Wild Shape as a bonus action/While using Wild Shape, can use a bonus action and expend a spell slot to regain 1d8 hit points per slot level"',
   'Elemental Wild Shape':
     'Section=magic Note="Can expend 2 Wild Shape uses to become an elemental"',
   'Primal Strike':
@@ -1153,7 +1153,7 @@ PHB5E.FEATURES_ADDED = {
     'Section=magic ' +
     'Note="Can inflict a choice of charmed or frightened (save DC %{spellDifficultyClass.K} Wisdom negates) until the end of the next turn on all creatures in a 10\' cube once per short rest"',
   'Misty Escape':
-    'Section=magic ' +
+    'Section=combat ' +
     'Note="Can use a reaction upon taking damage to teleport 60\' and become invisible until the start of the next turn once per short rest; attacking or casting ends"',
   // The Great Old One
   'Awakened Mind':'Section=skill Note="R30\' Can communicate telepathically"',
@@ -1204,11 +1204,10 @@ PHB5E.FEATURES_ADDED = {
   'Expert Divination':
     'Section=magic ' +
     'Note="Casting a divination spell restores a lower-level expended slot of up to level 5"',
-  'Greater Portent':
-    'Section=magic Note="Can use Portent 3 times per long rest"',
+  'Greater Portent':'Section=magic Note="Has increased Portent effects"',
   'Portent':
     'Section=magic ' +
-    'Note="Can replace a visible target\'s attack, ability check, or save with one of two pre-rolled values %{magicNotes.greaterPortent?3:2} times per long rest"',
+    'Note="Can replace a visible target\'s attack, ability check, or save with a pre-rolled value %{magicNotes.greaterPortent?3:2} times per long rest"',
   'The Third Eye':
     'Section=magic ' +
     'Note="Can use an action once per short rest to gain 60\' darkvision, 60\' ethereal sight, the ability to read any language, or 10\' invisibility sight until the next rest"',
@@ -1239,7 +1238,7 @@ PHB5E.FEATURES_ADDED = {
     'Note="Can use a reaction to cause an attack on self to miss once per short rest"',
   'Improved Minor Illusion':
     'Section=magic ' +
-    'Note="Knows the <i>Minor Illusion</i> cantrip; effects can include both a sound and an image" ' +
+    'Note="Can cast <i>Minor Illusion</i> to include both a sound and an image" ' +
     'Spells="Minor Illusion"',
   'Malleable Illusions':
     'Section=magic Note="Can modify self illusions throughout their durations"',
@@ -1411,22 +1410,22 @@ PHB5E.FEATURES_ADDED = {
       '"Has advantage on saves vs. spells cast by adjacent foes"',
   'Magic Initiate (Bard)':
     'Section=Magic ' +
-    'Note="Knows 2 Bard cantrips and can cast a chosen B1 spell once per long rest"',
+    'Note="Knows 2 Bard cantrips and can cast a chosen B1 spell without expending a spell slot once per long rest"',
   'Magic Initiate (Cleric)':
     'Section=Magic ' +
-    'Note="Knows 2 Cleric cantrips and can cast a chosen C1 spell once per long rest"',
+    'Note="Knows 2 Cleric cantrips and can cast a chosen C1 spell without expending a spell slot once per long rest"',
   'Magic Initiate (Druid)':
     'Section=Magic ' +
-    'Note="Knows 2 Druid cantrips and can cast a chosen D1 spell once per long rest"',
+    'Note="Knows 2 Druid cantrips and can cast a chosen D1 spell without expending a spell slot once per long rest"',
   'Magic Initiate (Sorcerer)':
     'Section=Magic ' +
-    'Note="Knows 2 Sorcerer cantrips and can cast a chosen S1 spell once per long rest"',
+    'Note="Knows 2 Sorcerer cantrips and can cast a chosen S1 spell without expending a spell slot once per long rest"',
   'Magic Initiate (Warlock)':
     'Section=Magic ' +
-    'Note="Knows 2 Warlock cantrips and can cast a chosen K1 spell once per long rest"',
+    'Note="Knows 2 Warlock cantrips and can cast a chosen K1 spell without expending a spell slot once per long rest"',
   'Magic Initiate (Wizard)':
     'Section=Magic ' +
-    'Note="Knows 2 Wizard cantrips and can cast a chosen W1 spell once per long rest"',
+    'Note="Knows 2 Wizard cantrips and can cast a chosen W1 spell without expending a spell slot once per long rest"',
   'Martial Adept':
     'Section=combat ' +
     'Note="Has the Combat Superiority feature with 2 maneuvers and 1 die"',
