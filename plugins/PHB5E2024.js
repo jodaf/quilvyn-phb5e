@@ -582,18 +582,14 @@ PHB5E2024.FEATURES_ADDED = {
 
   // Aasimar
   'Celestial Resistance': // ref Volo
-    'Section=save Note="Has resistance to necrotic and radiant damage"',
+    'Section=save Note="Has resistance to necrotic and radiant"',
   'Celestial Revelation':
     'Section=combat,combat ' +
     'Note=' +
       '"Has the Heavenly Wings, Inner Radiance, and Necrotic Shroud features",' +
       '"Can use Heavenly Wings, Inner Radiance, or Necrotic Shroud for 1 min once per long rest"',
   // Darkvision as SRD5E2024
-  'Heavenly Wings': // ref Volo (as Radiant Soul)
-    'Section=ability,combat ' +
-    'Note=' +
-      '"Gains a 30\' fly Speed",' +
-      '"Can inflict +%{proficiencyBonus} HP radiant once per rd"',
+  'Heavenly Wings':'Section=ability Note="Gains a 30\' fly Speed"',
   'Healing Hands': // ref Volo
     'Section=magic ' +
     'Note="Touch heals %{proficiencyBonus}d4 hit points once per long rest"',
@@ -601,8 +597,6 @@ PHB5E2024.FEATURES_ADDED = {
     'Section=combat ' +
     'Note="Emits a bright light in a 10\' radius that inflicts %{proficiencyBonus} HP radiant"',
   'Light Bearer': // ref Volo
-    'Section=magic ' +
-    'Note="Knows the <i>Light</i> cantrip" ' +
     'SpellAbility=Charisma ' +
     'Spells=Light',
   'Necrotic Shroud': // ref Volo
