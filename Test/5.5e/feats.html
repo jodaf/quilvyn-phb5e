@@ -12,13 +12,30 @@ var attributes = {
   "alignment":"Neutral Good", "armor":"Padded", "background":"Criminal", "charisma":12, "constitution":10, 
   "deity":"None", "dexterity":13, "experience":40185, "expertise.Animal Handling":1, 
   "expertise.Nature":1, "expertise.Perception":1, "expertise.Sleight Of Hand":1, 
-  "feats.Ability Score Improvement":1, "feats.Alert":1, "feats.Archery":1, "feats.Boon Of Combat Prowess":1, 
-  "feats.Boon Of Dimensional Travel":1, "feats.Boon Of Fate":1, "feats.Boon Of Irresistible Offense (Dexterity)":1, 
-  "feats.Boon Of Irresistible Offense (Strength)":1, "feats.Boon Of Spell Recall":1, "feats.Boon Of The Night Spirit":1, 
-  "feats.Boon Of Truesight":1, "feats.Defense":1, "feats.Grappler":1, "feats.Great Weapon Fighting":1, 
-  "feats.Magic Initiate (Cleric)":1, "feats.Magic Initiate (Druid)":1, "feats.Magic Initiate (Wizard)":1, 
-  "feats.Savage Attacker":1, "feats.Skilled":1, "feats.Two-Weapon Fighting":1, "gender":"Male", 
-  "hitPoints":28, "intelligence":12, "languagesChosen.Celestial":1, 
+  "feats.Ability Score Improvement":1, "feats.Actor":1, "feats.Alert":1, "feats.Archery":1, "feats.Athlete":1, 
+  "feats.Blind Fighting":1, "feats.Boon Of Combat Prowess":1, "feats.Boon Of Dimensional Travel":1, 
+  "feats.Boon Of Energy Resistance":1, "feats.Boon Of Fate":1, "feats.Boon Of Fortitude":1, 
+  "feats.Boon Of Irresistible Offense (Dexterity)":1, "feats.Boon Of Irresistible Offense (Strength)":1, 
+  "feats.Boon Of Recovery":1, "feats.Boon Of Skill":1, "feats.Boon Of Speed":1, 
+  "feats.Boon Of Spell Recall":1, "feats.Boon Of The Night Spirit":1, "feats.Boon Of Truesight":1, 
+  "feats.Charger":1, "feats.Chef":1, "feats.Crafter":1, "feats.Crossbow Expert":1, 
+  "feats.Crusher":1, "feats.Defense":1, "feats.Defensive Duelist":1, "feats.Dual Wielder":1, 
+  "feats.Dueling":1, "feats.Durable":1, "feats.Elemental Adept (Acid)":1, 
+  "feats.Elemental Adept (Cold)":1, "feats.Elemental Adept (Fire)":1, "feats.Elemental Adept (Lightning)":1, 
+  "feats.Elemental Adept (Thunder)":1, "feats.Fey-Touched":1, "feats.Grappler":1, "feats.Great Weapon Fighting":1, 
+  "feats.Great Weapon Master":1, "feats.Healer":1, "feats.Heavily Armored":1, "feats.Heavy Armor Master":1, 
+  "feats.Inspiring Leader":1, "feats.Interception":1, "feats.Keen Mind":1, "feats.Lightly Armored":1, 
+  "feats.Lucky":1, "feats.Mage Slayer":1, "feats.Magic Initiate (Cleric)":1, 
+  "feats.Magic Initiate (Druid)":1, "feats.Magic Initiate (Wizard)":1, "feats.Martial Weapon Training":1, 
+  "feats.Medium Armor Master":1, "feats.Moderately Armored":1, "feats.Mounted Combatant":1, 
+  "feats.Musician":1, "feats.Observant":1, "feats.Piercer":1, "feats.Poisoner":1, 
+  "feats.Polearm Master":1, "feats.Protection":1, "feats.Resilient":1, "feats.Ritual Caster":1, 
+  "feats.Savage Attacker":1, "feats.Sentinel":1, "feats.Shadow-Touched":1, "feats.Sharpshooter":1, 
+  "feats.Shield Master":1, "feats.Skill Expert":1, "feats.Skilled":1, "feats.Skulker":1, 
+  "feats.Slasher":1, "feats.Speedy":1, "feats.Spell Sniper":1, "feats.Tavern Brawler":1, 
+  "feats.Telekinetic":1, "feats.Telepathic":1, "feats.Thrown Weapon Fighting":1, "feats.Tough":1, 
+  "feats.Two-Weapon Fighting":1, "feats.Unarmed Fighting":1, "feats.War Caster":1, "feats.Weapon Master":1, 
+  "gender":"Male", "hitPoints":28, "intelligence":12, "languagesChosen.Celestial":1, 
   "languagesChosen.Dwarvish":1, "languagesChosen.Halfling":1, "levels.Rogue":8, "name":"Feats", 
   "selectableFeatures.Rogue - Thief":1, "shield":"None", "skillsChosen.Acrobatics":1, 
   "skillsChosen.Animal Handling":1, "skillsChosen.Arcana":1, "skillsChosen.Insight":1, 
@@ -37,12 +54,12 @@ var attributes = {
   <tr style="text-align:center">
     <td>    <table id="Abilities" style="width:100%">
     <tr style="text-align:center">
-      <td><b>Strength</b>: 16 (+3)</td>
+      <td><b>Strength</b>: 18 (+4)</td>
       <td><b>Dexterity</b>: 15 (+2)</td>
-      <td><b>Constitution</b>: 12 (+1)</td>
-      <td><b>Intelligence</b>: 14 (+2)</td>
+      <td><b>Constitution</b>: 13 (+1)</td>
+      <td><b>Intelligence</b>: 15 (+2)</td>
       <td><b>Wisdom</b>: 13 (+1)</td>
-      <td><b>Charisma</b>: 16 (+3)</td>
+      <td><b>Charisma</b>: 17 (+3)</td>
     </tr></table>
 </td>
   </tr><tr style="text-align:center">
@@ -61,13 +78,17 @@ var attributes = {
       <td><b>Level</b>: 8</td>
       <td><b>Size</b>: Medium</td>
       <td><b>Speed</b>: 30</td>
-      <td><b>Carry/Lift:</b> 240/480</td>
+      <td><b>Carry/Lift:</b> 270/540</td>
     </tr></table>
 </td>
   </tr><tr style="text-align:center">
     <td><b>Ability Notes</b>:     <table id="AbilityNotes" style="width:100%">
     <tr style="text-align:center">
       <td><i>Ability Score Improvement: Ability Boost (Choose 2 from any)</i></td>
+    </tr><tr style="text-align:center">
+      <td><i>Actor: +1 Charisma</i></td>
+    </tr><tr style="text-align:center">
+      <td><i>Athlete: Ability Boost (Choose 1 from Dexterity, Strength)</i></td>
     </tr><tr style="text-align:center">
       <td><i>Boon Of Combat Prowess: Ability Boost (Choose 1 from any)</i></td>
     </tr><tr style="text-align:center">
@@ -85,9 +106,31 @@ var attributes = {
     </tr><tr style="text-align:center">
       <td><i>Boon Of Truesight: Ability Boost (Choose 1 from any)</i></td>
     </tr><tr style="text-align:center">
+      <td><i>Durable: +1 Constitution</i></td>
+    </tr><tr style="text-align:center">
       <td><i>Grappler: Ability Boost (Choose 1 from Strength, Dexterity)</i></td>
     </tr><tr style="text-align:center">
-      <td>Ability Boosts: 12 to distribute</td>
+      <td><i>Heavily Armored: +1 Strength</i></td>
+    </tr><tr style="text-align:center">
+      <td><i>Heavy Armor Master: +1 Strength</i></td>
+    </tr><tr style="text-align:center">
+      <td><i>Keen Mind: +1 Intelligence</i></td>
+    </tr><tr style="text-align:center">
+      <td><i>Lightly Armored: Ability Boost (Choose 1 from Dexterity, Strength)</i></td>
+    </tr><tr style="text-align:center">
+      <td><i>Moderately Armored: Ability Boost (Choose 1 from Dexterity, Strength)</i></td>
+    </tr><tr style="text-align:center">
+      <td><i>Observant: Ability Boost (Choose 1 from Intelligence, Wisdom)</i></td>
+    </tr><tr style="text-align:center">
+      <td><i>Resilient: Ability Boost (Choose 1 from any)</i></td>
+    </tr><tr style="text-align:center">
+      <td><i>Tavern Brawler: Ability Boost (Choose 1 from Constitution, Strength)</i></td>
+    </tr><tr style="text-align:center">
+      <td><i>Weapon Master: Ability Boost (Choose 1 from Dexterity, Strength)</i></td>
+    </tr><tr style="text-align:center">
+      <td>Ability Boosts: 19 to distribute</td>
+    </tr><tr style="text-align:center">
+      <td>Athlete: Standing, running long jump, and running high jump each use only 5' of movement/Can climb at full speed</td>
     </tr><tr style="text-align:center">
       <td>Second-Story Work: Has a 30' climb Speed</td>
     </tr></table>
@@ -110,7 +153,7 @@ var attributes = {
     </tr><tr style="text-align:center">
       <td>      <table id="FeatLists" style="width:100%">
       <tr style="text-align:center">
-        <td><b>Feats</b>: Ability Score Improvement; Alert; Archery; Boon Of Combat Prowess; Boon Of Dimensional Travel; Boon Of Fate; Boon Of Irresistible Offense (Dexterity); Boon Of Irresistible Offense (Strength); Boon Of Spell Recall; Boon Of The Night Spirit; Boon Of Truesight; Defense; Grappler; Great Weapon Fighting; Magic Initiate (Cleric); Magic Initiate (Druid); Magic Initiate (Wizard); Savage Attacker; Skilled; Two-Weapon Fighting</td>
+        <td><b>Feats</b>: Ability Score Improvement; Actor; Alert; Archery; Athlete; Blind Fighting; Boon Of Combat Prowess; Boon Of Dimensional Travel; Boon Of Energy Resistance; Boon Of Fate; Boon Of Fortitude; Boon Of Irresistible Offense (Dexterity); Boon Of Irresistible Offense (Strength); Boon Of Recovery; Boon Of Skill; Boon Of Speed; Boon Of Spell Recall; Boon Of The Night Spirit; Boon Of Truesight; Charger; Chef; Crafter; Crossbow Expert; Crusher; Defense; Defensive Duelist; Dual Wielder; Dueling; Durable; Elemental Adept (Acid); Elemental Adept (Cold); Elemental Adept (Fire); Elemental Adept (Lightning); Elemental Adept (Thunder); Fey-Touched; Grappler; Great Weapon Fighting; Great Weapon Master; Healer; Heavily Armored; Heavy Armor Master; Inspiring Leader; Interception; Keen Mind; Lightly Armored; Lucky; Mage Slayer; Magic Initiate (Cleric); Magic Initiate (Druid); Magic Initiate (Wizard); Martial Weapon Training; Medium Armor Master; Moderately Armored; Mounted Combatant; Musician; Observant; Piercer; Poisoner; Polearm Master; Protection; Resilient; Ritual Caster; Savage Attacker; Sentinel; Shadow-Touched; Sharpshooter; Shield Master; Skill Expert; Skilled; Skulker; Slasher; Speedy; Spell Sniper; Tavern Brawler; Telekinetic; Telepathic; Thrown Weapon Fighting; Tough; Two-Weapon Fighting; Unarmed Fighting; War Caster; Weapon Master</td>
         <td><b>Human Features</b>: Resourceful; Skillful; Versatile</td>
         <td><b>Rogue Features</b>: Armor Training (Light); Cunning Action; Cunning Strike; Evasion; Expertise; Fast Hands; Reliable Talent; Rogue Subclass; Save Proficiency (Dexterity; Intelligence); Second-Story Work; Skill Proficiency (Choose 4 from Acrobatics, Athletics, Deception, Insight, Intimidation, Investigation, Perception, Persuasion, Sleight Of Hand, Stealth); Sneak Attack; Steady Aim; Thief; Thieves' Cant; Tool Proficiency (Thieves' Tools); Uncanny Dodge; Weapon Mastery; Weapon Proficiency (Simple Weapons; Finesse Weapons; Light Weapons)</td>
         <td><b>Criminal Features</b>: Ability Boost (Choose 3 from Dexterity, Constitution, Intelligence); Alert; Skill Proficiency (Sleight Of Hand; Stealth); Tool Proficiency (Thieves' Tools)</td>
@@ -123,7 +166,59 @@ var attributes = {
       </tr><tr style="text-align:center">
         <td><i>Versatile: +1 Origin Feat</i></td>
       </tr><tr style="text-align:center">
+        <td>Blind Fighting: TODO</td>
+      </tr><tr style="text-align:center">
+        <td>Boon Of Energy Resistance: TODO</td>
+      </tr><tr style="text-align:center">
+        <td>Boon Of Fortitude: TODO</td>
+      </tr><tr style="text-align:center">
+        <td>Boon Of Recovery: TODO</td>
+      </tr><tr style="text-align:center">
+        <td>Boon Of Skill: TODO</td>
+      </tr><tr style="text-align:center">
+        <td>Boon Of Speed: TODO</td>
+      </tr><tr style="text-align:center">
+        <td>Chef: TODO</td>
+      </tr><tr style="text-align:center">
+        <td>Crafter: TODO</td>
+      </tr><tr style="text-align:center">
+        <td>Crusher: TODO</td>
+      </tr><tr style="text-align:center">
+        <td>Dueling: TODO</td>
+      </tr><tr style="text-align:center">
+        <td>Fey-Touched: TODO</td>
+      </tr><tr style="text-align:center">
+        <td>Interception: TODO</td>
+      </tr><tr style="text-align:center">
+        <td>Keen Mind: Always knows the direction of north and hours until sunrise or sunset/Can recall anything seen or heard during the past month</td>
+      </tr><tr style="text-align:center">
+        <td>Martial Weapon Training: TODO</td>
+      </tr><tr style="text-align:center">
+        <td>Musician: TODO</td>
+      </tr><tr style="text-align:center">
+        <td>Piercer: TODO</td>
+      </tr><tr style="text-align:center">
+        <td>Poisoner: TODO</td>
+      </tr><tr style="text-align:center">
+        <td>Protection: TODO</td>
+      </tr><tr style="text-align:center">
         <td>Resourceful: Gains Heroic Inspiration at the end of a long rest</td>
+      </tr><tr style="text-align:center">
+        <td>Shadow-Touched: TODO</td>
+      </tr><tr style="text-align:center">
+        <td>Skill Expert: TODO</td>
+      </tr><tr style="text-align:center">
+        <td>Slasher: TODO</td>
+      </tr><tr style="text-align:center">
+        <td>Speedy: TODO</td>
+      </tr><tr style="text-align:center">
+        <td>Telekinetic: TODO</td>
+      </tr><tr style="text-align:center">
+        <td>Telepathic: TODO</td>
+      </tr><tr style="text-align:center">
+        <td>Thrown Weapon Fighting: TODO</td>
+      </tr><tr style="text-align:center">
+        <td>Unarmed Fighting: TODO</td>
       </tr></table>
 </td>
     </tr></table>
@@ -146,7 +241,7 @@ var attributes = {
       <td>Investigation: (int) +2</td>
       <td>Religion: (int) +2</td>
     </tr><tr style="text-align:left">
-      <td>Athletics: (str) +3</td>
+      <td>Athletics: (str) +4</td>
       <td>Medicine: (wis) +4</td>
       <td>Sleight Of Hand: (dex) +8</td>
     </tr><tr style="text-align:left">
@@ -178,13 +273,23 @@ var attributes = {
     </tr><tr style="text-align:center">
       <td><i>Thieves'Cant: Language (Thieves' Cant; Choose 1 from any)</i></td>
     </tr><tr style="text-align:center">
+      <td>Actor: Has advantage on Deception and Performance to impersonate another person and can mimic others' speech or sounds</td>
+    </tr><tr style="text-align:center">
       <td>Boon Of Truesight: Has 60' Truesight</td>
     </tr><tr style="text-align:center">
       <td>Bulky Armor: Has disadvantage on Stealth</td>
     </tr><tr style="text-align:center">
+      <td>Healer: Using a healer's kit to stabilize also restores 1 hit point/Can use a healer's kit to restore 1d6+4 + target HD hit points once per creature per short rest</td>
+    </tr><tr style="text-align:center">
+      <td>Medium Armor Master: Suffers no Stealth disadvantage from wearing medium armor</td>
+    </tr><tr style="text-align:center">
+      <td>Observant: Can read lips/+5 passive Investigation and passive Perception</td>
+    </tr><tr style="text-align:center">
       <td>Reliable Talent: Scores at least a 10 on proficient skill and tool check rolls</td>
     </tr><tr style="text-align:center">
-      <td>Second-Story Work: -1' running jump distance</td>
+      <td>Second-Story Work: -3' running jump distance</td>
+    </tr><tr style="text-align:center">
+      <td>Skulker: Can hide when lightly obscured/Ranged miss does not reveal position/Suffers no disadvantage on Perception from dim light</td>
     </tr></table>
 </td>
   </tr></table>
@@ -196,7 +301,7 @@ var attributes = {
     <tr style="text-align:center">
       <td>      <table id="CombatStats" style="width:100%">
       <tr style="text-align:center">
-        <td><b>Hit Points</b>: 36</td>
+        <td><b>Hit Points</b>: 52</td>
         <td><b>Initiative</b>: +5</td>
         <td><b>Armor Class</b>: 14</td>
       </tr></table>
@@ -204,8 +309,8 @@ var attributes = {
     </tr><tr style="text-align:center">
       <td>      <table id="CombatProfs" style="width:100%">
       <tr style="text-align:center">
-        <td><b>Armor Training</b>: Light</td>
-        <td><b>Weapon Proficiency</b>: Finesse Weapons; Light Weapons; Simple Weapons</td>
+        <td><b>Armor Training</b>: Heavy; Light; Medium; Shield</td>
+        <td><b>Weapon Proficiency</b>: Finesse Weapons; Improvised; Light Weapons; Simple Weapons</td>
       </tr></table>
 </td>
     </tr><tr style="text-align:center">
@@ -213,7 +318,7 @@ var attributes = {
       <tr style="text-align:center">
         <td><b>Armor</b>: Padded</td>
         <td><b>Shield</b>: None</td>
-        <td><b>Weapons</b>: Dagger (+6 1d4+3 P R20/60; Nick); Javelin (+6 1d6+3 P R30/120; Slow); Light Hammer (+6 1d4+3 B R20/60; Nick); Unarmed Strike (+6 1+3 B)</td>
+        <td><b>Weapons</b>: Dagger (+7 1d4+4 P R20/60; Nick); Javelin (+7 1d6+4 P R30/120; Slow); Light Hammer (+7 1d4+4 B R20/60; Nick); Unarmed Strike (+7 1+4 B)</td>
       </tr></table>
 </td>
     </tr><tr style="text-align:center">
@@ -231,9 +336,23 @@ var attributes = {
       </tr><tr style="text-align:center">
         <td><i>Dexterity Damage Adjustment: +2</i></td>
       </tr><tr style="text-align:center">
-        <td><i>Strength Attack Adjustment: +3</i></td>
+        <td><i>Heavily Armored: Armor Proficiency (Heavy)</i></td>
       </tr><tr style="text-align:center">
-        <td><i>Strength Damage Adjustment: +3</i></td>
+        <td><i>Lightly Armored: Armor Proficiency (Light)</i></td>
+      </tr><tr style="text-align:center">
+        <td><i>Medium Armor Master: +1 Armor Class in medium armor if Dexterity is at least 16</i></td>
+      </tr><tr style="text-align:center">
+        <td><i>Moderately Armored: Armor Proficiency (Medium/Shield)</i></td>
+      </tr><tr style="text-align:center">
+        <td><i>Strength Attack Adjustment: +4</i></td>
+      </tr><tr style="text-align:center">
+        <td><i>Strength Damage Adjustment: +4</i></td>
+      </tr><tr style="text-align:center">
+        <td><i>Tavern Brawler: Weapon Proficiency (Improvised)/Unarmed attacks inflict 1d4 HP</i></td>
+      </tr><tr style="text-align:center">
+        <td><i>Tough: +16 Hit Points</i></td>
+      </tr><tr style="text-align:center">
+        <td><i>Weapon Master: Weapon Proficiency (Choose 4 from any Simple Weapon, any Martial Weapon)</i></td>
       </tr><tr style="text-align:center">
         <td>Alert: Can swap initiatives with a willing ally</td>
       </tr><tr style="text-align:center">
@@ -247,13 +366,23 @@ var attributes = {
       </tr><tr style="text-align:center">
         <td>Boon Of Irresistible Offense (Dexterity): Bludgeoning, piercing, and slashing damage ignores resistance, and natural 20 hits inflict +15 damage</td>
       </tr><tr style="text-align:center">
-        <td>Boon Of Irresistible Offense (Strength): Bludgeoning, piercing, and slashing damage ignores resistance, and natural 20 hits inflict +16 damage</td>
+        <td>Boon Of Irresistible Offense (Strength): Bludgeoning, piercing, and slashing damage ignores resistance, and natural 20 hits inflict +18 damage</td>
       </tr><tr style="text-align:center">
         <td>Boon Of The Night Spirit: Can use a bonus action to become invisible in dim or no light; taking an action, bonus action, or reaction ends</td>
+      </tr><tr style="text-align:center">
+        <td>Charger: Can use a bonus action after a 10' Dash to attack (+5 damage) or to push 10'</td>
+      </tr><tr style="text-align:center">
+        <td>Crossbow Expert: Ignores the loading quality of proficient crossbows/Suffers no disadvantage on ranged attacks within 5'/Can use a bonus action to make a hand crossbow attack after a one-handed attack</td>
       </tr><tr style="text-align:center">
         <td>Cunning Action: Can use a bonus action to Dash, Disengage, or Hide</td>
       </tr><tr style="text-align:center">
         <td>Cunning Strike: Can reduce Sneak Attack damage to inflict a choice of: poisoned (save Constitution negates; additional saves each rd end) for 1 min (reduces damage by 1d6 HP), prone (save Dexterity negates; Huge and larger targets are unaffected) (reduces damage by 1d6 HP), or to move 15' after attacking without provoking opportunity attacks (reduces damage by 1d6 HP)</td>
+      </tr><tr style="text-align:center">
+        <td>Defensive Duelist: Can use a reaction to gain +3 Armor Class when wielding a proficient finesse weapon</td>
+      </tr><tr style="text-align:center">
+        <td>Dual Wielder: +1 Armor Class when wielding two melee weapons/Can use two-weapon fighting with any one-handed weapons/Can draw or stow two weapons simultaneously</td>
+      </tr><tr style="text-align:center">
+        <td>Durable: Regains a minimum of 2 hit points from a Hit Die roll</td>
       </tr><tr style="text-align:center">
         <td>Fast Hands: Can use a bonus action to disarm a trap, open a lock, pick a pocket, or take a Utilize action</td>
       </tr><tr style="text-align:center">
@@ -261,11 +390,33 @@ var attributes = {
       </tr><tr style="text-align:center">
         <td>Great Weapon Fighting: Can treat 1s and 2s as 3s on two-handed weapon damage</td>
       </tr><tr style="text-align:center">
+        <td>Great Weapon Master: Can use a bonus action to attack after scoring a critical hit or reducing a foe to 0 hit points with a melee weapon/Can make a -5 attack with a heavy weapon to inflict +10 damage</td>
+      </tr><tr style="text-align:center">
+        <td>Heavy Armor Master: Suffers -3 HP damage from nonmagical bludgeoning, piercing, and slashing weapons when wearing heavy armor</td>
+      </tr><tr style="text-align:center">
+        <td>Inspiring Leader: R30' 10-min speech gives 6 allies 11 temporary hit points once per target per short rest</td>
+      </tr><tr style="text-align:center">
+        <td>Lucky: Can gain advantage on an attack, ability check, or save or inflict foe disadvantage an attack on self 3 times per long rest</td>
+      </tr><tr style="text-align:center">
+        <td>Mage Slayer: Can use a reaction to attack an adjacent caster/Foe suffers disadvantage on concentration to maintain a spell in response to a self attack</td>
+      </tr><tr style="text-align:center">
+        <td>Mounted Combatant: Has advantage on melee attacks on an unmounted foe smaller than mount and can redirect attacks on mount to self</td>
+      </tr><tr style="text-align:center">
+        <td>Polearm Master: Can use a bonus action to attack with the butt of a polearm, inflicting 1d4 HP bludgeoning, and a foe entering polearm reach provokes an opportunity attack</td>
+      </tr><tr style="text-align:center">
         <td>Savage Attacker: Can use the better of 2 damage rolls once per turn</td>
+      </tr><tr style="text-align:center">
+        <td>Sentinel: Successful opportunity attacks halt the target/Can take an opportunity attack when a foe uses Disengage/Can use a reaction to attack when an adjacent foe attacks another</td>
+      </tr><tr style="text-align:center">
+        <td>Sharpshooter: Suffers no disadvantage on attacks at long range/Ranged attacks ignore 3/4 cover/Can make a -5 attack with a ranged weapon to inflict +10 damage</td>
+      </tr><tr style="text-align:center">
+        <td>Shield Master: Can use a bonus action to shove the target 5' after an attack</td>
       </tr><tr style="text-align:center">
         <td>Sneak Attack: Once per turn, inflicts +4d6 HP on an attack using a finesse or ranged weapon with advantage or on a foe threatened by another adjacent creature</td>
       </tr><tr style="text-align:center">
         <td>Steady Aim: Can use a bonus action and forego moving to gain advantage on the next attack in the same turn</td>
+      </tr><tr style="text-align:center">
+        <td>Tavern Brawler: Can use a bonus action to grapple after a successful unarmed or improvised attack</td>
       </tr><tr style="text-align:center">
         <td>Two-Weapon Fighting: Adds ability modifier to second weapon damage</td>
       </tr><tr style="text-align:center">
@@ -281,13 +432,21 @@ var attributes = {
     <tr style="text-align:center">
       <td><b>Save Proficiency</b>: Dexterity; Intelligence</td>
     </tr><tr style="text-align:center">
-      <td><b>Save</b>: Charisma: +3; Constitution: +1; Dexterity: +5; Intelligence: +5; Strength: +3; Wisdom: +1</td>
+      <td><b>Save</b>: Charisma: +3; Constitution: +1; Dexterity: +5; Intelligence: +5; Strength: +4; Wisdom: +1</td>
     </tr><tr style="text-align:center">
       <td><b>Save Notes</b>:       <table id="SaveNotes" style="width:100%">
       <tr style="text-align:center">
+        <td><i>Resilient: Save Proficiency (Choose 1 from any)</i></td>
+      </tr><tr style="text-align:center">
         <td>Boon Of The Night Spirit: In dim or no light, has resistance to all damage other than psychic and radiant</td>
       </tr><tr style="text-align:center">
         <td>Evasion: Successful Dexterity saves yield no damage instead of half, and failures yield half damage</td>
+      </tr><tr style="text-align:center">
+        <td>Mage Slayer: Has advantage on saves vs. spells cast by adjacent foes</td>
+      </tr><tr style="text-align:center">
+        <td>Mounted Combatant: Mount suffers no damage on a successful Dexterity save and half on failure</td>
+      </tr><tr style="text-align:center">
+        <td>Shield Master: +0 Dexterity vs. targeted spells and effects, and can use a reaction to suffer no damage instead of half on a successful Dexterity save</td>
       </tr></table>
 </td>
     </tr></table>
@@ -313,11 +472,27 @@ var attributes = {
     <tr style="text-align:center">
       <td>Boon Of Spell Recall: Casting a level 1-4 spell does not use a spell slot if a d4 roll equals the spell level</td>
     </tr><tr style="text-align:center">
+      <td>Elemental Adept (Acid): Spells that inflict acid damage ignore resistance and treat 1s as 2s on damage dice</td>
+    </tr><tr style="text-align:center">
+      <td>Elemental Adept (Cold): Spells that inflict cold damage ignore resistance and treat 1s as 2s on damage dice</td>
+    </tr><tr style="text-align:center">
+      <td>Elemental Adept (Fire): Spells that inflict fire damage ignore resistance and treat 1s as 2s on damage dice</td>
+    </tr><tr style="text-align:center">
+      <td>Elemental Adept (Lightning): Spells that inflict lightning damage ignore resistance and treat 1s as 2s on damage dice</td>
+    </tr><tr style="text-align:center">
+      <td>Elemental Adept (Thunder): Spells that inflict thunder damage ignore resistance and treat 1s as 2s on damage dice</td>
+    </tr><tr style="text-align:center">
       <td>Magic Initiate (Cleric): Knows 2 Cleric cantrips and can cast a chosen C1 spell without expending a spell slot once per long rest</td>
     </tr><tr style="text-align:center">
       <td>Magic Initiate (Druid): Knows 2 Druid cantrips and can cast a chosen D1 spell without expending a spell slot once per long rest</td>
     </tr><tr style="text-align:center">
       <td>Magic Initiate (Wizard): Knows 2 Wizard cantrips and can cast a chosen W1 spell without expending a spell slot once per long rest</td>
+    </tr><tr style="text-align:center">
+      <td>Ritual Caster: Can cast spells of up to level 4 from a ritual book</td>
+    </tr><tr style="text-align:center">
+      <td>Spell Sniper: Can cast attack spells at double normal range/Spells ignore 3/4 cover/Knows an additional attack cantrip</td>
+    </tr><tr style="text-align:center">
+      <td>War Caster: Has advantage on concentration saves to maintain a spell/Can cast when holding a shield or a weapon/Can use a reaction to cast as an opportunity attack in response to movement</td>
     </tr></table>
 </td>
   </tr></table>
@@ -327,19 +502,41 @@ var attributes = {
   <tr style="text-align:center">
     <td>    <table id="ValidationPart" style="width:100%">
     <tr style="text-align:center">
+      <td><b>Validation Warnings</b>:       <table id="SanityNotes" style="width:100%">
+      <tr style="text-align:center">
+        <td>Crossbow Expert Feat: Implies hand crossbow weapon, heavy crossbow weapon or light crossbow weapon</td>
+      </tr><tr style="text-align:center">
+        <td>Shield Master Feat: Implies shield (currently None) != 'None'</td>
+      </tr></table>
+</td>
+    </tr><tr style="text-align:center">
       <td><b>Validation Errors</b>:       <table id="ValidationNotes" style="width:100%">
       <tr style="text-align:center">
+        <td>Ability Boost Allocation: 19 available vs. 12 allocated</td>
+      </tr><tr style="text-align:center">
         <td>Archery Feat: Requires fighting style feature</td>
+      </tr><tr style="text-align:center">
+        <td>Blind Fighting Feat: Requires fighting style feature</td>
       </tr><tr style="text-align:center">
         <td>Boon Of Combat Prowess Feat: Requires level (currently 8) >= 19</td>
       </tr><tr style="text-align:center">
         <td>Boon Of Dimensional Travel Feat: Requires level (currently 8) >= 19</td>
       </tr><tr style="text-align:center">
+        <td>Boon Of Energy Resistance Feat: Requires level (currently 8) >= 19</td>
+      </tr><tr style="text-align:center">
         <td>Boon Of Fate Feat: Requires level (currently 8) >= 19</td>
+      </tr><tr style="text-align:center">
+        <td>Boon Of Fortitude Feat: Requires level (currently 8) >= 19</td>
       </tr><tr style="text-align:center">
         <td>Boon Of Irresistible Offense (Dexterity) Feat: Requires level (currently 8) >= 19</td>
       </tr><tr style="text-align:center">
         <td>Boon Of Irresistible Offense (Strength) Feat: Requires level (currently 8) >= 19</td>
+      </tr><tr style="text-align:center">
+        <td>Boon Of Recovery Feat: Requires level (currently 8) >= 19</td>
+      </tr><tr style="text-align:center">
+        <td>Boon Of Skill Feat: Requires level (currently 8) >= 19</td>
+      </tr><tr style="text-align:center">
+        <td>Boon Of Speed Feat: Requires level (currently 8) >= 19</td>
       </tr><tr style="text-align:center">
         <td>Boon Of Spell Recall Feat: Requires level (currently 8) >= 19 and spellcasting feature</td>
       </tr><tr style="text-align:center">
@@ -349,11 +546,37 @@ var attributes = {
       </tr><tr style="text-align:center">
         <td>Defense Feat: Requires fighting style feature</td>
       </tr><tr style="text-align:center">
-        <td>Feat Allocation: 3 available vs. 20 allocated</td>
+        <td>Dueling Feat: Requires fighting style feature</td>
+      </tr><tr style="text-align:center">
+        <td>Elemental Adept (Acid) Feat: Requires level (currently 8) >= 4 and spellcasting feature or pact magic feature</td>
+      </tr><tr style="text-align:center">
+        <td>Elemental Adept (Cold) Feat: Requires level (currently 8) >= 4 and spellcasting feature or pact magic feature</td>
+      </tr><tr style="text-align:center">
+        <td>Elemental Adept (Fire) Feat: Requires level (currently 8) >= 4 and spellcasting feature or pact magic feature</td>
+      </tr><tr style="text-align:center">
+        <td>Elemental Adept (Lightning) Feat: Requires level (currently 8) >= 4 and spellcasting feature or pact magic feature</td>
+      </tr><tr style="text-align:center">
+        <td>Elemental Adept (Thunder) Feat: Requires level (currently 8) >= 4 and spellcasting feature or pact magic feature</td>
+      </tr><tr style="text-align:center">
+        <td>Feat Allocation: 3 available vs. 82 allocated</td>
       </tr><tr style="text-align:center">
         <td>Great Weapon Fighting Feat: Requires fighting style feature</td>
       </tr><tr style="text-align:center">
+        <td>Interception Feat: Requires fighting style feature</td>
+      </tr><tr style="text-align:center">
+        <td>Protection Feat: Requires fighting style feature</td>
+      </tr><tr style="text-align:center">
+        <td>Spell Sniper Feat: Requires level (currently 8) >= 4 and spellcasting feature or pact magic feature</td>
+      </tr><tr style="text-align:center">
+        <td>Thrown Weapon Fighting Feat: Requires fighting style feature</td>
+      </tr><tr style="text-align:center">
         <td>Two-Weapon Fighting Feat: Requires fighting style feature</td>
+      </tr><tr style="text-align:center">
+        <td>Unarmed Fighting Feat: Requires fighting style feature</td>
+      </tr><tr style="text-align:center">
+        <td>War Caster Feat: Requires level (currently 8) >= 4 and spellcasting feature or pact magic feature</td>
+      </tr><tr style="text-align:center">
+        <td>Weapon Proficiency Allocation: 4 available vs. 0 allocated</td>
       </tr></table>
 </td>
     </tr></table>
