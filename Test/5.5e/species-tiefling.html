@@ -76,7 +76,7 @@ var attributes = {
       <td>      <table id="FeatStats" style="width:100%">
       <tr style="text-align:center">
         <td><b>Feat Count</b>: Fighting Style; General</td>
-        <td><b>Selectable Feature Count</b>: Fighter (Fighter Primary Ability); Fighter (Fighter Subclass); Tiefling (Fiendish Legacy)</td>
+        <td><b>Selectable Feature Count</b>: Fighter (Fighter Primary Ability); Fighter (Fighter Subclass); Tiefling (Fiendish Legacy); Tiefling (Tiefling Spellcasting Ability)</td>
       </tr></table>
 </td>
     </tr><tr style="text-align:center">
@@ -98,6 +98,8 @@ var attributes = {
         <td><i>Fighter Subclass: 1 selection</i></td>
       </tr><tr style="text-align:center">
         <td><i>Fighting Style: +1 Fighting Style Feat</i></td>
+      </tr><tr style="text-align:center">
+        <td><i>Tiefling Spellcasting Ability: 1 selection</i></td>
       </tr><tr style="text-align:center">
         <td>Darkvision: R60' Sees one light level better</td>
       </tr></table>
@@ -247,39 +249,37 @@ var attributes = {
   </tr><tr style="text-align:center">
     <td><b>Spells</b>:     <table id="Spells" style="width:100%">
     <tr style="text-align:left">
-      <td>Chill Touch (Chthonic0 [Chthonic] Necr): Touch inflicts 2d10 HP necrotic and target cannot regain hit points until the end of the next turn</td>
+      <td>Chill Touch (Tiefling0 [Chthonic] Necr): Touch inflicts 2d10 HP necrotic and target cannot regain hit points until the end of the next turn</td>
     </tr><tr style="text-align:left">
-      <td>Darkness (Infernal2 [Infernal] Evoc): R60' Target centers a 15' radius lightless area for concentration up to 10 min</td>
+      <td>Darkness (Tiefling2 [Infernal] Evoc): R60' Target centers a 15' radius lightless area for concentration up to 10 min</td>
     </tr><tr style="text-align:left">
-      <td>False Life (Chthonic1 [Chthonic] Necr): Self gains 2d4+4 temporary hit points [+Level gives +5 temporary hit points]</td>
+      <td>False Life (Tiefling1 [Chthonic] Necr): Self gains 2d4+4 temporary hit points [+Level gives +5 temporary hit points]</td>
     </tr><tr style="text-align:left">
-      <td>Fire Bolt (Infernal0 [Infernal] Evoc): R120' Ranged spell inflicts 2d10 HP fire or ignites an unattended flammable target</td>
+      <td>Fire Bolt (Tiefling0 [Infernal] Evoc): R120' Ranged spell inflicts 2d10 HP fire or ignites an unattended flammable target</td>
     </tr><tr style="text-align:left">
-      <td>Hellish Rebuke (Infernal1 [Infernal] Evoc): R60' Cast as a reaction, inflicts 2d10 HP fire on a successful attacker (save Dexterity half) [+Level inflicts +1d10 HP]</td>
+      <td>Hellish Rebuke (Tiefling1 [Infernal] Evoc): R60' Cast as a reaction, inflicts 2d10 HP fire on a successful attacker (save Dexterity half) [+Level inflicts +1d10 HP]</td>
     </tr><tr style="text-align:left">
-      <td>Hold Person (Abyssal2 [Abyssal] Ench): R60' Inflicts paralyzed (save Wisdom negates; additional saves each rd end) for concentration up to 1 min [+Level affects +1 target]</td>
+      <td>Hold Person (Tiefling2 [Abyssal] Ench): R60' Inflicts paralyzed (save Wisdom negates; additional saves each rd end) for concentration up to 1 min [+Level affects +1 target]</td>
     </tr><tr style="text-align:left">
-      <td>Poison Spray (Abyssal0 [Abyssal] Necr): R30' Ranged spell inflicts 2d12 HP poison</td>
+      <td>Poison Spray (Tiefling0 [Abyssal] Necr): R30' Ranged spell inflicts 2d12 HP poison</td>
     </tr><tr style="text-align:left">
-      <td>Ray Of Enfeeblement (Chthonic2 [Chthonic] Necr): R60' Ranged spell inflicts disadvantage on Strength checks and -1d8 damage with Strength weapons (save Constitution disadvantage on the first attack before the start of the next turn only; additional saves each rd ends) for concentration up to 1 min</td>
+      <td>Ray Of Enfeeblement (Tiefling2 [Chthonic] Necr): R60' Ranged spell inflicts disadvantage on Strength checks and -1d8 damage with Strength weapons (save Constitution disadvantage on the first attack before the start of the next turn only; additional saves each rd ends) for concentration up to 1 min</td>
     </tr><tr style="text-align:left">
-      <td>Ray Of Sickness (Abyssal1 [Abyssal] Necr): R60' Ranged spell inflicts 2d8 HP poison and poisoned until the end of the next turn [+Level inflicts +1d8 HP]</td>
+      <td>Ray Of Sickness (Tiefling1 [Abyssal] Necr): R60' Ranged spell inflicts 2d8 HP poison and poisoned until the end of the next turn [+Level inflicts +1d8 HP]</td>
     </tr><tr style="text-align:left">
-      <td>Thaumaturgy (Otherworldly Presence0 [Otherworldly Presence] Tran): R30' Creates a minor magic effect: a booming voice for 1 min; a modification of flames for 1 min; harmless ground tremors for 1 min; an illusory sound; movement of a door or window; a change in eye appearance for 1 min</td>
+      <td>Thaumaturgy (Tiefling0 [Otherworldly Presence] Tran): R30' Creates a minor magic effect: a booming voice for 1 min; a modification of flames for 1 min; harmless ground tremors for 1 min; an illusory sound; movement of a door or window; a change in eye appearance for 1 min</td>
     </tr></table>
 </td>
   </tr><tr style="text-align:center">
     <td><b>Magic Notes</b>:     <table id="MagicNotes" style="width:100%">
     <tr style="text-align:center">
-      <td>Abyssal: Knows the <i>Poison Spray</i> cantrip and can cast <i>Ray Of Sickness</i> and <i>Hold Person</i> without expending a spell slot once per long rest</td>
+      <td>Abyssal: Can cast <i>Ray Of Sickness</i> and <i>Hold Person</i> without expending a spell slot once per long rest</td>
     </tr><tr style="text-align:center">
-      <td>Chthonic: Knows the <i>Chill Touch</i> cantrip and can cast <i>False Life</i> and <i>Ray Of Enfeeblement</i> without expending a spell slot once per long rest</td>
+      <td>Chthonic: Can cast <i>False Life</i> and <i>Ray Of Enfeeblement</i> without expending a spell slot once per long rest</td>
     </tr><tr style="text-align:center">
-      <td>Infernal: Knows the <i>Fire Bolt</i> cantrip and can cast <i>Hellish Rebuke</i> and <i>Darkness</i> without expending a spell slot once per long rest</td>
+      <td>Infernal: Can cast <i>Hellish Rebuke</i> and <i>Darkness</i> without expending a spell slot once per long rest</td>
     </tr><tr style="text-align:center">
       <td>Magic Initiate (Cleric): Knows 2 Cleric cantrips and can cast a chosen C1 spell without expending a spell slot once per long rest</td>
-    </tr><tr style="text-align:center">
-      <td>Otherworldly Presence: Knows the <i>Thaumaturgy</i> cantrip</td>
     </tr></table>
 </td>
   </tr></table>
@@ -289,7 +289,7 @@ var attributes = {
   <tr style="text-align:center">
     <td>    <table id="ValidationPart" style="width:100%">
     <tr style="text-align:center">
-      <td><b>Validation Errors</b>: Selectable Feature Allocation: 3 available vs. 6 allocated</td>
+      <td><b>Validation Errors</b>: Selectable Feature Allocation: 4 available vs. 6 allocated</td>
     </tr></table>
 </td>
   </tr></table>
