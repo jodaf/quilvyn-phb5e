@@ -3,15 +3,15 @@
 <html lang="en">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-  <title>Background-Merchant</title>
+  <title>Background-Noble</title>
   <script>
 var attributes = {
-  "_path":"ztest/5.5e/background/merchant", 
+  "_path":"ztest/5.5e/background/noble", 
   "abilityBoosts.Constitution":2, "abilityBoosts.Dexterity":1, "alignment":"Chaotic Good", 
-  "armor":"Scale Mail", "background":"Merchant", "charisma":11, "constitution":11, "deity":"None", 
+  "armor":"Scale Mail", "background":"Noble", "charisma":11, "constitution":11, "deity":"None", 
   "dexterity":14, "experience":158, "feats.Archery":1, "feats.Magic Initiate (Wizard)":1, 
   "gender":"Female", "hitPoints":6, "intelligence":16, "languagesChosen.Elvish":1, 
-  "languagesChosen.Halfling":1, "levels.Fighter":1, "name":"Background-Merchant", 
+  "languagesChosen.Halfling":1, "levels.Fighter":1, "name":"Background-Noble", 
   "selectableFeatures.Fighter - Strength":1, "shield":"Shield", "skillsChosen.Animal Handling":1, 
   "skillsChosen.Persuasion":1, "skillsChosen.Sleight Of Hand":1, "species":"Human", "strength":13, 
   "weapons.Battleaxe":1, "weapons.Longsword":1, "weapons.Scimitar":1, "wisdom":11
@@ -21,7 +21,7 @@ var attributes = {
 <body>
 <table id="_top" style="border:1px solid black; width:100%">
 <tr style="text-align:center">
-  <td style="border:1px solid black"><b>Background-Merchant</b> — <b>Female</b> <b>Human</b> <b>Fighter</b></td>
+  <td style="border:1px solid black"><b>Background-Noble</b> — <b>Female</b> <b>Human</b> <b>Fighter</b></td>
 </tr><tr style="text-align:center">
   <td style="border:1px solid black">  <table id="Attributes" style="width:100%">
   <tr style="text-align:center">
@@ -38,7 +38,7 @@ var attributes = {
   </tr><tr style="text-align:center">
     <td>    <table id="Description" style="width:100%">
     <tr style="text-align:center">
-      <td><b>Background</b>: Merchant</td>
+      <td><b>Background</b>: Noble</td>
       <td><b>Alignment</b>: Chaotic Good</td>
       <td><b>Deity</b>: None</td>
     </tr></table>
@@ -77,7 +77,7 @@ var attributes = {
         <td><b>Feats</b>: Archery; Magic Initiate (Wizard)</td>
         <td><b>Human Features</b>: Resourceful; Skillful; Versatile</td>
         <td><b>Fighter Features</b>: Armor Training (Light; Medium; Heavy; Shield); Fighter Primary Ability; Fighting Style; Save Proficiency (Strength; Constitution); Second Wind; Skill Proficiency (Choose 2 from Acrobatics, Animal Handling, Athletics, History, Insight, Intimidation, Persuasion; Perception, Survival); Strength; Weapon Mastery; Weapon Proficiency (Simple Weapons; Martial Weapons)</td>
-        <td><b>Merchant Features</b>: Ability Boost (Choose 3 from Constitution, Intelligence, Charisma); Lucky; Skill Proficiency (Animal Handling; Persuasion); Tool Proficiency (Navigator's Tools)</td>
+        <td><b>Noble Features</b>: Ability Boost (Choose 3 from Strength, Intelligence, Charisma); Skill Proficiency (History; Persuasion); Skilled; Tool Proficiency (Choose 1 from any Gaming Set)</td>
       </tr></table>
 </td>
     </tr><tr style="text-align:center">
@@ -120,15 +120,13 @@ var attributes = {
       <td>Nature: (int) +3</td>
       <td>Stealth: (dex) +2</td>
     </tr><tr style="text-align:left">
-      <td>History: (int) +3</td>
+      <td>History: (int) +5</td>
       <td>Perception: (wis) +0</td>
       <td>Survival: (wis) +0</td>
     </tr></table>
 </td>
   </tr><tr style="text-align:center">
-    <td><b>Skill Proficiency</b>: Animal Handling; Perception, Survival; Persuasion; Sleight Of Hand</td>
-  </tr><tr style="text-align:center">
-    <td><b>Tool Proficiency</b>: Navigator's Tools:  (wis)</td>
+    <td><b>Skill Proficiency</b>: Animal Handling; History; Perception, Survival; Persuasion; Sleight Of Hand</td>
   </tr><tr style="text-align:center">
     <td><b>Languages</b>: Common; Elvish; Halfling</td>
   </tr><tr style="text-align:center">
@@ -185,8 +183,6 @@ var attributes = {
       </tr><tr style="text-align:center">
         <td>Archery: +2 ranged attacks</td>
       </tr><tr style="text-align:center">
-        <td>Lucky: Can gain advantage on an attack, ability check, or save or inflict foe disadvantage an attack on self 3 times per long rest</td>
-      </tr><tr style="text-align:center">
         <td>Second Wind: Can use a bonus action to regain 1d10+1 hit points 2 times per long rest; regains 1 use after a short rest</td>
       </tr><tr style="text-align:center">
         <td>Weapon Mastery: Can use the mastery properties of 3 chosen kinds of proficient weapons</td>
@@ -220,6 +216,22 @@ var attributes = {
 </td>
   </tr><tr style="text-align:center">
     <td><b>Magic Notes</b>: Magic Initiate (Wizard): Knows 2 Wizard cantrips and can cast a chosen W1 spell without expending a spell slot once per long rest</td>
+  </tr></table>
+</td>
+</tr><tr style="text-align:center">
+  <td style="border:1px solid black"><b>Notes</b><br/>  <table id="NotesArea" style="width:100%">
+  <tr style="text-align:center">
+    <td>    <table id="ValidationPart" style="width:100%">
+    <tr style="text-align:center">
+      <td><b>Validation Errors</b>:       <table id="ValidationNotes" style="width:100%">
+      <tr style="text-align:center">
+        <td>Skill And Tool Proficiency Allocation: 4 available vs. 3 allocated</td>
+      </tr><tr style="text-align:center">
+        <td>Tool Proficiency Allocation: 1 available vs. 0 allocated</td>
+      </tr></table>
+</td>
+    </tr></table>
+</td>
   </tr></table>
 </td>
 </tr></table>

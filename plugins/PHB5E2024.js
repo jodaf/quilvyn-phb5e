@@ -131,7 +131,7 @@ PHB5E2024.BACKGROUNDS_ADDED = {
       '"Shortbow","20 Arrows","Cartographer\'s Tools","Bedroll","Quiver",' +
       '"Tent","Traveler\'s Clothes","3 GP" ' +
     'Features=' +
-      '"1:Ability Boost (Choose 3 from Dexterity, Constitution, Charisma)",' +
+      '"1:Ability Boost (Choose 3 from Dexterity, Constitution, Wisdom)",' +
       '"1:Skill Proficiency (Stealth; Survival)",' +
       '"1:Tool Proficiency (Cartographer\'s Tools)",' +
       '"1:Magic Initiate (Druid)"',
@@ -145,6 +145,14 @@ PHB5E2024.BACKGROUNDS_ADDED = {
       '"1:Tool Proficiency (Herbalism Kit)",' +
       '"1:Healer"',
   'Merchant':
+    'Equipment=' +
+      '"Navigator\'s Tools","2 Pouches","Traveler\'s Clothes","22 GP" ' +
+    'Features=' +
+      '"1:Ability Boost (Choose 3 from Constitution, Intelligence, Charisma)",' +
+      '"1:Skill Proficiency (Animal Handling; Persuasion)",' +
+      '"1:Tool Proficiency (Navigator\'s Tools)",' +
+      '"1:Lucky"',
+  'Noble':
     'Equipment=' +
       '"Gaming Set","Fine Clothes","Perfume","29 GP" ' +
     'Features=' +
