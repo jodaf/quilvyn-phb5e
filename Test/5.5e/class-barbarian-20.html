@@ -8,7 +8,7 @@
 var attributes = {
   "_path":"ztest/5.5e/class/barbarian 20", 
   "abilityBoosts.Charisma":2, "abilityBoosts.Constitution":1, "abilityBoosts.Intelligence":1, 
-  "abilityBoosts.Strength":1, "abilityBoosts.Wisdom":2, "alignment":"Lawful Evil", "armor":"None", 
+  "abilityBoosts.Strength":1, "abilityBoosts.Wisdom":3, "alignment":"Lawful Evil", "armor":"None", 
   "background":"Acolyte", "charisma":15, "constitution":8, "deity":"None", "dexterity":12, 
   "experience":604997, "feats.Ability Score Improvement":1, "feats.Alert":1, 
   "feats.Boon Of Dimensional Travel":1, "feats.Durable":1, "feats.Grappler":1, "feats.Mage Slayer":1, 
@@ -35,7 +35,7 @@ var attributes = {
       <td><b>Dexterity</b>: 12 (+1)</td>
       <td><b>Constitution</b>: 14 (+2)</td>
       <td><b>Intelligence</b>: 15 (+2)</td>
-      <td><b>Wisdom</b>: 12 (+1)</td>
+      <td><b>Wisdom</b>: 13 (+1)</td>
       <td><b>Charisma</b>: 17 (+3)</td>
     </tr></table>
 </td>
@@ -50,7 +50,7 @@ var attributes = {
   </tr><tr style="text-align:center">
     <td>    <table id="AbilityStats" style="width:100%">
     <tr style="text-align:center">
-      <td><b>Ability Boosts</b>: Charisma: 2; Constitution: 1; Intelligence: 1; Strength: 1; Wisdom: 2</td>
+      <td><b>Ability Boosts</b>: Charisma: 2; Constitution: 1; Intelligence: 1; Strength: 1; Wisdom: 3</td>
       <td><b>Experience</b>: 604997/1000000</td>
       <td><b>Level</b>: 20</td>
       <td><b>Size</b>: Medium</td>
@@ -71,9 +71,11 @@ var attributes = {
     </tr><tr style="text-align:center">
       <td><i>Grappler: Ability Boost (Choose 1 from Strength, Dexterity)</i></td>
     </tr><tr style="text-align:center">
+      <td><i>Mage Slayer: Ability Boost (Choose 1 from Strength, Dexterity)</i></td>
+    </tr><tr style="text-align:center">
       <td><i>Primal Champion: +4 Strength/+4 Constitution</i></td>
     </tr><tr style="text-align:center">
-      <td>Ability Boosts: 7 to distribute</td>
+      <td>Ability Boosts: 8 to distribute</td>
     </tr><tr style="text-align:center">
       <td>Indomitable Might: Scores a minimum of 20 on Strength checks</td>
     </tr><tr style="text-align:center">
@@ -229,7 +231,7 @@ var attributes = {
       </tr><tr style="text-align:center">
         <td>Divine Fury: First hit each turn during rage inflicts +1d6+10 HP of a choice of necrotic or radiant</td>
       </tr><tr style="text-align:center">
-        <td>Durable: Regains a minimum of 4 hit points from a Hit Die roll</td>
+        <td>Durable: Can use a bonus action to regain hit points from a Hit Die roll</td>
       </tr><tr style="text-align:center">
         <td>Extra Attack: Can make 2 attacks during an Attack action</td>
       </tr><tr style="text-align:center">
@@ -243,7 +245,7 @@ var attributes = {
       </tr><tr style="text-align:center">
         <td>Intimidating Presence: R30' Can use a bonus action to inflict frightened (DC 19 Wisdom negates; additional saves each rd end) on targets for 1 min once per long rest; can expend uses of Rage for additional uses</td>
       </tr><tr style="text-align:center">
-        <td>Mage Slayer: Can use a reaction to attack an adjacent caster/Foe suffers disadvantage on concentration to maintain a spell in response to a self attack</td>
+        <td>Mage Slayer: Attacks inflict disadvantage on concentration to maintain a spell</td>
       </tr><tr style="text-align:center">
         <td>Persistent Rage: Can recover all uses of Rage during initiative once per long rest and can continue raging without taking any action</td>
       </tr><tr style="text-align:center">
@@ -259,7 +261,7 @@ var attributes = {
       </tr><tr style="text-align:center">
         <td>Retaliation: Can use a reaction to make a melee attack on a successful adjacent attacker</td>
       </tr><tr style="text-align:center">
-        <td>Savage Attacker: Can use the better of 2 damage rolls once per turn</td>
+        <td>Savage Attacker: Can take the better of 2 damage rolls once per turn</td>
       </tr><tr style="text-align:center">
         <td>Travel Along The Tree: Can teleport 60' when entering rage and as a bonus action each rd during rage; can instead teleport 150' along with 6 willing targets within 10' once per rage</td>
       </tr><tr style="text-align:center">
@@ -285,9 +287,11 @@ var attributes = {
       <tr style="text-align:center">
         <td>Danger Sense: Has advantage on Dexterity saves</td>
       </tr><tr style="text-align:center">
+        <td>Durable: Has advantage on death saves</td>
+      </tr><tr style="text-align:center">
         <td>Fanatical Focus: Can reroll a failed save with a +4 bonus once per rage</td>
       </tr><tr style="text-align:center">
-        <td>Mage Slayer: Has advantage on saves vs. spells cast by adjacent foes</td>
+        <td>Mage Slayer: Can turn a failed Intelligence, Wisdom, or Charisma save into a success once per short rest</td>
       </tr><tr style="text-align:center">
         <td>Mindless Rage: Has immunity to charmed and frightened during rage</td>
       </tr><tr style="text-align:center">

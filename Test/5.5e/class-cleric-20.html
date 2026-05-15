@@ -7,7 +7,7 @@
   <script>
 var attributes = {
   "_path":"ztest/5.5e/class/cleric 20", 
-  "abilityBoosts.Dexterity":1, "abilityBoosts.Intelligence":2, "abilityBoosts.Wisdom":2, 
+  "abilityBoosts.Dexterity":1, "abilityBoosts.Intelligence":2, "abilityBoosts.Wisdom":3, 
   "alignment":"Neutral", "armor":"Leather", "background":"Sage", "charisma":12, "constitution":16, 
   "deity":"None", "dexterity":12, "experience":689118, "feats.Ability Score Improvement":1, 
   "feats.Alert":1, "feats.Boon Of Irresistible Offense (Strength)":1, "feats.Durable":1, 
@@ -46,7 +46,7 @@ var attributes = {
       <td><b>Dexterity</b>: 13 (+1)</td>
       <td><b>Constitution</b>: 17 (+3)</td>
       <td><b>Intelligence</b>: 8 (-1)</td>
-      <td><b>Wisdom</b>: 18 (+4)</td>
+      <td><b>Wisdom</b>: 19 (+4)</td>
       <td><b>Charisma</b>: 12 (+1)</td>
     </tr></table>
 </td>
@@ -61,7 +61,7 @@ var attributes = {
   </tr><tr style="text-align:center">
     <td>    <table id="AbilityStats" style="width:100%">
     <tr style="text-align:center">
-      <td><b>Ability Boosts</b>: Dexterity: 1; Intelligence: 2; Wisdom: 2</td>
+      <td><b>Ability Boosts</b>: Dexterity: 1; Intelligence: 2; Wisdom: 3</td>
       <td><b>Experience</b>: 689118/1000000</td>
       <td><b>Level</b>: 20</td>
       <td><b>Size</b>: Medium</td>
@@ -78,7 +78,9 @@ var attributes = {
     </tr><tr style="text-align:center">
       <td><i>Durable: +1 Constitution</i></td>
     </tr><tr style="text-align:center">
-      <td>Ability Boosts: 5 to distribute</td>
+      <td><i>Mage Slayer: Ability Boost (Choose 1 from Strength, Dexterity)</i></td>
+    </tr><tr style="text-align:center">
+      <td>Ability Boosts: 6 to distribute</td>
     </tr></table>
 </td>
   </tr></table>
@@ -230,7 +232,7 @@ var attributes = {
       </tr><tr style="text-align:center">
         <td>Divine Strike: Weapon inflicts +2d8 HP of a choice of necrotic or radiant once per turn</td>
       </tr><tr style="text-align:center">
-        <td>Durable: Regains a minimum of 6 hit points from a Hit Die roll</td>
+        <td>Durable: Can use a bonus action to regain hit points from a Hit Die roll</td>
       </tr><tr style="text-align:center">
         <td>Guided Strike: Can use Channel Divinity after a failed attack to add +10 to the roll, or as a reaction to add +10 to a failed attack roll of an ally within 30'</td>
       </tr><tr style="text-align:center">
@@ -238,9 +240,9 @@ var attributes = {
       </tr><tr style="text-align:center">
         <td>Invoke Duplicity: R30' Can use Channel Divinity to create an illusionary duplicate for concentration up to 1 min, gaining the ability to use it for remote spellcasting and advantage on attacks when self and the duplicate are each adjacent to the target; can use a bonus action each rd to move the duplicate up to 30', to a maximum of 120' away</td>
       </tr><tr style="text-align:center">
-        <td>Mage Slayer: Can use a reaction to attack an adjacent caster/Foe suffers disadvantage on concentration to maintain a spell in response to a self attack</td>
+        <td>Mage Slayer: Attacks inflict disadvantage on concentration to maintain a spell</td>
       </tr><tr style="text-align:center">
-        <td>Savage Attacker: Can use the better of 2 damage rolls once per turn</td>
+        <td>Savage Attacker: Can take the better of 2 damage rolls once per turn</td>
       </tr><tr style="text-align:center">
         <td>Sear Undead: Successful Turn Undead also inflicts 4d8 HP radiant</td>
       </tr><tr style="text-align:center">
@@ -266,7 +268,9 @@ var attributes = {
       <tr style="text-align:center">
         <td>Avatar Of Battle: Has resistance to bludgeoning, piercing, and slashing</td>
       </tr><tr style="text-align:center">
-        <td>Mage Slayer: Has advantage on saves vs. spells cast by adjacent foes</td>
+        <td>Durable: Has advantage on death saves</td>
+      </tr><tr style="text-align:center">
+        <td>Mage Slayer: Can turn a failed Intelligence, Wisdom, or Charisma save into a success once per short rest</td>
       </tr></table>
 </td>
     </tr></table>

@@ -26,9 +26,9 @@ var attributes = {
   "spells.Modify Memory(W5 Ench)":1, "spells.Plane Shift(W7 Conj)":1, "spells.Poison Spray(W0 Conj)":1, 
   "spells.Protection From Energy(W3 Abju)":1, "spells.Ray Of Frost(W0 Evoc)":1, "spells.Rope Trick(W2 Tran)":1, 
   "spells.Scrying(W5 Divi)":1, "spells.Teleportation Circle(W5 Conj)":1, "spells.True Strike(W0 Divi)":1, 
-  "spells.Unseen Servant(W1 Conj)":1, "strength":11, "toolsChosen.Herbalism Kit":1, 
-  "toolsChosen.Painter's Supplies":1, "toolsChosen.Three-Dragon Ante Set":1, "weapons.Mace":1, 
-  "weapons.Shortbow":1, "weapons.Sling":1, "wisdom":9
+  "spells.Unseen Servant(W1 Conj)":1, "strength":11, "toolsChosen.Bagpipes":1, "toolsChosen.Herbalism Kit":1, 
+  "toolsChosen.Lute":1, "toolsChosen.Painter's Supplies":1, "toolsChosen.Three-Dragon Ante Set":1, 
+  "toolsChosen.Viol":1, "weapons.Mace":1, "weapons.Shortbow":1, "weapons.Sling":1, "wisdom":9
 };
   </script>
 </head>
@@ -115,8 +115,6 @@ var attributes = {
       </tr><tr style="text-align:center">
         <td><i>Wizard Subclass: 1 selection</i></td>
       </tr><tr style="text-align:center">
-        <td>Musician: TODO</td>
-      </tr><tr style="text-align:center">
         <td>Resourceful: Gains Heroic Inspiration at the end of a long rest</td>
       </tr></table>
 </td>
@@ -158,17 +156,21 @@ var attributes = {
   </tr><tr style="text-align:center">
     <td><b>Expertise</b>: Nature</td>
   </tr><tr style="text-align:center">
-    <td><b>Tool Proficiency</b>: Calligrapher's Supplies:  (dex); Herbalism Kit:  (int); Painter's Supplies:  (wis); Three-Dragon Ante Set:  (wis)</td>
+    <td><b>Tool Proficiency</b>: Bagpipes:  (cha); Calligrapher's Supplies:  (dex); Herbalism Kit:  (int); Lute:  (cha); Painter's Supplies:  (wis); Three-Dragon Ante Set:  (wis); Viol:  (cha)</td>
   </tr><tr style="text-align:center">
     <td><b>Languages</b>: Abyssal; Celestial; Common</td>
   </tr><tr style="text-align:center">
     <td><b>Skill Notes</b>:     <table id="SkillNotes" style="width:100%">
     <tr style="text-align:center">
+      <td><i>Musician: Tool Proficiency (Choose 3 from any Musical Instrument)</i></td>
+    </tr><tr style="text-align:center">
       <td><i>Scholar: Has expertise in a choice of proficient Arcana, History, Investigation, Medicine, Nature, or Religion</i></td>
     </tr><tr style="text-align:center">
       <td><i>Skilled: Skill Proficiency or Tool Proficiency (Choose 3 from any)</i></td>
     </tr><tr style="text-align:center">
       <td><i>Skillful: Skill Proficiency (Choose 1 from any)</i></td>
+    </tr><tr style="text-align:center">
+      <td>Musician: Can give Heroic Inspiration to 6 allies at the end of a rest</td>
     </tr></table>
 </td>
   </tr></table>
@@ -216,11 +218,11 @@ var attributes = {
       </tr><tr style="text-align:center">
         <td>Boon Of The Night Spirit: Can use a bonus action to become invisible in dim or no light; taking an action, bonus action, or reaction ends</td>
       </tr><tr style="text-align:center">
-        <td>Durable: Regains a minimum of 2 hit points from a Hit Die roll</td>
+        <td>Durable: Can use a bonus action to regain hit points from a Hit Die roll</td>
       </tr><tr style="text-align:center">
         <td>Grappler: Can both Damage and Grapple with an unarmed strike once per turn, has advantage on attacks on a grappled foe, and can move at full speed with a grappled foe of Medium size or smaller</td>
       </tr><tr style="text-align:center">
-        <td>Savage Attacker: Can use the better of 2 damage rolls once per turn</td>
+        <td>Savage Attacker: Can take the better of 2 damage rolls once per turn</td>
       </tr></table>
 </td>
     </tr></table>
@@ -235,6 +237,8 @@ var attributes = {
       <td><b>Save Notes</b>:       <table id="SaveNotes" style="width:100%">
       <tr style="text-align:center">
         <td>Boon Of The Night Spirit: In dim or no light, has resistance to all damage other than psychic and radiant</td>
+      </tr><tr style="text-align:center">
+        <td>Durable: Has advantage on death saves</td>
       </tr><tr style="text-align:center">
         <td>Spell Resistance: Has advantage vs. spells and resistance to spell damage</td>
       </tr></table>

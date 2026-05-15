@@ -21,18 +21,18 @@ var attributes = {
   "selectableFeatures.Sorcerer - Seeking Spell":1, "selectableFeatures.Sorcerer - Subtle Spell":1, 
   "selectableFeatures.Sorcerer - Transmuted Spell":1, "selectableFeatures.Sorcerer - Twinned Spell":1, 
   "selectableFeatures.Sorcerer - Wild Magic Sorcery":1, "shield":"None", "skillsChosen.Animal Handling":1, "skillsChosen.Arcana":1, 
-  "skillsChosen.Deception":1, "skillsChosen.Insight":1, "skillsChosen.Medicine":1, 
-  "skillsChosen.Religion":1, "species":"Human", "spells.Acid Splash(S0 Evoc)":1, 
-  "spells.Charm Monster(S4 Ench)":1, "spells.Chill Touch(S0 Necr)":1, "spells.Cloudkill(S5 Conj)":1, 
-  "spells.Cone Of Cold(S5 Evoc)":1, "spells.Darkvision(S2 Tran)":1, "spells.Detect Magic(S1 Divi)":1, 
-  "spells.Dimension Door(S4 Conj)":1, "spells.Disguise Self(S1 Illu)":1, "spells.Earthquake(S8 Tran)":1, 
-  "spells.Feather Fall(S1 Tran)":1, "spells.Fireball(S3 Evoc)":1, "spells.Gate(S9 Conj)":1, 
-  "spells.Greater Invisibility(S4 Illu)":1, "spells.Mending(S0 Tran)":1, "spells.Minor Illusion(S0 Illu)":1, 
-  "spells.Move Earth(S6 Tran)":1, "spells.Poison Spray(S0 Necr)":1, "spells.Prismatic Spray(S7 Evoc)":1, 
-  "spells.Ray Of Frost(S0 Evoc)":1, "spells.Ray Of Sickness(S1 Necr)":1, "spells.Scorching Ray(S2 Evoc)":1, 
-  "spells.Spider Climb(S2 Tran)":1, "spells.Stinking Cloud(S3 Conj)":1, "spells.Water Breathing(S3 Tran)":1, 
-  "strength":16, "weapons.Club":1, "weapons.Light Crossbow":1, "weapons.Shortbow":1, 
-  "wisdom":14
+  "skillsChosen.Deception":1, "skillsChosen.Insight":1, "skillsChosen.Religion":1, "species":"Human", 
+  "spells.Acid Splash(S0 Evoc)":1, "spells.Charm Monster(S4 Ench)":1, "spells.Chill Touch(S0 Necr)":1, 
+  "spells.Cloudkill(S5 Conj)":1, "spells.Cone Of Cold(S5 Evoc)":1, "spells.Darkvision(S2 Tran)":1, 
+  "spells.Detect Magic(S1 Divi)":1, "spells.Dimension Door(S4 Conj)":1, "spells.Disguise Self(S1 Illu)":1, 
+  "spells.Earthquake(S8 Tran)":1, "spells.Feather Fall(S1 Tran)":1, "spells.Fireball(S3 Evoc)":1, 
+  "spells.Gate(S9 Conj)":1, "spells.Greater Invisibility(S4 Illu)":1, "spells.Mending(S0 Tran)":1, 
+  "spells.Minor Illusion(S0 Illu)":1, "spells.Move Earth(S6 Tran)":1, "spells.Poison Spray(S0 Necr)":1, 
+  "spells.Prismatic Spray(S7 Evoc)":1, "spells.Ray Of Frost(S0 Evoc)":1, "spells.Ray Of Sickness(S1 Necr)":1, 
+  "spells.Scorching Ray(S2 Evoc)":1, "spells.Spider Climb(S2 Tran)":1, "spells.Stinking Cloud(S3 Conj)":1, 
+  "spells.Water Breathing(S3 Tran)":1, "strength":16, "toolsChosen.Dulcimer":1, "toolsChosen.Pan Flute":1, 
+  "toolsChosen.Shawm":1, "toolsChosen.Viol":1, "weapons.Club":1, "weapons.Light Crossbow":1, 
+  "weapons.Shortbow":1, "wisdom":14
 };
   </script>
 </head>
@@ -125,8 +125,6 @@ var attributes = {
       </tr><tr style="text-align:center">
         <td>Clockwork Spells: Displays a physical manifestation of Clockwork Soul</td>
       </tr><tr style="text-align:center">
-        <td>Musician: TODO</td>
-      </tr><tr style="text-align:center">
         <td>Resourceful: Gains Heroic Inspiration at the end of a long rest</td>
       </tr><tr style="text-align:center">
         <td>Revelation In Flesh: Can use a bonus action and spend 1 sorcery point to see invisible creatures within 60' for 10 min</td>
@@ -155,7 +153,7 @@ var attributes = {
       <td>Religion: (int) +6</td>
     </tr><tr style="text-align:left">
       <td>Athletics: (str) +3</td>
-      <td>Medicine: (wis) +8</td>
+      <td>Medicine: (wis) +2</td>
       <td>Sleight Of Hand: (dex) +0</td>
     </tr><tr style="text-align:left">
       <td>Deception: (cha) +8</td>
@@ -168,19 +166,23 @@ var attributes = {
     </tr></table>
 </td>
   </tr><tr style="text-align:center">
-    <td><b>Skill Proficiency</b>: Animal Handling; Arcana; Deception; Insight; Medicine; Religion</td>
+    <td><b>Skill Proficiency</b>: Animal Handling; Arcana; Deception; Insight; Religion</td>
   </tr><tr style="text-align:center">
-    <td><b>Tool Proficiency</b>: Calligrapher's Supplies:  (dex)</td>
+    <td><b>Tool Proficiency</b>: Calligrapher's Supplies:  (dex); Dulcimer:  (cha); Pan Flute:  (cha); Shawm:  (cha); Viol:  (cha)</td>
   </tr><tr style="text-align:center">
     <td><b>Languages</b>: Common; Dwarvish; Elvish</td>
   </tr><tr style="text-align:center">
     <td><b>Skill Notes</b>:     <table id="SkillNotes" style="width:100%">
     <tr style="text-align:center">
+      <td><i>Musician: Tool Proficiency (Choose 3 from any Musical Instrument)</i></td>
+    </tr><tr style="text-align:center">
       <td><i>Skilled: Skill Proficiency or Tool Proficiency (Choose 3 from any)</i></td>
     </tr><tr style="text-align:center">
       <td><i>Skillful: Skill Proficiency (Choose 1 from any)</i></td>
     </tr><tr style="text-align:center">
       <td>Boon Of Truesight: Has 60' Truesight</td>
+    </tr><tr style="text-align:center">
+      <td>Musician: Can give Heroic Inspiration to 6 allies at the end of a rest</td>
     </tr><tr style="text-align:center">
       <td>Telepathic Speech: R30' Can use a bonus action to gain telepathic communication with the target in a shared language while within 2 miles for 20 min</td>
     </tr></table>
@@ -232,13 +234,13 @@ var attributes = {
       </tr><tr style="text-align:center">
         <td>Bend Luck: Can spend 1 sorcery point to add or subtract 1d4 from a target attack, ability check, or save</td>
       </tr><tr style="text-align:center">
-        <td>Durable: Regains a minimum of 6 hit points from a Hit Die roll</td>
+        <td>Durable: Can use a bonus action to regain hit points from a Hit Die roll</td>
       </tr><tr style="text-align:center">
         <td>Grappler: Can both Damage and Grapple with an unarmed strike once per turn, has advantage on attacks on a grappled foe, and can move at full speed with a grappled foe of Medium size or smaller</td>
       </tr><tr style="text-align:center">
         <td>Restore Balance: R60' Can cancel a target's advantage or disadvantage on a roll 2 times per long rest</td>
       </tr><tr style="text-align:center">
-        <td>Savage Attacker: Can use the better of 2 damage rolls once per turn</td>
+        <td>Savage Attacker: Can take the better of 2 damage rolls once per turn</td>
       </tr><tr style="text-align:center">
         <td>Tides Of Chaos: Can gain advantage on an attack, ability check, or save once per long rest; subsequently using a spell slot to cast a Sorcerer spell before a long rest automatically causes a Wild Magic Surge and allows an additional use</td>
       </tr><tr style="text-align:center">
@@ -256,6 +258,8 @@ var attributes = {
     </tr><tr style="text-align:center">
       <td><b>Save Notes</b>:       <table id="SaveNotes" style="width:100%">
       <tr style="text-align:center">
+        <td>Durable: Has advantage on death saves</td>
+      </tr><tr style="text-align:center">
         <td>Elemental Affinity: Has resistance to a choice of acid, cold, fire, lightning, or poison</td>
       </tr><tr style="text-align:center">
         <td>Psychic Defenses: Has resistance to psychic damage and advantage vs. charmed and frightened</td>

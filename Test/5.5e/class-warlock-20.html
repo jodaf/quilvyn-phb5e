@@ -35,8 +35,9 @@ var attributes = {
   "skillsChosen.Performance":1, "species":"Human", "spells.Contact Other Plane(K5 Divi)":1, 
   "spells.Dream(K5 Illu)":1, "spells.Eldritch Blast(K0 Evoc)":1, "spells.Hold Monster(K5 Ench)":1, 
   "spells.Mage Hand(K0 Conj)":1, "spells.Poison Spray(K0 Conj)":1, "spells.Scrying(K5 Divi)":1, 
-  "spells.True Strike(K0 Divi)":1, "strength":12, "toolsChosen.Carpenter's Tools":1, 
-  "toolsChosen.Cartographer's Tools":1, "weapons.Dagger":1, "weapons.Sickle":1, "weapons.Sling":1, "wisdom":7
+  "spells.True Strike(K0 Divi)":1, "strength":12, "toolsChosen.Bagpipes":1, "toolsChosen.Carpenter's Tools":1, 
+  "toolsChosen.Cartographer's Tools":1, "toolsChosen.Drum":1, "toolsChosen.Shawm":1, "weapons.Dagger":1, 
+  "weapons.Sickle":1, "weapons.Sling":1, "wisdom":7
 };
   </script>
 </head>
@@ -131,8 +132,6 @@ var attributes = {
       </tr><tr style="text-align:center">
         <td>Devil's Sight: R120' Sees normally in darkness</td>
       </tr><tr style="text-align:center">
-        <td>Musician: TODO</td>
-      </tr><tr style="text-align:center">
         <td>Resourceful: Gains Heroic Inspiration at the end of a long rest</td>
       </tr></table>
 </td>
@@ -172,17 +171,21 @@ var attributes = {
   </tr><tr style="text-align:center">
     <td><b>Skill Proficiency</b>: Athletics; Insight; Intimidation; Nature; Performance; Religion</td>
   </tr><tr style="text-align:center">
-    <td><b>Tool Proficiency</b>: Calligrapher's Supplies:  (dex); Carpenter's Tools:  (str); Cartographer's Tools:  (wis)</td>
+    <td><b>Tool Proficiency</b>: Bagpipes:  (cha); Calligrapher's Supplies:  (dex); Carpenter's Tools:  (str); Cartographer's Tools:  (wis); Drum:  (cha); Shawm:  (cha)</td>
   </tr><tr style="text-align:center">
     <td><b>Languages</b>: Abyssal; Common; Infernal</td>
   </tr><tr style="text-align:center">
     <td><b>Skill Notes</b>:     <table id="SkillNotes" style="width:100%">
     <tr style="text-align:center">
+      <td><i>Musician: Tool Proficiency (Choose 3 from any Musical Instrument)</i></td>
+    </tr><tr style="text-align:center">
       <td><i>Skilled: Skill Proficiency or Tool Proficiency (Choose 3 from any)</i></td>
     </tr><tr style="text-align:center">
       <td><i>Skillful: Skill Proficiency (Choose 1 from any)</i></td>
     </tr><tr style="text-align:center">
       <td>Awakened Mind: R30' Can use a bonus action to establish telepathic communication in a shared language with the target while within 3 miles for 20 minutes</td>
+    </tr><tr style="text-align:center">
+      <td>Musician: Can give Heroic Inspiration to 6 allies at the end of a rest</td>
     </tr><tr style="text-align:center">
       <td>Witch Sight: Has 30' Truesight</td>
     </tr></table>
@@ -245,7 +248,7 @@ var attributes = {
       </tr><tr style="text-align:center">
         <td>Dark One's Blessing: Reducing a foe to 0 hit points gives self 23 temporary hit points; others reducing a foe within 10' to 0 hit points gives self the same benefit</td>
       </tr><tr style="text-align:center">
-        <td>Durable: Regains a minimum of 2 hit points from a Hit Die roll</td>
+        <td>Durable: Can use a bonus action to regain hit points from a Hit Die roll</td>
       </tr><tr style="text-align:center">
         <td>Eldritch Smite: Can expend a spell slot upon a pact weapon hit to inflict +1d8 HP force plus +1d8 HP force per slot level and to inflict prone on a Huge or smaller target</td>
       </tr><tr style="text-align:center">
@@ -261,7 +264,7 @@ var attributes = {
       </tr><tr style="text-align:center">
         <td>Psychic Spells: Can inflict psychic damage instead of normal spell damage, and can cast enchantment and illusion spells without verbal or somatic components</td>
       </tr><tr style="text-align:center">
-        <td>Savage Attacker: Can use the better of 2 damage rolls once per turn</td>
+        <td>Savage Attacker: Can take the better of 2 damage rolls once per turn</td>
       </tr><tr style="text-align:center">
         <td>Searing Vengeance: R60' Can cancel a creature's death saving throw, restore half its maximum hit points, allow it to stand, and inflict 2d8+3 HP radiant and blindness for 1 rd on chosen targets within 30' of it once per long rest</td>
       </tr><tr style="text-align:center">
@@ -282,6 +285,8 @@ var attributes = {
         <td>Beguiling Defenses: Has immunity to charmed</td>
       </tr><tr style="text-align:center">
         <td>Boon Of The Night Spirit: In dim or no light, has resistance to all damage other than psychic and radiant</td>
+      </tr><tr style="text-align:center">
+        <td>Durable: Has advantage on death saves</td>
       </tr><tr style="text-align:center">
         <td>Eldritch Mind: Has advantage on Constitution saves to maintain concentration</td>
       </tr><tr style="text-align:center">

@@ -13,8 +13,9 @@ var attributes = {
   "hitPoints":6, "intelligence":16, "languagesChosen.Elvish":1, "languagesChosen.Halfling":1, 
   "levels.Fighter":1, "name":"Background-Artisan", "selectableFeatures.Fighter - Strength":1, 
   "shield":"Shield", "skillsChosen.Animal Handling":1, "skillsChosen.Persuasion":1, 
-  "skillsChosen.Sleight Of Hand":1, "species":"Human", "strength":13, "weapons.Battleaxe":1, 
-  "weapons.Longsword":1, "weapons.Scimitar":1, "wisdom":11
+  "skillsChosen.Sleight Of Hand":1, "species":"Human", "strength":13, "toolsChosen.Mason's Tools":1, 
+  "toolsChosen.Painter's Supplies":1, "toolsChosen.Potter's Tools":1, "toolsChosen.Weaver's Tools":1, 
+  "weapons.Battleaxe":1, "weapons.Longsword":1, "weapons.Scimitar":1, "wisdom":11
 };
   </script>
 </head>
@@ -89,8 +90,6 @@ var attributes = {
       </tr><tr style="text-align:center">
         <td><i>Versatile: +1 Origin Feat</i></td>
       </tr><tr style="text-align:center">
-        <td>Crafter: TODO</td>
-      </tr><tr style="text-align:center">
         <td>Resourceful: Gains Heroic Inspiration at the end of a long rest</td>
       </tr></table>
 </td>
@@ -130,13 +129,19 @@ var attributes = {
   </tr><tr style="text-align:center">
     <td><b>Skill Proficiency</b>: Animal Handling; Investigation; Perception, Survival; Persuasion; Sleight Of Hand</td>
   </tr><tr style="text-align:center">
+    <td><b>Tool Proficiency</b>: Mason's Tools:  (str); Painter's Supplies:  (wis); Potter's Tools:  (int); Weaver's Tools:  (dex)</td>
+  </tr><tr style="text-align:center">
     <td><b>Languages</b>: Common; Elvish; Halfling</td>
   </tr><tr style="text-align:center">
     <td><b>Skill Notes</b>:     <table id="SkillNotes" style="width:100%">
     <tr style="text-align:center">
+      <td><i>Crafter: Tool Proficiency (Choose 3 from Carpenter's Tools, Leatherworker's Tools, Mason's Tools, Potter's Tools, Smith's Tools, Tinker's Tools, Weaver's Tools, Woodcarver's Tools)</i></td>
+    </tr><tr style="text-align:center">
       <td><i>Skillful: Skill Proficiency (Choose 1 from any)</i></td>
     </tr><tr style="text-align:center">
       <td>Bulky Armor: Has disadvantage on Stealth</td>
+    </tr><tr style="text-align:center">
+      <td>Crafter: Can buy nonmagical items at a 20% discount/Can use a crafter tool to build an item at the end of a long rest that lasts until the next long rest</td>
     </tr></table>
 </td>
   </tr></table>
@@ -183,7 +188,7 @@ var attributes = {
       </tr><tr style="text-align:center">
         <td>Archery: +2 ranged attacks</td>
       </tr><tr style="text-align:center">
-        <td>Savage Attacker: Can use the better of 2 damage rolls once per turn</td>
+        <td>Savage Attacker: Can take the better of 2 damage rolls once per turn</td>
       </tr><tr style="text-align:center">
         <td>Second Wind: Can use a bonus action to regain 1d10+1 hit points 2 times per long rest; regains 1 use after a short rest</td>
       </tr><tr style="text-align:center">
@@ -198,22 +203,6 @@ var attributes = {
       <td><b>Save Proficiency</b>: Constitution; Strength</td>
     </tr><tr style="text-align:center">
       <td><b>Save</b>: Charisma: +1; Constitution: +2; Dexterity: +2; Intelligence: +3; Strength: +3; Wisdom: +1</td>
-    </tr></table>
-</td>
-  </tr></table>
-</td>
-</tr><tr style="text-align:center">
-  <td style="border:1px solid black"><b>Notes</b><br/>  <table id="NotesArea" style="width:100%">
-  <tr style="text-align:center">
-    <td>    <table id="ValidationPart" style="width:100%">
-    <tr style="text-align:center">
-      <td><b>Validation Errors</b>:       <table id="ValidationNotes" style="width:100%">
-      <tr style="text-align:center">
-        <td>Skill And Tool Proficiency Allocation: 4 available vs. 3 allocated</td>
-      </tr><tr style="text-align:center">
-        <td>Tool Proficiency Allocation: 1 available vs. 0 allocated</td>
-      </tr></table>
-</td>
     </tr></table>
 </td>
   </tr></table>
