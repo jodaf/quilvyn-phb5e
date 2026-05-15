@@ -1534,8 +1534,11 @@ PHB5E.FEATURES_ADDED = {
       '"Can use a bonus action to grapple after a successful unarmed or improvised attack"',
   'Tough':'Section=combat Note="+%{level*2} Hit Points"',
   'War Caster':
-    'Section=magic ' +
-    'Note="Has advantage on concentration saves to maintain a spell/Can cast when holding a shield or a weapon/Can use a reaction to cast as an opportunity attack in response to movement"',
+    'Section=combat,magic,save ' +
+    'Note=' +
+      '"Can use a reaction to cast a spell instead of making an opportunity attack in response to movement",' +
+      '"Can cast spells when holding a shield and weapons",' +
+      '"Has advantage on concentration saves to maintain a spell"',
   'Weapon Master':
     'Section=ability,combat ' +
     'Note=' +
@@ -2103,9 +2106,6 @@ PHB5E.featRulesExtra = function(rules, name) {
   } else if(name == 'Tavern Brawler') {
     rules.defineRule
       ('weapons.Unarmed Strike.2', 'combatNotes.tavernBrawler', '^=', '"1d4"');
-  } else if(name == 'Weapon Master') {
-    rules.defineRule
-      ('weaponChoiceCount', 'combatNotes.weaponMaster', '+=', '4');
   }
 
 };

@@ -641,8 +641,14 @@ PHB5E2024.FEATS_ADDED = {
   'Telekinetic (Wisdom)':
     Tasha.FEATS['Telekinetic (Wisdom)'] + ' ' +
     'Category=General Require="level >= 4"',
-  'Telepathic':
-    Tasha.FEATS.Telepathic + ' ' +
+  'Telepathic (Charisma)':
+    Tasha.FEATS['Telepathic (Charisma)'] + ' ' +
+    'Category=General Require="level >= 4"',
+  'Telepathic (Intelligence)':
+    Tasha.FEATS['Telepathic (Intelligence)'] + ' ' +
+    'Category=General Require="level >= 4"',
+  'Telepathic (Wisdom)':
+    Tasha.FEATS['Telepathic (Wisdom)'] + ' ' +
     'Category=General Require="level >= 4"',
   'War Caster':
     PHB5E.FEATS['War Caster'] + ' ' +
@@ -1592,9 +1598,16 @@ PHB5E2024.FEATURES_ADDED = {
   'Telekinetic (Charisma)':Tasha.FEATURES['Telekinetic (Charisma)'],
   'Telekinetic (Intelligence)':Tasha.FEATURES['Telekinetic (Intelligence)'],
   'Telekinetic (Wisdom)':Tasha.FEATURES['Telekinetic (Wisdom)'],
-  'Telepathic':Tasha.FEATURES.Telepathic,
-  'War Caster':PHB5E.FEATURES['War Caster'],
-  'Weapon Master':PHB5E.FEATURES['Weapon Master'],
+  'Telepathic (Charisma)':Tasha.FEATURES['Telepathic (Charisma)'],
+  'Telepathic (Intelligence)':Tasha.FEATURES['Telepathic (Intelligence)'],
+  'Telepathic (Wisdom)':Tasha.FEATURES['Telepathic (Wisdom)'],
+  'War Caster':
+    PHB5E.FEATURES['War Caster']
+    .replace('Section=', 'Section=ability,')
+    .replace('Note=', 'Note="Ability Boost (Choose 1 from Intelligence, Wisdom, Charisma)",'),
+  'Weapon Master':
+  PHB5E.FEATURES['Weapon Master']
+  .replace(/Weapon Prof[^"]*/, 'Can use the mastery property of a proficient weapon chosen at the end of a long rest'),
 
   'Blind Fighting':'Section=feature Note="TODO"',
   'Dueling':'Section=feature Note="TODO"',
@@ -1933,9 +1946,6 @@ PHB5E2024.featRulesExtra = function(rules, name) {
   } else if(name == 'Tavern Brawler') {
     rules.defineRule
       ('weapons.Unarmed Strike.2', 'combatNotes.tavernBrawler', '^=', '"1d4"');
-  } else if(name == 'Weapon Master') {
-    rules.defineRule
-      ('weaponChoiceCount', 'combatNotes.weaponMaster', '+=', '4');
   }
 
 };
