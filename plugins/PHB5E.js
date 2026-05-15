@@ -501,11 +501,11 @@ PHB5E.DEITIES_ADDED = {
 };
 PHB5E.DEITIES = Object.assign({}, SRD5E.DEITIES, PHB5E.DEITIES_ADDED);
 PHB5E.FEATS_ADDED = {
+  'Actor':
+    '',
   'Alert':
     '',
   'Athlete':
-    '',
-  'Actor':
     '',
   'Charger':
     '',
@@ -575,7 +575,17 @@ PHB5E.FEATS_ADDED = {
     '',
   'Polearm Master':
     '',
-  'Resilient':
+  'Resilient (Charisma)':
+    '',
+  'Resilient (Constitution)':
+    '',
+  'Resilient (Dexterity)':
+    '',
+  'Resilient (Intelligence)':
+    '',
+  'Resilient (Strength)':
+    '',
+  'Resilient (Wisdom)':
     '',
   'Ritual Caster':
     'Require="intelligence >= 13 || wisdom >= 13"',
@@ -1316,7 +1326,7 @@ PHB5E.FEATURES_ADDED = {
     'Section=ability,skill ' +
     'Note=' +
       '"+1 Charisma",' +
-      '"Has advantage on Deception and Performance to impersonate another person and can mimic others\' speech or sounds"',
+      '"Has advantage on Deception and Performance to impersonate another person and can mimic others\' speech or sounds (successful Insight vs. Deception detects)"',
   'Alert':
     'Section=combat,combat ' +
     'Note=' +
@@ -1335,7 +1345,7 @@ PHB5E.FEATURES_ADDED = {
     'Note="Ignores the loading quality of proficient crossbows/Suffers no disadvantage on ranged attacks within 5\'/Can use a bonus action to make a hand crossbow attack after a one-handed attack"',
   'Defensive Duelist':
     'Section=combat ' +
-    'Note="Can use a reaction to gain +%{proficiencyBonus} Armor Class when wielding a proficient finesse weapon"',
+    'Note="Can use a reaction when hit while wielding a proficient finesse weapon to gain +%{proficiencyBonus} Armor Class vs. the attack"',
   'Dual Wielder':
     'Section=combat ' +
     'Note="+1 Armor Class when wielding two melee weapons/Can use two-weapon fighting with any one-handed weapons/Can draw or stow two weapons simultaneously"',
@@ -1380,7 +1390,7 @@ PHB5E.FEATURES_ADDED = {
     'Section=ability,combat ' +
     'Note=' +
       '"+1 Strength",' +
-      '"Suffers -3 HP damage from nonmagical bludgeoning, piercing, and slashing weapons when wearing heavy armor"',
+      '"Suffers -3 HP from nonmagical bludgeoning, piercing, and slashing attacks when wearing heavy armor"',
   'Inspiring Leader':
     'Section=combat ' +
     'Note="R30\' 10-min speech gives 6 allies %{level+charismaModifier} temporary hit points once per target per short rest"',
@@ -1406,7 +1416,7 @@ PHB5E.FEATURES_ADDED = {
   'Mage Slayer':
     'Section=combat,save ' +
     'Note=' +
-      '"Can use a reaction to attack an adjacent caster/Foe suffers disadvantage on concentration to maintain a spell in response to a self attack",' +
+      '"Can use a reaction to attack an adjacent caster/Attacks inflict disadvantage on concentration to maintain a spell",' +
       '"Has advantage on saves vs. spells cast by adjacent foes"',
   'Magic Initiate (Bard)':
     'Section=Magic ' +
@@ -1443,12 +1453,12 @@ PHB5E.FEATURES_ADDED = {
     'Section=ability,combat ' +
     'Note=' +
       '"Ability Boost (Choose 1 from Dexterity, Strength)",' +
-      '"Armor Proficiency (Medium/Shield)"',
+      '"Armor Proficiency (Medium; Shield)"',
   'Mounted Combatant':
     'Section=combat,save ' +
     'Note=' +
-      '"Has advantage on melee attacks on an unmounted foe smaller than mount and can redirect attacks on mount to self",' +
-      '"Mount suffers no damage on a successful Dexterity save and half on failure"',
+      '"Has advantage on melee attacks on unmounted foes smaller than mount and can redirect attacks on mount to self",' +
+      '"Mount\'s successful Dexterity saves yield no damage instead of half, and failed saves yield half damage"',
   'Observant':
     'Section=ability,skill ' +
     'Note=' +
@@ -1456,43 +1466,71 @@ PHB5E.FEATURES_ADDED = {
       '"Can read lips/+5 passive Investigation and passive Perception"',
   'Polearm Master':
     'Section=combat ' +
-    'Note="Can use a bonus action to attack with the butt of a polearm, inflicting 1d4 HP bludgeoning, and a foe entering polearm reach provokes an opportunity attack"',
-  'Resilient':
+    'Note="Can use a bonus action after attacking with a polearm to attack with the opposite end, inflicting 1d4 HP bludgeoning/Can make an opportunity attack against a foe who enters polearm reach"',
+  'Resilient (Charisma)':
     'Section=ability,save ' +
     'Note=' +
-      '"Ability Boost (Choose 1 from any)",' +
-      '"Save Proficiency (Choose 1 from any)"',
+      '"+1 Charisma",' +
+      '"Save Proficiency (Charisma)"',
+  'Resilient (Constitution)':
+    'Section=ability,save ' +
+    'Note=' +
+      '"+1 Constitution",' +
+      '"Save Proficiency (Constitution)"',
+  'Resilient (Dexterity)':
+    'Section=ability,save ' +
+    'Note=' +
+      '"+1 Dexterity",' +
+      '"Save Proficiency (Dexterity)"',
+  'Resilient (Intelligence)':
+    'Section=ability,save ' +
+    'Note=' +
+      '"+1 Intelligence",' +
+      '"Save Proficiency (Intelligence)"',
+  'Resilient (Strength)':
+    'Section=ability,save ' +
+    'Note=' +
+      '"+1 Strength",' +
+      '"Save Proficiency (Strength)"',
+  'Resilient (Wisdom)':
+    'Section=ability,save ' +
+    'Note=' +
+      '"+1 Wisdom",' +
+      '"Save Proficiency (Wisdom)"',
   'Ritual Caster':
     'Section=magic ' +
     'Note="Can cast spells of up to level %{(level+1)//2} from a ritual book"',
   'Savage Attacker':
     'Section=combat ' +
-    'Note="Can take the best of two melee damage rolls once per rd"',
+    'Note="Can take the better of 2 melee damage rolls once per turn"',
   'Sentinel':
     'Section=combat ' +
-    'Note="Successful opportunity attacks halt the target/Can take an opportunity attack when a foe uses Disengage/Can use a reaction to attack when an adjacent foe attacks another"',
+    'Note="Successful opportunity attacks halt the target/Can make an opportunity attack when a foe uses Disengage and use a reaction to attack when an adjacent foe attacks another"',
   'Sharpshooter':
     'Section=combat ' +
-    'Note="Suffers no disadvantage on attacks at long range/Ranged attacks ignore 3/4 cover/Can make a -5 attack with a ranged weapon to inflict +10 damage"',
+    'Note="Suffers no disadvantage on ranged attacks at long range/Ranged attacks ignore 3/4 cover/Can make a -5 attack with a ranged weapon to inflict +10 damage"',
   'Shield Master':
     'Section=combat,save ' +
     'Note=' +
-      '"Can use a bonus action to shove the target 5\' after an attack",' +
-      '"+%{shieldACBonus} Dexterity vs. targeted spells and effects, and can use a reaction to suffer no damage instead of half on a successful Dexterity save"',
-  // TODO or Tools
-  'Skilled':'Section=skill Note="Skill Proficiency (Choose 3 from any)"',
-  'Skulker':
+      '"While holding a shield, can use a bonus action after taking an Attack action to inflict a 5\' push",' +
+      '"+%{shieldACBonus} Dexterity vs. targeted spells and effects while holding a shield, and can use a reaction with a shield to suffer no damage instead of half on a successful Dexterity save"',
+  'Skilled':
     'Section=skill ' +
-    'Note="Can hide when lightly obscured/Ranged miss does not reveal position/Suffers no disadvantage on Perception from dim light"',
+    'Note="Skill Proficiency or Tool Proficiency (Choose %V from any)"',
+  'Skulker':
+    'Section=combat,skill ' +
+    'Note=' +
+      '"Ranged miss does not reveal position",' +
+      '"Can hide when lightly obscured/Suffers no disadvantage on Perception from dim light"',
   'Spell Sniper':
     'Section=magic ' +
     'Note="Can cast attack spells at double normal range/Spells ignore 3/4 cover/Knows an additional attack cantrip"',
   'Tavern Brawler':
-    'Section=Ability,Combat,Combat ' +
+    'Section=ability,combat,combat ' +
     'Note=' +
       '"Ability Boost (Choose 1 from Constitution, Strength)",' +
       // errata removes Unarmed Strike proficiency
-      '"Weapon Proficiency (Improvised)/Unarmed attacks inflict 1d4 HP",' +
+      '"Weapon Proficiency (Improvised Weapons)/Unarmed Strike inflicts 1d4 HP",' +
       '"Can use a bonus action to grapple after a successful unarmed or improvised attack"',
   'Tough':'Section=combat Note="+%{level*2} Hit Points"',
   'War Caster':
@@ -2044,6 +2082,24 @@ PHB5E.featRulesExtra = function(rules, name) {
       'dexterity', '?', 'source >= 16',
       'armorCategory', '=', 'source == "Medium" ? 1 : null'
     );
+  } else if(name == 'Skilled') {
+    rules.defineRule('skillNotes.skilled', 'feats.Skilled', '=', 'source * 3');
+    // Since the proficiencies from Skilled can be applied to either skills or
+    // tools, we no longer have a fixed allocation for either. Instead, the
+    // choice count for each represents a minimum allocation, and the sum of
+    // the two, plus the value of skillNotes.skilled, is a fixed allocation
+    // that can be tested.
+    rules.defineRule
+      ('validationNotes.skillProficiencyAllocation', 'feats.Skilled', 'v', '0');
+    rules.defineRule
+      ('validationNotes.toolProficiencyAllocation', 'feats.Skilled', 'v', '0');
+    rules.defineRule('skillAndToolChoiceCount',
+      'skillChoiceCount', '+=', null,
+      'toolChoiceCount', '+=', null,
+      'skillNotes.skilled', '+=', null
+    );
+    QuilvynRules.validAllocationRules
+      (rules, 'skillAndToolProficiency', 'skillAndToolChoiceCount', 'Sum "^skillsChosen\\.|toolsChosen\\."');
   } else if(name == 'Tavern Brawler') {
     rules.defineRule
       ('weapons.Unarmed Strike.2', 'combatNotes.tavernBrawler', '^=', '"1d4"');
@@ -2074,11 +2130,11 @@ PHB5E.ruleNotes = function() {
   return '' +
     '<h2>D&D 5E Quilvyn Plugin Notes</h2>\n' +
     'D&D 5E Quilvyn Plugin Version ' + PHB5E.VERSION + '\n' +
-    '<h3>Limitations</h3>\n' +
+    '<h3>Usage Notes</h3>\n' +
     '<ul>\n' +
     '  <li>\n' +
-    '  Quilvyn allows proficiencies from the PHB Skilled feat to be applied\n' +
-    '  only to skills, rather than skills or tools.\n' +
+    '  Quilvyn allows the Skilled feat to be taken multiple times, adding 3\n' +
+    '  skill or tool proficiencies for each.\n' +
     '  </li>\n' +
     '</ul>\n' +
     '<h3>Copyrights and Licensing</h3>\n' +

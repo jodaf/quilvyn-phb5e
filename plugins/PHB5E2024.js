@@ -461,115 +461,195 @@ for(let c in PHB5E2024.CLASSES_SELECTABLES_ADDED)
 PHB5E2024.DEITIES = Object.assign({}, SRD5E2024.DEITIES);
 PHB5E2024.FEATS_ADDED = {
 
-  'Crafter':'Category=Origin',
+  'Crafter':'Category=Origin', // new
   'Healer':PHB5E.FEATS.Healer + ' Category=Origin',
   'Lucky':PHB5E.FEATS.Lucky + ' Category=Origin',
-  'Musician':'Category=Origin',
+  'Musician':'Category=Origin', // new
   'Tavern Brawler':PHB5E.FEATS['Tavern Brawler'] + ' Category=Origin',
   'Tough':PHB5E.FEATS.Tough + ' Category=Origin',
 
-  'Actor':PHB5E.FEATS.Actor + ' ' +
+  'Actor':
+    PHB5E.FEATS.Actor + ' ' +
     'Category=General Require="level >= 4","charisma >= 13"',
-  'Athlete':PHB5E.FEATS.Athlete + ' ' +
+  'Athlete':
+    PHB5E.FEATS.Athlete + ' ' +
     'Category=General Require="level >= 4","strength >= 13 || dexterity >= 13"',
-  'Charger':PHB5E.FEATS.Charger + ' ' +
+  'Charger':
+    PHB5E.FEATS.Charger + ' ' +
     'Category=General Require="level >= 4","strength >= 13 || dexterity >= 13"',
-  'Chef':Tasha.FEATS.Chef.replace('Type', 'Category') + ' Require="level >= 4"',
-  'Crossbow Expert':PHB5E.FEATS['Crossbow Expert'] + ' ' +
+  'Chef':
+    Tasha.FEATS.Chef + ' ' +
+    'Category=General Require="level >= 4"',
+  'Crossbow Expert':
+    PHB5E.FEATS['Crossbow Expert'] + ' ' +
     'Category=General Require="level >= 4","dexterity >= 13"',
   'Crusher':
-    Tasha.FEATS.Crusher.replace('Type', 'Category') + ' Require="level >= 4"',
-  'Defensive Duelist':PHB5E.FEATS['Defensive Duelist'] + ' ' +
+    Tasha.FEATS.Crusher + ' ' +
+    'Category=General Require="level >= 4"',
+  'Defensive Duelist':
+    PHB5E.FEATS['Defensive Duelist'] + ' ' +
     'Category=General Require="level >= 4","dexterity >= 13"',
-  'Dual Wielder':PHB5E.FEATS['Dual Wielder'] + ' ' +
+  'Dual Wielder':
+    PHB5E.FEATS['Dual Wielder'] + ' ' +
     'Category=General Require="level >= 4","strength >= 13 || dexterity >= 13"',
-  'Durable':PHB5E.FEATS.Durable + ' Category=General Require="level >= 4"',
-  'Elemental Adept (Acid)':PHB5E.FEATS['Elemental Adept (Acid)'] + ' ' +
+  'Durable':
+    PHB5E.FEATS.Durable + ' ' +
+    'Category=General Require="level >= 4"',
+  'Elemental Adept (Acid)':
+    PHB5E.FEATS['Elemental Adept (Acid)'] + ' ' +
     'Category=General ' +
     'Require="level >= 4","features.Spellcasting || features.Pact Magic"',
   'Elemental Adept (Cold)':PHB5E.FEATS['Elemental Adept (Cold)'] + ' ' +
     'Category=General ' +
     'Require="level >= 4","features.Spellcasting || features.Pact Magic"',
-  'Elemental Adept (Fire)':PHB5E.FEATS['Elemental Adept (Fire)'] + ' ' +
+  'Elemental Adept (Fire)':
+    PHB5E.FEATS['Elemental Adept (Fire)'] + ' ' +
     'Category=General ' +
     'Require="level >= 4","features.Spellcasting || features.Pact Magic"',
-  'Elemental Adept (Lightning)':PHB5E.FEATS['Elemental Adept (Lightning)'] + ' ' +
+  'Elemental Adept (Lightning)':
+    PHB5E.FEATS['Elemental Adept (Lightning)'] + ' ' +
     'Category=General ' +
     'Require="level >= 4","features.Spellcasting || features.Pact Magic"',
-  'Elemental Adept (Thunder)':PHB5E.FEATS['Elemental Adept (Thunder)'] + ' ' +
+  'Elemental Adept (Thunder)':
+    PHB5E.FEATS['Elemental Adept (Thunder)'] + ' ' +
     'Category=General ' +
     'Require="level >= 4","features.Spellcasting || features.Pact Magic"',
-  'Fey-Touched':
-    Tasha.FEATS['Fey Touched'].replace('Type', 'Category') + ' ' +
-    'Require="level >= 4"',
-  'Great Weapon Master':PHB5E.FEATS['Great Weapon Master'] + ' ' +
-    'Category=General Require="level >= 4","strength >= 13"',
-  'Heavily Armored':PHB5E.FEATS['Heavily Armored'] + ' ' +
-    'Category=General Require="level >= 4","armorProficiency.Medium"',
-  'Heavy Armor Master':PHB5E.FEATS['Heavy Armor Master'] + ' ' +
-    'Category=General Require="level >= 4","armorProficiency.Heavy"',
-  'Inspiring Leader':PHB5E.FEATS['Inspiring Leader'] + ' ' +
-    'Category=General Require="level >= 4","wisdom > 13 || charisma >= 13"',
-  'Keen Mind':PHB5E.FEATS['Keen Mind'] + ' ' +
-    'Category=General Require="level >= 4","intelligence >= 13"',
-  'Lightly Armored':PHB5E.FEATS['Lightly Armored'] + ' ' +
+  'Fey-Touched (Charisma)':
+    Tasha.FEATS['Fey Touched (Charisma)'] + ' ' +
     'Category=General Require="level >= 4"',
-  'Mage Slayer':PHB5E.FEATS['Mage Slayer'] + ' ' +
+  'Fey-Touched (Intelligence)':
+    Tasha.FEATS['Fey Touched (Intelligence)'] + ' ' +
+    'Category=General Require="level >= 4"',
+  'Fey-Touched (Wisdom)':
+    Tasha.FEATS['Fey Touched (Wisdom)'] + ' ' +
+    'Category=General Require="level >= 4"',
+  'Great Weapon Master':
+    PHB5E.FEATS['Great Weapon Master'] + ' ' +
+    'Category=General Require="level >= 4","strength >= 13"',
+  'Heavily Armored':
+    PHB5E.FEATS['Heavily Armored'] + ' ' +
+    'Category=General Require="level >= 4","armorProficiency.Medium"',
+  'Heavy Armor Master':
+    PHB5E.FEATS['Heavy Armor Master'] + ' ' +
+    'Category=General Require="level >= 4","armorProficiency.Heavy"',
+  'Inspiring Leader (Charisma)':
+    PHB5E.FEATS['Inspiring Leader'] +
+    'Category=General Require="level >= 4","wisdom > 13 || charisma >= 13"',
+  'Inspiring Leader (Wisdom)':
+    PHB5E.FEATS['Inspiring Leader'] +
+    'Category=General Require="level >= 4","wisdom > 13 || charisma >= 13"',
+  'Keen Mind (Expertise)':
+    PHB5E.FEATS['Keen Mind'] +
+    'Category=General Require="level >= 4","intelligence >= 13"',
+  'Keen Mind (Proficiency)':
+    PHB5E.FEATS['Keen Mind'] +
+    'Category=General Require="level >= 4","intelligence >= 13"',
+  'Lightly Armored':
+    PHB5E.FEATS['Lightly Armored'] + ' ' +
+    'Category=General Require="level >= 4"',
+  'Mage Slayer':
+    PHB5E.FEATS['Mage Slayer'] + ' ' +
     'Category=General Require="level >= 4"',
   'Martial Weapon Training':'Category=General Require="level >= 4"',
-  'Medium Armor Master':PHB5E.FEATS['Medium Armor Master'] + ' ' +
+  'Medium Armor Master':
+    PHB5E.FEATS['Medium Armor Master'] + ' ' +
     'Category=General Require="level >= 4","armorProficiency.Medium"',
-  'Moderately Armored':PHB5E.FEATS['Moderately Armored'] + ' ' +
+  'Moderately Armored':
+    PHB5E.FEATS['Moderately Armored'] + ' ' +
     'Category=General Require="level >= 4","armorProficiency.Light"',
-  'Mounted Combatant':PHB5E.FEATS['Mounted Combatant'] + ' ' +
+  'Mounted Combatant':
+    PHB5E.FEATS['Mounted Combatant'] + ' ' +
     'Category=General Require="level >= 4"',
-  'Observant':PHB5E.FEATS.Observant + ' ' +
+  'Observant (Expertise)':
+    PHB5E.FEATS.Observant + ' ' +
+    'Category=General ' +
+    'Require="level >= 4","intelligence >= 13 || wisdom >= 13"',
+  'Observant (Proficiency)':
+    PHB5E.FEATS.Observant + ' ' +
     'Category=General ' +
     'Require="level >= 4","intelligence >= 13 || wisdom >= 13"',
   'Piercer':
-    Tasha.FEATS.Piercer.replace('Type', 'Category') + ' Require="level >= 4"',
-  'Poisoner':
-    Tasha.FEATS.Poisoner.replace('Type', 'Category') + ' Require="level >= 4"',
-  'Polearm Master':PHB5E.FEATS['Polearm Master'] + ' ' +
+    Tasha.FEATS.Piercer + ' ' +
+    'Category=General Require="level >= 4"',
+  'Poisoner (Dexterity)':
+    Tasha.FEATS.Poisoner + ' ' +
+    'Category=General Require="level >= 4"',
+  'Poisoner (Intelligence)':
+    Tasha.FEATS.Poisoner + ' ' +
+    'Category=General Require="level >= 4"',
+  'Polearm Master':
+    PHB5E.FEATS['Polearm Master'] + ' ' +
     'Category=General Require="level >= 4","strength > 13 || dexterity >= 13"',
-  'Resilient':PHB5E.FEATS.Resilient + 'Category=General Require="level >= 4"',
-  'Ritual Caster':PHB5E.FEATS['Ritual Caster'] + ' ' +
+  'Resilient (Charisma)':
+    PHB5E.FEATS['Resilient (Charisma)'] + ' ' +
+    'Category=General Require="level >= 4"',
+  'Resilient (Constitution)':
+    PHB5E.FEATS['Resilient (Constitution)'] + ' ' +
+    'Category=General Require="level >= 4"',
+  'Resilient (Dexterity)':
+    PHB5E.FEATS['Resilient (Dexterity)'] + ' ' +
+    'Category=General Require="level >= 4"',
+  'Resilient (Intelligence)':
+    PHB5E.FEATS['Resilient (Intelligence)'] + ' ' +
+    'Category=General Require="level >= 4"',
+  'Resilient (Strength)':
+    PHB5E.FEATS['Resilient (Strength)'] + ' ' +
+    'Category=General Require="level >= 4"',
+  'Resilient (Wisdom)':
+    PHB5E.FEATS['Resilient (Wisdom)'] + ' ' +
+    'Category=General Require="level >= 4"',
+  'Ritual Caster':
+    PHB5E.FEATS['Ritual Caster'] + ' ' +
     'Category=General ' +
     'Require=' +
       '"level >= 4",' +
       '"intelligence > 13 || wisdom >= 13 || charisma >= 13"',
-  'Sentinel':PHB5E.FEATS.Sentinel + ' ' +
+  'Sentinel':
+    PHB5E.FEATS.Sentinel + ' ' +
     'Category=General Require="level >= 4","strength > 13 || dexterity >= 13"',
   'Shadow-Touched (Charisma)':'Category=General Require="level >= 4"',
   'Shadow-Touched (Intelligence)':'Category=General Require="level >= 4"',
   'Shadow-Touched (Wisdom)':'Category=General Require="level >= 4"',
-  'Sharpshooter':PHB5E.FEATS.Sharpshooter + ' ' +
+  'Sharpshooter':
+    PHB5E.FEATS.Sharpshooter + ' ' +
     'Category=General Require="level >= 4","dexterity >= 13"',
-  'Shield Master':PHB5E.FEATS['Shield Master'] + ' ' +
+  'Shield Master':
+    PHB5E.FEATS['Shield Master'] + ' ' +
     'Category=General Require="level >= 4","armorProficiency.Shield"',
   'Skill Expert':
-    Tasha.FEATS['Skill Expert'].replace('Type', 'Category') + ' ' +
-    'Require="level >= 4"',
-  'Skulker':PHB5E.FEATS.Skulker + ' ' +
+    Tasha.FEATS['Skill Expert'] + ' ' +
+    'Category=General Require="level >= 4"',
+  'Skulker':
+    PHB5E.FEATS.Skulker + ' ' +
     'Category=General Require="level >= 4","dexterity >= 13"',
   'Slasher':
-    Tasha.FEATS.Slasher.replace('Type', 'Category') + ' Require="level >= 4"',
+    Tasha.FEATS.Slasher + ' ' +
+    'Category=General Require="level >= 4"',
   'Speedy':
     'Category=General ' +
     'Require="level >= 4","dexterity > 13 || constitution >= 13"',
-  'Spell Sniper':PHB5E.FEATS['Spell Sniper'] + ' ' +
+  'Spell Sniper':
+    PHB5E.FEATS['Spell Sniper'] + ' ' +
     'Category=General ' +
     'Require="level >= 4","features.Spellcasting || features.Pact Magic"',
-  'Telekinetic':
-    Tasha.FEATS.Telekinetic.replace('Type', 'Category') + ' ' +
-    'Require="level >= 4"',
+  'Telekinetic (Charisma)':
+    Tasha.FEATS['Telekinetic (Charisma)'] + ' ' +
+    'Category=General Require="level >= 4"',
+  'Telekinetic (Intelligence)':
+    Tasha.FEATS['Telekinetic (Intelligence)'] + ' ' +
+    'Category=General Require="level >= 4"',
+  'Telekinetic (Wisdom)':
+    Tasha.FEATS['Telekinetic (Wisdom)'] + ' ' +
+    'Category=General Require="level >= 4"',
   'Telepathic':
-    Tasha.FEATS.Telepathic.replace('Type', 'Category') + ' ' +
-    'Require="level >= 4"',
-  'War Caster':PHB5E.FEATS['War Caster'] + ' ' +
+    Tasha.FEATS.Telepathic + ' ' +
+    'Category=General Require="level >= 4"',
+  'War Caster':
+    PHB5E.FEATS['War Caster'] + ' ' +
     'Category=General ' +
     'Require="level >= 4","features.Spellcasting || features.Pact Magic"',
-  'Weapon Master':PHB5E.FEATS['Weapon Master'] + ' ' +
+  'Weapon Master':
+    PHB5E.FEATS['Weapon Master'] + ' ' +
     'Category=General Require="level >= 4"',
 
   'Blind Fighting':
@@ -1254,88 +1334,264 @@ PHB5E2024.FEATURES_ADDED = {
   'Crafter':
     'Section=skill,skill ' +
     'Note=' +
-      '"Tool Proficiency (Choose 3 from Carpenter\'s Tools, Leatherworker\'s Tools, Mason\'s Tools, Smith\'s Tools, Tinker\'s Tools, Weaver\'s Tools, Woodcarver\'s Tools)",' +
-      '"Can buy nonmagical items at a 20% discount/Can use a crafter tool to build an item at the end of a long rest that will last until the next long rest"',
-  'Healer':PHB5E.FEATURES.Healer,
+      '"Tool Proficiency (Choose 3 from Carpenter\'s Tools, Leatherworker\'s Tools, Mason\'s Tools, Potter\'s Tools, Smith\'s Tools, Tinker\'s Tools, Weaver\'s Tools, Woodcarver\'s Tools)",' +
+      '"Can buy nonmagical items at a 20% discount/Can use a crafter tool to build an item at the end of a long rest that lasts until the next long rest"',
+  'Healer':
+    'Section=magic,skill ' +
+    // changed effects
+    'Note=' +
+      '"Can reroll 1s when using a spell to restore hit points",' +
+      '"Can expend a use of a Heler\'s Kit to allow a target to expend a Hit Die, regaining the roll +%{proficiencyBonus} hit points; a 1 on the roll can be rerolled"',
   'Lucky':PHB5E.FEATURES.Lucky,
   'Musician':
     'Section=skill,skill ' +
     'Note=' +
       '"Tool Proficiency (Choose 3 from any Musical Instrument)",' +
       '"Can give Heroic Inspiration to %{proficiencyBonus} allies at the end of a rest"',
-  'Tavern Brawler':PHB5E.FEATURES['Tavern Brawler'],
+  'Tavern Brawler':
+    'Section=combat,combat ' +
+    // changed effects
+    'Note=' +
+      '"Weapon Proficiency (Improvised Weapons)/Unarmed Strike inflicts 1d4 HP",' +
+      '"Can reroll 1s on Unarmed Strike damage, and a successful Unarmed Strike can also push the target 5\' once per turn"',
   'Tough':PHB5E.FEATURES.Tough,
 
-  'Actor':PHB5E.FEATURES.Actor,
+  'Actor':
+    PHB5E.FEATURES.Actor
+    .replace('Insight vs. Deception', 'DC %{8+charismaModifier+proficiencyBonus} Insight'),
   'Athlete':PHB5E.FEATURES.Athlete,
-  'Charger':PHB5E.FEATURES.Charger,
+  'Charger':
+    'Section=ability,combat ' +
+    // changed effects
+    'Note=' +
+      '"Ability Boost (Choose 1 from Strength, Dexterity)",' +
+      '"Gains +10 Speed during a Dash/After moving 10\' to attack a foe, can inflict an additional 1d8 HP or 10\' push once per turn"',
   'Chef':Tasha.FEATURES.Chef,
-  'Crossbow Expert':PHB5E.FEATURES['Crossbow Expert'],
+  'Crossbow Expert':
+    'Section=ability,combat ' +
+    // changed effects
+    'Note=' +
+      '"+1 Dexterity",' +
+      '"Ignores the loading quality of proficient crossbows/Suffers no disadvantage on crossbow attacks within 5\'/Can add the ability modifier to the damage from an extra attack with a Light crossbow"',
   'Crusher':Tasha.FEATURES.Crusher,
-  'Defensive Duelist':PHB5E.FEATURES['Defensive Duelist'],
-  'Dual Wielder':PHB5E.FEATURES['Dual Wielder'],
-  'Durable':PHB5E.FEATURES.Durable,
-  'Elemental Adept (Acid)':PHB5E.FEATURES['Elemental Adept (Acid)'],
-  'Elemental Adept (Cold)':PHB5E.FEATURES['Elemental Adept (Cold)'],
-  'Elemental Adept (Fire)':PHB5E.FEATURES['Elemental Adept (Fire)'],
-  'Elemental Adept (Lightning)':PHB5E.FEATURES['Elemental Adept (Lightning)'],
-  'Elemental Adept (Thunder)':PHB5E.FEATURES['Elemental Adept (Thunder)'],
-  'Fey-Touched':Tasha.FEATURES['Fey Touched'],
-  'Great Weapon Master':PHB5E.FEATURES['Great Weapon Master'],
-  'Heavily Armored':PHB5E.FEATURES['Heavily Armored'],
-  'Heavy Armor Master':PHB5E.FEATURES['Heavy Armor Master'],
-  'Inspiring Leader':PHB5E.FEATURES['Inspiring Leader'],
-  'Keen Mind':PHB5E.FEATURES['Keen Mind'],
-  'Lightly Armored':PHB5E.FEATURES['Lightly Armored'],
-  'Mage Slayer':PHB5E.FEATURES['Mage Slayer'],
+  'Defensive Duelist':
+    'Section=ability,combat ' +
+    // changed effects
+    'Note=' +
+      '"+1 Dexterity",' +
+      '"Can use a reaction when hit while wielding a finesse weapon to gain +%{proficiencyBonus} Armor Class until the start of the next turn"',
+  'Dual Wielder':
+    'Section=ability,combat ' +
+    // changed effects
+    'Note=' +
+      '"Ability Boost (Choose 1 from Strength, Dexterity)",' +
+      '"Can draw or stow two weapons simultaneously/After attacking with a Light weapon, can use a bonus action to attack with a non-two-handed weapon; only a negative ability modifier is added to the damage from this bonus attack"',
+  'Durable':
+    'Section=ability,combat,save ' +
+    // changed effects
+    'Note=' +
+      '"+1 Constitution",' +
+      '"Can use a bonus action to regain hit points from a Hit Die roll",' +
+      '"Has advantage on death saves"',
+  'Elemental Adept (Acid)':
+    PHB5E.FEATURES['Elemental Adept (Acid)']
+    .replace('Section=', 'Section=ability,')
+    .replace('Note=', 'Note="Ability Boost (Choose 1 from Intelligence, Wisdom, Charisma)",'),
+  'Elemental Adept (Cold)':
+    PHB5E.FEATURES['Elemental Adept (Cold)']
+    .replace('Section=', 'Section=ability,')
+    .replace('Note=', 'Note="Ability Boost (Choose 1 from Intelligence, Wisdom, Charisma)",'),
+  'Elemental Adept (Fire)':
+    PHB5E.FEATURES['Elemental Adept (Fire)']
+    .replace('Section=', 'Section=ability,')
+    .replace('Note=', 'Note="Ability Boost (Choose 1 from Intelligence, Wisdom, Charisma)",'),
+  'Elemental Adept (Lightning)':
+    PHB5E.FEATURES['Elemental Adept (Lightning)']
+    .replace('Section=', 'Section=ability,')
+    .replace('Note=', 'Note="Ability Boost (Choose 1 from Intelligence, Wisdom, Charisma)",'),
+  'Elemental Adept (Thunder)':
+    PHB5E.FEATURES['Elemental Adept (Thunder)']
+    .replace('Section=', 'Section=ability,')
+    .replace('Note=', 'Note="Ability Boost (Choose 1 from Intelligence, Wisdom, Charisma)",'),
+  'Fey-Touched (Charisma)':Tasha.FEATURES['Fey Touched (Charisma)'],
+  'Fey-Touched (Intelligence)':Tasha.FEATURES['Fey Touched (Intelligence)'],
+  'Fey-Touched (Wisdom)':Tasha.FEATURES['Fey Touched (Wisdom)'],
+  'Great Weapon Master':
+    'Section=ability,combat ' +
+    // changed effects
+    'Note=' +
+      '"+1 Strength",' +
+      '"Can use a bonus action to attack after scoring a critical hit or reducing a foe to 0 hit points with a melee weapon/Can inflict +%{proficiencyBonus} HP with Heavy weapons during an Attack action"',
+  'Heavily Armored':
+    'Section=ability,combat ' +
+    // changed effects
+    'Note=' +
+      '"Ability Boost (Choose 1 from Constitution, Strength)",' +
+      '"Armor Training (Heavy)"',
+  'Heavy Armor Master':
+    PHB5E.FEATURES['Heavy Armor Master']
+    .replace('+1 Strength', 'Ability Boost (Choose 1 from Constitution, Strength)')
+    .replace('nonmagical ', ''),
+  'Inspiring Leader (Charisma)':
+    'Section=ability,combat ' +
+    // changed effects
+    'Note=' +
+      '"+1 Charisma",' +
+      '"R30\' 10-min speech at the end of a rest gives 6 allies %{level+charismaModifier} temporary hit points"',
+  'Inspiring Leader (Wisdom)':
+    'Section=ability,combat ' +
+    // changed effects
+    'Note=' +
+      '"+1 Wisdom",' +
+      '"R30\' 10-min speech at the end of a rest gives 6 allies %{level+wisdomModifier} temporary hit points"',
+  'Keen Mind (Expertise)':
+    'Section=ability,skill,skill ' +
+    // changed effects
+    'Note=' +
+      '"+1 Intelligence",' +
+      // TODO does this work?
+      '"Skill Expertise (Choose 1 from Arcana, History, Investigation, Nature, Religion)",' +
+      '"Can use a bonus action to Study"',
+  'Keen Mind (Proficiency)':
+    'Section=ability,skill,skill ' +
+    // changed effects
+    'Note=' +
+      '"+1 Intelligence",' +
+      '"Skill Proficiency (Choose 1 from Arcana, History, Investigation, Nature, Religion)",' +
+      '"Can use a bonus action to Study"',
+  'Lightly Armored':
+    PHB5E.FEATURES['Lightly Armored']
+    .replace('Proficiency', 'Training'),
+  'Mage Slayer':
+    'Section=ability,combat,save ' +
+    // changed effects
+    'Note=' +
+      '"Ability Boost (Choose 1 from Strength, Dexterity)",' +
+      '"Attacks inflict disadvantage on concentration to maintain a spell",' +
+      '"Can turn a failed Intelligence, Wisdom, or Charisma save into a success once per short rest"',
   'Martial Weapon Training':
     'Section=ability,combat ' +
     'Note=' +
       '"Ability Boost (Choose 1 from Strength, Dexterity)",' +
       '"Weapon Proficiency (Martial Weapons)"',
-  'Medium Armor Master':PHB5E.FEATURES['Medium Armor Master'],
-  'Moderately Armored':PHB5E.FEATURES['Moderately Armored'],
-  'Mounted Combatant':PHB5E.FEATURES['Mounted Combatant'],
-  'Observant':PHB5E.FEATURES.Observant,
+  'Medium Armor Master':
+    'Section=ability,combat ' +
+    // changed effects
+    'Note=' +
+      '"Ability Boost (Choose 1 from Stregth, Dexterity)",' +
+      '"+1 Armor Class in medium armor if Dexterity is at least 16"',
+  'Moderately Armored':
+    PHB5E.FEATURES['Moderately Armored']
+    .replace('Proficiency (Medium; Shield', 'Training (Medium'),
+  'Mounted Combatant':
+    PHB5E.FEATURES['Mounted Combatant']
+    .replace('Section=', 'Section=ability,')
+    .replace('Note=', 'Note="Ability Boost (Choose 1 from Strength, Dexterity, Wisdom)",')
+    .replace('melee attacks on unmounted', 'attacks on adjacent unmounted'),
+  'Observant (Expertise)':
+    'Section=ability,skill,skill ' +
+    // changed effects
+    'Note=' +
+      '"Ability Boost (Choose 1 from Intelligence, Wisdom)",' +
+      // TODO does this work?
+      '"Skill Expertise (Choose 1 from Insight, Investigation, Perception)",' +
+      '"Can use a bonus action to Search"',
+  'Observant (Proficiency)':
+    'Section=ability,skill,skill ' +
+    // changed effects
+    'Note=' +
+      '"Ability Boost (Choose 1 from Intelligence, Wisdom)",' +
+      '"Skill Proficiency (Choose 1 from Insight, Investigation, Perception)",' +
+      '"Can use a bonus action to Search"',
   'Piercer':Tasha.FEATURES.Piercer,
-  'Poisoner':Tasha.FEATURES.Poisoner,
-  'Polearm Master':PHB5E.FEATURES['Polearm Master'],
-  'Resilient':PHB5E.FEATURES.Resilient,
-  'Ritual Caster':PHB5E.FEATURES['Ritual Caster'],
-  'Sentinel':PHB5E.FEATURES.Sentinel,
+  'Poisoner (Dexterity)':
+    Tasha.FEATURES.Poisoner
+    .replace('Section=', 'Section=ability,')
+    .replace('Note=', 'Note="+1 Dexterity",')
+    .replace('DC 14', 'DC %{8+dexterityModifier+proficiencyBonus}'),
+  'Poisoner (Intelligence)':
+    Tasha.FEATURES.Poisoner
+    .replace('Section=', 'Section=ability,')
+    .replace('Note=', 'Note="+1 Intelligence",')
+    .replace('DC 14', 'DC %{8+intelligenceModifier+proficiencyBonus}'),
+  'Polearm Master':PHB5E.FEATURES['Polearm Master']
+    .replace('Section=', 'Section=ability,')
+    .replace('Note=', 'Note="Ability Boost (Choose 1 from Dexterity, Strength)",')
+    .replace('make an opportunity attack against', 'use a reaction to attack'),
+  'Resilient (Charisma)':PHB5E.FEATURES['Resilient (Charisma)'],
+  'Resilient (Constitution)':PHB5E.FEATURES['Resilient (Constitution)'],
+  'Resilient (Dexterity)':PHB5E.FEATURES['Resilient (Dexterity)'],
+  'Resilient (Intelligence)':PHB5E.FEATURES['Resilient (Intelligence)'],
+  'Resilient (Strength)':PHB5E.FEATURES['Resilient (Strength)'],
+  'Resilient (Wisdom)':PHB5E.FEATURES['Resilient (Wisdom)'],
+  'Ritual Caster':
+    'Section=ability,magic ' +
+    // changed effects
+    'Note=' +
+      '"Ability Boost (Choose 1 from Intelligence, Wisdom, Charisma)",' +
+      '"Always has prepared %{proficiencyBonus} chosen spells with the [R] tag/Can cast a spell as a ritual in its normal casting time once per long rest"',
+  'Sentinel':
+    'Section=ability,combat ' +
+    // changed effects
+    'Note=' +
+      '"Ability Boost (Choose 1 from Strength, Dexterity)",' +
+      '"Successful opportunity attacks halt the target/Can make an opportunity attack when a foe uses Disengage and when an adjacent foe attacks another"',
   'Shadow-Touched (Charisma)':
     'Section=ability,magic ' +
     'Note=' +
-      '"Ability Boost (Charisma)",' +
+      '"+1 Charisma",' +
       '"Can cast <i>Invisibility</i> and a chosen level 1 illusion or necromancy spell without expending a spell slot once per long rest" ' +
     'SpellAbility=Charisma ' +
     'Spells=Invisibility',
   'Shadow-Touched (Intelligence)':
     'Section=ability,magic ' +
     'Note=' +
-      '"Ability Boost (Intelligence)",' +
+      '"+1 Intelligence",' +
       '"Can cast <i>Invisibility</i> and a chosen level 1 illusion or necromancy spell without expending a spell slot once per long rest" ' +
     'SpellAbility=Intelligence ' +
     'Spells=Invisibility',
   'Shadow-Touched (Wisdom)':
     'Section=ability,magic ' +
     'Note=' +
-      '"Ability Boost (Wisdom)",' +
+      '"+1 Wisdom",' +
       '"Can cast <i>Invisibility</i> and a chosen level 1 illusion or necromancy spell without expending a spell slot once per long rest" ' +
     'SpellAbility=Wisdom ' +
     'Spells=Invisibility',
-  'Sharpshooter':PHB5E.FEATURES.Sharpshooter,
-  'Shield Master':PHB5E.FEATURES['Shield Master'],
+  'Sharpshooter':
+    PHB5E.FEATURES.Sharpshooter
+    .replace('Section=', 'Section=ability,')
+    .replace('Note=', 'Note="+1 Dexterity",')
+    .replace('at long range', "at long range or within 5'")
+    .replace(/\/Can make[^"]*/, ''),
+  'Shield Master':
+    'Section=ability,combat,save ' +
+    // changed effects
+    'Note=' +
+      '"+1 Strength",' +
+      '"Can use a shield after a successful melee Attack to inflict a choice of a 5\' push or knocked prone (save DC %{8+strengthModifier+proficiencyBonus} negates)",' +
+      '"When holding a shield, can use a reaction to suffer no damage instead of half on a successful Dexterity save"',
   'Skill Expert':Tasha.FEATURES['Skill Expert'],
-  'Skulker':PHB5E.FEATURES.Skulker,
+  'Skulker':
+    'Section=ability,combat,skill ' +
+    // changed effects
+    'Note=' +
+      '"+1 Dexterity",' +
+      '"Missing with an attack while hiding does not reveal position",' +
+      '"Has 10\' Blindsight/Has advantage on Stealth to hide during combat"',
   'Slasher':Tasha.FEATURES.Slasher,
   'Speedy':
     'Section=ability,combat ' +
     'Note=' +
       '"Ability Boost (Choose 1 from Dexterity, Constitution)/+10 Speed",' +
-      '"Taking a Dash allows moving normally over difficult terrain for the remainder of the turn/Opportunity Attacks on self have disadvantage"',
-  'Spell Sniper':PHB5E.FEATURES['Spell Sniper'],
-  'Telekinetic':Tasha.FEATURES.Telekinetic,
+      '"Taking a Dash allows moving normally over difficult terrain for the rest of the turn/Opportunity Attacks on self have disadvantage"',
+  'Spell Sniper':
+    'Section=ability,magic ' +
+    'Note=' +
+      '"Ability Boost (Choose 1 from Intelligence, Wisdom, Charisma)",' +
+      '"Can cast spells with a range of at least 10\' at +60\', suffers no disadvantage when casting spells within 5\' of a foe, and spells ignore 3/4 cover"',
+  'Telekinetic (Charisma)':Tasha.FEATURES['Telekinetic (Charisma)'],
+  'Telekinetic (Intelligence)':Tasha.FEATURES['Telekinetic (Intelligence)'],
+  'Telekinetic (Wisdom)':Tasha.FEATURES['Telekinetic (Wisdom)'],
   'Telepathic':Tasha.FEATURES.Telepathic,
   'War Caster':PHB5E.FEATURES['War Caster'],
   'Weapon Master':PHB5E.FEATURES['Weapon Master'],
@@ -1656,8 +1912,10 @@ PHB5E2024.classRulesExtra = function(rules, name) {
  * derived directly from the attributes passed to featRules.
  */
 PHB5E2024.featRulesExtra = function(rules, name) {
-
-  if(name == 'Medium Armor Master') {
+  if(name == 'Keen Mind (Expertise)') {
+    rules.defineRule
+      ('expertiseCount', 'skillNotes.keenMind(Expertise)', '+=', '1');
+  } else if(name == 'Medium Armor Master') {
     rules.defineRule('armorClass',
       'combatNotes.mediumArmorMaster', '+', '0',
       'combatNotes.mediumArmorMaster.1', '+', null
@@ -1667,9 +1925,14 @@ PHB5E2024.featRulesExtra = function(rules, name) {
       'dexterity', '?', 'source >= 16',
       'armorCategory', '=', 'source == "Medium" ? 1 : null'
     );
+  } else if(name == 'Observant (Expertise)') {
+    rules.defineRule
+      ('expertiseCount', 'skillNotes.observant(Expertise)', '+=', '1');
+  } else if(name == 'Skill Expert') {
+    rules.defineRule('expertiseCount', 'skillNotes.skillExpert', '+=', '1');
   } else if(name == 'Tavern Brawler') {
     rules.defineRule
-      ('weapons.Unarmed.2', 'combatNotes.tavernBrawler', '^=', '"1d4"');
+      ('weapons.Unarmed Strike.2', 'combatNotes.tavernBrawler', '^=', '"1d4"');
   } else if(name == 'Weapon Master') {
     rules.defineRule
       ('weaponChoiceCount', 'combatNotes.weaponMaster', '+=', '4');
