@@ -14,12 +14,12 @@ var attributes = {
   "gender":"Female", "hitPoints":22, "intelligence":11, "languagesChosen.Celestial":1, 
   "levels.Wizard":5, "name":"Feats-Wizard", "race":"Human", 
   "selectableFeatures.Wizard - School Of Divination":1, "shield":"None", "skillsChosen.Arcana":1, "skillsChosen.History":1, 
-  "skillsChosen.Religion":1, "spells.Arcane Lock(W2 Abju)":1, "spells.Chill Touch(W0 Necr)":1, 
-  "spells.Disguise Self(W1 Illu)":1, "spells.Glyph Of Warding(W3 Abju)":1, "spells.Light(W0 Evoc)":1, 
-  "spells.Message(W0 Tran)":1, "spells.Prestidigitation(W0 Tran)":1, "spells.Ray Of Sickness(W1 Necr)":1, 
-  "spells.Shatter(W2 Evoc)":1, "spells.Thunderwave(W1 Evoc)":1, "spells.Tongues(W3 Divi)":1, 
-  "spells.Unseen Servant(W1 Conj)":1, "spells.Web(W2 Conj)":1, "strength":13, "toolsChosen.Dragonchess Set":1, 
-  "weapons.Dagger":1, "weapons.Quarterstaff":1, "weapons.Sling":1, "wisdom":14
+  "spells.Arcane Lock(W2 Abju)":1, "spells.Chill Touch(W0 Necr)":1, "spells.Disguise Self(W1 Illu)":1, 
+  "spells.Glyph Of Warding(W3 Abju)":1, "spells.Light(W0 Evoc)":1, "spells.Message(W0 Tran)":1, 
+  "spells.Prestidigitation(W0 Tran)":1, "spells.Ray Of Sickness(W1 Necr)":1, "spells.Shatter(W2 Evoc)":1, 
+  "spells.Thunderwave(W1 Evoc)":1, "spells.Tongues(W3 Divi)":1, "spells.Unseen Servant(W1 Conj)":1, 
+  "spells.Web(W2 Conj)":1, "strength":13, "toolsChosen.Dragonchess Set":1, "weapons.Dagger":1, 
+  "weapons.Quarterstaff":1, "weapons.Sling":1, "wisdom":14
 };
   </script>
 </head>
@@ -110,7 +110,7 @@ var attributes = {
     </tr><tr style="text-align:left">
       <td>Arcana: (int) +4</td>
       <td>Investigation: (int) +1</td>
-      <td>Religion: (int) +4</td>
+      <td>Religion: (int) +1</td>
     </tr><tr style="text-align:left">
       <td>Athletics: (str) +5</td>
       <td>Medicine: (wis) +2</td>
@@ -126,7 +126,7 @@ var attributes = {
     </tr></table>
 </td>
   </tr><tr style="text-align:center">
-    <td><b>Skill Proficiency</b>: Arcana; Athletics; History; Intimidation; Religion</td>
+    <td><b>Skill Proficiency</b>: Arcana; Athletics; History; Intimidation</td>
   </tr><tr style="text-align:center">
     <td><b>Tool Proficiency</b>: Dragonchess Set; Vehicles (Land)</td>
   </tr><tr style="text-align:center">
@@ -173,6 +173,8 @@ var attributes = {
         <td><i>Strength Attack Adjustment: +2</i></td>
       </tr><tr style="text-align:center">
         <td><i>Strength Damage Adjustment: +2</i></td>
+      </tr><tr style="text-align:center">
+        <td>War Caster: Can use a reaction to cast a spell instead of making an opportunity attack in response to movement</td>
       </tr></table>
 </td>
     </tr></table>
@@ -183,6 +185,8 @@ var attributes = {
       <td><b>Save Proficiency</b>: Intelligence; Wisdom</td>
     </tr><tr style="text-align:center">
       <td><b>Save</b>: Charisma: +2; Constitution: +1; Dexterity: +2; Intelligence: +4; Strength: +2; Wisdom: +5</td>
+    </tr><tr style="text-align:center">
+      <td><b>Save Notes</b>: War Caster: Has advantage on concentration saves to maintain a spell</td>
     </tr></table>
 </td>
   </tr></table>
@@ -257,7 +261,7 @@ var attributes = {
     </tr><tr style="text-align:center">
       <td>Spellcasting: Can cast spells from the wizard spell list and cast spells marked with [R] using a ritual; regains expended spell slots after a long rest</td>
     </tr><tr style="text-align:center">
-      <td>War Caster: Has advantage on concentration saves to maintain a spell/Can cast when holding a shield or a weapon/Can use a reaction to cast as an opportunity attack in response to movement</td>
+      <td>War Caster: Can cast spells when holding a shield and weapons</td>
     </tr></table>
 </td>
   </tr></table>
@@ -267,13 +271,7 @@ var attributes = {
   <tr style="text-align:center">
     <td>    <table id="ValidationPart" style="width:100%">
     <tr style="text-align:center">
-      <td><b>Validation Errors</b>:       <table id="ValidationNotes" style="width:100%">
-      <tr style="text-align:center">
-        <td>Feat Allocation: 1 available vs. 8 allocated</td>
-      </tr><tr style="text-align:center">
-        <td>Skill Proficiency Allocation: 2 available vs. 3 allocated</td>
-      </tr></table>
-</td>
+      <td><b>Validation Errors</b>: Feat Allocation: 1 available vs. 8 allocated</td>
     </tr></table>
 </td>
   </tr></table>
