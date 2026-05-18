@@ -598,8 +598,17 @@ PHB5E2024.FEATS_ADDED = {
   'Resilient (Wisdom)':
     PHB5E.FEATS['Resilient (Wisdom)'] + ' ' +
     'Category=General Require="level >= 4"',
-  'Ritual Caster':
-    PHB5E.FEATS['Ritual Caster'] + ' ' +
+  'Ritual Caster (Charisma)': // ref PHB5E
+    'Category=General ' +
+    'Require=' +
+      '"level >= 4",' +
+      '"intelligence > 13 || wisdom >= 13 || charisma >= 13"',
+  'Ritual Caster (Intelligence)': // ref PHB5E
+    'Category=General ' +
+    'Require=' +
+      '"level >= 4",' +
+      '"intelligence > 13 || wisdom >= 13 || charisma >= 13"',
+  'Ritual Caster (Wisdom)': // ref PHB5E
     'Category=General ' +
     'Require=' +
       '"level >= 4",' +
@@ -1341,13 +1350,13 @@ PHB5E2024.FEATURES_ADDED = {
     'Section=skill,skill ' +
     'Note=' +
       '"Tool Proficiency (Choose 3 from Carpenter\'s Tools, Leatherworker\'s Tools, Mason\'s Tools, Potter\'s Tools, Smith\'s Tools, Tinker\'s Tools, Weaver\'s Tools, Woodcarver\'s Tools)",' +
-      '"Can buy nonmagical items at a 20% discount/Can use a crafter tool to build an item at the end of a long rest that lasts until the next long rest"',
+      '"Can buy nonmagical items at a 20% discount/Can use a crafter tool set at the end of a long rest to build an item that lasts until the next long rest"',
   'Healer':
     'Section=magic,skill ' +
     // changed effects
     'Note=' +
       '"Can reroll 1s when using a spell to restore hit points",' +
-      '"Can expend a use of a Heler\'s Kit to allow a target to expend a Hit Die, regaining the roll +%{proficiencyBonus} hit points; a 1 on the roll can be rerolled"',
+      '"Can expend a use of a Healer\'s Kit to allow an adjacent target to expend a Hit Die, regaining the roll +%{proficiencyBonus} hit points; a 1 on the roll can be rerolled"',
   'Lucky':PHB5E.FEATURES.Lucky,
   'Musician':
     'Section=skill,skill ' +
@@ -1371,14 +1380,14 @@ PHB5E2024.FEATURES_ADDED = {
     // changed effects
     'Note=' +
       '"Ability Boost (Choose 1 from Strength, Dexterity)",' +
-      '"Gains +10 Speed during a Dash/After moving 10\' to attack a foe, can inflict an additional 1d8 HP or 10\' push once per turn"',
+      '"Gains +10 Speed during a Dash/Once per turn, after moving 10\' to attack a foe, can push the target 10\' if it is no more than 1 size larger or inflict an additional 1d8 HP"',
   'Chef':Tasha.FEATURES.Chef,
   'Crossbow Expert':
     'Section=ability,combat ' +
     // changed effects
     'Note=' +
       '"+1 Dexterity",' +
-      '"Ignores the loading quality of proficient crossbows/Suffers no disadvantage on crossbow attacks within 5\'/Can add the ability modifier to the damage from an extra attack with a Light crossbow"',
+      '"Ignores the loading property of crossbows and can load one without a free hand/Suffers no disadvantage on crossbow attacks within 5\'/Can add the ability modifier to the damage from an extra attack with a Light crossbow"',
   'Crusher':Tasha.FEATURES.Crusher,
   'Defensive Duelist':
     'Section=ability,combat ' +
@@ -1391,7 +1400,7 @@ PHB5E2024.FEATURES_ADDED = {
     // changed effects
     'Note=' +
       '"Ability Boost (Choose 1 from Strength, Dexterity)",' +
-      '"Can draw or stow two weapons simultaneously/After attacking with a Light weapon, can use a bonus action to attack with a non-two-handed weapon; only a negative ability modifier is added to the damage from this bonus attack"',
+      '"Can draw or stow two weapons simultaneously/After attacking with a Light weapon, can use a bonus action to attack with a non-two-handed weapon; the ability modifier is added to the damage from this bonus attack only if negative"',
   'Durable':
     'Section=ability,combat,save ' +
     // changed effects
@@ -1427,7 +1436,7 @@ PHB5E2024.FEATURES_ADDED = {
     // changed effects
     'Note=' +
       '"+1 Strength",' +
-      '"Can use a bonus action to attack after scoring a critical hit or reducing a foe to 0 hit points with a melee weapon/Can inflict +%{proficiencyBonus} HP with Heavy weapons during an Attack action"',
+      '"Can use a bonus action to attack after scoring a critical hit or reducing a foe to 0 hit points with a melee weapon/Can inflict +%{proficiencyBonus} HP with a Heavy weapon during an Attack action"',
   'Heavily Armored':
     'Section=ability,combat ' +
     // changed effects
@@ -1439,23 +1448,24 @@ PHB5E2024.FEATURES_ADDED = {
     .replace('+1 Strength', 'Ability Boost (Choose 1 from Constitution, Strength)')
     .replace('nonmagical ', ''),
   'Inspiring Leader (Charisma)':
-    'Section=ability,combat ' +
+    'Section=ability,skill ' +
     // changed effects
     'Note=' +
       '"+1 Charisma",' +
-      '"R30\' 10-min speech at the end of a rest gives 6 allies %{level+charismaModifier} temporary hit points"',
+      '"R30\' 10-min performance at the end of a rest gives 6 allies %{level+charismaModifier} temporary hit points"',
   'Inspiring Leader (Wisdom)':
-    'Section=ability,combat ' +
+    'Section=ability,skill ' +
     // changed effects
     'Note=' +
       '"+1 Wisdom",' +
-      '"R30\' 10-min speech at the end of a rest gives 6 allies %{level+wisdomModifier} temporary hit points"',
+      '"R30\' 10-min performance at the end of a rest gives 6 allies %{level+wisdomModifier} temporary hit points"',
   'Keen Mind (Expertise)':
     'Section=ability,skill,skill ' +
     // changed effects
     'Note=' +
       '"+1 Intelligence",' +
       // TODO does this work?
+      // TODO reword all expertise notes into this format and handle them in SRD35.js
       '"Skill Expertise (Choose 1 from Arcana, History, Investigation, Nature, Religion)",' +
       '"Can use a bonus action to Study"',
   'Keen Mind (Proficiency)':
@@ -1484,7 +1494,7 @@ PHB5E2024.FEATURES_ADDED = {
     'Section=ability,combat ' +
     // changed effects
     'Note=' +
-      '"Ability Boost (Choose 1 from Stregth, Dexterity)",' +
+      '"Ability Boost (Choose 1 from Strength, Dexterity)",' +
       '"+1 Armor Class in medium armor if Dexterity is at least 16"',
   'Moderately Armored':
     PHB5E.FEATURES['Moderately Armored']
@@ -1530,18 +1540,33 @@ PHB5E2024.FEATURES_ADDED = {
   'Resilient (Intelligence)':PHB5E.FEATURES['Resilient (Intelligence)'],
   'Resilient (Strength)':PHB5E.FEATURES['Resilient (Strength)'],
   'Resilient (Wisdom)':PHB5E.FEATURES['Resilient (Wisdom)'],
-  'Ritual Caster':
+  'Ritual Caster (Charisma)':
     'Section=ability,magic ' +
     // changed effects
     'Note=' +
-      '"Ability Boost (Choose 1 from Intelligence, Wisdom, Charisma)",' +
-      '"Always has prepared %{proficiencyBonus} chosen spells with the [R] tag/Can cast a spell as a ritual in its normal casting time once per long rest"',
+      '"+1 Charisma",' +
+      '"Always has prepared %{proficiencyBonus} chosen spells with the [R] tag/Can cast a spell as a ritual in its normal casting time once per long rest" ' +
+    'SpellAbility=Charisma',
+  'Ritual Caster (Intelligence)':
+    'Section=ability,magic ' +
+    // changed effects
+    'Note=' +
+      '"+1 Intelligence",' +
+      '"Always has prepared %{proficiencyBonus} chosen spells with the [R] tag/Can cast a spell as a ritual in its normal casting time once per long rest" ' +
+    'SpellAbility=Intelligence',
+  'Ritual Caster (Wisdom)':
+    'Section=ability,magic ' +
+    // changed effects
+    'Note=' +
+      '"+1 Wisdom",' +
+      '"Always has prepared %{proficiencyBonus} chosen spells with the [R] tag/Can cast a spell as a ritual in its normal casting time once per long rest" ' +
+    'SpellAbility=Wisdom',
   'Sentinel':
     'Section=ability,combat ' +
     // changed effects
     'Note=' +
       '"Ability Boost (Choose 1 from Strength, Dexterity)",' +
-      '"Successful opportunity attacks halt the target/Can make an opportunity attack when a foe uses Disengage and when an adjacent foe attacks another"',
+      '"Successful opportunity attacks halt the target/Can make an opportunity attack when an adjacent foe uses Disengage or hits a creature other than self"',
   'Shadow-Touched (Charisma)':
     'Section=ability,magic ' +
     'Note=' +
@@ -1567,14 +1592,14 @@ PHB5E2024.FEATURES_ADDED = {
     PHB5E.FEATURES.Sharpshooter
     .replace('Section=', 'Section=ability,')
     .replace('Note=', 'Note="+1 Dexterity",')
-    .replace('at long range', "at long range or within 5'")
-    .replace(/\/Can make[^"]*/, ''),
+    .replace('at long range,', "at long range or within 5', and ")
+    .replace(/, and can make[^"]*/, ''),
   'Shield Master':
     'Section=ability,combat,save ' +
     // changed effects
     'Note=' +
       '"+1 Strength",' +
-      '"Can use a shield after a successful melee Attack to inflict a choice of a 5\' push or knocked prone (save DC %{8+strengthModifier+proficiencyBonus} negates)",' +
+      '"During an Attack action, can use a shield after a successful melee attack to inflict a choice of a 5\' push or prone (save DC %{8+strengthModifier+proficiencyBonus} negates)",' +
       '"When holding a shield, can use a reaction to suffer no damage instead of half on a successful Dexterity save"',
   'Skill Expert':Tasha.FEATURES['Skill Expert'],
   'Skulker':
@@ -1594,10 +1619,16 @@ PHB5E2024.FEATURES_ADDED = {
     'Section=ability,magic ' +
     'Note=' +
       '"Ability Boost (Choose 1 from Intelligence, Wisdom, Charisma)",' +
-      '"Can cast spells with a range of at least 10\' at +60\', suffers no disadvantage when casting spells within 5\' of a foe, and spells ignore 3/4 cover"',
-  'Telekinetic (Charisma)':Tasha.FEATURES['Telekinetic (Charisma)'],
-  'Telekinetic (Intelligence)':Tasha.FEATURES['Telekinetic (Intelligence)'],
-  'Telekinetic (Wisdom)':Tasha.FEATURES['Telekinetic (Wisdom)'],
+      '"Can cast attack spells with a range of at least 10\' at +60\', suffers no disadvantage when casting attack spells within 5\' of a foe, and attack spells ignore 3/4 cover"',
+  'Telekinetic (Charisma)':
+    Tasha.FEATURES['Telekinetic (Charisma)']
+    .replace(/ if the spell[^"]*/, ''),
+  'Telekinetic (Intelligence)':
+    Tasha.FEATURES['Telekinetic (Intelligence)']
+    .replace(/ if the spell[^"]*/, ''),
+  'Telekinetic (Wisdom)':
+    Tasha.FEATURES['Telekinetic (Wisdom)']
+    .replace(/ if the spell[^"]*/, ''),
   'Telepathic (Charisma)':Tasha.FEATURES['Telepathic (Charisma)'],
   'Telepathic (Intelligence)':Tasha.FEATURES['Telepathic (Intelligence)'],
   'Telepathic (Wisdom)':Tasha.FEATURES['Telepathic (Wisdom)'],
@@ -1930,7 +1961,7 @@ PHB5E2024.featRulesExtra = function(rules, name) {
       ('expertiseCount', 'skillNotes.keenMind(Expertise)', '+=', '1');
   } else if(name == 'Medium Armor Master') {
     rules.defineRule('armorClass',
-      'combatNotes.mediumArmorMaster', '+', '0',
+      'combatNotes.mediumArmorMaster', '+', '0', // italics
       'combatNotes.mediumArmorMaster.1', '+', null
     );
     rules.defineRule('combatNotes.mediumArmorMaster.1',

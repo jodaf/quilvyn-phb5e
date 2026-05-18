@@ -1336,13 +1336,13 @@ PHB5E.FEATURES_ADDED = {
     'Section=ability,ability ' +
     'Note=' +
       '"Ability Boost (Choose 1 from Dexterity, Strength)",' +
-      '"Standing, running long jump, and running high jump each use only 5\' of movement/Can climb at full speed"',
+      '"Has a %{speed}\' climb Speed/Standing, running long jump, and running high jump each use only 5\' of movement"',
   'Charger':
     'Section=combat ' +
     'Note="Can use a bonus action after a 10\' Dash to attack (+5 damage) or to push 10\'"',
   'Crossbow Expert':
     'Section=combat ' +
-    'Note="Ignores the loading quality of proficient crossbows/Suffers no disadvantage on ranged attacks within 5\'/Can use a bonus action to make a hand crossbow attack after a one-handed attack"',
+    'Note="Ignores the loading property of proficient crossbows/Suffers no disadvantage on ranged attacks within 5\'/Can use a bonus action to make a hand crossbow attack after a one-handed attack"',
   'Defensive Duelist':
     'Section=combat ' +
     'Note="Can use a reaction when hit while wielding a proficient finesse weapon to gain +%{proficiencyBonus} Armor Class vs. the attack"',
@@ -1466,7 +1466,7 @@ PHB5E.FEATURES_ADDED = {
       '"Can read lips/+5 passive Investigation and passive Perception"',
   'Polearm Master':
     'Section=combat ' +
-    'Note="Can use a bonus action after attacking with a polearm to attack with the opposite end, inflicting 1d4 HP bludgeoning/Can make an opportunity attack against a foe who enters polearm reach"',
+    'Note="Can use a bonus action after attacking with a polearm to attack with the opposite end, inflicting 1d4 HP bludgeoning, and can make an opportunity attack against a foe who enters polearm reach"',
   'Resilient (Charisma)':
     'Section=ability,save ' +
     'Note=' +
@@ -1497,9 +1497,24 @@ PHB5E.FEATURES_ADDED = {
     'Note=' +
       '"+1 Wisdom",' +
       '"Save Proficiency (Wisdom)"',
-  'Ritual Caster':
+  'Ritual Caster (Bard)':
     'Section=magic ' +
-    'Note="Can cast spells of up to level %{(level+1)//2} from a ritual book"',
+    'Note="Can cast bard spells of up to level %{(level+1)//2} from a ritual book"',
+  'Ritual Caster (Cleric)':
+    'Section=magic ' +
+    'Note="Can cast cleric spells of up to level %{(level+1)//2} from a ritual book"',
+  'Ritual Caster (Druid)':
+    'Section=magic ' +
+    'Note="Can cast druid spells of up to level %{(level+1)//2} from a ritual book"',
+  'Ritual Caster (Sorcerer)':
+    'Section=magic ' +
+    'Note="Can cast sorcerer spells of up to level %{(level+1)//2} from a ritual book"',
+  'Ritual Caster (Warlock)':
+    'Section=magic ' +
+    'Note="Can cast warlock spells of up to level %{(level+1)//2} from a ritual book"',
+  'Ritual Caster (Wizard)':
+    'Section=magic ' +
+    'Note="Can cast wizard spells of up to level %{(level+1)//2} from a ritual book"',
   'Savage Attacker':
     'Section=combat ' +
     'Note="Can take the better of 2 melee damage rolls once per turn"',
@@ -1508,7 +1523,7 @@ PHB5E.FEATURES_ADDED = {
     'Note="Successful opportunity attacks halt the target/Can make an opportunity attack when a foe uses Disengage and use a reaction to attack when an adjacent foe attacks another"',
   'Sharpshooter':
     'Section=combat ' +
-    'Note="Suffers no disadvantage on ranged attacks at long range/Ranged attacks ignore 3/4 cover/Can make a -5 attack with a ranged weapon to inflict +10 damage"',
+    'Note="Suffers no disadvantage on ranged attacks at long range, ranged attacks ignore 3/4 cover, and can make a -5 attack with a ranged weapon to inflict +10 damage"',
   'Shield Master':
     'Section=combat,save ' +
     'Note=' +
@@ -1536,7 +1551,7 @@ PHB5E.FEATURES_ADDED = {
   'War Caster':
     'Section=combat,magic,save ' +
     'Note=' +
-      '"Can use a reaction to cast a spell instead of making an opportunity attack in response to movement",' +
+      '"Can use a reaction to cast a 1-action targeted spell instead of making an opportunity attack in response to movement",' +
       '"Can cast spells when holding a shield and weapons",' +
       '"Has advantage on concentration saves to maintain a spell"',
   'Weapon Master':
@@ -2085,6 +2100,12 @@ PHB5E.featRulesExtra = function(rules, name) {
       'dexterity', '?', 'source >= 16',
       'armorCategory', '=', 'source == "Medium" ? 1 : null'
     );
+  } else if(name.startsWith('Ritual Caster')) {
+    let c = name.replace('Ritual Caster (', '').replace(')', '');
+    let spellType = c == 'Warlock' ? 'K' : c.charAt(0);
+    let note =
+      'magicNotes.' + name.charAt(0).toLowerCase() + name.substring(1).replaceAll(' ', '');
+    rules.defineRule('casterLevel.' + spellType, note, '^=', '1');
   } else if(name == 'Skilled') {
     rules.defineRule('skillNotes.skilled', 'feats.Skilled', '=', 'source * 3');
     // Since the proficiencies from Skilled can be applied to either skills or
