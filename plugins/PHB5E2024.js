@@ -1640,18 +1640,44 @@ PHB5E2024.FEATURES_ADDED = {
   PHB5E.FEATURES['Weapon Master']
   .replace(/Weapon Prof[^"]*/, 'Can use the mastery property of a proficient weapon chosen at the end of a long rest'),
 
-  'Blind Fighting':'Section=feature Note="TODO"',
-  'Dueling':'Section=feature Note="TODO"',
-  'Interception':'Section=feature Note="TODO"',
-  'Protection':'Section=feature Note="TODO"',
-  'Thrown Weapon Fighting':'Section=feature Note="TODO"',
-  'Unarmed Fighting':'Section=feature Note="TODO"',
+  'Blind Fighting':Tasha.FEATURES['Fighting Style (Blind Fighting)'],
+  'Dueling':PHB5E.FEATURES['Fighting Style (Dueling)'],
+  'Interception':Tasha.FEATURES['Fighting Style (Interception)'],
+  'Protection':
+    PHB5E.FEATURES['Fighting Style (Protection)']
+    .replace('an attack', 'attacks')
+    .replace('creature', 'creature until the start of the next turn'),
+  'Thrown Weapon Fighting':
+    Tasha.FEATURES['Fighting Style (Thrown Weapon Fighting)']
+    .replace(/Can .*, and t/, 'T'),
+  'Unarmed Fighting':Tasha.FEATURES['Fighting Style (Unarmed Fighting)'],
 
-  'Boon Of Energy Resistance':'Section=feature Note="TODO"',
-  'Boon Of Fortitude':'Section=feature Note="TODO"',
-  'Boon Of Recovery':'Section=feature Note="TODO"',
-  'Boon Of Skill':'Section=feature Note="TODO"',
-  'Boon Of Speed':'Section=feature Note="TODO"'
+  'Boon Of Energy Resistance':
+    'Section=ability,save ' +
+    'Note=' +
+      '"Ability Boost (Choose 1 from any)",' +
+      '"Can gain resistance to 2 choices of acid, cold, fire, lightning, necrotic, poison, psychic, radiant and thunder at the end of a long rest, and taking damage of one of the chosen types allows using a reaction to inflict 2d12+%{constitutionModifier} HP of that type on a target within 60\' (save DC %{8+constitutionModifier+proficiencyBonus} negates)"',
+  'Boon Of Fortitude':
+    'Section=ability,combat,combat ' +
+    'Note=' +
+      '"Ability Boost (Choose 1 from any)",' +
+      '"+40 Hit Points",' +
+      '"Regains +%{constitutionModifier} hit points from effects that restore hit points to self once per turn"',
+  'Boon Of Recovery':
+    'Section=ability,combat ' +
+    'Note=' +
+      '"Ability Boost (Choose 1 from any)",' +
+      '"Can regain %{hitPoints//2+1} hit points when taken to 0 hit points once per long rest and can use bonus actions to regain hit points from a pool of 10d10 that refreshes at the end of a long rest"',
+  'Boon Of Skill':
+    'Section=ability,skill ' +
+    'Note=' +
+      '"Ability Boost (Choose 1 from any)",' +
+      '"Has proficiency in all skills/Skill Expertise (Choose 1 from any)"',
+  'Boon Of Speed':
+    'Section=ability,combat ' +
+    'Note=' +
+      '"Ability Boost (Choose 1 from any)/+30 Speed",' +
+      '"Can use a bonus action to Disengage, breaking any grapple in the process"'
 
 };
 PHB5E2024.FEATURES = Object.assign({}, SRD5E2024.FEATURES, PHB5E2024.FEATURES_ADDED);
@@ -1789,6 +1815,9 @@ PHB5E2024.choiceRules = function(rules, type, name, attrs) {
     PHB5E2024.classRulesExtra(rules, name);
   else if(type == 'Feat')
     PHB5E2024.featRulesExtra(rules, name);
+  else if(type == 'Skill')
+    rules.defineRule
+      ('skillProficiency.' + name, 'skillNotes.boonOfSkill', '=', '1');
 };
 
 /*
@@ -1831,8 +1860,9 @@ PHB5E2024.classRulesExtra = function(rules, name) {
       'bardicInspirationDie', '=', '"1d" + source'
     );
     // TODO multiclass bard/monk? both increase unarmed strike damage
-    rules.defineRule
-      ('weapons.Unarmed Strike.2', 'combatNotes.dazzlingFootwork.3', '=', null);
+    rules.defineRule('weapons.Unarmed Strike.2',
+      'combatNotes.dazzlingFootwork.3', '^=', null
+    );
 
   } else if(name == 'Druid') {
 
@@ -1956,7 +1986,9 @@ PHB5E2024.classRulesExtra = function(rules, name) {
  * derived directly from the attributes passed to featRules.
  */
 PHB5E2024.featRulesExtra = function(rules, name) {
-  if(name == 'Keen Mind (Expertise)') {
+  if(name == 'Boon Of Skill') {
+    rules.defineRule('expertiseCount', 'skillNotes.boonOfSkill', '+=', '1');
+  } else if(name == 'Keen Mind (Expertise)') {
     rules.defineRule
       ('expertiseCount', 'skillNotes.keenMind(Expertise)', '+=', '1');
   } else if(name == 'Medium Armor Master') {
@@ -1977,6 +2009,16 @@ PHB5E2024.featRulesExtra = function(rules, name) {
   } else if(name == 'Tavern Brawler') {
     rules.defineRule
       ('weapons.Unarmed Strike.2', 'combatNotes.tavernBrawler', '^=', '"1d4"');
+  } else if(name == 'Unarmed Fighting') {
+    rules.defineRule('combatNotes.unarmedFighting.1',
+      'combatNotes.unarmedFighting', '?', null,
+      'armor', '?', 'source=="None"',
+      'shield', '=', 'source=="None" ? "1d8" : null'
+    );
+    rules.defineRule('weapons.Unarmed Strike.2',
+      'combatNotes.unarmedFighting', '^', '"1d6"',
+      'combatNotes.unarmedFighting.1', '^', null
+    );
   }
 
 };

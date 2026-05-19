@@ -1220,7 +1220,7 @@ PHB5E.FEATURES_ADDED = {
     'Note="Can replace a visible target\'s attack, ability check, or save with a pre-rolled value %{magicNotes.greaterPortent?3:2} times per long rest"',
   'The Third Eye':
     'Section=magic ' +
-    'Note="Can use an action once per short rest to gain 60\' darkvision, 60\' ethereal sight, the ability to read any language, or 10\' invisibility sight until the next rest"',
+    'Note="Can use an action once per short rest to gain 60\' Darkvision, 60\' ethereal sight, the ability to read any language, or 10\' invisibility sight until the next rest"',
   // School Of Enchantment
   'Alter Memories':
     'Section=magic ' +
@@ -1286,7 +1286,7 @@ PHB5E.FEATURES_ADDED = {
     'Note="Requires half the normal time and cost to copy transmutation spells into spellbook"',
   "Transmuter's Stone":
     'Section=magic ' +
-    'Note="Can use an 8-hr process to create a stone that gives a choice of 60\' darkvision, +10\' Speed, proficiency on Constitution saves, or resistance to a chosen energy damage, and can change the effect of a possessed stone when casting a transmutation spell"',
+    'Note="Can use an 8-hr process to create a stone that gives a choice of 60\' Darkvision, +10\' Speed, proficiency on Constitution saves, or resistance to a chosen energy damage, and can change the effect of a possessed stone when casting a transmutation spell"',
 
   // Backgrounds
   'By Popular Demand':
