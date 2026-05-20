@@ -195,11 +195,13 @@ PHB5E.CLASSES_FEATURES_ADDED = {
     '"features.College Of Valor ? 14:Battle Magic"',
   'Cleric':
     '"features.Knowledge Domain ? 1:Blessings Of Knowledge",' +
+    '"features.Knowledge Domain ? 1:Knowledge Domain Spells",' +
     '"features.Knowledge Domain ? 2:Knowledge Of The Ages",' +
     '"features.Knowledge Domain ? 6:Read Thoughts",' +
     '"clericHasPotentSpellcasting ? 8:Potent Spellcasting",' +
     '"features.Knowledge Domain ? 17:Visions Of The Past",' +
     '"features.Light Domain ? 1:Bonus Cantrip (Light Domain)",' +
+    '"features.Light Domain ? 1:Light Domain Spells",' +
     '"features.Light Domain ? 1:Warding Flare",' +
     '"features.Light Domain ? 2:Radiance Of The Dawn",' +
     '"features.Light Domain ? 6:Improved Flare",' +
@@ -207,28 +209,33 @@ PHB5E.CLASSES_FEATURES_ADDED = {
     '"features.Light Domain ? 17:Corona Of Light",' +
     '"features.Nature Domain ? 1:Acolyte Of Nature",' +
     '"features.Nature Domain ? 1:Bonus Proficiency (Nature Domain)",' +
+    '"features.Nature Domain ? 1:Nature Domain Spells",' +
     '"features.Nature Domain ? 2:Charm Animals And Plants",' +
     '"features.Nature Domain ? 6:Dampen Elements",' +
     // SRD35 defines this '"clericHasDivineStrike ? 8:Divine Strike",' +
     '"features.Nature Domain ? 17:Master Of Nature",' +
     '"features.Tempest Domain ? 1:Bonus Proficiencies (Tempest Domain)",' +
+    '"features.Tempest Domain ? 1:Tempest Domain Spells",' +
     '"features.Tempest Domain ? 1:Wrath Of The Storm",' +
     '"features.Tempest Domain ? 2:Destructive Wrath",' +
     '"features.Tempest Domain ? 6:Thunderbolt Strike",' +
     // '"clericHasDivineStrike ? 8:Divine Strike",' +
     '"features.Tempest Domain ? 17:Stormborn",' +
     '"features.Trickery Domain ? 1:Blessing Of The Trickster",' +
+    '"features.Trickery Domain ? 1:Trickery Domain Spells",' +
     '"features.Trickery Domain ? 2:Invoke Duplicity",' +
     '"features.Trickery Domain ? 6:Cloak Of Shadows (Trickery Domain)",' +
     // '"clericHasDivineStrike ? 8:Divine Strike",' +
     '"features.Trickery Domain ? 17:Improved Duplicity",' +
     '"features.War Domain ? 1:Bonus Proficiencies (War Domain)",' +
     '"features.War Domain ? 1:War Priest",' +
+    '"features.War Domain ? 1:War Domain Spells",' +
     '"features.War Domain ? 2:Guided Strike",' +
     '"features.War Domain ? 6:War God\'s Blessing",' +
     // '"clericHasDivineStrike ? 8:Divine Strike",' +
     '"features.War Domain ? 17:Avatar Of Battle"',
   'Druid':
+    '"features.Circle Of The Land (Underdark) ? 3:Circle Spells (Underdark)",' +
     '"features.Circle Of The Moon ? 2:Combat Wild Shape",' +
     '"features.Circle Of The Moon ? 2:Circle Forms",' +
     '"features.Circle Of The Moon ? 6:Primal Strike",' +
@@ -630,9 +637,9 @@ PHB5E.FEATURES_ADDED = {
   'Drow Magic':
     'Section=magic ' +
     // errata replaces once per day with once per long rest
-    'Note="Knows the <i>Dancing Lights</i> cantrip%{level<3?\'\':level<5?\' and can cast <i>Faerie Fire</i> without expending a spell slot once per long rest\':\' and can cast <i>Faerie Fire</i> and <i>Darkness</i> without expending a spell slot once per long rest\'}" ' +
-    'Spells="Dancing Lights","3:Faerie Fire",5:Darkness ' +
-    'SpellAbility=Charisma',
+    'Note="Can cast <i>Faerie Fire</i>%{level<5?\'\':\' and <i>Darkness</i>\'} without expending a spell slot once per long rest" ' +
+    'SpellAbility=Charisma ' +
+    'Spells="Dancing Lights","3:Faerie Fire",5:Darkness',
   'Drow Weapon Training':
     'Section=combat ' +
     'Note="Weapon Proficiency (Hand Crossbow; Rapier; Shortsword)"',
@@ -647,14 +654,12 @@ PHB5E.FEATURES_ADDED = {
   'Stout Halfling Ability Adjustment':'Section=ability Note="+1 Constitution"',
   'Stout Resilience':
     'Section=save ' +
-    'Note="Has advantage vs. poison and resistance to poison damage"',
+    'Note="Has advantage vs. poison and resistance to poison"',
   // Forest Gnome
   'Forest Gnome Ability Adjustment':'Section=ability Note="+1 Dexterity"',
   'Natural Illusionist':
-    'Section=magic ' +
-    'Note="Knows the <i>Minor Illusion</i> cantrip" ' +
-    'Spells="Minor Illusion" ' +
-    'SpellAbility=Intelligence',
+    'SpellAbility=Intelligence ' +
+    'Spells="Minor Illusion"',
   'Speak With Small Beasts':
     'Section=skill Note="Can communicate simple ideas with small animals"',
 
@@ -675,17 +680,17 @@ PHB5E.FEATURES_ADDED = {
     'Note="Can track at a fast pace and Stealth at a normal pace"',
   'Spirit Seeker':
     'Section=magic ' +
-    'Note="Can cast ritual <i>Beast Sense</i> and <i>Speak With Animals</i>" ' +
+    'Note="Can cast <i>Beast Sense</i> and <i>Speak With Animals</i> as rituals" ' +
     'Spells="Beast Sense","Speak With Animals"',
   'Spirit Walker':
     'Section=magic ' +
-    'Note="Can cast ritual <i>Commune With Nature</i>" ' +
+    'Note="Can cast <i>Commune With Nature</i> as a ritual" ' +
     'Spells="Commune With Nature"',
   'Totemic Attunement (Bear)':
     'Section=combat ' +
     'Note="During rage, adjacent foes suffer disadvantage on attacks on others"',
   'Totemic Attunement (Eagle)':
-    'Section=ability Note="Can fly %{speed}\' each rd during rage"',
+    'Section=ability Note="Gains a %{speed}\' fly Speed during rage"',
   'Totemic Attunement (Wolf)':
     'Section=combat ' +
     'Note="During rage, can use a bonus action after a successful melee attack to knock prone a Large or smaller foe"',
@@ -714,14 +719,12 @@ PHB5E.FEATURES_ADDED = {
   // Cleric
   // Knowledge Domain
   'Blessings Of Knowledge':
-    'Section=skill,skill ' +
-    'Note=' +
-      '"Skill Proficiency (Choose 2 from Arcana, History, Nature, Religion)/Language (Choose 2 from any)",' +
-      '"+%{proficiencyBonus} on chosen Blessings of Knowledge skills"',
+    'Section=skill ' +
+    'Note="Language (Choose 2 from any)/Skill Proficiency (Choose 2 from Arcana, History, Nature, Religion)/Skill Expertise (Choose 2 from Arcana, History, Nature, Religion)"',
   'Dampen Elements':
     'Section=combat ' +
     'Note="R30\' Can use a reaction to grant resistance to immediate acid, cold, fire, lightning, or thunder damage"',
-  'Knowledge Domain':
+  'Knowledge Domain Spells':
     'Spells=' +
       '"1:Command","1:Identify",' +
       '"3:Augury","3:Suggestion",' +
@@ -730,7 +733,7 @@ PHB5E.FEATURES_ADDED = {
       '"9:Legend Lore","9:Scrying"',
   'Knowledge Of The Ages':
     'Section=skill ' +
-    'Note="Can use Channel Divinity to gain proficiency in a chosen skill or tool for 10 min"',
+    'Note="Can use Channel Divinity to gain proficiency with a chosen skill or tool for 10 min"',
   'Potent Spellcasting':
     'Section=magic Note="Cleric cantrips inflict +%{wisdomModifier} HP"',
   'Read Thoughts':
@@ -739,15 +742,15 @@ PHB5E.FEATURES_ADDED = {
     'Spells=Suggestion',
   'Visions Of The Past':
     'Section=magic ' +
-    'Note="Can gain visions about surroundings or a held object via %{wisdomModifier>?1} min meditation once per short rest"',
+    'Note="Can gain visions about surroundings or a held object by meditating for %{wisdomModifier>?1} min once per short rest"',
   // Light Domain
   'Bonus Cantrip (Light Domain)':
-    'Section=magic Note="Knows the <i>Light</i> cantrip" Spells=Light',
+    'Spells=Light',
   'Corona Of Light':
     'Section=magic ' +
     'Note="Can use an action to emit a 60\' bright light that inflicts foe disadvantage on saves vs. fire and radiant spells for 1 min"',
   'Improved Flare':'Section=combat Note="Has increased Warding Flare effects"',
-  'Light Domain':
+  'Light Domain Spells':
     'Spells=' +
       '"1:Burning Hands","1:Faerie Fire",' +
       '"3:Flaming Sphere","3:Scorching Ray",' +
@@ -757,10 +760,10 @@ PHB5E.FEATURES_ADDED = {
   // Potent Spellcasting as above
   'Radiance Of The Dawn':
     'Section=magic ' +
-    'Note="R30\' Can use Channel Divinity to dispel magical darkness and to inflict 2d10+%{levels.Cleric} HP radiant (save Constitution half) on targets"',
+    'Note="R30\' Can use Channel Divinity to dispel magical darkness and to inflict 2d10+%{levels.Cleric} HP radiant (save Constitution half) on foes"',
   'Warding Flare':
     'Section=combat ' +
-    'Note="R30\' Can use a reaction to inflict disadvantage on a foe attack%{combatNotes.improvedFlare?\'\':\' vs. self\'} %{wisdomModifier>1?wisdomModifier+\' times\':\'once\'} per long rest"',
+    'Note="R30\' Can use a reaction to inflict disadvantage on a foe attack on self%{combatNotes.improvedFlare?\' or another\':\'\'} %{wisdomModifier>1?wisdomModifier+\' times\':\'once\'} per long rest"',
   // Nature Domain
   'Acolyte Of Nature':
     'Section=magic,skill ' +
@@ -771,11 +774,11 @@ PHB5E.FEATURES_ADDED = {
     'Section=combat Note="Armor Proficiency (Heavy)"',
   'Charm Animals And Plants':
     'Section=magic ' +
-    'Note="R30\' Can use Channel Divinity to charm beasts and plants (save Wisdom negates; taking damage ends) for 1 min"',
+    'Note="R30\' Can use Channel Divinity to charm beasts and plants (save Wisdom negates) for 1 min or until damaged"',
   // Divine Strike as SRD35
   'Master Of Nature':
     'Section=magic Note="Can command charmed animals and plants"',
-  'Nature Domain':
+  'Nature Domain Spells':
     'Spells=' +
       '"1:Animal Friendship","1:Speak With Animals",' +
       '"3:Barkskin","3:Spike Growth",' +
@@ -790,8 +793,8 @@ PHB5E.FEATURES_ADDED = {
     'Section=magic ' +
     'Note="Can use Channel Divinity to maximize lightning or thunder damage"',
   // Divine Strike as above
-  'Stormborn':'Section=ability Note="Has a %{speed}\' fly speed outdoors"',
-  'Tempest Domain':
+  'Stormborn':'Section=ability Note="Has a %{speed}\' fly Speed outdoors"',
+  'Tempest Domain Spells':
     'Spells=' +
       '"1:Fog Cloud","1:Thunderwave",' +
       '"3:Gust Of Wind","3:Shatter",' +
@@ -803,7 +806,7 @@ PHB5E.FEATURES_ADDED = {
     'Note="Can cause lightning damage to also push away Large and smaller creatures 10\'"',
   'Wrath Of The Storm':
     'Section=combat ' +
-    'Note="Can use a reaction to inflict 2d8 HP lightning or thunder (save Dexterity half) on a successful attacker %{wisdomModifier>1?wisdomModifier+\' times\':\'once\'} per long rest"',
+    'Note="Can use a reaction to inflict 2d8 HP lightning or thunder (save Dexterity half) on an adjacent successful attacker %{wisdomModifier>1?wisdomModifier+\' times\':\'once\'} per long rest"',
   // Trickery Domain
   'Blessing Of The Trickster':
     'Section=magic ' +
@@ -817,7 +820,7 @@ PHB5E.FEATURES_ADDED = {
   'Invoke Duplicity':
     'Section=combat ' +
     'Note="R30\' Can use Channel Divinity to create %{combatNotes.improvedDuplicity?\'4 illusionary duplicates\':\'an illusionary duplicate\'} for concentration up to 1 min, gaining the ability to use %{combatNotes.improvedDuplicity?\'them\':\'it\'} for remote spellcasting and advantage on attacks when self and %{combatNotes.improvedDuplicity?\'a\':\'the\'} duplicate are each adjacent to the target; can use a bonus action each rd to move %{combatNotes.improvedDuplicity?\'each\':\'the\'} duplicate up to 30\', to a maximum of 120\' away"',
-  'Trickery Domain':
+  'Trickery Domain Spells':
     'Spells=' +
       '"1:Charm Person","1:Disguise Self",' +
       '"3:Mirror Image","3:Pass Without Trace",' +
@@ -834,7 +837,7 @@ PHB5E.FEATURES_ADDED = {
   // Divine Strike as above
   'Guided Strike':
     'Section=combat Note="Can use Channel Divinity to give self +10 attack"',
-  'War Domain':
+  'War Domain Spells':
     'Spells=' +
       '"1:Divine Favor","1:Shield Of Faith",' +
       '"3:Magic Weapon","3:Spiritual Weapon",' +
@@ -846,11 +849,11 @@ PHB5E.FEATURES_ADDED = {
     'Note="R30\' Can use a reaction and Channel Divinity to give an ally +10 attack"',
   'War Priest':
     'Section=combat ' +
-    'Note="Can use a bonus action to make an extra weapon attack %{wisdomModifier>1?wisdomModifier+\' times\':\'once\'} per long rest"',
+    'Note="Can use a bonus action to make an extra weapon attack during an Attack action %{wisdomModifier>1?wisdomModifier+\' times\':\'once\'} per long rest"',
 
   // Druid
   // Circle Of The Land
-  'Circle Of The Land (Underdark)':
+  'Circle Spells (Underdark)':
     'Spells=' +
       '"3:Spider Climb","3:Web",' +
       '"5:Gaseous Form","5:Stinking Cloud",' +
@@ -868,7 +871,7 @@ PHB5E.FEATURES_ADDED = {
     'Section=combat Note="Attacks while using Wild Shape count as magical"',
   'Thousand Forms':
     'Section=magic ' +
-    'Note="Can cast <i>Alter Self</i> at will" ' +
+    'Note="Can cast <i>Alter Self</i> without expending a spell slot" ' +
     'Spells="Alter Self"',
 
   // Fighter
@@ -920,7 +923,7 @@ PHB5E.FEATURES_ADDED = {
     'Note="Can expend a superiority die to give a target the roll + %{charismaModifier} temporary hit points"',
   'Riposte':
     'Section=combat ' +
-    'Note="After a foe melee miss, can use a reaction and spend a superiority die to attack and add the roll to its damage"',
+    'Note="After a foe melee miss, can use a reaction and spend a superiority die to attack it and add the roll to its damage"',
   'Relentless':
     'Section=combat ' +
     'Note="Has a minimum of 1 superiority die available after initiative"',
@@ -986,7 +989,7 @@ PHB5E.FEATURES_ADDED = {
     'Spells=Stoneskin',
   'Fangs Of The Fire Snake':
     'Section=magic ' +
-    'Note="Can spend 1 ki point to make a +10\' unarmed attack, inflicting fire damage, and 1 additional ki point to inflict +1d10 HP fire"',
+    'Note="Can spend 1 ki point during an Attack action to make a +10\' unarmed attack, inflicting fire damage, and 1 additional ki point to inflict +1d10 HP fire"',
   'Fist Of Four Thunders':
     'Section=magic ' +
     'Note="Can spend 2 ki points to cast <i>Thunderwave</i>" ' +
@@ -1904,6 +1907,8 @@ PHB5E.choiceRules = function(rules, type, name, attrs) {
     PHB5E.classRulesExtra(rules, name);
   else if(type == 'Feat')
     PHB5E.featRulesExtra(rules, name);
+  else if(type == 'Race')
+    PHB5E.raceRulesExtra(rules, name);
 };
 
 /*
@@ -1950,6 +1955,11 @@ PHB5E.classRulesExtra = function(rules, name) {
       'features.Trickery Domain', '=', '"poison"',
       'features.War Domain', '=', '"weapon damage type"'
     );
+    // TODO automate this
+    rules.defineRule
+      ('expertiseCount', 'skillNotes.blessingsOfKnowledge', '+=', '2');
+    rules.defineRule
+      ('spellsAvailable.D0', 'magicNotes.acolyteOfNature', '+=', '1');
 
   } else if(name == 'Druid') {
 
@@ -2014,7 +2024,7 @@ PHB5E.classRulesExtra = function(rules, name) {
     rules.defineRule
       ('casterLevels.W', 'casterLevels.Eldritch Knight', '^=', null);
     rules.defineRule
-      ('magicNotes.spellcasting', 'features.Eldritch Knight', '=', '"Wizard"');
+      ('magicNotes.spellcasting', 'features.Eldritch Knight', '=', '"wizard"');
 
   } else if(name == 'Monk') {
 
@@ -2050,7 +2060,7 @@ PHB5E.classRulesExtra = function(rules, name) {
     rules.defineRule
       ('casterLevels.W', 'casterLevels.Arcane Trickster', '^=', null);
     rules.defineRule
-      ('magicNotes.spellcasting', 'features.Arcane Trickster', '=', '"Wizard"');
+      ('magicNotes.spellcasting', 'features.Arcane Trickster', '=', '"wizard"');
 
   }
 
@@ -2129,6 +2139,18 @@ PHB5E.featRulesExtra = function(rules, name) {
       ('weapons.Unarmed Strike.2', 'combatNotes.tavernBrawler', '^=', '"1d4"');
   }
 
+};
+
+/*
+ * Defines in #rules# the rules associated with race #name# that cannot be
+ * derived directly from the attributes passed to raceRules.
+ */
+PHB5E.raceRulesExtra = function(rules, name) {
+  if(name == 'Dark Elf') {
+    rules.defineRule('magicNotes.drowMagic', 'level', '?', 'source >= 3');
+  } else if(name == 'High Elf') {
+    rules.defineRule('spellsAvailable.W0', 'highElfLevel', '+=', '1');
+  }
 };
 
 /* Returns an array of plugins upon which this one depends. */
