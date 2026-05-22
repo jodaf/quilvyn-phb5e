@@ -1250,7 +1250,7 @@ PHB5E.FEATURES_ADDED = {
     'Note="Requires half the normal time and cost to copy illusion spells into spellbook"',
   'Illusory Reality':
     'Section=magic ' +
-    'Note="Can use a bonus action when casting an illusion spell to make a harmless object in the illusion real for 1 min"',
+    'Note="Can use a bonus action when using a spell slot to cast an illusion spell to make a harmless object in the illusion real for 1 min"',
   'Illusory Self':
     'Section=magic ' +
     'Note="Can use a reaction to cause an attack on self to miss once per short rest"',

@@ -812,11 +812,13 @@ PHB5E2024.FEATURES_ADDED = {
     .replace('fire', 'Radiance Of The Dawn and fire')
     .replace('1 min', "1 min %{wisdomModifier>1?wisdomModifier+' times':'once'} per long rest"),
   'Improved Warding Flare':PHB5E.FEATURES['Improved Flare'],
-  'Light Domain Spells':PHB5E.FEATURES['Light Domain']
+  'Light Domain Spells':PHB5E.FEATURES['Light Domain Spells']
     .replaceAll('1:', '3:')
     .replace('Flaming Sphere', 'See Invisibility')
     .replace('Guardian Of Faith', 'Arcane Eye'),
-  'Radiance Of The Dawn':PHB5E.FEATURES['Radiance Of The Dawn'],
+  'Radiance Of The Dawn':
+    PHB5E.FEATURES['Radiance Of The Dawn']
+    .replace('foes', 'targets'),
   'Warding Flare':
     'Section=combat ' +
     // changed effects
@@ -833,7 +835,7 @@ PHB5E2024.FEATURES_ADDED = {
   'Invoke Duplicity':
     PHB5E.FEATURES['Invoke Duplicity']
     .replaceAll('improvedDuplicity', 'null'), // suppress Improved effects
-  'Trickery Domain Spells':PHB5E.FEATURES['Trickery Domain']
+  'Trickery Domain Spells':PHB5E.FEATURES['Trickery Domain Spells']
     .replaceAll('1:', '3:')
     .replace('Mirror Image', 'Invisibility')
     .replace('Blink', 'Hypnotic Pattern')
@@ -850,7 +852,7 @@ PHB5E2024.FEATURES_ADDED = {
     'Section=combat ' +
     // changed effects
     'Note="Can use Channel Divinity after a failed attack to add +10 to the roll, or as a reaction to add +10 to a failed attack roll of an ally within 30\'"',
-  'War Domain Spells':PHB5E.FEATURES['War Domain']
+  'War Domain Spells':PHB5E.FEATURES['War Domain Spells']
     .replace('1:', '3:')
     .replace('Divine Favor', 'Guiding Bolt')
     .replace('Stoneskin', 'Fire Shield')
@@ -858,6 +860,7 @@ PHB5E2024.FEATURES_ADDED = {
   'War Priest':
     PHB5E.FEATURES['War Priest']
     .replace('weapon attack', 'weapon attack or unarmed strike')
+    .replace('during an Attack action ', '')
     .replace('long rest', 'short rest'),
   "War God's Blessing":
     // changed effects
@@ -1091,7 +1094,7 @@ PHB5E2024.FEATURES_ADDED = {
     .replace('the target', 'targets')
     .replace('Dexterity or ', '')
     .replace('end)', 'end) for 1 min'),
-  'Oath Of The Ancients Spells':PHB5E.FEATURES['Oath Of The Ancients'],
+  'Oath Of The Ancients Spells':PHB5E.FEATURES['Oath Of The Ancients Spells'],
   'Undying Sentinel':
      PHB5E.FEATURES['Undying Sentinel']
      .replace('retain 1 hit point', 'regain %{levels.Paladin*3} hit points')
@@ -1101,7 +1104,7 @@ PHB5E2024.FEATURES_ADDED = {
     PHB5E.FEATURES['Avenging Angel']
     .replaceAll('1 hr', '10 min')
     .replaceAll('long rest', 'long rest; can expend level 5 spell slots for additional uses'),
-  'Oath Of Vengeance Spells':PHB5E.FEATURES['Oath Of Vengeance'],
+  'Oath Of Vengeance Spells':PHB5E.FEATURES['Oath Of Vengeance Spells'],
   'Relentless Avenger':
     PHB5E.FEATURES['Relentless Avenger']
     .replace('move', "reduce the target's Speed to 0 until the end of the current turn and move"),
@@ -1161,7 +1164,7 @@ PHB5E2024.FEATURES_ADDED = {
   // Arcane Trickster
   'Mage Hand Legerdemain':
     PHB5E.FEATURES['Mage Hand Legerdemain']
-    .replace(/stow.*traps/, 'make Sleight Of Hand checks'),
+    .replace(/plant[^"]*/, 'make Sleight Of Hand checks'),
   'Magical Ambush':
     PHB5E.FEATURES['Magical Ambush']
     .replace('hidden', 'invisible'),
