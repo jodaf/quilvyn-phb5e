@@ -262,11 +262,13 @@ PHB5E.CLASSES_FEATURES_ADDED = {
     '"features.Way Of The Four Elements ? 3:Elemental Attunement"',
   'Paladin':
     '"features.Oath Of The Ancients ? 3:Nature\'s Wrath",' +
+    '"features.Oath Of The Ancients ? 3:Oath Of The Ancients Spells",' +
     '"features.Oath Of The Ancients ? 3:Turn The Faithless",' +
     '"features.Oath Of The Ancients ? 7:Aura Of Warding",' +
     '"features.Oath Of The Ancients ? 15:Undying Sentinel",' +
     '"features.Oath Of The Ancients ? 20:Elder Champion",' +
     '"features.Oath Of Vengeance ? 3:Abjure Enemy",' +
+    '"features.Oath Of Vengeance ? 3:Oath Of Vengeance Spells",' +
     '"features.Oath Of Vengeance ? 3:Vow Of Enmity",' +
     '"features.Oath Of Vengeance ? 7:Relentless Avenger",' +
     '"features.Oath Of Vengeance ? 15:Soul Of Vengeance",' +
@@ -720,7 +722,7 @@ PHB5E.FEATURES_ADDED = {
   // Knowledge Domain
   'Blessings Of Knowledge':
     'Section=skill ' +
-    'Note="Language (Choose 2 from any)/Skill Proficiency (Choose 2 from Arcana, History, Nature, Religion)/Skill Expertise (Choose 2 from Arcana, History, Nature, Religion)"',
+    'Note="Language (Choose 2 from any)/Skill Proficiency (Choose 2 from Arcana, History, Nature, Religion)/Expertise (Choose 2 from Arcana, History, Nature, Religion)"',
   'Dampen Elements':
     'Section=combat ' +
     'Note="R30\' Can use a reaction to grant resistance to immediate acid, cold, fire, lightning, or thunder damage"',
@@ -1043,11 +1045,11 @@ PHB5E.FEATURES_ADDED = {
     'Note="R%{levels.Paladin<18?10:30}\' Self and allies have resistance to spell damage"',
   'Elder Champion':
     'Section=magic ' +
-    'Note="Can regain 10 hit points each turn, cast 1-action Paladin spells as a bonus action, and inflict disadvantage on saves vs. self spells and Channel Divinity effects on foes within 10\' for 1 min once per long rest"',
+    'Note="Can regain 10 hit points at the start of each turn, cast 1-action Paladin spells as a bonus action, and inflict disadvantage on saves vs. self spells and Channel Divinity effects on foes within 10\' for 1 min once per long rest"',
   "Nature's Wrath":
     'Section=magic ' +
     'Note="R10\' Can use Channel Divinity to restrain a target (save DC %{spellDifficultyClass.P} Dexterity or Strength negates; additional saves each rd end)"',
-  'Oath Of The Ancients':
+  'Oath Of The Ancients Spells':
     'Spells=' +
       '"3:Ensnaring Strike","3:Speak With Animals",' +
       '"5:Moonbeam","5:Misty Step",' +
@@ -1056,7 +1058,7 @@ PHB5E.FEATURES_ADDED = {
       '"17:Commune With Nature","17:Tree Stride"',
   'Turn The Faithless':
     'Section=combat ' +
-    'Note="R30\' Can use Channel Divinity to make fiends and fey flee (save DC %{spellDifficultyClass.P} Wisdom negates) for 1 min"',
+    'Note="R30\' Can use Channel Divinity to make fiends and fey flee (save DC %{spellDifficultyClass.P} Wisdom negates) for 1 min or until damaged"',
   'Undying Sentinel':
     'Section=combat,feature,save ' +
     'Note=' +
@@ -1066,13 +1068,13 @@ PHB5E.FEATURES_ADDED = {
   // Oath Of Vengeance
   'Abjure Enemy':
     'Section=magic ' +
-    'Note="R60\' Can use Channel Divinity to halt a target (save DC %{spellDifficultyClass.P} Wisdom inflicts half speed; fiends and undead have disadvantage on the save) for 1 min"',
+    'Note="R60\' Can use Channel Divinity to halt a target (save DC %{spellDifficultyClass.P} Wisdom inflicts half speed; fiends and undead have disadvantage on the save) for 1 min or until damaged"',
   'Avenging Angel':
     'Section=ability,combat ' +
     'Note=' +
-      '"Can gain a 60\' fly speed for 1 hr once per long rest",' +
-      '"R30\' Can frighten foes (save DC %{spellDifficultyClass.P} Wisdom negates) for 1 min or until damaged, giving advantage on ally attacks, for 1 hr once per long rest"',
-  'Oath Of Vengeance':
+      '"Can gain a 60\' fly Speed for 1 hr once per long rest",' +
+      '"R30\' Can generate an aura that frightens foes (save DC %{spellDifficultyClass.P} Wisdom negates) for 1 min or until damaged, giving advantage on ally attacks, for 1 hr once per long rest"',
+  'Oath Of Vengeance Spells':
     'Spells=' +
       '"3:Bane","3:Hunter\'s Mark",' +
       '"5:Hold Person","5:Misty Step",' +
@@ -1108,7 +1110,7 @@ PHB5E.FEATURES_ADDED = {
   // Assassin
   'Assassinate':
     'Section=combat ' +
-    'Note="Has advantage on attacks before the target\'s first turn/Successful surprise attacks are critical hits"',
+    'Note="Has advantage on attacks before the target\'s first turn, and successful surprise attacks are critical hits"',
   'Bonus Proficiencies (Assassin)':
     'Section=skill Note="Tool Proficiency (Disguise Kit; Poisoner\'s Kit)"',
   'Death Strike':
@@ -1116,14 +1118,14 @@ PHB5E.FEATURES_ADDED = {
     'Note="Successful surprise attacks inflict double damage (save DC %{8+dexterityModifier+proficiencyBonus} Constitution negates)"',
   'Impostor':
     'Section=skill ' +
-    'Note="Can use unerring mimicry and has advantage on Deception to overcome suspicion"',
+    'Note="3 hr study of a creature\'s speech, writing, and behavior allows unerring mimicry and gives advantage on Deception to overcome suspicion"',
   'Infiltration Expertise':
     'Section=skill ' +
     'Note="Can use a 1-week process to create and adopt a different identity"',
   // Arcane Trickster
   'Mage Hand Legerdemain':
     'Section=magic ' +
-    'Note="Can use a bonus action with an invisible <i>Mage Hand</i> to stow and retrieve objects, pick locks, and disarm traps" ' +
+    'Note="Can use a bonus action with an invisible <i>Mage Hand</i> to plant or remove an object in a container held by another creature, pick locks, and disarm traps" ' +
     'Spells="Mage Hand"',
   'Magical Ambush':
     'Section=magic ' +
@@ -1134,7 +1136,7 @@ PHB5E.FEATURES_ADDED = {
   // Spellcasting as above
   'Versatile Trickster':
     'Section=magic ' +
-    'Note="Can use a bonus action to direct <i>Mage Hand</i> to distract a target within 5\', gaining advantage on attacks vs. it until the end of the turn"',
+    'Note="Can use a bonus action to direct <i>Mage Hand</i> to distract a target within 5\', gaining advantage on attacks on it until the end of the turn"',
 
   // Sorcerer
   // Wild Magic
@@ -1152,7 +1154,7 @@ PHB5E.FEATURES_ADDED = {
     'Note="Can gain advantage on an attack, ability check, or save once per long rest or Wild Magic Surge"',
   'Wild Magic Surge':
     'Section=magic ' +
-    'Note="Casting a spell has a 5% chance of unleashing a random magic effect"',
+    'Note="Casting a sorcerer spell of level 1 or higher has a 5% chance of unleashing a random magic effect"',
 
   // Warlock
   // The Archfey
@@ -1169,7 +1171,9 @@ PHB5E.FEATURES_ADDED = {
     'Section=combat ' +
     'Note="Can use a reaction upon taking damage to teleport 60\' and become invisible until the start of the next turn once per short rest; attacking or casting ends"',
   // The Great Old One
-  'Awakened Mind':'Section=skill Note="R30\' Can communicate telepathically"',
+  'Awakened Mind':
+    'Section=skill ' +
+    'Note="R30\' Can communicate telepathically with any creature that knows a language"',
   'Create Thrall':
     'Section=magic ' +
     'Note="Touch charms an incapacitated humanoid and allows telepathic communication with it"',
@@ -1198,7 +1202,7 @@ PHB5E.FEATURES_ADDED = {
   // School Of Conjuration
   'Benign Transposition':
     'Section=magic ' +
-    'Note="R30\' Can teleport self or swap with a willing creature once per long rest or conjuration spell casting"',
+    'Note="R30\' Can teleport self or swap with a willing creature once per long rest or casting of a conjuration spell of level 1 or higher"',
   'Conjuration Savant':
     'Section=magic ' +
     'Note="Requires half the normal time and cost to copy conjuration spells into spellbook"',
@@ -1209,7 +1213,7 @@ PHB5E.FEATURES_ADDED = {
   'Minor Conjuration':
     'Section=magic ' +
     // errata adds end upon dealing damage
-    'Note="R10\' Can create a 3\' cube inanimate object weighing up to 10 lb that emits a 5\' dim light and lasts for 1 hr or until it takes or deals damage"',
+    'Note="R10\' Can create a 3\' cube inanimate object weighing up to 10 lb that emits a 5\' dim light and lasts for 1 hr or until it suffers or inflicts damage"',
   // School Of Divination
   'Divination Savant':
     'Section=magic ' +
@@ -1236,16 +1240,17 @@ PHB5E.FEATURES_ADDED = {
     'Note="Can daze an adjacent creature (save DC %{spellDifficultyClass.W} Wisdom negates) while maintained once per target per long rest"',
   'Instinctive Charm':
     'Section=magic ' +
-    'Note="R30\' Can use a reaction to redirect an attack on self to another (save DC %{spellDifficultyClass.W} Wisdom negates until a long rest)"',
+    'Note="R30\' Can use a reaction to redirect an attack on self to a different creature closest to the attacker (save DC %{spellDifficultyClass.W} Wisdom negates until a long rest)"',
   'Split Enchantment':
-    'Section=magic Note="Can add a second target to an enchantment spell"',
+    'Section=magic ' +
+    'Note="Can add a second target to a targeted enchantment spell of level 1 or higher"',
   // School Of Illusion
   'Illusion Savant':
     'Section=magic ' +
     'Note="Requires half the normal time and cost to copy illusion spells into spellbook"',
   'Illusory Reality':
     'Section=magic ' +
-    'Note="Can use a bonus action to make a harmless object in a self illusion real for 1 min"',
+    'Note="Can use a bonus action when casting an illusion spell to make a harmless object in the illusion real for 1 min"',
   'Illusory Self':
     'Section=magic ' +
     'Note="Can use a reaction to cause an attack on self to miss once per short rest"',
@@ -1261,7 +1266,7 @@ PHB5E.FEATURES_ADDED = {
     'Note="R60\' Can use an action to control an undead target (save DC %{spellDifficultyClass.W} Charisma negates permanently; targets with Intelligence of at least 8 have advantage on the save, and targets with Intelligence of at least 12 repeat the save every hr)"',
   'Grim Harvest':
     'Section=magic ' +
-    'Note="Regains hit points equal to twice the spell level, or 3x for necromantic spells, when a self spell kills"',
+    'Note="Once per turn, a self spell that kills its target restores hit points to self equal to 2x the spell level, or 3x the level for necromancy spells"',
   'Inured To Undeath':
     'Section=save ' +
     'Note="Has resistance to necrotic damage and immunity to maximum hit point reduction"',
@@ -1270,26 +1275,26 @@ PHB5E.FEATURES_ADDED = {
     'Note="Requires half the normal time and cost to copy necromancy spells into spellbook"',
   'Undead Thralls':
     'Section=magic ' +
-    'Note="Knows the <i>Animate Dead</i> spell; casting it animates an additional corpse and gives corpses +%{levels.Wizard} hit points and +%{proficiencyBonus} HP weapon damage" ' +
+    'Note="Casting <i>Animate Dead</i> animates an additional corpse, and undead created using necromacy spells have +%{levels.Wizard} hit points and inflict +%{proficiencyBonus} HP weapon damage" ' +
     'Spells="Animate Dead"',
   // School Of Transmutation
   'Master Transmuter':
     'Section=magic ' +
-    'Note="Can destroy a transmuter\'s stone to transmute a 5\' cube, remove curses, diseases, and poisons, cast <i>Raise Dead</i>, or restore youth" ' +
+    'Note="Can destroy a transmuter\'s stone to transmute a 5\' cube, to remove curses, diseases, and poisons from a target, to cast <i>Raise Dead</i> without expending a spell slot, or to restore youth" ' +
     'Spells="Raise Dead"',
   'Minor Alchemy':
     'Section=magic ' +
     'Note="Can change the substance of 1 cubic foot of matter per 10 min effort for concentration up to 1 hr"',
   'Shapechanger':
     'Section=magic ' +
-    'Note="Knows the <i>Polymorph</i> spell; can transform self into a CR 1 creature once per short rest" ' +
+    'Note="Can cast <i>Polymorph</i> without using a spell slot to transform self into a CR 1 creature once per short rest" ' +
     'Spells=Polymorph',
   'Transmutation Savant':
     'Section=magic ' +
     'Note="Requires half the normal time and cost to copy transmutation spells into spellbook"',
   "Transmuter's Stone":
     'Section=magic ' +
-    'Note="Can use an 8-hr process to create a stone that gives a choice of 60\' Darkvision, +10\' Speed, proficiency on Constitution saves, or resistance to a chosen energy damage, and can change the effect of a possessed stone when casting a transmutation spell"',
+    'Note="Can use an 8-hr process to create a stone that gives a choice of 60\' Darkvision, +10 Speed, proficiency on Constitution saves, or resistance to a choice of acid, cold, fire, lightning, or thunder, and can change the effect of a possessed stone when casting a transmutation spell"',
 
   // Backgrounds
   'By Popular Demand':
