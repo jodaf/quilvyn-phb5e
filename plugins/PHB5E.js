@@ -1970,9 +1970,6 @@ PHB5E.classRulesExtra = function(rules, name) {
       'features.Trickery Domain', '=', '"poison"',
       'features.War Domain', '=', '"weapon damage type"'
     );
-    // TODO automate this
-    rules.defineRule
-      ('expertiseCount', 'skillNotes.blessingsOfKnowledge', '+=', '2');
     rules.defineRule
       ('spellsAvailable.D0', 'magicNotes.acolyteOfNature', '+=', '1');
 

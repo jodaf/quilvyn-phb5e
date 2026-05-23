@@ -1467,9 +1467,7 @@ PHB5E2024.FEATURES_ADDED = {
     // changed effects
     'Note=' +
       '"+1 Intelligence",' +
-      // TODO does this work?
-      // TODO reword all expertise notes into this format and handle them in SRD35.js
-      '"Skill Expertise (Choose 1 from Arcana, History, Investigation, Nature, Religion)",' +
+      '"Expertise (Choose 1 from Arcana, History, Investigation, Nature, Religion)",' +
       '"Can use a bonus action to Study"',
   'Keen Mind (Proficiency)':
     'Section=ability,skill,skill ' +
@@ -1512,8 +1510,7 @@ PHB5E2024.FEATURES_ADDED = {
     // changed effects
     'Note=' +
       '"Ability Boost (Choose 1 from Intelligence, Wisdom)",' +
-      // TODO does this work?
-      '"Skill Expertise (Choose 1 from Insight, Investigation, Perception)",' +
+      '"Expertise (Choose 1 from Insight, Investigation, Perception)",' +
       '"Can use a bonus action to Search"',
   'Observant (Proficiency)':
     'Section=ability,skill,skill ' +
@@ -1675,7 +1672,7 @@ PHB5E2024.FEATURES_ADDED = {
     'Section=ability,skill ' +
     'Note=' +
       '"Ability Boost (Choose 1 from any)",' +
-      '"Has proficiency in all skills/Skill Expertise (Choose 1 from any)"',
+      '"Has proficiency in all skills/Expertise (Choose 1 from any Skill)"',
   'Boon Of Speed':
     'Section=ability,combat ' +
     'Note=' +
@@ -1989,12 +1986,7 @@ PHB5E2024.classRulesExtra = function(rules, name) {
  * derived directly from the attributes passed to featRules.
  */
 PHB5E2024.featRulesExtra = function(rules, name) {
-  if(name == 'Boon Of Skill') {
-    rules.defineRule('expertiseCount', 'skillNotes.boonOfSkill', '+=', '1');
-  } else if(name == 'Keen Mind (Expertise)') {
-    rules.defineRule
-      ('expertiseCount', 'skillNotes.keenMind(Expertise)', '+=', '1');
-  } else if(name == 'Medium Armor Master') {
+  if(name == 'Medium Armor Master') {
     rules.defineRule('armorClass',
       'combatNotes.mediumArmorMaster', '+', '0', // italics
       'combatNotes.mediumArmorMaster.1', '+', null
@@ -2004,11 +1996,6 @@ PHB5E2024.featRulesExtra = function(rules, name) {
       'dexterity', '?', 'source >= 16',
       'armorCategory', '=', 'source == "Medium" ? 1 : null'
     );
-  } else if(name == 'Observant (Expertise)') {
-    rules.defineRule
-      ('expertiseCount', 'skillNotes.observant(Expertise)', '+=', '1');
-  } else if(name == 'Skill Expert') {
-    rules.defineRule('expertiseCount', 'skillNotes.skillExpert', '+=', '1');
   } else if(name == 'Tavern Brawler') {
     rules.defineRule
       ('weapons.Unarmed Strike.2', 'combatNotes.tavernBrawler', '^=', '"1d4"');
