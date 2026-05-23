@@ -596,7 +596,17 @@ PHB5E.FEATS_ADDED = {
     '',
   'Resilient (Wisdom)':
     '',
-  'Ritual Caster':
+  'Ritual Caster (Bard)':
+    'Require="intelligence >= 13 || wisdom >= 13"',
+  'Ritual Caster (Cleric)':
+    'Require="intelligence >= 13 || wisdom >= 13"',
+  'Ritual Caster (Druid)':
+    'Require="intelligence >= 13 || wisdom >= 13"',
+  'Ritual Caster (Sorcerer)':
+    'Require="intelligence >= 13 || wisdom >= 13"',
+  'Ritual Caster (Warlock)':
+    'Require="intelligence >= 13 || wisdom >= 13"',
+  'Ritual Caster (Wizard)':
     'Require="intelligence >= 13 || wisdom >= 13"',
   'Savage Attacker':
     '',
@@ -1347,22 +1357,22 @@ PHB5E.FEATURES_ADDED = {
       '"Has a %{speed}\' climb Speed/Standing, running long jump, and running high jump each use only 5\' of movement"',
   'Charger':
     'Section=combat ' +
-    'Note="Can use a bonus action after a 10\' Dash to attack (+5 damage) or to push 10\'"',
+    'Note="Can use a bonus action after a 10\' Dash to attack, inflicting +5 damage or a 10\' push"',
   'Crossbow Expert':
     'Section=combat ' +
-    'Note="Ignores the loading property of proficient crossbows/Suffers no disadvantage on ranged attacks within 5\'/Can use a bonus action to make a hand crossbow attack after a one-handed attack"',
+    'Note="Ignores the loading property of proficient crossbows, suffers no disadvantage on ranged attacks within 5\', and can use a bonus action to make a hand crossbow attack after a one-handed attack"',
   'Defensive Duelist':
     'Section=combat ' +
     'Note="Can use a reaction when hit while wielding a proficient finesse weapon to gain +%{proficiencyBonus} Armor Class vs. the attack"',
   'Dual Wielder':
     'Section=combat ' +
-    'Note="+1 Armor Class when wielding two melee weapons/Can use two-weapon fighting with any one-handed weapons/Can draw or stow two weapons simultaneously"',
+    'Note="+1 Armor Class when wielding two melee weapons/Can use two-weapon fighting with any one-handed weapons/Can draw or stow two one-handed weapons simultaneously"',
   'Dungeon Delver':
     'Section=save,skill ' +
     'Note=' +
       '"Has advantage to avoid or resist traps and resistance to trap damage",' +
       // errata changes the second effect
-      '"Has advantage on Perception and Investigation (secret door detection)/Suffers no Perception penalty when traveling at a fast pace"',
+      '"Has advantage on Perception and Investigation to detect secret doors/Suffers no Perception penalty when traveling at a fast pace"',
   'Durable':
     'Section=ability,combat ' +
     'Note=' +
@@ -1388,7 +1398,7 @@ PHB5E.FEATURES_ADDED = {
     'Note="Can use a bonus action to attack after scoring a critical hit or reducing a foe to 0 hit points with a melee weapon/Can make a -5 attack with a heavy weapon to inflict +10 damage"',
   'Healer':
     'Section=skill ' +
-    'Note="Using a healer\'s kit to stabilize also restores 1 hit point/Can use a healer\'s kit to restore 1d6+4 + target HD hit points once per creature per short rest"',
+    'Note="Using a healer\'s kit to stabilize also restores 1 hit point/Can expend a use of a healer\'s kit to restore 1d6+4 + target HD hit points once per creature per short rest"',
   'Heavily Armored':
     'Section=ability,combat ' +
     'Note=' +
@@ -1456,7 +1466,7 @@ PHB5E.FEATURES_ADDED = {
     'Section=ability,combat ' +
     'Note=' +
       '"+10 Speed",' +
-      '"Can Dash at full speed in difficult terrain/Attacking a target does not provoke an opportunity attack"',
+      '"Can Dash at full speed in difficult terrain/Attacking does not provoke an opportunity attack by the target"',
   'Moderately Armored':
     'Section=ability,combat ' +
     'Note=' +
@@ -1536,25 +1546,25 @@ PHB5E.FEATURES_ADDED = {
     'Section=combat,save ' +
     'Note=' +
       '"While holding a shield, can use a bonus action after taking an Attack action to inflict a 5\' push",' +
-      '"+%{shieldACBonus} Dexterity vs. targeted spells and effects while holding a shield, and can use a reaction with a shield to suffer no damage instead of half on a successful Dexterity save"',
+      '"+%{shieldACBonus} Dexterity saves vs. targeted spells and effects while holding a shield, and can use a reaction with a shield to suffer no damage instead of half on a successful Dexterity save"',
   'Skilled':
     'Section=skill ' +
     'Note="Skill Proficiency or Tool Proficiency (Choose %V from any)"',
   'Skulker':
     'Section=combat,skill ' +
     'Note=' +
-      '"Ranged miss does not reveal position",' +
+      '"Misses on ranged attacks while hidden do not reveal position",' +
       '"Can hide when lightly obscured/Suffers no disadvantage on Perception from dim light"',
   'Spell Sniper':
     'Section=magic ' +
-    'Note="Can cast attack spells at double normal range/Spells ignore 3/4 cover/Knows an additional attack cantrip"',
+    'Note="Ranged attack spells have double their normal range and ignore 3/4 cover/Knows an additional attack cantrip"',
   'Tavern Brawler':
     'Section=ability,combat,combat ' +
     'Note=' +
       '"Ability Boost (Choose 1 from Constitution, Strength)",' +
       // errata removes Unarmed Strike proficiency
       '"Weapon Proficiency (Improvised Weapons)/Unarmed Strike inflicts 1d4 HP",' +
-      '"Can use a bonus action to grapple after a successful unarmed or improvised attack"',
+      '"Can use a bonus action to grapple after a successful unarmed strike or improvised weapon attack"',
   'Tough':'Section=combat Note="+%{level*2} Hit Points"',
   'War Caster':
     'Section=combat,magic,save ' +
@@ -2118,9 +2128,8 @@ PHB5E.featRulesExtra = function(rules, name) {
   } else if(name.startsWith('Ritual Caster')) {
     let c = name.replace('Ritual Caster (', '').replace(')', '');
     let spellType = c == 'Warlock' ? 'K' : c.charAt(0);
-    let note =
-      'magicNotes.' + name.charAt(0).toLowerCase() + name.substring(1).replaceAll(' ', '');
-    rules.defineRule('casterLevel.' + spellType, note, '^=', '1');
+    rules.defineRule
+      ('casterLevels.' + spellType, 'features.' + name, '^=', '1');
   } else if(name == 'Skilled') {
     rules.defineRule('skillNotes.skilled', 'feats.Skilled', '=', 'source * 3');
     // Since the proficiencies from Skilled can be applied to either skills or

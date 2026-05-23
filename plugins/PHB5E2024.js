@@ -1390,7 +1390,7 @@ PHB5E2024.FEATURES_ADDED = {
     // changed effects
     'Note=' +
       '"+1 Dexterity",' +
-      '"Ignores the loading property of crossbows and can load one without a free hand/Suffers no disadvantage on crossbow attacks within 5\'/Can add the ability modifier to the damage from an extra attack with a Light crossbow"',
+      '"Ignores the loading property of crossbows and can load one without a free hand, suffers no disadvantage on crossbow attacks within 5\', and can add the ability modifier to the damage from an extra attack with a Light crossbow"',
   'Crusher':Tasha.FEATURES.Crusher,
   'Defensive Duelist':
     'Section=ability,combat ' +
