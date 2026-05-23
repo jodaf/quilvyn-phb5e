@@ -1285,7 +1285,7 @@ PHB5E.FEATURES_ADDED = {
     'Note="Requires half the normal time and cost to copy necromancy spells into spellbook"',
   'Undead Thralls':
     'Section=magic ' +
-    'Note="Casting <i>Animate Dead</i> animates an additional corpse, and undead created using necromacy spells have +%{levels.Wizard} hit points and inflict +%{proficiencyBonus} HP weapon damage" ' +
+    'Note="Casting <i>Animate Dead</i> animates an additional corpse, and undead created using necromancy spells have +%{levels.Wizard} hit points and inflict +%{proficiencyBonus} HP weapon damage" ' +
     'Spells="Animate Dead"',
   // School Of Transmutation
   'Master Transmuter':
