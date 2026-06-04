@@ -616,9 +616,15 @@ PHB5E2024.FEATS_ADDED = {
   'Sentinel':
     PHB5E.FEATS.Sentinel + ' ' +
     'Category=General Require="level >= 4","strength > 13 || dexterity >= 13"',
-  'Shadow-Touched (Charisma)':'Category=General Require="level >= 4"',
-  'Shadow-Touched (Intelligence)':'Category=General Require="level >= 4"',
-  'Shadow-Touched (Wisdom)':'Category=General Require="level >= 4"',
+  'Shadow-Touched (Charisma)':
+    Tasha.FEATS['Shadow Touched (Charisma)'] + ' ' +
+    'Category=General Require="level >= 4"',
+  'Shadow-Touched (Intelligence)':
+    Tasha.FEATS['Shadow Touched (Intelligence)'] + ' ' +
+    'Category=General Require="level >= 4"',
+  'Shadow-Touched (Wisdom)':
+    Tasha.FEATS['Shadow Touched (Wisdom)'] + ' ' +
+    'Category=General Require="level >= 4"',
   'Sharpshooter':
     PHB5E.FEATS.Sharpshooter + ' ' +
     'Category=General Require="level >= 4","dexterity >= 13"',
@@ -961,13 +967,13 @@ PHB5E2024.FEATURES_ADDED = {
   'Evasive Footwork':
     'Section=combat ' +
     // changed effects
-    'Note="Can use bonus action and spend a superiority die to Disengage, adding a the roll to Armor Class until the start of the next turn"',
+    'Note="Can use bonus action and expend a superiority die to Disengage, adding a the roll to Armor Class until the start of the next turn"',
   'Feinting Attack':PHB5E.FEATURES['Feinting Attack'],
   'Goading Attack':PHB5E.FEATURES['Goading Attack'],
   'Lunging Attack':
     'Section=combat ' +
     // changed effects
-    'Note="Can use a bonus action and spend a superiority die to Dash and add the roll to the damage from a subsequent attack during the same turn"',
+    'Note="Can use a bonus action and expend a superiority die to Dash and add the roll to the damage from a subsequent attack during the same turn"',
   'Maneuvering Attack':PHB5E.FEATURES['Maneuvering Attack'],
   'Menacing Attack':PHB5E.FEATURES['Menacing Attack'],
   'Parry':PHB5E.FEATURES.Parry
@@ -997,7 +1003,7 @@ PHB5E2024.FEATURES_ADDED = {
   'Psi-Powered Leap':Tasha.FEATURES['Psi-Powered Leap'],
   'Psionic Power (Psi Warrior)':
     Tasha.FEATURES['Psionic Power (Psi Warrior)']
-    .replace('can use a bonus action to regain', 'regains'),
+    .replace('can use a bonus action to regain 1 die once per', 'regains 1 die after a'),
   'Protective Field':Tasha.FEATURES['Protective Field'],
   'Psionic Strike':Tasha.FEATURES['Psionic Strike'],
   'Telekinetic Movement':Tasha.FEATURES['Telekinetic Movement'],
@@ -1073,7 +1079,7 @@ PHB5E2024.FEATURES_ADDED = {
   'Living Legend':
     Tasha.FEATURES['Living Legend']
     .replaceAll('1 min', '10 min'),
-  'Oath Of Glory Spells':Tasha.FEATURES['Oath Of Glory']
+  'Oath Of Glory Spells':Tasha.FEATURES['Oath Of Glory Spells']
     .replace('Commune', 'Legend Lore')
     .replace('Flame Strike', "Yolanda's Regal Presence"),
   'Peerless Athlete':
@@ -1567,27 +1573,10 @@ PHB5E2024.FEATURES_ADDED = {
     'Note=' +
       '"Ability Boost (Choose 1 from Strength, Dexterity)",' +
       '"Successful opportunity attacks halt the target/Can make an opportunity attack when an adjacent foe uses Disengage or hits a creature other than self"',
-  'Shadow-Touched (Charisma)':
-    'Section=ability,magic ' +
-    'Note=' +
-      '"+1 Charisma",' +
-      '"Can cast <i>Invisibility</i> and a chosen level 1 illusion or necromancy spell without expending a spell slot once per long rest" ' +
-    'SpellAbility=Charisma ' +
-    'Spells=Invisibility',
+  'Shadow-Touched (Charisma)':Tasha.FEATURES['Shadow Touched (Charisma)'],
   'Shadow-Touched (Intelligence)':
-    'Section=ability,magic ' +
-    'Note=' +
-      '"+1 Intelligence",' +
-      '"Can cast <i>Invisibility</i> and a chosen level 1 illusion or necromancy spell without expending a spell slot once per long rest" ' +
-    'SpellAbility=Intelligence ' +
-    'Spells=Invisibility',
-  'Shadow-Touched (Wisdom)':
-    'Section=ability,magic ' +
-    'Note=' +
-      '"+1 Wisdom",' +
-      '"Can cast <i>Invisibility</i> and a chosen level 1 illusion or necromancy spell without expending a spell slot once per long rest" ' +
-    'SpellAbility=Wisdom ' +
-    'Spells=Invisibility',
+    Tasha.FEATURES['Shadow Touched (Intelligence)'],
+  'Shadow-Touched (Wisdom)':Tasha.FEATURES['Shadow Touched (Wisdom)'],
   'Sharpshooter':
     PHB5E.FEATURES.Sharpshooter
     .replace('Section=', 'Section=ability,')
@@ -2000,14 +1989,8 @@ PHB5E2024.featRulesExtra = function(rules, name) {
     rules.defineRule
       ('weapons.Unarmed Strike.2', 'combatNotes.tavernBrawler', '^=', '"1d4"');
   } else if(name == 'Unarmed Fighting') {
-    rules.defineRule('combatNotes.unarmedFighting.1',
-      'combatNotes.unarmedFighting', '?', null,
-      'armor', '?', 'source=="None"',
-      'shield', '=', 'source=="None" ? "1d8" : null'
-    );
     rules.defineRule('weapons.Unarmed Strike.2',
       'combatNotes.unarmedFighting', '^', '"1d6"',
-      'combatNotes.unarmedFighting.1', '^', null
     );
   }
 
