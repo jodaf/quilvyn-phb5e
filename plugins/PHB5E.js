@@ -1760,7 +1760,7 @@ PHB5E.SPELLS_ADDED = {
     'School=Conjuration ' +
     'Level=D4,R4 ' +
     'Description=' +
-      '"R30\' 30\' vine pulls the target 20\' each rd (save Dexterity negates) for concentration up to 1 min"',
+      '"R30\' 30\' vine pulls a target 20\' each rd (save Dexterity negates) for concentration up to 1 min"',
 
   'Hail Of Thorns':
     'School=Conjuration ' +
@@ -1785,7 +1785,7 @@ PHB5E.SPELLS_ADDED = {
     'Level=R3 ' +
     'AtHigherLevels="inflicts +1d8 HP" ' +
     'Description=' +
-      '"Next self ranged weapon attack within concentration up to 1 min inflicts 8d6 HP lightning on the target (miss half) and 2d8 HP lightning to others in a 10\' radius (save Dexterity half)"',
+      '"Next self ranged weapon attack within concentration up to 1 min inflicts 4d8 HP lightning on the target (miss half) and 2d8 HP lightning in a 10\' radius (save Dexterity half)"',
 
   'Phantasmal Force':
     'School=Illusion ' +

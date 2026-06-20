@@ -1764,18 +1764,29 @@ PHB5E2024.SPELLS_ADDED = {
     'Description=' +
       '"R10\' Target humanoid becomes charmed (save Wisdom negates; creatures who are fighting self automatically succeed) for concentration up to 1 min, until damaged, or until self takes a hostile action toward any creature, once per target per 24 hr"',
 
-  'Grasping Vine':PHB5E.SPELLS_ADDED['Grasping Vine'],
+  'Grasping Vine':
+    PHB5E.SPELLS_ADDED['Grasping Vine'] + ' ' +
+    'AtHigherLevels="the vine can attack +1 target each rd" ' +
+    'Description=' +
+      '"R60\' 30\' vine makes melee spell attack on a target to inflict 4d8 HP bludgeoning, grapple, and pull it 30\' each rd for concentration up to 1 min"',
 
-  'Hail Of Thorns':PHB5E.SPELLS_ADDED['Hail Of Thorns'],
+  'Hail Of Thorns':
+    PHB5E.SPELLS_ADDED['Hail Of Thorns']
+    .replace(' (6d10 HP maximum)', '') + ' ' +
+    'Description=' +
+      '"Cast as a bonus action after hitting a target with a ranged attack, inflicts 1d10 HP piercing in a 5\' radius (save Dexterity half)"',
   'Hunger Of Hadar':PHB5E.SPELLS_ADDED['Hunger Of Hadar'],
 
   "Jallarzi's Storm Of Radiance":
     'School=Evocation ' +
     'Level=K5,W5 ' +
+    'AtHigherLevels="inflicts +1d10 radiant and thunder" ' +
     'Description=' +
-      '"TODO"',
+      '"R120\' 10\' radius prevents casting verbal spells and inflicts blinded, deafened, 2d10 HP radiant, and 2d10 HP thunder (save Constitution half) for concentration up to 1 min"',
 
-  'Lightning Arrow':PHB5E.SPELLS_ADDED['Lightning Arrow'],
+  'Lightning Arrow':
+    PHB5E.SPELLS_ADDED['Lightning Arrow']
+    .replace('Next self ranged weapon attack within concentration up to 1 min', 'Cast as a bonus action after making a ranged weapon attack,'),
 
   'Mind Sliver':Tasha.SPELLS['Mind Sliver'],
 
