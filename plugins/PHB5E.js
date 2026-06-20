@@ -1454,6 +1454,7 @@ PHB5E.FEATURES_ADDED = {
   'Magic Initiate (Wizard)':
     'Section=Magic ' +
     'Note="Knows 2 Wizard cantrips and can cast a chosen W1 spell without expending a spell slot once per long rest"',
+  // TODO suppress validation errors from selecting fighter maneuvers
   'Martial Adept':
     'Section=combat ' +
     'Note="Has the Combat Superiority feature with 2 maneuvers and 1 die"',
@@ -1620,7 +1621,7 @@ PHB5E.SPELLS_ADDED = {
     'School=Conjuration ' +
     'Level=K6,S6,W6 ' +
     'Description=' +
-      '"R10\' Creates a portal pair that can teleport creatures 500\' for concentration up to 10 min"',
+      '"Creates one portal within 10\' and another within 500\' that can teleport creatures between them for concentration up to 10 min"',
   'Armor Of Agathys':
     'School=Abjuration ' +
     'Level=K1 ' +
@@ -1632,7 +1633,7 @@ PHB5E.SPELLS_ADDED = {
     'Level=K1 ' +
     'AtHigherLevels="inflicts +1d6 HP" ' +
     'Description=' +
-      '"10\' radius inflicts 2d6 HP necrotic and loss of reactions (save Strength half HP only) for 1 rd"',
+      '"10\' radius inflicts 2d6 HP necrotic and loss of reactions until the target\'s next turn (save Strength half HP only)"',
   'Aura Of Life':
     'School=Abjuration ' +
     'Level=P4 ' +
@@ -1646,13 +1647,13 @@ PHB5E.SPELLS_ADDED = {
   'Aura Of Vitality':
     'School=Evocation ' +
     'Level=P3 ' +
-    'Description="R30\' Self can use a bonus action to restore 2d6 hit points to a target once per rd for concentration up to 1 min"',
+    'Description="R30\' Self can use a bonus action to restore 2d6 hit points to a target once per turn for concentration up to 1 min"',
 
   'Banishing Smite':
     'School=Abjuration ' +
     'Level=P5 ' +
     'Description=' +
-      '"Next successful self weapon attack inflicts +5d10 HP force, plus banishment to home plane or a demiplane for concentration up to 1 min if the attack reduces the target below 51 hit points"',
+      '"Next successful self weapon attack inflicts +5d10 HP force, plus banishment to the target\'s home plane or a demiplane for concentration up to 1 min if the attack reduces the target below 51 hit points"',
   'Beast Sense':
     'School=Divination ' +
     'Level=D2,R2 ' +
@@ -1668,7 +1669,7 @@ PHB5E.SPELLS_ADDED = {
     'School=Evocation ' +
     'Level=P3 ' +
     'Description=' +
-      '"Next successful self weapon attack inflicts +3d8 HP radiant and blinds (save Constitution ends) for concentration up to 1 min"',
+      '"Next successful self weapon attack inflicts +3d8 HP radiant and blinded (save Constitution negates blindness; additional saves each turn end) for concentration up to 1 min"',
 
   'Chromatic Orb':
     'School=Evocation ' +
@@ -1680,7 +1681,7 @@ PHB5E.SPELLS_ADDED = {
     'School=Abjuration ' +
     'Level=P5 ' +
     'Description=' +
-      '"Allies in a 30\' radius have advantage on saves vs. magic, and saves yields no damage instead of half, for concentration up to 10 min"',
+      '"Allies in a 30\' radius have advantage on saves vs. magic, and successful saves vs. magic yield no damage instead of half, for concentration up to 10 min"',
   'Cloud Of Daggers':
     'School=Conjuration ' +
     'Level=B2,K2,S2,W2 ' +
@@ -1695,34 +1696,34 @@ PHB5E.SPELLS_ADDED = {
     'School=Conjuration ' +
     'Level=R3 ' +
     'Description=' +
-      '"60\' cone inflicts 3d8 HP weapon type damage (save Dexterity half)"',
+      '"60\' cone inflicts 3d8 HP weapon damage type (save Dexterity half)"',
   'Conjure Volley':
     'School=Conjuration ' +
     'Level=R5 ' +
     'Description=' +
-      '"R150\' 40\' radius inflicts 8d8 HP weapon type damage (save Dexterity half)"',
+      '"R150\' 40\' radius inflicts 8d8 HP weapon damage type (save Dexterity half)"',
   'Cordon Of Arrows':
     'School=Transmutation ' +
     'Level=R2 ' +
     'AtHigherLevels="affects +2 pieces" ' +
     'Description=' +
-      '"R5\' Four arrows or crossbow bolts attack non-designated creatures within 30\', inflicting 1d6 HP piercing each (save Dexterity negates), for 8 hr"',
+      '"Four planted arrows or bolts attack non-designated creatures within 30\', inflicting 1d6 HP piercing each (save Dexterity negates), for 8 hr"',
   'Crown Of Madness':
     'School=Enchantment ' +
     'Level=B2,K2,S2,W2 ' +
     'Description=' +
-      '"R120\' Self can direct the target\'s attacks each rd (save Wisdom ends) for concentration up to 1 min"',
+      '"R120\' Self can direct the target humanoid\'s attacks (save Wisdom negates; additional saves each rd end) for concentration up to 1 min"',
   "Crusader's Mantle":
     'School=Evocation ' +
     'Level=P3 ' +
     'Description=' +
-      '"Ally attacks in 30\' radius inflict +1d4 HP radiant for concentration up to 1 min"',
+      '"Ally attacks within a 30\' radius inflict +1d4 HP radiant for concentration up to 1 min"',
 
   'Destructive Wave':
     'School=Evocation ' +
     'Level=P5 ' +
     'Description=' +
-      '"30\' radius inflicts 5d6 HP thunder, knocked prone, and 5d6 HP of a choice of radiant or necrotic (save Constitution half HP only) on chosen targets"',
+      '"30\' radius inflicts 5d6 HP thunder, knocked prone, and 5d6 HP of a choice of radiant or necrotic (save Constitution half HP only) on targets"',
   'Dissonant Whispers':
     'School=Enchantment ' +
     'Level=B1,"K1 [The Great Old One]" ' +
@@ -1741,7 +1742,7 @@ PHB5E.SPELLS_ADDED = {
     'Level=R1 ' +
     'AtHigherLevels="inflicts +1d6 HP" ' +
     'Description=' +
-      '"Next successful self attack restrains the foe and inflicts 1d6 HP per rd piercing (save Strength ends; Large creatures have advantage on the save) for concentration up to 1 min"',
+      '"Next successful self attack restrains the foe (save Strength negates; Large creatures have advantage on the save) and inflicts 1d6 HP piercing per rd (additional saves each rd end) for concentration up to 1 min"',
 
   'Feign Death':
     'School=Necromancy ' +

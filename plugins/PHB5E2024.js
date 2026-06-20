@@ -1690,32 +1690,68 @@ PHB5E2024.SPELLS_ADDED = {
   'Arcane Vigor':
     'School=Abjuration ' +
     'Level=S2,W2 ' +
+    'AtHigherLevels="Allows expending +1 Hit Die" ' +
     'Description=' +
-      '"TODO"',
-  'Armor Of Agathys':PHB5E.SPELLS_ADDED['Armor Of Agathys'],
+      '"Allows expending 1 or 2 Hit Dice to regain hit points equal to the roll + %{mdf}"',
+  'Armor Of Agathys':
+    PHB5E.SPELLS_ADDED['Armor Of Agathys']
+    .replace('for 1 hr', 'for 1 hr or until the temporary hit points are lost'),
   'Arms Of Hadar':PHB5E.SPELLS_ADDED['Arms Of Hadar'],
-  'Aura Of Life':PHB5E.SPELLS_ADDED['Aura Of Life'],
-  'Aura Of Purity':PHB5E.SPELLS_ADDED['Aura Of Purity'],
-  'Aura Of Vitality':PHB5E.SPELLS_ADDED['Aura Of Vitality'],
+  'Aura Of Purity':
+    PHB5E.SPELLS_ADDED['Aura Of Purity']
+    .replace('P4', 'C4,P4')
+    .replace('nonhostile creatures', 'self and allies')
+    .replace(', immunity to disease,', ''),
+  'Aura Of Vitality':
+    PHB5E.SPELLS_ADDED['Aura Of Vitality']
+    .replace('P3', 'C3,D3,P3')
+    .replace('Evocation', 'Abjuration')
+    .replace('use a bonus action to ', ''),
 
-  'Banishing Smite':PHB5E.SPELLS_ADDED['Banishing Smite'],
+  'Banishing Smite':
+    PHB5E.SPELLS_ADDED['Banishing Smite']
+    .replace('Abjuration', 'Conjuration')
+    .replace("the target's home plane or ", ''),
   'Beast Sense':PHB5E.SPELLS_ADDED['Beast Sense'],
-  'Blade Ward':PHB5E.SPELLS_ADDED['Blade Ward'],
-  'Blinding Smite':PHB5E.SPELLS_ADDED['Blinding Smite'],
+  'Blade Ward':
+    PHB5E.SPELLS_ADDED['Blade Ward'] + ' ' +
+    'Description="Foes suffer -1d4 on attacks on self for concentration up to 1 min"',
+  'Blinding Smite':
+    PHB5E.SPELLS_ADDED['Blinding Smite'] + ' ' +
+    'Description="Cast as a bonus action after hitting a target, causes the attack inflict +3d8 HP radiant and blinded (Constituion saves each rd end) for concentration up to 1 min"',
 
-  'Circle Of Power':PHB5E.SPELLS_ADDED['Circle Of Power'],
-  'Cloud Of Daggers':PHB5E.SPELLS_ADDED['Cloud Of Daggers'],
+  'Circle Of Power':
+    PHB5E.SPELLS_ADDED['Circle Of Power']
+    .replace('P5', 'C5,P5,W5'),
+  'Cloud Of Daggers':
+    PHB5E.SPELLS_ADDED['Cloud Of Daggers']
+    .replace('1 min', "1 min; can use an action to move the effects 30' each turn"),
   'Compelled Duel':PHB5E.SPELLS_ADDED['Compelled Duel'],
-  'Conjure Barrage':PHB5E.SPELLS_ADDED['Conjure Barrage'],
-  'Conjure Volley':PHB5E.SPELLS_ADDED['Conjure Volley'],
-  'Cordon Of Arrows':PHB5E.SPELLS_ADDED['Cordon Of Arrows'],
+  'Conjure Barrage':
+    PHB5E.SPELLS_ADDED['Conjure Barrage']
+    .replace('3d8 HP weapon damage type', '5d8 HP force') + ' ' +
+    'AtHigherLevels="Inflicts +1d8 HP"',
+  'Conjure Volley':
+    PHB5E.SPELLS_ADDED['Conjure Volley']
+    .replace('inflicts', 'inflicts on targets')
+    .replace('weapon damage type', 'force'),
+  'Cordon Of Arrows':
+    PHB5E.SPELLS_ADDED['Cordon Of Arrows']
+    .replace('1d6', '2d4'),
   'Crown Of Madness':PHB5E.SPELLS_ADDED['Crown Of Madness'],
-  "Crusader's Mantle":PHB5E.SPELLS_ADDED["Crusader's Mantle"],
+  "Crusader's Mantle":
+    PHB5E.SPELLS_ADDED["Crusader's Mantle"]
+    .replace('radius', 'emanation'),
 
   'Destructive Wave':PHB5E.SPELLS_ADDED['Destructive Wave'],
 
-  'Elemental Weapon':PHB5E.SPELLS_ADDED['Elemental Weapon'],
-  'Ensnaring Strike':PHB5E.SPELLS_ADDED['Ensnaring Strike'],
+  'Elemental Weapon':
+    PHB5E.SPELLS_ADDED['Elemental Weapon']
+    .replace('P3', 'D3,P3,R3'),
+  'Ensnaring Strike':
+    PHB5E.SPELLS_ADDED['Ensnaring Strike']
+    .replace('Next successful self attack', 'Cast as a bonus action after hitting a target,')
+    .replace('additional saves', 'successful Athletics checks'),
 
   'Feign Death':PHB5E.SPELLS_ADDED['Feign Death'],
   'Fount Of Moonlight':
@@ -1723,7 +1759,10 @@ PHB5E2024.SPELLS_ADDED = {
     'Level=B4,D4 ' +
     'Description=' +
       '"Self emits a 20\' radius bright light, gains resistance to radiant, inflicts +2d6 HP radiant, and can use a reaction to inflict blindness on successful attackers until the end of the next turn (save Constitution negates) for concentration up to 10 min"',
-  'Friends':PHB5E.SPELLS_ADDED.Friends,
+  'Friends':
+    PHB5E.SPELLS_ADDED.Friends + ' ' +
+    'Description=' +
+      '"R10\' Target humanoid becomes charmed (save Wisdom negates; creatures who are fighting self automatically succeed) for concentration up to 1 min, until damaged, or until self takes a hostile action toward any creature, once per target per 24 hr"',
 
   'Grasping Vine':PHB5E.SPELLS_ADDED['Grasping Vine'],
 
