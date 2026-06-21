@@ -299,7 +299,7 @@ var attributes = {
     </tr><tr style="text-align:left">
       <td>Animate Objects (B5 Tran): R120' 0 Medium (10 hit points; Armor Class 15; +0 attack inflicts 1d4+3 force), 0 Large (20 hit points; Armor Class 15; +0 attack inflicts 2d6+3 HP), or 0 Huge (40 hit points, Armor Class 15; +0 attack inflicts 2d12+3 HP) objects obey mental commands when within 500' for concentration up to 1 min [+Level Medium objects inflict +1d4 HP, Large +1d6 HP, or Huge +1d12 HP]</td>
     </tr><tr style="text-align:left">
-      <td>Antipathy/Sympathy (B8 Ench): R60' Target creature or object charms or frightens a specified creature type within 120' (save Wisdom negates; additional saves when no longer within 120' end and give immunity for 1 min) for 10 days</td>
+      <td>Antipathy/Sympathy (B8 Ench): R60' Target creature or object charms or frightens a specified creature type within 120' (save Wisdom negates; additional saves when no longer within 120', or when an charmed creature is harmed, end the effect and give immunity for 1 min) for 10 days</td>
     </tr><tr style="text-align:left">
       <td>Arcane Sword (B7 Evoc): 1</td>
     </tr><tr style="text-align:left">
@@ -313,17 +313,17 @@ var attributes = {
     </tr><tr style="text-align:left">
       <td>Blindness/Deafness (B2 Tran): R120' Inflicts a choice of blindness or deafness (save Constitution negates; additional saves each rd end) for 1 min [+Level affects +1 target]</td>
     </tr><tr style="text-align:left">
-      <td>Calm Emotions (B2 Ench): R60' 20' radius suppresses a choice of charmed and frightened or hostility (save Charisma negates) for concentration up to 1 min</td>
+      <td>Calm Emotions (B2 Ench): R60' 20' radius suppresses a choice of charmed and frightened or hostility (save Charisma negates) for concentration up to 1 min; harm to a target of suppressed hostility or its allies ends the effects on that target</td>
     </tr><tr style="text-align:left">
-      <td>Charm Monster (B4 Ench): R30' Target becomes charmed by self (save Wisdom negates) for 1 hr or until harmed [+Level affects +1 target]</td>
+      <td>Charm Monster (B4 Ench): R30' Target becomes charmed by self (save Wisdom negates; active fighting gives advantage) for 1 hr or until harmed [+Level affects +1 target]</td>
     </tr><tr style="text-align:left">
-      <td>Charm Person (B1 Ench): R30' Target humanoid becomes charmed by self (save Wisdom negates) for 1 hr or until harmed [+Level affects +1 target]</td>
+      <td>Charm Person (B1 Ench): R30' Target humanoid becomes charmed by self (save Wisdom negates; active fighting gives advantage) for 1 hr or until harmed [+Level affects +1 target]</td>
     </tr><tr style="text-align:left">
-      <td>Clairvoyance (B3 Divi): R1 mile Self can choose each rd to see or hear via an invisible sensor for concentration up to 10 min</td>
+      <td>Clairvoyance (B3 Divi): R1 mile Self can choose each turn to see or hear in a familiar or obvious location via an invisible sensor for concentration up to 10 min</td>
     </tr><tr style="text-align:left">
-      <td>Color Spray (B1 Illu): 15' cone blinds (save Constitution negates) until the end of the next turn</td>
+      <td>Color Spray (B1 Illu): 15' cone inflicts blinded (save Constitution negates) until the end of the next turn</td>
     </tr><tr style="text-align:left">
-      <td>Command (B1 Ench): R60' Target obeys a one-word command from self (save Wisdom negates) for 1 rd [+Level affects +1 target]</td>
+      <td>Command (B1 Ench): R60' Target obeys a one-word command from self on its next turn (save Wisdom negates) [+Level affects +1 target]</td>
     </tr><tr style="text-align:left">
       <td>Comprehend Languages (B1 Divi): Self understands all languages for 1 hr [R]</td>
     </tr><tr style="text-align:left">
@@ -333,11 +333,11 @@ var attributes = {
     </tr><tr style="text-align:left">
       <td>Cure Wounds (B1 Abju): Touched regains 2d8+0 hit points [+Level restores +2d8 hit points]</td>
     </tr><tr style="text-align:left">
-      <td>Dancing Lights (B0 Evoc): R120' 4 torch lights each dimly light a 10' radius and can move 60' per rd as a bonus action for concentration up to 1 min; moving a light more than 20' from the others extinguishes it</td>
+      <td>Dancing Lights (B0 Evoc): 1</td>
     </tr><tr style="text-align:left">
       <td>Detect Magic (B1 Divi): R30' Reveals magic auras and their schools for concentration up to 10 min; 1' of wood, dirt, or stone, 1" of metal, or a thin sheet of lead blocks the spell [R]</td>
     </tr><tr style="text-align:left">
-      <td>Detect Thoughts (B2 Divi): R30' Reveals targets' surface thoughts and allows probing deeper (save Wisdom ends; additional Arcana checks each rd end) for concentration up to 1 min; 1' of stone, dirt, or wood, 1" of metal, or a thin sheet of lead blocks the spell</td>
+      <td>Detect Thoughts (B2 Divi): R30' Detects the presence of minds or reveals targets' surface thoughts and allows probing deeper (save Wisdom negates; additional Arcana checks each rd end) for concentration up to 1 min; 1' of stone, dirt, or wood, 1" of metal, or a thin sheet of lead blocks the spell</td>
     </tr><tr style="text-align:left">
       <td>Dimension Door (B4 Conj): Teleports self and 1 adjacent willing creature up to 500'</td>
     </tr><tr style="text-align:left">
@@ -347,25 +347,25 @@ var attributes = {
     </tr><tr style="text-align:left">
       <td>Dissonant Whispers (B1 Ench): R60' Inflicts 3d6 HP psychic and forces the target to use its reaction to flee (save Wisdom half HP only) [+Level inflicts +1d6 HP]</td>
     </tr><tr style="text-align:left">
-      <td>Dominate Monster (B8 Ench): R60' Target creature obeys telepathic commands (save Wisdom negates; damage allows another save) for concentration up to 1 hr [+Level extends the duration to 8 hr]</td>
+      <td>Dominate Monster (B8 Ench): R60' Target creature obeys telepathic commands (save Wisdom negates; active fighting gives advantage, and damage allows another save) for concentration up to 1 hr [+Level extends the duration to 8 hr]</td>
     </tr><tr style="text-align:left">
-      <td>Dominate Person (B5 Ench): R60' Target humanoid obeys telepathic commands (save Wisdom negates; damage allows another save) for concentration up to 1 min [+Level extends the duration to 10 min, 1 hr, or 8 hr at level 6, 7, or 8]</td>
+      <td>Dominate Person (B5 Ench): R60' Target humanoid obeys telepathic commands (save Wisdom negates; active fighting gives advantage, and damage allows another save) for concentration up to 1 min [+Level extends the duration to 10 min, 1 hr, or 8 hr at level 6, 7, or 8]</td>
     </tr><tr style="text-align:left">
-      <td>Dream (B5 Illu): Touched controls the dreams of a known target for 8 hr and can inflict 3d6 HP psychic (save Wisdom negates)</td>
+      <td>Dream (B5 Illu): Willing touched controls the dreams of a known target for 8 hr and can inflict 3d6 HP psychic and loss of the benefits of rest (save Wisdom negates)</td>
     </tr><tr style="text-align:left">
       <td>Enhance Ability (B2 Tran): Touched gains advantage on chosen ability checks for concentration up to 1 hr [+Level affects +1 target]</td>
     </tr><tr style="text-align:left">
       <td>Enlarge/Reduce (B2 Tran): R30' Target increases a size category, gaining advantage on Strength checks and +1d4 HP weapon and unarmed damage, or decreases a size category, suffering disadvantage on Strength checks and -1d4 HP weapon and unarmed damage, (save Constitution negates) for concentration up to 1 min; can instead target an unattended object</td>
     </tr><tr style="text-align:left">
-      <td>Enthrall (B2 Ench): R60' Target suffers -10 Perception (save Wisdom negates; targets in battle automatically succeed) for concentration up to 1 min</td>
+      <td>Enthrall (B2 Ench): R60' Targets suffer -10 Perception (save Wisdom negates; targets in battle automatically succeed) for concentration up to 1 min</td>
     </tr><tr style="text-align:left">
-      <td>Etherealness (B7 Conj): Self enters Ethereal Plane for up to 8 hr [+Level affects +2 or +5 targets at level 8 or 9]</td>
+      <td>Etherealness (B7 Conj): Self enters Ethereal Plane for up to 8 hr [+Level affects +2 or +5 willing targets at level 8 or 9]</td>
     </tr><tr style="text-align:left">
       <td>Eyebite (B6 Necr): R60' Inflicts a choice of sleep, panic, or poisoned (save Wisdom negates) on 1 target per rd for concentration up to 1 min</td>
     </tr><tr style="text-align:left">
       <td>Faerie Fire (B1 Evoc): R60' Objects and creatures in a 20' cube glow (save Dexterity negates), giving their foes advantage on attacks, for concentration up to 1 min</td>
     </tr><tr style="text-align:left">
-      <td>Fear (B3 Illu): Creatures in a 30' cone drop held objects and flee (save Wisdom negates; additional saves each rd end) for concentration up to 1 min</td>
+      <td>Fear (B3 Illu): Creatures in a 30' cone drop held objects and flee (save Wisdom negates; additional saves each rd when out of sight of self end) for concentration up to 1 min</td>
     </tr><tr style="text-align:left">
       <td>Feather Fall (B1 Tran): R60' 5 falling targets slow to 60' per rd for 1 min</td>
     </tr><tr style="text-align:left">
@@ -373,11 +373,11 @@ var attributes = {
     </tr><tr style="text-align:left">
       <td>Forcecage (B7 Evoc): R100' Creates a choice of a 20' barred force cube or a 10' solid force box that can trap creatures inside (save Charisma allows magical escape) for concentration up to 1 hr</td>
     </tr><tr style="text-align:left">
-      <td>Foresight (B9 Divi): Touched gains advantage on attack, ability, and saves, and foes suffer disadvantage on attacks, for 8 hr</td>
+      <td>Foresight (B9 Divi): Touched gains advantage on attack, ability, and saves, and foes suffer disadvantage on attacks, for 8 hr or until cast again</td>
     </tr><tr style="text-align:left">
-      <td>Freedom Of Movement (B4 Abju): Touched gains immunity to movement impediments and a 30' swim Speed and can escape from nonmagical restraints for 1 hr [+Level affects +1 target]</td>
+      <td>Freedom Of Movement (B4 Abju): Touched gains immunity to movement impediments, gains a 30' swim Speed, and can escape from nonmagical restraints for 1 hr [+Level affects +1 target]</td>
     </tr><tr style="text-align:left">
-      <td>Geas (B5 Ench): R60' Target obeys self instructions or suffers 5d10 HP psychic each day (save Wisdom negates) for 30 days [+Level extends the duration to 365 days or permanently at level 7 or 9]</td>
+      <td>Geas (B5 Ench): R60' Target obeys self instructions or suffers 5d10 HP psychic (save Wisdom negates) each day for 30 days [+Level extends the duration to 365 days or permanently at level 7 or 9]</td>
     </tr><tr style="text-align:left">
       <td>Glibness (B8 Ench): Self can take 15 on Charisma checks and always detects as truthful for 1 hr</td>
     </tr><tr style="text-align:left">
@@ -387,17 +387,17 @@ var attributes = {
     </tr><tr style="text-align:left">
       <td>Greater Restoration (B5 Abju): Touched recovers from an effect causing an exhaustion level, a charmed or petrified condition, a curse, an ability reduction, or a reduction of hit point maximum</td>
     </tr><tr style="text-align:left">
-      <td>Guards And Wards (B6 Abju): Multiple magic effects protect 2,500 sq ft for 24 hr</td>
+      <td>Guards And Wards (B6 Abju): Multiple magic effects protect a 2,500 sq ft area for 24 hr</td>
     </tr><tr style="text-align:left">
-      <td>Hallucinatory Terrain (B4 Illu): R300' Creates a 150' cube terrain illusion (Investigation detects) for 24 hr</td>
+      <td>Hallucinatory Terrain (B4 Illu): R300' Creates a 150' cube terrain illusion (contact or Investigation detects) for 24 hr</td>
     </tr><tr style="text-align:left">
       <td>Healing Word (B1 Abju): R60' Target regains 2d4+0 hit points [+Level restores +2d4 hit points]</td>
     </tr><tr style="text-align:left">
-      <td>Heat Metal (B2 Tran): R60' Touching the target metal inflicts 2d8 HP fire, plus attack and ability disadvantage if the the target is worn or held (save Constitution negates disadvantage), for concentration up to 1 min; can use a bonus action each rd to repeat the initial damage [+Level inflicts +1d8 HP]</td>
+      <td>Heat Metal (B2 Tran): R60' Touching the target metal object inflicts 2d8 HP fire, forces dropping it if possible (save Constitution negates), and inflicts attack and ability check disadvantage until the start of the next turn if the object is not dropped; can use a bonus action each turn to repeat the effects for concentration up to 1 min [+Level inflicts +1d8 HP]</td>
     </tr><tr style="text-align:left">
-      <td>Heroes' Feast (B6 Conj): 12 diners who consume a 1-hr meal gain resistance to poison, immunity to becoming poisoned and frightened, and +2d10 hit points and maximum hit points for 24 hr</td>
+      <td>Heroes' Feast (B6 Conj): 12 diners who consume a 1-hr meal gain resistance to poison, immunity to poisoned and frightened, and +2d10 hit points and maximum hit points for 24 hr</td>
     </tr><tr style="text-align:left">
-      <td>Heroism (B1 Ench): Touched gains immunity to becoming frightened and +0 temporary hit points each rd for concentration up to 1 min [+Level affects +1 target]</td>
+      <td>Heroism (B1 Ench): Willing touched gains immunity to frightened and 0 temporary hit points each rd for concentration up to 1 min [+Level affects +1 target]</td>
     </tr><tr style="text-align:left">
       <td>Hideous Laughter (B1 Ench): 1</td>
     </tr><tr style="text-align:left">
@@ -437,21 +437,21 @@ var attributes = {
     </tr><tr style="text-align:left">
       <td>Magnificent Mansion (B7 Conj): 1</td>
     </tr><tr style="text-align:left">
-      <td>Major Image (B3 Illu): R120' Creates a 20' cube sight, sound, smell, and temperature illusion (Investigation detects) for concentration up to 10 min [+Level extends the duration to permanent at level 4]</td>
+      <td>Major Image (B3 Illu): R120' Creates a 20' cube sight, sound, smell, and temperature illusion (contact or Investigation detects) that can be changed and moved for concentration up to 10 min [+Level extends the duration to permanent at level 4]</td>
     </tr><tr style="text-align:left">
       <td>Mass Cure Wounds (B5 Abju): R60' 6 targets in a 30' radius regain 5d8+0 HP [+Level restores +1d8 HP]</td>
     </tr><tr style="text-align:left">
       <td>Mass Healing Word (B3 Abju): R60' 6 targets regain 2d4+0 HP [+Level restores +1d4 HP]</td>
     </tr><tr style="text-align:left">
-      <td>Mass Suggestion (B6 Ench): R60' 12 targets follow a reasonable suggestion (save Wisdom negates) for 24 hr; damage from self or any ally ends the effects [+Level extends the duration to 10, 30, or 366 days at level 7, 8, or 9]</td>
+      <td>Mass Suggestion (B6 Ench): R60' 12 targets follow a reasonable suggestion (save Wisdom negates) for 24 hr; damage from self or an ally ends the effects [+Level extends the duration to 10, 30, or 366 days at level 7, 8, or 9]</td>
     </tr><tr style="text-align:left">
       <td>Mending (B0 Tran): Touch repairs a break or tear up to 1' long</td>
     </tr><tr style="text-align:left">
       <td>Message (B0 Tran): R120' Self and target can hold a whispered conversation for 1 rd; can be cast through objects, but 1' of wood, stone, or metal or a thin sheet of lead blocks the spell</td>
     </tr><tr style="text-align:left">
-      <td>Mind Blank (B8 Abju): Touched gains immunity to psychic damage, emotion and thought detection, divination, and charm for 24 hr</td>
+      <td>Mind Blank (B8 Abju): Touched gains immunity to psychic damage, emotion and thought detection, divination, and charmed for 24 hr</td>
     </tr><tr style="text-align:left">
-      <td>Minor Illusion (B0 Illu): R30' Creates the sound of 1 creature or a 5' cube image (Investigation detects) for 1 min</td>
+      <td>Minor Illusion (B0 Illu): R30' Creates the sound of 1 creature or a 5' cube image (Investigation detects) for 1 min or until cast again</td>
     </tr><tr style="text-align:left">
       <td>Mirage Arcane (B7 Illu): Creates 1 mile sq of illusionary terrain for 10 days</td>
     </tr><tr style="text-align:left">
@@ -459,7 +459,7 @@ var attributes = {
     </tr><tr style="text-align:left">
       <td>Mislead (B5 Illu): Makes self invisible and creates an illusory duplicate that can move 60' and share senses for concentration up to 1 hr; attacking, inflicting damage, or casting ends the invisibility</td>
     </tr><tr style="text-align:left">
-      <td>Modify Memory (B5 Ench): R30' Incapacitates the target for concentration up to 1 min and allows changing the target's memory of a 10-min event from the past 24 hr (save Wisdom negates; a target in battle has advantage); damaging or additional casting on the target ends the spell [+Level changes the memory of an event from the past 7, 30, 365, or unlimited days at level 6, 7, 8, or 9]</td>
+      <td>Modify Memory (B5 Ench): R30' Incapacitates the target for concentration up to 1 min and allows changing the target's memory of a 10-min event from the past 24 hr (save Wisdom negates; active fighting gives advantage); damaging or additional casting on the target ends the spell [+Level changes the memory of an event from the past 7, 30, 365, or unlimited days at level 6, 7, 8, or 9]</td>
     </tr><tr style="text-align:left">
       <td>Nondetection (B3 Abju): Willing touched or touched 10'-long object gains immunity to divination for 8 hr</td>
     </tr><tr style="text-align:left">

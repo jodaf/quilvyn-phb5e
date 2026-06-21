@@ -304,7 +304,7 @@ var attributes = {
     </tr><tr style="text-align:left">
       <td>Acid Splash (W0 Evoc): R60' Inflicts 2d6 HP acid (save Dexterity negates) in a 5' radius</td>
     </tr><tr style="text-align:left">
-      <td>Alarm (W1 Abju): R30' Entry into a 20' cube by a non-designated Tiny or larger creature triggers an audible or mental alarm for 8 hr [R]</td>
+      <td>Alarm (W1 Abju): R30' Entry into a 20' cube by a non-designated creature triggers an audible or mental alarm for 8 hr [R]</td>
     </tr><tr style="text-align:left">
       <td>Alter Self (W2 Tran): Self becomes aquatic, changes appearance, or gains natural weapons with +5 attack and 1d6+1 HP damage, for concentration up to 1 hr</td>
     </tr><tr style="text-align:left">
@@ -314,7 +314,7 @@ var attributes = {
     </tr><tr style="text-align:left">
       <td>Antimagic Field (W8 Abju): 10' radius suppresses magic for concentration up to 1 hr</td>
     </tr><tr style="text-align:left">
-      <td>Antipathy/Sympathy (W8 Ench): R60' Target creature or object charms or frightens a specified creature type within 120' (save Wisdom negates; additional saves when no longer within 120' end and give immunity for 1 min) for 10 days</td>
+      <td>Antipathy/Sympathy (W8 Ench): R60' Target creature or object charms or frightens a specified creature type within 120' (save Wisdom negates; additional saves when no longer within 120', or when an charmed creature is harmed, end the effect and give immunity for 1 min) for 10 days</td>
     </tr><tr style="text-align:left">
       <td>Arcane Eye (W4 Divi): R30' Self sees with Darkvision through a remote invisible eye that can move 30' per rd for concentration up to 1 hr</td>
     </tr><tr style="text-align:left">
@@ -328,7 +328,7 @@ var attributes = {
     </tr><tr style="text-align:left">
       <td>Astral Projection (W9 Necr): R10' Self and 8 willing targets project to the Astral Plane</td>
     </tr><tr style="text-align:left">
-      <td>Augury (W2 Divi): Reveals the weal or woe outcome of a proposed act up to 30 min in the future; additional uses before a long rest impose a cumulative 25% chance of receiving a random response [R]</td>
+      <td>Augury (W2 Divi): Reveals the weal or woe outcome of a proposed act up to 30 min in the future; additional uses before a long rest impose a cumulative 25% chance of receiving no response [R]</td>
     </tr><tr style="text-align:left">
       <td>Banishment (W4 Abju): R30' Banishes the target to its home plane or to a demiplane (save Charisma negates) for concentration up to 1 min; extraplanar creatures don't return if the spell is maintained for a full min [+Level affects +1 target]</td>
     </tr><tr style="text-align:left">
@@ -338,35 +338,35 @@ var attributes = {
     </tr><tr style="text-align:left">
       <td>Black Tentacles (W4 Conj): 1</td>
     </tr><tr style="text-align:left">
-      <td>Blight (W4 Necr): R30' Inflicts 8d8 HP necrotic (save Constitution half; plant target automatically fails) [+Level inflicts +1d8 HP]</td>
+      <td>Blight (W4 Necr): R30' Kills a nonmagical plant or inflicts 8d8 HP necrotic on a creature (save Constitution half; plant target automatically fails) [+Level inflicts +1d8 HP]</td>
     </tr><tr style="text-align:left">
       <td>Blindness/Deafness (W2 Tran): R120' Inflicts a choice of blindness or deafness (save Constitution negates; additional saves each rd end) for 1 min [+Level affects +1 target]</td>
     </tr><tr style="text-align:left">
-      <td>Blink (W3 Tran): Self has a 50% chance of becoming ethereal at the end each turn, returning to a choice of spot within 10' at the start of the next turn, for 1 min</td>
+      <td>Blink (W3 Tran): Self has a 50% chance of becoming ethereal at the end of each turn, returning to a choice of spot within 10' at the start of the next turn, for 1 min</td>
     </tr><tr style="text-align:left">
       <td>Blur (W2 Illu): Foes suffer disadvantage when using sight to attack self for concentration up to 1 min</td>
     </tr><tr style="text-align:left">
-      <td>Burning Hands (W1 Evoc): 15' cone inflicts 3d6 HP fire (save Dexterity half) [+Level inflicts +1d6 HP]</td>
+      <td>Burning Hands (W1 Evoc): 15' cone inflicts 3d6 HP fire (save Dexterity half) and lights unattended flammable objects [+Level inflicts +1d6 HP]</td>
     </tr><tr style="text-align:left">
       <td>Chain Lightning (W6 Evoc): R150' Inflicts 10d8 HP lightning (save Dexterity half) on 4 targets in a 30' radius  [+Level affects +1 target]</td>
     </tr><tr style="text-align:left">
-      <td>Charm Monster (W4 Ench): R30' Target becomes charmed by self (save Wisdom negates) for 1 hr or until harmed [+Level affects +1 target]</td>
+      <td>Charm Monster (W4 Ench): R30' Target becomes charmed by self (save Wisdom negates; active fighting gives advantage) for 1 hr or until harmed [+Level affects +1 target]</td>
     </tr><tr style="text-align:left">
-      <td>Charm Person (W1 Ench): R30' Target humanoid becomes charmed by self (save Wisdom negates) for 1 hr or until harmed [+Level affects +1 target]</td>
+      <td>Charm Person (W1 Ench): R30' Target humanoid becomes charmed by self (save Wisdom negates; active fighting gives advantage) for 1 hr or until harmed [+Level affects +1 target]</td>
     </tr><tr style="text-align:left">
-      <td>Chill Touch (W0 Necr): Touch inflicts 2d10 HP necrotic and target cannot regain hit points until the end of the next turn</td>
+      <td>Chill Touch (W0 Necr): Touch inflicts 2d10 HP necrotic, and the target cannot regain hit points until the end of the next turn</td>
     </tr><tr style="text-align:left">
-      <td>Chromatic Orb (W1 Evoc): R90' Ranged spell inflicts 3d8 HP of a choice of acid, cold, fire, lightning, poison, or thunder; rolling the same number on 2 damage dice indicates that the spell leaps to attack another target within 30' of the first [+Level inflicts +1d8 HP and can leap +1 times]</td>
+      <td>Chromatic Orb (W1 Evoc): R90' Ranged spell inflicts 3d8 HP of a choice of acid, cold, fire, lightning, poison, or thunder; rolling the same number on 2 damage dice indicates that the spell leaps to attack another target within 30' of the first [+Level inflicts +1d8 HP and can leap +1 time]</td>
     </tr><tr style="text-align:left">
       <td>Circle Of Death (W6 Necr): R150' 60' radius inflicts 8d8 HP necrotic (save Constitution half) [+Level inflicts +2d8 HP]</td>
     </tr><tr style="text-align:left">
-      <td>Clairvoyance (W3 Divi): R1 mile Self can choose each rd to see or hear via an invisible sensor for concentration up to 10 min</td>
+      <td>Clairvoyance (W3 Divi): R1 mile Self can choose each turn to see or hear in a familiar or obvious location via an invisible sensor for concentration up to 10 min</td>
     </tr><tr style="text-align:left">
       <td>Clone (W8 Necr): 120-day process grows a backup body for the touched target</td>
     </tr><tr style="text-align:left">
-      <td>Cloudkill (W5 Conj): R120' 20' radius inflicts 5d8 HP poison (save Constitution half) and moves away 10' per rd for concentration up to 10 min [+Level inflicts +1d8 HP]</td>
+      <td>Cloudkill (W5 Conj): R120' 20' radius becomes heavily obscured, inflicts 5d8 HP poison (save Constitution half), and moves away 10' at the start of each turn for concentration up to 10 min [+Level inflicts +1d8 HP]</td>
     </tr><tr style="text-align:left">
-      <td>Color Spray (W1 Illu): 15' cone blinds (save Constitution negates) until the end of the next turn</td>
+      <td>Color Spray (W1 Illu): 15' cone inflicts blinded (save Constitution negates) until the end of the next turn</td>
     </tr><tr style="text-align:left">
       <td>Comprehend Languages (W1 Divi): Self understands all languages for 1 hr [R]</td>
     </tr><tr style="text-align:left">
@@ -374,9 +374,9 @@ var attributes = {
     </tr><tr style="text-align:left">
       <td>Confusion (W4 Ench): R90' Creatures in a 10' radius lose reactions and bonus actions and randomly: 10% wander; 50% do nothing; 20% attack an adjacent creature; 20% act normally (save Wisdom negates; additional saves each rd end) for concentration up to 1 min [+Level increases the radius by 5']</td>
     </tr><tr style="text-align:left">
-      <td>Conjure Elemental (W5 Conj): R60' 5' radius restrains a target and inflicts 8d8 HP of a choice of lightning, thunder, fire, or cold (save Dexterity negates), inflicting an additional 4d8 HP each rd until a successful Dexterity save, for concentration up to 10 min [+Level inflicts +1d8 HP]</td>
+      <td>Conjure Elemental (W5 Conj): R60' 5' radius restrains a target, inflicting 8d8 HP of a choice of lightning, thunder, fire, or cold (save Dexterity negates; additional saves each rd end), then inflicts an additional 4d8 HP each subsequent rd, for concentration up to 10 min [+Level inflicts +2d8 HP]</td>
     </tr><tr style="text-align:left">
-      <td>Conjure Minor Elementals (W4 Conj): Self attacks within 15' inflict +2d8 HP of a choice of acid, cold, fire, or lightning for concentration up to 10 min [+Level inflicts +1d8 HP]</td>
+      <td>Conjure Minor Elementals (W4 Conj): 15' emanation inflicts difficult terrain on foes, and self attacks within it inflict +2d8 HP of a choice of acid, cold, fire, or lightning, for concentration up to 10 min [+Level inflicts +2d8 HP]</td>
     </tr><tr style="text-align:left">
       <td>Contact Other Plane (W5 Divi): Contact with an extraplanar being inflicts 6d6 HP psychic and incapacitated on self until a long rest (save DC 15 Intelligence negates and gives one-word answers to 5 questions) [R]</td>
     </tr><tr style="text-align:left">
@@ -386,7 +386,7 @@ var attributes = {
     </tr><tr style="text-align:left">
       <td>Control Water (W4 Tran): R300' Water in a 100' cube rises 20', parts, redirects, or forms a whirlpool for concentration up to 10 min</td>
     </tr><tr style="text-align:left">
-      <td>Control Weather (W8 Tran): Adjusts the temperature, wind, and precipitation in a 5 mile radius for concentration up to 8 hr</td>
+      <td>Control Weather (W8 Tran): Adjusts the temperature, wind, and precipitation in a 5 mile radius after a 1d4 x 10 min delay for concentration up to 8 hr</td>
     </tr><tr style="text-align:left">
       <td>Counterspell (W3 Abju): R60' Negates foe casting (save Constitution negates)</td>
     </tr><tr style="text-align:left">
@@ -394,19 +394,19 @@ var attributes = {
     </tr><tr style="text-align:left">
       <td>Creation (W5 Illu): R30' Creates a 5' cube of false matter lasting 24 hr (vegetable matter), 12 hr (stone or crystal), 1 hr (precious metals), 10 min (gems), or 1 min (adamantine or mithral) [+Level creates a +5' cube]</td>
     </tr><tr style="text-align:left">
-      <td>Dancing Lights (W0 Evoc): R120' 4 torch lights each dimly light a 10' radius and can move 60' per rd as a bonus action for concentration up to 1 min; moving a light more than 20' from the others extinguishes it</td>
+      <td>Dancing Lights (W0 Evoc): 1</td>
     </tr><tr style="text-align:left">
       <td>Darkness (W2 Evoc): R60' Target centers a 15' radius lightless area for concentration up to 10 min</td>
     </tr><tr style="text-align:left">
       <td>Darkvision (W2 Tran): Willing touched sees 150' in darkness for 8 hr</td>
     </tr><tr style="text-align:left">
-      <td>Delayed Blast Fireball (W7 Evoc): R150' 20' radius inflicts 12d6 HP fire + 1d6 HP fire per rd delayed (save Dexterity half) within concentration up to 1 min [+Level inflicts +1d6 HP]</td>
+      <td>Delayed Blast Fireball (W7 Evoc): R150' Creates a bead that inflicts 12d6 HP fire + 1d6 HP fire per rd delayed (save Dexterity half) in a 20' radius when it is allowed to explode within concentration up to 1 min; a successful Reflex save allows picking up and throwing the bead 40', causing it to explode on contact [+Level inflicts +1d6 HP]</td>
     </tr><tr style="text-align:left">
       <td>Demiplane (W8 Conj): R60' Creates a door that leads to a 30'x30'x30' extradimensional room for 1 hr</td>
     </tr><tr style="text-align:left">
       <td>Detect Magic (W1 Divi): R30' Reveals magic auras and their schools for concentration up to 10 min; 1' of wood, dirt, or stone, 1" of metal, or a thin sheet of lead blocks the spell [R]</td>
     </tr><tr style="text-align:left">
-      <td>Detect Thoughts (W2 Divi): R30' Reveals targets' surface thoughts and allows probing deeper (save Wisdom ends; additional Arcana checks each rd end) for concentration up to 1 min; 1' of stone, dirt, or wood, 1" of metal, or a thin sheet of lead blocks the spell</td>
+      <td>Detect Thoughts (W2 Divi): R30' Detects the presence of minds or reveals targets' surface thoughts and allows probing deeper (save Wisdom negates; additional Arcana checks each rd end) for concentration up to 1 min; 1' of stone, dirt, or wood, 1" of metal, or a thin sheet of lead blocks the spell</td>
     </tr><tr style="text-align:left">
       <td>Dimension Door (W4 Conj): Teleports self and 1 adjacent willing creature up to 500'</td>
     </tr><tr style="text-align:left">
@@ -418,13 +418,13 @@ var attributes = {
     </tr><tr style="text-align:left">
       <td>Divination (W4 Divi): Answers a question about an event up to 7 days in the future; additional uses before a long rest add a 25% chance of failure [R]</td>
     </tr><tr style="text-align:left">
-      <td>Dominate Monster (W8 Ench): R60' Target creature obeys telepathic commands (save Wisdom negates; damage allows another save) for concentration up to 1 hr [+Level extends the duration to 8 hr]</td>
+      <td>Dominate Monster (W8 Ench): R60' Target creature obeys telepathic commands (save Wisdom negates; active fighting gives advantage, and damage allows another save) for concentration up to 1 hr [+Level extends the duration to 8 hr]</td>
     </tr><tr style="text-align:left">
-      <td>Dominate Person (W5 Ench): R60' Target humanoid obeys telepathic commands (save Wisdom negates; damage allows another save) for concentration up to 1 min [+Level extends the duration to 10 min, 1 hr, or 8 hr at level 6, 7, or 8]</td>
+      <td>Dominate Person (W5 Ench): R60' Target humanoid obeys telepathic commands (save Wisdom negates; active fighting gives advantage, and damage allows another save) for concentration up to 1 min [+Level extends the duration to 10 min, 1 hr, or 8 hr at level 6, 7, or 8]</td>
     </tr><tr style="text-align:left">
-      <td>Dragon's Breath (W2 Tran): Touched can use a Magic action to inflict 3d6 HP of a choice of acid, cold, fire, lightning, or poison (save Dexterity half) in a 15' cone for concentration up to 1 min [+Level inflicts +1d6 HP]</td>
+      <td>Dragon's Breath (W2 Tran): Willing touched can use a Magic action to inflict 3d6 HP of a choice of acid, cold, fire, lightning, or poison (save Dexterity half) in a 15' cone for concentration up to 1 min [+Level inflicts +1d6 HP]</td>
     </tr><tr style="text-align:left">
-      <td>Dream (W5 Illu): Touched controls the dreams of a known target for 8 hr and can inflict 3d6 HP psychic (save Wisdom negates)</td>
+      <td>Dream (W5 Illu): Willing touched controls the dreams of a known target for 8 hr and can inflict 3d6 HP psychic and loss of the benefits of rest (save Wisdom negates)</td>
     </tr><tr style="text-align:left">
       <td>Elementalism (W0 Tran): R30' Moves air or dust in a 5' cube, creates smoke or mist in a 5' cube for 1 min, or sculpts a 1' cube of dirt, sand, fire, smoke, mist, or water for 1 hr</td>
     </tr><tr style="text-align:left">
@@ -432,7 +432,7 @@ var attributes = {
     </tr><tr style="text-align:left">
       <td>Enlarge/Reduce (W2 Tran): R30' Target increases a size category, gaining advantage on Strength checks and +1d4 HP weapon and unarmed damage, or decreases a size category, suffering disadvantage on Strength checks and -1d4 HP weapon and unarmed damage, (save Constitution negates) for concentration up to 1 min; can instead target an unattended object</td>
     </tr><tr style="text-align:left">
-      <td>Etherealness (W7 Conj): Self enters Ethereal Plane for up to 8 hr [+Level affects +2 or +5 targets at level 8 or 9]</td>
+      <td>Etherealness (W7 Conj): Self enters Ethereal Plane for up to 8 hr [+Level affects +2 or +5 willing targets at level 8 or 9]</td>
     </tr><tr style="text-align:left">
       <td>Expeditious Retreat (W1 Tran): Allows self to Dash immediately and then to use a bonus action to Dash each rd for concentration up to 10 min</td>
     </tr><tr style="text-align:left">
@@ -444,7 +444,7 @@ var attributes = {
     </tr><tr style="text-align:left">
       <td>False Life (W1 Necr): Self gains 2d4+4 temporary hit points [+Level gives +5 temporary hit points]</td>
     </tr><tr style="text-align:left">
-      <td>Fear (W3 Illu): Creatures in a 30' cone drop held objects and flee (save Wisdom negates; additional saves each rd end) for concentration up to 1 min</td>
+      <td>Fear (W3 Illu): Creatures in a 30' cone drop held objects and flee (save Wisdom negates; additional saves each rd when out of sight of self end) for concentration up to 1 min</td>
     </tr><tr style="text-align:left">
       <td>Feather Fall (W1 Tran): R60' 5 falling targets slow to 60' per rd for 1 min</td>
     </tr><tr style="text-align:left">
@@ -464,13 +464,13 @@ var attributes = {
     </tr><tr style="text-align:left">
       <td>Floating Disk (W1 Conj): 1</td>
     </tr><tr style="text-align:left">
-      <td>Fly (W3 Tran): Touched gains a 60' fly speed for concentration up to 10 min [+Level affects +1 target]</td>
+      <td>Fly (W3 Tran): Touched gains a 60' fly Speed for concentration up to 10 min [+Level affects +1 target]</td>
     </tr><tr style="text-align:left">
-      <td>Fog Cloud (W1 Conj): R120' 20' radius obscures vision for concentration up to 1 hr [+Level increases the radius by 20']</td>
+      <td>Fog Cloud (W1 Conj): R120' 20' radius becomes heavily obscured for concentration up to 1 hr [+Level increases the radius by 20']</td>
     </tr><tr style="text-align:left">
       <td>Forcecage (W7 Evoc): R100' Creates a choice of a 20' barred force cube or a 10' solid force box that can trap creatures inside (save Charisma allows magical escape) for concentration up to 1 hr</td>
     </tr><tr style="text-align:left">
-      <td>Foresight (W9 Divi): Touched gains advantage on attack, ability, and saves, and foes suffer disadvantage on attacks, for 8 hr</td>
+      <td>Foresight (W9 Divi): Touched gains advantage on attack, ability, and saves, and foes suffer disadvantage on attacks, for 8 hr or until cast again</td>
     </tr><tr style="text-align:left">
       <td>Freezing Sphere (W6 Evoc): 1</td>
     </tr><tr style="text-align:left">
@@ -478,7 +478,7 @@ var attributes = {
     </tr><tr style="text-align:left">
       <td>Gate (W9 Conj): R60' Opens a circular portal to another plane for concentration up to 1 min; can be used to bring a creature from another plane</td>
     </tr><tr style="text-align:left">
-      <td>Geas (W5 Ench): R60' Target obeys self instructions or suffers 5d10 HP psychic each day (save Wisdom negates) for 30 days [+Level extends the duration to 365 days or permanently at level 7 or 9]</td>
+      <td>Geas (W5 Ench): R60' Target obeys self instructions or suffers 5d10 HP psychic (save Wisdom negates) each day for 30 days [+Level extends the duration to 365 days or permanently at level 7 or 9]</td>
     </tr><tr style="text-align:left">
       <td>Gentle Repose (W2 Necr): Touched corpse becomes immune to decay and animation for 10 days [R]</td>
     </tr><tr style="text-align:left">
@@ -490,13 +490,13 @@ var attributes = {
     </tr><tr style="text-align:left">
       <td>Greater Invisibility (W4 Illu): Touched becomes invisible for concentration up to 1 min</td>
     </tr><tr style="text-align:left">
-      <td>Guards And Wards (W6 Abju): Multiple magic effects protect 2,500 sq ft for 24 hr</td>
+      <td>Guards And Wards (W6 Abju): Multiple magic effects protect a 2,500 sq ft area for 24 hr</td>
     </tr><tr style="text-align:left">
-      <td>Gust Of Wind (W2 Evoc): 60'x10' wind pushes 15' (save Strength negates), inflicts half movement, disperses gas and vapor, and extinguishes flames (50% chance for protected flames) for concentration up to 1 min; can use a bonus action each rd to redirect the wind</td>
+      <td>Gust Of Wind (W2 Evoc): 60'x10' wind pushes 15' (save Strength negates), inflicts half movement, disperses gas and vapor, and extinguishes flames (50% chance for protected flames) for concentration up to 1 min; can use a bonus action each turn to redirect the wind</td>
     </tr><tr style="text-align:left">
-      <td>Hallucinatory Terrain (W4 Illu): R300' Creates a 150' cube terrain illusion (Investigation detects) for 24 hr</td>
+      <td>Hallucinatory Terrain (W4 Illu): R300' Creates a 150' cube terrain illusion (contact or Investigation detects) for 24 hr</td>
     </tr><tr style="text-align:left">
-      <td>Haste (W3 Tran): R30' Willing target gains double Speed, +2 Armor Class, advantage on Dexterity, and an additional action each turn for concentration up to 1 min and suffers 1 rd of incapacitation afterward</td>
+      <td>Haste (W3 Tran): R30' Willing target gains double Speed, +2 Armor Class, advantage on Dexterity saves, and an additional action to Attack, Dash, Disengage, Hide, or Utilize each turn for concentration up to 1 min and suffers 1 rd of incapacitation afterward</td>
     </tr><tr style="text-align:left">
       <td>Hideous Laughter (W1 Ench): 1</td>
     </tr><tr style="text-align:left">
@@ -514,9 +514,9 @@ var attributes = {
     </tr><tr style="text-align:left">
       <td>Illusory Script (W1 Illu): Alters the appearance of self writing on the target material, making its meaning clear only to specified creatures and those with Truesight, for 10 days [R]</td>
     </tr><tr style="text-align:left">
-      <td>Imprisonment (W9 Abju): R30' Restrains the target in a chosen type of prison (save Wisdom negates and gives the target 24 hr immunity)</td>
+      <td>Imprisonment (W9 Abju): R30' Restrains the target in a chosen type of prison until a specified trigger occurs (save Wisdom negates and gives the target 24 hr immunity)</td>
     </tr><tr style="text-align:left">
-      <td>Incendiary Cloud (W8 Conj): R150' 20' radius inflicts 10d8 HP fire (save Dexterity half), obscures, and moves away 10' per rd for concentration up to 1 min</td>
+      <td>Incendiary Cloud (W8 Conj): R150' 20' radius becomes heavily obscured, inflicts 10d8 HP fire (save Dexterity half), and moves away 10' per rd for concentration up to 1 min</td>
     </tr><tr style="text-align:left">
       <td>Instant Summons (W6 Conj): 1</td>
     </tr><tr style="text-align:left">
@@ -524,13 +524,13 @@ var attributes = {
     </tr><tr style="text-align:left">
       <td>Irresistible Dance (W6 Ench): 1</td>
     </tr><tr style="text-align:left">
-      <td>Jump (W1 Tran): Touched can jump 30' after a 10' move for 1 min</td>
+      <td>Jump (W1 Tran): Touched can spend 10' of movement to make a 30' jump for 1 min [+Level affects +1 target]</td>
     </tr><tr style="text-align:left">
       <td>Knock (W2 Tran): R60' Unlocks, unsticks, or unbars the target or suppresses <i>Arcane Lock</i> for 10 min</td>
     </tr><tr style="text-align:left">
       <td>Legend Lore (W5 Divi): Reveals info about a specified famous person, place, or object</td>
     </tr><tr style="text-align:left">
-      <td>Levitate (W2 Tran): R60' Target 500 lb object or creature rises 20' (save Constitution negates) and can be moved up or down 20' each rd for concentration up to 10 min</td>
+      <td>Levitate (W2 Tran): R60' Target 500 lb object or creature rises 20' (save Constitution negates) and can be moved up or down 20' each turn for concentration up to 10 min</td>
     </tr><tr style="text-align:left">
       <td>Light (W0 Evoc): Touched unattended object emits a 20' bright light for 1 hr</td>
     </tr><tr style="text-align:left">
@@ -558,9 +558,9 @@ var attributes = {
     </tr><tr style="text-align:left">
       <td>Magnificent Mansion (W7 Conj): 1</td>
     </tr><tr style="text-align:left">
-      <td>Major Image (W3 Illu): R120' Creates a 20' cube sight, sound, smell, and temperature illusion (Investigation detects) for concentration up to 10 min [+Level extends the duration to permanent at level 4]</td>
+      <td>Major Image (W3 Illu): R120' Creates a 20' cube sight, sound, smell, and temperature illusion (contact or Investigation detects) that can be changed and moved for concentration up to 10 min [+Level extends the duration to permanent at level 4]</td>
     </tr><tr style="text-align:left">
-      <td>Mass Suggestion (W6 Ench): R60' 12 targets follow a reasonable suggestion (save Wisdom negates) for 24 hr; damage from self or any ally ends the effects [+Level extends the duration to 10, 30, or 366 days at level 7, 8, or 9]</td>
+      <td>Mass Suggestion (W6 Ench): R60' 12 targets follow a reasonable suggestion (save Wisdom negates) for 24 hr; damage from self or an ally ends the effects [+Level extends the duration to 10, 30, or 366 days at level 7, 8, or 9]</td>
     </tr><tr style="text-align:left">
       <td>Maze (W8 Conj): R60' Sends the target to a labyrinthine demiplane (save DC 20 Investigation escapes) for concentration up to 10 min</td>
     </tr><tr style="text-align:left">
@@ -570,11 +570,11 @@ var attributes = {
     </tr><tr style="text-align:left">
       <td>Meteor Swarm (W9 Evoc): R1 mile 4 40' radius areas each inflict 20d6 HP fire and 20d6 HP bludgeoning (save Dexterity half) and ignite unattended flammable objects</td>
     </tr><tr style="text-align:left">
-      <td>Mind Blank (W8 Abju): Touched gains immunity to psychic damage, emotion and thought detection, divination, and charm for 24 hr</td>
+      <td>Mind Blank (W8 Abju): Touched gains immunity to psychic damage, emotion and thought detection, divination, and charmed for 24 hr</td>
     </tr><tr style="text-align:left">
       <td>Mind Spike (W2 Divi): R120' Inflicts 3d8 HP psychic and reveals the target's location for concentration up to 1 hr (save Wisdom half HP only) [+Level inflicts +1d8 HP]</td>
     </tr><tr style="text-align:left">
-      <td>Minor Illusion (W0 Illu): R30' Creates the sound of 1 creature or a 5' cube image (Investigation detects) for 1 min</td>
+      <td>Minor Illusion (W0 Illu): R30' Creates the sound of 1 creature or a 5' cube image (Investigation detects) for 1 min or until cast again</td>
     </tr><tr style="text-align:left">
       <td>Mirage Arcane (W7 Illu): Creates 1 mile sq of illusionary terrain for 10 days</td>
     </tr><tr style="text-align:left">
@@ -584,7 +584,7 @@ var attributes = {
     </tr><tr style="text-align:left">
       <td>Misty Step (W2 Conj): Teleports self 30'</td>
     </tr><tr style="text-align:left">
-      <td>Modify Memory (W5 Ench): R30' Incapacitates the target for concentration up to 1 min and allows changing the target's memory of a 10-min event from the past 24 hr (save Wisdom negates; a target in battle has advantage); damaging or additional casting on the target ends the spell [+Level changes the memory of an event from the past 7, 30, 365, or unlimited days at level 6, 7, 8, or 9]</td>
+      <td>Modify Memory (W5 Ench): R30' Incapacitates the target for concentration up to 1 min and allows changing the target's memory of a 10-min event from the past 24 hr (save Wisdom negates; active fighting gives advantage); damaging or additional casting on the target ends the spell [+Level changes the memory of an event from the past 7, 30, 365, or unlimited days at level 6, 7, 8, or 9]</td>
     </tr><tr style="text-align:left">
       <td>Move Earth (W6 Tran): R120' Reshapes a 40' cube of earth each 10 minutes for concentration up to 2 hr</td>
     </tr><tr style="text-align:left">

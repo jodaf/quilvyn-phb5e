@@ -1669,7 +1669,7 @@ PHB5E.SPELLS_ADDED = {
     'School=Evocation ' +
     'Level=P3 ' +
     'Description=' +
-      '"Next successful self weapon attack inflicts +3d8 HP radiant and blinded (save Constitution negates blindness; additional saves each turn end) for concentration up to 1 min"',
+      '"Next successful self weapon attack inflicts +3d8 HP radiant and blinded (save Constitution negates blindness; additional saves each rd end) for concentration up to 1 min"',
 
   'Chromatic Orb':
     'School=Evocation ' +

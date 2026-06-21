@@ -301,7 +301,7 @@ var attributes = {
     </tr><tr style="text-align:left">
       <td>Arcane Eye (C4 [Light Domain Spells] Divi): R30' Self sees with Darkvision through a remote invisible eye that can move 30' per rd for concentration up to 1 hr</td>
     </tr><tr style="text-align:left">
-      <td>Aura Of Life (C4 [Life Domain Spells] Abju): 30' radius gives nonhostile creatures resistance to necrotic damage and immunity to maximum hit point reduction, and raises those with 0 hit points to 1 hit point, for concentration up to 10 min</td>
+      <td>Aura Of Life (C4 [Life Domain Spells] Abju): 30' radius gives allies resistance to necrotic damage and immunity to maximum hit point reduction, and raises those with 0 hit points to 1 hit point, for concentration up to 10 min</td>
     </tr><tr style="text-align:left">
       <td>Banishment (C4 Abju): R30' Banishes the target to its home plane or to a demiplane (save Charisma negates) for concentration up to 1 min; extraplanar creatures don't return if the spell is maintained for a full min [+Level affects +1 target]</td>
     </tr><tr style="text-align:left">
@@ -309,15 +309,15 @@ var attributes = {
     </tr><tr style="text-align:left">
       <td>Blindness/Deafness (C2 Necr): 1</td>
     </tr><tr style="text-align:left">
-      <td>Burning Hands (C1 [Light Domain Spells] Evoc): 15' cone inflicts 3d6 HP fire (save Dexterity half) [+Level inflicts +1d6 HP]</td>
+      <td>Burning Hands (C1 [Light Domain Spells] Evoc): 15' cone inflicts 3d6 HP fire (save Dexterity half) and lights unattended flammable objects [+Level inflicts +1d6 HP]</td>
     </tr><tr style="text-align:left">
-      <td>Charm Person (C1 [Trickery Domain Spells] Ench): R30' Target humanoid becomes charmed by self (save Wisdom negates) for 1 hr or until harmed [+Level affects +1 target]</td>
+      <td>Charm Person (C1 [Trickery Domain Spells] Ench): R30' Target humanoid becomes charmed by self (save Wisdom negates; active fighting gives advantage) for 1 hr or until harmed [+Level affects +1 target]</td>
     </tr><tr style="text-align:left">
       <td>Confusion (C4 [Trickery Domain Spells] Ench): R90' Creatures in a 10' radius lose reactions and bonus actions and randomly: 10% wander; 50% do nothing; 20% attack an adjacent creature; 20% act normally (save Wisdom negates; additional saves each rd end) for concentration up to 1 min [+Level increases the radius by 5']</td>
     </tr><tr style="text-align:left">
-      <td>Contagion (C5 Necr): Touch inflicts 11d8 HP necrotic, poisoned, and disadvantage on chosen ability saves (save Constitution negates; subsequent saves each turn either end after three successes or extend to 7 days after 3 failures; other effects that would end poisoned require a successful Constitution save to succeed)</td>
+      <td>Contagion (C5 Necr): Touch inflicts 11d8 HP necrotic, poisoned, and disadvantage on chosen ability saves (save Constitution negates; subsequent saves each rd either end after three successes or extend to 7 days after 3 failures; other effects that would end poisoned require a successful Constitution save to succeed)</td>
     </tr><tr style="text-align:left">
-      <td>Crusader's Mantle (C3 [War Domain Spells] Evoc): Ally attacks in 30' radius inflict +1d4 HP radiant for concentration up to 1 min</td>
+      <td>Crusader's Mantle (C3 [War Domain Spells] Evoc): Ally attacks within a 30' emanation inflict +1d4 HP radiant for concentration up to 1 min</td>
     </tr><tr style="text-align:left">
       <td>Cure Wounds (C1 [Life Domain Spells] Abju): Touched regains 2d8+4 hit points [+Level restores +2d8 hit points]</td>
     </tr><tr style="text-align:left">
@@ -337,7 +337,7 @@ var attributes = {
     </tr><tr style="text-align:left">
       <td>Divine Word (C7 Evoc): R30' Inflicts death on targets with up to 20 HP, blinded, deafened, and stunned for 1 hr on those with up to 30 HP, blinded and deafened for 10 min on those with up to 40 HP, and deafened for 1 min on those with up to 50 HP, and forces celestials, elementals, fey, and fiends to return to their home planes (save Charisma negates) for 24 hr</td>
     </tr><tr style="text-align:left">
-      <td>Dominate Person (C5 [Trickery Domain Spells] Ench): R60' Target humanoid obeys telepathic commands (save Wisdom negates; damage allows another save) for concentration up to 1 min [+Level extends the duration to 10 min, 1 hr, or 8 hr at level 6, 7, or 8]</td>
+      <td>Dominate Person (C5 [Trickery Domain Spells] Ench): R60' Target humanoid obeys telepathic commands (save Wisdom negates; active fighting gives advantage, and damage allows another save) for concentration up to 1 min [+Level extends the duration to 10 min, 1 hr, or 8 hr at level 6, 7, or 8]</td>
     </tr><tr style="text-align:left">
       <td>Enhance Ability (C2 Tran): Touched gains advantage on chosen ability checks for concentration up to 1 hr [+Level affects +1 target]</td>
     </tr><tr style="text-align:left">
@@ -351,21 +351,21 @@ var attributes = {
     </tr><tr style="text-align:left">
       <td>Flame Strike (C5 [Light Domain Spells] Evoc): R60' 10' radius inflicts 5d6 HP fire and 5d6 HP radiant (save Dexterity half) [+Level inflicts +1d6 HP fire and radiant]</td>
     </tr><tr style="text-align:left">
-      <td>Freedom Of Movement (C4 [War Domain Spells] Abju): Touched gains immunity to movement impediments and a 30' swim Speed and can escape from nonmagical restraints for 1 hr [+Level affects +1 target]</td>
+      <td>Freedom Of Movement (C4 [War Domain Spells] Abju): Touched gains immunity to movement impediments, gains a 30' swim Speed, and can escape from nonmagical restraints for 1 hr [+Level affects +1 target]</td>
     </tr><tr style="text-align:left">
       <td>Gate (C9 Conj): R60' Opens a circular portal to another plane for concentration up to 1 min; can be used to bring a creature from another plane</td>
     </tr><tr style="text-align:left">
       <td>Greater Restoration (C5 [Life Domain Spells] Abju): Touched recovers from an effect causing an exhaustion level, a charmed or petrified condition, a curse, an ability reduction, or a reduction of hit point maximum</td>
     </tr><tr style="text-align:left">
-      <td>Guidance (C0 Divi): Touched gains +1d4 on a choice of skill for concentration up to 1 min</td>
+      <td>Guidance (C0 Divi): Willing touched gains +1d4 on a choice of skill for concentration up to 1 min</td>
     </tr><tr style="text-align:left">
       <td>Guiding Bolt (C1 Evoc): R120' Ranged spell inflicts 4d6 HP radiant and gives advantage on the next attack on the target before the end of the next turn [+Level inflicts +1d6 HP]</td>
     </tr><tr style="text-align:left">
       <td>Guiding Bolt (C1 [War Domain Spells] Evoc): R120' Ranged spell inflicts 4d6 HP radiant and gives advantage on the next attack on the target before the end of the next turn [+Level inflicts +1d6 HP]</td>
     </tr><tr style="text-align:left">
-      <td>Hallow (C5 Evoc): 60' radius becomes warded against aberrations, celestials, elementals, fey, fiends, and undead and their effects and evokes a boon or bane effect</td>
+      <td>Hallow (C5 Evoc): 60' radius becomes warded against one or more choices of aberrations, celestials, elementals, fey, fiends, and undead and their effects and evokes a boon or bane effect</td>
     </tr><tr style="text-align:left">
-      <td>Heroes' Feast (C6 Conj): 12 diners who consume a 1-hr meal gain resistance to poison, immunity to becoming poisoned and frightened, and +2d10 hit points and maximum hit points for 24 hr</td>
+      <td>Heroes' Feast (C6 Conj): 12 diners who consume a 1-hr meal gain resistance to poison, immunity to poisoned and frightened, and +2d10 hit points and maximum hit points for 24 hr</td>
     </tr><tr style="text-align:left">
       <td>Hold Monster (C5 [War Domain Spells] Ench): R90' Inflicts paralyzed (save Wisdom negates; additional saves each rd end) for concentration up to 1 min [+Level affects +1 target]</td>
     </tr><tr style="text-align:left">
@@ -389,7 +389,7 @@ var attributes = {
     </tr><tr style="text-align:left">
       <td>Mending (C0 Tran): Touch repairs a break or tear up to 1' long</td>
     </tr><tr style="text-align:left">
-      <td>Modify Memory (C5 [Trickery Domain Spells] Ench): R30' Incapacitates the target for concentration up to 1 min and allows changing the target's memory of a 10-min event from the past 24 hr (save Wisdom negates; a target in battle has advantage); damaging or additional casting on the target ends the spell [+Level changes the memory of an event from the past 7, 30, 365, or unlimited days at level 6, 7, 8, or 9]</td>
+      <td>Modify Memory (C5 [Trickery Domain Spells] Ench): R30' Incapacitates the target for concentration up to 1 min and allows changing the target's memory of a 10-min event from the past 24 hr (save Wisdom negates; active fighting gives advantage); damaging or additional casting on the target ends the spell [+Level changes the memory of an event from the past 7, 30, 365, or unlimited days at level 6, 7, 8, or 9]</td>
     </tr><tr style="text-align:left">
       <td>Nondetection (C3 [Trickery Domain Spells] Abju): Willing touched or touched 10'-long object gains immunity to divination for 8 hr</td>
     </tr><tr style="text-align:left">

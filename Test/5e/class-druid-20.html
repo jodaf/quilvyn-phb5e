@@ -252,15 +252,15 @@ var attributes = {
     </tr><tr style="text-align:left">
       <td>Barkskin (D2 [Circle Spells (Forest)] Tran): Willing touched gains Armor Class 16 for concentration up to 1 hr</td>
     </tr><tr style="text-align:left">
-      <td>Blight (D4 [Circle Spells (Desert)] Necr): R30' Inflicts 8d8 HP necrotic (save Constitution half; plant target has disadvantage on the save and suffers maximum damage on failure) [+Level inflicts +1d8 HP]</td>
+      <td>Blight (D4 [Circle Spells (Desert)] Necr): R30' Kills a nonmagical plant or inflicts 8d8 HP necrotic on a creature (save Constitution half; plant target has disadvantage on the save and suffers maximum damage on failure) [+Level inflicts +1d8 HP]</td>
     </tr><tr style="text-align:left">
       <td>Blur (D2 [Circle Spells (Desert)] Illu): Foes suffer disadvantage when using sight to attack self for concentration up to 1 min</td>
     </tr><tr style="text-align:left">
-      <td>Call Lightning (D3 Conj): R120' 5' radius inflicts 3d10 HP lightning (save Dexterity half; +1d10 HP if using a natural storm) once per rd for concentration up to 10 min [+Level inflicts +1d10 HP]</td>
+      <td>Call Lightning (D3 Conj): R120' 5' radius inflicts 3d10 HP lightning (save Dexterity half; +1d10 HP if using a natural storm) once per turn for concentration up to 10 min [+Level inflicts +1d10 HP]</td>
     </tr><tr style="text-align:left">
-      <td>Call Lightning (D3 [Circle Spells (Forest)] Conj): R120' 5' radius inflicts 3d10 HP lightning (save Dexterity half; +1d10 HP if using a natural storm) once per rd for concentration up to 10 min [+Level inflicts +1d10 HP]</td>
+      <td>Call Lightning (D3 [Circle Spells (Forest)] Conj): R120' 5' radius inflicts 3d10 HP lightning (save Dexterity half; +1d10 HP if using a natural storm) once per turn for concentration up to 10 min [+Level inflicts +1d10 HP]</td>
     </tr><tr style="text-align:left">
-      <td>Cloudkill (D5 [Circle Spells (Underdark)] Conj): R120' 20' radius inflicts 5d8 HP poison (save Constitution half) and moves away 10' per rd for concentration up to 10 min [+Level inflicts +1d8 HP]</td>
+      <td>Cloudkill (D5 [Circle Spells (Underdark)] Conj): R120' 20' radius becomes heavily obscured, inflicts 5d8 HP poison (save Constitution half), and moves away 10' at the start of each turn for concentration up to 10 min [+Level inflicts +1d8 HP]</td>
     </tr><tr style="text-align:left">
       <td>Commune With Nature (D5 Divi): Reveals 3 facts about nature within 3 miles, or within 300' when underground [R]</td>
     </tr><tr style="text-align:left">
@@ -276,11 +276,11 @@ var attributes = {
     </tr><tr style="text-align:left">
       <td>Control Water (D4 [Circle Spells (Coast)] Tran): R300' Water in a 100' cube rises 20', parts, redirects, or forms a whirlpool for concentration up to 10 min</td>
     </tr><tr style="text-align:left">
-      <td>Control Weather (D8 Tran): Adjusts the temperature, wind, and precipitation in a 5 mile radius for concentration up to 8 hr</td>
+      <td>Control Weather (D8 Tran): Adjusts the temperature, wind, and precipitation in a 5 mile radius after a 1d4 x 10 min delay for concentration up to 8 hr</td>
     </tr><tr style="text-align:left">
       <td>Create Food And Water (D3 [Circle Spells (Desert)] Conj): R30' Creates 45 lb of food that lasts for 24 hr and 30 gallons of water</td>
     </tr><tr style="text-align:left">
-      <td>Dancing Lights (W0 Evoc): R120' 4 torch lights each dimly light a 10' radius and can move 60' per rd as a bonus action for concentration up to 1 min; moving a light more than 20' from the others extinguishes it</td>
+      <td>Dancing Lights (W0 Evoc): R120' 4 torch lights each dimly light a 10' radius and can move 60' per turn as a bonus action for concentration up to 1 min; moving a light more than 20' from the others extinguishes it</td>
     </tr><tr style="text-align:left">
       <td>Darkness (D2 [Circle Spells (Swamp)] Evoc): R60' Target centers a 15' radius lightless area for concentration up to 10 min</td>
     </tr><tr style="text-align:left">
@@ -292,13 +292,13 @@ var attributes = {
     </tr><tr style="text-align:left">
       <td>Divination (D4 [Circle Spells (Grassland)] Divi): Answers a question about an event up to 7 days in the future; additional uses before a long rest add a 25% chance of failure [R]</td>
     </tr><tr style="text-align:left">
-      <td>Dream (D5 [Circle Spells (Grassland)] Illu): Touched controls the dreams of a known target for 8 hr and can inflict 3d6 HP psychic (save Wisdom negates)</td>
+      <td>Dream (D5 [Circle Spells (Grassland)] Illu): Willing touched controls the dreams of a known target for 8 hr and can inflict 3d6 HP psychic and loss of the benefits of rest (save Wisdom negates)</td>
     </tr><tr style="text-align:left">
       <td>Faerie Fire (D1 Evoc): R60' Objects and creatures in a 20' cube glow (save Dexterity negates), giving their foes advantage on attacks, for concentration up to 1 min</td>
     </tr><tr style="text-align:left">
       <td>Find Traps (D2 Divi): R120' Reveals the presence of traps</td>
     </tr><tr style="text-align:left">
-      <td>Fog Cloud (D1 Conj): R120' 20' radius obscures vision for concentration up to 1 hr [+Level increases the radius by 20']</td>
+      <td>Fog Cloud (D1 Conj): R120' 20' radius becomes heavily obscured for concentration up to 1 hr [+Level increases the radius by 20']</td>
     </tr><tr style="text-align:left">
       <td>Freedom Of Movement (D4 [Circle Spells (Arctic)] Abju): Touched gains immunity to movement impediments and can escape from nonmagical restraints for 1 hr</td>
     </tr><tr style="text-align:left">
@@ -316,9 +316,9 @@ var attributes = {
     </tr><tr style="text-align:left">
       <td>Greater Invisibility (D4 [Circle Spells (Underdark)] Illu): Touched becomes invisible for concentration up to 1 min</td>
     </tr><tr style="text-align:left">
-      <td>Hallucinatory Terrain (D4 [Circle Spells (Desert)] Illu): R300' Creates a 150' cube terrain illusion (Investigation detects) for 24 hr</td>
+      <td>Hallucinatory Terrain (D4 [Circle Spells (Desert)] Illu): R300' Creates a 150' cube terrain illusion (contact or Investigation detects) for 24 hr</td>
     </tr><tr style="text-align:left">
-      <td>Haste (D3 [Circle Spells (Grassland)] Tran): R30' Willing target gains double Speed, +2 Armor Class, advantage on Dexterity, and an additional action each turn for concentration up to 1 min and suffers 1 rd of incapacitation afterward</td>
+      <td>Haste (D3 [Circle Spells (Grassland)] Tran): R30' Willing target gains double Speed, +2 Armor Class, advantage on Dexterity saves, and an additional action to Attack, Dash, Disengage, Hide, or Use an Object each turn for concentration up to 1 min and suffers 1 rd of incapacitation afterward</td>
     </tr><tr style="text-align:left">
       <td>Hold Person (D2 [Circle Spells (Arctic)] Ench): R60' Inflicts paralyzed (save Wisdom negates; additional saves each rd end) for concentration up to 1 min [+Level affects +1 target]</td>
     </tr><tr style="text-align:left">
@@ -344,9 +344,9 @@ var attributes = {
     </tr><tr style="text-align:left">
       <td>Mage Hand (W0 Conj): R30' Spectral hand performs minor tasks, moving up to 10 lb, for 1 min</td>
     </tr><tr style="text-align:left">
-      <td>Meld Into Stone (D3 Tran): Self steps into rock, losing sight and suffering disadvantage on hearing Perception but allowing casting spells on self, for up to 8 hr; significant partial destruction of the stone inflicts 6d6 HP bludgeoning, expulsion, and prone to self, and complete destruction increases the damage to 50 HP [R]</td>
+      <td>Meld Into Stone (D3 Tran): Self steps into rock, losing sight and suffering disadvantage on hearing Perception but allowing casting spells on self, for up to 8 hr; significant partial destruction of the stone inflicts 6d6 HP bludgeoning, expulsion, and prone on self, and complete destruction increases the damage to 50 HP [R]</td>
     </tr><tr style="text-align:left">
-      <td>Meld Into Stone (D3 [Circle Spells (Mountain)] Tran): Self steps into rock, losing sight and suffering disadvantage on hearing Perception but allowing casting spells on self, for up to 8 hr; significant partial destruction of the stone inflicts 6d6 HP bludgeoning, expulsion, and prone to self, and complete destruction increases the damage to 50 HP [R]</td>
+      <td>Meld Into Stone (D3 [Circle Spells (Mountain)] Tran): Self steps into rock, losing sight and suffering disadvantage on hearing Perception but allowing casting spells on self, for up to 8 hr; significant partial destruction of the stone inflicts 6d6 HP bludgeoning, expulsion, and prone on self, and complete destruction increases the damage to 50 HP [R]</td>
     </tr><tr style="text-align:left">
       <td>Melf's Acid Arrow (D2 [Circle Spells (Swamp)] Evoc): R90' Ranged spell inflicts 4d4 HP acid, plus 2d4 HP at the end of the target's next turn (miss half initial HP only) [+Level inflicts +1d4 HP initial and secondary]</td>
     </tr><tr style="text-align:left">

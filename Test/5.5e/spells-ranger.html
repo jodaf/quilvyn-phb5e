@@ -280,7 +280,7 @@ var attributes = {
     <tr style="text-align:left">
       <td>Aid (R2 Abju): R30' 3 targets gain +5 current and maximum hit points for 8 hr [+Level gives +5 hit points]</td>
     </tr><tr style="text-align:left">
-      <td>Alarm (R1 Abju): R30' Entry into a 20' cube by a non-designated Tiny or larger creature triggers an audible or mental alarm for 8 hr [R]</td>
+      <td>Alarm (R1 Abju): R30' Entry into a 20' cube by a non-designated creature triggers an audible or mental alarm for 8 hr [R]</td>
     </tr><tr style="text-align:left">
       <td>Animal Friendship (R1 Ench): R30' Charms a target beast (save Wisdom negates) for 24 hr or until harmed [+Level affects +1 target]</td>
     </tr><tr style="text-align:left">
@@ -290,9 +290,9 @@ var attributes = {
     </tr><tr style="text-align:left">
       <td>Commune With Nature (R5 Divi): Reveals 3 facts about nature within 3 miles, or within 300' when underground [R]</td>
     </tr><tr style="text-align:left">
-      <td>Conjure Animals (R3 Conj): R60' 10' radius inflicts 3d10 HP slashing (save Dexterity negates), and 5' radius gives self advantage on Strength saves, for concentration up to 10 min; can be moved 30' each turn [+Level inflicts +1d10 HP]</td>
+      <td>Conjure Animals (R3 Conj): R60' 10' radius inflicts on targets 3d10 HP slashing (save Dexterity negates), and 5' radius gives self advantage on Strength saves, for concentration up to 10 min; can be moved 30' each turn [+Level inflicts +1d10 HP]</td>
     </tr><tr style="text-align:left">
-      <td>Conjure Woodland Beings (R4 Conj): 10' emanation inflicts 5d8 HP force (save Wisdom half) and allows self to use a bonus action to Disengage for concentration up to 10 min [+Level inflicts +1d8 HP]</td>
+      <td>Conjure Woodland Beings (R4 Conj): 10' emanation inflicts on targets 5d8 HP force (save Wisdom half) and allows self to use a bonus action to Disengage for concentration up to 10 min [+Level inflicts +1d8 HP]</td>
     </tr><tr style="text-align:left">
       <td>Cure Wounds (R1 Abju): Touched regains 2d8+2 hit points [+Level restores +2d8 hit points]</td>
     </tr><tr style="text-align:left">
@@ -306,31 +306,31 @@ var attributes = {
     </tr><tr style="text-align:left">
       <td>Dispel Magic (R3 Abju): R120' Ends the effects on the target of spells up to level 3, and successful DC 10 + spell level checks end each higher-level spell [+Level ends any spell of equal or lesser level]</td>
     </tr><tr style="text-align:left">
-      <td>Dominate Beast (R4 Ench): R60' Target beast obeys telepathic commands (save Wisdom negates; damage allows another save) for concentration up to 1 min [+Level extends the duration to 10 min, 1 hr, or 8 hr at level 5, 6, or 7]</td>
+      <td>Dominate Beast (R4 Ench): R60' Target beast obeys telepathic commands (save Wisdom negates; active fighting gives advantage, and damage allows another save) for concentration up to 1 min [+Level extends the duration to 10 min, 1 hr, or 8 hr at level 5, 6, or 7]</td>
     </tr><tr style="text-align:left">
       <td>Enhance Ability (R2 Tran): Touched gains advantage on chosen ability checks for concentration up to 1 hr [+Level affects +1 target]</td>
     </tr><tr style="text-align:left">
-      <td>Ensnaring Strike (R1 Conj): Next successful self attack restrains the foe and inflicts 1d6 HP per rd piercing (save Strength ends; Large creatures have advantage on the save) for concentration up to 1 min [+Level inflicts +1d6 HP]</td>
+      <td>Ensnaring Strike (R1 Conj): Cast as a bonus action after hitting a target, restrains the foe (save Strength negates; Large creatures have advantage on the save) and inflicts 1d6 HP piercing per rd (successful Athletics checks each rd end) for concentration up to 1 min [+Level inflicts +1d6 HP]</td>
     </tr><tr style="text-align:left">
-      <td>Entangle (R1 Conj): R90' 20' sq inflicts difficult terrain and restrains creatures (save Strength negates; additional Athletics saves each rd ends) for concentration up to 1 min</td>
+      <td>Entangle (R1 Conj): R90' 20' sq inflicts difficult terrain and restrains creatures (save Strength negates; additional Athletics checks each rd end) for concentration up to 1 min</td>
     </tr><tr style="text-align:left">
       <td>Find Traps (R2 Divi): R120' Reveals the presence of traps</td>
     </tr><tr style="text-align:left">
-      <td>Fog Cloud (R1 Conj): R120' 20' radius obscures vision for concentration up to 1 hr [+Level increases the radius by 20']</td>
+      <td>Fog Cloud (R1 Conj): R120' 20' radius becomes heavily obscured for concentration up to 1 hr [+Level increases the radius by 20']</td>
     </tr><tr style="text-align:left">
-      <td>Freedom Of Movement (R4 Abju): Touched gains immunity to movement impediments and a 40' swim Speed and can escape from nonmagical restraints for 1 hr [+Level affects +1 target]</td>
+      <td>Freedom Of Movement (R4 Abju): Touched gains immunity to movement impediments, gains a 40' swim Speed, and can escape from nonmagical restraints for 1 hr [+Level affects +1 target]</td>
     </tr><tr style="text-align:left">
       <td>Goodberry (R1 Conj): Creates 10 berries that last for 24 hr; each restores 1 hit point and provides nourishment for 1 day</td>
     </tr><tr style="text-align:left">
       <td>Greater Restoration (R5 Abju): Touched recovers from an effect causing an exhaustion level, a charmed or petrified condition, a curse, an ability reduction, or a reduction of hit point maximum</td>
     </tr><tr style="text-align:left">
-      <td>Gust Of Wind (R2 Evoc): 60'x10' wind pushes 15' (save Strength negates), inflicts half movement, disperses gas and vapor, and extinguishes flames (50% chance for protected flames) for concentration up to 1 min; can use a bonus action each rd to redirect the wind</td>
+      <td>Gust Of Wind (R2 Evoc): 60'x10' wind pushes 15' (save Strength negates), inflicts half movement, disperses gas and vapor, and extinguishes flames (50% chance for protected flames) for concentration up to 1 min; can use a bonus action each turn to redirect the wind</td>
     </tr><tr style="text-align:left">
       <td>Hunter's Mark (R1 Divi): R90' Self inflicts +1d6 HP force on the target and gains advantage on Perception and Survival to locate it for concentration up to 1 hr; can use a bonus action to move to a different target when the current target drops to 0 hit points [+Level extends the duration to 8 or 24 hr at level 3 or 5]</td>
     </tr><tr style="text-align:left">
       <td>Hunter's Mark (R1 [Favored Enemy] Divi): R90' Self inflicts +1d6 HP force on the target and gains advantage on Perception and Survival to locate it for concentration up to 1 hr; can use a bonus action to move to a different target when the current target drops to 0 hit points [+Level extends the duration to 8 or 24 hr at level 3 or 5]</td>
     </tr><tr style="text-align:left">
-      <td>Jump (R1 Tran): Touched can jump 30' after a 10' move for 1 min</td>
+      <td>Jump (R1 Tran): Touched can spend 10' of movement to make a 30' jump for 1 min [+Level affects +1 target]</td>
     </tr><tr style="text-align:left">
       <td>Lesser Restoration (R2 Abju): Touched recovers from a choice of blinded, deafened, paralyzed, or poisoned</td>
     </tr><tr style="text-align:left">
@@ -344,7 +344,7 @@ var attributes = {
     </tr><tr style="text-align:left">
       <td>Magic Weapon (R2 Tran): Touched weapon gains a +1 magic bonus for 1 hr [+Level gives a +2 or +3 bonus at level 3 or 6]</td>
     </tr><tr style="text-align:left">
-      <td>Meld Into Stone (R3 Tran): Self steps into rock, losing sight and suffering disadvantage on hearing Perception but allowing casting spells on self, for up to 8 hr; significant partial destruction of the stone inflicts 6d6 HP force, expulsion, and prone to self, and complete destruction increases the damage to 50 HP [R]</td>
+      <td>Meld Into Stone (R3 Tran): Self steps into rock, losing sight and suffering disadvantage on hearing Perception but allowing casting spells on self, for up to 8 hr; significant partial destruction of the stone inflicts 6d6 HP force, expulsion, and prone on self, and complete destruction increases the damage to 50 HP [R]</td>
     </tr><tr style="text-align:left">
       <td>Mending (D0 Tran): Touch repairs a break or tear up to 1' long</td>
     </tr><tr style="text-align:left">
