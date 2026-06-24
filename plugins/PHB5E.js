@@ -1653,7 +1653,7 @@ PHB5E.SPELLS_ADDED = {
     'School=Abjuration ' +
     'Level=P5 ' +
     'Description=' +
-      '"Next successful self weapon attack inflicts +5d10 HP force, plus banishment to the target\'s home plane or a demiplane for concentration up to 1 min if the attack reduces the target below 51 hit points"',
+      '"Next successful self weapon attack within concentration up to 1 min inflicts +5d10 HP force, plus banishment until the end of the spell to the target\'s home plane or a demiplane if the attack reduces the target below 51 hit points"',
   'Beast Sense':
     'School=Divination ' +
     'Level=D2,R2 ' +
@@ -1669,7 +1669,7 @@ PHB5E.SPELLS_ADDED = {
     'School=Evocation ' +
     'Level=P3 ' +
     'Description=' +
-      '"Next successful self weapon attack inflicts +3d8 HP radiant and blinded (save Constitution negates blindness; additional saves each rd end) for concentration up to 1 min"',
+      '"Next successful self melee weapon attack within concentration up to 1 min inflicts +3d8 HP radiant and blinded (save Constitution negates blindness; additional saves each rd end)"',
 
   'Chromatic Orb':
     'School=Evocation ' +
@@ -1742,7 +1742,7 @@ PHB5E.SPELLS_ADDED = {
     'Level=R1 ' +
     'AtHigherLevels="inflicts +1d6 HP" ' +
     'Description=' +
-      '"Next successful self attack restrains the foe (save Strength negates; Large creatures have advantage on the save) and inflicts 1d6 HP piercing per rd (additional saves each rd end) for concentration up to 1 min"',
+      '"Next successful self weapon attack within concentration up to 1 min restrains the foe and inflicts 1d6 HP piercing per rd until the end of the spell (save Strength negates; Large creatures have advantage on the save, and additional saves each rd end)"',
 
   'Feign Death':
     'School=Necromancy ' +
@@ -1767,7 +1767,7 @@ PHB5E.SPELLS_ADDED = {
     'Level=R1 ' +
     'AtHigherLevels="inflicts +1d10 HP (6d10 HP maximum)" ' +
     'Description=' +
-      '"Next successful self ranged attack inflicts 1d10 HP piercing in a 5\' radius (save Dexterity half) for concentration within 1 min"',
+      '"Next successful self ranged weapon attack within concentration up to 1 min inflicts 1d10 HP piercing in a 5\' radius (save Dexterity half)"',
   'Hex':
     'School=Enchantment ' +
     'Level=K1 ' +
@@ -1810,12 +1810,12 @@ PHB5E.SPELLS_ADDED = {
     'Level=P1 ' +
     'AtHigherLevels="inflicts +1d6 HP initial" ' +
     'Description=' +
-      '"Next successful self melee weapon attack inflicts +1d6 HP fire, plus 1d6 HP fire per rd (save Constitution ends) for concentration up to 1 min"',
+      '"Next successful self melee weapon attack within concentration up to 1 min inflicts +1d6 HP fire, plus 1d6 HP fire per rd until the end of the spell (save Constitution ends)"',
   'Staggering Smite':
     'School=Evocation ' +
     'Level=P4 ' +
     'Description=' +
-      '"Next successful self weapon attack within concentration up to 1 min inflicts +4d6 HP psychic, disadvantage on attacks and ability checks for 1 rd, and loss of reactions for 1 rd (save Wisdom HP only)"',
+      '"Next successful self melee weapon attack within concentration up to 1 min inflicts +4d6 HP psychic, plus disadvantage on attacks and ability checks and loss of reactions until the end of the target\'s next turn (save Wisdom HP only)"',
   'Swift Quiver':
     'School=Transmutation ' +
     'Level=R5 ' +

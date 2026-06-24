@@ -1711,14 +1711,16 @@ PHB5E2024.SPELLS_ADDED = {
   'Banishing Smite':
     PHB5E.SPELLS_ADDED['Banishing Smite']
     .replace('Abjuration', 'Conjuration')
-    .replace("the target's home plane or ", ''),
+    .replace('Next successful self weapon attack within concentration up to 1 min', 'Cast as a bonus action after hitting a target with a melee attack,')
+    .replace("until the end of the spell to the target's home plane or a demiplane", 'for concentration up to 1 min to a demiplane (save Charisma negates)'),
   'Beast Sense':PHB5E.SPELLS_ADDED['Beast Sense'],
   'Blade Ward':
     PHB5E.SPELLS_ADDED['Blade Ward'] + ' ' +
     'Description="Foes suffer -1d4 on attacks on self for concentration up to 1 min"',
   'Blinding Smite':
-    PHB5E.SPELLS_ADDED['Blinding Smite'] + ' ' +
-    'Description="Cast as a bonus action after hitting a target, causes the attack inflict +3d8 HP radiant and blinded (Constituion saves each rd end) for concentration up to 1 min"',
+    PHB5E.SPELLS_ADDED['Blinding Smite']
+    .replace('Next successful self melee weapon attack within concentration up to 1 min', 'Cast as a bonus action after hitting a target with a melee attack,')
+    .replace('(', 'for concentration up to 1 min ('),
 
   'Circle Of Power':
     PHB5E.SPELLS_ADDED['Circle Of Power']
@@ -1750,7 +1752,8 @@ PHB5E2024.SPELLS_ADDED = {
     .replace('P3', 'D3,P3,R3'),
   'Ensnaring Strike':
     PHB5E.SPELLS_ADDED['Ensnaring Strike']
-    .replace('Next successful self attack', 'Cast as a bonus action after hitting a target,')
+    .replace('Next successful self weapon attack within concentration up to 1 min', 'Cast as a bonus action after hitting a target with a weapon,')
+    .replace('until the end of the spell', 'for concentration up to 1 min')
     .replace('additional saves', 'successful Athletics checks'),
 
   'Feign Death':PHB5E.SPELLS_ADDED['Feign Death'],
@@ -1772,9 +1775,8 @@ PHB5E2024.SPELLS_ADDED = {
 
   'Hail Of Thorns':
     PHB5E.SPELLS_ADDED['Hail Of Thorns']
-    .replace(' (6d10 HP maximum)', '') + ' ' +
-    'Description=' +
-      '"Cast as a bonus action after hitting a target with a ranged attack, inflicts 1d10 HP piercing in a 5\' radius (save Dexterity half)"',
+    .replace(' (6d10 HP maximum)', '')
+    .replace('Next successful self ranged weapon attack within concentration up to 1 min', 'Cast as a bonus action after making a successful ranged weapon attack,'),
   'Hunger Of Hadar':PHB5E.SPELLS_ADDED['Hunger Of Hadar'],
 
   "Jallarzi's Storm Of Radiance":
@@ -1794,26 +1796,54 @@ PHB5E2024.SPELLS_ADDED = {
     'School=Enchantment ' +
     'Level=B7,C7 ' +
     'Description=' +
-      '"TODO"',
+      '"R60\' Distributes 120 temporary hit points among 6 targets"',
 
-  'Staggering Smite':PHB5E.SPELLS['Staggering Smite'],
+  'Staggering Smite':
+    PHB5E.SPELLS['Staggering Smite']
+    .replace('Evocation', 'Enchantment')
+    .replace('Next successful self melee weapon attack within concentration up to 1 min', 'Cast as a bonus action after making a successful melee attack,')
+    .replace(/disadvantage.*reactions/, 'stunned')
+    .replace("target's ", '') + ' ' +
+    'AtHigherLevels="inflicts +1d6 HP"',
   'Steel Wind Strike':Xanathar.SPELLS['Steel Wind Strike'],
-  'Summon Aberration':Tasha.SPELLS['Summon Aberration'],
+  'Summon Aberration':
+    Tasha.SPELLS['Summon Aberration']
+    .replace('star spawn', 'mind flayer'),
   'Summon Beast':Tasha.SPELLS['Summon Beast'],
   'Summon Celestial':Tasha.SPELLS['Summon Celestial'],
-  'Summon Construct':Tasha.SPELLS['Summon Construct'],
-  'Summon Elemental':Tasha.SPELLS['Summon Construct'],
-  'Summon Fey':Tasha.SPELLS['Summon Fey'],
+  'Summon Construct':
+    Tasha.SPELLS['Summon Construct']
+    .replace('A4,', '')
+    .replace('creature', 'attacker'),
+  'Summon Elemental':
+    Tasha.SPELLS['Summon Elemental']
+    .replace('K4 [The Fathomless],', '')
+    .replace(' fire or bludgeoning', '')
+    .replace('squeezing)', 'squeezing; slam inflicts lightning)')
+    .replace("40')", "40'; slam inflicts bludgeoning)")
+    .replace('squeezing)', 'squeezing; slam inflicts fire)')
+    .replace('squeezing)', 'squeezing; slam inflicts cold)'),
+  'Summon Fey':
+    Tasha.SPELLS['Summon Fey']
+    .replace("move 40'", "move 40', fly 40',")
+    .replace('short sword', 'fey blade')
+    .replace('1d6+6 HP piercing plus 1d6', '2d6+6')
+    .replace("5' cube", "10' cube")
+    .replace('piercing ' , ''),
   'Summon Fiend':Tasha.SPELLS['Summon Fiend'],
   'Summon Undead':Tasha.SPELLS['Summon Undead'],
-  'Swift Quiver':PHB5E.SPELLS['Swift Quiver'],
-  'Synaptic Static':Xanathar.SPELLS['Synaptic Static'],
+  'Swift Quiver':
+    PHB5E.SPELLS['Swift Quiver']
+    .replace(/Touched.*allows/, 'Self bow or crossbow automatically reloads with magical ammo, allowing'),
+  'Synaptic Static':
+    Xanathar.SPELLS['Synaptic Static']
+    .replace('with an Intelligence of 3 or higher ', ''),
 
   "Tasha's Bubbling Cauldron":
     'School=Conjuration ' +
     'Level=K6,W6 ' +
     'Description=' +
-      '"TODO"',
+      '"Conjured cauldron produces %{mdf} does of a choice of common or uncommon potion within 10 min"',
   'Telepathy':PHB5E.SPELLS.Telepathy,
   'Thorn Whip':PHB5E.SPELLS['Thorn Whip'],
   'Thunderclap':Xanathar.SPELLS.Thunderclap,
