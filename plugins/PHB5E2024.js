@@ -1711,16 +1711,18 @@ PHB5E2024.SPELLS_ADDED = {
   'Banishing Smite':
     PHB5E.SPELLS_ADDED['Banishing Smite']
     .replace('Abjuration', 'Conjuration')
-    .replace('Next successful self weapon attack within concentration up to 1 min', 'Cast as a bonus action after hitting a target with a melee attack,')
-    .replace("until the end of the spell to the target's home plane or a demiplane", 'for concentration up to 1 min to a demiplane (save Charisma negates)'),
+    .replace('Next successful weapon attack within concentration up to 1 min', 'Cast as a bonus action after a successful melee attack,')
+    .replace("until the spell ends to the target's home plane or a demiplane", 'for concentration up to 1 min to a demiplane')
+    .replace('51 hit points', '51 hit points (save Charisma negates banishment)'),
   'Beast Sense':PHB5E.SPELLS_ADDED['Beast Sense'],
   'Blade Ward':
     PHB5E.SPELLS_ADDED['Blade Ward'] + ' ' +
     'Description="Foes suffer -1d4 on attacks on self for concentration up to 1 min"',
   'Blinding Smite':
     PHB5E.SPELLS_ADDED['Blinding Smite']
-    .replace('Next successful self melee weapon attack within concentration up to 1 min', 'Cast as a bonus action after hitting a target with a melee attack,')
-    .replace('(', 'for concentration up to 1 min ('),
+    .replace('Next successful melee weapon attack within concentration up to 1 min', 'Cast as a bonus action after a successful melee attack,')
+    .replace('until the spell ends', 'for concentration up to 1 min')
+    .replace('save Constitution negates blindness; additional', 'Constitution'),
 
   'Circle Of Power':
     PHB5E.SPELLS_ADDED['Circle Of Power']
@@ -1801,8 +1803,8 @@ PHB5E2024.SPELLS_ADDED = {
   'Staggering Smite':
     PHB5E.SPELLS['Staggering Smite']
     .replace('Evocation', 'Enchantment')
-    .replace('Next successful self melee weapon attack within concentration up to 1 min', 'Cast as a bonus action after making a successful melee attack,')
-    .replace(/disadvantage.*reactions/, 'stunned')
+    .replace('Next successful melee weapon attack within concentration up to 1 min', 'Cast as a bonus action after a successful melee attack,')
+    .replaceAll(/disadvantage.*?reactions/g, 'stunned')
     .replace("target's ", '') + ' ' +
     'AtHigherLevels="inflicts +1d6 HP"',
   'Steel Wind Strike':Xanathar.SPELLS['Steel Wind Strike'],
@@ -1843,16 +1845,25 @@ PHB5E2024.SPELLS_ADDED = {
     'School=Conjuration ' +
     'Level=K6,W6 ' +
     'Description=' +
-      '"Conjured cauldron produces %{mdf} does of a choice of common or uncommon potion within 10 min"',
+      '"Conjured cauldron produces %{mdf>1?mdf+\' doses\':\'1 dose\'} of a choice of common or uncommon potion within 10 min"',
   'Telepathy':PHB5E.SPELLS.Telepathy,
   'Thorn Whip':PHB5E.SPELLS['Thorn Whip'],
   'Thunderclap':Xanathar.SPELLS.Thunderclap,
-  'Thunderous Smite':PHB5E.SPELLS['Thunderous Smite'],
+  'Thunderous Smite':
+    PHB5E.SPELLS['Thunderous Smite']
+    .replace('Next successful melee weapon attack within concentration up to 1 min', 'Cast as a bonus action after a successful melee attack,'),
   'Toll The Dead':Xanathar.SPELLS['Toll The Dead'],
 
-  'Witch Bolt':PHB5E.SPELLS['Witch Bolt'],
+  'Witch Bolt':
+    PHB5E.SPELLS['Witch Bolt']
+    .replace('1d12 HP lightning per rd', '2d12 HP lightning and allows bonus actions to inflict 1d12 HP lightning on the target each rd even after an initial miss'),
   'Word Of Radiance':Xanathar.SPELLS['Word Of Radiance'],
-  'Wrathful Smite':PHB5E.SPELLS['Wrathful Smite'],
+  'Wrathful Smite':
+    PHB5E.SPELLS['Wrathful Smite']
+    .replace('Next successful melee weapon attack within concentration up to 1 min', 'Cast as a bonus action after a successful melee attack,')
+    .replace('psychic', 'necrotic')
+    .replace('until the spell ends', 'for 1 min') + ' ' +
+    'AtHigherLevels="inflicts +1d6 HP"',
   "Yolanda's Regal Presence":
     'School=Enchantment ' +
     'Level=B5,W5 ' +

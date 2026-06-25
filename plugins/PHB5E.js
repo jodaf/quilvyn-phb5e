@@ -1653,7 +1653,7 @@ PHB5E.SPELLS_ADDED = {
     'School=Abjuration ' +
     'Level=P5 ' +
     'Description=' +
-      '"Next successful self weapon attack within concentration up to 1 min inflicts +5d10 HP force, plus banishment until the end of the spell to the target\'s home plane or a demiplane if the attack reduces the target below 51 hit points"',
+      '"Next successful weapon attack within concentration up to 1 min inflicts +5d10 HP force, plus banishment until the spell ends to the target\'s home plane or a demiplane if the attack reduces the target below 51 hit points"',
   'Beast Sense':
     'School=Divination ' +
     'Level=D2,R2 ' +
@@ -1669,7 +1669,7 @@ PHB5E.SPELLS_ADDED = {
     'School=Evocation ' +
     'Level=P3 ' +
     'Description=' +
-      '"Next successful self melee weapon attack within concentration up to 1 min inflicts +3d8 HP radiant and blinded (save Constitution negates blindness; additional saves each rd end)"',
+      '"Next successful melee weapon attack within concentration up to 1 min inflicts +3d8 HP radiant and blinded until the spell ends (save Constitution negates blindness; additional saves each rd end)"',
 
   'Chromatic Orb':
     'School=Evocation ' +
@@ -1742,7 +1742,7 @@ PHB5E.SPELLS_ADDED = {
     'Level=R1 ' +
     'AtHigherLevels="inflicts +1d6 HP" ' +
     'Description=' +
-      '"Next successful self weapon attack within concentration up to 1 min restrains the foe and inflicts 1d6 HP piercing per rd until the end of the spell (save Strength negates; Large creatures have advantage on the save, and additional saves each rd end)"',
+      '"Next successful self weapon attack within concentration up to 1 min restrains the foe and inflicts 1d6 HP piercing each rd until the spell ends (save Strength negates; Large creatures have advantage on the save, and additional saves each rd end)"',
 
   'Feign Death':
     'School=Necromancy ' +
@@ -1810,12 +1810,12 @@ PHB5E.SPELLS_ADDED = {
     'Level=P1 ' +
     'AtHigherLevels="inflicts +1d6 HP initial" ' +
     'Description=' +
-      '"Next successful self melee weapon attack within concentration up to 1 min inflicts +1d6 HP fire, plus 1d6 HP fire per rd until the end of the spell (save Constitution ends)"',
+      '"Next successful melee weapon attack within concentration up to 1 min inflicts +1d6 HP fire, plus 1d6 HP fire each rd until the spell ends (Constitution saves each rd end)"',
   'Staggering Smite':
     'School=Evocation ' +
     'Level=P4 ' +
     'Description=' +
-      '"Next successful self melee weapon attack within concentration up to 1 min inflicts +4d6 HP psychic, plus disadvantage on attacks and ability checks and loss of reactions until the end of the target\'s next turn (save Wisdom HP only)"',
+      '"Next successful melee weapon attack within concentration up to 1 min inflicts +4d6 HP psychic and disadvantage on attacks and ability checks and loss of reactions until the end of the target\'s next turn (save Wisdom negates disadvantage and loss of reactions)"',
   'Swift Quiver':
     'School=Transmutation ' +
     'Level=R5 ' +
@@ -1826,17 +1826,17 @@ PHB5E.SPELLS_ADDED = {
     'School=Evocation ' +
     'Level=W8 ' +
     'Description=' +
-      '"Self can communicate mentally with a willing target for 1 day"',
+      '"Self can communicate telepathically with a willing familiar target for 24 hr"',
   'Thorn Whip':
     'School=Transmutation ' +
     'Level=D0 ' +
     'Description=' +
-      '"R30\' Ranged spell inflicts %{(level+7)//6}d6 HP and pulls a Large or smaller target 10\'"',
+      '"R30\' Melee spell attack inflicts %{(level+7)//6}d6 HP piercing and pulls a Large or smaller target 10\'"',
   'Thunderous Smite':
     'School=Evocation ' +
     'Level=P1 ' +
     'Description=' +
-      '"Next successful self weapon attack inflicts +2d6 HP thunder and a 10\' push (save Strength HP only) for concentration up to 1 min"',
+      '"Next successful melee weapon attack within concentration up to 1 min inflicts +2d6 HP thunder, a 10\' push, and knocked prone (save Strength negates push and prone)"',
   'Tsunami':
     'School=Conjuration ' +
     'Level=D8 ' +
@@ -1853,7 +1853,7 @@ PHB5E.SPELLS_ADDED = {
     'School=Evocation ' +
     'Level=P1 ' +
     'Description=' +
-      '"Next successful self weapon attack inflicts +1d6 HP psychic and frightens (save Wisdom ends) for concentration up to 1 min"'
+      '"Next successful melee weapon attack within concentration up to 1 min inflicts +1d6 HP psychic and frightened until the spell ends (save Wisdom negates frightened; additional saves each rd end)"'
 
 };
 PHB5E.SPELLS_LEVELS_ADDED = {
