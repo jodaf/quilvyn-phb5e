@@ -250,7 +250,7 @@ var attributes = {
       </tr><tr style="text-align:center">
         <td>Durable: Can use a bonus action to regain hit points from a Hit Die roll</td>
       </tr><tr style="text-align:center">
-        <td>Eldritch Smite: Once per turn, can expend a spell slot upon a pact weapon hit to inflict +1d8 HP force plus +1d8 HP force per slot level and to inflict prone on a Huge or smaller target</td>
+        <td>Eldritch Smite: Once per turn, can expend a spell slot upon a successful pact weapon attack to inflict +1d8 HP force plus +1d8 HP force per slot level and to inflict prone on a Huge or smaller target</td>
       </tr><tr style="text-align:center">
         <td>Grappler: Can both Damage and Grapple with an unarmed strike once per turn, has advantage on attacks on a foe while grappling it, and can move at full speed with a grappled foe of Medium size or smaller</td>
       </tr><tr style="text-align:center">
@@ -421,23 +421,23 @@ var attributes = {
     </tr><tr style="text-align:left">
       <td>Scrying (K5 Divi): Self sees and hears a chosen target (save Wisdom, modified by degree of familiarity, negates for 24 hr) or known location for concentration up to 10 min</td>
     </tr><tr style="text-align:left">
-      <td>Seeming (K5 [Archfey Spells] Illu): R30' Changes the appearance of targets (save Charisma negates; Investigation detects) for 8 hr</td>
+      <td>Seeming (K5 [Archfey Spells] Illu): R30' Changes the appearance of targets (save Charisma negates; contact or Investigation detects) for 8 hr</td>
     </tr><tr style="text-align:left">
-      <td>Silent Image (K1 [Misty Visions] Illu): R60' Creates a 15' cube movable illusion (Investigation detects) for concentration up to 10 min</td>
+      <td>Silent Image (K1 [Misty Visions] Illu): R60' Creates a 15' cube movable illusion (contact or Investigation detects) for concentration up to 10 min</td>
     </tr><tr style="text-align:left">
-      <td>Sleep (K1 [Archfey Spells] Ench): R60' Each target in a 5' radius becomes incapacitated (save Wisdom negates) until the end of its next turn, then unconscious (save Wisdom negates) for concentration up to 1 min (damage or shaking awakens)</td>
+      <td>Sleep (K1 [Archfey Spells] Ench): R60' Each target in a 5' radius becomes incapacitated (save Wisdom negates) until the end of its next turn, then unconscious (save Wisdom negates) for concentration up to 1 min; damage or shaking awakens</td>
     </tr><tr style="text-align:left">
       <td>Speak With Dead (K3 [Whispers Of The Grave] Necr): R10' Self can ask a corpse 5 questions within 10 min; the corpse is then immune for 10 days </td>
     </tr><tr style="text-align:left">
-      <td>Stinking Cloud (K3 [Fiend Spells] Conj): R90' 20' radius inflicts poisoned and loss of actions for 1 rd (save Constitution negates) for concentration up to 1 min</td>
+      <td>Stinking Cloud (K3 [Fiend Spells] Conj): R90' 20' radius becomes heavily obscured and inflicts poisoned and loss of actions for 1 rd (save Constitution negates) for concentration up to 1 min</td>
     </tr><tr style="text-align:left">
       <td>Suggestion (K2 [Fiend Spells] Ench): R30' Target follows a reasonable suggestion (save Wisdom negates) for concentration up to 8 hr; damage from self or an ally ends the effects</td>
     </tr><tr style="text-align:left">
-      <td>Summon Aberration (K4 [Great Old One Spells] Conj): R90' Summons an obedient aberrant spirit (Armor Class 15; 40 hit points; move 30'; multiattack equal to half the spell level) of type beholderkin (R150' inflicts 1d8+7 HP psychic; fly 30'), slaad (inflicts 1d10+7 HP slashing and negates healing for 1 rd; regenerates 5 hit points per rd), or star spawn (inflicts 1d8+7 HP psychic, plus 2d6 HP psychic (save Wisdom negates) in a 5' radius) for concentration up to 1 hr [+Level increases the Armor Class by 1, hit points by 10, and attack damage by 1]</td>
+      <td>Summon Aberration (K4 [Great Old One Spells] Conj): R90' Summons an obedient aberrant spirit (Armor Class 15; 40 hit points; move 30'; 60' darkvision; multiattack equal to half the spell level) of type beholderkin (R150' inflicts 1d8+7 HP psychic; fly 30'), slaad (inflicts 1d10+7 HP slashing and negates healing for 1 rd; regenerates 5 hit points per rd), or mind flayer (inflicts 1d8+7 HP psychic, plus 2d6 HP psychic (save Wisdom negates) in a 5' radius) for concentration up to 1 hr [+Level increases the Armor Class by 1, hit points by 10, and attack damage by 1]</td>
     </tr><tr style="text-align:left">
-      <td>Summon Celestial (K5 [Celestial Spells] Conj): R90' Summons an obedient celestial spirit (40 hit points; move 30' and fly 40'; multiattack equal to half the spell level; touch restores 2d8+5 hit points once per day) of type avenger (Armor Class 16; R150' inflicts 2d6+7 HP radiant) or defender (Armor Class 18; inflicts 1d10+8 HP radiant and gives 1d10 temporary hit points to a creature within 10') for concentration up to 1 hr [+Level increases the Armor Class by 1, hit points by 10, attack damage by 1, and healing by 1]</td>
+      <td>Summon Celestial (K5 [Celestial Spells] Conj): R90' Summons an obedient celestial spirit (40 hit points; move 30' and fly 40'; 60' darkvision; multiattack equal to half the spell level; touch restores 2d8+5 hit points once per day) of type avenger (Armor Class 16; R150' inflicts 2d6+7 HP radiant) or defender (Armor Class 18; inflicts 1d10+8 HP radiant and gives 1d10 temporary hit points to a creature within 10') for concentration up to 1 hr [+Level increases the Armor Class by 1, hit points by 10, attack damage by 1, and healing by 1]</td>
     </tr><tr style="text-align:left">
-      <td>Tasha's Hideous Laughter (K1 [Great Old One Spells] Ench): R30' Inflicts ROFL (save Wisdom negates; additional saves each rd and in response to damage end, with damage giving advantage on the save) for concentration up to 1 min [+Level affects +1 target]</td>
+      <td>Tasha's Hideous Laughter (K1 [Great Old One Spells] Ench): R30' Inflicts prone, incapacitated, and laughing (save Wisdom negates; additional saves each rd and in response to damage end, with damage giving advantage on the save) for concentration up to 1 min [+Level affects +1 target]</td>
     </tr><tr style="text-align:left">
       <td>Telekinesis (K5 [Great Old One Spells] Tran): R60' Self can mentally restrain and move 1 Huge creature or object 30' (save Strength negates) each rd for concentration up to 10 min</td>
     </tr><tr style="text-align:left">

@@ -453,9 +453,9 @@ var attributes = {
     </tr><tr style="text-align:left">
       <td>Prestidigitation (B0 Tran): R10' Creates a minor magic effect: a brief, harmless sensory effect; lighting or snuffing a flame; cleaning or soiling a 1' cube; chilling, warming, or flavoring a 1' cube for 1 hr; marking an object for 1 hr; creating a nonmagical trinket or illusion until the end of the next turn</td>
     </tr><tr style="text-align:left">
-      <td>Programmed Illusion (B6 Illu): R120' Creates a 30' cube illusion when triggered (Investigation detects), with a 10 min pause between triggers</td>
+      <td>Programmed Illusion (B6 Illu): R120' Creates a 30' cube moving illusion (contact or Investigation detects) that appears when triggered and continues for 5 min, with a 10 min pause between triggers</td>
     </tr><tr style="text-align:left">
-      <td>Project Image (B7 Illu): R500 miles Self can see, hear, and speak through an illusory double (Investigation detects) created in a familiar place for concentration up to 1 day or until it suffers damage</td>
+      <td>Project Image (B7 Illu): R500 miles Self can see, hear, and speak through an illusory double (contact or Investigation detects) created in a familiar place for concentration up to 1 day or until it suffers damage</td>
     </tr><tr style="text-align:left">
       <td>Raise Dead (B5 Necr): Restores life with 1 hit point to and removes nonmagical diseases and poisons from a willing touched 10-day-old corpse; target suffers -4 attacks, saves, and ability checks, reduced by 1 for each long rest</td>
     </tr><tr style="text-align:left">
@@ -467,7 +467,7 @@ var attributes = {
     </tr><tr style="text-align:left">
       <td>See Invisibility (B2 Divi): Reveals invisible and ethereal creatures and objects for 1 hr</td>
     </tr><tr style="text-align:left">
-      <td>Seeming (B5 Illu): R30' Changes the appearance of targets (save Charisma negates; Investigation detects) for 8 hr</td>
+      <td>Seeming (B5 Illu): R30' Changes the appearance of targets (save Charisma negates; contact or Investigation detects) for 8 hr</td>
     </tr><tr style="text-align:left">
       <td>Sending (B3 Evoc): Self can exchange a pair of 25-word messages with a familiar target</td>
     </tr><tr style="text-align:left">
@@ -475,23 +475,23 @@ var attributes = {
     </tr><tr style="text-align:left">
       <td>Silence (B2 Illu): R120' 20' radius blocks sound for concentration up to 10 min [R]</td>
     </tr><tr style="text-align:left">
-      <td>Silent Image (B1 Illu): R60' Creates a 15' cube movable illusion (Investigation detects) for concentration up to 10 min</td>
+      <td>Silent Image (B1 Illu): R60' Creates a 15' cube movable illusion (contact or Investigation detects) for concentration up to 10 min</td>
     </tr><tr style="text-align:left">
-      <td>Sleep (B1 Ench): R90' 20' radius puts to sleep 5d8 hit points of creatures, starting with those with the least hit points, for 1 min (damage or shaking awakens) [+Level affects +2d8 hit points of creatures]</td>
+      <td>Sleep (B1 Ench): R90' 20' radius puts to sleep 5d8 hit points of creatures, starting with those with the least hit points, for 1 min; damage or shaking awakens [+Level affects +2d8 hit points of creatures]</td>
     </tr><tr style="text-align:left">
       <td>Speak With Animals (B1 Divi): Self can talk with beasts for 10 min [R]</td>
     </tr><tr style="text-align:left">
       <td>Speak With Dead (B3 Necr): R10' Self can ask a corpse 5 questions within 10 min; the corpse is then immune for 10 days </td>
     </tr><tr style="text-align:left">
-      <td>Speak With Plants (B3 Tran): Self can talk with and command plants in a 30' radius for 10 min</td>
+      <td>Speak With Plants (B3 Tran): Self can talk with and command plants in a 30' radius, turning difficult terrain from plant growth into normal terrain or vice versa, for 10 min</td>
     </tr><tr style="text-align:left">
-      <td>Stinking Cloud (B3 Conj): R90' 20' radius inflicts loss of actions for 1 rd (save Constitution negates) for concentration up to 1 min</td>
+      <td>Stinking Cloud (B3 Conj): R90' 20' radius becomes heavily obscured and inflicts loss of actions for 1 rd (save Constitution negates) for concentration up to 1 min</td>
     </tr><tr style="text-align:left">
       <td>Suggestion (B2 Ench): R30' Target follows a reasonable suggestion (save Wisdom negates) for concentration up to 8 hr; damage from self or an ally ends the effects</td>
     </tr><tr style="text-align:left">
-      <td>Symbol (B7 Abju): Inscribes a touched object with a permanent glyph that, when triggered, inflicts a choice of harmful magic effect: 10d10 HP necrotic (save Constitution half); arguing for 1 min that inflicts disadvantage on attacks and ability checks (save Constitution negates); frightened and fleeing for 1 min (save Wisdom negates); overwhelmed with despair for 1 min (save Charisma negates); insane for 1 min (save Intelligence negates); incapacitated by pain for 1 min (save Constitution negates); asleep for 10 min or until shaken or harmed (save Wisdom negates); stunned for 1 min (save Wisdom negates)</td>
+      <td>Symbol (B7 Abju): Inscribes a touched object with a permanent glyph that, when triggered, inflicts a choice of harmful magic effect: 10d10 HP necrotic (save Constitution half); arguing for 1 min that inflicts disadvantage on attacks and ability checks (save Constitution negates); frightened and fleeing for 1 min (save Wisdom negates); overwhelmed with despair for 1 min (save Charisma negates); insane for 1 min (save Intelligence negates); incapacitated by pain for 1 min (save Constitution negates); asleep for 10 min or until shaken or damaged (save Wisdom negates); stunned for 1 min (save Wisdom negates)</td>
     </tr><tr style="text-align:left">
-      <td>Tasha's Hideous Laughter (B1 Ench): R30' Inflicts ROFL (save Wisdom negates; additional saves each rd and in response to damage end, with damage giving advantage on the save) for concentration up to 1 min</td>
+      <td>Tasha's Hideous Laughter (B1 Ench): R30' Inflicts prone, incapacitated, and laughing (save Wisdom negates; additional saves each rd and in response to damage end, with damage giving advantage on the save) for concentration up to 1 min</td>
     </tr><tr style="text-align:left">
       <td>Teleport (B7 Conj): R10' Teleports an unattended 10' cube object or self and 8 willing creatures any distance; greater familiarity with the destination improves accuracy</td>
     </tr><tr style="text-align:left">

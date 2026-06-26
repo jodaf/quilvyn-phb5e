@@ -471,23 +471,23 @@ var attributes = {
     </tr><tr style="text-align:left">
       <td>Plant Growth (B3 Tran): R150' Causes plants in a 100' radius to overgrow, slowing movement to 1/4 Speed, or enriches a half-mile radius for 365 days</td>
     </tr><tr style="text-align:left">
-      <td>Polymorph (B4 Tran): R60' Transforms the target creature into a beast, with temporary hit points appropriate to the beast, (save Wisdom negates) for concentration up to 1 hr or until reduced to 0 temporary hit points</td>
+      <td>Polymorph (B4 Tran): R60' Transforms the target creature into a beast (save Wisdom negates), with temporary hit points appropriate to the beast, for concentration up to 1 hr or until reduced to 0 temporary hit points</td>
     </tr><tr style="text-align:left">
       <td>Power Word Heal (B9 Ench): R60' Target regains all hit points, recovers from charmed, frightened, paralyzed, poisoned, and stunned, and can use a reaction to stand from prone</td>
     </tr><tr style="text-align:left">
       <td>Power Word Kill (B9 Ench): R60' Kills a target with up to 100 hit points; others suffer 12d12 HP psychic</td>
     </tr><tr style="text-align:left">
-      <td>Power Word Stun (B8 Ench): R60' Stuns a target with up to 150 HP (save Constitution each rd ends); others are have Speed 0 until the start of the next turn</td>
+      <td>Power Word Stun (B8 Ench): R60' Stuns a target with up to 150 HP (save Constitution each rd ends); others have Speed 0 until the start of the next turn</td>
     </tr><tr style="text-align:left">
       <td>Prestidigitation (B0 Tran): R10' Creates a minor magic effect: a brief, harmless sensory effect; lighting or snuffing a flame; cleaning or soiling a 1' cube; chilling, warming, or flavoring a 1' cube for 1 hr; marking an object for 1 hr; creating a nonmagical trinket or illusion until the end of the next turn</td>
     </tr><tr style="text-align:left">
-      <td>Prismatic Spray (B7 Evoc): 60' cone randomly inflicts one of: 12d6 HP fire, acid, lightning, poison, or cold (save Dexterity half); restrained (save Dexterity negates) and petrified after 3 failed Constitution saves (3 successes negates); blinded (save Dexterity negates) and banished to another plane (save Wisdom negates) at the start of the next turn; 2 of the preceding effects</td>
+      <td>Prismatic Spray (B7 Evoc): 60' cone randomly inflicts one of: 12d6 HP fire, acid, lightning, poison, or cold (save Dexterity half); restrained (save Dexterity negates) and petrified after 3 failed Constitution saves (3 successes negates); blinded (save Dexterity negates) and banished to another plane (save Wisdom negates and ends the blindness) at the start of the next turn; 2 of the preceding effects</td>
     </tr><tr style="text-align:left">
-      <td>Prismatic Wall (B9 Abju): R60' 90'x30'x1" wall or 15' radius sphere emits 100' bright light and blinds for 1 min non-designated creatures within 20' (save Constitution negates) for 10 min; creatures passing through suffer 12d6 HP each fire, acid, lightning, poison, and cold (save Dexterity half), restraint (save Dexterity negates) and petrification after 3 failed Constitution saves (3 successes negates), and blindness (save Dexterity negates) and banishment to another plane (save Wisdom negates) at the start of the next turn</td>
+      <td>Prismatic Wall (B9 Abju): R60' 90'x30'x1" wall or 15' radius sphere blocks ranged attacks and spells, emits 100' bright light, and blinds for 1 min non-designated creatures within 20' (save Constitution negates) for 10 min; creatures passing through suffer 12d6 HP each fire, acid, lightning, poison, and cold (save Dexterity half), restraint (save Dexterity negates) and petrification after 3 failed Constitution saves (3 successes negates), and blindness (save Dexterity negates) and banishment to another plane (save Wisdom negates and ends the blindness) at the start of the next turn</td>
     </tr><tr style="text-align:left">
-      <td>Programmed Illusion (B6 Illu): R120' Creates a 30' cube illusion when triggered (Investigation detects), with a 10 min pause between triggers</td>
+      <td>Programmed Illusion (B6 Illu): R120' Creates a 30' cube moving illusion (contact or Investigation detects) that appears when triggered and continues for 5 min, with a 10 min pause between triggers</td>
     </tr><tr style="text-align:left">
-      <td>Project Image (B7 Illu): R500 miles Self can see, hear, and speak through an illusory double (Investigation detects) created in a familiar place for concentration up to 1 day or until it suffers damage</td>
+      <td>Project Image (B7 Illu): R500 miles Self can see, hear, and speak through an illusory double (contact or Investigation detects) created in a familiar place for concentration up to 1 day or until it suffers damage</td>
     </tr><tr style="text-align:left">
       <td>Raise Dead (B5 Necr): Restores life with 1 hit point to and removes poisons from a willing touched 10-day-old corpse; target suffers -4 attacks, saves, and ability checks, reduced by 1 for each long rest</td>
     </tr><tr style="text-align:left">
@@ -499,7 +499,7 @@ var attributes = {
     </tr><tr style="text-align:left">
       <td>See Invisibility (B2 Divi): Reveals invisible and ethereal creatures and objects for 1 hr</td>
     </tr><tr style="text-align:left">
-      <td>Seeming (B5 Illu): R30' Changes the appearance of targets (save Charisma negates; Investigation detects) for 8 hr</td>
+      <td>Seeming (B5 Illu): R30' Changes the appearance of targets (save Charisma negates; contact or Investigation detects) for 8 hr</td>
     </tr><tr style="text-align:left">
       <td>Sending (B3 Evoc): Self can exchange a pair of 25-word messages with a familiar target</td>
     </tr><tr style="text-align:left">
@@ -507,25 +507,25 @@ var attributes = {
     </tr><tr style="text-align:left">
       <td>Silence (B2 Illu): R120' 20' radius blocks sound for concentration up to 10 min [R]</td>
     </tr><tr style="text-align:left">
-      <td>Silent Image (B1 Illu): R60' Creates a 15' cube movable illusion (Investigation detects) for concentration up to 10 min</td>
+      <td>Silent Image (B1 Illu): R60' Creates a 15' cube movable illusion (contact or Investigation detects) for concentration up to 10 min</td>
     </tr><tr style="text-align:left">
-      <td>Sleep (B1 Ench): R60' Each target in a 5' radius becomes incapacitated (save Wisdom negates) until the end of its next turn, then unconscious (save Wisdom negates) for concentration up to 1 min (damage or shaking awakens)</td>
+      <td>Sleep (B1 Ench): R60' Each target in a 5' radius becomes incapacitated (save Wisdom negates) until the end of its next turn, then unconscious (save Wisdom negates) for concentration up to 1 min; damage or shaking awakens</td>
     </tr><tr style="text-align:left">
-      <td>Slow (B3 Tran): R120' 6 targets in a 40' cube suffer half Speed, -2 Armor Class and Dexterity saves, loss of reactions, no more than 1 action per turn, and a 25% chance of somatic spell failure (save Wisdom negates; additional saves each rd end) for concentration up to 1 min</td>
+      <td>Slow (B3 Tran): R120' 6 targets in a 40' cube suffer half Speed, -2 Armor Class and Dexterity saves, loss of reactions, no more than 1 action or attack per turn, and a 25% chance of somatic spell failure (save Wisdom negates; additional saves each rd end) for concentration up to 1 min</td>
     </tr><tr style="text-align:left">
       <td>Speak With Animals (B1 Divi): Self can talk with beasts for 10 min [R]</td>
     </tr><tr style="text-align:left">
       <td>Speak With Dead (B3 Necr): R10' Self can ask a corpse 5 questions within 10 min; the corpse is then immune for 10 days </td>
     </tr><tr style="text-align:left">
-      <td>Speak With Plants (B3 Tran): Self can talk with and command plants in a 30' radius for 10 min</td>
+      <td>Speak With Plants (B3 Tran): Self can talk with and command plants in a 30' radius, turning difficult terrain from plant growth into normal terrain or vice versa, for 10 min</td>
     </tr><tr style="text-align:left">
       <td>Starry Wisp (B0 Evoc): R60' Ranged spell inflicts 2d8 HP radiant and a dim glow until the end of the next turn</td>
     </tr><tr style="text-align:left">
-      <td>Stinking Cloud (B3 Conj): R90' 20' radius inflicts poisoned and loss of actions for 1 rd (save Constitution negates) for concentration up to 1 min</td>
+      <td>Stinking Cloud (B3 Conj): R90' 20' radius becomes heavily obscured and inflicts poisoned and loss of actions for 1 rd (save Constitution negates) for concentration up to 1 min</td>
     </tr><tr style="text-align:left">
       <td>Suggestion (B2 Ench): R30' Target follows a reasonable suggestion (save Wisdom negates) for concentration up to 8 hr; damage from self or an ally ends the effects</td>
     </tr><tr style="text-align:left">
-      <td>Symbol (B7 Abju): Inscribes a touched object with a permanent glyph that, when triggered, inflicts a choice of harmful magic effect: 10d10 HP necrotic (save Constitution half); arguing for 1 min that inflicts disadvantage on attacks and ability checks (save Wisdom negates); frightened and fleeing for 1 min (save Wisdom negates); incapacitated by pain for 1 min (save Constitution negates); asleep for 10 min or until shaken or harmed (save Wisdom negates); stunned for 1 min (save Wisdom negates)</td>
+      <td>Symbol (B7 Abju): Inscribes a touched object with a permanent glyph that, when triggered, inflicts a choice of harmful magic effect: 10d10 HP necrotic (save Constitution half); arguing for 1 min that inflicts disadvantage on attacks and ability checks (save Wisdom negates); frightened and fleeing for 1 min (save Wisdom negates); incapacitated by pain for 1 min (save Constitution negates); asleep for 10 min or until shaken or damaged (save Wisdom negates); stunned for 1 min (save Wisdom negates)</td>
     </tr><tr style="text-align:left">
       <td>Telepathic Bond (B5 Divi): 1</td>
     </tr><tr style="text-align:left">
