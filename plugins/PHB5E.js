@@ -1617,113 +1617,134 @@ PHB5E.SKILLS = Object.assign({}, SRD5E.SKILLS);
 PHB5E.SPELLS_ADDED = {
 
   'Arcane Gate':
+    'CastingTime=Action ' +
     'School=Conjuration ' +
     'Level=K6,S6,W6 ' +
     'Description=' +
       '"Creates one portal within 10\' and another within 500\' that can teleport creatures between them for concentration up to 10 min"',
   'Armor Of Agathys':
+    'CastingTime=Action ' +
     'School=Abjuration ' +
     'Level=K1 ' +
     'AtHigherLevels="gives +5 temporary hit points and inflicts +5 HP" ' +
     'Description=' +
       '"Self gains 5 temporary hit points, and a successful attacker suffers 5 HP cold, for 1 hr"',
   'Arms Of Hadar':
+    'CastingTime=Action ' +
     'School=Conjuration ' +
     'Level=K1 ' +
     'AtHigherLevels="inflicts +1d6 HP" ' +
     'Description=' +
       '"10\' radius inflicts 2d6 HP necrotic and loss of reactions until the target\'s next turn (save Strength half HP only)"',
   'Aura Of Life':
+    'CastingTime=Action ' +
     'School=Abjuration ' +
     'Level=P4 ' +
     'Description=' +
       '"30\' radius gives nonhostile creatures resistance to necrotic damage and immunity to maximum hit point reduction, and raises those with 0 hit points to 1 hit point, for concentration up to 10 min"',
   'Aura Of Purity':
+    'CastingTime=Action ' +
     'School=Abjuration ' +
     'Level=P4 ' +
     'Description=' +
       '"30\' radius gives nonhostile creatures resistance to poison damage, immunity to disease, and advantage on saves vs. conditions for concentration up to 10 min"',
   'Aura Of Vitality':
+    'CastingTime=Action ' +
     'School=Evocation ' +
     'Level=P3 ' +
     'Description="R30\' Self can use a bonus action to restore 2d6 hit points to a target once per turn for concentration up to 1 min"',
 
   'Banishing Smite':
+    'CastingTime=Bonus ' +
     'School=Abjuration ' +
     'Level=P5 ' +
     'Description=' +
       '"Next successful weapon attack within concentration up to 1 min inflicts +5d10 HP force, plus banishment until the spell ends to the target\'s home plane or a demiplane if the attack reduces the target below 51 hit points"',
   'Beast Sense':
+    'CastingTime=Action ' +
     'School=Divination ' +
     'Level=D2,R2 ' +
     'Ritual=true ' +
     'Description=' +
       '"Self can perceive through a touched willing beast\'s senses for concentration up to 1 hr"',
   'Blade Ward':
+    'CastingTime=Action ' +
     'School=Abjuration ' +
     'Level=B0,K0,S0,W0 ' +
     'Description=' +
       '"Self gains resistance to bludgeoning, piercing, and slashing weapon damage for 1 rd"',
   'Blinding Smite':
+    'CastingTime=Bonus ' +
     'School=Evocation ' +
     'Level=P3 ' +
     'Description=' +
       '"Next successful melee weapon attack within concentration up to 1 min inflicts +3d8 HP radiant and blinded until the spell ends (save Constitution negates blindness; additional saves each rd end)"',
 
   'Chromatic Orb':
+    'CastingTime=Action ' +
     'School=Evocation ' +
     'Level=S1,W1 ' +
     'AtHigherLevels="inflicts +1d8 HP" ' +
     'Description=' +
       '"R90\' Ranged spell inflicts 3d8 HP of a choice of acid, cold, fire, lightning, poison, or thunder"',
   'Circle Of Power':
+    'CastingTime=Action ' +
     'School=Abjuration ' +
     'Level=P5 ' +
     'Description=' +
       '"Allies in a 30\' radius have advantage on saves vs. magic, and successful saves vs. magic yield no damage instead of half, for concentration up to 10 min"',
   'Cloud Of Daggers':
+    'CastingTime=Action ' +
     'School=Conjuration ' +
     'Level=B2,K2,S2,W2 ' +
     'AtHigherLevels="inflicts +2d4 HP" ' +
     'Description="R60\' 5\' cube inflicts 4d4 HP slashing for concentration up to 1 min"',
   'Compelled Duel':
+    'CastingTime=Bonus ' +
     'School=Enchantment ' +
     'Level=P1 ' +
     'Description=' +
       '"R30\' Target stays within 30\' of self (save Wisdom negates) and suffers disadvantage on attacks on others for concentration up to 1 min; self attacking another or a successful attack on the target by an ally ends"',
   'Conjure Barrage':
+    'CastingTime=Action ' +
     'School=Conjuration ' +
     'Level=R3 ' +
     'Description=' +
       '"60\' cone inflicts 3d8 HP weapon damage type (save Dexterity half)"',
   'Conjure Volley':
+    'CastingTime=Action ' +
     'School=Conjuration ' +
     'Level=R5 ' +
     'Description=' +
       '"R150\' 40\' radius inflicts 8d8 HP weapon damage type (save Dexterity half)"',
   'Cordon Of Arrows':
+    'CastingTime=Action ' +
     'School=Transmutation ' +
     'Level=R2 ' +
     'AtHigherLevels="affects +2 pieces" ' +
     'Description=' +
       '"Four planted arrows or bolts attack non-designated creatures within 30\', inflicting 1d6 HP piercing each (save Dexterity negates), for 8 hr"',
   'Crown Of Madness':
+    'CastingTime=Action ' +
     'School=Enchantment ' +
     'Level=B2,K2,S2,W2 ' +
     'Description=' +
       '"R120\' Self can direct the target humanoid\'s attacks (save Wisdom negates; additional saves each rd end) for concentration up to 1 min"',
   "Crusader's Mantle":
+    'CastingTime=Action ' +
     'School=Evocation ' +
     'Level=P3 ' +
     'Description=' +
       '"Ally attacks within a 30\' radius inflict +1d4 HP radiant for concentration up to 1 min"',
 
   'Destructive Wave':
+    'CastingTime=Action ' +
     'School=Evocation ' +
     'Level=P5 ' +
     'Description=' +
       '"30\' radius inflicts 5d6 HP thunder, knocked prone, and 5d6 HP of a choice of radiant or necrotic (save Constitution half HP only) on targets"',
   'Dissonant Whispers':
+    'CastingTime=Action ' +
     'School=Enchantment ' +
     'Level=B1,"K1 [The Great Old One]" ' +
     'AtHigherLevels="inflicts +1d6 HP" ' +
@@ -1731,12 +1752,14 @@ PHB5E.SPELLS_ADDED = {
       '"R60\' Inflicts 3d6 HP psychic and forces the target to use its reaction to flee (save Wisdom half HP only)"',
 
   'Elemental Weapon':
+    'CastingTime=Action ' +
     'School=Transmutation ' +
     'Level=P3 ' +
     'AtHigherLevels="gives +2 or +3 attack and +2d4 or +3d4 damage at level 5 or 7" ' +
     'Description=' +
       '"Touched weapon gains +1 attack and +1d4 HP damage of a choice of acid, cold, fire, lightning, or thunder for concentration up to 1 hr"',
   'Ensnaring Strike':
+    'CastingTime=Bonus ' +
     'School=Conjuration ' +
     'Level=R1 ' +
     'AtHigherLevels="inflicts +1d6 HP" ' +
@@ -1744,42 +1767,49 @@ PHB5E.SPELLS_ADDED = {
       '"Next successful self weapon attack within concentration up to 1 min restrains the foe and inflicts 1d6 HP piercing each rd until the spell ends (save Strength negates; Large creatures have advantage on the save, and additional saves each rd end)"',
 
   'Feign Death':
+    'CastingTime=Action ' +
     'School=Necromancy ' +
     'Level=B3,C3,D3,W3 ' +
     'Ritual=true ' +
     'Description=' +
       '"Touched appears dead and gains resistance to non-psychic damage for 1 hr"',
   'Friends':
+    'CastingTime=Action ' +
     'School=Enchantment ' +
     'Level=B0,K0,S0,W0 ' +
     'Description=' +
       '"Self gains advantage on Charisma checks with a non-hostile target for concentration up to 1 min; the target becomes hostile afterward"',
 
   'Grasping Vine':
+    'CastingTime=Bonus ' +
     'School=Conjuration ' +
     'Level=D4,R4 ' +
     'Description=' +
       '"R30\' 30\' vine pulls a target 20\' each rd (save Dexterity negates) for concentration up to 1 min"',
 
   'Hail Of Thorns':
+    'CastingTime=Bonus ' +
     'School=Conjuration ' +
     'Level=R1 ' +
     'AtHigherLevels="inflicts +1d10 HP (6d10 HP maximum)" ' +
     'Description=' +
       '"Next successful self ranged weapon attack within concentration up to 1 min inflicts 1d10 HP piercing in a 5\' radius (save Dexterity half)"',
   'Hex':
+    'CastingTime=Bonus ' +
     'School=Enchantment ' +
     'Level=K1 ' +
     'AtHigherLevels="extends the duration to 8 or 24 hr at level 3 or 5" ' +
     'Description=' +
       '"R90\' Self attacks on the target inflict +1d6 HP necrotic, and the target has disadvantage on a chosen ability, for concentration up to 1 hr"',
   'Hunger Of Hadar':
+    'CastingTime=Action ' +
     'School=Conjuration ' +
     'Level=K3 ' +
     'Description=' +
       '"R150\' Creatures in a 20\' radius suffer 2d6 HP cold at the start of their turns (no save) and 2d6 HP acid at the end of their turns (save Dexterity negates) for concentration up to 1 min"',
 
   'Lightning Arrow':
+    'CastingTime=Bonus ' +
     'School=Transmutation ' +
     'Level=R3 ' +
     'AtHigherLevels="inflicts +1d8 HP" ' +
@@ -1787,17 +1817,20 @@ PHB5E.SPELLS_ADDED = {
       '"Next self ranged weapon attack within concentration up to 1 min inflicts 4d8 HP lightning on the target (miss half) and 2d8 HP lightning in a 10\' radius (save Dexterity half)"',
 
   'Phantasmal Force':
+    'CastingTime=Action ' +
     'School=Illusion ' +
     'Level=B2,"K2 [The Archfey]","K2 [The Great Old One]",S2,W2 ' +
     'Description=' +
       '"R60\' Target perceives an illusion (save Intelligence negates; Investigation ends) that can inflict 1d6 HP psychic per rd for concentration up to 1 min"',
   'Power Word Heal':
+    'CastingTime=Action ' +
     'School=Evocation ' +
     'Level=B9 ' +
     'Description=' +
       '"Touched regains all hit points, recovers from charmed, frightened, paralyzed, and stunned, and can use a reaction to stand from prone"',
 
   'Ray Of Sickness':
+    'CastingTime=Action ' +
     'School=Necromancy ' +
     'Level=S1,W1 ' +
     'AtHigherLevels="inflicts +1d8 HP" ' +
@@ -1805,50 +1838,59 @@ PHB5E.SPELLS_ADDED = {
       '"R60\' Ranged spell inflicts 2d8 HP poison and poisoned for 1 rd (save Constitution HP only)",',
 
   'Searing Smite':
+    'CastingTime=Bonus ' +
     'School=Evocation ' +
     'Level=P1 ' +
     'AtHigherLevels="inflicts +1d6 HP initial" ' +
     'Description=' +
       '"Next successful melee weapon attack within concentration up to 1 min inflicts +1d6 HP fire, plus 1d6 HP fire each rd until the spell ends (Constitution saves each rd end)"',
   'Staggering Smite':
+    'CastingTime=Bonus ' +
     'School=Evocation ' +
     'Level=P4 ' +
     'Description=' +
       '"Next successful melee weapon attack within concentration up to 1 min inflicts +4d6 HP psychic and disadvantage on attacks and ability checks and loss of reactions until the end of the target\'s next turn (save Wisdom negates disadvantage and loss of reactions)"',
   'Swift Quiver':
+    'CastingTime=Bonus ' +
     'School=Transmutation ' +
     'Level=R5 ' +
     'Description=' +
       '"Touched quiver dispenses ammo endlessly and allows two ranged attacks as a bonus action for concentration up to 1 min"',
 
   'Telepathy':
+    'CastingTime=Action ' +
     'School=Evocation ' +
     'Level=W8 ' +
     'Description=' +
       '"Self can communicate telepathically with a willing familiar target for 24 hr"',
   'Thorn Whip':
+    'CastingTime=Action ' +
     'School=Transmutation ' +
     'Level=D0 ' +
     'Description=' +
       '"R30\' Melee spell attack inflicts %{(level+7)//6}d6 HP piercing and pulls a Large or smaller target 10\'"',
   'Thunderous Smite':
+    'CastingTime=Bonus ' +
     'School=Evocation ' +
     'Level=P1 ' +
     'Description=' +
       '"Next successful melee weapon attack within concentration up to 1 min inflicts +2d6 HP thunder, a 10\' push, and knocked prone (save Strength negates push and prone)"',
   'Tsunami':
+    'CastingTime=Minute ' +
     'School=Conjuration ' +
     'Level=D8 ' +
     'Description=' +
       '"300\'x300\'x50\' wall of water within sight inflicts 6d10 HP bludgeoning (save Strength half); it moves away 50\' per rd, reducing its height by 50\' and its damage by 1d10 HP each rd, for concentration up to 6 rd"',
 
   'Witch Bolt':
+    'CastingTime=Action ' +
     'School=Evocation ' +
     'Level=K1,S1,W1 ' +
     'AtHigherLevels="inflicts +1d12 HP initial" ' +
     'Description=' +
       '"R30\' Ranged spell inflicts 1d12 HP lightning per rd for concentration up to 1 min"',
   'Wrathful Smite':
+    'CastingTime=Bonus ' +
     'School=Evocation ' +
     'Level=P1 ' +
     'Description=' +
