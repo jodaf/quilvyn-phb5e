@@ -1454,7 +1454,6 @@ PHB5E.FEATURES_ADDED = {
   'Magic Initiate (Wizard)':
     'Section=Magic ' +
     'Note="Knows 2 Wizard cantrips and can cast a chosen W1 spell without expending a spell slot once per long rest"',
-  // TODO suppress validation errors from selecting fighter maneuvers
   'Martial Adept':
     'Section=combat ' +
     'Note="Has the Combat Superiority feature with 2 maneuvers and 1 die"',
@@ -2105,11 +2104,12 @@ PHB5E.featRulesExtra = function(rules, name) {
     );
     rules.defineRule
       ('features.Combat Superiority', 'combatNotes.martialAdept', '=', '1');
+    // suppress validation errors from selecting fighter maneuvers
     let selectables = rules.getChoices('selectableFeatures');
     for(let s in selectables) {
       if(selectables[s].includes('Maneuver'))
         rules.defineRule(
-          'validationNotes.fighter-' + s.replaceAll(' ', '') + 'SelectableFeature',
+          'validationNotes.' + s.replace('F', 'f').replaceAll(' ', '') + 'SelectableFeature',
           'combatNotes.martialAdept', '^', '0'
         );
     }
