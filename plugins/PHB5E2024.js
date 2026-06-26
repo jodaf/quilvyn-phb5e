@@ -1688,6 +1688,7 @@ PHB5E2024.SPELLS_ADDED = {
 
   'Arcane Gate':PHB5E.SPELLS_ADDED['Arcane Gate'],
   'Arcane Vigor':
+    'CastingTime=Bonus ' +
     'School=Abjuration ' +
     'Level=S2,W2 ' +
     'AtHigherLevels="Allows expending +1 Hit Die" ' +
@@ -1760,6 +1761,7 @@ PHB5E2024.SPELLS_ADDED = {
 
   'Feign Death':PHB5E.SPELLS_ADDED['Feign Death'],
   'Fount Of Moonlight':
+    'CastingTime=Action ' +
     'School=Evocation ' +
     'Level=B4,D4 ' +
     'Description=' +
@@ -1782,6 +1784,7 @@ PHB5E2024.SPELLS_ADDED = {
   'Hunger Of Hadar':PHB5E.SPELLS_ADDED['Hunger Of Hadar'],
 
   "Jallarzi's Storm Of Radiance":
+    'CastingTime=Action ' +
     'School=Evocation ' +
     'Level=K5,W5 ' +
     'AtHigherLevels="inflicts +1d10 radiant and thunder" ' +
@@ -1795,6 +1798,7 @@ PHB5E2024.SPELLS_ADDED = {
   'Mind Sliver':Tasha.SPELLS['Mind Sliver'],
 
   'Power Word Fortify':
+    'CastingTime=Action ' +
     'School=Enchantment ' +
     'Level=B7,C7 ' +
     'Description=' +
@@ -1842,6 +1846,7 @@ PHB5E2024.SPELLS_ADDED = {
     .replace('with an Intelligence of 3 or higher ', ''),
 
   "Tasha's Bubbling Cauldron":
+    'CastingTime=Action ' +
     'School=Conjuration ' +
     'Level=K6,W6 ' +
     'Description=' +
@@ -1865,13 +1870,11 @@ PHB5E2024.SPELLS_ADDED = {
     .replace('until the spell ends', 'for 1 min') + ' ' +
     'AtHigherLevels="inflicts +1d6 HP"',
   "Yolanda's Regal Presence":
+    'CastingTime=Action ' +
     'School=Enchantment ' +
     'Level=B5,W5 ' +
     'Description="10\' radius inflicts 4d6 HP psychic, knocked prone, and a 10\' push (save Wisdom half HP only) on targets for concentration up to 1 min"'
 
-};
-PHB5E2024.SPELLS_LEVELS_ADDED = {
-  // TODO
 };
 PHB5E2024.SPELLS_RENAMED = Object.assign({}, PHB5E.SPELLS_RENAMED);
 PHB5E2024.SPELLS = Object.assign({}, SRD5E2024.SPELLS, PHB5E2024.SPELLS_ADDED);
@@ -2109,6 +2112,6 @@ PHB5E2024.ruleNotes = function() {
     'of the materials used are property of Wizards of the Coast. ©Wizards of ' +
     'the Coast LLC.\n' +
     '</p><p>\n' +
-    'Dungeons & Dragons Player\'s Handbook © 2014 Wizards of the Coast LLC.\n' +
+    'Dungeons & Dragons Player\'s Handbook © 2024 Wizards of the Coast LLC.\n' +
     '</p>\n';
 };
