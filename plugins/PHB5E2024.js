@@ -1824,11 +1824,9 @@ PHB5E2024.SPELLS_ADDED = {
   'Summon Elemental':
     Tasha.SPELLS['Summon Elemental']
     .replace('K4 [The Fathomless],', '')
-    .replace(' fire or bludgeoning', '')
-    .replace('squeezing)', 'squeezing; slam inflicts lightning)')
+    .replace('bludgeoning', 'lightning')
     .replace("40')", "40'; slam inflicts bludgeoning)")
-    .replace('squeezing)', 'squeezing; slam inflicts fire)')
-    .replace('squeezing)', 'squeezing; slam inflicts cold)'),
+    .replace('bludgeoning) for', 'cold) for'),
   'Summon Fey':
     Tasha.SPELLS['Summon Fey']
     .replace("move 40'", "move 40', fly 40',")
