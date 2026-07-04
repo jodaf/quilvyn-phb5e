@@ -1712,7 +1712,7 @@ PHB5E2024.SPELLS_ADDED = {
   'Banishing Smite':
     PHB5E.SPELLS_ADDED['Banishing Smite']
     .replace('Abjuration', 'Conjuration')
-    .replace('Next successful weapon attack within concentration up to 1 min', 'Cast as a bonus action after a successful melee attack,')
+    .replace('Next successful weapon attack within concentration up to 1 min', 'Cast after a successful melee attack,')
     .replace("until the spell ends to the target's home plane or a demiplane", 'for concentration up to 1 min to a demiplane')
     .replace('51 hit points', '51 hit points (save Charisma negates banishment)'),
   'Beast Sense':PHB5E.SPELLS_ADDED['Beast Sense'],
@@ -1721,7 +1721,7 @@ PHB5E2024.SPELLS_ADDED = {
     'Description="Foes suffer -1d4 on attacks on self for concentration up to 1 min"',
   'Blinding Smite':
     PHB5E.SPELLS_ADDED['Blinding Smite']
-    .replace('Next successful melee weapon attack within concentration up to 1 min', 'Cast as a bonus action after a successful melee attack,')
+    .replace('Next successful melee weapon attack within concentration up to 1 min', 'Cast after a successful melee attack,')
     .replace('until the spell ends', 'for concentration up to 1 min')
     .replace('save Constitution negates blindness; additional', 'Constitution'),
 
@@ -1753,11 +1753,6 @@ PHB5E2024.SPELLS_ADDED = {
   'Elemental Weapon':
     PHB5E.SPELLS_ADDED['Elemental Weapon']
     .replace('P3', 'D3,P3,R3'),
-  'Ensnaring Strike':
-    PHB5E.SPELLS_ADDED['Ensnaring Strike']
-    .replace('Next successful self weapon attack within concentration up to 1 min', 'Cast as a bonus action after hitting a target with a weapon,')
-    .replace('until the end of the spell', 'for concentration up to 1 min')
-    .replace('additional saves', 'successful Athletics checks'),
 
   'Feign Death':PHB5E.SPELLS_ADDED['Feign Death'],
   'Fount Of Moonlight':
@@ -1775,12 +1770,12 @@ PHB5E2024.SPELLS_ADDED = {
     PHB5E.SPELLS_ADDED['Grasping Vine'] + ' ' +
     'AtHigherLevels="the vine can attack +1 target each rd" ' +
     'Description=' +
-      '"R60\' 30\' vine makes melee spell attack on a target to inflict 4d8 HP bludgeoning, grapple, and pull it 30\' each rd for concentration up to 1 min"',
+      '"R60\' 30\' vine makes a melee spell attack each rd to inflict 4d8 HP bludgeoning, grapple, and pull the target 30\' for concentration up to 1 min"',
 
   'Hail Of Thorns':
     PHB5E.SPELLS_ADDED['Hail Of Thorns']
     .replace(' (6d10 HP maximum)', '')
-    .replace('Next successful self ranged weapon attack within concentration up to 1 min', 'Cast as a bonus action after making a successful ranged weapon attack,'),
+    .replace('Next successful self ranged weapon attack within concentration up to 1 min', 'Cast after a successful ranged weapon attack,'),
   'Hunger Of Hadar':PHB5E.SPELLS_ADDED['Hunger Of Hadar'],
 
   "Jallarzi's Storm Of Radiance":
@@ -1793,7 +1788,7 @@ PHB5E2024.SPELLS_ADDED = {
 
   'Lightning Arrow':
     PHB5E.SPELLS_ADDED['Lightning Arrow']
-    .replace('Next self ranged weapon attack within concentration up to 1 min', 'Cast as a bonus action after making a ranged weapon attack,'),
+    .replace('Next self ranged weapon attack within concentration up to 1 min', 'Cast after making a ranged weapon attack,'),
 
   'Mind Sliver':Tasha.SPELLS['Mind Sliver'],
 
@@ -1807,7 +1802,7 @@ PHB5E2024.SPELLS_ADDED = {
   'Staggering Smite':
     PHB5E.SPELLS['Staggering Smite']
     .replace('Evocation', 'Enchantment')
-    .replace('Next successful melee weapon attack within concentration up to 1 min', 'Cast as a bonus action after a successful melee attack,')
+    .replace('Next successful melee weapon attack within concentration up to 1 min', 'Cast after a successful melee attack,')
     .replaceAll(/disadvantage.*?reactions/g, 'stunned')
     .replace("target's ", '') + ' ' +
     'AtHigherLevels="inflicts +1d6 HP"',
@@ -1854,7 +1849,7 @@ PHB5E2024.SPELLS_ADDED = {
   'Thunderclap':Xanathar.SPELLS.Thunderclap,
   'Thunderous Smite':
     PHB5E.SPELLS['Thunderous Smite']
-    .replace('Next successful melee weapon attack within concentration up to 1 min', 'Cast as a bonus action after a successful melee attack,'),
+    .replace('Next successful melee weapon attack within concentration up to 1 min', 'Cast after a successful melee attack,'),
   'Toll The Dead':Xanathar.SPELLS['Toll The Dead'],
 
   'Witch Bolt':
@@ -1863,7 +1858,7 @@ PHB5E2024.SPELLS_ADDED = {
   'Word Of Radiance':Xanathar.SPELLS['Word Of Radiance'],
   'Wrathful Smite':
     PHB5E.SPELLS['Wrathful Smite']
-    .replace('Next successful melee weapon attack within concentration up to 1 min', 'Cast as a bonus action after a successful melee attack,')
+    .replace('Next successful melee weapon attack within concentration up to 1 min', 'Cast after a successful melee attack,')
     .replace('psychic', 'necrotic')
     .replace('until the spell ends', 'for 1 min') + ' ' +
     'AtHigherLevels="inflicts +1d6 HP"',
