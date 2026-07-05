@@ -528,16 +528,17 @@ PHB5E.FEATS_ADDED = {
     '',
   'Durable':
     '',
+  // TODO: requires ability to cast at least one spell
   'Elemental Adept (Acid)':
-    'Require="casterLevel >= 1"',
+    '',
   'Elemental Adept (Cold)':
-    'Require="casterLevel >= 1"',
+    '',
   'Elemental Adept (Fire)':
-    'Require="casterLevel >= 1"',
+    '',
   'Elemental Adept (Lightning)':
-    'Require="casterLevel >= 1"',
+    '',
   'Elemental Adept (Thunder)':
-    'Require="casterLevel >= 1"',
+    '',
   'Great Weapon Master':
     '',
   'Healer':
@@ -620,14 +621,16 @@ PHB5E.FEATS_ADDED = {
     '',
   'Skulker':
     'Require="dexterity >= 13"',
+  // TODO: requires ability to cast at least one spell
   'Spell Sniper':
-    'Require="casterLevel >= 1"',
+    '',
   'Tavern Brawler':
     '',
   'Tough':
     '',
+  // TODO: requires ability to cast at least one spell
   'War Caster':
-    'Require="casterLevel >= 1"',
+    '',
   'Weapon Master':
     ''
 };
@@ -1843,7 +1846,7 @@ PHB5E.SPELLS_ADDED = {
     'Level=P1 ' +
     'AtHigherLevels="inflicts +1d6 HP initial" ' +
     'Description=' +
-      '"Next successful melee weapon attack within concentration up to 1 min inflicts +1d6 HP fire, plus 1d6 HP fire each rd until the spell ends (Constitution saves each rd end)"',
+      '"Next successful melee weapon attack within concentration up to 1 min inflicts +1d6 HP fire, plus 1d6 HP fire each rd until the spell ends (save Constitution each rd end)"',
   'Staggering Smite':
     'CastingTime=Bonus ' +
     'School=Evocation ' +
