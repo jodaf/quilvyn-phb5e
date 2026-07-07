@@ -66,7 +66,7 @@ function PHB5E() {
   SRD5E.magicRules(rules, PHB5E.SCHOOLS, PHB5E.SPELLS);
   SRD5E.identityRules(
     rules, PHB5E.ALIGNMENTS, PHB5E.BACKGROUNDS, PHB5E.CLASSES, PHB5E.DEITIES,
-    PHB5E.PATHS, PHB5E.RACES
+    PHB5E.RACES
   );
   SRD5E.talentRules
     (rules, PHB5E.FEATS, PHB5E.FEATURES, PHB5E.GOODIES, PHB5E.LANGUAGES,
@@ -1585,7 +1585,6 @@ PHB5E.FEATURES_ADDED = {
 PHB5E.FEATURES = Object.assign({}, SRD5E.FEATURES, PHB5E.FEATURES_ADDED);
 PHB5E.GOODIES = Object.assign({}, SRD5E.GOODIES);
 PHB5E.LANGUAGES = Object.assign({}, SRD5E.LANGUAGES);
-PHB5E.PATHS = {};
 PHB5E.RACES_ADDED = {
   'Mountain Dwarf':
     SRD5E.RACES['Hill Dwarf']
@@ -2205,8 +2204,6 @@ PHB5E.featRulesExtra = function(rules, name) {
 PHB5E.raceRulesExtra = function(rules, name) {
   if(name == 'Dark Elf') {
     rules.defineRule('magicNotes.drowMagic', 'level', '?', 'source >= 3');
-  } else if(name == 'High Elf') {
-    rules.defineRule('spellsAvailable.W0', 'highElfLevel', '+=', '1');
   }
 };
 
