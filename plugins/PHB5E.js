@@ -1845,7 +1845,7 @@ PHB5E.SPELLS_ADDED = {
     'Level=P1 ' +
     'AtHigherLevels="inflicts +1d6 HP initial" ' +
     'Description=' +
-      '"Next successful melee weapon attack within concentration up to 1 min inflicts +1d6 HP fire, plus 1d6 HP fire each rd until the spell ends (save Constitution each rd end)"',
+      '"Next successful melee weapon attack within concentration up to 1 min inflicts +1d6 HP fire, plus 1d6 HP fire each rd until the spell ends (save Constitution each rd ends)"',
   'Staggering Smite':
     'CastingTime=Bonus ' +
     'School=Evocation ' +
