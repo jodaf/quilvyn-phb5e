@@ -247,7 +247,7 @@ PHB5E.CLASSES_FEATURES_ADDED = {
     '"features.Battle Master ? 7:Know Your Enemy",' +
     '"features.Battle Master ? 10:Improved Combat Superiority",' +
     '"features.Battle Master ? 15:Relentless",' +
-    '"features.Eldritch Knight ? 3:Spellcasting",' +
+    '"features.Eldritch Knight ? 3:Spellcasting (Eldritch Knight)",' +
     '"features.Eldritch Knight ? 3:Weapon Bond",' +
     '"features.Eldritch Knight ? 7:War Magic",' +
     '"features.Eldritch Knight ? 10:Eldritch Strike",' +
@@ -279,7 +279,7 @@ PHB5E.CLASSES_FEATURES_ADDED = {
     '"features.Beast Master ? 11:Bestial Fury",' +
     '"features.Beast Master ? 15:Share Spells"',
   'Rogue':
-    '"features.Arcane Trickster ? 3:Spellcasting",' +
+    '"features.Arcane Trickster ? 3:Spellcasting (Arcane Trickster)",' +
     '"features.Arcane Trickster ? 3:Mage Hand Legerdemain",' +
     '"features.Arcane Trickster ? 9:Magical Ambush",' +
     '"features.Arcane Trickster ? 13:Versatile Trickster",' +
@@ -528,7 +528,7 @@ PHB5E.FEATS_ADDED = {
     '',
   'Durable':
     '',
-  // TODO: requires ability to cast at least one spell
+  // NOTE: prerequisite "The ability to cast at least one spell" not checked
   'Elemental Adept (Acid)':
     '',
   'Elemental Adept (Cold)':
@@ -621,14 +621,14 @@ PHB5E.FEATS_ADDED = {
     '',
   'Skulker':
     'Require="dexterity >= 13"',
-  // TODO: requires ability to cast at least one spell
+  // NOTE: prerequisite "The ability to cast at least one spell" not checked
   'Spell Sniper':
     '',
   'Tavern Brawler':
     '',
   'Tough':
     '',
-  // TODO: requires ability to cast at least one spell
+  // NOTE: prerequisite "The ability to cast at least one spell" not checked
   'War Caster':
     '',
   'Weapon Master':
@@ -957,7 +957,9 @@ PHB5E.FEATURES_ADDED = {
     'Section=combat ' +
     'Note="Successful attack inflicts disadvantage on the first save vs. a self spell before the end of the next turn"',
   'Improved War Magic':'Section=combat Note="Has increased War Magic effects"',
-  // Spellcasting as above
+  'Spellcasting (Eldritch Knight)':
+    'Section=magic ' +
+    'Note="Can cast spells from the wizard spell list; regains expended spell slots after a long rest"',
   'War Magic': // See Xanathar.js re: a Wizard tradition also named War Magic
     'Section=combat ' +
     'Note="Can use a bonus action to make a weapon attack after casting a %{combatNotes.improvedWarMagic?\'spell\':\'cantrip\'}"',
@@ -1146,7 +1148,9 @@ PHB5E.FEATURES_ADDED = {
   'Spell Thief':
     'Section=magic ' +
     'Note="Can negate the effects of a spell cast on self, prevent the original caster from using that spell for 8 hr, and use spell slots to cast it during that time (save DC %{8+intelligenceModifier+proficiencyBonus} negates) once per long rest"',
-  // Spellcasting as above
+  'Spellcasting (Arcane Trickster)':
+    'Section=magic ' +
+    'Note="Can cast spells from the wizard spell list; regains expended spell slots after a long rest"',
   'Versatile Trickster':
     'Section=magic ' +
     'Note="Can use a bonus action to direct <i>Mage Hand</i> to distract a target within 5\', gaining advantage on attacks on it until the end of the turn"',
@@ -2079,8 +2083,6 @@ PHB5E.classRulesExtra = function(rules, name) {
     QuilvynRules.spellSlotRules(rules, 'casterLevels.Eldritch Knight', slots);
     rules.defineRule
       ('casterLevels.W', 'casterLevels.Eldritch Knight', '^=', null);
-    rules.defineRule
-      ('magicNotes.spellcasting', 'features.Eldritch Knight', '=', '"wizard"');
 
   } else if(name == 'Monk') {
 
@@ -2115,8 +2117,6 @@ PHB5E.classRulesExtra = function(rules, name) {
     QuilvynRules.spellSlotRules(rules, 'casterLevels.Arcane Trickster', slots);
     rules.defineRule
       ('casterLevels.W', 'casterLevels.Arcane Trickster', '^=', null);
-    rules.defineRule
-      ('magicNotes.spellcasting', 'features.Arcane Trickster', '=', '"wizard"');
 
   }
 
@@ -2232,6 +2232,14 @@ PHB5E.ruleNotes = function() {
     '  <li>\n' +
     '  Quilvyn allows the Skilled feat to be taken multiple times, adding 3\n' +
     '  skill or tool proficiencies for each.\n' +
+    '  </li>\n' +
+    '</ul>\n' +
+    '<h3>Limitations</h3>\n' +
+    '<ul>\n' +
+    '  <li>\n' +
+    '  Quilvyn does not test the prerequisite for the Elemental Adept,' +
+    '  Spell Sniper, and War Caster feats that the character have the' +
+    '  ability to cast at least one spell.\n' +
     '  </li>\n' +
     '</ul>\n' +
     '<h3>Copyrights and Licensing</h3>\n' +
