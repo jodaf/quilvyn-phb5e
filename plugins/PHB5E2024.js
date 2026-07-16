@@ -257,7 +257,7 @@ PHB5E2024.CLASSES_FEATURES_ADDED = {
     '"features.Battle Master ? 10:Improved Combat Superiority",' +
     '"features.Battle Master ? 15:Relentless",' +
     '"features.Battle Master ? 18:Ultimate Combat Superiority",' +
-    '"features.Eldritch Knight ? 3:Spellcasting",' +
+    '"features.Eldritch Knight ? 3:Spellcasting (Eldritch Knight)",' +
     '"features.Eldritch Knight ? 3:War Bond",' +
     '"features.Eldritch Knight ? 7:War Magic",' +
     '"features.Eldritch Knight ? 10:Eldritch Strike",' +
@@ -322,7 +322,7 @@ PHB5E2024.CLASSES_FEATURES_ADDED = {
     '"features.Gloom Stalker ? 11:Stalker\'s Flurry",' +
     '"features.Gloom Stalker ? 15:Shadowy Dodge"',
   'Rogue':
-    '"features.Arcane Trickster ? 3:Spellcasting",' +
+    '"features.Arcane Trickster ? 3:Spellcasting (Arcane Trickster)",' +
     '"features.Arcane Trickster ? 3:Mage Hand Legerdemain",' +
     '"features.Arcane Trickster ? 9:Magical Ambush",' +
     '"features.Arcane Trickster ? 13:Versatile Trickster",' +
@@ -996,7 +996,8 @@ PHB5E2024.FEATURES_ADDED = {
     'Section=combat ' +
     // changed effects
     'Note="During an Attack action, can cast %{combatNotes.improvedWarMagic?\'2 1-action level 1 or level 2 spells\':\'a 1-action cantrip\'} in place of %{combatNotes.improvedWarMagic?\'2 attacks\':\'1 attack\'}"',
-  // Spellcasting as SRD5E2024
+  'Spellcasting (Eldritch Knight)':
+    SRD5E2024.FEATURES['Spellcasting (Wizard)'], // 5.5 e.k.s can use rituals
   // Psi Warrior
   'Bulwark Of Force':Tasha.FEATURES['Bulwark Of Force'],
   'Guarded Mind':Tasha.FEATURES['Guarded Mind'],
@@ -1175,7 +1176,8 @@ PHB5E2024.FEATURES_ADDED = {
     PHB5E.FEATURES['Magical Ambush']
     .replace('hidden', 'invisible'),
   'Spell Thief':PHB5E.FEATURES['Spell Thief'],
-  // Spellcasting as PHB5E2024
+  'Spellcasting (Arcane Trickster)':
+    SRD5E2024.FEATURES['Spellcasting (Wizard)'], // 5.5 a.t.s can use rituals
   'Versatile Trickster':
     'Section=combat ' +
     // changed effects
@@ -2006,8 +2008,6 @@ PHB5E2024.classRulesExtra = function(rules, name) {
     QuilvynRules.spellSlotRules(rules, 'casterLevels.Eldritch Knight', slots);
     rules.defineRule
       ('casterLevels.W', 'casterLevels.Eldritch Knight', '^=', null);
-    rules.defineRule
-      ('magicNotes.spellcasting', 'features.Eldritch Knight', '=', '"Wizard"');
 
   } else if(name == 'Monk') {
 
@@ -2050,8 +2050,6 @@ PHB5E2024.classRulesExtra = function(rules, name) {
     rules.defineRule('combatNotes.psionicPower(Soulknife)',
       classLevel, '=', 'source<5 ? 6 : source<11 ? 8 : source<17 ? 10 : 12'
     );
-    rules.defineRule
-      ('magicNotes.spellcasting', 'features.Arcane Trickster', '=', '"Wizard"');
 
   }
 

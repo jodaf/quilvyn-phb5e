@@ -439,14 +439,14 @@ var attributes = {
       <tr style="text-align:center">
         <td><b>Feats</b>: Magic Initiate (Cleric); Two-Weapon Fighting</td>
         <td><b>Human Features</b>: Resourceful; Skillful; Versatile</td>
-        <td><b>Wizard Features</b>: Arcane Recovery; Ritual Adept; Save Proficiency (Intelligence; Wisdom); Scholar; Skill Proficiency (Choose 2 from Arcana, History, Insight, Investigation, Medicine, Nature, Religion); Spellcasting; Weapon Proficiency (Simple Weapons)</td>
+        <td><b>Wizard Features</b>: Arcane Recovery; Ritual Adept; Save Proficiency (Intelligence; Wisdom); Scholar; Skill Proficiency (Choose 2 from Arcana, History, Insight, Investigation, Medicine, Nature, Religion); Spellcasting (Wizard); Weapon Proficiency (Simple Weapons)</td>
         <td><b>Warlock Features</b>: Armor Training (Light); Eldritch Invocations; Eldritch Spear; Magical Cunning; Pact Magic; Pact Of The Blade; Repelling Blast; Save Proficiency (Wisdom; Charisma); Skill Proficiency (Choose 2 from Arcana, Deception, History, Intimidation, Investigation, Nature, Religion); Weapon Proficiency (Simple Weapons)</td>
-        <td><b>Sorcerer Features</b>: Font Of Magic; Innate Sorcery; Metamagic; Save Proficiency (Constitution; Charisma); Seeking Spell; Skill Proficiency (Choose 2 from Arcana, Deception, Insight, Intimidation, Persuasion, Religion); Spellcasting; Subtle Spell; Weapon Proficiency (Simple Weapons)</td>
-        <td><b>Ranger Features</b>: Armor Training (Light; Medium; Shield); Deft Explorer; Favored Enemy; Fighting Style; Ranger Fighting Style; Save Proficiency (Strength; Dexterity); Skill Proficiency (Choose 3 from Animal Handling, Athletics, Insight, Investigation, Nature, Perception, Stealth, Survival); Spellcasting; Weapon Mastery; Weapon Proficiency (Simple Weapons; Martial Weapons)</td>
-        <td><b>Paladin Features</b>: Armor Training (Light; Medium; Heavy; Shield); Blessed Warrior; Lay On Hands; Paladin Fighting Style; Paladin's Smite; Save Proficiency (Wisdom; Charisma); Skill Proficiency (Choose 2 from Athletics, Insight, Intimidation, Medicine, Persuasion, Religion); Spellcasting; Weapon Mastery; Weapon Proficiency (Simple Weapons; Martial Weapons)</td>
-        <td><b>Druid Features</b>: Armor Training (Light; Shield); Druidic; Magician; Primal Order; Save Proficiency (Intelligence; Wisdom); Skill Proficiency (Choose 2 from Animal Handling, Arcana, Insight, Medicine, Nature, Perception, Religion, Survival); Spellcasting; Tool Proficiency (Herbalism Kit); Weapon Proficiency (Simple Weapons); Wild Companion; Wild Shape</td>
-        <td><b>Cleric Features</b>: Armor Training (Light; Medium; Shield); Channel Divinity; Divine Order; Divine Spark; Protector; Save Proficiency (Wisdom; Charisma); Skill Proficiency (Choose 2 from History, Insight, Medicine, Persuasion, Religion); Spellcasting; Turn Undead; Weapon Proficiency (Simple Weapons)</td>
-        <td><b>Bard Features</b>: Armor Training (Light); Bardic Inspiration; Expertise; Jack Of All Trades; Save Proficiency (Dexterity; Charisma); Skill Proficiency (Choose 3 from any); Spellcasting; Tool Proficiency (Choose 3 from any Musical Instrument); Weapon Proficiency (Simple Weapons)</td>
+        <td><b>Sorcerer Features</b>: Font Of Magic; Innate Sorcery; Metamagic; Save Proficiency (Constitution; Charisma); Seeking Spell; Skill Proficiency (Choose 2 from Arcana, Deception, Insight, Intimidation, Persuasion, Religion); Spellcasting (Sorcerer); Subtle Spell; Weapon Proficiency (Simple Weapons)</td>
+        <td><b>Ranger Features</b>: Armor Training (Light; Medium; Shield); Deft Explorer; Favored Enemy; Fighting Style; Ranger Fighting Style; Save Proficiency (Strength; Dexterity); Skill Proficiency (Choose 3 from Animal Handling, Athletics, Insight, Investigation, Nature, Perception, Stealth, Survival); Spellcasting (Ranger); Weapon Mastery; Weapon Proficiency (Simple Weapons; Martial Weapons)</td>
+        <td><b>Paladin Features</b>: Armor Training (Light; Medium; Heavy; Shield); Blessed Warrior; Lay On Hands; Paladin Fighting Style; Paladin's Smite; Save Proficiency (Wisdom; Charisma); Skill Proficiency (Choose 2 from Athletics, Insight, Intimidation, Medicine, Persuasion, Religion); Spellcasting (Paladin); Weapon Mastery; Weapon Proficiency (Simple Weapons; Martial Weapons)</td>
+        <td><b>Druid Features</b>: Armor Training (Light; Shield); Druidic; Magician; Primal Order; Save Proficiency (Intelligence; Wisdom); Skill Proficiency (Choose 2 from Animal Handling, Arcana, Insight, Medicine, Nature, Perception, Religion, Survival); Spellcasting (Druid); Tool Proficiency (Herbalism Kit); Weapon Proficiency (Simple Weapons); Wild Companion; Wild Shape</td>
+        <td><b>Cleric Features</b>: Armor Training (Light; Medium; Shield); Channel Divinity; Divine Order; Divine Spark; Protector; Save Proficiency (Wisdom; Charisma); Skill Proficiency (Choose 2 from History, Insight, Medicine, Persuasion, Religion); Spellcasting (Cleric); Turn Undead; Weapon Proficiency (Simple Weapons)</td>
+        <td><b>Bard Features</b>: Armor Training (Light); Bardic Inspiration; Expertise; Jack Of All Trades; Save Proficiency (Dexterity; Charisma); Skill Proficiency (Choose 3 from any); Spellcasting (Bard); Tool Proficiency (Choose 3 from any Musical Instrument); Weapon Proficiency (Simple Weapons)</td>
         <td><b>Soldier Features</b>: Ability Boost (Choose 3 from Strength, Dexterity, Constitution); Savage Attacker; Skill Proficiency (Athletics; Intimidation); Tool Proficiency (Choose 1 from any Gaming Set)</td>
       </tr></table>
 </td>
@@ -2664,7 +2664,19 @@ var attributes = {
     </tr><tr style="text-align:center">
       <td>Seeking Spell: Can spend 1 sorcery point to reroll a failed spell attack; can be used in addition to another Metamagic option</td>
     </tr><tr style="text-align:center">
-      <td>Spellcasting: Can cast spells from the wizard spell list and cast spells marked with [R] using a ritual; regains expended spell slots after a long rest</td>
+      <td>Spellcasting (Bard): Can cast spells from the bard spell list and cast spells marked with [R] using a ritual; regains expended spell slots after a long rest</td>
+    </tr><tr style="text-align:center">
+      <td>Spellcasting (Cleric): Can cast spells from the cleric spell list and cast spells marked with [R] using a ritual; regains expended spell slots after a long rest</td>
+    </tr><tr style="text-align:center">
+      <td>Spellcasting (Druid): Can cast spells from the druid spell list and cast spells marked with [R] using a ritual; regains expended spell slots after a long rest</td>
+    </tr><tr style="text-align:center">
+      <td>Spellcasting (Paladin): Can cast spells from the paladin spell list and cast spells marked with [R] using a ritual; regains expended spell slots after a long rest</td>
+    </tr><tr style="text-align:center">
+      <td>Spellcasting (Ranger): Can cast spells from the ranger spell list and cast spells marked with [R] using a ritual; regains expended spell slots after a long rest</td>
+    </tr><tr style="text-align:center">
+      <td>Spellcasting (Sorcerer): Can cast spells from the sorcerer spell list and cast spells marked with [R] using a ritual; regains expended spell slots after a long rest</td>
+    </tr><tr style="text-align:center">
+      <td>Spellcasting (Wizard): Can cast spells from the wizard spell list and cast spells marked with [R] using a ritual; regains expended spell slots after a long rest</td>
     </tr><tr style="text-align:center">
       <td>Subtle Spell: Can spend 1 sorcery point to cast a spell without somatic, material, or verbal components</td>
     </tr><tr style="text-align:center">
