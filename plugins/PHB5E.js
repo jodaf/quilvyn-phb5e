@@ -2192,7 +2192,7 @@ PHB5E.featRulesExtra = function(rules, name) {
       (rules, 'skillAndToolProficiency', 'skillAndToolChoiceCount', 'Sum "^skillsChosen\\.|toolsChosen\\."');
   } else if(name == 'Tavern Brawler') {
     rules.defineRule
-      ('weapons.Unarmed Strike.2', 'combatNotes.tavernBrawler', '^=', '"1d4"');
+      ('unarmedStrikeDamageDie', 'combatNotes.tavernBrawler', '^=', '4');
   }
 
 };

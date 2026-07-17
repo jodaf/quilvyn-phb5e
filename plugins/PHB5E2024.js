@@ -1935,12 +1935,10 @@ PHB5E2024.classRulesExtra = function(rules, name) {
       'combatNotes.dazzlingFootwork', '?', null,
       'armor', '?', 'source=="None"',
       'shield', '?', 'source=="None"',
-      'bardicInspirationDie', '=', '"1d" + source'
+      'bardicInspirationDie', '=', null
     );
-    // TODO multiclass bard/monk? both increase unarmed strike damage
-    rules.defineRule('weapons.Unarmed Strike.2',
-      'combatNotes.dazzlingFootwork.3', '^=', null
-    );
+    rules.defineRule
+      ('unarmedStrikeDamageDie', 'combatNotes.dazzlingFootwork.3', '^=', null);
 
   } else if(name == 'Druid') {
 
@@ -2072,11 +2070,10 @@ PHB5E2024.featRulesExtra = function(rules, name) {
     );
   } else if(name == 'Tavern Brawler') {
     rules.defineRule
-      ('weapons.Unarmed Strike.2', 'combatNotes.tavernBrawler', '^=', '"1d4"');
+      ('unarmedStrikeDamageDie', 'combatNotes.tavernBrawler', '^=', '4');
   } else if(name == 'Unarmed Fighting') {
-    rules.defineRule('weapons.Unarmed Strike.2',
-      'combatNotes.unarmedFighting', '^', '"1d6"',
-    );
+    rules.defineRule
+      ('unarmedStrikeDamageDie', 'combatNotes.unarmedFighting', '^=', '6');
   }
 
 };
