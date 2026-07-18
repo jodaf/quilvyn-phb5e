@@ -17,43 +17,43 @@ Place, Suite 330, Boston, MA 02111-1307 USA.
 
 /* jshint esversion: 6 */
 /* jshint forin: false */
-/* globals Quilvyn, QuilvynRules, PHB5E, SRD5E2024, Tasha, Xanathar */
+/* globals Quilvyn, QuilvynRules, PHB5E, SRD55E, Tasha, Xanathar */
 "use strict";
 
 /*
  * This module loads the rules from Fifth Edition Player's Handbook that are
- * not part of the 5.5E SRD.  The PHB5E2024 function contains methods that load
+ * not part of the 5.5E SRD.  The PHB55E function contains methods that load
  * rules for particular parts of the rules; classRules for character classes,
  * magicRules for spells, etc.  These member methods can be called
  * independently in order to use a subset of the 5.5E PHB.  Similarly, the
- * constant fields of PHB5E2024 (FEATS, BACKGROUNDS, etc.) can be manipulated
+ * constant fields of PHB55E (FEATS, BACKGROUNDS, etc.) can be manipulated
  * to modify the choices.
  */
-function PHB5E2024() {
+function PHB55E() {
 
-  if(window.PHB5E == null || window.SRD5E2024 == null || window.Tasha == null || window.Xanathar == null) {
-    alert('The PHB5E2024 module requires use of the SRD5E2024, PHB5E, Tasha, and Xanathar modules');
+  if(window.PHB5E == null || window.SRD55E == null || window.Tasha == null || window.Xanathar == null) {
+    alert('The PHB55E module requires use of the SRD55E, PHB5E, Tasha, and Xanathar modules');
     return;
   }
 
-  let rules = new QuilvynRules('D&D 5.5E', PHB5E2024.VERSION);
-  PHB5E2024.rules = rules;
-  rules.plugin = PHB5E2024;
+  let rules = new QuilvynRules('D&D 5.5E', PHB55E.VERSION);
+  PHB55E.rules = rules;
+  rules.plugin = PHB55E;
 
-  rules.defineChoice('choices', SRD5E2024.CHOICES);
-  rules.choiceEditorElements = SRD5E2024.choiceEditorElements;
-  rules.choiceRules = PHB5E2024.choiceRules;
-  rules.removeChoice = SRD5E2024.removeChoice;
-  rules.editorElements = SRD5E2024.initialEditorElements();
-  rules.getFormats = SRD5E2024.getFormats;
-  rules.getPlugins = PHB5E2024.getPlugins;
-  rules.makeValid = SRD5E2024.makeValid;
-  rules.randomizeOneAttribute = SRD5E2024.randomizeOneAttribute;
-  rules.defineChoice('random', SRD5E2024.RANDOMIZABLE_ATTRIBUTES);
-  rules.getChoices = SRD5E2024.getChoices;
-  rules.ruleNotes = PHB5E2024.ruleNotes;
+  rules.defineChoice('choices', SRD55E.CHOICES);
+  rules.choiceEditorElements = SRD55E.choiceEditorElements;
+  rules.choiceRules = PHB55E.choiceRules;
+  rules.removeChoice = SRD55E.removeChoice;
+  rules.editorElements = SRD55E.initialEditorElements();
+  rules.getFormats = SRD55E.getFormats;
+  rules.getPlugins = PHB55E.getPlugins;
+  rules.makeValid = SRD55E.makeValid;
+  rules.randomizeOneAttribute = SRD55E.randomizeOneAttribute;
+  rules.defineChoice('random', SRD55E.RANDOMIZABLE_ATTRIBUTES);
+  rules.getChoices = SRD55E.getChoices;
+  rules.ruleNotes = PHB55E.ruleNotes;
 
-  SRD5E2024.createViewers(rules, SRD5E2024.VIEWERS);
+  SRD55E.createViewers(rules, SRD55E.VIEWERS);
   rules.defineChoice('extras',
     'feats', 'featCount', 'sanityNotes', 'selectableFeatureCount',
     'validationNotes'
@@ -62,27 +62,27 @@ function PHB5E2024() {
     'background:Background,select-one,backgrounds',
     'species:Species,select-one,species', 'levels:Class Levels,bag,levels');
 
-  SRD5E2024.abilityRules(rules, SRD5E2024.ABILITIES);
-  SRD5E2024.combatRules
-    (rules, PHB5E2024.ARMORS, PHB5E2024.SHIELDS, PHB5E2024.WEAPONS);
-  SRD5E2024.magicRules(rules, PHB5E2024.SCHOOLS, PHB5E2024.SPELLS);
-  SRD5E2024.identityRules(
-    rules, PHB5E2024.ALIGNMENTS, PHB5E2024.BACKGROUNDS, PHB5E2024.CLASSES,
-    PHB5E2024.DEITIES, PHB5E2024.SPECIES
+  SRD55E.abilityRules(rules, SRD55E.ABILITIES);
+  SRD55E.combatRules
+    (rules, PHB55E.ARMORS, PHB55E.SHIELDS, PHB55E.WEAPONS);
+  SRD55E.magicRules(rules, PHB55E.SCHOOLS, PHB55E.SPELLS);
+  SRD55E.identityRules(
+    rules, PHB55E.ALIGNMENTS, PHB55E.BACKGROUNDS, PHB55E.CLASSES,
+    PHB55E.DEITIES, PHB55E.SPECIES
   );
-  SRD5E2024.talentRules
-    (rules, PHB5E2024.FEATS, PHB5E2024.FEATURES, PHB5E2024.GOODIES,
-     PHB5E2024.LANGUAGES, PHB5E2024.SKILLS, PHB5E2024.TOOLS);
+  SRD55E.talentRules
+    (rules, PHB55E.FEATS, PHB55E.FEATURES, PHB55E.GOODIES,
+     PHB55E.LANGUAGES, PHB55E.SKILLS, PHB55E.TOOLS);
 
   Quilvyn.addRuleSet(rules);
 
 }
 
-PHB5E2024.VERSION = '2.4.1.0';
+PHB55E.VERSION = '2.4.1.0';
 
-PHB5E2024.ALIGNMENTS = Object.assign({}, SRD5E2024.ALIGNMENTS);
-PHB5E2024.ARMORS = Object.assign({}, SRD5E2024.ARMORS);
-PHB5E2024.BACKGROUNDS_ADDED = {
+PHB55E.ALIGNMENTS = Object.assign({}, SRD55E.ALIGNMENTS);
+PHB55E.ARMORS = Object.assign({}, SRD55E.ARMORS);
+PHB55E.BACKGROUNDS_ADDED = {
   'Artisan':
     'Equipment=' +
       '"Artisan\'s Tools","2 Pouches","Traveler\'s Clothes","32 GP" ' +
@@ -187,9 +187,9 @@ PHB5E2024.BACKGROUNDS_ADDED = {
       '"1:Tool Proficiency (Thieves\' Tools)",' +
       '"1:Lucky"'
 };
-PHB5E2024.BACKGROUNDS =
-  Object.assign({}, SRD5E2024.BACKGROUNDS, PHB5E2024.BACKGROUNDS_ADDED);
-PHB5E2024.CLASSES_FEATURES_ADDED = {
+PHB55E.BACKGROUNDS =
+  Object.assign({}, SRD55E.BACKGROUNDS, PHB55E.BACKGROUNDS_ADDED);
+PHB55E.CLASSES_FEATURES_ADDED = {
   'Barbarian':
     '"features.Path Of The Wild Heart ? 3:Animal Speaker",' +
     '"features.Path Of The Wild Heart ? 3:Rage Of The Wilds",' +
@@ -391,7 +391,7 @@ PHB5E2024.CLASSES_FEATURES_ADDED = {
     '"features.Illusionist ? 10:Illusory Self",' +
     '"features.Illusionist ? 14:Illusory Reality"',
 };
-PHB5E2024.CLASSES_SELECTABLES_ADDED = {
+PHB55E.CLASSES_SELECTABLES_ADDED = {
   'Barbarian':
     '"3:Path Of The Wild Heart:Barbarian Subclass",' +
     '"3:Path Of The World Tree:Barbarian Subclass",' +
@@ -451,15 +451,15 @@ PHB5E2024.CLASSES_SELECTABLES_ADDED = {
     '"3:Diviner:Wizard Subclass",' +
     '"3:Illusionist:Wizard Subclass"'
 };
-PHB5E2024.CLASSES = Object.assign({}, SRD5E2024.CLASSES);
-for(let c in PHB5E2024.CLASSES_FEATURES_ADDED)
-  PHB5E2024.CLASSES[c] =
-    PHB5E2024.CLASSES[c].replace('Features=', 'Features=' + PHB5E2024.CLASSES_FEATURES_ADDED[c] + ',');
-for(let c in PHB5E2024.CLASSES_SELECTABLES_ADDED)
-  PHB5E2024.CLASSES[c] =
-    PHB5E2024.CLASSES[c].replace('Selectables=', 'Selectables=' + PHB5E2024.CLASSES_SELECTABLES_ADDED[c] + ',');
-PHB5E2024.DEITIES = Object.assign({}, SRD5E2024.DEITIES);
-PHB5E2024.FEATS_ADDED = {
+PHB55E.CLASSES = Object.assign({}, SRD55E.CLASSES);
+for(let c in PHB55E.CLASSES_FEATURES_ADDED)
+  PHB55E.CLASSES[c] =
+    PHB55E.CLASSES[c].replace('Features=', 'Features=' + PHB55E.CLASSES_FEATURES_ADDED[c] + ',');
+for(let c in PHB55E.CLASSES_SELECTABLES_ADDED)
+  PHB55E.CLASSES[c] =
+    PHB55E.CLASSES[c].replace('Selectables=', 'Selectables=' + PHB55E.CLASSES_SELECTABLES_ADDED[c] + ',');
+PHB55E.DEITIES = Object.assign({}, SRD55E.DEITIES);
+PHB55E.FEATS_ADDED = {
 
   'Crafter':'Category=Origin', // new
   'Healer':PHB5E.FEATS.Healer + ' Category=Origin',
@@ -690,8 +690,8 @@ PHB5E2024.FEATS_ADDED = {
   'Boon Of Speed':'Category="Epic Boon" Require="level >= 19"'
 
 };
-PHB5E2024.FEATS = Object.assign({}, SRD5E2024.FEATS, PHB5E2024.FEATS_ADDED);
-PHB5E2024.FEATURES_ADDED = {
+PHB55E.FEATS = Object.assign({}, SRD55E.FEATS, PHB55E.FEATS_ADDED);
+PHB55E.FEATURES_ADDED = {
 
   // Species
 
@@ -703,7 +703,7 @@ PHB5E2024.FEATURES_ADDED = {
     'Note=' +
       '"Has the Heavenly Wings, Inner Radiance, and Necrotic Shroud features",' +
       '"Can use Heavenly Wings, Inner Radiance, or Necrotic Shroud for 1 min once per long rest"',
-  // Darkvision as SRD5E2024
+  // Darkvision as SRD55E
   'Heavenly Wings':'Section=ability Note="Gains a 30\' fly Speed"',
   'Healing Hands': // ref Volo
     'Section=magic ' +
@@ -808,7 +808,7 @@ PHB5E2024.FEATURES_ADDED = {
     'Note=' +
       '"Weapon Proficiency (Martial Weapons)/Armor Training (Medium; Shield)",' +
       '"Can use a simple or martial weapon as a bard spellcasting focus"',
-  // Extra Attack as SRD5E2024
+  // Extra Attack as SRD55E
   'Battle Magic':PHB5E.FEATURES['Battle Magic'],
 
   // Cleric
@@ -997,7 +997,7 @@ PHB5E2024.FEATURES_ADDED = {
     // changed effects
     'Note="During an Attack action, can cast %{combatNotes.improvedWarMagic?\'2 1-action level 1 or level 2 spells\':\'a 1-action cantrip\'} in place of %{combatNotes.improvedWarMagic?\'2 attacks\':\'1 attack\'}"',
   'Spellcasting (Eldritch Knight)':
-    SRD5E2024.FEATURES['Spellcasting (Wizard)'], // 5.5 e.k.s can use rituals
+    SRD55E.FEATURES['Spellcasting (Wizard)'], // 5.5 e.k.s can use rituals
   // Psi Warrior
   'Bulwark Of Force':Tasha.FEATURES['Bulwark Of Force'],
   'Guarded Mind':Tasha.FEATURES['Guarded Mind'],
@@ -1177,7 +1177,7 @@ PHB5E2024.FEATURES_ADDED = {
     .replace('hidden', 'invisible'),
   'Spell Thief':PHB5E.FEATURES['Spell Thief'],
   'Spellcasting (Arcane Trickster)':
-    SRD5E2024.FEATURES['Spellcasting (Wizard)'], // 5.5 a.t.s can use rituals
+    SRD55E.FEATURES['Spellcasting (Wizard)'], // 5.5 a.t.s can use rituals
   'Versatile Trickster':
     'Section=combat ' +
     // changed effects
@@ -1317,7 +1317,7 @@ PHB5E2024.FEATURES_ADDED = {
   // Wizard
   // Abjurer
   'Abjuration Savant':
-    SRD5E2024.FEATURES['Evocation Savant']
+    SRD55E.FEATURES['Evocation Savant']
     .replace('evocation', 'abjuration'),
   'Arcane Ward':PHB5E.FEATURES['Arcane Ward'],
   'Projected Ward':PHB5E.FEATURES['Projected Ward'],
@@ -1328,7 +1328,7 @@ PHB5E2024.FEATURES_ADDED = {
   'Spell Resistance':PHB5E.FEATURES['Spell Resistance'],
   // Diviner
   'Divination Savant':
-    SRD5E2024.FEATURES['Evocation Savant']
+    SRD55E.FEATURES['Evocation Savant']
     .replace('evocation', 'divination'),
   'Expert Divination':PHB5E.FEATURES['Expert Divination'],
   'Greater Portent':PHB5E.FEATURES['Greater Portent'],
@@ -1341,7 +1341,7 @@ PHB5E2024.FEATURES_ADDED = {
     'Spells=Invisibility',
   // Illusionist
   'Illusion Savant':
-    SRD5E2024.FEATURES['Evocation Savant']
+    SRD55E.FEATURES['Evocation Savant']
     .replace('evocation', 'illusion'),
   'Illusory Reality':PHB5E.FEATURES['Illusory Reality'],
   'Illusory Self':
@@ -1671,10 +1671,10 @@ PHB5E2024.FEATURES_ADDED = {
       '"Can use a bonus action to Disengage, breaking any grapple in the process"'
 
 };
-PHB5E2024.FEATURES = Object.assign({}, SRD5E2024.FEATURES, PHB5E2024.FEATURES_ADDED);
-PHB5E2024.GOODIES = Object.assign({}, SRD5E2024.GOODIES);
-PHB5E2024.LANGUAGES = Object.assign({}, SRD5E2024.LANGUAGES);
-PHB5E2024.SPECIES_ADDED = {
+PHB55E.FEATURES = Object.assign({}, SRD55E.FEATURES, PHB55E.FEATURES_ADDED);
+PHB55E.GOODIES = Object.assign({}, SRD55E.GOODIES);
+PHB55E.LANGUAGES = Object.assign({}, SRD55E.LANGUAGES);
+PHB55E.SPECIES_ADDED = {
   'Aasimar':
     'Size=Medium ' +
     'Speed=30 ' +
@@ -1682,11 +1682,11 @@ PHB5E2024.SPECIES_ADDED = {
       '"1:Celestial Resistance","1:Darkvision","1:Healing Hands",' +
       '"1:Light Bearer","5:Celestial Revelation"'
 };
-PHB5E2024.SPECIES = Object.assign({}, SRD5E2024.SPECIES, PHB5E2024.SPECIES_ADDED);
-PHB5E2024.SCHOOLS = Object.assign({}, SRD5E2024.SCHOOLS);
-PHB5E2024.SHIELDS = Object.assign({}, SRD5E2024.SHIELDS);
-PHB5E2024.SKILLS = Object.assign({}, SRD5E2024.SKILLS);
-PHB5E2024.SPELLS_ADDED = {
+PHB55E.SPECIES = Object.assign({}, SRD55E.SPECIES, PHB55E.SPECIES_ADDED);
+PHB55E.SCHOOLS = Object.assign({}, SRD55E.SCHOOLS);
+PHB55E.SHIELDS = Object.assign({}, SRD55E.SHIELDS);
+PHB55E.SKILLS = Object.assign({}, SRD55E.SKILLS);
+PHB55E.SPELLS_ADDED = {
 
   'Arcane Gate':PHB5E.SPELLS_ADDED['Arcane Gate'],
   'Arcane Vigor':
@@ -1871,28 +1871,28 @@ PHB5E2024.SPELLS_ADDED = {
     'Description="10\' radius inflicts 4d6 HP psychic, knocked prone, and a 10\' push (save Wisdom half HP only) on targets for concentration up to 1 min"'
 
 };
-PHB5E2024.SPELLS_RENAMED = Object.assign({}, PHB5E.SPELLS_RENAMED);
-PHB5E2024.SPELLS = Object.assign({}, SRD5E2024.SPELLS, PHB5E2024.SPELLS_ADDED);
-for(let s in PHB5E2024.SPELLS_LEVELS_ADDED)
-  PHB5E2024.SPELLS[s] =
-    PHB5E2024.SPELLS[s].replace('Level=', 'Level=' + PHB5E2024.SPELLS_LEVELS_ADDED[s] + ',');
-for(let s in PHB5E2024.SPELLS_RENAMED) {
-  PHB5E2024.SPELLS[PHB5E2024.SPELLS_RENAMED[s]] = PHB5E2024.SPELLS[s];
-  delete PHB5E2024.SPELLS[s];
+PHB55E.SPELLS_RENAMED = Object.assign({}, PHB5E.SPELLS_RENAMED);
+PHB55E.SPELLS = Object.assign({}, SRD55E.SPELLS, PHB55E.SPELLS_ADDED);
+for(let s in PHB55E.SPELLS_LEVELS_ADDED)
+  PHB55E.SPELLS[s] =
+    PHB55E.SPELLS[s].replace('Level=', 'Level=' + PHB55E.SPELLS_LEVELS_ADDED[s] + ',');
+for(let s in PHB55E.SPELLS_RENAMED) {
+  PHB55E.SPELLS[PHB55E.SPELLS_RENAMED[s]] = PHB55E.SPELLS[s];
+  delete PHB55E.SPELLS[s];
 }
-PHB5E2024.TOOLS = Object.assign({}, SRD5E2024.TOOLS);
-PHB5E2024.WEAPONS = Object.assign({}, SRD5E2024.WEAPONS);
+PHB55E.TOOLS = Object.assign({}, SRD55E.TOOLS);
+PHB55E.WEAPONS = Object.assign({}, SRD55E.WEAPONS);
 
 /*
  * Adds #name# as a possible user #type# choice and parses #attrs# to add rules
  * related to selecting that choice.
  */
-PHB5E2024.choiceRules = function(rules, type, name, attrs) {
-  SRD5E2024.choiceRules(rules, type, name, attrs);
+PHB55E.choiceRules = function(rules, type, name, attrs) {
+  SRD55E.choiceRules(rules, type, name, attrs);
   if(type == 'Class')
-    PHB5E2024.classRulesExtra(rules, name);
+    PHB55E.classRulesExtra(rules, name);
   else if(type == 'Feat')
-    PHB5E2024.featRulesExtra(rules, name);
+    PHB55E.featRulesExtra(rules, name);
   else if(type == 'Skill')
     rules.defineRule
       ('skillProficiency.' + name, 'skillNotes.boonOfSkill', '=', '1');
@@ -1902,7 +1902,7 @@ PHB5E2024.choiceRules = function(rules, type, name, attrs) {
  * Defines in #rules# the rules associated with class #name# that cannot be
  * derived directly from the attributes passed to classRules.
  */
-PHB5E2024.classRulesExtra = function(rules, name) {
+PHB55E.classRulesExtra = function(rules, name) {
 
   let classLevel = 'levels.' + name;
 
@@ -2001,7 +2001,7 @@ PHB5E2024.classRulesExtra = function(rules, name) {
       'features.Eldritch Knight', '?', null,
       'levels.Fighter','=', null
     );
-    SRD5E2024.spellsAvailableRules
+    SRD55E.spellsAvailableRules
       (rules, 'casterLevels.Eldritch Knight', known);
     QuilvynRules.spellSlotRules(rules, 'casterLevels.Eldritch Knight', slots);
     rules.defineRule
@@ -2040,7 +2040,7 @@ PHB5E2024.classRulesExtra = function(rules, name) {
       'features.Arcane Trickster', '?', null,
       'levels.Rogue','=', null
     );
-    SRD5E2024.spellsAvailableRules
+    SRD55E.spellsAvailableRules
       (rules, 'casterLevels.Arcane Trickster', known);
     QuilvynRules.spellSlotRules(rules, 'casterLevels.Arcane Trickster', slots);
     rules.defineRule
@@ -2057,7 +2057,7 @@ PHB5E2024.classRulesExtra = function(rules, name) {
  * Defines in #rules# the rules associated with feat #name# that cannot be
  * derived directly from the attributes passed to featRules.
  */
-PHB5E2024.featRulesExtra = function(rules, name) {
+PHB55E.featRulesExtra = function(rules, name) {
   if(name == 'Medium Armor Master') {
     rules.defineRule('armorClass',
       'combatNotes.mediumArmorMaster', '+', '0', // italics
@@ -2079,16 +2079,16 @@ PHB5E2024.featRulesExtra = function(rules, name) {
 };
 
 /* Returns an array of plugins upon which this one depends. */
-PHB5E2024.getPlugins = function() {
-  let result = [SRD5E2024];
+PHB55E.getPlugins = function() {
+  let result = [SRD55E];
   return result;
 };
 
 /* Returns HTML body content for user notes associated with this rule set. */
-PHB5E2024.ruleNotes = function() {
+PHB55E.ruleNotes = function() {
   return '' +
     '<h2>D&D 5.5E Quilvyn Plugin Notes</h2>\n' +
-    'D&D 5.5E Quilvyn Plugin Version ' + PHB5E2024.VERSION + '\n' +
+    'D&D 5.5E Quilvyn Plugin Version ' + PHB55E.VERSION + '\n' +
     '<h3>Limitations</h3>\n' +
     '<h3>Copyrights and Licensing</h3>\n' +
     '<p>\n' +
