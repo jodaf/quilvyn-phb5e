@@ -76,7 +76,7 @@ function PHB5E() {
 
 }
 
-PHB5E.VERSION = '2.4.2.0';
+PHB5E.VERSION = '2.4.3.0';
 
 PHB5E.ALIGNMENTS = Object.assign({}, SRD5E.ALIGNMENTS);
 PHB5E.ARMORS = Object.assign({}, SRD5E.ARMORS);
