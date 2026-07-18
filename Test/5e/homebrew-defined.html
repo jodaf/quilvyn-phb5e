@@ -12,7 +12,7 @@ var attributes = {
   "feats.Flail Expert":1, "gender":"Female", "hitPoints":16, "intelligence":16, 
   "languagesChosen.Aquan":1, "languagesChosen.Draconic":1, "languagesChosen.Gnomish":1, 
   "levels.Cleric":1, "levels.Fighter":1, "levels.Noble":2, "name":"Homebrew-Defined", 
-  "notes":"Homebrew Armor \"Mithral Chain Mail\" Category=Medium AC=6 Dex=10 Cost=50\n\nHomebrew Background Apprentice Equipment=\"Artisan's Tools\",\"Common Clothes\",\"15 GP\" Features=\"Language (Choose 1 from any)\",\"Tool Proficiency (Choose 1 from any Artisan)\",\"Skill Proficiency (Insight/Perception)\",\"Quick Repair\"\n\nHomebrew \"Background Feature\" \"Ritual Assistant\" Background=Apprentice Level=1 Replace=\"Quick Repair\"\n\nHomebrew Feature \"Ritual Assistant\" Section=Magic Note=\"Increases the DC of allies' ritual spells by 4\"\n\nHomebrew Class Noble HitDie=d6 Features=\"Armor Proficiency (Light/Shield)\",\"Weapon Proficiency (Martial)\",\"Language (Choose 2 from any)\",\"Save Proficiency (Charisma/Wisdom)\",\"Save Proficiency (Deception/Insight)\",2:Entourage,4:Influence,\"7:Landed Aristocracy\" SpellAbility=Intelligence\n\nHomebrew \"Class Feature\" \"Forge Domain\" Class=Cleric Selectable=\"Divine Domain\" Level=1 Require=\"deityDomains =~ 'Forge'\"\n\nHomebrew Deity \"Babylon-Enlil\" Alignment=\"Neutral Good\" Domain=Nature,Tempest\n\nHomebrew Feat \"Flail Expert\" Require=\"dexterity>=13\",\"features.Weapon Proficiency (Martial)\" Imply=weapons.Flail\n\nHomebrew Feature \"Flail Expert\" Section=Combat Note=\"Attacks w/flails negate foe shield armor class bonus\"\n\nHomebrew Language Aquan\n\nHomebrew Race Lizardfolk Speed=30 Size=Medium Features=\"Natural Armor\",\"Hold Breath\",\"Multiattack (Lizardfolk)\",\"Language (Draconic)\",Bite\n\nHomebrew \"Race Feature\" \"Tail Slap\" Race=Lizardfolk Level=1 Replace=Bite\n\nHomebrew Feature \"Natural Armor\" Section=Combat Note=\"+3 Armor Class\"\n\nHomebrew Feature \"Hold Breath\" Section=Ability Note=\"May hold breath for 15 minutes\"\n\nHomebrew School Control\n\nHomebrew Skill Sailing Ability=Intelligence Classes=Fighter,Ranger\n\nHomebrew Spell \"Instant Learning\" Level=C4,S4,W4 School=Transmutation Description=\"Touched may use effects of chosen feat for conc up to 1 min\" AtHigherLevels=\"affects +1 target\"\n\nHomebrew Tool Whistle Type=Musical\n\nHomebrew Weapon Boomerang Category=\"Martial Ranged\" Property=Light,Thrown Damage=1d4 Range=30/120", "race":"Lizardfolk", "selectableFeatures.Cleric - Forge Domain":1, 
+  "notes":"Homebrew Armor \"Mithral Chain Mail\" Category=Medium AC=6 Dex=10 Cost=575 Weight=5\n\nHomebrew Background Apprentice Equipment=\"Artisan's Tools\",\"Common Clothes\",\"15 GP\" Features=\"Language (Choose 1 from any)\",\"Tool Proficiency (Choose 1 from any Artisan)\",\"Skill Proficiency (Insight/Perception)\",\"Quick Repair\"\n\nHomebrew \"Background Feature\" \"Ritual Assistant\" Background=Apprentice Level=1 Replace=\"Quick Repair\"\n\nHomebrew Feature \"Ritual Assistant\" Section=Magic Note=\"Increases the DC of allies' ritual spells by 4\"\n\nHomebrew Class Noble HitDie=d6 Features=\"Armor Proficiency (Light/Shield)\",\"Weapon Proficiency (Martial)\",\"Language (Choose 2 from any)\",\"Save Proficiency (Charisma/Wisdom)\",\"Save Proficiency (Deception/Insight)\",2:Entourage,4:Influence,\"7:Landed Aristocracy\" SpellAbility=Intelligence\n\nHomebrew \"Class Feature\" \"Forge Domain\" Class=Cleric Selectable=\"Divine Domain\" Level=1 Require=\"deityDomains =~ 'Forge'\"\n\nHomebrew Deity \"Babylon-Enlil\" Alignment=\"Neutral Good\" Domain=Nature,Tempest\n\nHomebrew Feat \"Flail Expert\" Require=\"dexterity>=13\",\"features.Weapon Proficiency (Martial)\" Imply=weapons.Flail\n\nHomebrew Feature \"Flail Expert\" Section=Combat Note=\"Attacks w/flails negate foe shield armor class bonus\"\n\nHomebrew Language Aquan\n\nHomebrew Race Lizardfolk Speed=30 Size=Medium Features=\"Natural Armor\",\"Hold Breath\",\"Multiattack (Lizardfolk)\",\"Language (Draconic)\",Bite\n\nHomebrew \"Race Feature\" \"Tail Slap\" Race=Lizardfolk Level=1 Replace=Bite\n\nHomebrew Feature \"Natural Armor\" Section=Combat Note=\"+3 Armor Class\"\n\nHomebrew Feature \"Hold Breath\" Section=Ability Note=\"May hold breath for 15 minutes\"\n\nHomebrew School Control\n\nHomebrew Skill Sailing Ability=Intelligence Classes=Fighter,Ranger\n\nHomebrew Spell \"Instant Learning\" CastingTime=Action Level=C4,S4,W4 School=Transmutation Description=\"Touched may use effects of chosen feat for conc up to 1 min\" AtHigherLevels=\"affects +1 target\"\n\nHomebrew Tool Whistle Category=\"Musical Instrument\" Cost=5 Weight=1\n\nHomebrew Weapon Boomerang Category=\"Martial Ranged\" Property=Light,Thrown Damage=1d4 Range=30/120 Cost=2 Weight=1", "race":"Lizardfolk", "selectableFeatures.Cleric - Forge Domain":1, 
   "selectableFeatures.Fighter - Fighting Style (Great Weapon Fighting)":1, "shield":"None", "skillsChosen.History":1, "skillsChosen.Medicine":1, 
   "skillsChosen.Sailing":1, "skillsChosen.Survival":1, "spells.Instant Learning(C4 Tran)":1, 
   "strength":14, "toolsChosen.Whistle":1, "weapons.Boomerang":1, "weapons.Longbow":1, 
@@ -80,7 +80,7 @@ var attributes = {
         <td><b>Noble Features</b>: Armor Proficiency (Light/Shield); Entourage; Language (Choose 2 from any); Save Proficiency (Charisma/Wisdom); Save Proficiency (Deception/Insight); Weapon Proficiency (Martial)</td>
         <td><b>Apprentice Features</b>: Language (Choose 1 from any); Ritual Assistant; Skill Proficiency (Insight/Perception); Tool Proficiency (Choose 1 from any Artisan)</td>
         <td><b>Fighter Features</b>: Armor Proficiency (Light; Medium; Heavy; Shield); Fighting Style (Great Weapon Fighting); Fighting Style; Save Proficiency (Strength; Constitution); Second Wind; Skill Proficiency (Choose 2 from Acrobatics, Animal Handling, Athletics, History, Insight, Intimidation, Perception, Survival); Weapon Proficiency (Simple Weapons; Martial Weapons)</td>
-        <td><b>Cleric Features</b>: Armor Proficiency (Light; Medium; Shield); Divine Domain; Forge Domain; Save Proficiency (Wisdom; Charisma); Skill Proficiency (Choose 2 from History, Insight, Medicine, Persuasion, Religion); Spellcasting; Weapon Proficiency (Simple Weapons)</td>
+        <td><b>Cleric Features</b>: Armor Proficiency (Light; Medium; Shield); Divine Domain; Forge Domain; Save Proficiency (Wisdom; Charisma); Skill Proficiency (Choose 2 from History, Insight, Medicine, Persuasion, Religion); Spellcasting (Cleric); Weapon Proficiency (Simple Weapons)</td>
       </tr></table>
 </td>
     </tr><tr style="text-align:center">
@@ -215,13 +215,13 @@ var attributes = {
     </tr></table>
 </td>
   </tr><tr style="text-align:center">
-    <td><b>Spells</b>: Instant Learning (C4 Tran): Touched may use effects of chosen feat for conc up to 1 min [+Level affects +1 target]</td>
+    <td><b>Spells</b>: Instant Learning (C4 Tran): <b>(Action)</b> Touched may use effects of chosen feat for conc up to 1 min (<b>+Level</b> affects +1 target)</td>
   </tr><tr style="text-align:center">
     <td><b>Magic Notes</b>:     <table id="MagicNotes" style="width:100%">
     <tr style="text-align:center">
       <td>Ritual Assistant: Increases the DC of allies' ritual spells by 4</td>
     </tr><tr style="text-align:center">
-      <td>Spellcasting: Can cast spells from the cleric spell list and cast spells marked with [R] using a ritual</td>
+      <td>Spellcasting (Cleric): Can cast spells from the cleric spell list and cast spells marked with [R] using a ritual; regains expended spell slots after a long rest</td>
     </tr></table>
 </td>
   </tr></table>
@@ -231,7 +231,7 @@ var attributes = {
   <tr style="text-align:center">
     <td>    <table id="NotesPart" style="width:100%">
     <tr style="text-align:center">
-      <td>Homebrew Armor "Mithral Chain Mail" Category=Medium AC=6 Dex=10 Cost=50<br/>
+      <td>Homebrew Armor "Mithral Chain Mail" Category=Medium AC=6 Dex=10 Cost=575 Weight=5<br/>
 <br/>
 Homebrew Background Apprentice Equipment="Artisan's Tools","Common Clothes","15 GP" Features="Language (Choose 1 from any)","Tool Proficiency (Choose 1 from any Artisan)","Skill Proficiency (Insight/Perception)","Quick Repair"<br/>
 <br/>
@@ -263,11 +263,11 @@ Homebrew School Control<br/>
 <br/>
 Homebrew Skill Sailing Ability=Intelligence Classes=Fighter,Ranger<br/>
 <br/>
-Homebrew Spell "Instant Learning" Level=C4,S4,W4 School=Transmutation Description="Touched may use effects of chosen feat for conc up to 1 min" AtHigherLevels="affects +1 target"<br/>
+Homebrew Spell "Instant Learning" CastingTime=Action Level=C4,S4,W4 School=Transmutation Description="Touched may use effects of chosen feat for conc up to 1 min" AtHigherLevels="affects +1 target"<br/>
 <br/>
-Homebrew Tool Whistle Type=Musical<br/>
+Homebrew Tool Whistle Category="Musical Instrument" Cost=5 Weight=1<br/>
 <br/>
-Homebrew Weapon Boomerang Category="Martial Ranged" Property=Light,Thrown Damage=1d4 Range=30/120</td>
+Homebrew Weapon Boomerang Category="Martial Ranged" Property=Light,Thrown Damage=1d4 Range=30/120 Cost=2 Weight=1</td>
     </tr></table>
 </td>
   </tr><tr style="text-align:center">
