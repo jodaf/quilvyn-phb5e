@@ -23,9 +23,9 @@ plugins/plugins.js:
       require:'SRD5E.js'
     };
     RULESETS['D&D 5.5E'] = {
-      url:'plugins/PHB5E2024.js',
+      url:'plugins/PHB55E.js',
       group:'5E',
-      require:['PHB5E.js', 'SRD5E2024.js', 'Tasha.js', 'Xanathar.js']
+      require:['PHB5E.js', 'SRD55E.js', 'Tasha.js', 'Xanathar.js']
     };
 
 ### Usage
