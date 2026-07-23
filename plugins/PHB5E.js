@@ -212,7 +212,7 @@ PHB5E.CLASSES_FEATURES_ADDED = {
     '"features.Nature Domain ? 1:Nature Domain Spells",' +
     '"features.Nature Domain ? 2:Charm Animals And Plants",' +
     '"features.Nature Domain ? 6:Dampen Elements",' +
-    // SRD35 defines this '"clericHasDivineStrike ? 8:Divine Strike",' +
+    // SRD5E defines this '"clericHasDivineStrike ? 8:Divine Strike",' +
     '"features.Nature Domain ? 17:Master Of Nature",' +
     '"features.Tempest Domain ? 1:Bonus Proficiencies (Tempest Domain)",' +
     '"features.Tempest Domain ? 1:Tempest Domain Spells",' +
@@ -790,7 +790,7 @@ PHB5E.FEATURES_ADDED = {
   'Charm Animals And Plants':
     'Section=magic ' +
     'Note="R30\' Can use Channel Divinity to charm beasts and plants (save Wisdom negates) for 1 min or until damaged"',
-  // Divine Strike as SRD35
+  // Divine Strike as SRD5E
   'Master Of Nature':
     'Section=magic Note="Can command charmed animals and plants"',
   'Nature Domain Spells':
